@@ -1,0 +1,69 @@
+# SI Units {#si_units}
+
+Condenser vacuum gauge reads 715 mmHg when barometer stands at 757 mmHg. State the absolute pressure in kN/m2 and bar.
+
+### **Given Data**
+
+\begin{align*}
+\text{Barometer reading (Atmospheric pressure)},\; P_{atm} &= 757\ \text{mmHg} \\
+\text{Vacuum gauge reading},\; P_{vac} &= 715\ \text{mmHg}
+\end{align*}
+
+### **Absolute Pressure in mmHg**
+
+$$
+P_{abs} = P_{atm} - P_{vac}
+$$
+
+$$
+P_{abs} = 757 - 715 = 42\ \text{mmHg}
+$$
+
+### **Convert mmHg → kN/m²**
+
+$$
+1 \text{ mmHg} = 133.322 \text{Pa} = 0.133322 \text{kN/m²}
+$$
+
+$$
+P_{abs} = 42 \times 0.133322 = 5.6 \text{kN/m²}
+$$
+
+### **Convert kN/m² → bar**
+
+$$
+P\_{abs} = \frac{5.6}{100} = 0.056 \text{bar}
+$$
+
+
+### ✅ **Final Answers**
+
+\[ \boxed{
+\begin{aligned}
+P_{abs} &= 42\ \text{mmHg} \\
+P_{abs} &= 5.6\ \text{kN/m²} \\
+P_{abs} &= 0.056\ \text{bar}
+\end{aligned}
+} \]
+
+``` python
+# Condenser Vacuum Problem
+
+# Given data
+P_atm_mmHg = 757   # Atmospheric pressure (mmHg)
+P_vac_mmHg = 715   # Vacuum gauge reading (mmHg)
+
+# Constants
+MMHG_TO_KN_M2 = 0.133322   # 1 mmHg = 0.133322 kN/m²
+KNM2_TO_BAR = 1 / 100      # 1 bar = 100 kN/m²
+
+# Calculations
+P_abs_mmHg = P_atm_mmHg - P_vac_mmHg          # Absolute pressure in mmHg
+P_abs_kNm2 = P_abs_mmHg * MMHG_TO_KN_M2       # Convert to kN/m²
+P_abs_bar = P_abs_kNm2 * KNM2_TO_BAR          # Convert to bar
+
+# Results
+print(f"Absolute Pressure = {P_abs_mmHg:.2f} mmHg")
+print(f"Absolute Pressure = {P_abs_kNm2:.3f} kN/m²")
+print(f"Absolute Pressure = {P_abs_bar:.4f} bar")
+```
