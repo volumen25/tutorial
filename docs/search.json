@@ -1,0 +1,144 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Tutorial",
+    "section": "",
+    "text": "Preface\nA Brief Introduction to Computational Tools presents a collection of tutorials based on lecture notes from classes, designed to give learners clear and essential insights into key topics. No previous programming experience is required. Each tutorial guides you step by step through the concepts with hands-on examples.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "tutorial_basic.html",
+    "href": "tutorial_basic.html",
+    "title": "1  Python Tutorial",
+    "section": "",
+    "text": "1.1 Requirements\nThis tutorial introduces Python programming, covering basic concepts with examples to illustrate key points. We will start by using Python as a calculator, then explore variables, functions, and control flow.\nTo follow this tutorial, you must have Python (version 3.10 or later) installed on your computer. Python is available for Windows, macOS, and Linux. Additionally, ensure you have a text editor or an Integrated Development Environment (IDE) to write Python code. We recommend Positron, a user-friendly IDE with a built-in terminal for running Python scripts, though other editors like VS Code or PyCharm are also suitable.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "tutorial_basic.html#basic-syntax",
+    "href": "tutorial_basic.html#basic-syntax",
+    "title": "1  Python Tutorial",
+    "section": "1.2 Basic Syntax",
+    "text": "1.2 Basic Syntax\nPython uses indentation (typically four spaces) to define code blocks. A colon (:) introduces a block, and statements within the block must be indented consistently. Python is case-sensitive, so Variable and variable are distinct identifiers. Statements typically end with a newline, but you can use a backslash (\\) to continue a statement across multiple lines.\ntotal = 1 + 2 + 3 + \\\n        4 + 5\nprint(total)  # Output: 15\nBasic syntax rules:\n\nComments start with # and extend to the end of the line.\nStrings can be enclosed in single quotes ('), double quotes (\"), or triple quotes (''' or \"\"\") for multi-line strings.\nPython is case-sensitive, so Variable and variable are different identifiers.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "tutorial_basic.html#the-print-function",
+    "href": "tutorial_basic.html#the-print-function",
+    "title": "1  Python Tutorial",
+    "section": "1.3 The print() Function",
+    "text": "1.3 The print() Function\nThe print() function displays output in Python.\nname = \"Rudolf Diesel\"\nyear = 1858\nprint(f\"{name} was born in {year}.\")\nOutput: Rudolf Diesel was born in 1858.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "tutorial_basic.html#formatting-in-print",
+    "href": "tutorial_basic.html#formatting-in-print",
+    "title": "1  Python Tutorial",
+    "section": "1.4 Formatting in print()",
+    "text": "1.4 Formatting in print()\nThe following table illustrates common f-string formatting options for the print() function:\n\n\n\n\n\n\n\n\n\nFormat\nCode\nExample\nOutput\n\n\n\n\nRound to 2 decimals\nf\"{x:.2f}\"\nprint(f\"{3.14159:.2f}\")\n3.14\n\n\nRound to whole number\nf\"{x:.0f}\"\nprint(f\"{3.9:.0f}\")\n4\n\n\nThousands separator\nf\"{x:,.2f}\"\nprint(f\"{1234567.89:,.2f}\")\n1,234,567.89\n\n\nPercentage\nf\"{x:.1%}\"\nprint(f\"{0.756:.1%}\")\n75.6%\n\n\nCurrency style\nf\"${x:,.2f}\"\nprint(f\"${1234.5:,.2f}\")\n$1,234.50\n\n\n\nNote: The currency symbol (e.g., $) can be modified for other currencies (e.g., €, £) based on the desired locale.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "tutorial_basic.html#variables-and-data-types",
+    "href": "tutorial_basic.html#variables-and-data-types",
+    "title": "1  Python Tutorial",
+    "section": "1.5 Variables and Data Types",
+    "text": "1.5 Variables and Data Types\nVariables store data and are assigned values using the = operator.\nx = 10\ny = 3.14\nname = \"Rudolph\"\nPython has several built-in data types, including:\n\nIntegers (int): Whole numbers, e.g., 10, -5\nFloating-point numbers (float): Decimal numbers, e.g., 3.14, -0.001\nStrings (str): Text, e.g., \"Hello\", 'World'\nBooleans (bool): True or False\n\n\n1.5.1 Arithmetic Operations\na = 10\nb = 3\nprint(a + b)  # Addition: 13\nprint(a - b)  # Subtraction: 7\nprint(a * b)  # Multiplication: 30\nprint(a / b)  # Division: 3.3333...\nprint(a // b) # Integer Division: 3\nprint(a ** b) # Exponentiation: 1000\n\n\n1.5.2 String Operations\nfirst_name = \"Rudolph\"\nlast_name = \"Diesel\"\nfull_name = first_name + \" \" + last_name  # Concatenation using +\nprint(full_name)  # Output: Rudolph Diesel\nprint(f\"{first_name} {last_name}\")  # Concatenation using f-string\nprint(full_name * 2)  # Repetition: Rudolph DieselRudolph Diesel\nprint(full_name.upper())  # Uppercase: RUDOLPH DIESEL\nNote: String repetition (*) concatenates the string multiple times without spaces. For example, full_name * 2 produces Rudolph DieselRudolph Diesel.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "tutorial_basic.html#python-as-a-calculator-in-interactive-mode",
+    "href": "tutorial_basic.html#python-as-a-calculator-in-interactive-mode",
+    "title": "1  Python Tutorial",
+    "section": "1.6 Python as a Calculator in Interactive Mode",
+    "text": "1.6 Python as a Calculator in Interactive Mode\nPython’s interactive mode allows you to enter commands and see results immediately, ideal for quick calculations. To start, open a terminal (on macOS, Linux, or Windows) and type:\npython3  # Use 'python' on Windows if 'python3' is not recognized\nYou should see the Python prompt:\n&gt;&gt;&gt;\nEnter expressions and press Enter to see results:\n2 + 3  # Output: 5\n7 - 4  # Output: 3\n6 * 9  # Output: 54\n8 / 2  # Output: 4.0\n8 // 2 # Output: 4\n2 ** 3 # Output: 8\n\n1.6.1 Parentheses for Grouping\n(2 + 3) * 4  # Output: 20\n2 + (3 * 4)  # Output: 14\n\n\n1.6.2 Variables\nx = 10\ny = 3\nx / y  # Output: 3.3333333333333335\n\n\n1.6.3 Exiting Interactive Mode\nTo exit, type:\nexit()\nAlternatively, use: - Ctrl+D (macOS/Linux) - Ctrl+Z then Enter (Windows)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "tutorial_basic.html#control-flow",
+    "href": "tutorial_basic.html#control-flow",
+    "title": "1  Python Tutorial",
+    "section": "1.7 Control Flow",
+    "text": "1.7 Control Flow\nControl flow statements direct the execution of code based on conditions.\n\n1.7.1 Conditional Statements\nConditional statements allow you to execute different code blocks based on specific conditions. Python provides three keywords for this purpose:\n\nif: Evaluates a condition and executes its code block if the condition is True.\nelif: Short for “else if,” it checks an additional condition if the preceding if or elif conditions are False. You can use multiple elif statements to test multiple conditions sequentially, and Python will execute the first True condition’s block, skipping the rest.\nelse: Executes a code block if none of the preceding if or elif conditions are True. It serves as a fallback and does not require a condition.\n\nThe following example uses age to categorize a person as a Minor, Adult, or Senior, demonstrating how if, elif, and else work together.\n# Categorize a person based on their age\nage = 19\nif age &lt; 18:\n    print(\"Minor\")\nelif age &lt;= 64:\n    print(\"Adult\")\nelse:\n    print(\"Senior\")\nOutput: Adult\n\n\n1.7.2 For Loop\nA for loop iterates over a sequence (e.g., list or string).\ncomponents = [\"piston\", \"liner\", \"connecting rod\"]\nfor component in components:\n    print(component)\nOutput:\npiston\nliner\nconnecting rod\n\n\n1.7.3 While Loop\nA while loop executes as long as a condition is true. Ensure the condition eventually becomes false to avoid infinite loops.\ncount = 0\nwhile count &lt;= 5:\n    print(count)\n    count += 1\nOutput:\n0\n1\n2\n3\n4\n5",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "tutorial_basic.html#functions",
+    "href": "tutorial_basic.html#functions",
+    "title": "1  Python Tutorial",
+    "section": "1.8 Functions",
+    "text": "1.8 Functions\n\n1.8.1 The def Keyword\nFunctions are reusable code blocks defined using the def keyword. They can include default parameters for optional arguments.\ndef add(a, b=0):\n    return a + b\nprint(add(5))      # Output: 5\nprint(add(5, 3))   # Output: 8\n\ndef multiply(*args):\n    result = 1\n    for num in args:\n        result *= num\n    return result\nprint(multiply(2, 3, 4))  # Output: 24\n\n\n1.8.2 The lambda Keyword\nThe lambda keyword creates anonymous functions for short, one-off operations, often used in functional programming.\ncelsius_to_fahrenheit = lambda c: (c * 9 / 5) + 32\nprint(celsius_to_fahrenheit(25))  # Output: 77.0",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "tutorial_basic.html#the-math-module",
+    "href": "tutorial_basic.html#the-math-module",
+    "title": "1  Python Tutorial",
+    "section": "1.9 The math Module",
+    "text": "1.9 The math Module\nThe math module provides mathematical functions and constants.\nimport math\nprint(math.sqrt(16))  # Output: 4.0\nprint(math.pi)        # Output: 3.141592653589793\nimport math\nangle = math.pi / 4  # 45 degrees in radians\nprint(math.sin(angle))  # Output: 0.7071067811865475 (approximately √2/2)\nprint(math.cos(angle))  # Output: 0.7071067811865476 (approximately √2/2)\nprint(math.tan(angle))  # Output: 1.0\nNote: Floating-point arithmetic may result in small precision differences, as seen in the sin and cos outputs.\nimport math\nprint(math.log(10))       # Natural logarithm of 10: 2.302585092994046\nprint(math.log(100, 10))  # Logarithm of 100 with base 10: 2.0\n\n1.9.1 Converting Between Radians and Degrees\nThe math module provides math.radians() to convert degrees to radians and math.degrees() to convert radians to degrees, which is useful for trigonometric calculations.\nimport math\ndegrees = 180\nradians = math.radians(degrees)\nprint(f\"{degrees} degrees is {radians:.3f} radians\")  # Output: 180 degrees is 3.142 radians\n\nradians = math.pi / 2\ndegrees = math.degrees(radians)\nprint(f\"{radians:.3f} radians is {degrees:.1f} degrees\")  # Output: 1.571 radians is 90.0 degrees",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "tutorial_basic.html#writing-python-scripts",
+    "href": "tutorial_basic.html#writing-python-scripts",
+    "title": "1  Python Tutorial",
+    "section": "1.10 Writing Python Scripts",
+    "text": "1.10 Writing Python Scripts\nWrite Python code in a .py file and run it as a script. Create a file named script.py:\n# script.py\nimport math\nprint(\"Square root of 16 is:\", math.sqrt(16))\nprint(\"Value of pi is:\", math.pi)\nprint(\"Sine of 90 degrees is:\", math.sin(math.pi / 2))\nprint(\"Natural logarithm of 10 is:\", math.log(10))\nprint(\"Logarithm of 100 with base 10 is:\", math.log(100, 10))\nTo run the script, open a terminal, navigate to the directory containing script.py using the cd command (e.g., cd /path/to/directory), and type:\npython3 script.py  # or python script.py on Windows\nOutput:\nSquare root of 16 is: 4.0\nValue of pi is: 3.141592653589793\nSine of 90 degrees is: 1.0\nNatural logarithm of 10 is: 2.302585092994046\nLogarithm of 100 with base 10 is: 2.0",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "tutorial_basic.html#summary",
+    "href": "tutorial_basic.html#summary",
+    "title": "1  Python Tutorial",
+    "section": "1.11 Summary",
+    "text": "1.11 Summary\nThis tutorial covered Python basics, including syntax, variables, data types, operations, control flow, and functions. Python’s rich ecosystem includes libraries like:\n\nNumPy: For numerical computations and array manipulations.\nMatplotlib: For data visualization and plotting.\nPandas: For data manipulation and analysis with tabular data structures.\nPint: For handling physical quantities and performing unit conversions.\n\nYou can explore these libraries to enhance your Python programming skills further. For example installing them can be done using pip:\npip install numpy matplotlib pandas pint\npip is Python’s package manager for installing and managing additional libraries.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "SI_common_mistakes.html",
+    "href": "SI_common_mistakes.html",
+    "title": "Appendix A — SI System Common Mistakes",
+    "section": "",
+    "text": "Using the SI system correctly is crucial for clear communication in science and engineering. Below are common mistakes in using the SI system, examples of incorrect usage, and how to correct them.\n\nSI system rules and common mistakes\n\n\n\n\n\n\n\n\nConcept\nMistake\nCorrect Usage\nNotes\n\n\n\n\nUse of SI Unit Symbols\nm./s\nm/s\nUse the correct format without additional punctuation.\n\n\nSpacing Between Value & Unit\n10kg\n10 kg\nAlways leave a space between the number and the unit symbol.\n\n\nIncorrect Unit Symbols\nsec, hrs, °K\ns, h, K\nUse the proper SI symbols; symbols are case-sensitive.\n\n\nAbbreviations for Units\n5 kilograms (kgs)\n5 kilograms (kg)\nAvoid informal abbreviations like “kgs”; adhere to standard symbols.\n\n\nMultiple Units in Expressions\n5 m/s/s, 5 kg/meter²\n5 m/s², 5 kg/m²\nUse compact, standardized formats for derived units.\n\n\nIncorrect Use of Prefixes\n0.0001 km\n100 mm\nChoose prefixes to keep numbers in the range (0.1 x &lt; 1000).\n\n\nMisplaced Unit Symbols\n5/s, kg10\n5 s⁻¹, 10 kg\nSymbols must follow numerical values, not precede them.\n\n\nDegrees Celsius vs. Kelvin\n300°K\n300 K\nKelvin is written without “degree”\n\n\nSingular vs. Plural Units\n5 kgs, 1 meters\n5 kg, 1 meter\nSymbols do not pluralize; full unit names follow grammar rules.\n\n\nCapitalization of Symbols\nKg, S, Km, MA\nkg, s, km, mA\nSymbols are case-sensitive; use uppercase only where specified (e.g., N, Pa).\n\n\nCapitalization of Unit Names\nNewton, Pascal, Watt\nnewton, pascal, watt\nUnit names are lowercase, even if derived from a person’s name, unless starting a sentence.\n\n\nPrefix Capitalization\nMilliMeter, MegaWatt\nmillimeter, megawatt\nPrefixes are lowercase for (10^{-1}) to (10^{-9}), uppercase for (10^6) and larger (except k for kilo).\n\n\nFormatting in Reports\n5, Temperature: 300\n5 kg, Temperature: 300 K\nAlways specify units explicitly.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>SI System Common Mistakes</span>"
+    ]
+  },
+  {
+    "objectID": "greek_letters.html",
+    "href": "greek_letters.html",
+    "title": "Appendix B — Greek Letters",
+    "section": "",
+    "text": "The following tables present the names of Greek letters and selected symbols commonly used in engineering courses, ensuring precise reference and avoiding reliance on informal descriptors such as “squiggle.”\n\nGreek letters.\n\n\nLower Case\nUpper Case\nName\n\n\n\n\n\\(\\alpha\\)\nA\nalpha\n\n\n\\(\\beta\\)\nB\nbeta\n\n\n\\(\\gamma\\)\n\\(\\Gamma\\)\ngamma\n\n\n\\(\\delta\\)\n\\(\\Delta\\)\ndelta\n\n\n\\(\\epsilon\\)\nE\nepsilon\n\n\n\\(\\zeta\\)\nZ\nzeta\n\n\n\\(\\eta\\)\nE\neta\n\n\n\\(\\theta\\)\n\\(\\Theta\\)\ntheta\n\n\n\\(\\iota\\)\nI\niota\n\n\n\\(\\kappa\\)\nK\nkappa\n\n\n\\(\\lambda\\)\n\\(\\Lambda\\)\nlambda\n\n\n\\(\\mu\\)\nM\nmu\n\n\n\\(\\nu\\)\nN\nnu\n\n\n\\(\\xi\\)\n\\(\\Xi\\)\nxi\n\n\n\\(\\omicron\\)\nO\nomicron\n\n\n\\(\\pi\\)\n\\(\\Pi\\)\npi\n\n\n\\(\\rho\\)\nP\nrho\n\n\n\\(\\sigma\\)\n\\(\\Sigma\\)\nsigma\n\n\n\\(\\tau\\)\nT\ntau\n\n\n\\(\\upsilon\\)\n\\(\\Upsilon\\)\nupsilon\n\n\n\\(\\phi\\)\n\\(\\Phi\\)\nphi\n\n\n\\(\\chi\\)\nX\nchi\n\n\n\\(\\psi\\)\n\\(\\Psi\\)\npsi\n\n\n\\(\\omega\\)\n\\(\\Omega\\)\nomega\n\n\n\n\nCommonly used symbols in engineering courses.\n\n\n\n\n\n\n\n\nSymbol\nName\nUse\nCourse\n\n\n\n\n\\(\\Delta\\)\nDelta\nChange\nThermodynamics\n\n\n\\(\\Delta\\)\nDelta\nDisplacement\nNaval Architecture\n\n\n\\(\\nabla\\)\nNabla\nVolume\nNaval Architecture\n\n\n\\(\\Sigma\\)\nSigma\nSum\nThermodynamics, Naval Architecture, Applied Mechanics\n\n\n\\(\\sigma\\)\nSigma\nStress\nThermodynamics, Applied Mechanics\n\n\n\\(\\epsilon\\)\nEpsilon\nModulus of elasticity\nThermodynamics, Applied Mechanics\n\n\n\\(\\eta\\)\nEta\nEfficiency\nThermodynamics\n\n\n\\(\\omega\\)\nOmega\nAngular velocity\nThermodynamics, Applied Mechanics\n\n\n\\(\\rho\\)\nRho\nDensity\nThermodynamics, Naval Architecture\n\n\n\\(\\tau\\)\nTau\nTorque\nThermodynamics, Applied Mechanics",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Greek Letters</span>"
+    ]
+  }
+]

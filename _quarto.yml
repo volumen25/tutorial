@@ -24,14 +24,10 @@ book:
       Built with <a href="https://quarto.org"> Quarto {{< version >}}</a>
   chapters:    
     - index.qmd            
-    - part: Beginning
-      chapters:
-        - tutorial_basic.qmd
+    - tutorial_basic.qmd
   appendices:
-    - formulae.qmd
     - SI_common_mistakes.qmd
-    - greek_letters.qmd
-    - revision_history.qmd   
+    - greek_letters.qmd  
 
 
 bibliography: references.bib
