@@ -1,0 +1,70 @@
+project:
+  type: book
+  output-dir: docs
+  resources:
+    - CNAME
+
+website:
+  favicon: favicon.ico
+  
+book:
+  title: "Tutorial"
+  subtitle: "A Brief Introduction to Computational Tools"
+  author: "Serhat Beyenir"
+  date: last-modified
+  date-format: "D MMMM YYYY"
+  sidebar:
+    align: left
+    style: floating
+    collapse-level: 2
+    pinned: false
+  page-footer:
+    left: © 2025 <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+    right: |
+      Built with <a href="https://quarto.org"> Quarto {{< version >}}</a>
+  chapters:    
+    - index.qmd            
+    - part: Beginning
+      chapters:
+        - tutorial_basic.qmd
+  appendices:
+    - formulae.qmd
+    - SI_common_mistakes.qmd
+    - greek_letters.qmd
+    - revision_history.qmd   
+
+
+bibliography: references.bib
+csl: apa.csl
+
+format:
+  html:
+    toc: true
+    collapse: true
+    theme:
+      light: cosmo #flatly
+      dark: solar
+  pdf:
+    documentclass: book
+    code-overflow: wrap
+    toc-title: Contents
+    lot: true
+    lof: true
+    include-in-header: 
+      text: |
+        \usepackage{makeidx}
+        \makeindex
+    include-before-body:
+      text: |
+       \clearpage
+       \vspace*{\fill}  % pushes text to bottom of page
+       \begin{center}
+       {\small
+       This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).\\[0.5em]
+       Full text available at \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}.
+       }
+       \end{center}
+       \clearpage
+    include-after-body: 
+      text: |
+        \printindex

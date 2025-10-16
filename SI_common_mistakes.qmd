@@ -1,0 +1,21 @@
+# SI System Common Mistakes
+
+Using the SI system correctly is crucial for clear communication in science and engineering. Below are common mistakes in using the SI system, examples of incorrect usage, and how to correct them.
+
+| **Concept** | **Mistake** | **Correct Usage** | **Notes** |
+|------------------|------------------|------------------|------------------|
+| **Use of SI Unit Symbols** | `m./s` | `m/s` | Use the correct format without additional punctuation. |
+| **Spacing Between Value & Unit** | `10kg` | `10 kg` | Always leave a space between the number and the unit symbol. |
+| **Incorrect Unit Symbols** | `sec`, `hrs`, `°K` | `s`, `h`, `K` | Use the proper SI symbols; symbols are case-sensitive. |
+| **Abbreviations for Units** | `5 kilograms (kgs)` | `5 kilograms (kg)` | Avoid informal abbreviations like "kgs"; adhere to standard symbols. |
+| **Multiple Units in Expressions** | `5 m/s/s`, `5 kg/meter²` | `5 m/s²`, `5 kg/m²` | Use compact, standardized formats for derived units. |
+| **Incorrect Use of Prefixes** | `0.0001 km` | `100 mm` | Choose prefixes to keep numbers in the range (0.1 \leq x \< 1000). |
+| **Misplaced Unit Symbols** | `5/s`, `kg10` | `5 s⁻¹`, `10 kg` | Symbols must follow numerical values, not precede them. |
+| **Degrees Celsius vs. Kelvin** | `300°K` | `300 K` | Kelvin is written without "degree" |
+| **Singular vs. Plural Units** | `5 kgs`, `1 meters` | `5 kg`, `1 meter` | Symbols do not pluralize; full unit names follow grammar rules. |
+| **Capitalization of Symbols** | `Kg`, `S`, `Km`, `MA` | `kg`, `s`, `km`, `mA` | Symbols are case-sensitive; use uppercase only where specified (e.g., `N`, `Pa`). |
+| **Capitalization of Unit Names** | `Newton`, `Pascal`, `Watt` | `newton`, `pascal`, `watt` | Unit names are lowercase, even if derived from a person's name, unless starting a sentence. |
+| **Prefix Capitalization** | `MilliMeter`, `MegaWatt` | `millimeter`, `megawatt` | Prefixes are lowercase for (10\^{-1}) to (10\^{-9}), uppercase for (10\^6) and larger (except `k` for kilo). |
+| **Formatting in Reports** | `5`, `Temperature: 300` | `5 kg`, `Temperature: 300 K` | Always specify units explicitly. |
+
+: SI system rules and common mistakes
