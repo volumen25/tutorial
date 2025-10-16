@@ -6,11 +6,13 @@ This tutorial introduces Python programming, covering basic concepts with exampl
 
 To follow this tutorial, you must have [Python](https://www.python.org/downloads/) (version 3.10 or later) installed on your computer. Python is available for Windows, macOS, and Linux. Additionally, ensure you have a text editor or an Integrated Development Environment (IDE) to write Python code. We recommend [Positron](https://positron.posit.co/), a user-friendly IDE with a built-in terminal for running Python scripts, though other editors like VS Code or PyCharm are also suitable.
 
+Alternatively, you can use a web-based environment like [python-fiddle.com](https://python-fiddle.com/)
+
 ## Basic Syntax
 
 Python uses indentation\index{indentation} (typically four spaces) to define code blocks. A colon\index{colon} (`:`) introduces a block, and statements within the block must be indented consistently. Python is case-sensitive, so `Variable` and `variable` are distinct identifiers. Statements typically end with a newline, but you can use a backslash (`\`) to continue a statement across multiple lines.
 
-```python
+``` python
 total = 1 + 2 + 3 + \
         4 + 5
 print(total)  # Output: 15
@@ -18,15 +20,15 @@ print(total)  # Output: 15
 
 Basic syntax rules:
 
-- Comments start with `#` and extend to the end of the line.
-- Strings can be enclosed in single quotes (`'`), double quotes (`"`), or triple quotes (`'''` or `"""`) for multi-line strings.
-- Python is case-sensitive, so `Variable` and `variable` are different identifiers.
+-   Comments start with `#` and extend to the end of the line.
+-   Strings can be enclosed in single quotes (`'`), double quotes (`"`), or triple quotes (`'''` or `"""`) for multi-line strings.
+-   Python is case-sensitive, so `Variable` and `variable` are different identifiers.
 
 ## The `print()` Function
 
 The `print()` function\index{print} displays output in Python.
 
-```python
+``` python
 name = "Rudolf Diesel"
 year = 1858
 print(f"{name} was born in {year}.")
@@ -52,7 +54,7 @@ Note: The currency symbol (e.g., `$`) can be modified for other currencies (e.g.
 
 Variables\index{variables} store data and are assigned values using the `=` operator.
 
-```python
+``` python
 x = 10
 y = 3.14
 name = "Rudolph"
@@ -60,14 +62,14 @@ name = "Rudolph"
 
 Python has several built-in data types, including:
 
-- Integers (`int`): Whole numbers, e.g., `10`, `-5`
-- Floating-point numbers (`float`): Decimal numbers, e.g., `3.14`, `-0.001`
-- Strings (`str`): Text, e.g., `"Hello"`, `'World'`
-- Booleans (`bool`): `True` or `False`
+-   Integers (`int`): Whole numbers, e.g., `10`, `-5`
+-   Floating-point numbers (`float`): Decimal numbers, e.g., `3.14`, `-0.001`
+-   Strings (`str`): Text, e.g., `"Hello"`, `'World'`
+-   Booleans (`bool`): `True` or `False`
 
 ### Arithmetic Operations
 
-```python
+``` python
 a = 10
 b = 3
 print(a + b)  # Addition: 13
@@ -80,7 +82,7 @@ print(a ** b) # Exponentiation: 1000
 
 ### String Operations
 
-```python
+``` python
 first_name = "Rudolph"
 last_name = "Diesel"
 full_name = first_name + " " + last_name  # Concatenation using +
@@ -96,19 +98,19 @@ Note: String repetition (`*`) concatenates the string multiple times without spa
 
 Python's interactive mode allows you to enter commands and see results immediately, ideal for quick calculations. To start, open a terminal (on macOS, Linux, or Windows) and type:
 
-```bash
+``` bash
 python3  # Use 'python' on Windows if 'python3' is not recognized
 ```
 
 You should see the Python prompt:
 
-```bash
+``` bash
 >>>
 ```
 
 Enter expressions and press **Enter** to see results:
 
-```python
+``` python
 2 + 3  # Output: 5
 7 - 4  # Output: 3
 6 * 9  # Output: 54
@@ -119,14 +121,14 @@ Enter expressions and press **Enter** to see results:
 
 ### Parentheses for Grouping
 
-```python
+``` python
 (2 + 3) * 4  # Output: 20
 2 + (3 * 4)  # Output: 14
 ```
 
 ### Variables
 
-```python
+``` python
 x = 10
 y = 3
 x / y  # Output: 3.3333333333333335
@@ -136,13 +138,11 @@ x / y  # Output: 3.3333333333333335
 
 To exit, type:
 
-```python
+``` python
 exit()
 ```
 
-Alternatively, use:
-- **Ctrl+D** (macOS/Linux)
-- **Ctrl+Z** then Enter (Windows)
+Alternatively, use: - **Ctrl+D** (macOS/Linux) - **Ctrl+Z** then Enter (Windows)
 
 ## Control Flow
 
@@ -152,13 +152,13 @@ Control flow\index{control flow} statements direct the execution of code based o
 
 Conditional statements\index{conditional statements} allow you to execute different code blocks based on specific conditions. Python provides three keywords for this purpose:
 
-- **`if`**: Evaluates a condition and executes its code block if the condition is `True`.
-- **`elif`**: Short for "else if," it checks an additional condition if the preceding `if` or `elif` conditions are `False`. You can use multiple `elif` statements to test multiple conditions sequentially, and Python will execute the first `True` condition’s block, skipping the rest.
-- **`else`**: Executes a code block if none of the preceding `if` or `elif` conditions are `True`. It serves as a fallback and does not require a condition.
+-   **`if`**: Evaluates a condition and executes its code block if the condition is `True`.
+-   **`elif`**: Short for "else if," it checks an additional condition if the preceding `if` or `elif` conditions are `False`. You can use multiple `elif` statements to test multiple conditions sequentially, and Python will execute the first `True` condition’s block, skipping the rest.
+-   **`else`**: Executes a code block if none of the preceding `if` or `elif` conditions are `True`. It serves as a fallback and does not require a condition.
 
-The following example uses age to categorize a person as a Minor, Adult, or Senior, demonstrating how `if`, `elif`, and `else` work together. 
+The following example uses age to categorize a person as a Minor, Adult, or Senior, demonstrating how `if`, `elif`, and `else` work together.
 
-```python
+``` python
 # Categorize a person based on their age
 age = 19
 if age < 18:
@@ -175,14 +175,15 @@ Output: `Adult`
 
 A `for` loop\index{for loop} iterates over a sequence (e.g., list or string).
 
-```python
+``` python
 components = ["piston", "liner", "connecting rod"]
 for component in components:
     print(component)
 ```
 
 Output:
-```
+
+```         
 piston
 liner
 connecting rod
@@ -192,7 +193,7 @@ connecting rod
 
 A `while` loop\index{while loop} executes as long as a condition is true. Ensure the condition eventually becomes false to avoid infinite loops.
 
-```python
+``` python
 count = 0
 while count <= 5:
     print(count)
@@ -200,7 +201,8 @@ while count <= 5:
 ```
 
 Output:
-```
+
+```         
 0
 1
 2
@@ -215,7 +217,7 @@ Output:
 
 Functions are reusable code blocks defined using the `def` keyword\index{def keyword}. They can include default parameters for optional arguments.
 
-```python
+``` python
 def add(a, b=0):
     return a + b
 print(add(5))      # Output: 5
@@ -233,7 +235,7 @@ print(multiply(2, 3, 4))  # Output: 24
 
 The `lambda` keyword\index{lambda keyword} creates anonymous functions for short, one-off operations, often used in functional programming.
 
-```python
+``` python
 celsius_to_fahrenheit = lambda c: (c * 9 / 5) + 32
 print(celsius_to_fahrenheit(25))  # Output: 77.0
 ```
@@ -242,13 +244,13 @@ print(celsius_to_fahrenheit(25))  # Output: 77.0
 
 The `math` module\index{math module} provides mathematical functions and constants.
 
-```python
+``` python
 import math
 print(math.sqrt(16))  # Output: 4.0
 print(math.pi)        # Output: 3.141592653589793
 ```
 
-```python
+``` python
 import math
 angle = math.pi / 4  # 45 degrees in radians
 print(math.sin(angle))  # Output: 0.7071067811865475 (approximately √2/2)
@@ -258,7 +260,7 @@ print(math.tan(angle))  # Output: 1.0
 
 Note: Floating-point arithmetic may result in small precision differences, as seen in the `sin` and `cos` outputs.
 
-```python
+``` python
 import math
 print(math.log(10))       # Natural logarithm of 10: 2.302585092994046
 print(math.log(100, 10))  # Logarithm of 100 with base 10: 2.0
@@ -268,7 +270,7 @@ print(math.log(100, 10))  # Logarithm of 100 with base 10: 2.0
 
 The `math` module provides `math.radians()` to convert degrees to radians and `math.degrees()` to convert radians to degrees, which is useful for trigonometric calculations.
 
-```python
+``` python
 import math
 degrees = 180
 radians = math.radians(degrees)
@@ -283,7 +285,7 @@ print(f"{radians:.3f} radians is {degrees:.1f} degrees")  # Output: 1.571 radian
 
 Write Python code in a `.py` file and run it as a script. Create a file named `script.py`:
 
-```python
+``` python
 # script.py
 import math
 print("Square root of 16 is:", math.sqrt(16))
@@ -295,12 +297,13 @@ print("Logarithm of 100 with base 10 is:", math.log(100, 10))
 
 To run the script, open a terminal, navigate to the directory containing `script.py` using the `cd` command (e.g., `cd /path/to/directory`), and type:
 
-```bash
+``` bash
 python3 script.py  # or python script.py on Windows
 ```
 
 Output:
-```
+
+```         
 Square root of 16 is: 4.0
 Value of pi is: 3.141592653589793
 Sine of 90 degrees is: 1.0
@@ -312,14 +315,14 @@ Logarithm of 100 with base 10 is: 2.0
 
 This tutorial covered Python basics, including syntax, variables, data types, operations, control flow, and functions. Python’s rich ecosystem includes libraries like:
 
-- **NumPy**: For numerical computations and array manipulations.
-- **Matplotlib**: For data visualization and plotting.
-- **Pandas**: For data manipulation and analysis with tabular data structures.
-- **Pint**: For handling physical quantities and performing unit conversions.
+-   **NumPy**: For numerical computations and array manipulations.
+-   **Matplotlib**: For data visualization and plotting.
+-   **Pandas**: For data manipulation and analysis with tabular data structures.
+-   **Pint**: For handling physical quantities and performing unit conversions.
 
 You can explore these libraries to enhance your Python programming skills further. For example installing them can be done using `pip`:
 
-```bash
+``` bash
 pip install numpy matplotlib pandas pint
 ```
 

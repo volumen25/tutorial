@@ -14,7 +14,7 @@
     "href": "tutorial_basic.html",
     "title": "1  Python Tutorial",
     "section": "",
-    "text": "1.1 Requirements\nThis tutorial introduces Python programming, covering basic concepts with examples to illustrate key points. We will start by using Python as a calculator, then explore variables, functions, and control flow.\nTo follow this tutorial, you must have Python (version 3.10 or later) installed on your computer. Python is available for Windows, macOS, and Linux. Additionally, ensure you have a text editor or an Integrated Development Environment (IDE) to write Python code. We recommend Positron, a user-friendly IDE with a built-in terminal for running Python scripts, though other editors like VS Code or PyCharm are also suitable.",
+    "text": "1.1 Requirements\nThis tutorial introduces Python programming, covering basic concepts with examples to illustrate key points. We will start by using Python as a calculator, then explore variables, functions, and control flow.\nTo follow this tutorial, you must have Python (version 3.10 or later) installed on your computer. Python is available for Windows, macOS, and Linux. Additionally, ensure you have a text editor or an Integrated Development Environment (IDE) to write Python code. We recommend Positron, a user-friendly IDE with a built-in terminal for running Python scripts, though other editors like VS Code or PyCharm are also suitable.\nAlternatively, you can use a web-based environment like python-fiddle.com",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
     ]
