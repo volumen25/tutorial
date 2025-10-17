@@ -210,6 +210,36 @@
     ]
   },
   {
+    "objectID": "perfect_gases.html",
+    "href": "perfect_gases.html",
+    "title": "4  Perfect Gases",
+    "section": "",
+    "text": "4.1 Boyle’s Law — Pressure–Volume Relationship\nAssuming compression according to the law \\(pV = \\text{constant}\\):",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Perfect Gases</span>"
+    ]
+  },
+  {
+    "objectID": "perfect_gases.html#boyles-law-pressurevolume-relationship",
+    "href": "perfect_gases.html#boyles-law-pressurevolume-relationship",
+    "title": "4  Perfect Gases",
+    "section": "",
+    "text": "Calculate the final volume when \\(1 \\, \\text{m}^3\\) of gas at a pressure of\n\\(120 \\, \\text{kN/m}^2\\) is compressed to a pressure of \\(960 \\, \\text{kN/m}^2\\).\nCalculate the initial volume of a gas at a pressure of \\(1.05 \\, \\text{bar}\\)\nthat will occupy a volume of \\(5.6 \\, \\text{m}^3\\) when it is compressed to a\npressure of \\(42 \\, \\text{bar}\\).\n\n\n4.1.1 Given:\nThe compression (or expansion) follows the law:\n\\[\np_1 V_1 = p_2 V_2\n\\]\n\n\n4.1.2 Final Volume of Gas\nGiven: \\(p_1 = 120 \\text{kN/m²}\\), \\(\\quad V_1 = 1 \\text{m³}\\), \\(\\quad p_2 = 960 \\text{kN/m²}\\)\nFrom \\(p_1 V_1 = p_2 V_2\\):\n\\[\nV_2 = \\frac{p_1 V_1}{p_2}\n\\]\nSubstitute:\n\\[\nV_2 = \\frac{120 \\times 1}{960} = 0.125\\ \\text{m³}\n\\]\nFinal Volume\n\\(\\boxed{V_2 = 0.125\\ \\text{m³}}\\)\n\n\n4.1.3 Initial Volume of Gas\nGiven: \\(p_1 = 1.05 \\text{bar}\\), \\(\\quad V_2 = 5.6 \\text{m³}\\), \\(\\quad p_2 = 42 \\text{bar}\\)\nFrom $( \\(p_1 V_1 = p_2 V_2\\):\n\\[\nV_1 = \\frac{p_2 V_2}{p_1}\n\\]\nSubstitute:\n\\[\nV_1 = \\frac{42 \\times 5.6}{1.05}\n\\]\n\\[\nV_1 = 224\\ \\text{m³}\n\\]\nInitial Volume\n\\(\\boxed{V_1 = 224\\ \\text{m³}}\\)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Perfect Gases</span>"
+    ]
+  },
+  {
+    "objectID": "perfect_gases.html#python-code",
+    "href": "perfect_gases.html#python-code",
+    "title": "4  Perfect Gases",
+    "section": "4.2 Python Code",
+    "text": "4.2 Python Code\n# Boyle's Law Calculator (p1 * V1 = p2 * V2)\n\nprint(\"Boyle’s Law Calculator: p₁V₁ = p₂V₂\\n\")\n\n# Get known values (enter 0 for the unknown)\np1 = float(input(\"Enter initial pressure p₁ (in kN/m² or bar): \"))\nV1 = float(input(\"Enter initial volume V₁ (m³): \"))\np2 = float(input(\"Enter final pressure p₂ (in kN/m² or bar): \"))\nV2 = float(input(\"Enter final volume V₂ (m³): \"))\n\nprint()\n\n# Determine which variable is missing (the one entered as 0)\nif V2 == 0:\n    V2 = (p1 * V1) / p2\n    print(f\"Final volume V₂ = {V2:.4f} m³\")\n\nelif V1 == 0:\n    V1 = (p2 * V2) / p1\n    print(f\"Initial volume V₁ = {V1:.4f} m³\")\n\nelif p2 == 0:\n    p2 = (p1 * V1) / V2\n    print(f\"Final pressure p₂ = {p2:.4f}\")\n\nelif p1 == 0:\n    p1 = (p2 * V2) / V1\n    print(f\"Initial pressure p₁ = {p1:.4f}\")\n\nelse:\n    print(\"All variables entered — nothing to calculate!\")\n\nprint(\"\\nUnits:\")\nprint(\"• If you used bar, results are in bar.\")\nprint(\"• If you used kN/m², results are in kN/m².\")",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Perfect Gases</span>"
+    ]
+  },
+  {
     "objectID": "SI_common_mistakes.html",
     "href": "SI_common_mistakes.html",
     "title": "Appendix A — SI System Common Mistakes",
