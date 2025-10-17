@@ -445,7 +445,7 @@ window.Quarto = {
 
 <section id="heat-required-to-heat-steel" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="heat-required-to-heat-steel"><span class="header-section-number">3.1</span> Heat Required to Heat Steel</h2>
-<p>A steel block of mass <span class="math inline">\(m = 5\ \text{kg}\)</span> and specific heat capacity <span class="math inline">\(c = 480\ \text{J/kg·K}\)</span> is heated from <span class="math inline">\(T_1 = 15^\circ \text{C}\)</span> )$ to $( <span class="math inline">\(T_2 = 100^\circ \text{C}\)</span>. Determine the <strong>heat required</strong>.</p>
+<p>A steel block of mass <span class="math inline">\(m = 5\ \text{kg}\)</span> and specific heat capacity <span class="math inline">\(c = 480\ \text{J/kg·K}\)</span> is heated from <span class="math inline">\(T_1 = 15^\circ \text{C}\)</span> to <span class="math inline">\(T_2 = 100^\circ \text{C}\)</span>. Determine the <strong>heat required</strong>.</p>
 <section id="the-formula-for-heat" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="the-formula-for-heat"><span class="header-section-number">3.1.1</span> The formula for heat</h3>
 <p><span class="math display">\[
@@ -580,6 +580,27 @@ c = \frac{714,000}{340} \approx 2100\ \text{J/kg·K}
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Temperature change: </span><span class="sc">{</span>delta_T<span class="sc">}</span><span class="ss"> K"</span>)</span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Specific heat capacity: </span><span class="sc">{</span>c<span class="sc">:.0f}</span><span class="ss"> J/kg·K"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Interactive Specific Heat Capacity Calculator</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Get user input</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>mass <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the mass of the liquid (kg): "</span>))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>T_initial <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the initial temperature (°C): "</span>))</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>T_final <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the final temperature (°C): "</span>))</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>Q_kJ <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the heat supplied (kJ): "</span>))</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert heat to joules</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>Q_J <span class="op">=</span> Q_kJ <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperature change</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>delta_T <span class="op">=</span> T_final <span class="op">-</span> T_initial</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate specific heat capacity</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> Q_J <span class="op">/</span> (mass <span class="op">*</span> delta_T)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Calculation Results:"</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Temperature change: </span><span class="sc">{</span>delta_T<span class="sc">:.2f}</span><span class="ss"> K"</span>)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Specific heat capacity: </span><span class="sc">{</span>c<span class="sc">:.2f}</span><span class="ss"> J/kg·K"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
