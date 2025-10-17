@@ -280,7 +280,7 @@ print(f"Work done: {W_J:.0f} J ({W_kJ:.2f} kJ)")
 
 ## Enthalpy Calculation
 
-120 kg of steam at $p = 1000 \text{kPa}$ and $T = 200\^\circ\text{C}$ has internal energy $u = 2623 \text{kJ/kg}$ and specific volume $(v = 0.2061 \text{m}\^3/\text{kg}$ Calculate the specific enthalpy (h) and the total enthalpy for the 120-kg mass.
+120 kg of steam at $p = 1000 \text{kPa}$ and $T = 200^\circ\text{C}$ has internal energy $u = 2623 \text{kJ/kg}$ and specific volume $(v = 0.2061 \text{ m}^3/\text{kg}$ Calculate the specific enthalpy (h) and the total enthalpy for the 120-kg mass.
 
 Given for steam:
 
@@ -318,9 +318,9 @@ $$
 
 -   Total enthalpy for 120 kg: $\boxed{H = 339{,}492\ \text{kJ}}$
 
-## Python Code
+### Python Code
 
-```python
+``` python
 # Given data
 m = 120          # kg
 P = 1000         # kPa

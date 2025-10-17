@@ -43,7 +43,7 @@ format:
     theme:
       light: cosmo #flatly
       dark: solar
-  pdf:
+  #pdf:
     documentclass: book
     code-overflow: wrap
     toc-title: Contents
