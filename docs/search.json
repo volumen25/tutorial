@@ -200,6 +200,16 @@
     ]
   },
   {
+    "objectID": "heat_work.html#work-done-by-fluid-in-cylinder",
+    "href": "heat_work.html#work-done-by-fluid-in-cylinder",
+    "title": "3  Heat and Work",
+    "section": "3.3 Work Done by Fluid in Cylinder",
+    "text": "3.3 Work Done by Fluid in Cylinder\nA fluid in a cylinder is at pressure \\(P = 700\\ \\text{kPa}\\). It is expanded at constant pressure from a volume of \\(V_1 = 0.28\\ \\text{m³}\\) to \\(V_2 = 1.68\\ \\text{m³}\\). Determine the work done.\n\n3.3.1 The formula for work done at constant pressure\n\\[\nW = P \\Delta V\n\\]\nwhere\n\\[\n\\Delta V = V_2 - V_1\n\\]\n\n\n3.3.2 Compute the change in volume\n\\[\n\\Delta V = 1.68 - 0.28 = 1.40\\ \\text{m³}\n\\]\n\n\n3.3.3 Convert pressure to Pa\n\\[\nP = 700\\ \\text{kPa} = 700 \\times 10^3\\ \\text{Pa} = 700,000\\ \\text{Pa}\n\\]\n\n\n3.3.4 Compute the work done\n\\[\nW = P \\Delta V = 700,000 \\times 1.40\n\\]\n\\[\nW = 980,000\\ \\text{J} \\approx 980\\ \\text{kJ}\n\\]\n\n\n3.3.5 Answer\nThe work done by the fluid during expansion is:\n\\[\n\\boxed{980\\ \\text{kJ}}\n\\]\n\n\n3.3.6 Python Code\n# Work Done by Fluid at Constant Pressure\n\n# Given data\nP_kPa = 700          # pressure in kPa\nV1 = 0.28            # initial volume in m³\nV2 = 1.68            # final volume in m³\n\n# Convert pressure to Pa\nP_Pa = P_kPa * 1000\n\n# Compute change in volume\ndelta_V = V2 - V1\n\n# Compute work done (J)\nW_J = P_Pa * delta_V\n\n# Convert to kJ\nW_kJ = W_J / 1000\n\n# Print results\nprint(f\"Pressure: {P_Pa} Pa\")\nprint(f\"Change in volume: {delta_V:.2f} m³\")\nprint(f\"Work done: {W_J:.0f} J ({W_kJ:.0f} kJ)\")\n# Interactive Work Done Calculator\n\n# Get user input\nP_kPa = float(input(\"Enter the constant pressure (kPa): \"))\nV1 = float(input(\"Enter the initial volume (m³): \"))\nV2 = float(input(\"Enter the final volume (m³): \"))\n\n# Convert pressure to Pa\nP_Pa = P_kPa * 1000\n\n# Compute change in volume\ndelta_V = V2 - V1\n\n# Compute work done (J)\nW_J = P_Pa * delta_V\n\n# Convert to kJ\nW_kJ = W_J / 1000\n\n# Display results\nprint(\"\\nCalculation Results:\")\nprint(f\"Pressure: {P_Pa:.0f} Pa ({P_kPa:.0f} kPa)\")\nprint(f\"Change in volume: {delta_V:.2f} m³\")\nprint(f\"Work done: {W_J:.0f} J ({W_kJ:.2f} kJ)\")",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Heat and Work</span>"
+    ]
+  },
+  {
     "objectID": "SI_common_mistakes.html",
     "href": "SI_common_mistakes.html",
     "title": "Appendix A — SI System Common Mistakes",

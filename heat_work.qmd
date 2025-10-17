@@ -176,3 +176,104 @@ print("\nCalculation Results:")
 print(f"Temperature change: {delta_T:.2f} K")
 print(f"Specific heat capacity: {c:.2f} J/kg·K")
 ```
+
+## Work Done by Fluid in Cylinder
+
+A fluid in a cylinder is at pressure $P = 700\ \text{kPa}$. It is **expanded at constant pressure** from a volume of $V_1 = 0.28\ \text{m³}$ to $V_2 = 1.68\ \text{m³}$. Determine the **work done**.
+
+### The formula for work done at constant pressure
+
+$$
+W = P \Delta V
+$$
+
+where
+
+$$
+\Delta V = V_2 - V_1
+$$
+
+### Compute the change in volume
+
+$$
+\Delta V = 1.68 - 0.28 = 1.40\ \text{m³}
+$$
+
+### Convert pressure to Pa
+
+$$
+P = 700\ \text{kPa} = 700 \times 10^3\ \text{Pa} = 700,000\ \text{Pa}
+$$
+
+### Compute the work done
+
+$$
+W = P \Delta V = 700,000 \times 1.40
+$$
+
+$$
+W = 980,000\ \text{J} \approx 980\ \text{kJ}
+$$
+
+### Answer
+
+The **work done** by the fluid during expansion is:
+
+$$
+\boxed{980\ \text{kJ}}
+$$
+
+### Python Code
+
+``` python
+# Work Done by Fluid at Constant Pressure
+
+# Given data
+P_kPa = 700          # pressure in kPa
+V1 = 0.28            # initial volume in m³
+V2 = 1.68            # final volume in m³
+
+# Convert pressure to Pa
+P_Pa = P_kPa * 1000
+
+# Compute change in volume
+delta_V = V2 - V1
+
+# Compute work done (J)
+W_J = P_Pa * delta_V
+
+# Convert to kJ
+W_kJ = W_J / 1000
+
+# Print results
+print(f"Pressure: {P_Pa} Pa")
+print(f"Change in volume: {delta_V:.2f} m³")
+print(f"Work done: {W_J:.0f} J ({W_kJ:.0f} kJ)")
+```
+
+``` python
+# Interactive Work Done Calculator
+
+# Get user input
+P_kPa = float(input("Enter the constant pressure (kPa): "))
+V1 = float(input("Enter the initial volume (m³): "))
+V2 = float(input("Enter the final volume (m³): "))
+
+# Convert pressure to Pa
+P_Pa = P_kPa * 1000
+
+# Compute change in volume
+delta_V = V2 - V1
+
+# Compute work done (J)
+W_J = P_Pa * delta_V
+
+# Convert to kJ
+W_kJ = W_J / 1000
+
+# Display results
+print("\nCalculation Results:")
+print(f"Pressure: {P_Pa:.0f} Pa ({P_kPa:.0f} kPa)")
+print(f"Change in volume: {delta_V:.2f} m³")
+print(f"Work done: {W_J:.0f} J ({W_kJ:.2f} kJ)")
+```

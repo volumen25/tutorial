@@ -417,6 +417,15 @@ window.Quarto = {
   <li><a href="#answer-1" id="toc-answer-1" class="nav-link" data-scroll-target="#answer-1"><span class="header-section-number">3.2.5</span> Answer</a></li>
   <li><a href="#python-code-1" id="toc-python-code-1" class="nav-link" data-scroll-target="#python-code-1"><span class="header-section-number">3.2.6</span> Python Code</a></li>
   </ul></li>
+  <li><a href="#work-done-by-fluid-in-cylinder" id="toc-work-done-by-fluid-in-cylinder" class="nav-link" data-scroll-target="#work-done-by-fluid-in-cylinder"><span class="header-section-number">3.3</span> Work Done by Fluid in Cylinder</a>
+  <ul class="collapse">
+  <li><a href="#the-formula-for-work-done-at-constant-pressure" id="toc-the-formula-for-work-done-at-constant-pressure" class="nav-link" data-scroll-target="#the-formula-for-work-done-at-constant-pressure"><span class="header-section-number">3.3.1</span> The formula for work done at constant pressure</a></li>
+  <li><a href="#compute-the-change-in-volume" id="toc-compute-the-change-in-volume" class="nav-link" data-scroll-target="#compute-the-change-in-volume"><span class="header-section-number">3.3.2</span> Compute the change in volume</a></li>
+  <li><a href="#convert-pressure-to-pa" id="toc-convert-pressure-to-pa" class="nav-link" data-scroll-target="#convert-pressure-to-pa"><span class="header-section-number">3.3.3</span> Convert pressure to Pa</a></li>
+  <li><a href="#compute-the-work-done" id="toc-compute-the-work-done" class="nav-link" data-scroll-target="#compute-the-work-done"><span class="header-section-number">3.3.4</span> Compute the work done</a></li>
+  <li><a href="#answer-2" id="toc-answer-2" class="nav-link" data-scroll-target="#answer-2"><span class="header-section-number">3.3.5</span> Answer</a></li>
+  <li><a href="#python-code-2" id="toc-python-code-2" class="nav-link" data-scroll-target="#python-code-2"><span class="header-section-number">3.3.6</span> Python Code</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -601,6 +610,98 @@ c = \frac{714,000}{340} \approx 2100\ \text{J/kg·K}
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Calculation Results:"</span>)</span>
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Temperature change: </span><span class="sc">{</span>delta_T<span class="sc">:.2f}</span><span class="ss"> K"</span>)</span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Specific heat capacity: </span><span class="sc">{</span>c<span class="sc">:.2f}</span><span class="ss"> J/kg·K"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="work-done-by-fluid-in-cylinder" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="work-done-by-fluid-in-cylinder"><span class="header-section-number">3.3</span> Work Done by Fluid in Cylinder</h2>
+<p>A fluid in a cylinder is at pressure <span class="math inline">\(P = 700\ \text{kPa}\)</span>. It is <strong>expanded at constant pressure</strong> from a volume of <span class="math inline">\(V_1 = 0.28\ \text{m³}\)</span> to <span class="math inline">\(V_2 = 1.68\ \text{m³}\)</span>. Determine the <strong>work done</strong>.</p>
+<section id="the-formula-for-work-done-at-constant-pressure" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="the-formula-for-work-done-at-constant-pressure"><span class="header-section-number">3.3.1</span> The formula for work done at constant pressure</h3>
+<p><span class="math display">\[
+W = P \Delta V
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+\Delta V = V_2 - V_1
+\]</span></p>
+</section>
+<section id="compute-the-change-in-volume" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="compute-the-change-in-volume"><span class="header-section-number">3.3.2</span> Compute the change in volume</h3>
+<p><span class="math display">\[
+\Delta V = 1.68 - 0.28 = 1.40\ \text{m³}
+\]</span></p>
+</section>
+<section id="convert-pressure-to-pa" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="convert-pressure-to-pa"><span class="header-section-number">3.3.3</span> Convert pressure to Pa</h3>
+<p><span class="math display">\[
+P = 700\ \text{kPa} = 700 \times 10^3\ \text{Pa} = 700,000\ \text{Pa}
+\]</span></p>
+</section>
+<section id="compute-the-work-done" class="level3" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="compute-the-work-done"><span class="header-section-number">3.3.4</span> Compute the work done</h3>
+<p><span class="math display">\[
+W = P \Delta V = 700,000 \times 1.40
+\]</span></p>
+<p><span class="math display">\[
+W = 980,000\ \text{J} \approx 980\ \text{kJ}
+\]</span></p>
+</section>
+<section id="answer-2" class="level3" data-number="3.3.5">
+<h3 data-number="3.3.5" class="anchored" data-anchor-id="answer-2"><span class="header-section-number">3.3.5</span> Answer</h3>
+<p>The <strong>work done</strong> by the fluid during expansion is:</p>
+<p><span class="math display">\[
+\boxed{980\ \text{kJ}}
+\]</span></p>
+</section>
+<section id="python-code-2" class="level3" data-number="3.3.6">
+<h3 data-number="3.3.6" class="anchored" data-anchor-id="python-code-2"><span class="header-section-number">3.3.6</span> Python Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Work Done by Fluid at Constant Pressure</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>P_kPa <span class="op">=</span> <span class="dv">700</span>          <span class="co"># pressure in kPa</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>V1 <span class="op">=</span> <span class="fl">0.28</span>            <span class="co"># initial volume in m³</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>V2 <span class="op">=</span> <span class="fl">1.68</span>            <span class="co"># final volume in m³</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert pressure to Pa</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>P_Pa <span class="op">=</span> P_kPa <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute change in volume</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>delta_V <span class="op">=</span> V2 <span class="op">-</span> V1</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute work done (J)</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>W_J <span class="op">=</span> P_Pa <span class="op">*</span> delta_V</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to kJ</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>W_kJ <span class="op">=</span> W_J <span class="op">/</span> <span class="dv">1000</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Pressure: </span><span class="sc">{</span>P_Pa<span class="sc">}</span><span class="ss"> Pa"</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Change in volume: </span><span class="sc">{</span>delta_V<span class="sc">:.2f}</span><span class="ss"> m³"</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Work done: </span><span class="sc">{</span>W_J<span class="sc">:.0f}</span><span class="ss"> J (</span><span class="sc">{</span>W_kJ<span class="sc">:.0f}</span><span class="ss"> kJ)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Interactive Work Done Calculator</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Get user input</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>P_kPa <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the constant pressure (kPa): "</span>))</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>V1 <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the initial volume (m³): "</span>))</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>V2 <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the final volume (m³): "</span>))</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert pressure to Pa</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>P_Pa <span class="op">=</span> P_kPa <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute change in volume</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>delta_V <span class="op">=</span> V2 <span class="op">-</span> V1</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute work done (J)</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>W_J <span class="op">=</span> P_Pa <span class="op">*</span> delta_V</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to kJ</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>W_kJ <span class="op">=</span> W_J <span class="op">/</span> <span class="dv">1000</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Calculation Results:"</span>)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Pressure: </span><span class="sc">{</span>P_Pa<span class="sc">:.0f}</span><span class="ss"> Pa (</span><span class="sc">{</span>P_kPa<span class="sc">:.0f}</span><span class="ss"> kPa)"</span>)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Change in volume: </span><span class="sc">{</span>delta_V<span class="sc">:.2f}</span><span class="ss"> m³"</span>)</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Work done: </span><span class="sc">{</span>W_J<span class="sc">:.0f}</span><span class="ss"> J (</span><span class="sc">{</span>W_kJ<span class="sc">:.2f}</span><span class="ss"> kJ)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
