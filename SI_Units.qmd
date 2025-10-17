@@ -1,4 +1,4 @@
-# SI Units Examples {#si_units}
+# SI Units {#si_units}
 
 ## Condenser Vacuum
 
@@ -107,7 +107,7 @@ print(f"Mass flow rate: {m_dot_kg_min:.2f} kg/min")
 
 ## Gauge Pressure
 
-An oil of specific gravity $\text{SG} = 0.8$ is contained in a vessel to a depth of $h = 2 \text{ m}$. Find the **gauge pressure** at this depth in kPa.
+An oil of specific gravity (relative density) $\text{SG} = 0.8$ is contained in a vessel to a depth of $h = 2 \text{ m}$. Find the **gauge pressure** at this depth in kPa.
 
 ### Gauge Pressure
 
@@ -131,7 +131,7 @@ $$
 \text{SG} = \frac{\rho_{\text{oil}}}{\rho_{\text{water}}}
 $$
 
-where (\rho\_{\text{water}} = 1000 \text{kg/m³}). Thus,
+where $\rho_{\text{water}} = 1000 \text{ kg/m³}$. Thus,
 
 $$
 \rho_{\text{oil}} = \text{SG} \times \rho_{\text{water}} = 0.8 \times 1000 = 800\ \text{kg/m³}

@@ -122,51 +122,81 @@
   {
     "objectID": "si_units.html",
     "href": "si_units.html",
-    "title": "2  SI Units Examples",
+    "title": "2  SI Units",
     "section": "",
     "text": "2.1 Condenser Vacuum\nCondenser vacuum gauge reads 715 mmHg when barometer stands at 757 mmHg. State the absolute pressure in kN/m² and bar.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units Examples</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units</span>"
     ]
   },
   {
     "objectID": "si_units.html#condenser-vacuum",
     "href": "si_units.html#condenser-vacuum",
-    "title": "2  SI Units Examples",
+    "title": "2  SI Units",
     "section": "",
     "text": "2.1.1 Given Data\n\\[\nP_{atm} = 757~\\text{mmHg}, \\quad P_{vac} = 715~\\text{mmHg}\n\\]\n\n\n2.1.2 Absolute Pressure in mmHg\n\\[\nP_{abs} = P_{atm} - P_{vac} = 757 - 715 = 42~\\text{mmHg}\n\\]\n\n\n2.1.3 Convert mmHg → kN/m²\n\\[\nP = \\rho g h = 13{,}600 \\cdot 9.81 \\cdot 0.001 = 133.416~\\text{Pa} = 0.133416~\\text{kN/m}^2\n\\]\n\\[\nP_{abs} = 42 \\cdot 0.133416 = 5.6034~\\text{kN/m²}\n\\]\n\n\n2.1.4 Convert kN/m² → bar\n\\[\nP_{abs} = \\frac{5.6034}{100} = 0.056~\\text{bar}\n\\]\n\n\n2.1.5 Final Answers\n\\[\n\\boxed{P_{abs} = 42~\\text{mmHg} = 5.6034~\\text{kN/m²} = 0.056~\\text{bar}}\n\\]\n\n\n2.1.6 Python Code\nP_atm_mmHg = 757\nP_vac_mmHg = 715\nMMHG_TO_KN_M2 = 0.133416\nKNM2_TO_BAR = 1 / 100\nP_abs_mmHg = P_atm_mmHg - P_vac_mmHg\nP_abs_kNm2 = P_abs_mmHg * MMHG_TO_KN_M2\nP_abs_bar = P_abs_kNm2 * KNM2_TO_BAR\nprint(f\"Absolute Pressure = {P_abs_mmHg:.2f} mmHg\")\nprint(f\"Absolute Pressure = {P_abs_kNm2:.3f} kN/m²\")\nprint(f\"Absolute Pressure = {P_abs_bar:.4f} bar\")",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units Examples</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units</span>"
     ]
   },
   {
     "objectID": "si_units.html#oil-flow-in-tubes",
     "href": "si_units.html#oil-flow-in-tubes",
-    "title": "2  SI Units Examples",
+    "title": "2  SI Units",
     "section": "2.2 Oil Flow in Tubes",
     "text": "2.2 Oil Flow in Tubes\nOil flows full bore at a velocity of \\(v = 2~\\text{m/s}\\) through 16 tubes of diameter \\(d = 30~\\text{mm}\\). Density of oil: \\(\\rho = 0.85~\\text{g/mL}\\). Find volume flow rate (L/s) and mass flow rate (kg/min).\n\n2.2.1 Cross-sectional area of one tube\n\\[\nA = \\pi \\frac{d^2}{4} = \\pi \\frac{0.03^2}{4} \\approx 7.0686 \\times 10^{-4}~\\text{m}^2\n\\]\n\n\n2.2.2 Total area and volume flow rate\n\\[\nA_\\text{total} = 16 \\cdot 7.0686 \\times 10^{-4} \\approx 0.01131~\\text{m}^2\n\\]\n\\[\nQ = A_\\text{total} \\cdot v \\approx 0.02262~\\text{m}^3/\\text{s} \\approx 22.62~\\text{L/s}\n\\]\n\n\n2.2.3 Mass flow rate\n\\[\n\\dot{m} = \\rho \\cdot Q = 850 \\cdot 0.02262 \\approx 19.227~\\text{kg/s} \\approx 1153.6~\\text{kg/min}\n\\]\n\n\n2.2.4 Final Answers\n\\[\n\\text{Volume flow rate: } Q \\approx 22.6~\\text{L/s}\n\\] \\[\n\\text{Mass flow rate: } \\dot{m} \\approx 1154~\\text{kg/min}\n\\]\n\n\n2.2.5 Python Code\nimport math\nv = 2.0\nN = 16\nd = 0.03\nrho = 0.85 * 1000\nA = math.pi * d**2 / 4\nA_total = N * A\nQ_m3_s = A_total * v\nQ_L_s = Q_m3_s * 1000\nm_dot_kg_s = rho * Q_m3_s\nm_dot_kg_min = m_dot_kg_s * 60\nprint(f\"Volume flow rate: {Q_L_s:.2f} L/s\")\nprint(f\"Mass flow rate: {m_dot_kg_min:.2f} kg/min\")",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units Examples</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units</span>"
     ]
   },
   {
     "objectID": "si_units.html#gauge-pressure",
     "href": "si_units.html#gauge-pressure",
-    "title": "2  SI Units Examples",
+    "title": "2  SI Units",
     "section": "2.3 Gauge Pressure",
-    "text": "2.3 Gauge Pressure\nAn oil of specific gravity \\(\\text{SG} = 0.8\\) is contained in a vessel to a depth of \\(h = 2 \\text{ m}\\). Find the gauge pressure at this depth in kPa.\n\n2.3.1 Gauge Pressure\n\\[\nP_g = \\rho g h\n\\]\nwhere\n\\(\\rho = \\text{density of fluid (kg/m³)}\\)\ng= acceleration due to gravity (9.81 m/s²)\nh = depth (m)\n\n\n2.3.2 Compute the density of oil using specific gravity\nSpecific gravity is defined as\n\\[\n\\text{SG} = \\frac{\\rho_{\\text{oil}}}{\\rho_{\\text{water}}}\n\\]\nwhere (_{} = 1000 ). Thus,\n\\[\n\\rho_{\\text{oil}} = \\text{SG} \\times \\rho_{\\text{water}} = 0.8 \\times 1000 = 800\\ \\text{kg/m³}\n\\]\n\n\n2.3.3 Compute the gauge pressure\n\\[\nP_g = \\rho g h = 800 \\times 9.81 \\times 2\n\\]\n\\[\nP_g = 15696\\ \\text{Pa} \\approx 15.7\\ \\text{kPa}\n\\]\n\n\n2.3.4 Answer\nThe gauge pressure at a depth of 2 m in the oil is:\n\\[\n\\boxed{15.7\\ \\text{kPa}}\n\\]\n\n\n2.3.5 Python Code\n# Gauge Pressure Calculation for Oil\n\n# Given data\nspecific_gravity = 0.8  # SG of oil\ndepth_m = 2.0           # depth in meters\ng = 9.81                # acceleration due to gravity in m/s²\nrho_water = 1000        # density of water in kg/m³\n\n# Compute density of oil\nrho_oil = specific_gravity * rho_water\n\n# Compute gauge pressure (Pa)\nP_g_Pa = rho_oil * g * depth_m\n\n# Convert to kPa\nP_g_kPa = P_g_Pa / 1000\n\n# Print results\nprint(f\"Density of oil: {rho_oil:.1f} kg/m³\")\nprint(f\"Gauge pressure at {depth_m} m depth: {P_g_Pa:.1f} Pa ({P_g_kPa:.2f} kPa)\")",
+    "text": "2.3 Gauge Pressure\nAn oil of specific gravity (relative density) \\(\\text{SG} = 0.8\\) is contained in a vessel to a depth of \\(h = 2 \\text{ m}\\). Find the gauge pressure at this depth in kPa.\n\n2.3.1 Gauge Pressure\n\\[\nP_g = \\rho g h\n\\]\nwhere\n\\(\\rho = \\text{density of fluid (kg/m³)}\\)\ng= acceleration due to gravity (9.81 m/s²)\nh = depth (m)\n\n\n2.3.2 Compute the density of oil using specific gravity\nSpecific gravity is defined as\n\\[\n\\text{SG} = \\frac{\\rho_{\\text{oil}}}{\\rho_{\\text{water}}}\n\\]\nwhere \\(\\rho_{\\text{water}} = 1000 \\text{ kg/m³}\\). Thus,\n\\[\n\\rho_{\\text{oil}} = \\text{SG} \\times \\rho_{\\text{water}} = 0.8 \\times 1000 = 800\\ \\text{kg/m³}\n\\]\n\n\n2.3.3 Compute the gauge pressure\n\\[\nP_g = \\rho g h = 800 \\times 9.81 \\times 2\n\\]\n\\[\nP_g = 15696\\ \\text{Pa} \\approx 15.7\\ \\text{kPa}\n\\]\n\n\n2.3.4 Answer\nThe gauge pressure at a depth of 2 m in the oil is:\n\\[\n\\boxed{15.7\\ \\text{kPa}}\n\\]\n\n\n2.3.5 Python Code\n# Gauge Pressure Calculation for Oil\n\n# Given data\nspecific_gravity = 0.8  # SG of oil\ndepth_m = 2.0           # depth in meters\ng = 9.81                # acceleration due to gravity in m/s²\nrho_water = 1000        # density of water in kg/m³\n\n# Compute density of oil\nrho_oil = specific_gravity * rho_water\n\n# Compute gauge pressure (Pa)\nP_g_Pa = rho_oil * g * depth_m\n\n# Convert to kPa\nP_g_kPa = P_g_Pa / 1000\n\n# Print results\nprint(f\"Density of oil: {rho_oil:.1f} kg/m³\")\nprint(f\"Gauge pressure at {depth_m} m depth: {P_g_Pa:.1f} Pa ({P_g_kPa:.2f} kPa)\")",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units Examples</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units</span>"
     ]
   },
   {
     "objectID": "si_units.html#absolute-pressure-from-manometer-reading",
     "href": "si_units.html#absolute-pressure-from-manometer-reading",
-    "title": "2  SI Units Examples",
+    "title": "2  SI Units",
     "section": "2.4 Absolute Pressure from Manometer Reading",
     "text": "2.4 Absolute Pressure from Manometer Reading\nA water manometer shows a pressure in a vessel of \\(400\\ \\text{mm}\\) below atmospheric pressure. The atmospheric pressure is measured as \\(763\\ \\text{mmHg}\\). Determine the absolute pressure in the vessel in kPa.\n\n2.4.1 Relationship between absolute and gauge pressure\n\\[\nP_\\text{abs} = P_\\text{atm} + P_\\text{gauge}\n\\]\nSince the manometer shows a pressure below atmospheric, the gauge pressure is negative:\n\\[\nP_\\text{gauge} = - \\rho_\\text{water} g h\n\\]\n\n\n2.4.2 Convert atmospheric pressure to Pa using\n\\[\nP = \\rho g h = 13{,}600 \\cdot 9.81 \\cdot 0.001 = 133.416~\\text{Pa}\n\\]\nSo\n\\[\nP_\\text{atm} = 763 \\times 133.416 \\approx 101,801\\ \\text{Pa} \\approx 101.8\\ \\text{kPa}\n\\]\n\n\n2.4.3 Compute gauge pressure\nWater column height:\n\\[\nh = 400\\ \\text{mm} = 0.4\\ \\text{m}\n\\]\nDensity of water: \\(rho_\\text{water} = 1000\\ \\text{kg/m³}\\), \\(g = 9.81\\ \\text{m/s²}\\)\n\\[\nP_\\text{gauge} = - \\rho g h = - 1000 \\times 9.81 \\times 0.4\n\\]\n\\[\nP_\\text{gauge} = -3924\\ \\text{Pa} \\approx -3.92\\ \\text{kPa}\n\\]\n\n\n2.4.4 Compute absolute pressure\n\\[\nP_\\text{abs} = P_\\text{atm} + P_\\text{gauge} \\approx 101.8 - 3.92 \\approx 97.9\\ \\text{kPa}\n\\]\n\n\n2.4.5 Answer\nThe absolute pressure in the vessel is:\n\\[\n\\boxed{97.9\\ \\text{kPa}}\n\\]\n\n\n2.4.6 Python Code\n# Absolute Pressure Calculation from Water Manometer\n\n# Given data\nh_mm = 400               # manometer reading in mm (below atmospheric)\natm_mmHg = 763           # atmospheric pressure in mmHg\nrho_water = 1000         # density of water in kg/m³\ng = 9.81                 # gravity in m/s²\nmmHg_to_Pa = 133.416     # conversion factor\n\n# Convert manometer height to meters\nh_m = h_mm / 1000\n\n# Convert atmospheric pressure to Pa\nP_atm_Pa = atm_mmHg * mmHg_to_Pa\n\n# Gauge pressure (negative because below atmospheric)\nP_gauge_Pa = - rho_water * g * h_m\n\n# Absolute pressure\nP_abs_Pa = P_atm_Pa + P_gauge_Pa\n\n# Convert to kPa\nP_abs_kPa = P_abs_Pa / 1000\n\n# Print results\nprint(f\"Atmospheric pressure: {P_atm_Pa:.1f} Pa ({P_atm_Pa/1000:.1f} kPa)\")\nprint(f\"Gauge pressure: {P_gauge_Pa:.1f} Pa ({P_gauge_Pa/1000:.2f} kPa)\")\nprint(f\"Absolute pressure in the vessel: {P_abs_Pa:.1f} Pa ({P_abs_kPa:.2f} kPa)\")",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units Examples</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units</span>"
+    ]
+  },
+  {
+    "objectID": "heat_work.html",
+    "href": "heat_work.html",
+    "title": "3  Heat and Work",
+    "section": "",
+    "text": "3.1 Heat Required to Heat Steel\nA steel block of mass \\(m = 5\\ \\text{kg}\\) and specific heat capacity \\(c = 480\\ \\text{J/kg·K}\\) is heated from \\(T_1 = 15^\\circ \\text{C}\\) )$ to $( \\(T_2 = 100^\\circ \\text{C}\\). Determine the heat required.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Heat and Work</span>"
+    ]
+  },
+  {
+    "objectID": "heat_work.html#heat-required-to-heat-steel",
+    "href": "heat_work.html#heat-required-to-heat-steel",
+    "title": "3  Heat and Work",
+    "section": "",
+    "text": "3.1.1 The formula for heat\n\\[\nQ = m c \\Delta T\n\\]\nwhere\n\n\\(\\Delta T = T_2 - T_1\\) is the temperature change.\n\n\n3.1.2 Compute the temperature change\n\\[\n\\Delta T = T_2 - T_1 = 100 - 15 = 85\\ \\text{K}\n\\]\n\n\n3.1.3 Compute the heat required\n\\[\nQ = m c \\Delta T = 5 \\times 480 \\times 85\n\\]\n\\[\nQ = 204,000\\ \\text{J}\n\\]\n\n\n3.1.4 Answer\nThe heat required to raise the temperature of the steel is:\n\\[\n\\boxed{204\\ \\text{kJ}}\n\\]\n\n\n3.1.5 Python Code\n# Heat Required to Heat Steel\n\n# Given data\nmass = 5            # kg\nspecific_heat = 480 # J/kg·K\nT_initial = 15      # °C\nT_final = 100       # °C\n\n# Temperature change\ndelta_T = T_final - T_initial\n\n# Heat required (in J)\nQ_J = mass * specific_heat * delta_T\n\n# Convert to kJ\nQ_kJ = Q_J / 1000\n\n# Print results\nprint(f\"Temperature change: {delta_T} K\")\nprint(f\"Heat required: {Q_J:.0f} J ({Q_kJ:.0f} kJ)\")\n# Interactive Heat Calculation\n\n# Get user input\nmass = float(input(\"Enter the mass of the object (kg): \"))\nspecific_heat = float(input(\"Enter the specific heat capacity (J/kg·K): \"))\nT_initial = float(input(\"Enter the initial temperature (°C): \"))\nT_final = float(input(\"Enter the final temperature (°C): \"))\n\n# Calculate temperature change\ndelta_T = T_final - T_initial\n\n# Calculate heat required\nQ_J = mass * specific_heat * delta_T\nQ_kJ = Q_J / 1000\n\n# Display results\nprint(\"\\nCalculation Results:\")\nprint(f\"Temperature change: {delta_T:.2f} K\")\nprint(f\"Heat required: {Q_J:.2f} J ({Q_kJ:.2f} kJ)\")",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Heat and Work</span>"
+    ]
+  },
+  {
+    "objectID": "heat_work.html#finding-specific-heat-capacity",
+    "href": "heat_work.html#finding-specific-heat-capacity",
+    "title": "3  Heat and Work",
+    "section": "3.2 Finding Specific Heat Capacity",
+    "text": "3.2 Finding Specific Heat Capacity\nA liquid of mass \\(m = 4\\ \\text{kg}\\) is heated from \\(T_1 = 15^\\circ \\text{C}\\) to \\(T_2 = 100^\\circ \\text{C}\\). The heat supplied is \\(Q = 714\\ \\text{kJ}\\). Determine the specific heat capacity \\(c\\) of the liquid.\n\n3.2.1 Recall the formula for heat\n\\[\nQ = m c \\Delta T\n\\]\nwhere \\(\\Delta T = T_2 - T_1\\).\n\n\n3.2.2 Convert heat to joules\n\\[\nQ = 714\\ \\text{kJ} = 714 \\times 1000 = 714,000\\ \\text{J}\n\\]\n\n\n3.2.3 Compute temperature change\n\\[\n\\Delta T = T_2 - T_1 = 100 - 15 = 85\\ \\text{K}\n\\]\n\n\n3.2.4 Solve for specific heat capacity\n\\[\nc = \\frac{Q}{m \\Delta T} = \\frac{714,000}{4 \\times 85}\n\\]\n\\[\nc = \\frac{714,000}{340} \\approx 2100\\ \\text{J/kg·K}\n\\]\n\n\n3.2.5 Answer\nThe specific heat capacity of the liquid is:\n\\[\n\\boxed{c \\approx 2100\\ \\text{J/kg·K}}\n\\]\n\n\n3.2.6 Python Code\n# Specific Heat Capacity Calculation\n\n# Given data\nmass = 4          # kg\nT_initial = 15    # °C\nT_final = 100     # °C\nQ_kJ = 714        # heat supplied in kJ\n\n# Convert heat to joules\nQ_J = Q_kJ * 1000\n\n# Temperature change\ndelta_T = T_final - T_initial\n\n# Calculate specific heat capacity\nc = Q_J / (mass * delta_T)\n\n# Print results\nprint(f\"Temperature change: {delta_T} K\")\nprint(f\"Specific heat capacity: {c:.0f} J/kg·K\")",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Heat and Work</span>"
     ]
   },
   {

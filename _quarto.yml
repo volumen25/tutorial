@@ -26,6 +26,7 @@ book:
     - index.qmd            
     - tutorial_basic.qmd
     - si_units.qmd
+    - heat_work.qmd
   appendices:
     - SI_common_mistakes.qmd
     - greek_letters.qmd  
