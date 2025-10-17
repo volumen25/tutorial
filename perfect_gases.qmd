@@ -4,12 +4,9 @@
 
 Assuming compression according to the law $pV = \text{constant}$:
 
-1.  Calculate the final volume when $1 \, \text{m}^3$ of gas at a pressure of\
-    $120 \, \text{kN/m}^2$ is compressed to a pressure of $960 \, \text{kN/m}^2$.
+1.  Calculate the final volume when $1 \, \text{m}^3$ of gas at a pressure of $120 \, \text{kN/m}^2$ is compressed to a pressure of $960 \text{ kN/m}^2$.
 
-2.  Calculate the initial volume of a gas at a pressure of $1.05 \, \text{bar}$\
-    that will occupy a volume of $5.6 \, \text{m}^3$ when it is compressed to a\
-    pressure of $42 \, \text{bar}$.
+2.  Calculate the initial volume of a gas at a pressure of $1.05 \, \text{bar}$ that will occupy a volume of $5.6 \, \text{m}^3$ when it is compressed to a pressure of $42 \, \text{bar}$.
 
 ### Given:
 
@@ -21,7 +18,7 @@ $$
 
 ### Final Volume of Gas
 
-Given: $p_1 = 120 \text{kN/m²}$, $\quad V_1 = 1 \text{m³}$, $\quad p_2 = 960 \text{kN/m²}$
+Given: $p_1 = 120 \text{ kN/m²}$, $\quad V_1 = 1 \text{ m³}$, $\quad p_2 = 960 \text{ kN/m²}$
 
 From $p_1 V_1 = p_2 V_2$:
 
@@ -41,9 +38,9 @@ $\boxed{V_2 = 0.125\ \text{m³}}$
 
 ### Initial Volume of Gas
 
-Given: $p_1 = 1.05 \text{bar}$, $\quad V_2 = 5.6 \text{m³}$, $\quad p_2 = 42 \text{bar}$
+Given: $p_1 = 1.05 \text{ bar}$, $\quad V_2 = 5.6 \text{ m³}$, $\quad p_2 = 42 \text{ bar}$
 
-From \$( $p_1 V_1 = p_2 V_2$:
+From $p_1 V_1 = p_2 V_2$:
 
 $$
 V_1 = \frac{p_2 V_2}{p_1}
@@ -56,16 +53,16 @@ V_1 = \frac{42 \times 5.6}{1.05}
 $$
 
 $$
-V_1 = 224\ \text{m³}
+V_1 = 224 \text{ m³}
 $$
 
 **Initial Volume**
 
 $\boxed{V_1 = 224\ \text{m³}}$
 
-## Python Code 
+## Python Code
 
-```python
+``` python
 # Boyle's Law Calculator (p1 * V1 = p2 * V2)
 
 print("Boyle’s Law Calculator: p₁V₁ = p₂V₂\n")

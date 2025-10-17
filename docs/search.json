@@ -210,6 +210,26 @@
     ]
   },
   {
+    "objectID": "heat_work.html#enthalpy-calculation",
+    "href": "heat_work.html#enthalpy-calculation",
+    "title": "3  Heat and Work",
+    "section": "3.4 Enthalpy Calculation",
+    "text": "3.4 Enthalpy Calculation\n120 kg of steam at \\(p = 1000 \\text{kPa}\\) and \\(T = 200\\^\\circ\\text{C}\\) has internal energy \\(u = 2623 \\text{kJ/kg}\\) and specific volume \\((v = 0.2061 \\text{m}\\^3/\\text{kg}\\) Calculate the specific enthalpy (h) and the total enthalpy for the 120-kg mass.\nGiven for steam:\n\nmass \\(m = 120 \\text{ kg}\\)\npressure \\(P = 1000 \\text{ kPa}\\)\ntemperature \\(T = 200^\\circ\\text{C}\\) (not needed for calculation)\ninternal energy \\(u = 2623 \\text{ kJ/kg}\\)\nspecific volume \\(v = 0.2061 \\text{ m}^3/ \\text{kg}\\)\n\nThe specific enthalpy is \\[\nh = u + Pv\n\\]\nNote: with (P) in kPa and (v) in m(^3)/kg, the product (Pv) has units kJ/kg (since (1 ^3 = 1 )).\nCompute (Pv): \\[\nPv = 1000\\times 0.2061 = 206.1\\ \\text{kJ/kg}\n\\]\nSo the specific enthalpy is: \\[\nh = 2623 + 206.1 = 2829.1\\ \\text{kJ/kg}\n\\]\nTotal enthalpy for the 120 kg of steam: \\[\nH = m\\,h = 120\\times 2829.1 = 339{,}492\\ \\text{kJ}\n\\]\n\n3.4.1 Answers\n\nSpecific enthalpy: \\(\\boxed{h = 2829.1\\ \\text{kJ/kg}}\\)\nTotal enthalpy for 120 kg: \\(\\boxed{H = 339{,}492\\ \\text{kJ}}\\)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Heat and Work</span>"
+    ]
+  },
+  {
+    "objectID": "heat_work.html#python-code-3",
+    "href": "heat_work.html#python-code-3",
+    "title": "3  Heat and Work",
+    "section": "3.5 Python Code",
+    "text": "3.5 Python Code\n# Given data\nm = 120          # kg\nP = 1000         # kPa\nu = 2623         # kJ/kg\nv = 0.2061       # m³/kg\n\n# Enthalpy calculation\nh = u + P * v          # kJ/kg\nH_total = m * h        # kJ\n\nprint(f\"Specific enthalpy h = {h:.1f} kJ/kg\")\nprint(f\"Total enthalpy H = {H_total:,.0f} kJ\")",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Heat and Work</span>"
+    ]
+  },
+  {
     "objectID": "perfect_gases.html",
     "href": "perfect_gases.html",
     "title": "4  Perfect Gases",
@@ -224,7 +244,7 @@
     "href": "perfect_gases.html#boyles-law-pressurevolume-relationship",
     "title": "4  Perfect Gases",
     "section": "",
-    "text": "Calculate the final volume when \\(1 \\, \\text{m}^3\\) of gas at a pressure of\n\\(120 \\, \\text{kN/m}^2\\) is compressed to a pressure of \\(960 \\, \\text{kN/m}^2\\).\nCalculate the initial volume of a gas at a pressure of \\(1.05 \\, \\text{bar}\\)\nthat will occupy a volume of \\(5.6 \\, \\text{m}^3\\) when it is compressed to a\npressure of \\(42 \\, \\text{bar}\\).\n\n\n4.1.1 Given:\nThe compression (or expansion) follows the law:\n\\[\np_1 V_1 = p_2 V_2\n\\]\n\n\n4.1.2 Final Volume of Gas\nGiven: \\(p_1 = 120 \\text{kN/m²}\\), \\(\\quad V_1 = 1 \\text{m³}\\), \\(\\quad p_2 = 960 \\text{kN/m²}\\)\nFrom \\(p_1 V_1 = p_2 V_2\\):\n\\[\nV_2 = \\frac{p_1 V_1}{p_2}\n\\]\nSubstitute:\n\\[\nV_2 = \\frac{120 \\times 1}{960} = 0.125\\ \\text{m³}\n\\]\nFinal Volume\n\\(\\boxed{V_2 = 0.125\\ \\text{m³}}\\)\n\n\n4.1.3 Initial Volume of Gas\nGiven: \\(p_1 = 1.05 \\text{bar}\\), \\(\\quad V_2 = 5.6 \\text{m³}\\), \\(\\quad p_2 = 42 \\text{bar}\\)\nFrom $( \\(p_1 V_1 = p_2 V_2\\):\n\\[\nV_1 = \\frac{p_2 V_2}{p_1}\n\\]\nSubstitute:\n\\[\nV_1 = \\frac{42 \\times 5.6}{1.05}\n\\]\n\\[\nV_1 = 224\\ \\text{m³}\n\\]\nInitial Volume\n\\(\\boxed{V_1 = 224\\ \\text{m³}}\\)",
+    "text": "Calculate the final volume when \\(1 \\, \\text{m}^3\\) of gas at a pressure of \\(120 \\, \\text{kN/m}^2\\) is compressed to a pressure of \\(960 \\text{ kN/m}^2\\).\nCalculate the initial volume of a gas at a pressure of \\(1.05 \\, \\text{bar}\\) that will occupy a volume of \\(5.6 \\, \\text{m}^3\\) when it is compressed to a pressure of \\(42 \\, \\text{bar}\\).\n\n\n4.1.1 Given:\nThe compression (or expansion) follows the law:\n\\[\np_1 V_1 = p_2 V_2\n\\]\n\n\n4.1.2 Final Volume of Gas\nGiven: \\(p_1 = 120 \\text{ kN/m²}\\), \\(\\quad V_1 = 1 \\text{ m³}\\), \\(\\quad p_2 = 960 \\text{ kN/m²}\\)\nFrom \\(p_1 V_1 = p_2 V_2\\):\n\\[\nV_2 = \\frac{p_1 V_1}{p_2}\n\\]\nSubstitute:\n\\[\nV_2 = \\frac{120 \\times 1}{960} = 0.125\\ \\text{m³}\n\\]\nFinal Volume\n\\(\\boxed{V_2 = 0.125\\ \\text{m³}}\\)\n\n\n4.1.3 Initial Volume of Gas\nGiven: \\(p_1 = 1.05 \\text{ bar}\\), \\(\\quad V_2 = 5.6 \\text{ m³}\\), \\(\\quad p_2 = 42 \\text{ bar}\\)\nFrom \\(p_1 V_1 = p_2 V_2\\):\n\\[\nV_1 = \\frac{p_2 V_2}{p_1}\n\\]\nSubstitute:\n\\[\nV_1 = \\frac{42 \\times 5.6}{1.05}\n\\]\n\\[\nV_1 = 224 \\text{ m³}\n\\]\nInitial Volume\n\\(\\boxed{V_1 = 224\\ \\text{m³}}\\)",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Perfect Gases</span>"
     ]
