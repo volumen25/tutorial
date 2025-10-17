@@ -1,3 +1,22 @@
+.Rproj.user
+.vscode
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+*.mov
+
+/.quarto/
+
+# Ignore everything in .vscode
+.vscode/*
+
+# Allow shared workspace settings
+!.vscode/settings.json
+
+**/*.quarto_ipynb
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
