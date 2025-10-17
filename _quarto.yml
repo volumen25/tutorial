@@ -25,6 +25,7 @@ book:
   chapters:    
     - index.qmd            
     - tutorial_basic.qmd
+    - si_units.qmd
   appendices:
     - SI_common_mistakes.qmd
     - greek_letters.qmd  

@@ -120,6 +120,36 @@
     ]
   },
   {
+    "objectID": "si_units.html",
+    "href": "si_units.html",
+    "title": "2  SI Units Examples",
+    "section": "",
+    "text": "2.1 Condenser Vacuum Example\nCondenser vacuum gauge reads 715 mmHg when barometer stands at 757 mmHg. State the absolute pressure in kN/m² and bar.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units Examples</span>"
+    ]
+  },
+  {
+    "objectID": "si_units.html#condenser-vacuum-example",
+    "href": "si_units.html#condenser-vacuum-example",
+    "title": "2  SI Units Examples",
+    "section": "",
+    "text": "2.1.1 Given Data\n\\[\nP_{atm} = 757~\\text{mmHg}, \\quad P_{vac} = 715~\\text{mmHg}\n\\]\n\n\n2.1.2 Absolute Pressure in mmHg\n\\[\nP_{abs} = P_{atm} - P_{vac} = 757 - 715 = 42~\\text{mmHg}\n\\]\n\n\n2.1.3 Convert mmHg → kN/m²\n\\[\nP = \\rho g h = 13{,}600 \\cdot 9.81 \\cdot 0.001 = 133.416~\\text{Pa} = 0.133416~\\text{kN/m}^2\n\\]\n\\[\nP_{abs} = 42 \\cdot 0.133416 = 5.6034~\\text{kN/m²}\n\\]\n\n\n2.1.4 Convert kN/m² → bar\n\\[\nP_{abs} = \\frac{5.6034}{100} = 0.056~\\text{bar}\n\\]\n\n\n2.1.5 Final Answers\n\\[\n\\boxed{P_{abs} = 42~\\text{mmHg} = 5.6034~\\text{kN/m²} = 0.056~\\text{bar}}\n\\]\n\n\n2.1.6 Python Code\nP_atm_mmHg = 757\nP_vac_mmHg = 715\nMMHG_TO_KN_M2 = 0.133416\nKNM2_TO_BAR = 1 / 100\nP_abs_mmHg = P_atm_mmHg - P_vac_mmHg\nP_abs_kNm2 = P_abs_mmHg * MMHG_TO_KN_M2\nP_abs_bar = P_abs_kNm2 * KNM2_TO_BAR\nprint(f\"Absolute Pressure = {P_abs_mmHg:.2f} mmHg\")\nprint(f\"Absolute Pressure = {P_abs_kNm2:.3f} kN/m²\")\nprint(f\"Absolute Pressure = {P_abs_bar:.4f} bar\")",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units Examples</span>"
+    ]
+  },
+  {
+    "objectID": "si_units.html#oil-flow-in-tubes-example",
+    "href": "si_units.html#oil-flow-in-tubes-example",
+    "title": "2  SI Units Examples",
+    "section": "2.2 Oil Flow in Tubes Example",
+    "text": "2.2 Oil Flow in Tubes Example\nOil flows full bore at a velocity of \\(v = 2~\\text{m/s}\\) through 16 tubes of diameter \\(d = 30~\\text{mm}\\). Density of oil: \\(\\rho = 0.85~\\text{g/mL}\\). Find volume flow rate (L/s) and mass flow rate (kg/min).\n\n2.2.1 Cross-sectional area of one tube\n\\[\nA = \\pi \\frac{d^2}{4} = \\pi \\frac{0.03^2}{4} \\approx 7.0686 \\times 10^{-4}~\\text{m}^2\n\\]\n\n\n2.2.2 Total area and volume flow rate\n\\[\nA_\\text{total} = 16 \\cdot 7.0686 \\times 10^{-4} \\approx 0.01131~\\text{m}^2\n\\]\n\\[\nQ = A_\\text{total} \\cdot v \\approx 0.02262~\\text{m}^3/\\text{s} \\approx 22.62~\\text{L/s}\n\\]\n\n\n2.2.3 Mass flow rate\n\\[\n\\dot{m} = \\rho \\cdot Q = 850 \\cdot 0.02262 \\approx 19.227~\\text{kg/s} \\approx 1153.6~\\text{kg/min}\n\\]\n\n\n2.2.4 Final Answers\n\\[\n\\text{Volume flow rate: } Q \\approx 22.6~\\text{L/s}\n\\] \\[\n\\text{Mass flow rate: } \\dot{m} \\approx 1154~\\text{kg/min}\n\\]\n\n\n2.2.5 Python Code\nimport math\nv = 2.0\nN = 16\nd = 0.03\nrho = 0.85 * 1000\nA = math.pi * d**2 / 4\nA_total = N * A\nQ_m3_s = A_total * v\nQ_L_s = Q_m3_s * 1000\nm_dot_kg_s = rho * Q_m3_s\nm_dot_kg_min = m_dot_kg_s * 60\nprint(f\"Volume flow rate: {Q_L_s:.2f} L/s\")\nprint(f\"Mass flow rate: {m_dot_kg_min:.2f} kg/min\")",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units Examples</span>"
+    ]
+  },
+  {
     "objectID": "SI_common_mistakes.html",
     "href": "SI_common_mistakes.html",
     "title": "Appendix A — SI System Common Mistakes",
