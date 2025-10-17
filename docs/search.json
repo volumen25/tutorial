@@ -124,14 +124,14 @@
     "href": "si_units.html",
     "title": "2  SI Units Examples",
     "section": "",
-    "text": "2.1 Condenser Vacuum Example\nCondenser vacuum gauge reads 715 mmHg when barometer stands at 757 mmHg. State the absolute pressure in kN/m² and bar.",
+    "text": "2.1 Condenser Vacuum\nCondenser vacuum gauge reads 715 mmHg when barometer stands at 757 mmHg. State the absolute pressure in kN/m² and bar.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units Examples</span>"
     ]
   },
   {
-    "objectID": "si_units.html#condenser-vacuum-example",
-    "href": "si_units.html#condenser-vacuum-example",
+    "objectID": "si_units.html#condenser-vacuum",
+    "href": "si_units.html#condenser-vacuum",
     "title": "2  SI Units Examples",
     "section": "",
     "text": "2.1.1 Given Data\n\\[\nP_{atm} = 757~\\text{mmHg}, \\quad P_{vac} = 715~\\text{mmHg}\n\\]\n\n\n2.1.2 Absolute Pressure in mmHg\n\\[\nP_{abs} = P_{atm} - P_{vac} = 757 - 715 = 42~\\text{mmHg}\n\\]\n\n\n2.1.3 Convert mmHg → kN/m²\n\\[\nP = \\rho g h = 13{,}600 \\cdot 9.81 \\cdot 0.001 = 133.416~\\text{Pa} = 0.133416~\\text{kN/m}^2\n\\]\n\\[\nP_{abs} = 42 \\cdot 0.133416 = 5.6034~\\text{kN/m²}\n\\]\n\n\n2.1.4 Convert kN/m² → bar\n\\[\nP_{abs} = \\frac{5.6034}{100} = 0.056~\\text{bar}\n\\]\n\n\n2.1.5 Final Answers\n\\[\n\\boxed{P_{abs} = 42~\\text{mmHg} = 5.6034~\\text{kN/m²} = 0.056~\\text{bar}}\n\\]\n\n\n2.1.6 Python Code\nP_atm_mmHg = 757\nP_vac_mmHg = 715\nMMHG_TO_KN_M2 = 0.133416\nKNM2_TO_BAR = 1 / 100\nP_abs_mmHg = P_atm_mmHg - P_vac_mmHg\nP_abs_kNm2 = P_abs_mmHg * MMHG_TO_KN_M2\nP_abs_bar = P_abs_kNm2 * KNM2_TO_BAR\nprint(f\"Absolute Pressure = {P_abs_mmHg:.2f} mmHg\")\nprint(f\"Absolute Pressure = {P_abs_kNm2:.3f} kN/m²\")\nprint(f\"Absolute Pressure = {P_abs_bar:.4f} bar\")",
@@ -140,11 +140,31 @@
     ]
   },
   {
-    "objectID": "si_units.html#oil-flow-in-tubes-example",
-    "href": "si_units.html#oil-flow-in-tubes-example",
+    "objectID": "si_units.html#oil-flow-in-tubes",
+    "href": "si_units.html#oil-flow-in-tubes",
     "title": "2  SI Units Examples",
-    "section": "2.2 Oil Flow in Tubes Example",
-    "text": "2.2 Oil Flow in Tubes Example\nOil flows full bore at a velocity of \\(v = 2~\\text{m/s}\\) through 16 tubes of diameter \\(d = 30~\\text{mm}\\). Density of oil: \\(\\rho = 0.85~\\text{g/mL}\\). Find volume flow rate (L/s) and mass flow rate (kg/min).\n\n2.2.1 Cross-sectional area of one tube\n\\[\nA = \\pi \\frac{d^2}{4} = \\pi \\frac{0.03^2}{4} \\approx 7.0686 \\times 10^{-4}~\\text{m}^2\n\\]\n\n\n2.2.2 Total area and volume flow rate\n\\[\nA_\\text{total} = 16 \\cdot 7.0686 \\times 10^{-4} \\approx 0.01131~\\text{m}^2\n\\]\n\\[\nQ = A_\\text{total} \\cdot v \\approx 0.02262~\\text{m}^3/\\text{s} \\approx 22.62~\\text{L/s}\n\\]\n\n\n2.2.3 Mass flow rate\n\\[\n\\dot{m} = \\rho \\cdot Q = 850 \\cdot 0.02262 \\approx 19.227~\\text{kg/s} \\approx 1153.6~\\text{kg/min}\n\\]\n\n\n2.2.4 Final Answers\n\\[\n\\text{Volume flow rate: } Q \\approx 22.6~\\text{L/s}\n\\] \\[\n\\text{Mass flow rate: } \\dot{m} \\approx 1154~\\text{kg/min}\n\\]\n\n\n2.2.5 Python Code\nimport math\nv = 2.0\nN = 16\nd = 0.03\nrho = 0.85 * 1000\nA = math.pi * d**2 / 4\nA_total = N * A\nQ_m3_s = A_total * v\nQ_L_s = Q_m3_s * 1000\nm_dot_kg_s = rho * Q_m3_s\nm_dot_kg_min = m_dot_kg_s * 60\nprint(f\"Volume flow rate: {Q_L_s:.2f} L/s\")\nprint(f\"Mass flow rate: {m_dot_kg_min:.2f} kg/min\")",
+    "section": "2.2 Oil Flow in Tubes",
+    "text": "2.2 Oil Flow in Tubes\nOil flows full bore at a velocity of \\(v = 2~\\text{m/s}\\) through 16 tubes of diameter \\(d = 30~\\text{mm}\\). Density of oil: \\(\\rho = 0.85~\\text{g/mL}\\). Find volume flow rate (L/s) and mass flow rate (kg/min).\n\n2.2.1 Cross-sectional area of one tube\n\\[\nA = \\pi \\frac{d^2}{4} = \\pi \\frac{0.03^2}{4} \\approx 7.0686 \\times 10^{-4}~\\text{m}^2\n\\]\n\n\n2.2.2 Total area and volume flow rate\n\\[\nA_\\text{total} = 16 \\cdot 7.0686 \\times 10^{-4} \\approx 0.01131~\\text{m}^2\n\\]\n\\[\nQ = A_\\text{total} \\cdot v \\approx 0.02262~\\text{m}^3/\\text{s} \\approx 22.62~\\text{L/s}\n\\]\n\n\n2.2.3 Mass flow rate\n\\[\n\\dot{m} = \\rho \\cdot Q = 850 \\cdot 0.02262 \\approx 19.227~\\text{kg/s} \\approx 1153.6~\\text{kg/min}\n\\]\n\n\n2.2.4 Final Answers\n\\[\n\\text{Volume flow rate: } Q \\approx 22.6~\\text{L/s}\n\\] \\[\n\\text{Mass flow rate: } \\dot{m} \\approx 1154~\\text{kg/min}\n\\]\n\n\n2.2.5 Python Code\nimport math\nv = 2.0\nN = 16\nd = 0.03\nrho = 0.85 * 1000\nA = math.pi * d**2 / 4\nA_total = N * A\nQ_m3_s = A_total * v\nQ_L_s = Q_m3_s * 1000\nm_dot_kg_s = rho * Q_m3_s\nm_dot_kg_min = m_dot_kg_s * 60\nprint(f\"Volume flow rate: {Q_L_s:.2f} L/s\")\nprint(f\"Mass flow rate: {m_dot_kg_min:.2f} kg/min\")",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units Examples</span>"
+    ]
+  },
+  {
+    "objectID": "si_units.html#gauge-pressure",
+    "href": "si_units.html#gauge-pressure",
+    "title": "2  SI Units Examples",
+    "section": "2.3 Gauge Pressure",
+    "text": "2.3 Gauge Pressure\nAn oil of specific gravity \\(\\text{SG} = 0.8\\) is contained in a vessel to a depth of \\(h = 2 \\text{ m}\\). Find the gauge pressure at this depth in kPa.\n\n2.3.1 Gauge Pressure\n\\[\nP_g = \\rho g h\n\\]\nwhere\n\\(\\rho = \\text{density of fluid (kg/m³)}\\)\ng= acceleration due to gravity (9.81 m/s²)\nh = depth (m)\n\n\n2.3.2 Compute the density of oil using specific gravity\nSpecific gravity is defined as\n\\[\n\\text{SG} = \\frac{\\rho_{\\text{oil}}}{\\rho_{\\text{water}}}\n\\]\nwhere (_{} = 1000 ). Thus,\n\\[\n\\rho_{\\text{oil}} = \\text{SG} \\times \\rho_{\\text{water}} = 0.8 \\times 1000 = 800\\ \\text{kg/m³}\n\\]\n\n\n2.3.3 Compute the gauge pressure\n\\[\nP_g = \\rho g h = 800 \\times 9.81 \\times 2\n\\]\n\\[\nP_g = 15696\\ \\text{Pa} \\approx 15.7\\ \\text{kPa}\n\\]\n\n\n2.3.4 Answer\nThe gauge pressure at a depth of 2 m in the oil is:\n\\[\n\\boxed{15.7\\ \\text{kPa}}\n\\]\n\n\n2.3.5 Python Code\n# Gauge Pressure Calculation for Oil\n\n# Given data\nspecific_gravity = 0.8  # SG of oil\ndepth_m = 2.0           # depth in meters\ng = 9.81                # acceleration due to gravity in m/s²\nrho_water = 1000        # density of water in kg/m³\n\n# Compute density of oil\nrho_oil = specific_gravity * rho_water\n\n# Compute gauge pressure (Pa)\nP_g_Pa = rho_oil * g * depth_m\n\n# Convert to kPa\nP_g_kPa = P_g_Pa / 1000\n\n# Print results\nprint(f\"Density of oil: {rho_oil:.1f} kg/m³\")\nprint(f\"Gauge pressure at {depth_m} m depth: {P_g_Pa:.1f} Pa ({P_g_kPa:.2f} kPa)\")",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units Examples</span>"
+    ]
+  },
+  {
+    "objectID": "si_units.html#absolute-pressure-from-manometer-reading",
+    "href": "si_units.html#absolute-pressure-from-manometer-reading",
+    "title": "2  SI Units Examples",
+    "section": "2.4 Absolute Pressure from Manometer Reading",
+    "text": "2.4 Absolute Pressure from Manometer Reading\nA water manometer shows a pressure in a vessel of \\(400\\ \\text{mm}\\) below atmospheric pressure. The atmospheric pressure is measured as \\(763\\ \\text{mmHg}\\). Determine the absolute pressure in the vessel in kPa.\n\n2.4.1 Relationship between absolute and gauge pressure\n\\[\nP_\\text{abs} = P_\\text{atm} + P_\\text{gauge}\n\\]\nSince the manometer shows a pressure below atmospheric, the gauge pressure is negative:\n\\[\nP_\\text{gauge} = - \\rho_\\text{water} g h\n\\]\n\n\n2.4.2 Convert atmospheric pressure to Pa using\n\\[\nP = \\rho g h = 13{,}600 \\cdot 9.81 \\cdot 0.001 = 133.416~\\text{Pa}\n\\]\nSo\n\\[\nP_\\text{atm} = 763 \\times 133.416 \\approx 101,801\\ \\text{Pa} \\approx 101.8\\ \\text{kPa}\n\\]\n\n\n2.4.3 Compute gauge pressure\nWater column height:\n\\[\nh = 400\\ \\text{mm} = 0.4\\ \\text{m}\n\\]\nDensity of water: \\(rho_\\text{water} = 1000\\ \\text{kg/m³}\\), \\(g = 9.81\\ \\text{m/s²}\\)\n\\[\nP_\\text{gauge} = - \\rho g h = - 1000 \\times 9.81 \\times 0.4\n\\]\n\\[\nP_\\text{gauge} = -3924\\ \\text{Pa} \\approx -3.92\\ \\text{kPa}\n\\]\n\n\n2.4.4 Compute absolute pressure\n\\[\nP_\\text{abs} = P_\\text{atm} + P_\\text{gauge} \\approx 101.8 - 3.92 \\approx 97.9\\ \\text{kPa}\n\\]\n\n\n2.4.5 Answer\nThe absolute pressure in the vessel is:\n\\[\n\\boxed{97.9\\ \\text{kPa}}\n\\]\n\n\n2.4.6 Python Code\n# Absolute Pressure Calculation from Water Manometer\n\n# Given data\nh_mm = 400               # manometer reading in mm (below atmospheric)\natm_mmHg = 763           # atmospheric pressure in mmHg\nrho_water = 1000         # density of water in kg/m³\ng = 9.81                 # gravity in m/s²\nmmHg_to_Pa = 133.416     # conversion factor\n\n# Convert manometer height to meters\nh_m = h_mm / 1000\n\n# Convert atmospheric pressure to Pa\nP_atm_Pa = atm_mmHg * mmHg_to_Pa\n\n# Gauge pressure (negative because below atmospheric)\nP_gauge_Pa = - rho_water * g * h_m\n\n# Absolute pressure\nP_abs_Pa = P_atm_Pa + P_gauge_Pa\n\n# Convert to kPa\nP_abs_kPa = P_abs_Pa / 1000\n\n# Print results\nprint(f\"Atmospheric pressure: {P_atm_Pa:.1f} Pa ({P_atm_Pa/1000:.1f} kPa)\")\nprint(f\"Gauge pressure: {P_gauge_Pa:.1f} Pa ({P_gauge_Pa/1000:.2f} kPa)\")\nprint(f\"Absolute pressure in the vessel: {P_abs_Pa:.1f} Pa ({P_abs_kPa:.2f} kPa)\")",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units Examples</span>"
     ]

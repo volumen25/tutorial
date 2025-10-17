@@ -1,6 +1,6 @@
 # SI Units Examples {#si_units}
 
-## Condenser Vacuum Example
+## Condenser Vacuum
 
 Condenser vacuum gauge reads 715 mmHg when barometer stands at 757 mmHg. State the absolute pressure in kN/m² and bar.
 
@@ -53,7 +53,7 @@ print(f"Absolute Pressure = {P_abs_kNm2:.3f} kN/m²")
 print(f"Absolute Pressure = {P_abs_bar:.4f} bar")
 ```
 
-## Oil Flow in Tubes Example
+## Oil Flow in Tubes
 
 Oil flows full bore at a velocity of $v = 2~\text{m/s}$ through 16 tubes of diameter $d = 30~\text{mm}$. Density of oil: $\rho = 0.85~\text{g/mL}$. Find **volume flow rate** (L/s) and **mass flow rate** (kg/min).
 
@@ -103,4 +103,172 @@ m_dot_kg_s = rho * Q_m3_s
 m_dot_kg_min = m_dot_kg_s * 60
 print(f"Volume flow rate: {Q_L_s:.2f} L/s")
 print(f"Mass flow rate: {m_dot_kg_min:.2f} kg/min")
+```
+
+## Gauge Pressure
+
+An oil of specific gravity $\text{SG} = 0.8$ is contained in a vessel to a depth of $h = 2 \text{ m}$. Find the **gauge pressure** at this depth in kPa.
+
+### Gauge Pressure
+
+$$
+P_g = \rho g h
+$$
+
+where
+
+$\rho = \text{density of fluid (kg/m³)}$
+
+g= acceleration due to gravity (9.81 m/s²)
+
+h = depth (m)
+
+### Compute the density of oil using specific gravity
+
+Specific gravity is defined as
+
+$$
+\text{SG} = \frac{\rho_{\text{oil}}}{\rho_{\text{water}}}
+$$
+
+where (\rho\_{\text{water}} = 1000 \text{kg/m³}). Thus,
+
+$$
+\rho_{\text{oil}} = \text{SG} \times \rho_{\text{water}} = 0.8 \times 1000 = 800\ \text{kg/m³}
+$$
+
+### Compute the gauge pressure
+
+$$
+P_g = \rho g h = 800 \times 9.81 \times 2
+$$
+
+$$
+P_g = 15696\ \text{Pa} \approx 15.7\ \text{kPa}
+$$
+
+### Answer
+
+The **gauge pressure** at a depth of 2 m in the oil is:
+
+$$
+\boxed{15.7\ \text{kPa}}
+$$
+
+### Python Code
+
+``` python
+# Gauge Pressure Calculation for Oil
+
+# Given data
+specific_gravity = 0.8  # SG of oil
+depth_m = 2.0           # depth in meters
+g = 9.81                # acceleration due to gravity in m/s²
+rho_water = 1000        # density of water in kg/m³
+
+# Compute density of oil
+rho_oil = specific_gravity * rho_water
+
+# Compute gauge pressure (Pa)
+P_g_Pa = rho_oil * g * depth_m
+
+# Convert to kPa
+P_g_kPa = P_g_Pa / 1000
+
+# Print results
+print(f"Density of oil: {rho_oil:.1f} kg/m³")
+print(f"Gauge pressure at {depth_m} m depth: {P_g_Pa:.1f} Pa ({P_g_kPa:.2f} kPa)")
+```
+
+## Absolute Pressure from Manometer Reading
+
+A water manometer shows a pressure in a vessel of $400\ \text{mm}$ **below atmospheric pressure**. The atmospheric pressure is measured as $763\ \text{mmHg}$. Determine the **absolute pressure** in the vessel in kPa.
+
+### Relationship between absolute and gauge pressure
+
+$$
+P_\text{abs} = P_\text{atm} + P_\text{gauge}
+$$
+
+Since the manometer shows a pressure **below atmospheric**, the gauge pressure is negative:
+
+$$
+P_\text{gauge} = - \rho_\text{water} g h
+$$
+
+### Convert atmospheric pressure to Pa using
+
+$$
+P = \rho g h = 13{,}600 \cdot 9.81 \cdot 0.001 = 133.416~\text{Pa}
+$$
+
+So
+
+$$
+P_\text{atm} = 763 \times 133.416 \approx 101,801\ \text{Pa} \approx 101.8\ \text{kPa}
+$$
+
+### Compute gauge pressure
+
+Water column height:
+
+$$
+h = 400\ \text{mm} = 0.4\ \text{m}
+$$
+
+Density of water: $rho_\text{water} = 1000\ \text{kg/m³}$, $g = 9.81\ \text{m/s²}$
+
+$$
+P_\text{gauge} = - \rho g h = - 1000 \times 9.81 \times 0.4
+$$
+
+$$
+P_\text{gauge} = -3924\ \text{Pa} \approx -3.92\ \text{kPa}
+$$
+
+### Compute absolute pressure
+
+$$
+P_\text{abs} = P_\text{atm} + P_\text{gauge} \approx 101.8 - 3.92 \approx 97.9\ \text{kPa}
+$$
+
+### Answer
+
+The **absolute pressure** in the vessel is:
+
+$$
+\boxed{97.9\ \text{kPa}}
+$$
+
+### Python Code
+
+``` python
+# Absolute Pressure Calculation from Water Manometer
+
+# Given data
+h_mm = 400               # manometer reading in mm (below atmospheric)
+atm_mmHg = 763           # atmospheric pressure in mmHg
+rho_water = 1000         # density of water in kg/m³
+g = 9.81                 # gravity in m/s²
+mmHg_to_Pa = 133.416     # conversion factor
+
+# Convert manometer height to meters
+h_m = h_mm / 1000
+
+# Convert atmospheric pressure to Pa
+P_atm_Pa = atm_mmHg * mmHg_to_Pa
+
+# Gauge pressure (negative because below atmospheric)
+P_gauge_Pa = - rho_water * g * h_m
+
+# Absolute pressure
+P_abs_Pa = P_atm_Pa + P_gauge_Pa
+
+# Convert to kPa
+P_abs_kPa = P_abs_Pa / 1000
+
+# Print results
+print(f"Atmospheric pressure: {P_atm_Pa:.1f} Pa ({P_atm_Pa/1000:.1f} kPa)")
+print(f"Gauge pressure: {P_gauge_Pa:.1f} Pa ({P_gauge_Pa/1000:.2f} kPa)")
+print(f"Absolute pressure in the vessel: {P_abs_Pa:.1f} Pa ({P_abs_kPa:.2f} kPa)")
 ```
