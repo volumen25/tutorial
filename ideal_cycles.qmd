@@ -1,0 +1,89 @@
+# Ideal Cycles {#ideal_cycles}
+
+## Ideal Constant-Volume (Otto) Cycle
+
+In an ideal constant-volume (Otto) cycle the temperature at the beginning of compression is (50\^\circ\text{C}).\
+The volumetric compression ratio is (r=5:1). The heat supplied during the cycle is (q\_{in}=930 \text{kJ/kg}) of working fluid.
+
+Take $\gamma = 1.4$ and $c_v = 0.717\ \text{kJ/kg·K}$.
+
+Calculate:
+
+A. The maximum temperature attained in the cycle.\
+B. The work done during the cycle per kg of working fluid.\
+C. The ideal thermal efficiency of the cycle.
+
+### Theory and formulas
+
+For an ideal Otto cycle (constant-volume heat addition) the relevant steps and formulas are:
+
+1.  Isentropic compression $1 \to 2$: $$
+    T_2 = T_1\, r^{\gamma-1}
+    $$
+
+2.  Constant-volume heat addition $2 \to 3$: $$
+    q_{in} = c_v (T_3 - T_2) \quad\Rightarrow\quad T_3 = T_2 + \frac{q_{in}}{c_v}
+    $$
+
+3.  Isentropic expansion $3 \to 4$: $$
+    T_4 = T_3\, r^{1-\gamma}
+    $$
+
+4.  Heat rejected: $$
+    q_{out} = c_v (T_4 - T_1)
+    $$
+
+5.  Net work per unit mass: $$
+    w = q_{in} - q_{out}
+    $$
+
+6.  Thermal efficiency: $$
+    \eta = \frac{w}{q_{in}} = 1 - \frac{q_{out}}{q_{in}}
+    $$
+
+(For the ideal Otto cycle the formula reduces to the well-known expression (\eta = 1 - r\^{1-\gamma}), which provides a check.)
+
+### Python Code
+
+``` python
+# Otto-cycle calculation (per kg) - runnable in Quarto
+
+# Given data
+r = 5.0             # compression ratio
+gamma = 1.4
+cv = 0.717          # kJ/kg·K
+T1_C = 50.0         # °C
+q_in = 930.0        # kJ/kg
+
+# Conversions
+T1 = T1_C + 273.15  # K
+
+# Step 1: T2 (after isentropic compression)
+T2 = T1 * r**(gamma - 1)
+
+# Step 2: T3 (after constant-volume heat addition) -> Tmax
+T3 = T2 + q_in / cv
+
+# Step 3: T4 (after isentropic expansion)
+T4 = T3 * r**(1 - gamma)
+
+# Heat rejected
+q_out = cv * (T4 - T1)
+
+# Net work per kg
+w_net = q_in - q_out
+
+# Efficiency
+eta = w_net / q_in
+
+# Print results
+print(f"T1 = {T1:.2f} K ({T1 - 273.15:.2f} °C)")
+print(f"T2 = {T2:.2f} K ({T2 - 273.15:.2f} °C)")
+print(f"T3 = {T3:.2f} K ({T3 - 273.15:.2f} °C)  <-- Tmax")
+print(f"T4 = {T4:.2f} K ({T4 - 273.15:.2f} °C)")
+print()
+print(f"q_in = {q_in:.2f} kJ/kg")
+print(f"q_out = {q_out:.2f} kJ/kg")
+print(f"w_net = {w_net:.2f} kJ/kg")
+print(f"efficiency = {eta*100:.2f} %")
+```

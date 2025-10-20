@@ -28,6 +28,7 @@ book:
     - si_units.qmd
     - heat_work.qmd
     - perfect_gases.qmd
+    - ideal_cycles.qmd
   appendices:
     - SI_common_mistakes.qmd
     - greek_letters.qmd  

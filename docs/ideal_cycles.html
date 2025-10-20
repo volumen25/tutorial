@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; SI Units – Tutorial</title>
+<title>5&nbsp; Ideal Cycles – Tutorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./heat_work.html" rel="next">
-<link href="./tutorial_basic.html" rel="prev">
+<link href="./SI_common_mistakes.html" rel="next">
+<link href="./perfect_gases.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -313,7 +313,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./si_units.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">SI Units</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ideal_cycles.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Ideal Cycles</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -357,7 +357,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./si_units.html" class="sidebar-item-text sidebar-link active">
+  <a href="./si_units.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">SI Units</span></span></a>
   </div>
 </li>
@@ -375,7 +375,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ideal_cycles.html" class="sidebar-item-text sidebar-link">
+  <a href="./ideal_cycles.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Ideal Cycles</span></span></a>
   </div>
 </li>
@@ -412,39 +412,10 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#condenser-vacuum" id="toc-condenser-vacuum" class="nav-link active" data-scroll-target="#condenser-vacuum"><span class="header-section-number">2.1</span> Condenser Vacuum</a>
+  <li><a href="#ideal-constant-volume-otto-cycle" id="toc-ideal-constant-volume-otto-cycle" class="nav-link active" data-scroll-target="#ideal-constant-volume-otto-cycle"><span class="header-section-number">5.1</span> Ideal Constant-Volume (Otto) Cycle</a>
   <ul class="collapse">
-  <li><a href="#given-data" id="toc-given-data" class="nav-link" data-scroll-target="#given-data"><span class="header-section-number">2.1.1</span> Given Data</a></li>
-  <li><a href="#absolute-pressure-in-mmhg" id="toc-absolute-pressure-in-mmhg" class="nav-link" data-scroll-target="#absolute-pressure-in-mmhg"><span class="header-section-number">2.1.2</span> Absolute Pressure in mmHg</a></li>
-  <li><a href="#convert-mmhg-knm²" id="toc-convert-mmhg-knm²" class="nav-link" data-scroll-target="#convert-mmhg-knm²"><span class="header-section-number">2.1.3</span> Convert mmHg → kN/m²</a></li>
-  <li><a href="#convert-knm²-bar" id="toc-convert-knm²-bar" class="nav-link" data-scroll-target="#convert-knm²-bar"><span class="header-section-number">2.1.4</span> Convert kN/m² → bar</a></li>
-  <li><a href="#final-answers" id="toc-final-answers" class="nav-link" data-scroll-target="#final-answers"><span class="header-section-number">2.1.5</span> Final Answers</a></li>
-  <li><a href="#python-code" id="toc-python-code" class="nav-link" data-scroll-target="#python-code"><span class="header-section-number">2.1.6</span> Python Code</a></li>
-  </ul></li>
-  <li><a href="#oil-flow-in-tubes" id="toc-oil-flow-in-tubes" class="nav-link" data-scroll-target="#oil-flow-in-tubes"><span class="header-section-number">2.2</span> Oil Flow in Tubes</a>
-  <ul class="collapse">
-  <li><a href="#cross-sectional-area-of-one-tube" id="toc-cross-sectional-area-of-one-tube" class="nav-link" data-scroll-target="#cross-sectional-area-of-one-tube"><span class="header-section-number">2.2.1</span> Cross-sectional area of one tube</a></li>
-  <li><a href="#total-area-and-volume-flow-rate" id="toc-total-area-and-volume-flow-rate" class="nav-link" data-scroll-target="#total-area-and-volume-flow-rate"><span class="header-section-number">2.2.2</span> Total area and volume flow rate</a></li>
-  <li><a href="#mass-flow-rate" id="toc-mass-flow-rate" class="nav-link" data-scroll-target="#mass-flow-rate"><span class="header-section-number">2.2.3</span> Mass flow rate</a></li>
-  <li><a href="#final-answers-1" id="toc-final-answers-1" class="nav-link" data-scroll-target="#final-answers-1"><span class="header-section-number">2.2.4</span> Final Answers</a></li>
-  <li><a href="#python-code-1" id="toc-python-code-1" class="nav-link" data-scroll-target="#python-code-1"><span class="header-section-number">2.2.5</span> Python Code</a></li>
-  </ul></li>
-  <li><a href="#gauge-pressure" id="toc-gauge-pressure" class="nav-link" data-scroll-target="#gauge-pressure"><span class="header-section-number">2.3</span> Gauge Pressure</a>
-  <ul class="collapse">
-  <li><a href="#gauge-pressure-1" id="toc-gauge-pressure-1" class="nav-link" data-scroll-target="#gauge-pressure-1"><span class="header-section-number">2.3.1</span> Gauge Pressure</a></li>
-  <li><a href="#compute-the-density-of-oil-using-specific-gravity" id="toc-compute-the-density-of-oil-using-specific-gravity" class="nav-link" data-scroll-target="#compute-the-density-of-oil-using-specific-gravity"><span class="header-section-number">2.3.2</span> Compute the density of oil using specific gravity</a></li>
-  <li><a href="#compute-the-gauge-pressure" id="toc-compute-the-gauge-pressure" class="nav-link" data-scroll-target="#compute-the-gauge-pressure"><span class="header-section-number">2.3.3</span> Compute the gauge pressure</a></li>
-  <li><a href="#answer" id="toc-answer" class="nav-link" data-scroll-target="#answer"><span class="header-section-number">2.3.4</span> Answer</a></li>
-  <li><a href="#python-code-2" id="toc-python-code-2" class="nav-link" data-scroll-target="#python-code-2"><span class="header-section-number">2.3.5</span> Python Code</a></li>
-  </ul></li>
-  <li><a href="#absolute-pressure-from-manometer-reading" id="toc-absolute-pressure-from-manometer-reading" class="nav-link" data-scroll-target="#absolute-pressure-from-manometer-reading"><span class="header-section-number">2.4</span> Absolute Pressure from Manometer Reading</a>
-  <ul class="collapse">
-  <li><a href="#relationship-between-absolute-and-gauge-pressure" id="toc-relationship-between-absolute-and-gauge-pressure" class="nav-link" data-scroll-target="#relationship-between-absolute-and-gauge-pressure"><span class="header-section-number">2.4.1</span> Relationship between absolute and gauge pressure</a></li>
-  <li><a href="#convert-atmospheric-pressure-to-pa-using" id="toc-convert-atmospheric-pressure-to-pa-using" class="nav-link" data-scroll-target="#convert-atmospheric-pressure-to-pa-using"><span class="header-section-number">2.4.2</span> Convert atmospheric pressure to Pa using</a></li>
-  <li><a href="#compute-gauge-pressure" id="toc-compute-gauge-pressure" class="nav-link" data-scroll-target="#compute-gauge-pressure"><span class="header-section-number">2.4.3</span> Compute gauge pressure</a></li>
-  <li><a href="#compute-absolute-pressure" id="toc-compute-absolute-pressure" class="nav-link" data-scroll-target="#compute-absolute-pressure"><span class="header-section-number">2.4.4</span> Compute absolute pressure</a></li>
-  <li><a href="#answer-1" id="toc-answer-1" class="nav-link" data-scroll-target="#answer-1"><span class="header-section-number">2.4.5</span> Answer</a></li>
-  <li><a href="#python-code-3" id="toc-python-code-3" class="nav-link" data-scroll-target="#python-code-3"><span class="header-section-number">2.4.6</span> Python Code</a></li>
+  <li><a href="#theory-and-formulas" id="toc-theory-and-formulas" class="nav-link" data-scroll-target="#theory-and-formulas"><span class="header-section-number">5.1.1</span> Theory and formulas</a></li>
+  <li><a href="#python-code" id="toc-python-code" class="nav-link" data-scroll-target="#python-code"><span class="header-section-number">5.1.2</span> Python Code</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -455,7 +426,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="si_units" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">SI Units</span></span></h1>
+<h1 class="title"><span id="ideal_cycles" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Ideal Cycles</span></span></h1>
 </div>
 
 
@@ -472,249 +443,82 @@ window.Quarto = {
 </header>
 
 
-<section id="condenser-vacuum" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="condenser-vacuum"><span class="header-section-number">2.1</span> Condenser Vacuum</h2>
-<p>Condenser vacuum gauge reads 715 mmHg when barometer stands at 757 mmHg. State the absolute pressure in kN/m² and bar.</p>
-<section id="given-data" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="given-data"><span class="header-section-number">2.1.1</span> Given Data</h3>
-<p><span class="math display">\[
-P_{atm} = 757~\text{mmHg}, \quad P_{vac} = 715~\text{mmHg}
-\]</span></p>
+<section id="ideal-constant-volume-otto-cycle" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="ideal-constant-volume-otto-cycle"><span class="header-section-number">5.1</span> Ideal Constant-Volume (Otto) Cycle</h2>
+<p>In an ideal constant-volume (Otto) cycle the temperature at the beginning of compression is (50^).<br>
+The volumetric compression ratio is (r=5:1). The heat supplied during the cycle is (q_{in}=930&nbsp;) of working fluid.</p>
+<p>Take <span class="math inline">\(\gamma = 1.4\)</span> and <span class="math inline">\(c_v = 0.717\ \text{kJ/kg·K}\)</span>.</p>
+<p>Calculate:</p>
+<p>A. The maximum temperature attained in the cycle.<br>
+B. The work done during the cycle per kg of working fluid.<br>
+C. The ideal thermal efficiency of the cycle.</p>
+<section id="theory-and-formulas" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="theory-and-formulas"><span class="header-section-number">5.1.1</span> Theory and formulas</h3>
+<p>For an ideal Otto cycle (constant-volume heat addition) the relevant steps and formulas are:</p>
+<ol type="1">
+<li><p>Isentropic compression <span class="math inline">\(1 \to 2\)</span>: <span class="math display">\[
+T_2 = T_1\, r^{\gamma-1}
+\]</span></p></li>
+<li><p>Constant-volume heat addition <span class="math inline">\(2 \to 3\)</span>: <span class="math display">\[
+q_{in} = c_v (T_3 - T_2) \quad\Rightarrow\quad T_3 = T_2 + \frac{q_{in}}{c_v}
+\]</span></p></li>
+<li><p>Isentropic expansion <span class="math inline">\(3 \to 4\)</span>: <span class="math display">\[
+T_4 = T_3\, r^{1-\gamma}
+\]</span></p></li>
+<li><p>Heat rejected: <span class="math display">\[
+q_{out} = c_v (T_4 - T_1)
+\]</span></p></li>
+<li><p>Net work per unit mass: <span class="math display">\[
+w = q_{in} - q_{out}
+\]</span></p></li>
+<li><p>Thermal efficiency: <span class="math display">\[
+\eta = \frac{w}{q_{in}} = 1 - \frac{q_{out}}{q_{in}}
+\]</span></p></li>
+</ol>
+<p>(For the ideal Otto cycle the formula reduces to the well-known expression (= 1 - r^{1-}), which provides a check.)</p>
 </section>
-<section id="absolute-pressure-in-mmhg" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="absolute-pressure-in-mmhg"><span class="header-section-number">2.1.2</span> Absolute Pressure in mmHg</h3>
-<p><span class="math display">\[
-P_{abs} = P_{atm} - P_{vac} = 757 - 715 = 42~\text{mmHg}
-\]</span></p>
-</section>
-<section id="convert-mmhg-knm²" class="level3" data-number="2.1.3">
-<h3 data-number="2.1.3" class="anchored" data-anchor-id="convert-mmhg-knm²"><span class="header-section-number">2.1.3</span> Convert mmHg → kN/m²</h3>
-<p><span class="math display">\[
-P = \rho g h = 13{,}600 \cdot 9.81 \cdot 0.001 = 133.416~\text{Pa} = 0.133416~\text{kN/m}^2
-\]</span></p>
-<p><span class="math display">\[
-P_{abs} = 42 \cdot 0.133416 = 5.6034~\text{kN/m²}
-\]</span></p>
-</section>
-<section id="convert-knm²-bar" class="level3" data-number="2.1.4">
-<h3 data-number="2.1.4" class="anchored" data-anchor-id="convert-knm²-bar"><span class="header-section-number">2.1.4</span> Convert kN/m² → bar</h3>
-<p><span class="math display">\[
-P_{abs} = \frac{5.6034}{100} = 0.056~\text{bar}
-\]</span></p>
-</section>
-<section id="final-answers" class="level3" data-number="2.1.5">
-<h3 data-number="2.1.5" class="anchored" data-anchor-id="final-answers"><span class="header-section-number">2.1.5</span> Final Answers</h3>
-<p><span class="math display">\[
-\boxed{P_{abs} = 42~\text{mmHg} = 5.6034~\text{kN/m²} = 0.056~\text{bar}}
-\]</span></p>
-</section>
-<section id="python-code" class="level3" data-number="2.1.6">
-<h3 data-number="2.1.6" class="anchored" data-anchor-id="python-code"><span class="header-section-number">2.1.6</span> Python Code</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>P_atm_mmHg <span class="op">=</span> <span class="dv">757</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>P_vac_mmHg <span class="op">=</span> <span class="dv">715</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>MMHG_TO_KN_M2 <span class="op">=</span> <span class="fl">0.133416</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>KNM2_TO_BAR <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> <span class="dv">100</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>P_abs_mmHg <span class="op">=</span> P_atm_mmHg <span class="op">-</span> P_vac_mmHg</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>P_abs_kNm2 <span class="op">=</span> P_abs_mmHg <span class="op">*</span> MMHG_TO_KN_M2</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>P_abs_bar <span class="op">=</span> P_abs_kNm2 <span class="op">*</span> KNM2_TO_BAR</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Absolute Pressure = </span><span class="sc">{</span>P_abs_mmHg<span class="sc">:.2f}</span><span class="ss"> mmHg"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Absolute Pressure = </span><span class="sc">{</span>P_abs_kNm2<span class="sc">:.3f}</span><span class="ss"> kN/m²"</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Absolute Pressure = </span><span class="sc">{</span>P_abs_bar<span class="sc">:.4f}</span><span class="ss"> bar"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</section>
-<section id="oil-flow-in-tubes" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="oil-flow-in-tubes"><span class="header-section-number">2.2</span> Oil Flow in Tubes</h2>
-<p>Oil flows full bore at a velocity of <span class="math inline">\(v = 2~\text{m/s}\)</span> through 16 tubes of diameter <span class="math inline">\(d = 30~\text{mm}\)</span>. Density of oil: <span class="math inline">\(\rho = 0.85~\text{g/mL}\)</span>. Find <strong>volume flow rate</strong> (L/s) and <strong>mass flow rate</strong> (kg/min).</p>
-<section id="cross-sectional-area-of-one-tube" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="cross-sectional-area-of-one-tube"><span class="header-section-number">2.2.1</span> Cross-sectional area of one tube</h3>
-<p><span class="math display">\[
-A = \pi \frac{d^2}{4} = \pi \frac{0.03^2}{4} \approx 7.0686 \times 10^{-4}~\text{m}^2
-\]</span></p>
-</section>
-<section id="total-area-and-volume-flow-rate" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="total-area-and-volume-flow-rate"><span class="header-section-number">2.2.2</span> Total area and volume flow rate</h3>
-<p><span class="math display">\[
-A_\text{total} = 16 \cdot 7.0686 \times 10^{-4} \approx 0.01131~\text{m}^2
-\]</span></p>
-<p><span class="math display">\[
-Q = A_\text{total} \cdot v \approx 0.02262~\text{m}^3/\text{s} \approx 22.62~\text{L/s}
-\]</span></p>
-</section>
-<section id="mass-flow-rate" class="level3" data-number="2.2.3">
-<h3 data-number="2.2.3" class="anchored" data-anchor-id="mass-flow-rate"><span class="header-section-number">2.2.3</span> Mass flow rate</h3>
-<p><span class="math display">\[
-\dot{m} = \rho \cdot Q = 850 \cdot 0.02262 \approx 19.227~\text{kg/s} \approx 1153.6~\text{kg/min}
-\]</span></p>
-</section>
-<section id="final-answers-1" class="level3" data-number="2.2.4">
-<h3 data-number="2.2.4" class="anchored" data-anchor-id="final-answers-1"><span class="header-section-number">2.2.4</span> Final Answers</h3>
-<p><span class="math display">\[
-\text{Volume flow rate: } Q \approx 22.6~\text{L/s}
-\]</span> <span class="math display">\[
-\text{Mass flow rate: } \dot{m} \approx 1154~\text{kg/min}
-\]</span></p>
-</section>
-<section id="python-code-1" class="level3" data-number="2.2.5">
-<h3 data-number="2.2.5" class="anchored" data-anchor-id="python-code-1"><span class="header-section-number">2.2.5</span> Python Code</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="fl">2.0</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">16</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="fl">0.03</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="fl">0.85</span> <span class="op">*</span> <span class="dv">1000</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> math.pi <span class="op">*</span> d<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">4</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>A_total <span class="op">=</span> N <span class="op">*</span> A</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>Q_m3_s <span class="op">=</span> A_total <span class="op">*</span> v</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>Q_L_s <span class="op">=</span> Q_m3_s <span class="op">*</span> <span class="dv">1000</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>m_dot_kg_s <span class="op">=</span> rho <span class="op">*</span> Q_m3_s</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>m_dot_kg_min <span class="op">=</span> m_dot_kg_s <span class="op">*</span> <span class="dv">60</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Volume flow rate: </span><span class="sc">{</span>Q_L_s<span class="sc">:.2f}</span><span class="ss"> L/s"</span>)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Mass flow rate: </span><span class="sc">{</span>m_dot_kg_min<span class="sc">:.2f}</span><span class="ss"> kg/min"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</section>
-<section id="gauge-pressure" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="gauge-pressure"><span class="header-section-number">2.3</span> Gauge Pressure</h2>
-<p>An oil of specific gravity (relative density) <span class="math inline">\(\text{SG} = 0.8\)</span> is contained in a vessel to a depth of <span class="math inline">\(h = 2 \text{ m}\)</span>. Find the <strong>gauge pressure</strong> at this depth in kPa.</p>
-<section id="gauge-pressure-1" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="gauge-pressure-1"><span class="header-section-number">2.3.1</span> Gauge Pressure</h3>
-<p><span class="math display">\[
-P_g = \rho g h
-\]</span></p>
-<p>where</p>
-<p><span class="math inline">\(\rho = \text{density of fluid (kg/m³)}\)</span></p>
-<p>g= acceleration due to gravity (9.81 m/s²)</p>
-<p>h = depth (m)</p>
-</section>
-<section id="compute-the-density-of-oil-using-specific-gravity" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="compute-the-density-of-oil-using-specific-gravity"><span class="header-section-number">2.3.2</span> Compute the density of oil using specific gravity</h3>
-<p>Specific gravity is defined as</p>
-<p><span class="math display">\[
-\text{SG} = \frac{\rho_{\text{oil}}}{\rho_{\text{water}}}
-\]</span></p>
-<p>where <span class="math inline">\(\rho_{\text{water}} = 1000&nbsp;\text{ kg/m³}\)</span>. Thus,</p>
-<p><span class="math display">\[
-\rho_{\text{oil}} = \text{SG} \times \rho_{\text{water}} = 0.8 \times 1000 = 800\ \text{kg/m³}
-\]</span></p>
-</section>
-<section id="compute-the-gauge-pressure" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3" class="anchored" data-anchor-id="compute-the-gauge-pressure"><span class="header-section-number">2.3.3</span> Compute the gauge pressure</h3>
-<p><span class="math display">\[
-P_g = \rho g h = 800 \times 9.81 \times 2
-\]</span></p>
-<p><span class="math display">\[
-P_g = 15696\ \text{Pa} \approx 15.7\ \text{kPa}
-\]</span></p>
-</section>
-<section id="answer" class="level3" data-number="2.3.4">
-<h3 data-number="2.3.4" class="anchored" data-anchor-id="answer"><span class="header-section-number">2.3.4</span> Answer</h3>
-<p>The <strong>gauge pressure</strong> at a depth of 2 m in the oil is:</p>
-<p><span class="math display">\[
-\boxed{15.7\ \text{kPa}}
-\]</span></p>
-</section>
-<section id="python-code-2" class="level3" data-number="2.3.5">
-<h3 data-number="2.3.5" class="anchored" data-anchor-id="python-code-2"><span class="header-section-number">2.3.5</span> Python Code</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gauge Pressure Calculation for Oil</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>specific_gravity <span class="op">=</span> <span class="fl">0.8</span>  <span class="co"># SG of oil</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>depth_m <span class="op">=</span> <span class="fl">2.0</span>           <span class="co"># depth in meters</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span>                <span class="co"># acceleration due to gravity in m/s²</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>rho_water <span class="op">=</span> <span class="dv">1000</span>        <span class="co"># density of water in kg/m³</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute density of oil</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>rho_oil <span class="op">=</span> specific_gravity <span class="op">*</span> rho_water</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute gauge pressure (Pa)</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>P_g_Pa <span class="op">=</span> rho_oil <span class="op">*</span> g <span class="op">*</span> depth_m</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to kPa</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>P_g_kPa <span class="op">=</span> P_g_Pa <span class="op">/</span> <span class="dv">1000</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Density of oil: </span><span class="sc">{</span>rho_oil<span class="sc">:.1f}</span><span class="ss"> kg/m³"</span>)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Gauge pressure at </span><span class="sc">{</span>depth_m<span class="sc">}</span><span class="ss"> m depth: </span><span class="sc">{</span>P_g_Pa<span class="sc">:.1f}</span><span class="ss"> Pa (</span><span class="sc">{</span>P_g_kPa<span class="sc">:.2f}</span><span class="ss"> kPa)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</section>
-<section id="absolute-pressure-from-manometer-reading" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="absolute-pressure-from-manometer-reading"><span class="header-section-number">2.4</span> Absolute Pressure from Manometer Reading</h2>
-<p>A water manometer shows a pressure in a vessel of <span class="math inline">\(400\ \text{mm}\)</span> <strong>below atmospheric pressure</strong>. The atmospheric pressure is measured as <span class="math inline">\(763\ \text{mmHg}\)</span>. Determine the <strong>absolute pressure</strong> in the vessel in kPa.</p>
-<section id="relationship-between-absolute-and-gauge-pressure" class="level3" data-number="2.4.1">
-<h3 data-number="2.4.1" class="anchored" data-anchor-id="relationship-between-absolute-and-gauge-pressure"><span class="header-section-number">2.4.1</span> Relationship between absolute and gauge pressure</h3>
-<p><span class="math display">\[
-P_\text{abs} = P_\text{atm} + P_\text{gauge}
-\]</span></p>
-<p>Since the manometer shows a pressure <strong>below atmospheric</strong>, the gauge pressure is negative:</p>
-<p><span class="math display">\[
-P_\text{gauge} = - \rho_\text{water} g h
-\]</span></p>
-</section>
-<section id="convert-atmospheric-pressure-to-pa-using" class="level3" data-number="2.4.2">
-<h3 data-number="2.4.2" class="anchored" data-anchor-id="convert-atmospheric-pressure-to-pa-using"><span class="header-section-number">2.4.2</span> Convert atmospheric pressure to Pa using</h3>
-<p><span class="math display">\[
-P = \rho g h = 13{,}600 \cdot 9.81 \cdot 0.001 = 133.416~\text{Pa}
-\]</span></p>
-<p>So</p>
-<p><span class="math display">\[
-P_\text{atm} = 763 \times 133.416 \approx 101,801\ \text{Pa} \approx 101.8\ \text{kPa}
-\]</span></p>
-</section>
-<section id="compute-gauge-pressure" class="level3" data-number="2.4.3">
-<h3 data-number="2.4.3" class="anchored" data-anchor-id="compute-gauge-pressure"><span class="header-section-number">2.4.3</span> Compute gauge pressure</h3>
-<p>Water column height:</p>
-<p><span class="math display">\[
-h = 400\ \text{mm} = 0.4\ \text{m}
-\]</span></p>
-<p>Density of water: <span class="math inline">\(rho_\text{water} = 1000\ \text{kg/m³}\)</span>, <span class="math inline">\(g = 9.81\ \text{m/s²}\)</span></p>
-<p><span class="math display">\[
-P_\text{gauge} = - \rho g h = - 1000 \times 9.81 \times 0.4
-\]</span></p>
-<p><span class="math display">\[
-P_\text{gauge} = -3924\ \text{Pa} \approx -3.92\ \text{kPa}
-\]</span></p>
-</section>
-<section id="compute-absolute-pressure" class="level3" data-number="2.4.4">
-<h3 data-number="2.4.4" class="anchored" data-anchor-id="compute-absolute-pressure"><span class="header-section-number">2.4.4</span> Compute absolute pressure</h3>
-<p><span class="math display">\[
-P_\text{abs} = P_\text{atm} + P_\text{gauge} \approx 101.8 - 3.92 \approx 97.9\ \text{kPa}
-\]</span></p>
-</section>
-<section id="answer-1" class="level3" data-number="2.4.5">
-<h3 data-number="2.4.5" class="anchored" data-anchor-id="answer-1"><span class="header-section-number">2.4.5</span> Answer</h3>
-<p>The <strong>absolute pressure</strong> in the vessel is:</p>
-<p><span class="math display">\[
-\boxed{97.9\ \text{kPa}}
-\]</span></p>
-</section>
-<section id="python-code-3" class="level3" data-number="2.4.6">
-<h3 data-number="2.4.6" class="anchored" data-anchor-id="python-code-3"><span class="header-section-number">2.4.6</span> Python Code</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Absolute Pressure Calculation from Water Manometer</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>h_mm <span class="op">=</span> <span class="dv">400</span>               <span class="co"># manometer reading in mm (below atmospheric)</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>atm_mmHg <span class="op">=</span> <span class="dv">763</span>           <span class="co"># atmospheric pressure in mmHg</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>rho_water <span class="op">=</span> <span class="dv">1000</span>         <span class="co"># density of water in kg/m³</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span>                 <span class="co"># gravity in m/s²</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>mmHg_to_Pa <span class="op">=</span> <span class="fl">133.416</span>     <span class="co"># conversion factor</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert manometer height to meters</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>h_m <span class="op">=</span> h_mm <span class="op">/</span> <span class="dv">1000</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert atmospheric pressure to Pa</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>P_atm_Pa <span class="op">=</span> atm_mmHg <span class="op">*</span> mmHg_to_Pa</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Gauge pressure (negative because below atmospheric)</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>P_gauge_Pa <span class="op">=</span> <span class="op">-</span> rho_water <span class="op">*</span> g <span class="op">*</span> h_m</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Absolute pressure</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>P_abs_Pa <span class="op">=</span> P_atm_Pa <span class="op">+</span> P_gauge_Pa</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to kPa</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>P_abs_kPa <span class="op">=</span> P_abs_Pa <span class="op">/</span> <span class="dv">1000</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Atmospheric pressure: </span><span class="sc">{</span>P_atm_Pa<span class="sc">:.1f}</span><span class="ss"> Pa (</span><span class="sc">{</span>P_atm_Pa<span class="op">/</span><span class="dv">1000</span><span class="sc">:.1f}</span><span class="ss"> kPa)"</span>)</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Gauge pressure: </span><span class="sc">{</span>P_gauge_Pa<span class="sc">:.1f}</span><span class="ss"> Pa (</span><span class="sc">{</span>P_gauge_Pa<span class="op">/</span><span class="dv">1000</span><span class="sc">:.2f}</span><span class="ss"> kPa)"</span>)</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Absolute pressure in the vessel: </span><span class="sc">{</span>P_abs_Pa<span class="sc">:.1f}</span><span class="ss"> Pa (</span><span class="sc">{</span>P_abs_kPa<span class="sc">:.2f}</span><span class="ss"> kPa)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="python-code" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="python-code"><span class="header-section-number">5.1.2</span> Python Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Otto-cycle calculation (per kg) - runnable in Quarto</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="fl">5.0</span>             <span class="co"># compression ratio</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>gamma <span class="op">=</span> <span class="fl">1.4</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>cv <span class="op">=</span> <span class="fl">0.717</span>          <span class="co"># kJ/kg·K</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>T1_C <span class="op">=</span> <span class="fl">50.0</span>         <span class="co"># °C</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>q_in <span class="op">=</span> <span class="fl">930.0</span>        <span class="co"># kJ/kg</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Conversions</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>T1 <span class="op">=</span> T1_C <span class="op">+</span> <span class="fl">273.15</span>  <span class="co"># K</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: T2 (after isentropic compression)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>T2 <span class="op">=</span> T1 <span class="op">*</span> r<span class="op">**</span>(gamma <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: T3 (after constant-volume heat addition) -&gt; Tmax</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>T3 <span class="op">=</span> T2 <span class="op">+</span> q_in <span class="op">/</span> cv</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: T4 (after isentropic expansion)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>T4 <span class="op">=</span> T3 <span class="op">*</span> r<span class="op">**</span>(<span class="dv">1</span> <span class="op">-</span> gamma)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Heat rejected</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>q_out <span class="op">=</span> cv <span class="op">*</span> (T4 <span class="op">-</span> T1)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Net work per kg</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>w_net <span class="op">=</span> q_in <span class="op">-</span> q_out</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Efficiency</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>eta <span class="op">=</span> w_net <span class="op">/</span> q_in</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T1 = </span><span class="sc">{</span>T1<span class="sc">:.2f}</span><span class="ss"> K (</span><span class="sc">{</span>T1 <span class="op">-</span> <span class="fl">273.15</span><span class="sc">:.2f}</span><span class="ss"> °C)"</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T2 = </span><span class="sc">{</span>T2<span class="sc">:.2f}</span><span class="ss"> K (</span><span class="sc">{</span>T2 <span class="op">-</span> <span class="fl">273.15</span><span class="sc">:.2f}</span><span class="ss"> °C)"</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T3 = </span><span class="sc">{</span>T3<span class="sc">:.2f}</span><span class="ss"> K (</span><span class="sc">{</span>T3 <span class="op">-</span> <span class="fl">273.15</span><span class="sc">:.2f}</span><span class="ss"> °C)  &lt;-- Tmax"</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T4 = </span><span class="sc">{</span>T4<span class="sc">:.2f}</span><span class="ss"> K (</span><span class="sc">{</span>T4 <span class="op">-</span> <span class="fl">273.15</span><span class="sc">:.2f}</span><span class="ss"> °C)"</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"q_in = </span><span class="sc">{</span>q_in<span class="sc">:.2f}</span><span class="ss"> kJ/kg"</span>)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"q_out = </span><span class="sc">{</span>q_out<span class="sc">:.2f}</span><span class="ss"> kJ/kg"</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"w_net = </span><span class="sc">{</span>w_net<span class="sc">:.2f}</span><span class="ss"> kJ/kg"</span>)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"efficiency = </span><span class="sc">{</span>eta<span class="op">*</span><span class="dv">100</span><span class="sc">:.2f}</span><span class="ss"> %"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
@@ -1136,13 +940,13 @@ P_\text{abs} = P_\text{atm} + P_\text{gauge} \approx 101.8 - 3.92 \approx 97.9\ 
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./tutorial_basic.html" class="pagination-link" aria-label="Python Tutorial">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Python Tutorial</span></span>
+      <a href="./perfect_gases.html" class="pagination-link" aria-label="Perfect Gases">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Perfect Gases</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./heat_work.html" class="pagination-link" aria-label="Heat and Work">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Heat and Work</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./SI_common_mistakes.html" class="pagination-link" aria-label="SI System Common Mistakes">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">SI System Common Mistakes</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

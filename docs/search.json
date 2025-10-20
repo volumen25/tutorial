@@ -250,6 +250,26 @@
     ]
   },
   {
+    "objectID": "ideal_cycles.html",
+    "href": "ideal_cycles.html",
+    "title": "5  Ideal Cycles",
+    "section": "",
+    "text": "5.1 Ideal Constant-Volume (Otto) Cycle\nIn an ideal constant-volume (Otto) cycle the temperature at the beginning of compression is (50^).\nThe volumetric compression ratio is (r=5:1). The heat supplied during the cycle is (q_{in}=930 ) of working fluid.\nTake \\(\\gamma = 1.4\\) and \\(c_v = 0.717\\ \\text{kJ/kg·K}\\).\nCalculate:\nA. The maximum temperature attained in the cycle.\nB. The work done during the cycle per kg of working fluid.\nC. The ideal thermal efficiency of the cycle.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Ideal Cycles</span>"
+    ]
+  },
+  {
+    "objectID": "ideal_cycles.html#ideal-constant-volume-otto-cycle",
+    "href": "ideal_cycles.html#ideal-constant-volume-otto-cycle",
+    "title": "5  Ideal Cycles",
+    "section": "",
+    "text": "5.1.1 Theory and formulas\nFor an ideal Otto cycle (constant-volume heat addition) the relevant steps and formulas are:\n\nIsentropic compression \\(1 \\to 2\\): \\[\nT_2 = T_1\\, r^{\\gamma-1}\n\\]\nConstant-volume heat addition \\(2 \\to 3\\): \\[\nq_{in} = c_v (T_3 - T_2) \\quad\\Rightarrow\\quad T_3 = T_2 + \\frac{q_{in}}{c_v}\n\\]\nIsentropic expansion \\(3 \\to 4\\): \\[\nT_4 = T_3\\, r^{1-\\gamma}\n\\]\nHeat rejected: \\[\nq_{out} = c_v (T_4 - T_1)\n\\]\nNet work per unit mass: \\[\nw = q_{in} - q_{out}\n\\]\nThermal efficiency: \\[\n\\eta = \\frac{w}{q_{in}} = 1 - \\frac{q_{out}}{q_{in}}\n\\]\n\n(For the ideal Otto cycle the formula reduces to the well-known expression (= 1 - r^{1-}), which provides a check.)\n\n\n5.1.2 Python Code\n# Otto-cycle calculation (per kg) - runnable in Quarto\n\n# Given data\nr = 5.0             # compression ratio\ngamma = 1.4\ncv = 0.717          # kJ/kg·K\nT1_C = 50.0         # °C\nq_in = 930.0        # kJ/kg\n\n# Conversions\nT1 = T1_C + 273.15  # K\n\n# Step 1: T2 (after isentropic compression)\nT2 = T1 * r**(gamma - 1)\n\n# Step 2: T3 (after constant-volume heat addition) -&gt; Tmax\nT3 = T2 + q_in / cv\n\n# Step 3: T4 (after isentropic expansion)\nT4 = T3 * r**(1 - gamma)\n\n# Heat rejected\nq_out = cv * (T4 - T1)\n\n# Net work per kg\nw_net = q_in - q_out\n\n# Efficiency\neta = w_net / q_in\n\n# Print results\nprint(f\"T1 = {T1:.2f} K ({T1 - 273.15:.2f} °C)\")\nprint(f\"T2 = {T2:.2f} K ({T2 - 273.15:.2f} °C)\")\nprint(f\"T3 = {T3:.2f} K ({T3 - 273.15:.2f} °C)  &lt;-- Tmax\")\nprint(f\"T4 = {T4:.2f} K ({T4 - 273.15:.2f} °C)\")\nprint()\nprint(f\"q_in = {q_in:.2f} kJ/kg\")\nprint(f\"q_out = {q_out:.2f} kJ/kg\")\nprint(f\"w_net = {w_net:.2f} kJ/kg\")\nprint(f\"efficiency = {eta*100:.2f} %\")",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Ideal Cycles</span>"
+    ]
+  },
+  {
     "objectID": "SI_common_mistakes.html",
     "href": "SI_common_mistakes.html",
     "title": "Appendix A — SI System Common Mistakes",
