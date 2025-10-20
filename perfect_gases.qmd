@@ -60,7 +60,7 @@ $$
 
 $\boxed{V_1 = 224\ \text{m³}}$
 
-## Python Code
+### Python Code
 
 ``` python
 # Boyle's Law Calculator (p1 * V1 = p2 * V2)
@@ -98,4 +98,91 @@ else:
 print("\nUnits:")
 print("• If you used bar, results are in bar.")
 print("• If you used kN/m², results are in kN/m².")
+```
+
+## Compression — Stroke Volume and Final Temperature
+
+A gas is compressed in a cylinder from $p_1=1\ \text{bar}$ and $_1=35^\circ\text{C}$ at the beginning of the stroke to $p_2=37\ \text{bar}$ at the end of the stroke. The clearance volume is $V_c=850\ \text{cm}^3$. The compression index is $n=1.32$. Find the stroke (swept) volume $V_s$ and the temperature at the end of compression $T_2$.
+
+### Solution
+
+For a polytropic compression with $pV^n=$ constant (here $n=1.32$ and with clearance $V_c$:
+
+Start of compression (BDC) volume: $$
+V_1 = V_c + V_s
+$$
+
+End of compression (TDC) volume: $$
+V_2 = V_c
+$$
+
+From $(p_1V_1^n = p_2V_2^n)$ we get $$
+\left(\frac{V_2}{V_1}\right)^n = \frac{p_1}{p_2}
+$$
+
+so $$
+\frac{V_c}{V_c+V_s} = \left(\frac{p_1}{p_2}\right)^{1/n}.
+$$
+
+Rearrange to solve for $V_s$: $$
+V_s = V_c\!\left[\left(\frac{p_2}{p_1}\right)^{1/n} - 1\right].
+$$
+
+Substitute numbers (convert $V_c$ to m³: 850 $\text{cm}^3 = 850\times10^{-6} \text{m}^3 = 0.00085 \text{m}^3$:
+
+$$
+V_s = 0.00085\Big[\big(\tfrac{37}{1}\big)^{1/1.32}-1\Big]
+$$
+
+Numerical evaluation: $$
+V_s \approx 0.012255\ \text{m}^3 = 12.26\ \text{L}.
+$$
+
+------------------------------------------------------------------------
+
+### Final temperature
+
+For a polytropic process the temperature ratio is $$
+\frac{T_2}{T_1} = \left(\frac{p_2}{p_1}\right)^{\frac{n-1}{n}}.
+$$
+
+Convert $T_1$ to kelvin: $T_1=35^\circ\text{C}=308.15 \text{K}$.
+
+$$
+T_2 = 308.15\left(\frac{37}{1}\right)^{\frac{1.32-1}{1.32}}
+$$
+
+Numerical evaluation: $$
+T_2 \approx 739.49\ \text{K} = 466.34^\circ\text{C}.
+$$
+
+### Answers
+
+-   Stroke (swept) volume: $\boxed{V_s \approx 0.01226\ \text{m}^3\ (12.26\ \text{L})}$
+
+-   Temperature at end of compression: $\boxed{T_2 \approx 739.5\ \text{K} \;=\;466.3^\circ\text{C}}$.
+
+### Python Code
+
+``` python
+# Given data
+p1 = 1       # bar
+p2 = 37      # bar
+Vc_cm3 = 850 # clearance volume in cm³
+n = 1.32     # compression index
+T1_C = 35    # °C
+
+# Unit conversions
+Vc = Vc_cm3 * 1e-6      # m³
+T1 = T1_C + 273.15       # K
+
+# Stroke volume calculation
+Vs = Vc * ((p2 / p1)**(1/n) - 1)
+
+# Final temperature calculation
+T2 = T1 * (p2 / p1)**((n - 1) / n)
+T2_C = T2 - 273.15
+
+print(f"Stroke volume Vs = {Vs:.5f} m³ ({Vs*1000:.2f} L)")
+print(f"Final temperature T2 = {T2:.2f} K ({T2_C:.2f} °C)")
 ```

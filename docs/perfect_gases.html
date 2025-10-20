@@ -79,9 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c213800f9ad2c394781badd4e3c4d3bb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-14cbc709409b9607cfe384ca3dce8273.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -411,8 +411,15 @@ window.Quarto = {
   <li><a href="#given" id="toc-given" class="nav-link" data-scroll-target="#given"><span class="header-section-number">4.1.1</span> Given:</a></li>
   <li><a href="#final-volume-of-gas" id="toc-final-volume-of-gas" class="nav-link" data-scroll-target="#final-volume-of-gas"><span class="header-section-number">4.1.2</span> Final Volume of Gas</a></li>
   <li><a href="#initial-volume-of-gas" id="toc-initial-volume-of-gas" class="nav-link" data-scroll-target="#initial-volume-of-gas"><span class="header-section-number">4.1.3</span> Initial Volume of Gas</a></li>
+  <li><a href="#python-code" id="toc-python-code" class="nav-link" data-scroll-target="#python-code"><span class="header-section-number">4.1.4</span> Python Code</a></li>
   </ul></li>
-  <li><a href="#python-code" id="toc-python-code" class="nav-link" data-scroll-target="#python-code"><span class="header-section-number">4.2</span> Python Code</a></li>
+  <li><a href="#compression-stroke-volume-and-final-temperature" id="toc-compression-stroke-volume-and-final-temperature" class="nav-link" data-scroll-target="#compression-stroke-volume-and-final-temperature"><span class="header-section-number">4.2</span> Compression — Stroke Volume and Final Temperature</a>
+  <ul class="collapse">
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution"><span class="header-section-number">4.2.1</span> Solution</a></li>
+  <li><a href="#final-temperature" id="toc-final-temperature" class="nav-link" data-scroll-target="#final-temperature"><span class="header-section-number">4.2.2</span> Final temperature</a></li>
+  <li><a href="#answers" id="toc-answers" class="nav-link" data-scroll-target="#answers"><span class="header-section-number">4.2.3</span> Answers</a></li>
+  <li><a href="#python-code-1" id="toc-python-code-1" class="nav-link" data-scroll-target="#python-code-1"><span class="header-section-number">4.2.4</span> Python Code</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -484,9 +491,8 @@ V_1 = 224 \text{ m³}
 <p><strong>Initial Volume</strong></p>
 <p><span class="math inline">\(\boxed{V_1 = 224\ \text{m³}}\)</span></p>
 </section>
-</section>
-<section id="python-code" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="python-code"><span class="header-section-number">4.2</span> Python Code</h2>
+<section id="python-code" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="python-code"><span class="header-section-number">4.1.4</span> Python Code</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Boyle's Law Calculator (p1 * V1 = p2 * V2)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Boyle’s Law Calculator: p₁V₁ = p₂V₂</span><span class="ch">\n</span><span class="st">"</span>)</span>
@@ -522,8 +528,83 @@ V_1 = 224 \text{ m³}
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Units:"</span>)</span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"• If you used bar, results are in bar."</span>)</span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"• If you used kN/m², results are in kN/m²."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="compression-stroke-volume-and-final-temperature" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="compression-stroke-volume-and-final-temperature"><span class="header-section-number">4.2</span> Compression — Stroke Volume and Final Temperature</h2>
+<p>A gas is compressed in a cylinder from <span class="math inline">\(p_1=1\ \text{bar}\)</span> and <span class="math inline">\(_1=35^\circ\text{C}\)</span> at the beginning of the stroke to <span class="math inline">\(p_2=37\ \text{bar}\)</span> at the end of the stroke. The clearance volume is <span class="math inline">\(V_c=850\ \text{cm}^3\)</span>. The compression index is <span class="math inline">\(n=1.32\)</span>. Find the stroke (swept) volume <span class="math inline">\(V_s\)</span> and the temperature at the end of compression <span class="math inline">\(T_2\)</span>.</p>
+<section id="solution" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="solution"><span class="header-section-number">4.2.1</span> Solution</h3>
+<p>For a polytropic compression with <span class="math inline">\(pV^n=\)</span> constant (here <span class="math inline">\(n=1.32\)</span> and with clearance <span class="math inline">\(V_c\)</span>:</p>
+<p>Start of compression (BDC) volume: <span class="math display">\[
+V_1 = V_c + V_s
+\]</span></p>
+<p>End of compression (TDC) volume: <span class="math display">\[
+V_2 = V_c
+\]</span></p>
+<p>From <span class="math inline">\((p_1V_1^n = p_2V_2^n)\)</span> we get <span class="math display">\[
+\left(\frac{V_2}{V_1}\right)^n = \frac{p_1}{p_2}
+\]</span></p>
+<p>so <span class="math display">\[
+\frac{V_c}{V_c+V_s} = \left(\frac{p_1}{p_2}\right)^{1/n}.
+\]</span></p>
+<p>Rearrange to solve for <span class="math inline">\(V_s\)</span>: <span class="math display">\[
+V_s = V_c\!\left[\left(\frac{p_2}{p_1}\right)^{1/n} - 1\right].
+\]</span></p>
+<p>Substitute numbers (convert <span class="math inline">\(V_c\)</span> to m³: 850&nbsp;<span class="math inline">\(\text{cm}^3 = 850\times10^{-6} \text{m}^3 = 0.00085&nbsp;\text{m}^3\)</span>:</p>
+<p><span class="math display">\[
+V_s = 0.00085\Big[\big(\tfrac{37}{1}\big)^{1/1.32}-1\Big]
+\]</span></p>
+<p>Numerical evaluation: <span class="math display">\[
+V_s \approx 0.012255\ \text{m}^3 = 12.26\ \text{L}.
+\]</span></p>
+<hr>
+</section>
+<section id="final-temperature" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="final-temperature"><span class="header-section-number">4.2.2</span> Final temperature</h3>
+<p>For a polytropic process the temperature ratio is <span class="math display">\[
+\frac{T_2}{T_1} = \left(\frac{p_2}{p_1}\right)^{\frac{n-1}{n}}.
+\]</span></p>
+<p>Convert <span class="math inline">\(T_1\)</span> to kelvin: <span class="math inline">\(T_1=35^\circ\text{C}=308.15&nbsp;\text{K}\)</span>.</p>
+<p><span class="math display">\[
+T_2 = 308.15\left(\frac{37}{1}\right)^{\frac{1.32-1}{1.32}}
+\]</span></p>
+<p>Numerical evaluation: <span class="math display">\[
+T_2 \approx 739.49\ \text{K} = 466.34^\circ\text{C}.
+\]</span></p>
+</section>
+<section id="answers" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="answers"><span class="header-section-number">4.2.3</span> Answers</h3>
+<ul>
+<li><p>Stroke (swept) volume: <span class="math inline">\(\boxed{V_s \approx 0.01226\ \text{m}^3\ (12.26\ \text{L})}\)</span></p></li>
+<li><p>Temperature at end of compression: <span class="math inline">\(\boxed{T_2 \approx 739.5\ \text{K} \;=\;466.3^\circ\text{C}}\)</span>.</p></li>
+</ul>
+</section>
+<section id="python-code-1" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="python-code-1"><span class="header-section-number">4.2.4</span> Python Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>p1 <span class="op">=</span> <span class="dv">1</span>       <span class="co"># bar</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>p2 <span class="op">=</span> <span class="dv">37</span>      <span class="co"># bar</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>Vc_cm3 <span class="op">=</span> <span class="dv">850</span> <span class="co"># clearance volume in cm³</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="fl">1.32</span>     <span class="co"># compression index</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>T1_C <span class="op">=</span> <span class="dv">35</span>    <span class="co"># °C</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Unit conversions</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>Vc <span class="op">=</span> Vc_cm3 <span class="op">*</span> <span class="fl">1e-6</span>      <span class="co"># m³</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>T1 <span class="op">=</span> T1_C <span class="op">+</span> <span class="fl">273.15</span>       <span class="co"># K</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Stroke volume calculation</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>Vs <span class="op">=</span> Vc <span class="op">*</span> ((p2 <span class="op">/</span> p1)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span>n) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Final temperature calculation</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>T2 <span class="op">=</span> T1 <span class="op">*</span> (p2 <span class="op">/</span> p1)<span class="op">**</span>((n <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> n)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>T2_C <span class="op">=</span> T2 <span class="op">-</span> <span class="fl">273.15</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Stroke volume Vs = </span><span class="sc">{</span>Vs<span class="sc">:.5f}</span><span class="ss"> m³ (</span><span class="sc">{</span>Vs<span class="op">*</span><span class="dv">1000</span><span class="sc">:.2f}</span><span class="ss"> L)"</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Final temperature T2 = </span><span class="sc">{</span>T2<span class="sc">:.2f}</span><span class="ss"> K (</span><span class="sc">{</span>T2_C<span class="sc">:.2f}</span><span class="ss"> °C)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
