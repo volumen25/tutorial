@@ -13,7 +13,7 @@ book:
   author: "Serhat Beyenir"
   date: last-modified #today
   date-format: "D MMMM YYYY"
-  cover-image: images/cover_qr.png
+  cover-image: cover_qr.png
   sidebar:
     align: left
     style: floating
