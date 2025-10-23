@@ -60,7 +60,7 @@ $$
 
 $\boxed{V_1 = 224\ \text{m³}}$
 
-### Python Code
+### Code
 
 ``` python
 # Boyle's Law Calculator (p1 * V1 = p2 * V2)
@@ -138,7 +138,6 @@ Numerical evaluation: $$
 V_s \approx 0.012255\ \text{m}^3 = 12.26\ \text{L}.
 $$
 
-------------------------------------------------------------------------
 
 ### Final temperature
 
@@ -162,7 +161,7 @@ $$
 
 -   Temperature at end of compression: $\boxed{T_2 \approx 739.5\ \text{K} \;=\;466.3^\circ\text{C}}$.
 
-### Python Code
+### Code
 
 ``` python
 # Given data

@@ -2,10 +2,7 @@
 
 ## Ideal Constant-Volume (Otto) Cycle
 
-In an ideal constant-volume (Otto) cycle the temperature at the beginning of compression is (50\^\circ\text{C}).\
-The volumetric compression ratio is (r=5:1). The heat supplied during the cycle is (q\_{in}=930 \text{kJ/kg}) of working fluid.
-
-Take $\gamma = 1.4$ and $c_v = 0.717\ \text{kJ/kg·K}$.
+In an ideal constant-volume (Otto) cycle the temperature at the beginning of compression is $50^\circ\text{C}$. The volumetric compression ratio is $r=5:1$. The heat supplied during the cycle is $q_{in}=930 \text{ kJ/kg}$ of working fluid. Take $\gamma = 1.4$ and $c_v = 0.717\ \text{kJ/kg·K}$.
 
 Calculate:
 
@@ -41,12 +38,13 @@ For an ideal Otto cycle (constant-volume heat addition) the relevant steps and f
     \eta = \frac{w}{q_{in}} = 1 - \frac{q_{out}}{q_{in}}
     $$
 
-(For the ideal Otto cycle the formula reduces to the well-known expression (\eta = 1 - r\^{1-\gamma}), which provides a check.)
+(For the ideal Otto cycle the formula reduces to the well-known expression $\eta = 1 - r^{1-\gamma}$, which provides a check.)
 
-### Python Code
+
+### Code
 
 ``` python
-# Otto-cycle calculation (per kg) - runnable in Quarto
+# Otto-cycle calculation (per kg)
 
 # Given data
 r = 5.0             # compression ratio
@@ -56,7 +54,7 @@ T1_C = 50.0         # °C
 q_in = 930.0        # kJ/kg
 
 # Conversions
-T1 = T1_C + 273.15  # K
+T1 = T1_C + 273  # K
 
 # Step 1: T2 (after isentropic compression)
 T2 = T1 * r**(gamma - 1)
@@ -77,13 +75,215 @@ w_net = q_in - q_out
 eta = w_net / q_in
 
 # Print results
-print(f"T1 = {T1:.2f} K ({T1 - 273.15:.2f} °C)")
-print(f"T2 = {T2:.2f} K ({T2 - 273.15:.2f} °C)")
-print(f"T3 = {T3:.2f} K ({T3 - 273.15:.2f} °C)  <-- Tmax")
-print(f"T4 = {T4:.2f} K ({T4 - 273.15:.2f} °C)")
+print(f"T1 = {T1:.2f} K ({T1 - 273:.2f} °C)")
+print(f"T2 = {T2:.2f} K ({T2 - 273:.2f} °C)")
+print(f"T3 = {T3:.2f} K ({T3 - 273:.2f} °C)  <-- Tmax")
+print(f"T4 = {T4:.2f} K ({T4 - 273:.2f} °C)")
 print()
 print(f"q_in = {q_in:.2f} kJ/kg")
 print(f"q_out = {q_out:.2f} kJ/kg")
 print(f"w_net = {w_net:.2f} kJ/kg")
 print(f"efficiency = {eta*100:.2f} %")
+```
+
+
+### Using Actual Volume Ratios Instead of Direct r
+
+In the ideal Otto cycle we have written:
+$$
+T_2 = T_1\, r^{\gamma-1},
+$$
+
+with $r=V_1/V_2$. Here we make the volume-dependence explicit using $V_1$ and $V_2$.
+
+### Given
+
+- $T_1 = 50^\circ\text{C} = 323\ \text{K}$
+
+- Volumetric compression ratio $r = \dfrac{V_1}{V_2} = 5$ (we'll set $V_1=5,\ V_2=1$ so $V_1/V_2=5$ 
+
+- Heat supplied $q_{in} = 930\ \text{kJ/kg}$
+
+- $\gamma = 1.4,\ c_v = 0.717\ \text{kJ/kg·K}$
+
+### Volume-explicit relations
+
+Isentropic compression \(1\to2\) (using volumes):
+$$
+\frac{T_2}{T_1} = \left(\frac{V_1}{V_2}\right)^{\gamma-1}
+\quad\Rightarrow\quad
+T_2 = T_1\left(\frac{V_1}{V_2}\right)^{\gamma-1}.
+$$
+
+Constant-volume heat addition \(2\to3\):
+$$
+T_3 = T_2 + \frac{q_{in}}{c_v}.
+$$
+
+Isentropic expansion \(3\to4\) (volume ratio inverted):
+$$
+\frac{T_4}{T_3} = \left(\frac{V_2}{V_1}\right)^{\gamma-1}
+\quad\Rightarrow\quad
+T_4 = T_3\left(\frac{V_2}{V_1}\right)^{\gamma-1}.
+$$
+
+Heat rejected:
+$$
+q_{out} = c_v (T_4 - T_1),
+$$
+
+Net work and efficiency:
+$$
+w = q_{in} - q_{out},\qquad \eta = \frac{w}{q_{in}}.
+$$
+
+
+### Code
+
+```python
+# Otto-cycle calculation using explicit volumes (per kg)
+
+# Given data
+V1 = 5.0        # arbitrary volume units (e.g. litres) at start of compression (BDC)
+V2 = 1.0        # arbitrary volume units at end of compression (TDC)
+gamma = 1.4
+cv = 0.717      # kJ/kg·K
+T1_C = 50.0     # °C
+q_in = 930.0    # kJ/kg
+
+# Conversions
+T1 = T1_C + 273  # K
+
+# Isentropic compression using volume ratio V1/V2
+T2 = T1 * (V1 / V2)**(gamma - 1)
+
+# Constant-volume heat addition
+T3 = T2 + q_in / cv
+
+# Isentropic expansion using inverted volume ratio V2/V1
+T4 = T3 * (V2 / V1)**(gamma - 1)
+
+# Heat rejected, net work and efficiency
+q_out = cv * (T4 - T1)
+w_net = q_in - q_out
+eta = w_net / q_in
+
+# Print results
+print("--- Inputs ---")
+print(f"V1 = {V1:.3f} (units), V2 = {V2:.3f} (units)  --> V1/V2 = {V1/V2:.3f}")
+print(f"T1 = {T1:.2f} K ({T1-273:.2f} °C)")
+print()
+print("--- Results ---")
+print(f"T2 = {T2:.2f} K ({T2-273:.2f} °C)")
+print(f"T3 = {T3:.2f} K ({T3-273:.2f} °C)  <-- Tmax")
+print(f"T4 = {T4:.2f} K ({T4-273:.2f} °C)")
+print()
+print(f"q_in = {q_in:.2f} kJ/kg")
+print(f"q_out = {q_out:.2f} kJ/kg")
+print(f"w_net = {w_net:.2f} kJ/kg")
+print(f"efficiency = {eta*100:.2f} %")
+```
+
+## Ideal Constant-Pressure (Diesel) Cycle
+
+**Given**
+
+- $T_1 = 50^\circ\text{C} = 323\ \text{K}$
+
+- Compression ratio $r = \dfrac{V_1}{V_2} = 5$
+
+- Heat supplied $q_{in} = 930\ \text{kJ/kg}$ (added at constant pressure)
+
+- $\gamma = 1.4,\quad c_v = 0.717\ \text{kJ/kg·K}$
+
+**Notes**: For constant-pressure heat addition (2→3),
+$$
+q_{in} = c_p\,(T_3 - T_2),\qquad c_p = c_v \gamma.
+$$
+
+The cut-off (volume) ratio is $\rho = \dfrac{V_3}{V_2} = \dfrac{T_3}{T_2}$ because $p_2 = p_3$
+
+
+### Code
+
+```python
+# Diesel-cycle calculation (per kg) - runnable in Quarto
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Given
+r = 5.0                # V1 / V2
+gamma = 1.4
+cv = 0.717             # kJ/kg·K
+cp = cv * gamma        # kJ/kg·K
+T1 = 323.0             # K (simplified 273 + 50)
+q_in = 930.0           # kJ/kg
+
+# State 2: isentropic compression 1->2
+T2 = T1 * r**(gamma - 1)
+
+# State 3: constant-pressure heat addition 2->3
+# q_in = cp * (T3 - T2)  ->  T3 = T2 + q_in / cp
+T3 = T2 + q_in / cp
+
+# Cut-off ratio (V3/V2) since p2 = p3
+rho = T3 / T2
+
+# State 4: isentropic expansion 3->4 (V4 = V1)
+# T4 = T3 * (V3/V4)^(gamma-1) = T3 * (rho / r)^(gamma-1)
+T4 = T3 * (rho / r)**(gamma - 1)
+
+# Heat rejected, net work and efficiency
+q_out = cv * (T4 - T1)
+w_net = q_in - q_out
+eta = w_net / q_in
+
+# Pressures (normalized) using ideal-gas relation P ∝ T/V
+P1 = 1.0
+P2 = P1 * (T2/T1) * (V1 := r) / (V2 := 1.0)   # V1=r, V2=1 chosen for explicitness
+P3 = P2
+V3 = rho * V2
+P4 = (T4 / T1) * (V1 / (V1)) * P1  # alternatively compute via ideal gas: P4 = P3 * (T4/T3) * (V3/V4)
+
+# More consistent P4 via ideal gas:
+P4 = P3 * (T4 / T3) * (V3 / V1)
+
+# Curves for PV diagram
+V_compression = np.linspace(V1, V2, 200)  # 1 -> 2 (compression)
+P_compression = P1 * (V1 / V_compression)**gamma
+
+V_expansion = np.linspace(V3, V1, 200)    # 3 -> 4 (expansion)
+P_expansion = P3 * (V3 / V_expansion)**gamma
+
+plt.figure(figsize=(8,5))
+plt.plot(V_compression, P_compression, label="Isentropic compression (1→2)")
+plt.plot([V2, V3], [P2, P3], 'r-', linewidth=2, label="Constant-pressure heat addition (2→3)")
+plt.plot(V_expansion, P_expansion, label="Isentropic expansion (3→4)")
+plt.plot([V1, V1], [P4, P1], 'r-', linewidth=2, label="Constant-volume heat rejection (4→1)")
+# mark state points
+plt.plot([V1, V2, V3, V1], [P1, P2, P3, P4], 'ko')
+for (V,P,label) in [(V1,P1,"1"), (V2,P2,"2"), (V3,P3,"3"), (V1,P4,"4")]:
+    plt.text(V, P*1.02, label, ha='center')
+
+plt.xlabel("Volume (arbitrary units)")
+plt.ylabel("Pressure (arbitrary units)")
+plt.title("Ideal Diesel Cycle — P–V Diagram (normalized)")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+# Print numeric results
+print("---- Diesel Cycle Results (per kg) ----")
+print(f"T1 = {T1:.2f} K")
+print(f"T2 = {T2:.2f} K")
+print(f"T3 = {T3:.2f} K  (Tmax after constant-pressure heat addition)")
+print(f"T4 = {T4:.2f} K")
+print()
+print(f"Cut-off ratio (rho = V3/V2) = {rho:.4f}")
+print(f"q_in = {q_in:.2f} kJ/kg")
+print(f"q_out = {q_out:.2f} kJ/kg")
+print(f"Net work w = {w_net:.2f} kJ/kg")
+print(f"Ideal thermal efficiency = {eta*100:.2f} %")
 ```

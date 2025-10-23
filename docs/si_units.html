@@ -79,9 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-14cbc709409b9607cfe384ca3dce8273.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c213800f9ad2c394781badd4e3c4d3bb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -419,7 +419,7 @@ window.Quarto = {
   <li><a href="#convert-mmhg-knm²" id="toc-convert-mmhg-knm²" class="nav-link" data-scroll-target="#convert-mmhg-knm²"><span class="header-section-number">2.1.3</span> Convert mmHg → kN/m²</a></li>
   <li><a href="#convert-knm²-bar" id="toc-convert-knm²-bar" class="nav-link" data-scroll-target="#convert-knm²-bar"><span class="header-section-number">2.1.4</span> Convert kN/m² → bar</a></li>
   <li><a href="#final-answers" id="toc-final-answers" class="nav-link" data-scroll-target="#final-answers"><span class="header-section-number">2.1.5</span> Final Answers</a></li>
-  <li><a href="#python-code" id="toc-python-code" class="nav-link" data-scroll-target="#python-code"><span class="header-section-number">2.1.6</span> Python Code</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="header-section-number">2.1.6</span> Code</a></li>
   </ul></li>
   <li><a href="#oil-flow-in-tubes" id="toc-oil-flow-in-tubes" class="nav-link" data-scroll-target="#oil-flow-in-tubes"><span class="header-section-number">2.2</span> Oil Flow in Tubes</a>
   <ul class="collapse">
@@ -427,7 +427,7 @@ window.Quarto = {
   <li><a href="#total-area-and-volume-flow-rate" id="toc-total-area-and-volume-flow-rate" class="nav-link" data-scroll-target="#total-area-and-volume-flow-rate"><span class="header-section-number">2.2.2</span> Total area and volume flow rate</a></li>
   <li><a href="#mass-flow-rate" id="toc-mass-flow-rate" class="nav-link" data-scroll-target="#mass-flow-rate"><span class="header-section-number">2.2.3</span> Mass flow rate</a></li>
   <li><a href="#final-answers-1" id="toc-final-answers-1" class="nav-link" data-scroll-target="#final-answers-1"><span class="header-section-number">2.2.4</span> Final Answers</a></li>
-  <li><a href="#python-code-1" id="toc-python-code-1" class="nav-link" data-scroll-target="#python-code-1"><span class="header-section-number">2.2.5</span> Python Code</a></li>
+  <li><a href="#code-1" id="toc-code-1" class="nav-link" data-scroll-target="#code-1"><span class="header-section-number">2.2.5</span> Code</a></li>
   </ul></li>
   <li><a href="#gauge-pressure" id="toc-gauge-pressure" class="nav-link" data-scroll-target="#gauge-pressure"><span class="header-section-number">2.3</span> Gauge Pressure</a>
   <ul class="collapse">
@@ -435,7 +435,7 @@ window.Quarto = {
   <li><a href="#compute-the-density-of-oil-using-specific-gravity" id="toc-compute-the-density-of-oil-using-specific-gravity" class="nav-link" data-scroll-target="#compute-the-density-of-oil-using-specific-gravity"><span class="header-section-number">2.3.2</span> Compute the density of oil using specific gravity</a></li>
   <li><a href="#compute-the-gauge-pressure" id="toc-compute-the-gauge-pressure" class="nav-link" data-scroll-target="#compute-the-gauge-pressure"><span class="header-section-number">2.3.3</span> Compute the gauge pressure</a></li>
   <li><a href="#answer" id="toc-answer" class="nav-link" data-scroll-target="#answer"><span class="header-section-number">2.3.4</span> Answer</a></li>
-  <li><a href="#python-code-2" id="toc-python-code-2" class="nav-link" data-scroll-target="#python-code-2"><span class="header-section-number">2.3.5</span> Python Code</a></li>
+  <li><a href="#code-2" id="toc-code-2" class="nav-link" data-scroll-target="#code-2"><span class="header-section-number">2.3.5</span> Code</a></li>
   </ul></li>
   <li><a href="#absolute-pressure-from-manometer-reading" id="toc-absolute-pressure-from-manometer-reading" class="nav-link" data-scroll-target="#absolute-pressure-from-manometer-reading"><span class="header-section-number">2.4</span> Absolute Pressure from Manometer Reading</a>
   <ul class="collapse">
@@ -444,7 +444,7 @@ window.Quarto = {
   <li><a href="#compute-gauge-pressure" id="toc-compute-gauge-pressure" class="nav-link" data-scroll-target="#compute-gauge-pressure"><span class="header-section-number">2.4.3</span> Compute gauge pressure</a></li>
   <li><a href="#compute-absolute-pressure" id="toc-compute-absolute-pressure" class="nav-link" data-scroll-target="#compute-absolute-pressure"><span class="header-section-number">2.4.4</span> Compute absolute pressure</a></li>
   <li><a href="#answer-1" id="toc-answer-1" class="nav-link" data-scroll-target="#answer-1"><span class="header-section-number">2.4.5</span> Answer</a></li>
-  <li><a href="#python-code-3" id="toc-python-code-3" class="nav-link" data-scroll-target="#python-code-3"><span class="header-section-number">2.4.6</span> Python Code</a></li>
+  <li><a href="#code-3" id="toc-code-3" class="nav-link" data-scroll-target="#code-3"><span class="header-section-number">2.4.6</span> Code</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -508,8 +508,8 @@ P_{abs} = \frac{5.6034}{100} = 0.056~\text{bar}
 \boxed{P_{abs} = 42~\text{mmHg} = 5.6034~\text{kN/m²} = 0.056~\text{bar}}
 \]</span></p>
 </section>
-<section id="python-code" class="level3" data-number="2.1.6">
-<h3 data-number="2.1.6" class="anchored" data-anchor-id="python-code"><span class="header-section-number">2.1.6</span> Python Code</h3>
+<section id="code" class="level3" data-number="2.1.6">
+<h3 data-number="2.1.6" class="anchored" data-anchor-id="code"><span class="header-section-number">2.1.6</span> Code</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>P_atm_mmHg <span class="op">=</span> <span class="dv">757</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>P_vac_mmHg <span class="op">=</span> <span class="dv">715</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>MMHG_TO_KN_M2 <span class="op">=</span> <span class="fl">0.133416</span></span>
@@ -524,7 +524,7 @@ P_{abs} = \frac{5.6034}{100} = 0.056~\text{bar}
 </section>
 <section id="oil-flow-in-tubes" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="oil-flow-in-tubes"><span class="header-section-number">2.2</span> Oil Flow in Tubes</h2>
-<p>Oil flows full bore at a velocity of <span class="math inline">\(v = 2~\text{m/s}\)</span> through 16 tubes of diameter <span class="math inline">\(d = 30~\text{mm}\)</span>. Density of oil: <span class="math inline">\(\rho = 0.85~\text{g/mL}\)</span>. Find <strong>volume flow rate</strong> (L/s) and <strong>mass flow rate</strong> (kg/min).</p>
+<p>Oil flows full bore at a velocity of <span class="math inline">\(V = 2~\text{m/s}\)</span> through 16 tubes of diameter <span class="math inline">\(d = 30~\text{mm}\)</span>. Density of oil: <span class="math inline">\(\rho = 0.85~\text{g/mL}\)</span>. Find <strong>volume flow rate</strong> (L/s) and <strong>mass flow rate</strong> (kg/min).</p>
 <section id="cross-sectional-area-of-one-tube" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="cross-sectional-area-of-one-tube"><span class="header-section-number">2.2.1</span> Cross-sectional area of one tube</h3>
 <p><span class="math display">\[
@@ -537,25 +537,25 @@ A = \pi \frac{d^2}{4} = \pi \frac{0.03^2}{4} \approx 7.0686 \times 10^{-4}~\text
 A_\text{total} = 16 \cdot 7.0686 \times 10^{-4} \approx 0.01131~\text{m}^2
 \]</span></p>
 <p><span class="math display">\[
-Q = A_\text{total} \cdot v \approx 0.02262~\text{m}^3/\text{s} \approx 22.62~\text{L/s}
+\dot{v} = A_\text{total} \cdot V \approx 0.02262~\text{m}^3/\text{s} \approx 22.62~\text{L/s}
 \]</span></p>
 </section>
 <section id="mass-flow-rate" class="level3" data-number="2.2.3">
 <h3 data-number="2.2.3" class="anchored" data-anchor-id="mass-flow-rate"><span class="header-section-number">2.2.3</span> Mass flow rate</h3>
 <p><span class="math display">\[
-\dot{m} = \rho \cdot Q = 850 \cdot 0.02262 \approx 19.227~\text{kg/s} \approx 1153.6~\text{kg/min}
+\dot{m} = \rho \cdot \dot{v} = 850 \cdot 0.02262 \approx 19.227~\text{kg/s} \approx 1153.6~\text{kg/min}
 \]</span></p>
 </section>
 <section id="final-answers-1" class="level3" data-number="2.2.4">
 <h3 data-number="2.2.4" class="anchored" data-anchor-id="final-answers-1"><span class="header-section-number">2.2.4</span> Final Answers</h3>
 <p><span class="math display">\[
-\text{Volume flow rate: } Q \approx 22.6~\text{L/s}
+\text{Volume flow rate: } \dot{v} \approx 22.6~\text{L/s}
 \]</span> <span class="math display">\[
 \text{Mass flow rate: } \dot{m} \approx 1154~\text{kg/min}
 \]</span></p>
 </section>
-<section id="python-code-1" class="level3" data-number="2.2.5">
-<h3 data-number="2.2.5" class="anchored" data-anchor-id="python-code-1"><span class="header-section-number">2.2.5</span> Python Code</h3>
+<section id="code-1" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="code-1"><span class="header-section-number">2.2.5</span> Code</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="fl">2.0</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">16</span></span>
@@ -563,11 +563,11 @@ Q = A_\text{total} \cdot v \approx 0.02262~\text{m}^3/\text{s} \approx 22.62~\te
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="fl">0.85</span> <span class="op">*</span> <span class="dv">1000</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> math.pi <span class="op">*</span> d<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">4</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>A_total <span class="op">=</span> N <span class="op">*</span> A</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>Q_m3_s <span class="op">=</span> A_total <span class="op">*</span> v</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>Q_L_s <span class="op">=</span> Q_m3_s <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>v_dot_m3_s <span class="op">=</span> A_total <span class="op">*</span> v</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>v_dot_L_s <span class="op">=</span> Q_m3_s <span class="op">*</span> <span class="dv">1000</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>m_dot_kg_s <span class="op">=</span> rho <span class="op">*</span> Q_m3_s</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>m_dot_kg_min <span class="op">=</span> m_dot_kg_s <span class="op">*</span> <span class="dv">60</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Volume flow rate: </span><span class="sc">{</span>Q_L_s<span class="sc">:.2f}</span><span class="ss"> L/s"</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Volume flow rate: </span><span class="sc">{</span>v_dot_L_s<span class="sc">:.2f}</span><span class="ss"> L/s"</span>)</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Mass flow rate: </span><span class="sc">{</span>m_dot_kg_min<span class="sc">:.2f}</span><span class="ss"> kg/min"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
@@ -611,8 +611,8 @@ P_g = 15696\ \text{Pa} \approx 15.7\ \text{kPa}
 \boxed{15.7\ \text{kPa}}
 \]</span></p>
 </section>
-<section id="python-code-2" class="level3" data-number="2.3.5">
-<h3 data-number="2.3.5" class="anchored" data-anchor-id="python-code-2"><span class="header-section-number">2.3.5</span> Python Code</h3>
+<section id="code-2" class="level3" data-number="2.3.5">
+<h3 data-number="2.3.5" class="anchored" data-anchor-id="code-2"><span class="header-section-number">2.3.5</span> Code</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gauge Pressure Calculation for Oil</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
@@ -685,8 +685,8 @@ P_\text{abs} = P_\text{atm} + P_\text{gauge} \approx 101.8 - 3.92 \approx 97.9\ 
 \boxed{97.9\ \text{kPa}}
 \]</span></p>
 </section>
-<section id="python-code-3" class="level3" data-number="2.4.6">
-<h3 data-number="2.4.6" class="anchored" data-anchor-id="python-code-3"><span class="header-section-number">2.4.6</span> Python Code</h3>
+<section id="code-3" class="level3" data-number="2.4.6">
+<h3 data-number="2.4.6" class="anchored" data-anchor-id="code-3"><span class="header-section-number">2.4.6</span> Code</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Absolute Pressure Calculation from Water Manometer</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
