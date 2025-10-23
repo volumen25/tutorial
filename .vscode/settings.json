@@ -1,8 +1,16 @@
 {
     "cSpell.words": [
+        "elif",
+        "figsize",
+        "linspace",
+        "matplotlib",
         "MMHG",
+        "numpy",
         "polytropic",
+        "pyplot",
         "Rightarrow",
-        "Tmax"
+        "Tmax",
+        "xlabel",
+        "ylabel"
     ]
 }

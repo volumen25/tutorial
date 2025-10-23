@@ -39,7 +39,7 @@ $$
 \boxed{204\ \text{kJ}}
 $$
 
-### Python Code
+### Code
 
 ``` python
 # Heat Required to Heat Steel
@@ -128,7 +128,7 @@ $$
 \boxed{c \approx 2100\ \text{J/kg·K}}
 $$
 
-### Python Code
+### Code
 
 ``` python
 # Specific Heat Capacity Calculation
@@ -223,7 +223,7 @@ $$
 \boxed{980\ \text{kJ}}
 $$
 
-### Python Code
+### Code
 
 ``` python
 # Work Done by Fluid at Constant Pressure
@@ -318,7 +318,7 @@ $$
 
 -   Total enthalpy for 120 kg: $\boxed{H = 339{,}492\ \text{kJ}}$
 
-### Python Code
+### Code
 
 ``` python
 # Given data
