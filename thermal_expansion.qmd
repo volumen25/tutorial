@@ -1,0 +1,42 @@
+# Thermal Expansion {#thermal_expansion}
+
+Thermal expansion is the tendency of materials to change their shape, area, and volume in response to a change in temperature. When most substances are heated, their particles move more vigorously and tend to occupy more space, leading to an increase in dimensions. Conversely, when substances are cooled, they generally contract. This phenomenon occurs in solids, liquids, and gases, although the degree and nature of expansion vary depending on the material’s state and properties.
+
+## Linear Expansion
+
+This occurs along a specific dimension or direction, primarily in long, narrow objects (like rods or beams). When the temperature of a solid object increases, its length expands by an amount proportional to its original length and the temperature change. The equation for linear expansion is:
+
+$$
+\Delta L = \alpha L_0 \Delta T
+$$ {#eq-linearexp} where:
+
+-   $\Delta L$ is the change in length,
+
+-   $\alpha$ is the coefficient of linear expansion (unique to each material),
+
+-   $L_0$ is the original length, and
+
+-   $\Delta T$ is the temperature change.
+
+## Superficial Expansion
+
+Applicable to two-dimensional surfaces, such as sheets or plates. Here, both length and width expand, leading to an increase in surface area. The formula for area expansion is: $$
+\Delta A = 2 \alpha A_0 \Delta T
+$$ {#eq-superficial-exp} where:
+
+-   $\Delta A$ is the change in area,
+-   $A_0$ is the initial area, and
+-   $\Delta T$ is the temperature change.
+
+## Volumetric Expansion
+
+Relevant for three-dimensional objects (like solids, liquids, and gases). The volume of an object expands with temperature, especially in fluids where this effect is more pronounced. The formula is: $$
+\Delta V = \beta V_0 \Delta T
+$$ {#eq-volumetric-exp}
+
+where:
+
+-   $\Delta V$ is the change in volume,
+-   $\beta$ is the coefficient of volumetric expansion, which is approximately three times the linear expansion coefficient for isotropic solids,
+-   $V_0$ is the initial volume, and
+-   $\Delta T$ is the temperature change.

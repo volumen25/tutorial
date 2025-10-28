@@ -8,7 +8,7 @@ A steel block of mass $m = 5\ \text{kg}$ and specific heat capacity $c = 480\ \t
 
 $$
 Q = m c \Delta T
-$$
+$$ {#eq-heat}
 
 where
 
@@ -185,7 +185,7 @@ A fluid in a cylinder is at pressure $P = 700\ \text{kPa}$. It is **expanded at 
 
 $$
 W = P \Delta V
-$$
+$$ {#eq-workcp}
 
 where
 
@@ -296,7 +296,7 @@ Given for steam:
 
 The specific enthalpy is $$
 h = u + Pv
-$$
+$$ {#eq-specificenthalpy}
 
 Note: with (P) in kPa and (v) in m(\^3)/kg, the product (Pv) has units kJ/kg (since (1 \text{kPa}\cdot\text{m}\^3 = 1 \text{kJ})).
 

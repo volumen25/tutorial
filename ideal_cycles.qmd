@@ -2,6 +2,22 @@
 
 ## Ideal Constant-Volume (Otto) Cycle
 
+The Ideal Constant-Volume (Otto) Cycle, commonly referred to as the Otto cycle\\index{Otto cycle}, is a thermodynamic cycle that models the operation of a spark-ignition internal combustion engine, such as those used in gasoline-powered automobiles. It is an idealized model that assumes the working fluid is an ideal gas and describes the sequence of processes that convert thermal energy into mechanical work.
+
+### P-V Diagram Representation
+
+The Otto cycle on a P-V diagram forms a closed loop:
+
+-   1-2: Steep upward curve (pressure increases, volume decreases, adiabatic compression).
+
+-   2-3: Vertical line upward (pressure and temperature increase, volume constant, heat addition).
+
+-   3-4: Downward curve (pressure decreases, volume increases, adiabatic expansion).
+
+-   4-1: Vertical line downward (pressure and temperature decrease, volume constant, heat rejection).
+
+## Otto Cycle Example
+
 In an ideal constant-volume (Otto) cycle the temperature at the beginning of compression is $50^\circ\text{C}$. The volumetric compression ratio is $r=5:1$. The heat supplied during the cycle is $q_{in}=930 \text{ kJ/kg}$ of working fluid. Take $\gamma = 1.4$ and $c_v = 0.717\ \text{kJ/kg·K}$.
 
 Calculate:
@@ -39,7 +55,6 @@ For an ideal Otto cycle (constant-volume heat addition) the relevant steps and f
     $$
 
 (For the ideal Otto cycle the formula reduces to the well-known expression $\eta = 1 - r^{1-\gamma}$, which provides a check.)
-
 
 ### Code
 
@@ -86,11 +101,9 @@ print(f"w_net = {w_net:.2f} kJ/kg")
 print(f"efficiency = {eta*100:.2f} %")
 ```
 
-
 ### Using Actual Volume Ratios Instead of Direct r
 
-In the ideal Otto cycle we have written:
-$$
+In the ideal Otto cycle we have written: $$
 T_2 = T_1\, r^{\gamma-1},
 $$
 
@@ -98,49 +111,43 @@ with $r=V_1/V_2$. Here we make the volume-dependence explicit using $V_1$ and $V
 
 ### Given
 
-- $T_1 = 50^\circ\text{C} = 323\ \text{K}$
+-   $T_1 = 50^\circ\text{C} = 323\ \text{K}$
 
-- Volumetric compression ratio $r = \dfrac{V_1}{V_2} = 5$ (we'll set $V_1=5,\ V_2=1$ so $V_1/V_2=5$ 
+-   Volumetric compression ratio $r = \dfrac{V_1}{V_2} = 5$ (we'll set $V_1=5,\ V_2=1$ so $V_1/V_2=5$
 
-- Heat supplied $q_{in} = 930\ \text{kJ/kg}$
+-   Heat supplied $q_{in} = 930\ \text{kJ/kg}$
 
-- $\gamma = 1.4,\ c_v = 0.717\ \text{kJ/kg·K}$
+-   $\gamma = 1.4,\ c_v = 0.717\ \text{kJ/kg·K}$
 
 ### Volume-explicit relations
 
-Isentropic compression \(1\to2\) (using volumes):
-$$
+Isentropic compression (1\to2) (using volumes): $$
 \frac{T_2}{T_1} = \left(\frac{V_1}{V_2}\right)^{\gamma-1}
 \quad\Rightarrow\quad
 T_2 = T_1\left(\frac{V_1}{V_2}\right)^{\gamma-1}.
 $$
 
-Constant-volume heat addition \(2\to3\):
-$$
+Constant-volume heat addition (2\to3): $$
 T_3 = T_2 + \frac{q_{in}}{c_v}.
 $$
 
-Isentropic expansion \(3\to4\) (volume ratio inverted):
-$$
+Isentropic expansion (3\to4) (volume ratio inverted): $$
 \frac{T_4}{T_3} = \left(\frac{V_2}{V_1}\right)^{\gamma-1}
 \quad\Rightarrow\quad
 T_4 = T_3\left(\frac{V_2}{V_1}\right)^{\gamma-1}.
 $$
 
-Heat rejected:
-$$
+Heat rejected: $$
 q_{out} = c_v (T_4 - T_1),
 $$
 
-Net work and efficiency:
-$$
+Net work and efficiency: $$
 w = q_{in} - q_{out},\qquad \eta = \frac{w}{q_{in}}.
 $$
 
-
 ### Code
 
-```python
+``` python
 # Otto-cycle calculation using explicit volumes (per kg)
 
 # Given data
@@ -186,27 +193,43 @@ print(f"efficiency = {eta*100:.2f} %")
 
 ## Ideal Constant-Pressure (Diesel) Cycle
 
+The Diesel cycle\index{Diesel cycle} is a thermodynamic model of a compression-ignition engine, like those in marine diesel engines. Unlike the Otto cycle (constant-volume heat addition), the Diesel cycle assumes heat is added at constant pressure, reflecting the actual combustion in diesel engines.
+
+The Diesel cycle consists of four thermodynamic processes—two isentropic (adiabatic and reversible), one constant-pressure, and constant-volume that describe the idealized behavior of a gas undergoing compression, combustion, expansion, and exhaust in a compression-ignition engine.
+
+### P-V Diagram Representation
+
+The Diesel cycle on a P-V diagram forms a closed loop:
+
+-   1-2: Steep upward curve (pressure increases, volume decreases, adiabatic compression).
+
+-   2-3: Horizontal line (pressure constant, volume increases, constant-pressure heat addition).
+
+-   3-4: Downward curve (pressure decreases, volume increases, adiabatic expansion).
+
+-   4-1: Vertical line downward (pressure and temperature decrease, volume constant, heat rejection).
+
+## Diesel Cycle Example
+
 **Given**
 
-- $T_1 = 50^\circ\text{C} = 323\ \text{K}$
+-   $T_1 = 50^\circ\text{C} = 323\ \text{K}$
 
-- Compression ratio $r = \dfrac{V_1}{V_2} = 5$
+-   Compression ratio $r = \dfrac{V_1}{V_2} = 5$
 
-- Heat supplied $q_{in} = 930\ \text{kJ/kg}$ (added at constant pressure)
+-   Heat supplied $q_{in} = 930\ \text{kJ/kg}$ (added at constant pressure)
 
-- $\gamma = 1.4,\quad c_v = 0.717\ \text{kJ/kg·K}$
+-   $\gamma = 1.4,\quad c_v = 0.717\ \text{kJ/kg·K}$
 
-**Notes**: For constant-pressure heat addition (2→3),
-$$
+**Notes**: For constant-pressure heat addition (2→3), $$
 q_{in} = c_p\,(T_3 - T_2),\qquad c_p = c_v \gamma.
 $$
 
 The cut-off (volume) ratio is $\rho = \dfrac{V_3}{V_2} = \dfrac{T_3}{T_2}$ because $p_2 = p_3$
 
-
 ### Code
 
-```python
+``` python
 # Diesel-cycle calculation (per kg) - runnable in Quarto
 
 import numpy as np
@@ -287,3 +310,41 @@ print(f"q_out = {q_out:.2f} kJ/kg")
 print(f"Net work w = {w_net:.2f} kJ/kg")
 print(f"Ideal thermal efficiency = {eta*100:.2f} %")
 ```
+
+## Dual Combustion Cycle
+
+The Dual Combustion cycle\index{Dual Combustion cycle}, or mixed cycle, models engines that combine constant-volume (Otto cycle) and constant-pressure (Diesel cycle) combustion. Fuel burns in two phases: a fast initial phase at constant volume, then a slower phase at constant pressure, providing a realistic approximation of modern diesel engine combustion.
+
+### Efficiency of the Dual Combustion Cycle
+
+The thermal efficiency ($\eta$) of the ideal Dual Combustion Cycle is defined as the ratio of net work output to total heat input:
+
+$\eta = \frac{W_{\text{net}}}{Q_{\text{in}}} = \frac{Q_{\text{in,1}} + Q_{\text{in,2}} - Q_{\text{out}}}{Q_{\text{in,1}} + Q_{\text{in,2}}}$
+
+Substituting the heat terms:
+
+$Q_{\text{in,1}} = m C_v (T_3 - T_2)$
+
+$Q_{\text{in,2}} = m C_p (T_4 - T_3)$
+
+$Q_{\text{out}} = m C_v (T_5 - T_1)$
+
+$\eta = 1 - \frac{Q_{\text{out}}}{Q_{\text{in,1}} + Q_{\text{in,2}}} = 1 - \frac{C_v (T_5 - T_1)}{C_v (T_3 - T_2) + C_p (T_4 - T_3)}$
+
+$$
+\eta = 1 - \frac{(T_5 - T_1)}{(T_3 - T_2) + \gamma (T_4 - T_3)}
+$${#eq-dualcombefficieny}
+
+### P-V Diagram Representation
+
+The Dual Combustion Cycle on a P-V diagram forms a closed loop:
+
+-   1-2: Steep upward curve (pressure increases, volume decreases, adiabatic compression).
+
+-   2-3: Vertical line upward (pressure and temperature increase, volume constant, heat addition).
+
+-   3-4: Horizontal line (pressure constant, volume increases, heat addition).
+
+-   4-5: Downward curve (pressure decreases, volume increases, adiabatic expansion).
+
+-   5-1: Vertical line downward (pressure and temperature decrease, volume constant, heat rejection).

@@ -1,0 +1,9 @@
+# IC Engines {#ic_engines}
+
+Internal combustion (IC) engines\index{IC Engines} derive their name from fuel burning inside the engine cylinder. The combustion heats the air in the cylinder, increasing its pressure and moving the piston, whose reciprocating motion is converted to rotary motion by the crankshaft.
+
+IC engines are classified by their ignition method:
+
+-   Compression Ignition: Air is highly compressed, raising its temperature so injected fuel ignites spontaneously.
+
+-   Spark Ignition: A fuel–air mixture is compressed and then ignited by a spark plug.

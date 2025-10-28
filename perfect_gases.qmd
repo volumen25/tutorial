@@ -1,5 +1,27 @@
 # Perfect Gases {#perfect_gases}
 
+The terms "perfect gas" and "ideal gas" are often used interchangeably in physics and engineering, but "ideal gas" is the more standard term in modern scientific literature.
+
+An ideal gas is a theoretical model that remains in the gaseous state under all conditions, as it does not account for phase changes such as condensation. Real gases, such as nitrogen, oxygen, and dry air, are often approximated as ideal gases under typical conditions (e.g., low pressures and high temperatures relative to their critical points), but they may condense under extreme conditions. Saturated steam, being at the liquid-vapor phase boundary, does not behave as an ideal gas due to significant intermolecular forces, whereas superheated steam approximates ideal gas behavior when sufficiently far from its condensation point.
+
+In an ideal gas, pressure, temperature, and volume are interrelated, enabling the calculation of changes in one property based on the others. These relationships are governed by Boyle’s Law, Charles’s Law, and the ideal gas law, which collectively describe the behavior of an ideal gas under varying conditions.
+
+## Boyle's Law
+
+Robert Boyle (1627–1691), a physicist, investigated the behavior of an ideal gas at constant temperature. By controlling the addition or removal of heat during changes in the volume and pressure of a confined gas, he maintained a constant temperature. He discovered that, under these conditions, the absolute pressure of a gas is inversely proportional to its volume. That is, as the volume increases, the pressure decreases, and conversely, as the volume decreases, the pressure increases. This can be stated as:\\index{Boyle's Law}.
+
+$$
+P\propto\frac{1}{V}
+$$ {#eq-boyle}
+
+## Charles’s Law
+
+Charles’s Law, named after Jacques Charles (1746–1823), a French physicist, states that for an ideal gas maintained at constant pressure, the volume of the gas is directly proportional to its absolute temperature (measured in Kelvin). This means that as the temperature of a gas increases, its volume increases proportionally, provided the pressure remains constant. Conversely, as the temperature decreases, the volume decreases. The law assumes the gas behaves as an ideal gas. This can be stated as:\\index{Charles’s Law}.
+
+$$
+V\propto\ T
+$$ {#eq-charles}
+
 ## Boyle's Law — Pressure–Volume Relationship
 
 Assuming compression according to the law $pV = \text{constant}$:
@@ -137,7 +159,6 @@ $$
 Numerical evaluation: $$
 V_s \approx 0.012255\ \text{m}^3 = 12.26\ \text{L}.
 $$
-
 
 ### Final temperature
 

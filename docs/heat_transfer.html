@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix A — SI System Common Mistakes – Tutorial</title>
+<title>5&nbsp; Heat Transfer – Tutorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./greek_letters.html" rel="next">
-<link href="./ideal_cycles.html" rel="prev">
+<link href="./perfect_gases.html" rel="next">
+<link href="./thermal_expansion.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -75,6 +75,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -249,7 +278,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./SI_common_mistakes.html">Appendices</a></li><li class="breadcrumb-item"><a href="./SI_common_mistakes.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">SI System Common Mistakes</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./heat_transfer.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Heat Transfer</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -311,7 +340,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./heat_transfer.html" class="sidebar-item-text sidebar-link">
+  <a href="./heat_transfer.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Heat Transfer</span></span></a>
   </div>
 </li>
@@ -344,7 +373,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./SI_common_mistakes.html" class="sidebar-item-text sidebar-link active">
+  <a href="./SI_common_mistakes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">SI System Common Mistakes</span></span></a>
   </div>
 </li>
@@ -361,16 +390,24 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#conduction" id="toc-conduction" class="nav-link active" data-scroll-target="#conduction"><span class="header-section-number">5.1</span> Conduction</a></li>
+  <li><a href="#convection" id="toc-convection" class="nav-link" data-scroll-target="#convection"><span class="header-section-number">5.2</span> Convection</a></li>
+  <li><a href="#radiation" id="toc-radiation" class="nav-link" data-scroll-target="#radiation"><span class="header-section-number">5.3</span> Radiation</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./SI_common_mistakes.html">Appendices</a></li><li class="breadcrumb-item"><a href="./SI_common_mistakes.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">SI System Common Mistakes</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Appendix A — SI System Common Mistakes</h1>
+<h1 class="title"><span id="heat_transfer" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Heat Transfer</span></span></h1>
 </div>
 
 
@@ -387,106 +424,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Using the SI system correctly is crucial for clear communication in science and engineering. Below are common mistakes in using the SI system, examples of incorrect usage, and how to correct them.</p>
-<table class="caption-top table">
-<caption>SI system rules and common mistakes</caption>
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Concept</strong></th>
-<th><strong>Mistake</strong></th>
-<th><strong>Correct Usage</strong></th>
-<th><strong>Notes</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Use of SI Unit Symbols</strong></td>
-<td><code>m./s</code></td>
-<td><code>m/s</code></td>
-<td>Use the correct format without additional punctuation.</td>
-</tr>
-<tr class="even">
-<td><strong>Spacing Between Value &amp; Unit</strong></td>
-<td><code>10kg</code></td>
-<td><code>10 kg</code></td>
-<td>Always leave a space between the number and the unit symbol.</td>
-</tr>
-<tr class="odd">
-<td><strong>Incorrect Unit Symbols</strong></td>
-<td><code>sec</code>, <code>hrs</code>, <code>°K</code></td>
-<td><code>s</code>, <code>h</code>, <code>K</code></td>
-<td>Use the proper SI symbols; symbols are case-sensitive.</td>
-</tr>
-<tr class="even">
-<td><strong>Abbreviations for Units</strong></td>
-<td><code>5 kilograms (kgs)</code></td>
-<td><code>5 kilograms (kg)</code></td>
-<td>Avoid informal abbreviations like “kgs”; adhere to standard symbols.</td>
-</tr>
-<tr class="odd">
-<td><strong>Multiple Units in Expressions</strong></td>
-<td><code>5 m/s/s</code>, <code>5 kg/meter²</code></td>
-<td><code>5 m/s²</code>, <code>5 kg/m²</code></td>
-<td>Use compact, standardized formats for derived units.</td>
-</tr>
-<tr class="even">
-<td><strong>Incorrect Use of Prefixes</strong></td>
-<td><code>0.0001 km</code></td>
-<td><code>100 mm</code></td>
-<td>Choose prefixes to keep numbers in the range (0.1 x &lt; 1000).</td>
-</tr>
-<tr class="odd">
-<td><strong>Misplaced Unit Symbols</strong></td>
-<td><code>5/s</code>, <code>kg10</code></td>
-<td><code>5 s⁻¹</code>, <code>10 kg</code></td>
-<td>Symbols must follow numerical values, not precede them.</td>
-</tr>
-<tr class="even">
-<td><strong>Degrees Celsius vs.&nbsp;Kelvin</strong></td>
-<td><code>300°K</code></td>
-<td><code>300 K</code></td>
-<td>Kelvin is written without “degree”</td>
-</tr>
-<tr class="odd">
-<td><strong>Singular vs.&nbsp;Plural Units</strong></td>
-<td><code>5 kgs</code>, <code>1 meters</code></td>
-<td><code>5 kg</code>, <code>1 meter</code></td>
-<td>Symbols do not pluralize; full unit names follow grammar rules.</td>
-</tr>
-<tr class="even">
-<td><strong>Capitalization of Symbols</strong></td>
-<td><code>Kg</code>, <code>S</code>, <code>Km</code>, <code>MA</code></td>
-<td><code>kg</code>, <code>s</code>, <code>km</code>, <code>mA</code></td>
-<td>Symbols are case-sensitive; use uppercase only where specified (e.g., <code>N</code>, <code>Pa</code>).</td>
-</tr>
-<tr class="odd">
-<td><strong>Capitalization of Unit Names</strong></td>
-<td><code>Newton</code>, <code>Pascal</code>, <code>Watt</code></td>
-<td><code>newton</code>, <code>pascal</code>, <code>watt</code></td>
-<td>Unit names are lowercase, even if derived from a person’s name, unless starting a sentence.</td>
-</tr>
-<tr class="even">
-<td><strong>Prefix Capitalization</strong></td>
-<td><code>MilliMeter</code>, <code>MegaWatt</code></td>
-<td><code>millimeter</code>, <code>megawatt</code></td>
-<td>Prefixes are lowercase for (10^{-1}) to (10^{-9}), uppercase for (10^6) and larger (except <code>k</code> for kilo).</td>
-</tr>
-<tr class="odd">
-<td><strong>Formatting in Reports</strong></td>
-<td><code>5</code>, <code>Temperature: 300</code></td>
-<td><code>5 kg</code>, <code>Temperature: 300 K</code></td>
-<td>Always specify units explicitly.</td>
-</tr>
-</tbody>
-</table>
+<section id="conduction" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="conduction"><span class="header-section-number">5.1</span> Conduction</h2>
+<p>This method transfers heat through direct contact, as faster-vibrating molecules pass energy to slower ones. In solids, heat moves from molecule to molecule, and between objects in contact, it flows from the hotter to the cooler one until temperatures equalize.</p>
+<p>An example of conduction is an iron bar having one end in contact with a flame. The other end will soon become hot due to the conduction of heat from molecule to molecule through the iron.</p>
+<p><span id="eq-conduction"><span class="math display">\[
+Q=\frac{kAt\Delta T}{s}
+\tag{5.1}\]</span></span></p>
+</section>
+<section id="convection" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="convection"><span class="header-section-number">5.2</span> Convection</h2>
+<p>Convection transfers heat through the movement of fluids (liquids or gases). When a fluid is heated, it expands, becomes less dense, and rises, while cooler, denser fluid moves in to replace it—creating a convection current that spreads heat.</p>
+<p>Natural convection occurs without mechanical aid, while forced convection uses devices like pumps or fans.</p>
+<p>If fluid movement is created by a pump or a fan, heat is being transferred by forced convection. Examples are a pump circulating hot water through a building heating system, a fan forcing air through an automobile radiator, or a forced draft fan pushing hot gases through a boiler.</p>
+</section>
+<section id="radiation" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="radiation"><span class="header-section-number">5.3</span> Radiation</h2>
+<p>Radiation transfers heat through electromagnetic waves that travel in straight lines and can pass through a vacuum. When these waves strike a surface, they may be absorbed (increasing temperature), reflected, or transmitted. Dark, rough surfaces absorb more radiation, while shiny, smooth ones reflect it.</p>
+<p>Examples include heat from the sun reaching Earth and radiant heat in a boiler furnace.</p>
+<p>In a steam boiler, radiation occurs in the furnace. Any heating surfaces that are directly exposed to the furnace will receive heat directly by radiation from the flame. These include the waterwalls and some generating tubes of a watertube boiler, radiant superheater tubes (located at the outlet of the furnace), and the furnace walls of a firetube boiler.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -904,13 +863,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ideal_cycles.html" class="pagination-link" aria-label="Ideal Cycles">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Ideal Cycles</span></span>
+      <a href="./thermal_expansion.html" class="pagination-link" aria-label="Thermal Expansion">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Thermal Expansion</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./greek_letters.html" class="pagination-link" aria-label="Greek Letters">
-        <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Greek Letters</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./perfect_gases.html" class="pagination-link" aria-label="Perfect Gases">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Perfect Gases</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

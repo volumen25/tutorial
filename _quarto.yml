@@ -11,7 +11,7 @@ book:
   title: "Tutorial"
   subtitle: "A Brief Introduction to Computational Tools"
   author: "Serhat Beyenir"
-  date: last-modified #today
+  date: today #today or last-modified
   date-format: "D MMMM YYYY"
   cover-image: cover_qr.png
   sidebar:
@@ -26,13 +26,16 @@ book:
   chapters:    
     - index.qmd            
     - tutorial_basic.qmd
-    # - si_units.qmd
-    # - heat_work.qmd
-    # - perfect_gases.qmd
-    # - ideal_cycles.qmd
+    - si_units.qmd
+    - heat_work.qmd
+    - thermal_expansion.qmd
+    - heat_transfer.qmd
+    - perfect_gases.qmd
+    - ic_engines.qmd
+    - ideal_cycles.qmd
   appendices:
     - SI_common_mistakes.qmd
-    - greek_letters.qmd  
+    - greek_letters.qmd
 
 
 bibliography: references.bib

@@ -1,0 +1,27 @@
+# Heat Transfer {#heat_transfer}
+
+## Conduction
+
+This method transfers heat through direct contact, as faster-vibrating molecules pass energy to slower ones. In solids, heat moves from molecule to molecule, and between objects in contact, it flows from the hotter to the cooler one until temperatures equalize.
+
+An example of conduction\index{Conduction} is an iron bar having one end in contact with a flame. The other end will soon become hot due to the conduction of heat from molecule to molecule through the iron.
+
+$$
+Q=\frac{kAt\Delta T}{s}
+$$ {#eq-conduction}
+
+## Convection
+
+Convection transfers heat through the movement of fluids (liquids or gases). When a fluid is heated, it expands, becomes less dense, and rises, while cooler, denser fluid moves in to replace it—creating a convection current that spreads heat.
+
+Natural convection occurs without mechanical aid, while forced convection uses devices like pumps or fans.
+
+If fluid movement is created by a pump or a fan, heat is being transferred by forced convection. Examples are a pump circulating hot water through a building heating system, a fan forcing air through an automobile radiator, or a forced draft fan pushing hot gases through a boiler.
+
+## Radiation
+
+Radiation transfers heat through electromagnetic waves that travel in straight lines and can pass through a vacuum. When these waves strike a surface, they may be absorbed (increasing temperature), reflected, or transmitted. Dark, rough surfaces absorb more radiation, while shiny, smooth ones reflect it.
+
+Examples include heat from the sun reaching Earth and radiant heat in a boiler furnace.
+
+In a steam boiler, radiation occurs in the furnace. Any heating surfaces that are directly exposed to the furnace will receive heat directly by radiation from the flame. These include the waterwalls and some generating tubes of a watertube boiler, radiant superheater tubes (located at the outlet of the furnace), and the furnace walls of a firetube boiler.
