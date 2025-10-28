@@ -2,7 +2,7 @@
 
 ## Ideal Constant-Volume (Otto) Cycle
 
-The Ideal Constant-Volume (Otto) Cycle, commonly referred to as the Otto cycle\\index{Otto cycle}, is a thermodynamic cycle that models the operation of a spark-ignition internal combustion engine, such as those used in gasoline-powered automobiles. It is an idealized model that assumes the working fluid is an ideal gas and describes the sequence of processes that convert thermal energy into mechanical work.
+The Ideal Constant-Volume (Otto) Cycle, commonly referred to as the Otto cycle\index{Otto cycle}, is a thermodynamic cycle that models the operation of a spark-ignition internal combustion engine, such as those used in gasoline-powered automobiles. It is an idealized model that assumes the working fluid is an ideal gas and describes the sequence of processes that convert thermal energy into mechanical work.
 
 ### P-V Diagram Representation
 
@@ -333,7 +333,7 @@ $\eta = 1 - \frac{Q_{\text{out}}}{Q_{\text{in,1}} + Q_{\text{in,2}}} = 1 - \frac
 
 $$
 \eta = 1 - \frac{(T_5 - T_1)}{(T_3 - T_2) + \gamma (T_4 - T_3)}
-$${#eq-dualcombefficieny}
+$$ {#eq-dualcombefficieny}
 
 ### P-V Diagram Representation
 

@@ -1,0 +1,34 @@
+---
+title: "Project"
+format: html
+---
+
+The project will develop four problem sets aligned with the curriculum, each containing four to five problems. The problem sets will cover the following engineering concepts:
+
+1.  Statics
+
+2.  Dynamics
+
+3.  Hydrostatics
+
+4.  Hydraulics
+
+The project aims to accomplish the following:
+
+-   Encourage students to apply theoretical knowledge in practical scenarios, bridging the gap between theory and practice.
+
+-   Create interactive and engaging learning experiences that promote active participation and critical thinking.
+
+-   Equip students with fundamental programming skills and computational thinking abilities.
+
+-   Promote teamwork and collaboration skills through group assignments.
+
+Develop four problem sets aligned with the curriculum that incorporate engineering computational tools. These problem sets will be designed to challenge students and promote critical thinking about the concepts taught. Action research is not part of the project beyond collecting feedback from students on their learning activities, with the primary focus being the implementation of the problem sets in the classroom. The project will involve the following steps:
+
+-   Curriculum Alignment: Review the curriculum to identify opportunities for integrating computational tools.
+-   Problem Set Development: Create relevant, challenging problem sets using engineering concepts and tools.
+-   Implementation: Introduce problem sets in the classroom with necessary resources and support.
+-   Feedback and Assessment: Gather student feedback and assess performance to evaluate effectiveness.
+-   Reflection and Improvement: Use feedback to refine the project for future iterations.
+-   Documentation: Record the process, challenges, and successes for the BCIT community.
+-   Professional Development: Provide faculty with presentations and resources for implementation.
