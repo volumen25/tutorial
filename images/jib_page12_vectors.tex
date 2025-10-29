@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{angles, quotes}
+
+\begin{document}
+
+\begin{tikzpicture}
+  % Define angles in degrees
+  \def\A{102} % Angle at A
+  \def\B{42}  % Angle at B
+  \def\C{36}  % Angle at C
+
+  % Define side AB (arbitrary length)
+  \def\AB{5}
+
+  % Compute side lengths using Law of Sines
+  \pgfmathsetmacro{\BC}{\AB*sin(\A)/sin(\C)} % Side BC, opposite angle A
+  \pgfmathsetmacro{\CA}{\AB*sin(\B)/sin(\C)} % Side CA, opposite angle B
+
+  % Define coordinates for vertical AB on the left
+  \coordinate (B) at (0,0);           % Vertex B at origin
+  \coordinate (A) at (0,\AB);         % Vertex A above B to make AB vertical
+  \coordinate (C) at ({\CA*sin(\A)}, {\AB - \CA*cos(\A)}); % Ensures angle at A = 102°, C to the right
+
+  % Draw triangle
+  \draw (A) -- (B) node[midway, left, xshift=-2mm] {$W = 37.4938\,\text{kN}$};
+  \draw (A) -- (C);
+  \draw (C) -- (B);
+
+  % Label vertices
+  \node[above left] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[right] at (C) {$C$};
+
+  % Draw and label angles
+  \pic [draw, "$102^\circ$", angle radius=1cm] {angle = B--A--C};
+  \pic [draw, "$42^\circ$", angle radius=1cm] {angle = C--B--A};
+  \pic [draw, "$36^\circ$", angle radius=1cm] {angle = A--C--B};
+\end{tikzpicture}
+
+\end{document}

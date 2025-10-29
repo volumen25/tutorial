@@ -1,15 +1,51 @@
 ---
 title: "Statics"
-format: html
+author: Serhat Beyenir
+#date: today
+format:
+  pdf:
+    documentclass: article
+    number-sections: true
+    # number-depth: 2
+    lot: false
+    lof: false
+    include-in-header: 
+      text: |
+        \usepackage{makeidx}
+        \makeindex
+    include-before-body:
+      text: |
+       \clearpage
+       \vspace*{\fill}  % pushes text to bottom of page
+       \begin{center}
+       {\small
+       This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).\\[0.5em]
+       Full text available at \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}.
+       }
+       \end{center}
+       \clearpage
+    include-after-body: 
+      text: |
+        \printindex
 ---
 
-## Objectives
+## Learning Objectives {.unnumbered}
 
--   Distinguish between scalar and vector quantities.
--   Define equilibrium of an object.
--   Practice vector problems.
+-   Differentiate between scalar and vector quantities and give examples.
 
-## Concepts
+-   Describe coplanar forces and their analysis in two dimensions.
+
+-   Use Cartesian coordinates to calculate distances and angles.
+
+-   Apply the Sine and Cosine Rules to solve triangles and find resultants.
+
+-   Draw and interpret space and vector diagrams to represent forces.
+
+-   Determine the resultant of multiple forces and identify equilibrium conditions.
+
+-   Analyze sling systems and calculate tensions using equilibrium principles.
+
+## Scalar and Vector Quantities
 
 In mathematics and physics, a **scalar**\index{scalar} is a quantity with only magnitude (size), whereas a **vector**\index{vector} has both magnitude and direction. Examples of scalar quantities include numbers, mass, speed, temperature, volume, and time. In contrast, examples of vector quantities include velocity, acceleration, and forces like weight and friction.
 
@@ -19,9 +55,9 @@ A vector is represented as an arrow, where the length denotes its magnitude, and
 
 Coplanar forces are forces that act within the same plane. This means they lie along a single, flat surface, and their lines of action do not extend out of that plane. Coplanar forces are often analyzed together in physics and engineering because their combined effects can be resolved within two dimensions.
 
-## Cartesian Coordinates
+### Cartesian Coordinates
 
-In a two-dimensional Cartesian coordinate system\index{Cartesian coordinate system}, a point is represented as $(x, y)$, where:
+In a two-dimensional Cartesian coordinate (@fig-cartesian-coordinates) system\index{Cartesian coordinate system}, a point is represented as $(x, y)$, where:
 
 -   $x$ is the horizontal distance from the origin ($the\ x-coordinate$).
 
@@ -39,9 +75,11 @@ $$
 \theta = \tan^{-1}\left(\frac{y}{x}\right)
 $$ {#eq-cartesian2}
 
-## Cosine Rule
+![Cartesian Coordinates](images/cartesian.pdf){#fig-cartesian-coordinates width="50%"}
 
-![Rules of Cosine and Sine](images/sinecosrule.png){#fig-law_cos_sine}
+### Cosine Rule
+
+![Rules of Cosine and Sine](images/sinecosrule.png){#fig-law_cos_sine width="50%"}
 
 The Cosine Rule\index{Cosine rule} is used to relate the lengths of the sides of a triangle as shown in @fig-law_cos_sine to the cosine of one of its angles:
 
@@ -55,7 +93,7 @@ Where:
 
 -   $\gamma$ is the angle opposite side c.
 
-## Sine Rule
+### Sine Rule
 
 The Sine Rule\index{Sine rule} relates the sides and angles of a triangle in @fig-law_cos_sine:
 
@@ -150,25 +188,32 @@ $$
 
 ## Space Diagrams
 
-The space diagram is an illustration of the system of forces.
+The space diagram (@fig-spacedia) is an illustration of the system of forces.
 
-![Space Diagram](images/spacedia.png){#fig-spacedia width="75%"}
+![Space Diagram](images/spacedia.png){#fig-spacedia width="50%"}
 
 ## Vector Diagrams
 
-The vector diagram is a diagram drawn to scale with the vectors joined end to end. Vector diagrams are used to analyze and combine forces to find the resultant.
+The vector diagram (@fig-vectordia) is a diagram drawn to scale with the vectors joined end to end. Vector diagrams are used to analyze and combine forces to find the resultant.
 
-![Vector Diagram](images/vectordia.png){#fig-vectordia}
+![Vector Diagram](images/vectordia.png){#fig-vectordia width="50%"}
 
-### Resultant
+## Free Body Diagrams
+
+The free body diagram ((@fig-fbdia) is a diagram isolating a single object, showing all external forces and moments acting on it.
+
+![Free Body Diagram](images/fbdia.pdf){#fig-fbdia width="50%"}
+
+## Resultant
 
 The resultant is a single force that represents the combined effect of two or more forces acting on an object. It has the same effect as applying all the original forces together and is found by adding the individual forces, taking both their magnitudes and directions into account. The resultant gives the overall direction and magnitude of the combined forces as shown in @fig-vectordia.
 
-### Equilibrium
+## Equilibrium
 
 Equilibrium of an object occurs when all the forces acting on it are balanced, so the object remains at rest or moves at a constant speed in a straight line. In equilibrium, there is no net force or acceleration, meaning the object is in a stable state without any change in its motion.
 
-![Equilibrant](images/vectordia-equilibrant.png){#fig-equilibrant}
+![Equilibrant](images/vectordia-equilibrant.png){#fig-equilibrant width="50%"}
+
 
 Conditions of equilibrium:
 
@@ -191,7 +236,7 @@ A sling is a device or assembly of ropes, cables, or straps used to support and 
 ::: {#exm-sling}
 A 200 kg mass is suspended as shown in @fig-sling. Rope A is attached to a beam in two places and is passed through a ring that rest naturally at the centre of rope A. Rope B is attached to the bottom of the ring, and to the 200 kg mass.
 
-![A 200 kg suspended mass.](images/sling.png){#fig-sling}
+![A 200 kg suspended mass.](images/sling.png){#fig-sling width="50%}
 
 a.  What is the tension in rope B?
 b.  Draw a free body diagram of the forces exerted on the ring.
@@ -213,7 +258,7 @@ $$
 
 So, **the tension in Rope B is 1962 N**.
 
-b.  Free Body Diagram of the Ring
+b.  Free Body Diagram
 
 The ring is in equilibrium, meaning the net force acting on it is zero. Here’s a breakdown of the forces:
 
@@ -221,6 +266,8 @@ The ring is in equilibrium, meaning the net force acting on it is zero. Here’s
 -   **Tensions** $T_{A1}$ and $T_{A2}$: These are the tensions in each side of Rope A. Since the ring is at the center and the setup is symmetrical, $T_{A1} = T_{A2} = T_A$.
 
 Since the ring is in equilibrium, the vertical components of $T_{A1}$ and $T_{A2}$ must balance the downward force from $T_B$.
+
+![Free Body Diagram](images/fbdiaExample.pdf){#fig-fbdiaExample width="75%"}
 
 c.  Tension in Rope A
 
@@ -252,6 +299,139 @@ $$
 
 So, **the tension in Rope A is approximately 2321.24 N**.
 :::
+
+## Jib Cranes
+
+A simple jib crane has a vertical post, a jib, and a tie. The jib is hinged at its lower end to the post, and the tie connects the top of the jib to the base of the post, forming the crane head where the tie and jib meet.
+
+When a load is hung directly from the crane head, solving for forces involves a simple triangle of forces. In other cases, the crane may have a pulley at the head, with a rope running over it to a winch, creating a system with more than three forces.
+
+::: {#exm-jib_page12}
+The angle between the jib and the vertical post of a jib crane is 42°, and the angle between the tie and the jib is 36°. Determine the forces in the jib and the tie when a mass of 3.822 × 10³ kg is suspended from the crane head.
+
+![Jib Crane](images/jib_page12.pdf){#fig-jib_page12 width="75%}
+
+
+The angle between the **jib** and the **vertical post** is $42^\circ$, and the angle between the **tie** and the **jib** is $36^\circ$.  
+
+A load of $3.822\times10^3\ \mathrm{kg}$ (that is, $W = 37.4938\ \mathrm{kN}$) is suspended from the crane head at point $A$.  
+
+
+Find the **pull in the tie (AC)** and the **thrust in the jib (BC)**.
+
+Let the geometry of the crane form a triangle $ABC$, where:
+
+- $AB$ is the **load** $W = 37.4938\ \mathrm{kN}$,
+- $\angle B = 42^\circ$,
+- $\angle C = 36^\circ$,
+- hence $\angle A = 180^\circ - (42^\circ + 36^\circ) = 102^\circ.$
+
+![Jib Crane Vector Diagram](images/jib_page12_vectors.pdf){#fig-jib_page12_vectors width="75%}
+
+Using the **law of sines**:
+
+$$
+\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C},
+$$
+
+where  
+$a = BC$ (jib), $b = CA$ (tie), and $c = AB = W$.
+
+Then:
+
+$$
+a = c \frac{\sin A}{\sin C}, \qquad
+b = c \frac{\sin B}{\sin C}.
+$$
+
+Substitute the given values:
+
+$$
+\begin{aligned}
+a &= 37.4938 \cdot \frac{\sin 102^\circ}{\sin 36^\circ}
+   = 62.394\ \mathrm{kN},\\\\
+b &= 37.4938 \cdot \frac{\sin 42^\circ}{\sin 36^\circ}
+   = 42.683\ \mathrm{kN}.
+\end{aligned}
+$$
+
+**Final Answers**
+
+$$
+\boxed{\text{Pull in tie (AC)} = 42.68\ \mathrm{kN}}
+$$
+
+$$
+\boxed{\text{Thrust in jib (BC)} = 62.39\ \mathrm{kN}}
+$$
+
+
+**Notes**  
+The tie (AC) is in **tension**, while the jib (BC) is in **compression**.
+:::
+
+::: {#exm-jib}
+A vertical lifting force of 95 N is applied to a body, and simultaneously, a horizontal force of 135 N pulls on it. Determine the magnitude and direction of the resulting force.
+
+To solve for the magnitude and direction of the resultant force, we can use vector addition.
+
+Given:
+
+-   Vertical force, $F_v = 95\:\text{N}$
+
+-   Horizontal force, $F_h = 135\:\text{N}$
+
+Step 1: Calculate the Magnitude of the Resultant Force
+
+The resultant force $F_r$ is the vector sum of the vertical and horizontal forces. Using the Pythagorean theorem:
+
+$$
+F_r = \sqrt{F_v^2 + F_h^2}
+$$
+
+Substituting the values:
+
+$$
+F_r = \sqrt{95^2 + 135^2}
+$$
+
+Calculating further:
+
+$$
+F_r = \sqrt{9025 + 18225} = \sqrt{27250}
+$$
+
+Thus,
+
+$$
+F_r \approx 165.07\:\text{N}
+$$
+
+Step 2: Determine the Direction of the Resultant Force
+
+The direction $\theta$ of the resultant force with respect to the horizontal can be found using the tangent function:
+
+$$
+\theta = \arctan \left( \frac{F_v}{F_h} \right)
+$$
+
+Substituting the values:
+
+$$
+\theta = \arctan \left( \frac{95}{135} \right)
+$$
+
+Calculating $\theta$:
+
+$$
+\theta \approx 35.1341^\circ
+$$
+
+**Final Answer**
+
+The magnitude of the resultant force is approximately $165.07\:\text{N}$, and its direction is $35.1341^\circ$ above the horizontal.
+:::
+
 ::: #exr-statics1
 Exercise here.
 :::
