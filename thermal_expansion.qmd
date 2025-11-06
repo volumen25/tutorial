@@ -40,3 +40,58 @@ where:
 -   $\beta$ is the coefficient of volumetric expansion, which is approximately three times the linear expansion coefficient for isotropic solids,
 -   $V_0$ is the initial volume, and
 -   $\Delta T$ is the temperature change.
+
+## Thermal Expansion of a Steel Pipeline
+
+A steel section of pipeline is $75\ \mathrm{m}$ long when out of service at an ambient temperature of $20^\circ\mathrm{C}$. In service, it transports steam at $203^\circ\mathrm{C}$. Assuming the pipe is free to expand, find its length at the operating temperature.\
+(The coefficient of linear expansion for steel is $\alpha = 12\times10^{-6}\ /\!^\circ\mathrm{C}$.)
+
+Given:
+
+$$
+\begin{aligned}
+L_0 &= 75\ \mathrm{m}, \\
+T_1 &= 20^\circ\mathrm{C}, \\
+T_2 &= 203^\circ\mathrm{C}, \\
+\alpha &= 12\times10^{-6}\ /\!^\circ\mathrm{C}.
+\end{aligned}
+$$
+
+The temperature rise is:
+
+$$
+\Delta T = T_2 - T_1 = 203 - 20 = 183^\circ\mathrm{C}.
+$$
+
+For linear expansion:
+
+$$
+L = L_0 (1 + \alpha \Delta T).
+$$
+
+Substitute the values:
+
+$$
+\begin{aligned}
+L &= 75 \left(1 + 12\times10^{-6} \times 183\right) \\
+  &= 75 \left(1 + 0.002196\right) \\
+  &= 75.1647\ \mathrm{m}.
+\end{aligned}
+$$
+
+------------------------------------------------------------------------
+
+### Final Answer
+
+$$
+\boxed{L = 75.165\ \mathrm{m}}
+$$
+
+------------------------------------------------------------------------
+
+**Comment:**\
+The pipe expands by approximately:
+
+$$
+\Delta L = L - L_0 = 0.165\ \mathrm{m} = 165\ \mathrm{mm}.
+$$
