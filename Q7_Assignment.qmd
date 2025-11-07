@@ -1,14 +1,9 @@
-# IC Engines {#ic_engines}
+---
+title: "Engine Performance Calculation"
+format: pdf
+---
 
-Internal combustion (IC) engines\index{IC Engines} derive their name from fuel burning inside the engine cylinder. The combustion heats the air in the cylinder, increasing its pressure and moving the piston, whose reciprocating motion is converted to rotary motion by the crankshaft.
-
-IC engines are classified by their ignition method:
-
--   Compression Ignition: Air is highly compressed, raising its temperature so injected fuel ignites spontaneously.
-
--   Spark Ignition: A fuel–air mixture is compressed and then ignited by a spark plug.
-
-### Engine Performance Calculation
+## Otto Cycle
 
 An engine working on the constant volume cycle is 150 mm bore by 165 mm stroke, and its clearance volume is 0.5 litre. The fuel used has a calorific value of 45250 kJ/kg, and the consumption is 0.334 kg/kWh. The mechanical efficiency of the engine is 81%. Take γ = 1.4
 

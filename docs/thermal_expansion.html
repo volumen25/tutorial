@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-14cbc709409b9607cfe384ca3dce8273.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c213800f9ad2c394781badd4e3c4d3bb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -398,6 +398,10 @@ window.Quarto = {
   <li><a href="#linear-expansion" id="toc-linear-expansion" class="nav-link active" data-scroll-target="#linear-expansion"><span class="header-section-number">4.1</span> Linear Expansion</a></li>
   <li><a href="#superficial-expansion" id="toc-superficial-expansion" class="nav-link" data-scroll-target="#superficial-expansion"><span class="header-section-number">4.2</span> Superficial Expansion</a></li>
   <li><a href="#volumetric-expansion" id="toc-volumetric-expansion" class="nav-link" data-scroll-target="#volumetric-expansion"><span class="header-section-number">4.3</span> Volumetric Expansion</a></li>
+  <li><a href="#thermal-expansion-of-a-steel-pipeline" id="toc-thermal-expansion-of-a-steel-pipeline" class="nav-link" data-scroll-target="#thermal-expansion-of-a-steel-pipeline"><span class="header-section-number">4.4</span> Thermal Expansion of a Steel Pipeline</a>
+  <ul class="collapse">
+  <li><a href="#final-answer" id="toc-final-answer" class="nav-link" data-scroll-target="#final-answer"><span class="header-section-number">4.4.1</span> Final Answer</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -461,8 +465,51 @@ window.Quarto = {
 <li><span class="math inline">\(V_0\)</span> is the initial volume, and</li>
 <li><span class="math inline">\(\Delta T\)</span> is the temperature change.</li>
 </ul>
+</section>
+<section id="thermal-expansion-of-a-steel-pipeline" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="thermal-expansion-of-a-steel-pipeline"><span class="header-section-number">4.4</span> Thermal Expansion of a Steel Pipeline</h2>
+<p>A steel section of pipeline is <span class="math inline">\(75\ \mathrm{m}\)</span> long when out of service at an ambient temperature of <span class="math inline">\(20^\circ\mathrm{C}\)</span>. In service, it transports steam at <span class="math inline">\(203^\circ\mathrm{C}\)</span>. Assuming the pipe is free to expand, find its length at the operating temperature.<br>
+(The coefficient of linear expansion for steel is <span class="math inline">\(\alpha = 12\times10^{-6}\ /\!^\circ\mathrm{C}\)</span>.)</p>
+<p>Given:</p>
+<p><span class="math display">\[
+\begin{aligned}
+L_0 &amp;= 75\ \mathrm{m}, \\
+T_1 &amp;= 20^\circ\mathrm{C}, \\
+T_2 &amp;= 203^\circ\mathrm{C}, \\
+\alpha &amp;= 12\times10^{-6}\ /\!^\circ\mathrm{C}.
+\end{aligned}
+\]</span></p>
+<p>The temperature rise is:</p>
+<p><span class="math display">\[
+\Delta T = T_2 - T_1 = 203 - 20 = 183^\circ\mathrm{C}.
+\]</span></p>
+<p>For linear expansion:</p>
+<p><span class="math display">\[
+L = L_0 (1 + \alpha \Delta T).
+\]</span></p>
+<p>Substitute the values:</p>
+<p><span class="math display">\[
+\begin{aligned}
+L &amp;= 75 \left(1 + 12\times10^{-6} \times 183\right) \\
+  &amp;= 75 \left(1 + 0.002196\right) \\
+  &amp;= 75.1647\ \mathrm{m}.
+\end{aligned}
+\]</span></p>
+<hr>
+<section id="final-answer" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="final-answer"><span class="header-section-number">4.4.1</span> Final Answer</h3>
+<p><span class="math display">\[
+\boxed{L = 75.165\ \mathrm{m}}
+\]</span></p>
+<hr>
+<p><strong>Comment:</strong><br>
+The pipe expands by approximately:</p>
+<p><span class="math display">\[
+\Delta L = L - L_0 = 0.165\ \mathrm{m} = 165\ \mathrm{mm}.
+\]</span></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
