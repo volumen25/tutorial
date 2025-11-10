@@ -897,8 +897,8 @@ A_\text{total} = 16 \cdot 7.0686 \times 10^{-4} \approx 0.01131~\text{m}^2
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> math.pi <span class="op">*</span> d<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">4</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>A_total <span class="op">=</span> N <span class="op">*</span> A</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>v_dot_m3_s <span class="op">=</span> A_total <span class="op">*</span> v</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>v_dot_L_s <span class="op">=</span> Q_m3_s <span class="op">*</span> <span class="dv">1000</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>m_dot_kg_s <span class="op">=</span> rho <span class="op">*</span> Q_m3_s</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>v_dot_L_s <span class="op">=</span> v_dot_m3_s <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>m_dot_kg_s <span class="op">=</span> rho <span class="op">*</span> v_dot_m3_s</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>m_dot_kg_min <span class="op">=</span> m_dot_kg_s <span class="op">*</span> <span class="dv">60</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Volume flow rate: </span><span class="sc">{</span>v_dot_L_s<span class="sc">:.2f}</span><span class="ss"> L/s"</span>)</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Mass flow rate: </span><span class="sc">{</span>m_dot_kg_min<span class="sc">:.2f}</span><span class="ss"> kg/min"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
