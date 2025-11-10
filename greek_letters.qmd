@@ -40,6 +40,7 @@ The following tables present the names of Greek letters and selected symbols com
 | $\sigma$ | Sigma | Stress | Thermodynamics, Applied Mechanics |
 | $\epsilon$ | Epsilon | Modulus of elasticity | Thermodynamics, Applied Mechanics |
 | $\eta$ | Eta | Efficiency | Thermodynamics |
+| $\mu$ | Mu | Friction | Thermodynamics, Applied Mechanics |
 | $\omega$ | Omega | Angular velocity | Thermodynamics, Applied Mechanics |
 | $\rho$ | Rho | Density | Thermodynamics, Naval Architecture |
 | $\tau$ | Tau | Torque | Thermodynamics, Applied Mechanics |

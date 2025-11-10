@@ -4,9 +4,10 @@ This tutorial introduces Python programming, covering basic concepts with exampl
 
 ## Requirements
 
-To follow this tutorial, you must have [Python](https://www.python.org/downloads/) (version 3.10 or later) installed on your computer. Python is available for Windows, macOS, and Linux. Additionally, ensure you have a text editor or an Integrated Development Environment (IDE) to write Python code. We recommend [Positron](https://positron.posit.co/), a user-friendly IDE with a built-in terminal for running Python scripts, though other editors like VS Code or PyCharm are also suitable.
+To follow this tutorial, the easiest way to get started is by using a web-based Python environment. This lets you write and run Python code right in your browser; no downloads or setup needed. I recommend [python-fiddle.com](https://python-fiddle.com/), an easy-to-use online editor that lets you experiment with Python instantly and solve your problem sets effortlessly.
 
-Alternatively, you can use a web-based environment like [python-fiddle.com](https://python-fiddle.com/)
+If you prefer working on your own computer, make sure you have [Python](https://www.python.org/downloads/)(version 3.10 or later) installed. Python works on Windows, macOS, and Linux. You’ll also need a text editor or an Integrated Development Environment (IDE) to write your code. I recommend [Positron](https://positron.posit.co/), a beginner-friendly IDE with a built-in terminal, though other editors like VS Code or PyCharm are also great options.
+
 
 ## Basic Syntax
 

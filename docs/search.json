@@ -14,7 +14,7 @@
     "href": "tutorial_basic.html",
     "title": "1  Python Tutorial",
     "section": "",
-    "text": "1.1 Requirements\nThis tutorial introduces Python programming, covering basic concepts with examples to illustrate key points. We will start by using Python as a calculator, then explore variables, functions, and control flow.\nTo follow this tutorial, you must have Python (version 3.10 or later) installed on your computer. Python is available for Windows, macOS, and Linux. Additionally, ensure you have a text editor or an Integrated Development Environment (IDE) to write Python code. We recommend Positron, a user-friendly IDE with a built-in terminal for running Python scripts, though other editors like VS Code or PyCharm are also suitable.\nAlternatively, you can use a web-based environment like python-fiddle.com",
+    "text": "1.1 Requirements\nThis tutorial introduces Python programming, covering basic concepts with examples to illustrate key points. We will start by using Python as a calculator, then explore variables, functions, and control flow.\nTo follow this tutorial, the easiest way to get started is by using a web-based Python environment. This lets you write and run Python code right in your browser; no downloads or setup needed. I recommend python-fiddle.com, an easy-to-use online editor that lets you experiment with Python instantly and solve your problem sets effortlessly.\nIf you prefer working on your own computer, make sure you have Python(version 3.10 or later) installed. Python works on Windows, macOS, and Linux. You’ll also need a text editor or an Integrated Development Environment (IDE) to write your code. I recommend Positron, a beginner-friendly IDE with a built-in terminal, though other editors like VS Code or PyCharm are also great options.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
     ]
@@ -270,6 +270,16 @@
     ]
   },
   {
+    "objectID": "thermal_expansion.html#thermal-expansion-of-a-steel-pipeline",
+    "href": "thermal_expansion.html#thermal-expansion-of-a-steel-pipeline",
+    "title": "4  Thermal Expansion",
+    "section": "4.4 Thermal Expansion of a Steel Pipeline",
+    "text": "4.4 Thermal Expansion of a Steel Pipeline\nA steel section of pipeline is \\(75\\ \\mathrm{m}\\) long when out of service at an ambient temperature of \\(20^\\circ\\mathrm{C}\\). In service, it transports steam at \\(203^\\circ\\mathrm{C}\\). Assuming the pipe is free to expand, find its length at the operating temperature.\n(The coefficient of linear expansion for steel is \\(\\alpha = 12\\times10^{-6}\\ /\\!^\\circ\\mathrm{C}\\).)\nGiven:\n\\[\n\\begin{aligned}\nL_0 &= 75\\ \\mathrm{m}, \\\\\nT_1 &= 20^\\circ\\mathrm{C}, \\\\\nT_2 &= 203^\\circ\\mathrm{C}, \\\\\n\\alpha &= 12\\times10^{-6}\\ /\\!^\\circ\\mathrm{C}.\n\\end{aligned}\n\\]\nThe temperature rise is:\n\\[\n\\Delta T = T_2 - T_1 = 203 - 20 = 183^\\circ\\mathrm{C}.\n\\]\nFor linear expansion:\n\\[\nL = L_0 (1 + \\alpha \\Delta T).\n\\]\nSubstitute the values:\n\\[\n\\begin{aligned}\nL &= 75 \\left(1 + 12\\times10^{-6} \\times 183\\right) \\\\\n  &= 75 \\left(1 + 0.002196\\right) \\\\\n  &= 75.1647\\ \\mathrm{m}.\n\\end{aligned}\n\\]\n\n\n4.4.1 Final Answer\n\\[\n\\boxed{L = 75.165\\ \\mathrm{m}}\n\\]\n\nComment:\nThe pipe expands by approximately:\n\\[\n\\Delta L = L - L_0 = 0.165\\ \\mathrm{m} = 165\\ \\mathrm{mm}.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Thermal Expansion</span>"
+    ]
+  },
+  {
     "objectID": "heat_transfer.html",
     "href": "heat_transfer.html",
     "title": "5  Heat Transfer",
@@ -425,20 +435,10 @@
     "href": "greek_letters.html",
     "title": "Appendix B — Greek Letters",
     "section": "",
-    "text": "The following tables present the names of Greek letters and selected symbols commonly used in engineering courses, ensuring precise reference and avoiding reliance on informal descriptors such as “squiggle.”\n\nGreek letters.\n\n\nLower Case\nUpper Case\nName\n\n\n\n\n\\(\\alpha\\)\nA\nalpha\n\n\n\\(\\beta\\)\nB\nbeta\n\n\n\\(\\gamma\\)\n\\(\\Gamma\\)\ngamma\n\n\n\\(\\delta\\)\n\\(\\Delta\\)\ndelta\n\n\n\\(\\epsilon\\)\nE\nepsilon\n\n\n\\(\\zeta\\)\nZ\nzeta\n\n\n\\(\\eta\\)\nE\neta\n\n\n\\(\\theta\\)\n\\(\\Theta\\)\ntheta\n\n\n\\(\\iota\\)\nI\niota\n\n\n\\(\\kappa\\)\nK\nkappa\n\n\n\\(\\lambda\\)\n\\(\\Lambda\\)\nlambda\n\n\n\\(\\mu\\)\nM\nmu\n\n\n\\(\\nu\\)\nN\nnu\n\n\n\\(\\xi\\)\n\\(\\Xi\\)\nxi\n\n\n\\(\\omicron\\)\nO\nomicron\n\n\n\\(\\pi\\)\n\\(\\Pi\\)\npi\n\n\n\\(\\rho\\)\nP\nrho\n\n\n\\(\\sigma\\)\n\\(\\Sigma\\)\nsigma\n\n\n\\(\\tau\\)\nT\ntau\n\n\n\\(\\upsilon\\)\n\\(\\Upsilon\\)\nupsilon\n\n\n\\(\\phi\\)\n\\(\\Phi\\)\nphi\n\n\n\\(\\chi\\)\nX\nchi\n\n\n\\(\\psi\\)\n\\(\\Psi\\)\npsi\n\n\n\\(\\omega\\)\n\\(\\Omega\\)\nomega\n\n\n\n\nCommonly used symbols in engineering courses.\n\n\n\n\n\n\n\n\nSymbol\nName\nUse\nCourse\n\n\n\n\n\\(\\Delta\\)\nDelta\nChange\nThermodynamics\n\n\n\\(\\Delta\\)\nDelta\nDisplacement\nNaval Architecture\n\n\n\\(\\nabla\\)\nNabla\nVolume\nNaval Architecture\n\n\n\\(\\Sigma\\)\nSigma\nSum\nThermodynamics, Naval Architecture, Applied Mechanics\n\n\n\\(\\sigma\\)\nSigma\nStress\nThermodynamics, Applied Mechanics\n\n\n\\(\\epsilon\\)\nEpsilon\nModulus of elasticity\nThermodynamics, Applied Mechanics\n\n\n\\(\\eta\\)\nEta\nEfficiency\nThermodynamics\n\n\n\\(\\omega\\)\nOmega\nAngular velocity\nThermodynamics, Applied Mechanics\n\n\n\\(\\rho\\)\nRho\nDensity\nThermodynamics, Naval Architecture\n\n\n\\(\\tau\\)\nTau\nTorque\nThermodynamics, Applied Mechanics",
+    "text": "The following tables present the names of Greek letters and selected symbols commonly used in engineering courses, ensuring precise reference and avoiding reliance on informal descriptors such as “squiggle.”\n\nGreek letters.\n\n\nLower Case\nUpper Case\nName\n\n\n\n\n\\(\\alpha\\)\nA\nalpha\n\n\n\\(\\beta\\)\nB\nbeta\n\n\n\\(\\gamma\\)\n\\(\\Gamma\\)\ngamma\n\n\n\\(\\delta\\)\n\\(\\Delta\\)\ndelta\n\n\n\\(\\epsilon\\)\nE\nepsilon\n\n\n\\(\\zeta\\)\nZ\nzeta\n\n\n\\(\\eta\\)\nE\neta\n\n\n\\(\\theta\\)\n\\(\\Theta\\)\ntheta\n\n\n\\(\\iota\\)\nI\niota\n\n\n\\(\\kappa\\)\nK\nkappa\n\n\n\\(\\lambda\\)\n\\(\\Lambda\\)\nlambda\n\n\n\\(\\mu\\)\nM\nmu\n\n\n\\(\\nu\\)\nN\nnu\n\n\n\\(\\xi\\)\n\\(\\Xi\\)\nxi\n\n\n\\(\\omicron\\)\nO\nomicron\n\n\n\\(\\pi\\)\n\\(\\Pi\\)\npi\n\n\n\\(\\rho\\)\nP\nrho\n\n\n\\(\\sigma\\)\n\\(\\Sigma\\)\nsigma\n\n\n\\(\\tau\\)\nT\ntau\n\n\n\\(\\upsilon\\)\n\\(\\Upsilon\\)\nupsilon\n\n\n\\(\\phi\\)\n\\(\\Phi\\)\nphi\n\n\n\\(\\chi\\)\nX\nchi\n\n\n\\(\\psi\\)\n\\(\\Psi\\)\npsi\n\n\n\\(\\omega\\)\n\\(\\Omega\\)\nomega\n\n\n\n\nCommonly used symbols in engineering courses.\n\n\n\n\n\n\n\n\nSymbol\nName\nUse\nCourse\n\n\n\n\n\\(\\Delta\\)\nDelta\nChange\nThermodynamics\n\n\n\\(\\Delta\\)\nDelta\nDisplacement\nNaval Architecture\n\n\n\\(\\nabla\\)\nNabla\nVolume\nNaval Architecture\n\n\n\\(\\Sigma\\)\nSigma\nSum\nThermodynamics, Naval Architecture, Applied Mechanics\n\n\n\\(\\sigma\\)\nSigma\nStress\nThermodynamics, Applied Mechanics\n\n\n\\(\\epsilon\\)\nEpsilon\nModulus of elasticity\nThermodynamics, Applied Mechanics\n\n\n\\(\\eta\\)\nEta\nEfficiency\nThermodynamics\n\n\n\\(\\mu\\)\nMu\nFriction\nThermodynamics, Applied Mechanics\n\n\n\\(\\omega\\)\nOmega\nAngular velocity\nThermodynamics, Applied Mechanics\n\n\n\\(\\rho\\)\nRho\nDensity\nThermodynamics, Naval Architecture\n\n\n\\(\\tau\\)\nTau\nTorque\nThermodynamics, Applied Mechanics",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Greek Letters</span>"
-    ]
-  },
-  {
-    "objectID": "thermal_expansion.html#thermal-expansion-of-a-steel-pipeline",
-    "href": "thermal_expansion.html#thermal-expansion-of-a-steel-pipeline",
-    "title": "4  Thermal Expansion",
-    "section": "4.4 Thermal Expansion of a Steel Pipeline",
-    "text": "4.4 Thermal Expansion of a Steel Pipeline\nA steel section of pipeline is \\(75\\ \\mathrm{m}\\) long when out of service at an ambient temperature of \\(20^\\circ\\mathrm{C}\\). In service, it transports steam at \\(203^\\circ\\mathrm{C}\\). Assuming the pipe is free to expand, find its length at the operating temperature.\n(The coefficient of linear expansion for steel is \\(\\alpha = 12\\times10^{-6}\\ /\\!^\\circ\\mathrm{C}\\).)\nGiven:\n\\[\n\\begin{aligned}\nL_0 &= 75\\ \\mathrm{m}, \\\\\nT_1 &= 20^\\circ\\mathrm{C}, \\\\\nT_2 &= 203^\\circ\\mathrm{C}, \\\\\n\\alpha &= 12\\times10^{-6}\\ /\\!^\\circ\\mathrm{C}.\n\\end{aligned}\n\\]\nThe temperature rise is:\n\\[\n\\Delta T = T_2 - T_1 = 203 - 20 = 183^\\circ\\mathrm{C}.\n\\]\nFor linear expansion:\n\\[\nL = L_0 (1 + \\alpha \\Delta T).\n\\]\nSubstitute the values:\n\\[\n\\begin{aligned}\nL &= 75 \\left(1 + 12\\times10^{-6} \\times 183\\right) \\\\\n  &= 75 \\left(1 + 0.002196\\right) \\\\\n  &= 75.1647\\ \\mathrm{m}.\n\\end{aligned}\n\\]\n\n\n4.4.1 Final Answer\n\\[\n\\boxed{L = 75.165\\ \\mathrm{m}}\n\\]\n\nComment:\nThe pipe expands by approximately:\n\\[\n\\Delta L = L - L_0 = 0.165\\ \\mathrm{m} = 165\\ \\mathrm{mm}.\n\\]",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Thermal Expansion</span>"
     ]
   }
 ]
