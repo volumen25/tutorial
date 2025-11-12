@@ -38,6 +38,7 @@ The following tables present the names of Greek letters and selected symbols com
 |:---------------:|:----------------|:----------------|:-------------------|
 | $\Delta$ | Delta | Change | Thermodynamics |
 | $\Delta$ | Delta | Displacement | Naval Architecture |
+| $\epsilon$ | Epsilon | Emissivity | Thermodynamics |
 | $\nabla$ | Nabla | Volume | Naval Architecture |
 | $\Sigma$ | Sigma | Sum | Thermodynamics, Naval Architecture, Applied Mechanics |
 | $\sigma$ | Sigma | Stress | Thermodynamics, Applied Mechanics |
