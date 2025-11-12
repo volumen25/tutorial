@@ -2,26 +2,320 @@
 
 ## Conduction
 
-This method transfers heat through direct contact, as faster-vibrating molecules pass energy to slower ones. In solids, heat moves from molecule to molecule, and between objects in contact, it flows from the hotter to the cooler one until temperatures equalize.
+Conduction transfers heat through **direct contact**, as faster-vibrating molecules pass energy to slower ones. In solids, heat moves from molecule to molecule, and between objects in contact, it flows from the hotter region to the cooler one until thermal equilibrium is reached.
 
-An example of conduction\index{Conduction} is an iron bar having one end in contact with a flame. The other end will soon become hot due to the conduction of heat from molecule to molecule through the iron.
+An example of conduction\index{Conduction} is an iron bar with one end placed in a flame. The other end soon becomes hot as heat is conducted along the bar from molecule to molecule through the metal.
+
+The rate of heat transfer by conduction through a solid is given by:
 
 $$
-Q=\frac{kAt\Delta T}{s}
+Q = \frac{k \, A \, t \, \Delta T}{s}
 $$ {#eq-conduction}
 
-## Convection
+where:
 
-Convection transfers heat through the movement of fluids (liquids or gases). When a fluid is heated, it expands, becomes less dense, and rises, while cooler, denser fluid moves in to replace it—creating a convection current that spreads heat.
+-   $Q$ = heat transferred (J)
 
-Natural convection occurs without mechanical aid, while forced convection uses devices like pumps or fans.
+-   $k$ = thermal conductivity of the material ($\text{W/m·K}$)
 
-If fluid movement is created by a pump or a fan, heat is being transferred by forced convection. Examples are a pump circulating hot water through a building heating system, a fan forcing air through an automobile radiator, or a forced draft fan pushing hot gases through a boiler.
+-   $A$ = cross-sectional area through which heat flows ($\text{m}^2$)
+
+-   $t$ = time of heat transfer (s)
+
+-   $\Delta T$ = temperature difference across the material (K or °C)
+
+-   $s$ = thickness or length of the material through which heat is conducted (m)
+
+This equation shows that heat conduction increases with greater thermal conductivity, larger surface area, longer time, and larger temperature difference but decreases as the material’s thickness increases.
+
+## Temperature Difference Across a Heat Exchanger Endplate
+
+The shell diameter of a large heat exchanger is 1.8 m. The flat endplate (cover) at one end is made of carbon steel, 45 mm thick, and is uninsulated. If the maximum allowable heat loss through the cover, to avoid insulation is 150 MJ/h, determine the temperature difference permitted across the endplate. (For steel, k = 55 W/m°C)
+
+**Given**
+
+-   Shell diameter: (D = 1.8 $\mathrm{m}$)\
+-   Endplate thickness: (s = 45 $\mathrm{mm}$ = 0.045 $\mathrm{m}$)\
+-   Material: carbon steel, thermal conductivity: (k = 55 $\mathrm{W/m\cdot K}$)\
+-   Maximum allowable heat loss: ($Q_\mathrm{max} = 150$ $\mathrm{MJ/h}$)\
+-   Endplate is **uninsulated**
+
+Calculate the **temperature difference** $\Delta T$ across the endplate to limit heat loss.
+
+1.  **Area of the circular endplate**
+
+$$
+A = \pi \left( \frac{D}{2} \right)^2 = \pi \left( \frac{1.8}{2} \right)^2
+$$
+
+$$
+A = \pi \times 0.9^2 = 2.5447\ \mathrm{m^2}
+$$
+
+2.  **Convert heat loss to Watts**
+
+$$
+Q_\mathrm{max} = 150\ \mathrm{MJ/h} = 150 \times 10^6\ \mathrm{J/h}
+$$
+
+$$
+1\ \mathrm{h} = 3600\ \mathrm{s} \quad \Rightarrow \quad Q = \frac{150 \times 10^6}{3600} = 41666.7\ \mathrm{W}
+$$
+
+3.  **Use law of conduction for a flat plate**
+
+$$
+Q = \frac{k A \Delta T}{s} \quad \Rightarrow \quad \Delta T = \frac{Q s}{k A}
+$$
+
+Substitute values:
+
+$$
+\Delta T = \frac{41666.7 \times 0.045}{55 \times 2.5447}
+$$
+
+$$
+\Delta T = \frac{1875.0}{139.96} = 13.39\ \mathrm{K}
+$$
+
+**Result**
+
+$$
+\boxed{\Delta T = 13.4^\circ \mathrm{C}}
+$$
+
+**Notes:**
+
+-   The maximum allowable **temperature difference across the endplate** is 13.4°C to keep heat loss below 150 MJ/h.
+
+-   If the temperature difference exceeds this, insulation would be required.
+
+### Code
+
+``` python
+# Given data
+D = 1.8              # diameter of endplate, m
+L = 0.045            # thickness, m
+k = 55               # thermal conductivity, W/m.K
+Q_MJ_per_h = 150     # maximum heat loss, MJ/h
+
+# Convert heat loss to W
+Q_W = Q_MJ_per_h * 1e6 / 3600  # W
+
+# Area of the circular plate
+import math
+A = math.pi * (D/2)**2
+
+# Temperature difference
+delta_T = Q_W * L / (k * A)
+
+# Display results
+print(f"Endplate area: {A:.4f} m²")
+print(f"Heat loss: {Q_W:.2f} W")
+print(f"Temperature difference across the endplate: {delta_T:.2f} °C")
+```
+
+## Convection Heat Transfer
+
+Convection transfers heat through the movement of fluids (liquids or gases). When a fluid is heated, it expands, becomes less dense, and rises, while cooler, denser fluid moves in to replace it, creating a convection current that distributes heat.
+
+Natural convection occurs without mechanical aid, whereas forced convection involves devices such as pumps or fans. When fluid movement is driven by a pump or fan, heat is transferred by **forced convection**. Examples include:
+
+-   A pump circulating hot water through a building's heating system,
+-   A fan forcing air through an automobile radiator, or
+-   A forced draft fan pushing hot gases through a boiler.
+
+The **total heat transferred** between a solid surface and a moving fluid over a specified time is given by:
+
+$$
+Q = h_A \, A \, t \, (T_s - T_f)
+$$ {#eq-convection}
+
+where:
+
+-   $Q$ = total heat transferred (J)
+
+-   $h_A$ = surface (convective) heat transfer coefficient ($\text{W/m}^2\text{·K}$)
+
+-   $A$ = surface area of heat transfer ($\text{m}^2$)
+
+-   $t$ = time during which heat transfer occurs (s), with $t = 1 \, \text{s}$ for unit time
+
+-   $T_s$ = surface temperature of the solid (K or °C)
+
+-   $T_f$ = temperature of the surrounding fluid (K or °C)
+
+This equation describes how heat energy is transferred between a surface and a fluid over a unit time of 1 second, depending on the **temperature difference**, the **surface area**, the **time**, and the fluid's heat-carrying effectiveness, represented by the **convective heat transfer coefficient** ($h_A$)
+
+## Hot Metal Convection Heat Transfer
+
+A hot metal plate measuring **1.2 m × 0.8 m** is exposed to air at **25°C**. The surface temperature of the plate is maintained at **85°C**. If the **convective heat transfer coefficient** (surface heat transfer coefficient) between the plate and air is $h_A = 18 \, \text{W/m}^2\text{·°C}$, calculate the **rate of heat loss by convection** from the entire plate surface.
+
+**Given:**
+
+-   Plate dimensions: ($1.2\  \text{m} \times 0.8\  \text{m}$)
+
+-   Plate surface area: $A = 1.2 \times 0.8 = 0.96 \, \text{m}^2$
+
+-   Surface temperature: $T_s = 85^\circ \text{C}$
+
+-   Air temperature: $T_f = 25^\circ \text{C}$
+
+-   Convection coefficient: $h_A = 18 \, \text{W/m}^2\text{·°C}$
+
+**Solution**
+
+The rate of convective heat loss is given by:
+
+$$
+Q = h_A \, A \, (T_s - T_f)
+$$
+
+Substituting the values:
+
+$$
+Q = 18 \times 0.96 \times (85 - 25)
+$$
+
+$$
+Q = 18 \times 0.96 \times 60
+$$
+
+$$
+Q = 1036.8 \, \text{W}
+$$
+
+**Answer**
+
+$$
+\boxed{Q = 1036.8 \, \text{W}}
+$$
+
+### Code
+
+``` python
+# Given data
+L = 1.2        # length of the plate (m)
+W = 0.8        # width of the plate (m)
+T_surface = 85 # surface temperature (°C)
+T_air = 25     # air temperature (°C)
+hA = 18        # convective heat transfer coefficient (W/m²·°C)
+
+# Calculate area of the plate
+A = L * W
+
+# Calculate heat loss rate
+Q = hA * A * (T_surface - T_air)
+
+# Display results
+print(f"Plate area: {A:.2f} m²")
+print(f"Temperature difference: {T_surface - T_air:.1f} °C")
+print(f"Convective heat loss: {Q:.2f} W")
+```
 
 ## Radiation
 
 Radiation transfers heat through electromagnetic waves that travel in straight lines and can pass through a vacuum. When these waves strike a surface, they may be absorbed (increasing temperature), reflected, or transmitted. Dark, rough surfaces absorb more radiation, while shiny, smooth ones reflect it.
 
+The heat transfer by radiation is given by:
+
+$$
+Q = \sigma \, \varepsilon \, A \, t \, (T_1^4 - T_2^4)
+$$ {#eq-radiation}
+
+where:
+
+-   $Q$ is the **heat energy transferred by radiation** (in kilojoules, kJ).
+
+-   $\sigma$ is the **Stefan–Boltzmann constant**, equal to $5.6703 \times 10^{-11}\ \text{kW·m}^{-2}\text{·K}^{-4}$.
+
+-   $\varepsilon$ is the **emissivity** of the surface (dimensionless, between 0 and 1), indicating how efficiently the surface emits or absorbs radiation compared to a perfect blackbody.
+
+-   $A$ is the **surface area** of the radiating body (in square meters, m²).
+
+-   $t$ is the **time** during which heat transfer occurs (in seconds, s).
+
+-   $T_1$ is the **absolute temperature of the radiating surface** (in kelvin, K).
+
+-   $T_2$ is the **absolute temperature of the surroundings** (in kelvin, K).
+
+This equation expresses the **net radiant heat transfer** between two bodies at different temperatures, taking into account the emissivity of the surface, its area, and the duration of heat exchange.
+
 Examples include heat from the sun reaching Earth and radiant heat in a boiler furnace.
 
 In a steam boiler, radiation occurs in the furnace. Any heating surfaces that are directly exposed to the furnace will receive heat directly by radiation from the flame. These include the waterwalls and some generating tubes of a watertube boiler, radiant superheater tubes (located at the outlet of the furnace), and the furnace walls of a firetube boiler.
+
+## Radiant Heat from a Flat Circular Plate
+
+A flat circular plate is **400 mm** in diameter. Calculate the theoretical quantity of heat radiated per hour when its temperature is **227 °C** and the temperature of its surrounds is **27 °C**.
+
+**Given**:
+
+-   Stefan–Boltzmann constant: $\sigma = 5.6703\times10^{-11}\ \mathrm{kW\,m^{-2}\,K^{-4}}$
+
+-   Emissivity: $\varepsilon = 1$ (ideal black body)
+
+1.  **Convert temperatures to Kelvin**
+
+$$
+T_1 = 227 + 273 = 500\ \mathrm{K}, \quad
+T_2 = 27 + 273 = 300\ \mathrm{K}
+$$
+
+2.  **Calculate the area of the circular plate**
+
+$$
+A = \pi \left( \frac{D}{2} \right)^2 = \pi \left( \frac{0.4}{2} \right)^2 \approx 0.125664\ \mathrm{m^2}
+$$
+
+3.  **Apply the formula**
+
+$$
+Q = \sigma \times \varepsilon \times A \times t \times \left( T_1^4 - T_2^4 \right)
+$$
+
+Substituting the values:
+
+$$
+Q = 5.6703 \times 10^{-11} \times 1 \times 0.125664 \times 3600 \times \left(500^4 - 300^4\right)
+$$ $$
+Q = 1395.46\ \mathrm{kWh}
+$$
+
+**Result**
+
+$$
+\text{Plate area: } 0.125664\ \mathrm{m^2}
+$$ $$
+\text{Emissivity: } \varepsilon = 1
+$$ $$
+\boxed{\text{Heat radiated (per hour): } 1395.46\ \mathrm{kWh}}
+$$
+
+**Note:** This represents the **theoretical maximum radiation** for a perfect black body. Real materials would radiate less depending on their emissivity $\varepsilon < 1$.
+
+### Code
+
+``` python
+import math
+
+# Given data
+sigma = 5.6703e-11   # kW/m^2/K^4
+epsilon = 1.0       # emissivity (black body)
+T1 = 227 + 273  # K (plate temperature)
+T2 = 27 + 273   # K (surroundings)
+d = 400 / 1000     # m (diameter)
+A = math.pi * (d / 2)**2  # area in m²
+
+# Heat radiated per second (kW)
+Q_dot = sigma * epsilon * A * (T1**4 - T2**4)
+
+# Heat radiated per hour (kWh)
+Q_hour = Q_dot * 3600
+
+# Display results
+print(f"Plate area: {A:.6f} m²")
+print(f"Emissivity (theoretical): {epsilon}")
+print(f"Heat radiated per second: {Q_dot:.4f} kW")
+print(f"Heat radiated per hour: {Q_hour:.2f} kWh")
+```

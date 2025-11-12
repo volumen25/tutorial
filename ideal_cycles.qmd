@@ -230,7 +230,7 @@ The cut-off (volume) ratio is $\rho = \dfrac{V_3}{V_2} = \dfrac{T_3}{T_2}$ becau
 ### Code
 
 ``` python
-# Diesel-cycle calculation (per kg) - runnable in Quarto
+# Diesel-cycle calculation (per kg)
 
 import numpy as np
 import matplotlib.pyplot as plt
