@@ -11,11 +11,10 @@ If you prefer working on your own computer, make sure you have [Python](https://
 
 ## Basic Syntax
 
-Python uses indentation\index{indentation} (typically four spaces) to define code blocks. A colon\index{colon} (`:`) introduces a block, and statements within the block must be indented consistently. Python is case-sensitive, so `Variable` and `variable` are distinct identifiers. Statements typically end with a newline, but you can use a backslash (`\`) to continue a statement across multiple lines.
+Python uses indentation\index{indentation} (typically four spaces) to define code blocks. A colon\index{colon} (`:`) introduces a block, and statements within the block must be indented consistently. Python is case-sensitive, so `Variable` and `variable` are distinct identifiers. *Statements typically end with a newline, but you can use a backslash (`\`) to continue a statement across multiple lines.*
 
 ``` python
-total = 1 + 2 + 3 + \
-        4 + 5
+total = 1 + 2 + 3 + 4 + 5
 print(total)  # Output: 15
 ```
 

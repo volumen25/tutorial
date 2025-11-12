@@ -30,9 +30,9 @@ book:
     - heat_work.qmd
     - thermal_expansion.qmd
     - heat_transfer.qmd
-    - perfect_gases.qmd
-    - ic_engines.qmd
-    - ideal_cycles.qmd
+    # - perfect_gases.qmd
+    # - ic_engines.qmd
+    # - ideal_cycles.qmd
   appendices:
     - SI_common_mistakes.qmd
     - greek_letters.qmd
