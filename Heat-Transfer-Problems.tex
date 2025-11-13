@@ -1,0 +1,402 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Modes of Heat Transfer},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Modes of Heat Transfer}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+
+\subsection{Temperature Difference Across a Heat Exchanger
+Endplate}\label{temperature-difference-across-a-heat-exchanger-endplate}
+
+The shell diameter of a large heat exchanger is 1.8 m. The flat endplate
+(cover) at one end is made of carbon steel, 45 mm thick, and is
+uninsulated. If the maximum allowable heat loss through the cover, to
+avoid insulation is 150 MJ/h, determine the temperature difference
+permitted across the endplate. (For steel, k = 55 W/m°C)
+
+\textbf{Given}
+
+\begin{itemize}
+\tightlist
+\item
+  Shell diameter: (D = 1.8~\(\mathrm{m}\))\\
+\item
+  Endplate thickness: (s = 45~\(\mathrm{mm}\) = 0.045~\(\mathrm{m}\))\\
+\item
+  Material: carbon steel, thermal conductivity: (k =
+  55~\(\mathrm{W/m\cdot K}\))\\
+\item
+  Maximum allowable heat loss:
+  (\(Q_\mathrm{max} = 150\)~\(\mathrm{MJ/h}\))\\
+\item
+  Endplate is \textbf{uninsulated}
+\end{itemize}
+
+Calculate the \textbf{temperature difference} \(\Delta T\) across the
+endplate to limit heat loss.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Area of the circular endplate}
+\end{enumerate}
+
+\[
+A = \pi \left( \frac{D}{2} \right)^2 = \pi \left( \frac{1.8}{2} \right)^2
+\]
+
+\[
+A = \pi \times 0.9^2 = 2.5447\ \mathrm{m^2}
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Convert heat loss to Watts}
+\end{enumerate}
+
+\[
+Q_\mathrm{max} = 150\ \mathrm{MJ/h} = 150 \times 10^6\ \mathrm{J/h}
+\]
+
+\[
+1\ \mathrm{h} = 3600\ \mathrm{s} \quad \Rightarrow \quad Q = \frac{150 \times 10^6}{3600} = 41666.7\ \mathrm{W}
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Use law of conduction for a flat plate}
+\end{enumerate}
+
+\[
+Q = \frac{k A \Delta T}{s} \quad \Rightarrow \quad \Delta T = \frac{Q s}{k A}
+\]
+
+Substitute values:
+
+\[
+\Delta T = \frac{41666.7 \times 0.045}{55 \times 2.5447}
+\]
+
+\[
+\Delta T = \frac{1875.0}{139.96} = 13.39\ \mathrm{K}
+\]
+
+\textbf{Result}
+
+\[
+\boxed{\Delta T = 13.4^\circ \mathrm{C}}
+\]
+
+\textbf{Notes:}
+
+\begin{itemize}
+\item
+  The maximum allowable \textbf{temperature difference across the
+  endplate} is 13.4°C to keep heat loss below 150 MJ/h.
+\item
+  If the temperature difference exceeds this, insulation would be
+  required.
+\end{itemize}
+
+\subsection{Hot Metal Convection Heat
+Transfer}\label{hot-metal-convection-heat-transfer}
+
+A hot metal plate measuring \textbf{1.2 m × 0.8 m} is exposed to air at
+\textbf{25°C}. The surface temperature of the plate is maintained at
+\textbf{85°C}. If the \textbf{convective heat transfer coefficient}
+(surface heat transfer coefficient) between the plate and air is
+\(h_A = 18 \, \text{W/m}^2\text{·°C}\), calculate the \textbf{rate of
+heat loss by convection} from the entire plate surface.
+
+\textbf{Given:}
+
+\begin{itemize}
+\item
+  Plate dimensions: (\(1.2\  \text{m} \times 0.8\  \text{m}\))
+\item
+  Plate surface area: \(A = 1.2 \times 0.8 = 0.96 \, \text{m}^2\)
+\item
+  Surface temperature: \(T_s = 85^\circ \text{C}\)
+\item
+  Air temperature: \(T_f = 25^\circ \text{C}\)
+\item
+  Convection coefficient: \(h_A = 18 \, \text{W/m}^2\text{·°C}\)
+\end{itemize}
+
+\textbf{Solution}
+
+The rate of convective heat loss is given by:
+
+\[
+Q = h_A \, A \, (T_s - T_f)
+\]
+
+Substituting the values:
+
+\[
+Q = 18 \times 0.96 \times (85 - 25)
+\]
+
+\[
+Q = 18 \times 0.96 \times 60
+\]
+
+\[
+Q = 1036.8 \, \text{W}
+\]
+
+\textbf{Answer}
+
+\[
+\boxed{Q = 1036.8 \, \text{W}}
+\]
+
+\subsection{Radiant Heat from a Flat Circular
+Plate}\label{radiant-heat-from-a-flat-circular-plate}
+
+A flat circular plate is \textbf{400 mm} in diameter. Calculate the
+theoretical quantity of heat radiated per hour when its temperature is
+\textbf{227 °C} and the temperature of its surrounds is \textbf{27 °C}.
+
+\textbf{Given}:
+
+\begin{itemize}
+\item
+  Stefan--Boltzmann constant:
+  \(\sigma = 5.6703\times10^{-11}\ \mathrm{kW\,m^{-2}\,K^{-4}}\)
+\item
+  Emissivity: \(\varepsilon = 1\) (ideal black body)
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Convert temperatures to Kelvin}
+\end{enumerate}
+
+\[
+T_1 = 227 + 273 = 500\ \mathrm{K}, \quad
+T_2 = 27 + 273 = 300\ \mathrm{K}
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Calculate the area of the circular plate}
+\end{enumerate}
+
+\[
+A = \pi \left( \frac{D}{2} \right)^2 = \pi \left( \frac{0.4}{2} \right)^2 \approx 0.125664\ \mathrm{m^2}
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Apply the formula}
+\end{enumerate}
+
+\[
+Q = \sigma \times \varepsilon \times A \times t \times \left( T_1^4 - T_2^4 \right)
+\]
+
+Substituting the values:
+
+\[
+Q = 5.6703 \times 10^{-11} \times 1 \times 0.125664 \times 3600 \times \left(500^4 - 300^4\right)
+\] \[
+Q = 1395.46\ \mathrm{kWh}
+\]
+
+\textbf{Result}
+
+\[
+\text{Plate area: } 0.125664\ \mathrm{m^2}
+\] \[
+\text{Emissivity: } \varepsilon = 1
+\] \[
+\boxed{\text{Heat radiated (per hour): } 1395.46\ \mathrm{kWh}}
+\]
+
+\textbf{Note:} This represents the \textbf{theoretical maximum
+radiation} for a perfect black body. Real materials would radiate less
+depending on their emissivity \(\varepsilon < 1\).
+
+
+
+
+\end{document}

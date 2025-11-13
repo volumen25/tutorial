@@ -1,0 +1,164 @@
+---
+title: "Modes of Heat Transfer"
+format: pdf
+---
+
+## Temperature Difference Across a Heat Exchanger Endplate
+
+The shell diameter of a large heat exchanger is 1.8 m. The flat endplate (cover) at one end is made of carbon steel, 45 mm thick, and is uninsulated. If the maximum allowable heat loss through the cover, to avoid insulation is 150 MJ/h, determine the temperature difference permitted across the endplate. (For steel, k = 55 W/m°C)
+
+**Given**
+
+-   Shell diameter: (D = 1.8 $\mathrm{m}$)\
+-   Endplate thickness: (s = 45 $\mathrm{mm}$ = 0.045 $\mathrm{m}$)\
+-   Material: carbon steel, thermal conductivity: (k = 55 $\mathrm{W/m\cdot K}$)\
+-   Maximum allowable heat loss: ($Q_\mathrm{max} = 150$ $\mathrm{MJ/h}$)\
+-   Endplate is **uninsulated**
+
+Calculate the **temperature difference** $\Delta T$ across the endplate to limit heat loss.
+
+1.  **Area of the circular endplate**
+
+$$
+A = \pi \left( \frac{D}{2} \right)^2 = \pi \left( \frac{1.8}{2} \right)^2
+$$
+
+$$
+A = \pi \times 0.9^2 = 2.5447\ \mathrm{m^2}
+$$
+
+2.  **Convert heat loss to Watts**
+
+$$
+Q_\mathrm{max} = 150\ \mathrm{MJ/h} = 150 \times 10^6\ \mathrm{J/h}
+$$
+
+$$
+1\ \mathrm{h} = 3600\ \mathrm{s} \quad \Rightarrow \quad Q = \frac{150 \times 10^6}{3600} = 41666.7\ \mathrm{W}
+$$
+
+3.  **Use law of conduction for a flat plate**
+
+$$
+Q = \frac{k A \Delta T}{s} \quad \Rightarrow \quad \Delta T = \frac{Q s}{k A}
+$$
+
+Substitute values:
+
+$$
+\Delta T = \frac{41666.7 \times 0.045}{55 \times 2.5447}
+$$
+
+$$
+\Delta T = \frac{1875.0}{139.96} = 13.39\ \mathrm{K}
+$$
+
+**Result**
+
+$$
+\boxed{\Delta T = 13.4^\circ \mathrm{C}}
+$$
+
+**Notes:**
+
+-   The maximum allowable **temperature difference across the endplate** is 13.4°C to keep heat loss below 150 MJ/h.
+
+-   If the temperature difference exceeds this, insulation would be required.
+
+
+
+## Hot Metal Convection Heat Transfer
+
+A hot metal plate measuring **1.2 m × 0.8 m** is exposed to air at **25°C**. The surface temperature of the plate is maintained at **85°C**. If the **convective heat transfer coefficient** (surface heat transfer coefficient) between the plate and air is $h_A = 18 \, \text{W/m}^2\text{·°C}$, calculate the **rate of heat loss by convection** from the entire plate surface.
+
+**Given:**
+
+-   Plate dimensions: ($1.2\  \text{m} \times 0.8\  \text{m}$)
+
+-   Plate surface area: $A = 1.2 \times 0.8 = 0.96 \, \text{m}^2$
+
+-   Surface temperature: $T_s = 85^\circ \text{C}$
+
+-   Air temperature: $T_f = 25^\circ \text{C}$
+
+-   Convection coefficient: $h_A = 18 \, \text{W/m}^2\text{·°C}$
+
+**Solution**
+
+The rate of convective heat loss is given by:
+
+$$
+Q = h_A \, A \, (T_s - T_f)
+$$
+
+Substituting the values:
+
+$$
+Q = 18 \times 0.96 \times (85 - 25)
+$$
+
+$$
+Q = 18 \times 0.96 \times 60
+$$
+
+$$
+Q = 1036.8 \, \text{W}
+$$
+
+**Answer**
+
+$$
+\boxed{Q = 1036.8 \, \text{W}}
+$$
+
+
+
+## Radiant Heat from a Flat Circular Plate
+
+A flat circular plate is **400 mm** in diameter. Calculate the theoretical quantity of heat radiated per hour when its temperature is **227 °C** and the temperature of its surrounds is **27 °C**.
+
+**Given**:
+
+-   Stefan–Boltzmann constant: $\sigma = 5.6703\times10^{-11}\ \mathrm{kW\,m^{-2}\,K^{-4}}$
+
+-   Emissivity: $\varepsilon = 1$ (ideal black body)
+
+1.  **Convert temperatures to Kelvin**
+
+$$
+T_1 = 227 + 273 = 500\ \mathrm{K}, \quad
+T_2 = 27 + 273 = 300\ \mathrm{K}
+$$
+
+2.  **Calculate the area of the circular plate**
+
+$$
+A = \pi \left( \frac{D}{2} \right)^2 = \pi \left( \frac{0.4}{2} \right)^2 \approx 0.125664\ \mathrm{m^2}
+$$
+
+3.  **Apply the formula**
+
+$$
+Q = \sigma \times \varepsilon \times A \times t \times \left( T_1^4 - T_2^4 \right)
+$$
+
+Substituting the values:
+
+$$
+Q = 5.6703 \times 10^{-11} \times 1 \times 0.125664 \times 3600 \times \left(500^4 - 300^4\right)
+$$ $$
+Q = 1395.46\ \mathrm{kWh}
+$$
+
+**Result**
+
+$$
+\text{Plate area: } 0.125664\ \mathrm{m^2}
+$$ $$
+\text{Emissivity: } \varepsilon = 1
+$$ $$
+\boxed{\text{Heat radiated (per hour): } 1395.46\ \mathrm{kWh}}
+$$
+
+**Note:** This represents the **theoretical maximum radiation** for a perfect black body. Real materials would radiate less depending on their emissivity $\varepsilon < 1$.
+
