@@ -1,0 +1,110 @@
+---
+title: "Glossary"
+format: pdf
+---
+
+## Gauge Pressure
+
+Pressure measured relative to atmospheric pressure.\
+**Unit:** Pa (N/m²), kPa, bar.
+
+## Vacuum Pressure
+
+Pressure below atmospheric pressure; the magnitude by which the absolute pressure is less than atmospheric.\
+**Unit:** Pa, kPa, bar.
+
+## Absolute Pressure
+
+Total pressure measured relative to a perfect vacuum:\
+$$
+P_{\text{abs}} = P_{\text{atm}} + P_{\text{gauge}}.
+$$\
+**Unit:** Pa, kPa, bar.
+
+## Absolute Temperature
+
+Temperature measured from absolute zero (0 K).
+
+$$
+T(\mathrm{K}) = T(°\mathrm{C}) + 273.15.
+$$
+
+**Unit:** Kelvin (K).
+
+## Change of State
+
+A physical transformation between solid, liquid, and gas without changing temperature (e.g., melting, boiling).\
+**Unit:** No units; process description.
+
+## Sensible Heat
+
+Heat added or removed that changes temperature but **not** state.
+
+$$
+Q = mc\Delta T.
+$$ **Unit:** joule (J).
+
+## Specific Heat (Specific Heat Capacity)
+
+Heat required to raise the temperature of 1 kg of a substance by 1°C (or 1 K).\
+**Unit:** J/(kg·K).
+
+## Latent Heat of Fusion
+
+Heat required to convert 1 kg of a solid to liquid at constant temperature.\
+**Unit:** J/kg.
+
+## Latent Heat of Evaporation (Vaporization)
+
+Heat required to convert 1 kg of liquid to vapor at constant temperature.\
+**Unit:** J/kg.
+
+## Water Equivalent of Mass
+
+Mass of water that would absorb the same amount of heat as the body for the same temperature rise.\
+$$
+\text{Water equivalent} = mc_{\text{body}} / c_{\text{water}}.
+$$ **Unit:** kg.
+
+## Coefficient of Linear Expansion (α)
+
+Fractional change in length per degree change in temperature:\
+$$
+\Delta L = \alpha L_0 \Delta T.
+$$ **Unit:** 1/K (or °C⁻¹).
+
+## Coefficient of Cubical Expansion (β)
+
+Fractional change in volume per degree change in temperature:\
+$$
+\Delta V = \beta V_0 \Delta T.
+$$\
+**Unit:** 1/K.
+
+## Cubical Expansion and Apparent Cubical Expansion
+
+-   **Real (Actual) Cubical Expansion:** Actual increase in volume of a liquid with temperature.\
+-   **Apparent Cubical Expansion:** Observed expansion when liquid is heated in a container that also expands;\
+    $$
+    \beta_{\text{apparent}} = \beta_{\text{liquid}} - \beta_{\text{container}}.
+    $$ **Unit:** 1/K.
+
+## Thermal Conductivity (k)
+
+Rate at which a material conducts heat through unit thickness per unit temperature difference:\
+$$
+q = kA \frac{\Delta T}{\Delta x}.
+$$\
+**Unit:** W/(m·K).
+
+## Surface Heat Transfer Coefficient (h)
+
+Rate of heat transfer per unit area per degree temperature difference between a surface and the surrounding fluid.\
+**Unit:** W/(m²·K).
+
+## Joule’s Law
+
+The heat produced in a conductor due to an electric current is proportional to the square of the current, the resistance, and the time:\
+$$
+H = I^2 R t.
+$$ **Unit:** J (for heat produced).
