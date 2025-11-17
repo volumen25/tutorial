@@ -319,3 +319,74 @@ print(f"Emissivity (theoretical): {epsilon}")
 print(f"Heat radiated per second: {Q_dot:.4f} kW")
 print(f"Heat radiated per hour: {Q_hour:.2f} kWh")
 ```
+
+## Combined Mode
+
+A composite wall is made up of three layers:
+
+-   **Brickwork:** thickness (L_1=150 \mathrm{mm}), thermal conductivity (k_1=1.20 \mathrm{W/m\cdot K}).\
+-   **Fibreglass:** thickness (L_2=50 \mathrm{mm}), thermal conductivity (k_2=0.04 \mathrm{W/m\cdot K}).\
+-   **Insulating board:** thickness (L_3=40 \mathrm{mm}), thermal conductivity (k_3=0.05 \mathrm{W/m\cdot K}).
+
+Surface convective coefficients:\
+(h\_{\text{in}}=5.0 \mathrm{W/m^2\cdot K}) (inside), (h\_{\text{out}}=10.0 \mathrm{W/m^2\cdot K}) (outside).
+
+Internal ambient temperature (T\_{\text{in}}=22\^\circ\mathrm{C}), external ambient temperature (T\_{\text{out}}=0\^\circ\mathrm{C}).
+
+Wall dimensions: height (4 \mathrm{m}), length (8 \mathrm{m}) → area (A=32 \mathrm{m^2}).
+
+Calculate:
+
+1.  The overall heat-transfer coefficient (U) (W/m²·K).\
+2.  Heat lost per hour through the whole wall.\
+3.  Internal and external **surface** temperatures of the wall.
+
+**Thermal resistances (per unit area)**
+
+Convection (inside): \[ R\_{\text{conv,in}}=\frac{1}{h_{\text{in}}}=\frac{1}{5.0}=0.2000 \mathrm{m^2K/W}. \]
+
+Brickwork conduction: \[ R\_{\text{brick}}=\frac{L_1}{k_1}=\frac{0.150}{1.20}=0.1250 \mathrm{m^2K/W}. \]
+
+Fibreglass conduction: \[ R\_{\text{fib}}=\frac{L_2}{k_2}=\frac{0.050}{0.04}=1.2500 \mathrm{m^2K/W}. \]
+
+Insulating board conduction: \[ R\_{\text{ins}}=\frac{L_3}{k_3}=\frac{0.040}{0.05}=0.8000 \mathrm{m^2K/W}. \]
+
+Convection (outside): \[ R\_{\text{conv,out}}=\frac{1}{h_{\text{out}}}=\frac{1}{10.0}=0.1000 \mathrm{m^2K/W}. \]
+
+Total thermal resistance per unit area: \[
+
+\begin{aligned}
+R_{\text{total}} &= R_{\text{conv,in}} + R_{\text{brick}} + R_{\text{fib}} + R_{\text{ins}} + R_{\text{conv,out}} \\
+&= 0.2000 + 0.1250 + 1.2500 + 0.8000 + 0.1000 \\
+&= 2.4750\ \mathrm{m^2K/W}.
+\end{aligned}
+
+\]
+
+Overall heat-transfer coefficient: \[ U = \frac{1}{R_{\text{total}}} = \frac{1}{2.4750} \approx 0.4040 \mathrm{W/(m^2\cdot K)}. \]
+
+**Heat lost (whole wall)**
+
+Temperature difference: \[ \Delta T = T\_{\text{in}} - T\_{\text{out}} = 22 - 0 = 22 \mathrm{K}. \]
+
+Heat-loss rate (power): \[ \dot{Q} = U,A,\Delta T = 0.4040 \times 32 \times 22 \approx 284.42 \mathrm{W}. \]
+
+Energy lost in one hour:
+
+\[ Q\_{\text{hour}} = \dot{Q}\times 3600 \approx 284.42 \times 3600 \approx 1.024\times10\^{6} \mathrm{J}. \]
+
+Also in kWh: \[ Q\_{\text{hour}} \approx 0.2844 \mathrm{kWh}. \]
+
+**Surface temperatures**
+
+Heat flux (per unit area): \[ q'' = \frac{\dot{Q}}{A} \approx \frac{284.42}{32} \approx 8.888 \mathrm{W/m^2}. \]
+
+Internal surface temperature (wall inner face): \[ T\_{\text{s,in}} = T\_{\text{in}} - q'',R\_{\text{conv,in}} = 22 - 8.888\times 0.2000 \approx 22 - 1.7776 \approx 20.22\^\circ\mathrm{C}. \]
+
+External surface temperature (wall outer face): \[ T\_{\text{s,out}} = T\_{\text{out}} + q'',R\_{\text{conv,out}} = 0 + 8.888\times 0.1000 \approx 0.89\^\circ\mathrm{C}. \]
+
+**Final answers (rounded)**
+
+1.  ( \displaystyle U \approx 0.404 \mathrm{W/(m^2\cdot K)}.)\
+2.  Heat loss rate ( \dot{Q} \approx 284.4 \mathrm{W}) → (Q\_{\text{hour}}\approx 1.02\times10\^{6} \mathrm{J}) (≈ 0.284 kWh).\
+3.  Surface temperatures: (T\_{\text{s,in}}\approx 20.22\circ\mathrm{C},\quad T\_{\text{s,out}}\approx 0.89\circ\mathrm{C}.)
