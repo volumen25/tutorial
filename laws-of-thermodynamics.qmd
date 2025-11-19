@@ -1,0 +1,65 @@
+---
+title: "The Laws of Thermodynamics"
+format: pdf
+bibliography: references.bib
+---
+
+## Zeroth Law of Thermodynamics
+
+Systems that are in thermal equilibrium exist at the same temperature. This provides an independent definition of temperature without reference to entropy, which is defined in the second law.
+
+It states: If two systems are each in thermal equilibrium with a third system, then they are in thermal equilibrium with each other.
+
+The zeroth law establishes the concept of temperature.
+
+## First Law of Thermodynamics
+
+The first law is the principle of energy conservation applied to thermodynamic systems. Energy cannot be created or destroyed; it can only be transferred (as heat) or converted (into work or internal energy). Whatever energy enters a system must either stay inside or leave as work.
+
+It states: The change in the internal energy of a system (ΔU) equals the heat added to the system (Q) minus the work done by the system (W): ΔU = Q − W.
+
+Q = ΔU + W is preferred in many textbooks because it expresses heat added as the sum of the increase in internal energy plus the work the system performs on the surroundings.
+
+### Practical Interpretation
+
+-   If no work is done (W = 0, e.g., constant volume): Q = ΔU (heat supplied equals the rise in internal energy).
+
+-   If the system expands and does work (W \> 0): only part of the absorbed heat Q goes into raising U; the rest is used to perform work.
+
+-   For an adiabatic process (Q = 0): ΔU = −W (the system does work at the expense of its internal energy, cooling down).
+
+### Examples
+
+Adiabatic expansion of an ideal gas (e.g. in a diesel engine):
+
+-   Gas expands rapidly, doing work on the surroundings.
+
+-   No time for significant heat transfer → Q = 0.
+
+-   Temperature drops noticeably (often by hundreds of degrees).
+
+Adiabatic compression (opposite case):
+
+-   Work is done on the system (W \< 0).
+
+-   Internal energy increases, temperature rises sharply.
+
+## Second Law of Thermodynamics
+
+The second law determines the direction and limits of natural processes.
+
+It states (entropy formulation): The total entropy of an isolated system (or the universe) never decreases; it either stays the same (reversible process) or increases (irreversible process).
+
+Put it simply, natural processes tend to move toward greater disorder (higher entropy). You can create local order (e.g., tidy a room or freeze water into ice), but doing so always creates even more disorder somewhere else (e.g., heat released to the surroundings), so overall disorder in the universe increases. No process can convert heat completely into useful work without some waste, and you cannot unmix cream that has been stirred into coffee without expending energy and increasing the entropy of the surroundings:
+
+-   Initially: Cream and coffee are separated (low entropy, ordered state).
+
+-   Spontaneous (natural) process: Stirring causes rapid, irreversible mixing (diffusion increases entropy; the process runs only toward the mixed state).
+
+-   Reversal: It is possible, in principle, to separate them again (e.g., using centrifuges), but doing so requires external work and always produces more entropy in the surroundings (heat dissipation, energy consumption) than was gained during the original mixing. So therefore, the total entropy of the universe still increases.
+
+## Further Reading
+
+More information may be found in [@joel1996], [@eastop1993] and [@russell2022].
+
+## References
