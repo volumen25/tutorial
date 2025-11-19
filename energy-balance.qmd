@@ -1,0 +1,29 @@
+---
+title: "Energy Balance"
+format: pdf
+---
+
+During a trial on a four-cylinder petrol engine running at 50 rev/s, the brake load was 267 N when all cylinders were working.
+
+When each cylinder was cut out in turn and the speed returned to 50 rev/s, the brake readings were **178 N, 187 N, 182 N, and 182 N**.
+
+Using these readings, determine the brake power of the engine, estimate its indicated power and mechanical efficiency.
+
+For the brake, **bp = FN/455** where F = brake load in newtons and N = rev/s.
+
+*Dynamometer power formula simplified: Rope brake radius = 0.725 m. Power expressed in kW, F in newtons and N in rev/s*
+
+The following results were also obtained during the trial:
+
+-   Fuel consumption, 0.568 l in 130 s
+-   Calorific value of fuel, 43 MJ/kg
+-   Specific gravity of fuel, 0.72
+-   Air:fuel ratio, 14:1
+-   Exhaust temperature, 760°C
+-   Specific heat capacity of exhaust gas, 1.015 kJ/kgK
+-   Cooling water inlet temperature, 18°C
+-   Cooling water outlet temperature, 56°C
+-   Cooling water mass flow rate, 0.28 kg/s
+-   Ambient temperature, 21°C
+
+Draw up an energy balance in kJ/s and as a percentage of the energy supplied.
