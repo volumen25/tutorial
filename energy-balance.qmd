@@ -3,7 +3,9 @@ title: "Energy Balance"
 format: pdf
 ---
 
-During a trial on a four-cylinder petrol engine running at 50 rev/s, the brake load was 267 N when all cylinders were working.
+## Problem 4
+
+During a trial on a four-cylinder petrol engine running at 50 rev/s, the brake load was **267 N** when all cylinders were working.
 
 When each cylinder was cut out in turn and the speed returned to 50 rev/s, the brake readings were **178 N, 187 N, 182 N, and 182 N**.
 
