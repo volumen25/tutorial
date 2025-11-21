@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -74,14 +74,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c213800f9ad2c394781badd4e3c4d3bb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-14cbc709409b9607cfe384ca3dce8273.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -326,9 +326,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Tutorial</a> 
         <div class="sidebar-tools-main">
@@ -427,6 +425,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#code-2" id="toc-code-2" class="nav-link" data-scroll-target="#code-2"><span class="header-section-number">5.6.1</span> Code</a></li>
   </ul></li>
+  <li><a href="#combined-mode" id="toc-combined-mode" class="nav-link" data-scroll-target="#combined-mode"><span class="header-section-number">5.7</span> Combined Mode</a></li>
   </ul>
 </nav>
     </div>
@@ -713,9 +712,64 @@ Q = 1395.46\ \mathrm{kWh}
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Emissivity (theoretical): </span><span class="sc">{</span>epsilon<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Heat radiated per second: </span><span class="sc">{</span>Q_dot<span class="sc">:.4f}</span><span class="ss"> kW"</span>)</span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Heat radiated per hour: </span><span class="sc">{</span>Q_hour<span class="sc">:.2f}</span><span class="ss"> kWh"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-
 </section>
+</section>
+<section id="combined-mode" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="combined-mode"><span class="header-section-number">5.7</span> Combined Mode</h2>
+<p>A composite wall is made up of three layers:</p>
+<ul>
+<li><strong>Brickwork:</strong> thickness (L_1=150&nbsp;), thermal conductivity (k_1=1.20&nbsp;).<br>
+</li>
+<li><strong>Fibreglass:</strong> thickness (L_2=50&nbsp;), thermal conductivity (k_2=0.04&nbsp;).<br>
+</li>
+<li><strong>Insulating board:</strong> thickness (L_3=40&nbsp;), thermal conductivity (k_3=0.05&nbsp;).</li>
+</ul>
+<p>Surface convective coefficients:<br>
+(h_{}=5.0&nbsp;) (inside), (h_{}=10.0&nbsp;) (outside).</p>
+<p>Internal ambient temperature (T_{}=22^), external ambient temperature (T_{}=0^).</p>
+<p>Wall dimensions: height (4&nbsp;), length (8&nbsp;) → area (A=32&nbsp;).</p>
+<p>Calculate:</p>
+<ol type="1">
+<li>The overall heat-transfer coefficient (U) (W/m²·K).<br>
+</li>
+<li>Heat lost per hour through the whole wall.<br>
+</li>
+<li>Internal and external <strong>surface</strong> temperatures of the wall.</li>
+</ol>
+<p><strong>Thermal resistances (per unit area)</strong></p>
+<p>Convection (inside): [ R_{}===0.2000&nbsp;. ]</p>
+<p>Brickwork conduction: [ R_{}===0.1250&nbsp;. ]</p>
+<p>Fibreglass conduction: [ R_{}===1.2500&nbsp;. ]</p>
+<p>Insulating board conduction: [ R_{}===0.8000&nbsp;. ]</p>
+<p>Convection (outside): [ R_{}===0.1000&nbsp;. ]</p>
+<p>Total thermal resistance per unit area: [</p>
+<span class="math display">\[\begin{aligned}
+R_{\text{total}} &amp;= R_{\text{conv,in}} + R_{\text{brick}} + R_{\text{fib}} + R_{\text{ins}} + R_{\text{conv,out}} \\
+&amp;= 0.2000 + 0.1250 + 1.2500 + 0.8000 + 0.1000 \\
+&amp;= 2.4750\ \mathrm{m^2K/W}.
+\end{aligned}\]</span>
+<p>]</p>
+<p>Overall heat-transfer coefficient: [ U = = &nbsp;. ]</p>
+<p><strong>Heat lost (whole wall)</strong></p>
+<p>Temperature difference: [ T = T_{} - T_{} = 22 - 0 = 22&nbsp;. ]</p>
+<p>Heat-loss rate (power): [ = U,A,T = 0.4040 &nbsp;. ]</p>
+<p>Energy lost in one hour:</p>
+<p>[ Q_{} = ^{6}&nbsp;. ]</p>
+<p>Also in kWh: [ Q_{} &nbsp;. ]</p>
+<p><strong>Surface temperatures</strong></p>
+<p>Heat flux (per unit area): [ q’’ = &nbsp;. ]</p>
+<p>Internal surface temperature (wall inner face): [ T_{} = T_{} - q’’,R_{} = 22 - 8.888 - 1.7776 ^. ]</p>
+<p>External surface temperature (wall outer face): [ T_{} = T_{} + q’’,R_{} = 0 + 8.888 ^. ]</p>
+<p><strong>Final answers (rounded)</strong></p>
+<ol type="1">
+<li>( U &nbsp;.)<br>
+</li>
+<li>Heat loss rate ( &nbsp;) → (Q_{}^{6}&nbsp;) (≈ 0.284 kWh).<br>
+</li>
+<li>Surface temperatures: (T_{},T_{}.)</li>
+</ol>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -1154,7 +1208,7 @@ Q = 1395.46\ \mathrm{kWh}
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Built with <a href="https://quarto.org"> Quarto 1.8.25</a></p>
+<p>Built with <a href="https://quarto.org"> Quarto 1.8.26</a></p>
 </div>
   </div>
 </footer>
