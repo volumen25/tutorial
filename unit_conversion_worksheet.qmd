@@ -1,0 +1,86 @@
+---
+title: "Unit Conversion & Mechanics Worksheet"
+format: pdf
+---
+
+Use **unity fractions** (conversion factors equal to 1) for all conversion steps. Show full working.
+
+## Scalars vs Vectors
+
+1.  Define a **scalar quantity** and give three examples.
+2.  Define a **vector quantity** and give three examples.
+3.  Convert the following speeds using unity fractions:
+    -   72 km/h → m/s
+    -   15 m/s → km/h
+
+## Coplanar Forces
+
+1.  Define **coplanar forces**.
+2.  Explain how coplanar forces are analyzed in 2D.
+3.  Convert:
+    -   2500 N → kN
+    -   6.5 kN → N
+
+## Cartesian Coordinates: Distances & Angles
+
+1.  Calculate the distance between A(3, 4) and B(11, 9).
+2.  Convert:
+    -   12 in → cm
+    -   2.4 m → mm
+3.  Determine the angle a force makes with the x-axis if Fx = 120 N and Fy = 160 N.
+
+## Sine Rule & Cosine Rule
+
+1.  Solve triangle ABC using the **Sine Rule** where a = 10 m, b = 14 m, and C = 35°.
+2.  Solve triangle ABC using the **Cosine Rule** where a = 8 m, b = 6 m, and angle C is unknown.
+3.  Convert:
+    -   60° → radians
+    -   2.5 rad → degrees
+
+## Space & Vector Diagrams
+
+1.  Draw a **space diagram** showing three concurrent forces.
+2.  Draw a **vector diagram** to scale and find the magnitude of the resultant.
+3.  Convert:
+    -   A 5 cm drawing at 1 cm = 20 N → actual force
+    -   A 150 N force at 25 N/cm → drawing length
+
+## Resultant Forces & Equilibrium
+
+1.  Three forces act on a ring: 80 N at 0°, 50 N at 90°, 40 N at 210°. Determine the resultant.
+2.  State the **conditions for equilibrium**.
+3.  Convert:
+    -   0.45 kN → N
+    -   980 N → kgf (1 kgf = 9.81 N)
+
+## Sling Systems & Tension Analysis
+
+1.  A 600 kg load is lifted with a **two‑leg sling** at 60° to vertical. Find tension in each leg.
+2.  Convert:
+    -   600 kg → N (g = 9.81 m/s²)
+    -   Tension in N → kN
+3.  A three‑leg sling supports 12 kN. Each leg is at 45° to horizontal. Find the tension in each leg.
+
+## Unit Conversions
+
+Use unity fractions.
+
+1.  3.2×10⁵ mm³ → m³
+
+2.  18 m/s → km/h → cm/s
+
+3.  650 kPa → Pa → bar (1 bar = 1×10⁵ Pa)
+
+4.  0.0045 m² → mm²
+
+5.  4.8×10⁶ J → MJ → kWh (1 kWh = 3.6×10⁶ J)
+
+6.  450 rpm → rad/s
+
+7.  12 m³/min → L/s
+
+8.  0.0035 m³ of oil (ρ = 870 kg/m³) → mass in kg
+
+9.  35 MPa → N/mm² → kN/m²
+
+10. 45 m/s² → g (g = 9.81 m/s²)

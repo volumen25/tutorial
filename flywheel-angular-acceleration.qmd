@@ -1,0 +1,88 @@
+---
+title: "Flywheel Angular Acceleration Problem — Worked Example"
+format: pdf
+---
+
+A flywheel is rotating with an initial angular velocity of **120 rad/s**. It experiences a **uniform angular acceleration of 6 rad/s²** for **10 seconds**.
+
+Determine the **final angular velocity** of the flywheel:
+
+1.  In **radians per second (rad/s)**
+2.  In **revolutions per minute (rpm)**
+
+## Solution
+
+We use the angular kinematics relation:
+
+$$
+\omega = \omega_0 + \alpha t
+$$
+
+where:
+
+-   Initial angular velocity: $\omega_0 = 120 \, \text{rad/s}$
+
+-   Angular acceleration: $\alpha = 6 \, \text{rad/s}^2$
+
+-   Time: $t = 10 \, \text{s}$
+
+**Step 1: Final angular velocity in rad/s**
+
+$$
+\omega = 120 + 6(10)
+$$
+
+$$
+\omega = 120 + 60 = 180 \, \text{rad/s}
+$$
+
+**Step 2: Convert rad/s to revolutions per minute (rpm)**
+
+Use: $$
+1 \, \text{rev} = 2\pi \, \text{rad}, \qquad 1 \, \text{min} = 60 \, \text{s}
+$$
+
+$$
+\omega_{\text{rpm}} = \omega \left( \frac{60}{2\pi} \right)
+$$
+
+$$
+\omega_{\text{rpm}} = 180 \times \frac{60}{2\pi}
+$$
+
+$$
+\omega_{\text{rpm}} = 1719 \, \text{rpm}
+$$
+
+**Final Answers**
+
+-   **Final angular velocity:**\
+    $$
+    \boxed{180 \, \text{rad/s}}
+    $$
+
+-   **Final angular velocity in rpm:**\
+    $$  
+    \boxed{1719 \, \text{rpm}}
+    $$
+
+## Code 
+
+```python
+import math
+
+# Given values
+omega_0 = 120        # initial angular velocity (rad/s)
+alpha = 6            # angular acceleration (rad/s^2)
+t = 10               # time (s)
+
+# Final angular velocity (rad/s)
+omega_final = omega_0 + alpha * t
+
+# Convert to revolutions per minute (rpm)
+omega_rpm = omega_final * (60 / (2 * math.pi))
+
+print(f"Final angular velocity: {omega_final:.2f} rad/s")
+print(f"Final angular velocity: {omega_rpm:.2f} rpm")
+
+```
