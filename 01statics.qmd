@@ -186,7 +186,7 @@ J = 13  # jib  m
 T = 9   # tie m
 W = 20  # load in kN
 
-# Law of Cosines
+# Law of cosines
 
 # Angle opposite P (theta_p)
 theta_p = math.acos((J**2 + T**2 - P**2) / (2 * J * T))
@@ -197,7 +197,7 @@ theta_t = math.acos((J**2 + P**2 - T**2) / (2 * J * P))
 # Angle opposite J (theta_j)
 theta_j = math.pi - theta_p - theta_t
 
-# Law of Sines
+# Law of sines
 
 F_J = W * math.sin(theta_j) / math.sin(theta_p)  # force in jib
 F_T = W * math.sin(theta_t) / math.sin(theta_p)  # force in tie
@@ -243,7 +243,7 @@ angle_deg = 50     # angle between ship's course and current (in degrees)
 
 angle_rad = math.radians(angle_deg)
 
-# Law of Cosines
+# Law of cosines
 
 R = math.sqrt(ship**2 + current**2 + 2*ship*current*math.cos(angle_rad))
 
