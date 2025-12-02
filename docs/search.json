@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Tutorial",
     "section": "",
-    "text": "Preface\nA Brief Introduction to Computational Tools presents a collection of tutorials based on lecture notes from classes, designed to give learners clear and essential insights into key topics. No previous programming experience is required. Each tutorial guides you step by step through the concepts with hands-on examples.",
+    "text": "Preface\nA Concise Introduction to Computational Tools presents a collection of tutorials based on lecture notes from classes, designed to give learners clear and essential insights into key topics. No previous programming experience is required. Each tutorial guides you step by step through the concepts with hands-on examples.",
     "crumbs": [
       "Preface"
     ]
@@ -12,203 +12,192 @@
   {
     "objectID": "tutorial_basic.html",
     "href": "tutorial_basic.html",
-    "title": "1  Python Tutorial",
+    "title": "Python Tutorial",
     "section": "",
-    "text": "1.1 Requirements\nThis tutorial introduces Python programming, covering basic concepts with examples to illustrate key points. We will start by using Python as a calculator, then explore variables, functions, and control flow.\nTo follow this tutorial, the easiest way to get started is by using a web-based Python environment. This lets you write and run Python code right in your browser; no downloads or setup needed. I recommend python-fiddle.com, an easy-to-use online editor that lets you experiment with Python instantly and solve your problem sets effortlessly.\nIf you prefer working on your own computer, make sure you have Python(version 3.10 or later) installed. Python works on Windows, macOS, and Linux. You’ll also need a text editor or an Integrated Development Environment (IDE) to write your code. I recommend Positron, a beginner-friendly IDE with a built-in terminal, though other editors like VS Code or PyCharm are also great options.",
+    "text": "Requirements\nThis tutorial introduces Python programming, covering basic concepts with examples to illustrate key points. We will start by using Python as a calculator, then explore variables, functions, and control flow.\nTo follow this tutorial, the easiest way to get started is by using a web-based Python environment. This lets you write and run Python code right in your browser; no downloads or setup needed. I recommend python-fiddle.com, an easy-to-use online editor that lets you experiment with Python instantly and solve your problem sets effortlessly.\nIf you prefer working on your own computer, make sure you have Python(version 3.10 or later) installed. Python works on Windows, macOS, and Linux. You’ll also need a text editor or an Integrated Development Environment (IDE) to write your code. I recommend Positron, a beginner-friendly IDE with a built-in terminal, though other editors like VS Code or PyCharm are also great options.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+      "Python Tutorial"
     ]
   },
   {
     "objectID": "tutorial_basic.html#basic-syntax",
     "href": "tutorial_basic.html#basic-syntax",
-    "title": "1  Python Tutorial",
-    "section": "1.2 Basic Syntax",
-    "text": "1.2 Basic Syntax\nPython uses indentation (typically four spaces) to define code blocks. A colon (:) introduces a block, and statements within the block must be indented consistently. Python is case-sensitive, so Variable and variable are distinct identifiers. Statements typically end with a newline, but you can use a backslash (\\) to continue a statement across multiple lines.\ntotal = 1 + 2 + 3 + 4 + 5\nprint(total)  # Output: 15\nBasic syntax rules:\n\nComments start with # and extend to the end of the line.\nStrings can be enclosed in single quotes ('), double quotes (\"), or triple quotes (''' or \"\"\") for multi-line strings.\nPython is case-sensitive, so Variable and variable are different identifiers.",
+    "title": "Python Tutorial",
+    "section": "Basic Syntax",
+    "text": "Basic Syntax\nPython uses indentation (typically four spaces) to define code blocks. A colon (:) introduces a block, and statements within the block must be indented consistently. Python is case-sensitive, so Variable and variable are distinct identifiers. Statements typically end with a newline, but you can use a backslash (\\) to continue a statement across multiple lines.\ntotal = 1 + 2 + 3 + 4 + 5\nprint(total)  # Output: 15\nBasic syntax rules:\n\nComments start with # and extend to the end of the line.\nStrings can be enclosed in single quotes ('), double quotes (\"), or triple quotes (''' or \"\"\") for multi-line strings.\nPython is case-sensitive, so Variable and variable are different identifiers.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+      "Python Tutorial"
     ]
   },
   {
     "objectID": "tutorial_basic.html#the-print-function",
     "href": "tutorial_basic.html#the-print-function",
-    "title": "1  Python Tutorial",
-    "section": "1.3 The print() Function",
-    "text": "1.3 The print() Function\nThe print() function displays output in Python.\nname = \"Rudolf Diesel\"\nyear = 1858\nprint(f\"{name} was born in {year}.\")\nOutput: Rudolf Diesel was born in 1858.",
+    "title": "Python Tutorial",
+    "section": "The print() Function",
+    "text": "The print() Function\nThe print() function displays output in Python.\nname = \"Rudolf Diesel\"\nyear = 1858\nprint(f\"{name} was born in {year}.\")\nOutput: Rudolf Diesel was born in 1858.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+      "Python Tutorial"
     ]
   },
   {
     "objectID": "tutorial_basic.html#formatting-in-print",
     "href": "tutorial_basic.html#formatting-in-print",
-    "title": "1  Python Tutorial",
-    "section": "1.4 Formatting in print()",
-    "text": "1.4 Formatting in print()\nThe following table illustrates common f-string formatting options for the print() function:\n\n\n\n\n\n\n\n\n\nFormat\nCode\nExample\nOutput\n\n\n\n\nRound to 2 decimals\nf\"{x:.2f}\"\nprint(f\"{3.14159:.2f}\")\n3.14\n\n\nRound to whole number\nf\"{x:.0f}\"\nprint(f\"{3.9:.0f}\")\n4\n\n\nThousands separator\nf\"{x:,.2f}\"\nprint(f\"{1234567.89:,.2f}\")\n1,234,567.89\n\n\nPercentage\nf\"{x:.1%}\"\nprint(f\"{0.756:.1%}\")\n75.6%\n\n\nCurrency style\nf\"${x:,.2f}\"\nprint(f\"${1234.5:,.2f}\")\n$1,234.50\n\n\n\nNote: The currency symbol (e.g., $) can be modified for other currencies (e.g., €, £) based on the desired locale.",
+    "title": "Python Tutorial",
+    "section": "Formatting in print()",
+    "text": "Formatting in print()\nThe following table illustrates common f-string formatting options for the print() function:\n\n\n\n\n\n\n\n\n\nFormat\nCode\nExample\nOutput\n\n\n\n\nRound to 2 decimals\nf\"{x:.2f}\"\nprint(f\"{3.14159:.2f}\")\n3.14\n\n\nRound to whole number\nf\"{x:.0f}\"\nprint(f\"{3.9:.0f}\")\n4\n\n\nThousands separator\nf\"{x:,.2f}\"\nprint(f\"{1234567.89:,.2f}\")\n1,234,567.89\n\n\nPercentage\nf\"{x:.1%}\"\nprint(f\"{0.756:.1%}\")\n75.6%\n\n\nCurrency style\nf\"${x:,.2f}\"\nprint(f\"${1234.5:,.2f}\")\n$1,234.50\n\n\n\nNote: The currency symbol (e.g., $) can be modified for other currencies (e.g., €, £) based on the desired locale.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+      "Python Tutorial"
     ]
   },
   {
     "objectID": "tutorial_basic.html#variables-and-data-types",
     "href": "tutorial_basic.html#variables-and-data-types",
-    "title": "1  Python Tutorial",
-    "section": "1.5 Variables and Data Types",
-    "text": "1.5 Variables and Data Types\nVariables store data and are assigned values using the = operator.\nx = 10\ny = 3.14\nname = \"Rudolph\"\nPython has several built-in data types, including:\n\nIntegers (int): Whole numbers, e.g., 10, -5\nFloating-point numbers (float): Decimal numbers, e.g., 3.14, -0.001\nStrings (str): Text, e.g., \"Hello\", 'World'\nBooleans (bool): True or False\n\n\n1.5.1 Arithmetic Operations\na = 10\nb = 3\nprint(a + b)  # Addition: 13\nprint(a - b)  # Subtraction: 7\nprint(a * b)  # Multiplication: 30\nprint(a / b)  # Division: 3.3333...\nprint(a // b) # Integer Division: 3\nprint(a ** b) # Exponentiation: 1000\n\n\n1.5.2 String Operations\nfirst_name = \"Rudolph\"\nlast_name = \"Diesel\"\nfull_name = first_name + \" \" + last_name  # Concatenation using +\nprint(full_name)  # Output: Rudolph Diesel\nprint(f\"{first_name} {last_name}\")  # Concatenation using f-string\nprint(full_name * 2)  # Repetition: Rudolph DieselRudolph Diesel\nprint(full_name.upper())  # Uppercase: RUDOLPH DIESEL\nNote: String repetition (*) concatenates the string multiple times without spaces. For example, full_name * 2 produces Rudolph DieselRudolph Diesel.",
+    "title": "Python Tutorial",
+    "section": "Variables and Data Types",
+    "text": "Variables and Data Types\nVariables store data and are assigned values using the = operator.\nx = 10\ny = 3.14\nname = \"Rudolph\"\nPython has several built-in data types, including:\n\nIntegers (int): Whole numbers, e.g., 10, -5\nFloating-point numbers (float): Decimal numbers, e.g., 3.14, -0.001\nStrings (str): Text, e.g., \"Hello\", 'World'\nBooleans (bool): True or False\n\n\nArithmetic Operations\na = 10\nb = 3\nprint(a + b)  # Addition: 13\nprint(a - b)  # Subtraction: 7\nprint(a * b)  # Multiplication: 30\nprint(a / b)  # Division: 3.3333...\nprint(a // b) # Integer Division: 3\nprint(a ** b) # Exponentiation: 1000\n\n\nString Operations\nfirst_name = \"Rudolph\"\nlast_name = \"Diesel\"\nfull_name = first_name + \" \" + last_name  # Concatenation using +\nprint(full_name)  # Output: Rudolph Diesel\nprint(f\"{first_name} {last_name}\")  # Concatenation using f-string\nprint(full_name * 2)  # Repetition: Rudolph DieselRudolph Diesel\nprint(full_name.upper())  # Uppercase: RUDOLPH DIESEL\nNote: String repetition (*) concatenates the string multiple times without spaces. For example, full_name * 2 produces Rudolph DieselRudolph Diesel.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+      "Python Tutorial"
     ]
   },
   {
     "objectID": "tutorial_basic.html#python-as-a-calculator-in-interactive-mode",
     "href": "tutorial_basic.html#python-as-a-calculator-in-interactive-mode",
-    "title": "1  Python Tutorial",
-    "section": "1.6 Python as a Calculator in Interactive Mode",
-    "text": "1.6 Python as a Calculator in Interactive Mode\nPython’s interactive mode allows you to enter commands and see results immediately, ideal for quick calculations. To start, open a terminal (on macOS, Linux, or Windows) and type:\npython3  # Use 'python' on Windows if 'python3' is not recognized\nYou should see the Python prompt:\n&gt;&gt;&gt;\nEnter expressions and press Enter to see results:\n2 + 3  # Output: 5\n7 - 4  # Output: 3\n6 * 9  # Output: 54\n8 / 2  # Output: 4.0\n8 // 2 # Output: 4\n2 ** 3 # Output: 8\n\n1.6.1 Parentheses for Grouping\n(2 + 3) * 4  # Output: 20\n2 + (3 * 4)  # Output: 14\n\n\n1.6.2 Variables\nx = 10\ny = 3\nx / y  # Output: 3.3333333333333335\n\n\n1.6.3 Exiting Interactive Mode\nTo exit, type:\nexit()\nAlternatively, use: - Ctrl+D (macOS/Linux) - Ctrl+Z then Enter (Windows)",
+    "title": "Python Tutorial",
+    "section": "Python as a Calculator in Interactive Mode",
+    "text": "Python as a Calculator in Interactive Mode\nPython’s interactive mode allows you to enter commands and see results immediately, ideal for quick calculations. To start, open a terminal (on macOS, Linux, or Windows) and type:\npython3  # Use 'python' on Windows if 'python3' is not recognized\nYou should see the Python prompt:\n&gt;&gt;&gt;\nEnter expressions and press Enter to see results:\n2 + 3  # Output: 5\n7 - 4  # Output: 3\n6 * 9  # Output: 54\n8 / 2  # Output: 4.0\n8 // 2 # Output: 4\n2 ** 3 # Output: 8\n\nParentheses for Grouping\n(2 + 3) * 4  # Output: 20\n2 + (3 * 4)  # Output: 14\n\n\nVariables\nx = 10\ny = 3\nx / y  # Output: 3.3333333333333335\n\n\nExiting Interactive Mode\nTo exit, type:\nexit()\nAlternatively, use: - Ctrl+D (macOS/Linux) - Ctrl+Z then Enter (Windows)",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+      "Python Tutorial"
     ]
   },
   {
     "objectID": "tutorial_basic.html#control-flow",
     "href": "tutorial_basic.html#control-flow",
-    "title": "1  Python Tutorial",
-    "section": "1.7 Control Flow",
-    "text": "1.7 Control Flow\nControl flow statements direct the execution of code based on conditions.\n\n1.7.1 Conditional Statements\nConditional statements allow you to execute different code blocks based on specific conditions. Python provides three keywords for this purpose:\n\nif: Evaluates a condition and executes its code block if the condition is True.\nelif: Short for “else if,” it checks an additional condition if the preceding if or elif conditions are False. You can use multiple elif statements to test multiple conditions sequentially, and Python will execute the first True condition’s block, skipping the rest.\nelse: Executes a code block if none of the preceding if or elif conditions are True. It serves as a fallback and does not require a condition.\n\nThe following example uses age to categorize a person as a Minor, Adult, or Senior, demonstrating how if, elif, and else work together.\n# Categorize a person based on their age\nage = 19\nif age &lt; 18:\n    print(\"Minor\")\nelif age &lt;= 64:\n    print(\"Adult\")\nelse:\n    print(\"Senior\")\nOutput: Adult\n\n\n1.7.2 For Loop\nA for loop iterates over a sequence (e.g., list or string).\ncomponents = [\"piston\", \"liner\", \"connecting rod\"]\nfor component in components:\n    print(component)\nOutput:\npiston\nliner\nconnecting rod\n\n\n1.7.3 While Loop\nA while loop executes as long as a condition is true. Ensure the condition eventually becomes false to avoid infinite loops.\ncount = 0\nwhile count &lt;= 5:\n    print(count)\n    count += 1\nOutput:\n0\n1\n2\n3\n4\n5",
+    "title": "Python Tutorial",
+    "section": "Control Flow",
+    "text": "Control Flow\nControl flow statements direct the execution of code based on conditions.\n\nConditional Statements\nConditional statements allow you to execute different code blocks based on specific conditions. Python provides three keywords for this purpose:\n\nif: Evaluates a condition and executes its code block if the condition is True.\nelif: Short for “else if,” it checks an additional condition if the preceding if or elif conditions are False. You can use multiple elif statements to test multiple conditions sequentially, and Python will execute the first True condition’s block, skipping the rest.\nelse: Executes a code block if none of the preceding if or elif conditions are True. It serves as a fallback and does not require a condition.\n\nThe following example uses age to categorize a person as a Minor, Adult, or Senior, demonstrating how if, elif, and else work together.\n# Categorize a person based on their age\nage = 19\nif age &lt; 18:\n    print(\"Minor\")\nelif age &lt;= 64:\n    print(\"Adult\")\nelse:\n    print(\"Senior\")\nOutput: Adult\n\n\nFor Loop\nA for loop iterates over a sequence (e.g., list or string).\ncomponents = [\"piston\", \"liner\", \"connecting rod\"]\nfor component in components:\n    print(component)\nOutput:\npiston\nliner\nconnecting rod\n\n\nWhile Loop\nA while loop executes as long as a condition is true. Ensure the condition eventually becomes false to avoid infinite loops.\ncount = 0\nwhile count &lt;= 5:\n    print(count)\n    count += 1\nOutput:\n0\n1\n2\n3\n4\n5",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+      "Python Tutorial"
     ]
   },
   {
     "objectID": "tutorial_basic.html#functions",
     "href": "tutorial_basic.html#functions",
-    "title": "1  Python Tutorial",
-    "section": "1.8 Functions",
-    "text": "1.8 Functions\n\n1.8.1 The def Keyword\nFunctions are reusable code blocks defined using the def keyword. They can include default parameters for optional arguments.\ndef add(a, b=0):\n    return a + b\nprint(add(5))      # Output: 5\nprint(add(5, 3))   # Output: 8\n\ndef multiply(*args):\n    result = 1\n    for num in args:\n        result *= num\n    return result\nprint(multiply(2, 3, 4))  # Output: 24\n\n\n1.8.2 The lambda Keyword\nThe lambda keyword creates anonymous functions for short, one-off operations, often used in functional programming.\ncelsius_to_fahrenheit = lambda c: (c * 9 / 5) + 32\nprint(celsius_to_fahrenheit(25))  # Output: 77.0",
+    "title": "Python Tutorial",
+    "section": "Functions",
+    "text": "Functions\n\nThe def Keyword\nFunctions are reusable code blocks defined using the def keyword. They can include default parameters for optional arguments.\ndef add(a, b=0):\n    return a + b\nprint(add(5))      # Output: 5\nprint(add(5, 3))   # Output: 8\n\ndef multiply(*args):\n    result = 1\n    for num in args:\n        result *= num\n    return result\nprint(multiply(2, 3, 4))  # Output: 24\n\n\nThe lambda Keyword\nThe lambda keyword creates anonymous functions for short, one-off operations, often used in functional programming.\ncelsius_to_fahrenheit = lambda c: (c * 9 / 5) + 32\nprint(celsius_to_fahrenheit(25))  # Output: 77.0",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+      "Python Tutorial"
     ]
   },
   {
     "objectID": "tutorial_basic.html#the-math-module",
     "href": "tutorial_basic.html#the-math-module",
-    "title": "1  Python Tutorial",
-    "section": "1.9 The math Module",
-    "text": "1.9 The math Module\nThe math module provides mathematical functions and constants.\nimport math\nprint(math.sqrt(16))  # Output: 4.0\nprint(math.pi)        # Output: 3.141592653589793\nimport math\nangle = math.pi / 4  # 45 degrees in radians\nprint(math.sin(angle))  # Output: 0.7071067811865475 (approximately √2/2)\nprint(math.cos(angle))  # Output: 0.7071067811865476 (approximately √2/2)\nprint(math.tan(angle))  # Output: 1.0\nNote: Floating-point arithmetic may result in small precision differences, as seen in the sin and cos outputs.\nimport math\nprint(math.log(10))       # Natural logarithm of 10: 2.302585092994046\nprint(math.log(100, 10))  # Logarithm of 100 with base 10: 2.0\n\n1.9.1 Converting Between Radians and Degrees\nThe math module provides math.radians() to convert degrees to radians and math.degrees() to convert radians to degrees, which is useful for trigonometric calculations.\nimport math\ndegrees = 180\nradians = math.radians(degrees)\nprint(f\"{degrees} degrees is {radians:.3f} radians\")  # Output: 180 degrees is 3.142 radians\n\nradians = math.pi / 2\ndegrees = math.degrees(radians)\nprint(f\"{radians:.3f} radians is {degrees:.1f} degrees\")  # Output: 1.571 radians is 90.0 degrees",
+    "title": "Python Tutorial",
+    "section": "The math Module",
+    "text": "The math Module\nThe math module provides mathematical functions and constants.\nimport math\nprint(math.sqrt(16))  # Output: 4.0\nprint(math.pi)        # Output: 3.141592653589793\nimport math\nangle = math.pi / 4  # 45 degrees in radians\nprint(math.sin(angle))  # Output: 0.7071067811865475 (approximately √2/2)\nprint(math.cos(angle))  # Output: 0.7071067811865476 (approximately √2/2)\nprint(math.tan(angle))  # Output: 1.0\nNote: Floating-point arithmetic may result in small precision differences, as seen in the sin and cos outputs.\nimport math\nprint(math.log(10))       # Natural logarithm of 10: 2.302585092994046\nprint(math.log(100, 10))  # Logarithm of 100 with base 10: 2.0\n\nConverting Between Radians and Degrees\nThe math module provides math.radians() to convert degrees to radians and math.degrees() to convert radians to degrees, which is useful for trigonometric calculations.\n\n\n\n\n\n\nWarning\n\n\n\nIn Python, the math module’s trigonometric functions (sin, cos, tan, etc.) expect angles in radians, not degrees. Always convert degrees to radians before using sin, cos, or tan in Python’s math module.\n\n\nimport math\ndegrees = 180\nradians = math.radians(degrees)\nprint(f\"{degrees} degrees is {radians:.3f} radians\")  # Output: 180 degrees is 3.142 radians\n\nradians = math.pi / 2\ndegrees = math.degrees(radians)\nprint(f\"{radians:.3f} radians is {degrees:.1f} degrees\")  # Output: 1.571 radians is 90.0 degrees",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+      "Python Tutorial"
     ]
   },
   {
     "objectID": "tutorial_basic.html#writing-python-scripts",
     "href": "tutorial_basic.html#writing-python-scripts",
-    "title": "1  Python Tutorial",
-    "section": "1.10 Writing Python Scripts",
-    "text": "1.10 Writing Python Scripts\nWrite Python code in a .py file and run it as a script. Create a file named script.py:\n# script.py\nimport math\nprint(\"Square root of 16 is:\", math.sqrt(16))\nprint(\"Value of pi is:\", math.pi)\nprint(\"Sine of 90 degrees is:\", math.sin(math.pi / 2))\nprint(\"Natural logarithm of 10 is:\", math.log(10))\nprint(\"Logarithm of 100 with base 10 is:\", math.log(100, 10))\nTo run the script, open a terminal, navigate to the directory containing script.py using the cd command (e.g., cd /path/to/directory), and type:\npython3 script.py  # or python script.py on Windows\nOutput:\nSquare root of 16 is: 4.0\nValue of pi is: 3.141592653589793\nSine of 90 degrees is: 1.0\nNatural logarithm of 10 is: 2.302585092994046\nLogarithm of 100 with base 10 is: 2.0",
+    "title": "Python Tutorial",
+    "section": "Writing Python Scripts",
+    "text": "Writing Python Scripts\nWrite Python code in a .py file and run it as a script. Create a file named script.py:\n# script.py\nimport math\nprint(\"Square root of 16 is:\", math.sqrt(16))\nprint(\"Value of pi is:\", math.pi)\nprint(\"Sine of 90 degrees is:\", math.sin(math.pi / 2))\nprint(\"Natural logarithm of 10 is:\", math.log(10))\nprint(\"Logarithm of 100 with base 10 is:\", math.log(100, 10))\nTo run the script, open a terminal, navigate to the directory containing script.py using the cd command (e.g., cd /path/to/directory), and type:\npython3 script.py  # or python script.py on Windows\nOutput:\nSquare root of 16 is: 4.0\nValue of pi is: 3.141592653589793\nSine of 90 degrees is: 1.0\nNatural logarithm of 10 is: 2.302585092994046\nLogarithm of 100 with base 10 is: 2.0",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
+      "Python Tutorial"
     ]
   },
   {
     "objectID": "tutorial_basic.html#summary",
     "href": "tutorial_basic.html#summary",
-    "title": "1  Python Tutorial",
-    "section": "1.11 Summary",
-    "text": "1.11 Summary\nThis tutorial covered Python basics, including syntax, variables, data types, operations, control flow, and functions. Python’s rich ecosystem includes libraries like:\n\nNumPy: For numerical computations and array manipulations.\nMatplotlib: For data visualization and plotting.\nPandas: For data manipulation and analysis with tabular data structures.\nPint: For handling physical quantities and performing unit conversions.\n\nYou can explore these libraries to enhance your Python programming skills further. For example installing them can be done using pip:\npip install numpy matplotlib pandas pint\npip is Python’s package manager for installing and managing additional libraries.",
+    "title": "Python Tutorial",
+    "section": "Summary",
+    "text": "Summary\nThis tutorial covered Python basics, including syntax, variables, data types, operations, control flow, and functions. python-fiddle.com, is an easy-to-use online editor that lets you experiment with Python instantly and solve your problem sets effortlessly. Simply copy the code examples provided to check your work.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Python Tutorial</span>"
-    ]
-  },
-  {
-    "objectID": "si_units.html",
-    "href": "si_units.html",
-    "title": "2  SI Units",
-    "section": "",
-    "text": "2.1 Metric Multipliers for Length, Area, and Volume\nThe International System of Units (SI) is the globally accepted standard for measurement. Established to provide a consistent framework for scientific and technical measurements, SI units facilitate clear communication and data comparison across various fields and countries. The system is based on seven fundamental units: the meter for length, the kilogram for mass, the second for time, the ampere for electric current, the kelvin for temperature, the mole for substance, and the candela for luminous intensity.\nThe metric system uses powers of ten to scale measurements. When converting area or volume, remember that the conversion factor must be squared or cubed, respectively.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units</span>"
-    ]
-  },
-  {
-    "objectID": "si_units.html#metric-multipliers-for-length-area-and-volume",
-    "href": "si_units.html#metric-multipliers-for-length-area-and-volume",
-    "title": "2  SI Units",
-    "section": "",
-    "text": "Unit\nSymbol\nMultiplier (to metres)\n1 m = ?\nArea (1 m² = ?)\nVolume (1 m³ = ?)\n\n\n\n\nMillimetre\nmm\n( \\(10^{-3}\\) )\n1000 \\(\\text{mm}\\)\n\\((1000)^2 = 10^6  \\text{mm}^2\\)\n\\((1000)^3 = 10^9  \\text{mm}^3\\)\n\n\nCentimetre\ncm\n( \\(10^{-2}\\) )\n100 \\(\\text{cm}\\)\n\\((100)^2 = 10^4  \\text{cm}^2\\)\n\\((100)^3 = 10^6  \\text{cm}^3\\)\n\n\nDecimetre\ndm\n( \\(10^{-1}\\) )\n10 \\(\\text{dm}\\)\n\\((10)^2 = 10^2  \\text{dm}^2\\)\n\\((10)^3 = 10^3  \\text{dm}^3\\)\n\n\nMetre\nm\n( \\(10^0\\) )\n—\n—\n—\n\n\nDecametre\ndam\n( \\(10^{1}\\) )\n0.1 \\(\\text{dam}\\)\n\\((0.1)^2 = 10^{-2}  \\text{dam}^2\\)\n\\((0.1)^3 = 10^{-3}  \\text{dam}^3\\)\n\n\nHectometre\nhm\n( \\(10^{2}\\) )\n0.01 \\(\\text{hm}\\)\n\\((0.01)^2 = 10^{-4}  \\text{hm}^2\\)\n\\((0.01)^3 = 10^{-6}  \\text{hm}^3\\)\n\n\nKilometre\nkm\n( \\(10^{3}\\) )\n0.001 \\(\\text{km}\\)\n\\((0.001)^2 = 10^{-6}  \\text{km}^2\\)\n\\((0.001)^3 = 10^{-9}  \\text{km}^3\\)\n\n\n\n\n\n2.1.1 Quick Reference\n\n\n\n\n\n\n\nConversion Type\nRelationship\n\n\n\n\nLength\n1 \\(\\text{m} = 10^3\\) \\(\\text{mm} = 10^2\\) \\(\\text{cm}\\)\n\n\nArea\n1 \\(\\text{m}^2 = 10^6\\) \\(\\text{mm}^2 = 10^4\\) \\(\\text{cm}^2\\)\n\n\nVolume\n1 \\(\\text{m}^3 = 10^9\\) \\(\\text{mm}^3 = 10^6\\) \\(\\text{cm}^3\\)\n\n\n\n\nNote: When converting between metric units:\n\nMultiply by \\(10^n\\) when going to a smaller unit.\nDivide by \\(10^n\\) when going to a larger unit.\nFor area, square the length factor; for volume, cube it.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units</span>"
-    ]
-  },
-  {
-    "objectID": "si_units.html#unity-fraction",
-    "href": "si_units.html#unity-fraction",
-    "title": "2  SI Units",
-    "section": "2.2 Unity Fraction",
-    "text": "2.2 Unity Fraction\nThe unity fraction method, or unit conversion using unity fractions, is a systematic way to convert one unit of measurement into another. This method relies on multiplying by fractions that are equal to one, where the numerator and the denominator represent the same quantity in different units. Since any number multiplied by one remains the same, unity fractions allow for seamless conversion without changing the value.\nThe principle of unity fractions is based on:\n\nSetting up equal values: Write a fraction where the numerator and denominator are equivalent values in different units, so the fraction equals one. For example, \\(\\frac{1km}{1000m}\\) is a unity fraction because 1 km equals 1000 m.\nMultiplying by unity fractions: Multiply the initial quantity by the unity fraction(s) so that the undesired units cancel out, leaving only the desired units.\n\n\n2.2.1 Classwork\n\nExample 2.1 Suppose we want to convert \\(5\\) kilometers to meters.\n\nStart with \\(5\\) kilometers: \\[\n5 \\, \\text{km}\n\\]\nMultiply by a unity fraction that cancels kilometers and introduces meters. We use \\((\\frac{1000 \\, \\text{m}}{1 \\, \\text{km}}), since\\:1 \\, \\text{km} = 1000 \\, \\text{m}\\):\n\n\\[5 \\, \\text{km} \\times \\frac{1000 \\, \\text{m}}{1 \\, \\text{km}} = 5000 \\, \\text{m}\\]\n\nThe kilometers \\(\\text{km}\\) cancel out, leaving us with meters \\(\\text{m}\\):\n\n\\[\n5 \\, \\text{km} = 5000 \\, \\text{m}\n\\]\nThis step-by-step approach illustrates how the unity fraction cancels the undesired units and achieves the correct result in meters.\nUnity fractions can be extended by using multiple conversion steps. For example, converting hours to seconds would require two unity fractions: one to convert hours to minutes and another to convert minutes to seconds. This approach ensures accuracy and is widely used in science, engineering, and other fields that require precise unit conversions.\n\n\nExample 2.2 Convert \\(15 \\, \\text{m/s}\\) to \\(\\text{km/h}\\).\n\nStart with \\(15 \\, \\text{m/s}\\).\nTo convert meters to kilometers, multiply by \\(\\frac{1 \\, \\text{km}}{1000 \\, \\text{m}}\\).\nTo convert seconds to hours, multiply by \\(\\frac{3600 \\, \\text{s}}{1 \\, \\text{h}}\\).\n\n\\[\n15 \\, \\text{m/s} \\times \\frac{1 \\, \\text{km}}{1000 \\, \\text{m}} \\times \\frac{3600 \\, \\text{s}}{1 \\, \\text{h}} = 54 \\, \\text{km/h}\n\\]\nThe meters and seconds cancel out, leaving kilometers per hour: \\(54 \\, \\text{km/h}\\).\n\n\n\n2.2.2 Self-Test\nInstructions:\n\nUse unity fraction to convert between derived SI units.\nShow each step of your work to ensure accuracy.\nSimplify your answers and include correct units.\n\n\n\nSpeed\nConvert \\(72 \\, \\text{km/h}\\) to \\(\\text{m/s}\\).\nForce\nConvert \\(980 \\, \\text{N}\\) (newtons) to \\(\\text{kg} \\cdot \\text{m/s}^2\\).\nEnergy\nConvert \\(2500 \\, \\text{J}\\) (joules) to \\(\\text{kJ}\\).\nPower\nConvert \\(1500 \\, \\text{W}\\) (watts) to \\(\\text{kW}\\).\nPressure\nConvert \\(101325 \\, \\text{Pa}\\) (pascals) to \\(\\text{kPa}\\).\nVolume Flow Rate\nConvert \\(3 \\, \\text{m}^3/\\text{min}\\) to \\(\\text{L/s}\\).\nDensity\nConvert \\(1000 \\, \\text{kg/m}^3\\) to \\(\\text{g/cm}^3\\).\nAcceleration\nConvert \\(9.8 \\, \\text{m/s}^2\\) to \\(\\text{cm/s}^2\\).\nTorque\nConvert \\(50 \\, \\text{N} \\cdot \\text{m}\\) to \\(\\text{kN} \\cdot \\text{cm}\\).\nFrequency\nConvert \\(500 \\, \\text{Hz}\\) (hertz) to \\(\\text{kHz}\\).\nWork to Energy Conversion\nA force of \\(20 \\, \\text{N}\\) moves an object \\(500 \\, \\text{cm}\\). Convert the work done to joules.\nKinetic Energy Conversion\nCalculate the kinetic energy in kilojoules of a \\(1500 \\, \\text{kg}\\) car moving at \\(72 \\, \\text{km/h}\\).\nPower to Energy Conversion\nA machine operates at \\(2 \\, \\text{kW}\\) for \\(3\\) hours. Convert the energy used to megajoules.\nPressure to Force Conversion\nConvert a pressure of \\(200 \\, \\text{kPa}\\) applied to an area of \\(0.5 \\, \\text{m}^2\\) to force in newtons.\nDensity to Mass Conversion\nConvert \\(0.8 \\, \\text{g/cm}^3\\) for an object with a volume of \\(250 \\, \\text{cm}^3\\) to mass in grams.\n\n\n\n\n2.2.3 Answer Key\n\n\\(72 \\, \\text{km/h} = 20 \\, \\text{m/s}\\)\n\\(980 \\, \\text{N} = 980 \\, \\text{kg} \\cdot \\text{m/s}^2\\)\n\\(2500 \\, \\text{J} = 2.5 \\, \\text{kJ}\\)\n\\(1500 \\, \\text{W} = 1.5 \\, \\text{kW}\\)\n\\(101325 \\, \\text{Pa} = 101.325 \\, \\text{kPa}\\)\n\\(3 \\, \\text{m}^3/\\text{min} = 50 \\, \\text{L/s}\\)\n\\(1000 \\, \\text{kg/m}^3 = 1 \\, \\text{g/cm}^3\\)\n\\(9.8 \\, \\text{m/s}^2 = 980 \\, \\text{cm/s}^2\\)\n\\(50 \\, \\text{N} \\cdot \\text{m} = 5 \\, \\text{kN} \\cdot \\text{cm}\\)\n\\(500 \\, \\text{Hz} = 0.5 \\, \\text{kHz}\\)\n\\(20 \\, \\text{N} \\times 5 \\, \\text{m} = 100 \\, \\text{J}\\)\n\\(\\text{Kinetic energy} = 1500 \\, \\text{kg} \\times \\left(20 \\, \\text{m/s}\\right)^2 / 2 = 300 \\, \\text{kJ}\\)\n\\(2 \\, \\text{kW} \\times 3 \\, \\text{hours} = 21.6 \\, \\text{MJ}\\)\n\\(200 \\, \\text{kPa} \\times 0.5 \\, \\text{m}^2 = 100,000 \\, \\text{N}\\)\n\\(0.8 \\, \\text{g/cm}^3 \\times 250 \\, \\text{cm}^3 = 200 \\, \\text{g}\\)",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units</span>"
-    ]
-  },
-  {
-    "objectID": "si_units.html#condenser-vacuum",
-    "href": "si_units.html#condenser-vacuum",
-    "title": "2  SI Units",
-    "section": "2.3 Condenser Vacuum",
-    "text": "2.3 Condenser Vacuum\nCondenser vacuum gauge reads 715 mmHg when barometer stands at 757 mmHg. State the absolute pressure in kN/m² and bar.\n\n2.3.1 Given Data\n\\[\nP_{atm} = 757~\\text{mmHg}, \\quad P_{vac} = 715~\\text{mmHg}\n\\]\n\n\n2.3.2 Absolute Pressure in mmHg\n\\[\nP_{abs} = P_{atm} - P_{vac} = 757 - 715 = 42~\\text{mmHg}\n\\]\n\n\n2.3.3 Convert mmHg → kN/m²\n\\[\nP = \\rho g h = 13{,}600 \\cdot 9.81 \\cdot 0.001 = 133.416~\\text{Pa} = 0.133416~\\text{kN/m}^2\n\\]\n\\[\nP_{abs} = 42 \\cdot 0.133416 = 5.6034~\\text{kN/m²}\n\\]\n\n\n2.3.4 Convert kN/m² → bar\n\\[\nP_{abs} = \\frac{5.6034}{100} = 0.056~\\text{bar}\n\\]\n\n\n2.3.5 Final Answers\n\\[\n\\boxed{P_{abs} = 42~\\text{mmHg} = 5.6034~\\text{kN/m²} = 0.056~\\text{bar}}\n\\]\n\n\n2.3.6 Code\nP_atm_mmHg = 757\nP_vac_mmHg = 715\nMMHG_TO_KN_M2 = 0.133416\nKNM2_TO_BAR = 1 / 100\nP_abs_mmHg = P_atm_mmHg - P_vac_mmHg\nP_abs_kNm2 = P_abs_mmHg * MMHG_TO_KN_M2\nP_abs_bar = P_abs_kNm2 * KNM2_TO_BAR\nprint(f\"Absolute Pressure = {P_abs_mmHg:.2f} mmHg\")\nprint(f\"Absolute Pressure = {P_abs_kNm2:.3f} kN/m²\")\nprint(f\"Absolute Pressure = {P_abs_bar:.4f} bar\")",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units</span>"
-    ]
-  },
-  {
-    "objectID": "si_units.html#oil-flow-in-tubes",
-    "href": "si_units.html#oil-flow-in-tubes",
-    "title": "2  SI Units",
-    "section": "2.4 Oil Flow in Tubes",
-    "text": "2.4 Oil Flow in Tubes\nOil flows full bore at a velocity of \\(V = 2~\\text{m/s}\\) through 16 tubes of diameter \\(d = 30~\\text{mm}\\). Density of oil: \\(\\rho = 0.85~\\text{g/mL}\\). Find volume flow rate (L/s) and mass flow rate (kg/min).\n\n2.4.1 Cross-sectional area of one tube\n\\[\nA = \\pi \\frac{d^2}{4} = \\pi \\frac{0.03^2}{4} \\approx 7.0686 \\times 10^{-4}~\\text{m}^2\n\\]\n\n\n2.4.2 Total area and volume flow rate\n\\[\nA_\\text{total} = 16 \\cdot 7.0686 \\times 10^{-4} \\approx 0.01131~\\text{m}^2\n\\]\n\\[\n\\dot{v} = A_\\text{total} \\cdot V \\approx 0.02262~\\text{m}^3/\\text{s} \\approx 22.62~\\text{L/s}\n\\]\n\n\n2.4.3 Mass flow rate\n\\[\n\\dot{m} = \\rho \\cdot \\dot{v} = 850 \\cdot 0.02262 \\approx 19.227~\\text{kg/s} \\approx 1153.6~\\text{kg/min}\n\\]\n\n\n2.4.4 Final Answers\n\\[\n\\text{Volume flow rate: } \\dot{v} \\approx 22.6~\\text{L/s}\n\\] \\[\n\\text{Mass flow rate: } \\dot{m} \\approx 1154~\\text{kg/min}\n\\]\n\n\n2.4.5 Code\nimport math\nv = 2.0\nN = 16\nd = 0.03\nrho = 0.85 * 1000\nA = math.pi * d**2 / 4\nA_total = N * A\nv_dot_m3_s = A_total * v\nv_dot_L_s = v_dot_m3_s * 1000\nm_dot_kg_s = rho * v_dot_m3_s\nm_dot_kg_min = m_dot_kg_s * 60\nprint(f\"Volume flow rate: {v_dot_L_s:.2f} L/s\")\nprint(f\"Mass flow rate: {m_dot_kg_min:.2f} kg/min\")",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units</span>"
-    ]
-  },
-  {
-    "objectID": "si_units.html#gauge-pressure",
-    "href": "si_units.html#gauge-pressure",
-    "title": "2  SI Units",
-    "section": "2.5 Gauge Pressure",
-    "text": "2.5 Gauge Pressure\nAn oil of specific gravity (relative density) \\(\\text{SG} = 0.8\\) is contained in a vessel to a depth of \\(h = 2 \\text{ m}\\). Find the gauge pressure at this depth in kPa.\n\n2.5.1 Gauge Pressure\n\\[\nP_g = \\rho g h\n\\]\nwhere\n\\(\\rho = \\text{density of fluid (kg/m³)}\\)\ng= acceleration due to gravity (9.81 m/s²)\nh = depth (m)\n\n\n2.5.2 Compute the density of oil using specific gravity\nSpecific gravity is defined as\n\\[\n\\text{SG} = \\frac{\\rho_{\\text{oil}}}{\\rho_{\\text{water}}}\n\\]\nwhere \\(\\rho_{\\text{water}} = 1000 \\text{ kg/m³}\\). Thus,\n\\[\n\\rho_{\\text{oil}} = \\text{SG} \\times \\rho_{\\text{water}} = 0.8 \\times 1000 = 800\\ \\text{kg/m³}\n\\]\n\n\n2.5.3 Compute the gauge pressure\n\\[\nP_g = \\rho g h = 800 \\times 9.81 \\times 2\n\\]\n\\[\nP_g = 15696\\ \\text{Pa} \\approx 15.7\\ \\text{kPa}\n\\]\n\n\n2.5.4 Answer\nThe gauge pressure at a depth of 2 m in the oil is:\n\\[\n\\boxed{15.7\\ \\text{kPa}}\n\\]\n\n\n2.5.5 Code\n# Gauge Pressure Calculation for Oil\n\n# Given data\nspecific_gravity = 0.8  # SG of oil\ndepth_m = 2.0           # depth in meters\ng = 9.81                # acceleration due to gravity in m/s²\nrho_water = 1000        # density of water in kg/m³\n\n# Compute density of oil\nrho_oil = specific_gravity * rho_water\n\n# Compute gauge pressure (Pa)\nP_g_Pa = rho_oil * g * depth_m\n\n# Convert to kPa\nP_g_kPa = P_g_Pa / 1000\n\n# Print results\nprint(f\"Density of oil: {rho_oil:.1f} kg/m³\")\nprint(f\"Gauge pressure at {depth_m} m depth: {P_g_Pa:.1f} Pa ({P_g_kPa:.2f} kPa)\")",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units</span>"
-    ]
-  },
-  {
-    "objectID": "si_units.html#absolute-pressure-from-manometer-reading",
-    "href": "si_units.html#absolute-pressure-from-manometer-reading",
-    "title": "2  SI Units",
-    "section": "2.6 Absolute Pressure from Manometer Reading",
-    "text": "2.6 Absolute Pressure from Manometer Reading\nA water manometer shows a pressure in a vessel of \\(400\\ \\text{mm}\\) below atmospheric pressure. The atmospheric pressure is measured as \\(763\\ \\text{mmHg}\\). Determine the absolute pressure in the vessel in kPa.\n\n2.6.1 Relationship between absolute and gauge pressure\n\\[\nP_\\text{abs} = P_\\text{atm} + P_\\text{gauge}\n\\]\nSince the manometer shows a pressure below atmospheric, the gauge pressure is negative:\n\\[\nP_\\text{gauge} = - \\rho_\\text{water} g h\n\\]\n\n\n2.6.2 Convert atmospheric pressure to Pa using\n\\[\nP = \\rho g h = 13{,}600 \\cdot 9.81 \\cdot 0.001 = 133.416~\\text{Pa}\n\\]\nSo\n\\[\nP_\\text{atm} = 763 \\times 133.416 \\approx 101,801\\ \\text{Pa} \\approx 101.8\\ \\text{kPa}\n\\]\n\n\n2.6.3 Compute gauge pressure\nWater column height:\n\\[\nh = 400\\ \\text{mm} = 0.4\\ \\text{m}\n\\]\nDensity of water: \\(rho_\\text{water} = 1000\\ \\text{kg/m³}\\), \\(g = 9.81\\ \\text{m/s²}\\)\n\\[\nP_\\text{gauge} = - \\rho g h = - 1000 \\times 9.81 \\times 0.4\n\\]\n\\[\nP_\\text{gauge} = -3924\\ \\text{Pa} \\approx -3.92\\ \\text{kPa}\n\\]\n\n\n2.6.4 Compute absolute pressure\n\\[\nP_\\text{abs} = P_\\text{atm} + P_\\text{gauge} \\approx 101.8 - 3.92 \\approx 97.9\\ \\text{kPa}\n\\]\n\n\n2.6.5 Answer\nThe absolute pressure in the vessel is:\n\\[\n\\boxed{97.9\\ \\text{kPa}}\n\\]\n\n\n2.6.6 Code\n# Absolute Pressure Calculation from Water Manometer\n\n# Given data\nh_mm = 400               # manometer reading in mm (below atmospheric)\natm_mmHg = 763           # atmospheric pressure in mmHg\nrho_water = 1000         # density of water in kg/m³\ng = 9.81                 # gravity in m/s²\nmmHg_to_Pa = 133.416     # conversion factor\n\n# Convert manometer height to meters\nh_m = h_mm / 1000\n\n# Convert atmospheric pressure to Pa\nP_atm_Pa = atm_mmHg * mmHg_to_Pa\n\n# Gauge pressure (negative because below atmospheric)\nP_gauge_Pa = - rho_water * g * h_m\n\n# Absolute pressure\nP_abs_Pa = P_atm_Pa + P_gauge_Pa\n\n# Convert to kPa\nP_abs_kPa = P_abs_Pa / 1000\n\n# Print results\nprint(f\"Atmospheric pressure: {P_atm_Pa:.1f} Pa ({P_atm_Pa/1000:.1f} kPa)\")\nprint(f\"Gauge pressure: {P_gauge_Pa:.1f} Pa ({P_gauge_Pa/1000:.2f} kPa)\")\nprint(f\"Absolute pressure in the vessel: {P_abs_Pa:.1f} Pa ({P_abs_kPa:.2f} kPa)\")",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>SI Units</span>"
-    ]
-  },
-  {
-    "objectID": "SI_common_mistakes.html",
-    "href": "SI_common_mistakes.html",
-    "title": "Appendix A — SI System Common Mistakes",
-    "section": "",
-    "text": "Using the SI system correctly is crucial for clear communication in science and engineering. Below are common mistakes in using the SI system, examples of incorrect usage, and how to correct them.\n\nSI system rules and common mistakes\n\n\n\n\n\n\n\n\nConcept\nMistake\nCorrect Usage\nNotes\n\n\n\n\nUse of SI Unit Symbols\nm./s\nm/s\nUse the correct format without additional punctuation.\n\n\nSpacing Between Value & Unit\n10kg\n10 kg\nAlways leave a space between the number and the unit symbol.\n\n\nIncorrect Unit Symbols\nsec, hrs, °K\ns, h, K\nUse the proper SI symbols; symbols are case-sensitive.\n\n\nAbbreviations for Units\n5 kilograms (kgs)\n5 kilograms (kg)\nAvoid informal abbreviations like “kgs”; adhere to standard symbols.\n\n\nMultiple Units in Expressions\n5 m/s/s, 5 kg/meter²\n5 m/s², 5 kg/m²\nUse compact, standardized formats for derived units.\n\n\nIncorrect Use of Prefixes\n0.0001 km\n100 mm\nChoose prefixes to keep numbers in the range (0.1 x &lt; 1000).\n\n\nMisplaced Unit Symbols\n5/s, kg10\n5 s⁻¹, 10 kg\nSymbols must follow numerical values, not precede them.\n\n\nDegrees Celsius vs. Kelvin\n300°K\n300 K\nKelvin is written without “degree”\n\n\nSingular vs. Plural Units\n5 kgs, 1 meters\n5 kg, 1 meter\nSymbols do not pluralize; full unit names follow grammar rules.\n\n\nCapitalization of Symbols\nKg, S, Km, MA\nkg, s, km, mA\nSymbols are case-sensitive; use uppercase only where specified (e.g., N, Pa).\n\n\nCapitalization of Unit Names\nNewton, Pascal, Watt\nnewton, pascal, watt\nUnit names are lowercase, even if derived from a person’s name, unless starting a sentence.\n\n\nPrefix Capitalization\nMilliMeter, MegaWatt\nmillimeter, megawatt\nPrefixes are lowercase for (10^{-1}) to (10^{-9}), uppercase for (10^6) and larger (except k for kilo).\n\n\nFormatting in Reports\n5, Temperature: 300\n5 kg, Temperature: 300 K\nAlways specify units explicitly.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>SI System Common Mistakes</span>"
+      "Python Tutorial"
     ]
   },
   {
     "objectID": "greek_letters.html",
     "href": "greek_letters.html",
-    "title": "Appendix B — Greek Letters",
+    "title": "Appendix A — Greek Letters",
     "section": "",
     "text": "The following tables present the names of Greek letters and selected symbols commonly used in engineering courses, ensuring precise reference and avoiding reliance on informal descriptors such as “squiggle.”\n\nGreek letters.\n\n\nLower Case\nUpper Case\nName\n\n\n\n\n\\(\\alpha\\)\nA\nalpha\n\n\n\\(\\beta\\)\nB\nbeta\n\n\n\\(\\gamma\\)\n\\(\\Gamma\\)\ngamma\n\n\n\\(\\delta\\)\n\\(\\Delta\\)\ndelta\n\n\n\\(\\epsilon\\)\nE\nepsilon\n\n\n\\(\\zeta\\)\nZ\nzeta\n\n\n\\(\\eta\\)\nE\neta\n\n\n\\(\\theta\\)\n\\(\\Theta\\)\ntheta\n\n\n\\(\\iota\\)\nI\niota\n\n\n\\(\\kappa\\)\nK\nkappa\n\n\n\\(\\lambda\\)\n\\(\\Lambda\\)\nlambda\n\n\n\\(\\mu\\)\nM\nmu\n\n\n\\(\\nu\\)\nN\nnu\n\n\n\\(\\xi\\)\n\\(\\Xi\\)\nxi\n\n\n\\(\\omicron\\)\nO\nomicron\n\n\n\\(\\pi\\)\n\\(\\Pi\\)\npi\n\n\n\\(\\rho\\)\nP\nrho\n\n\n\\(\\sigma\\)\n\\(\\Sigma\\)\nsigma\n\n\n\\(\\tau\\)\nT\ntau\n\n\n\\(\\upsilon\\)\n\\(\\Upsilon\\)\nupsilon\n\n\n\\(\\phi\\)\n\\(\\Phi\\)\nphi\n\n\n\\(\\chi\\)\nX\nchi\n\n\n\\(\\psi\\)\n\\(\\Psi\\)\npsi\n\n\n\\(\\omega\\)\n\\(\\Omega\\)\nomega\n\n\n\n\nCommonly used symbols in engineering courses.\n\n\n\n\n\n\n\n\nSymbol\nName\nUse\nCourse\n\n\n\n\n\\(\\Delta\\)\nDelta\nChange\nThermodynamics\n\n\n\\(\\Delta\\)\nDelta\nDisplacement\nNaval Architecture\n\n\n\\(\\nabla\\)\nNabla\nVolume\nNaval Architecture\n\n\n\\(\\Sigma\\)\nSigma\nSum\nThermodynamics, Naval Architecture, Applied Mechanics\n\n\n\\(\\sigma\\)\nSigma\nStress\nThermodynamics, Applied Mechanics\n\n\n\\(\\epsilon\\)\nEpsilon\nModulus of elasticity\nThermodynamics, Applied Mechanics\n\n\n\\(\\eta\\)\nEta\nEfficiency\nThermodynamics\n\n\n\\(\\mu\\)\nMu\nFriction\nThermodynamics, Applied Mechanics\n\n\n\\(\\omega\\)\nOmega\nAngular velocity\nThermodynamics, Applied Mechanics\n\n\n\\(\\rho\\)\nRho\nDensity\nThermodynamics, Naval Architecture\n\n\n\\(\\tau\\)\nTau\nTorque\nThermodynamics, Applied Mechanics",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Greek Letters</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Greek Letters</span>"
+    ]
+  },
+  {
+    "objectID": "01statics.html",
+    "href": "01statics.html",
+    "title": "1  Statics",
+    "section": "",
+    "text": "1.1 Space Diagrams\nStatics is the branch of mechanics that analyzes bodies in equilibrium under the action of forces. This chapter examines cases where forces are in balance and presents methods for calculating resultant forces and their associated moments.\nA space diagram illustrates the geometry of the system and the applied forces.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statics</span>"
+    ]
+  },
+  {
+    "objectID": "01statics.html#space-diagrams",
+    "href": "01statics.html#space-diagrams",
+    "title": "1  Statics",
+    "section": "",
+    "text": "Figure 1.1: Space Diagram",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statics</span>"
+    ]
+  },
+  {
+    "objectID": "01statics.html#vector-diagrams",
+    "href": "01statics.html#vector-diagrams",
+    "title": "1  Statics",
+    "section": "1.2 Vector Diagrams",
+    "text": "1.2 Vector Diagrams\nA vector diagram (or force polygon) is a scaled graphical construction in which force vectors are placed head-to-tail in succession. It is used to determine the resultant of a system of forces through vector addition, as well as to resolve equilibrium problems when the polygon closes.\n\n\n\n\n\n\nFigure 1.2: Vector Diagram\n\n\n\n\n1.2.1 Resultant\nThe resultant is a single force that has exactly the same effect on an object as all the original forces acting together. It is found by adding the forces vectorially taking into account both their magnitude and direction. The resultant gives the overall direction and magnitude of the combined forces as shown in Figure 1.2.\n\n\n1.2.2 Equilibrium\nEquilibrium of an object occurs when all the forces acting on it are balanced, so the object remains at rest or moves at a constant speed in a straight line. In equilibrium, as shown in Figure 1.3, there is no net force or acceleration, meaning the object is in a stable state without any change in its motion.\n\n\n\n\n\n\nFigure 1.3: Equilibrant",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statics</span>"
+    ]
+  },
+  {
+    "objectID": "01statics.html#conditions-of-equilibrium",
+    "href": "01statics.html#conditions-of-equilibrium",
+    "title": "1  Statics",
+    "section": "1.3 Conditions of Equilibrium",
+    "text": "1.3 Conditions of Equilibrium\n\nNet force must be zero:\n\n\\[\n\\sum_{k} \\vec{F}_{k} = \\vec{0}\n\\tag{1.1}\\]\n\nNet torque must be zero:\n\n\\[\n\\sum_{k} \\vec{\\tau}_{k} = \\vec{0}\n\\tag{1.2}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statics</span>"
+    ]
+  },
+  {
+    "objectID": "01statics.html#cosine-rule",
+    "href": "01statics.html#cosine-rule",
+    "title": "1  Statics",
+    "section": "1.4 Cosine Rule",
+    "text": "1.4 Cosine Rule\n\n\n\n\n\n\nFigure 1.4: Rules of Cosine and Sine\n\n\n\nThe Cosine Rule is used to relate the lengths of the sides of a triangle as shown in Figure 1.4 to the cosine of one of its angles:\n\\[\nc^2 = a^2 + b^2 - 2ab\\cos \\gamma\n\\tag{1.3}\\]\nWhere:\n\na, b, c are the sides of the triangle.\n\\(\\gamma\\) is the angle opposite side c.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statics</span>"
+    ]
+  },
+  {
+    "objectID": "01statics.html#sine-rule",
+    "href": "01statics.html#sine-rule",
+    "title": "1  Statics",
+    "section": "1.5 Sine Rule",
+    "text": "1.5 Sine Rule\nThe Sine Rule relates the sides and angles of a triangle in Figure 1.4:\n\\[\n\\frac{a}{\\sin \\alpha} = \\frac{b}{\\sin \\beta} = \\frac{c}{\\sin \\gamma}\n\\tag{1.4}\\]\nWhere:\n\n\\(\\alpha\\), \\(\\beta\\), \\(\\gamma\\) are the angles of the triangle.\na, b, c are the sides of the triangle opposite to angles \\(\\alpha\\), \\(\\beta\\), \\(\\gamma\\) respectively.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statics</span>"
+    ]
+  },
+  {
+    "objectID": "01statics.html#problem-set",
+    "href": "01statics.html#problem-set",
+    "title": "1  Statics",
+    "section": "1.6 Problem Set",
+    "text": "1.6 Problem Set\n\nExample 1.1 Two slings of equal length are slung from a horizontal beam and connected to a ring at their lower ends, the slings and beam forming an equilateral triangle. Find the force in each sling when a load of 30 kN hangs from the ring.\n\n\n\n\n\n\nNote\n\n\n\nIn Python, the math module’s trigonometric functions (sin, cos, tan, etc.) expect angles in radians, not degrees. Always convert degrees to radians before using sin, cos, or tan in Python’s math module.\n\n\nimport math\n\n# Given\nload = 30  # kN\nangle_deg = 60  # each sling makes 60° loadith the horizontal\n\n# Convert angle to radians\nangle_rad = math.radians(angle_deg)\n\n# Vertical equilibrium: 2 * T * sin(angle) = load\nT = load / (2 * math.sin(angle_rad))\n\nprint(f\"Tension in each sling: {T:.4f} kN\")\n\n\nExample 1.2 Two identical slings of equal length are attached to a horizontal beam and meet at a ring from which a 45 kN load is suspended. The slings and the beam form an isosceles triangle in which each sling makes an angle of 50° with the horizontal. Find the force (tension) in each sling.\nimport math\n\n# Given\nload = 45      # kN\nangle_deg = 50 # degrees\n\n# Convert angle to radians\nangle_rad = math.radians(angle_deg)\n\n# Compute tension\nT = load / (2 * math.sin(angle_rad))\n\nprint(f\"Tension in each sling: {T:.4f} kN\")\n\n\nExample 1.3 Two lifting ropes are connected at their lower ends to a common shackle from which a load of 25 kN hangs. If the ropes make angles of 32° and 42° respectively to the vertical, find the tension in each rope.\nimport math\n\n# Given\nload = 25        # kN\ntheta1 = 32      # angle opposite T2\ntheta2 = 42      # angle opposite T1\ntheta3 = 180 - (theta1 + theta2)  # angle opposite load\n\n# Convert to radians\n\nt1 = math.radians(theta1)\nt2 = math.radians(theta2)\nt3 = math.radians(theta3)\n\n# Law of sines\n\nT1 = load * math.sin(t2) / math.sin(t3)  # tension in rope 1\nT2 = load * math.sin(t1) / math.sin(t3)  # tension in rope 2\n\nprint(f\"Tension in rope 1: {T1:.4f} kN\")\nprint(f\"Tension in rope 2: {T2:.4f} kN\")\n\n\nExample 1.4 The angle between the jib and vertical post of a jib crane is 40°, and the angle between the jib and tie is 45°. Find the force in the jib and tie when a load of 15 kN hangs from the crane head.\nimport math\n\n# Given\nload = 15  # kN\nangle_jib_vertical = 40  # degrees\nangle_jib_tie = 45       # degrees\n\n# Third angle in the force triangle\n\nangle_tie_load = 180 - angle_jib_vertical - angle_jib_tie  # degrees\n\n# Convert angles to radians for math.sin\n\nangle_jib_vertical_rad = math.radians(angle_jib_vertical)\nangle_jib_tie_rad = math.radians(angle_jib_tie)\nangle_tie_load_rad = math.radians(angle_tie_load)\n\n# Law of sines\n\nF_jib = load * math.sin(angle_tie_load_rad) / math.sin(angle_jib_tie_rad)\nF_tie = load * math.sin(angle_jib_vertical_rad) / math.sin(angle_jib_tie_rad)\n\n# Print results\nprint(f\"Force in jib: {F_jib:.4f} kN\")\nprint(f\"Force in tie: {F_tie:.4f} kN\")\n\n\nExample 1.5 The lengths of the vertical post, jib, and tie of a jib crane are 8, 13, and 9 m, respectively. Find the forces in the jib and tie when a load of 20 kN hangs from the crane head.\nimport math\n\n# Given\nP = 8   # post m\nJ = 13  # jib  m\nT = 9   # tie m\nW = 20  # load in kN\n\n# Law of Cosines\n\n# Angle opposite P (theta_p)\ntheta_p = math.acos((J**2 + T**2 - P**2) / (2 * J * T))\n\n# Angle opposite T (theta_t)\ntheta_t = math.acos((J**2 + P**2 - T**2) / (2 * J * P))\n\n# Angle opposite J (theta_j)\ntheta_j = math.pi - theta_p - theta_t\n\n# Law of Sines\n\nF_J = W * math.sin(theta_j) / math.sin(theta_p)  # force in jib\nF_T = W * math.sin(theta_t) / math.sin(theta_p)  # force in tie\n\n# Convert angles to degrees\n\ntheta_p_deg = math.degrees(theta_p)\ntheta_t_deg = math.degrees(theta_t)\ntheta_j_deg = math.degrees(theta_j)\n\nprint(f\"theta_p = {theta_p_deg:.4f} degrees\")\nprint(f\"theta_t = {theta_t_deg:.4f} degrees\")\nprint(f\"theta_j = {theta_j_deg:.4f} degrees\")\n\nprint()\nprint(f\"Force in jib (F_J): {F_J:.4f} kN\")\nprint(f\"Force in tie (F_T): {F_T:.4f} kN\")\n\n\nExample 1.6 A ship sailing due east at 18 knots runs into a 3-knot current moving 40° east of north. Find the resultant speed and direction of the ship.\n\n\n\n\n\n\nNote\n\n\n\nDegrees, Minutes, and Seconds (DMS) notation is widely used in navigation and surveying because decimal degrees alone often lack sufficient precision for small-scale positioning. On Earth’s surface:\n\n1° of latitude ≈ 111 km\n\n1′ (minute of arc) ≈ 1.85 km\n\n1″ (second of arc) ≈ 30 m\n\nThus, a position given as 40° 26′ 46″ N instantly conveys location to within tens of metres, whereas the equivalent decimal form, 40.44611°, is less intuitive at a glance despite being mathematically identical.\n\n\nimport math\n\n# Given\nship = 18          # knots (due east)\ncurrent = 3        # knots\nangle_deg = 50     # angle between ship's course and current (in degrees)\n\n# Convert to radians\n\nangle_rad = math.radians(angle_deg)\n\n# Law of Cosines\n\nR = math.sqrt(ship**2 + current**2 + 2*ship*current*math.cos(angle_rad))\n\n# Law of sines\n\ntheta_rad = math.asin((current * math.sin(angle_rad)) / R)\ntheta_deg = math.degrees(theta_rad)\n\n# Convert direction to degrees, minutes, seconds\n\ndeg = int(theta_deg)\nminutes_float = (theta_deg - deg) * 60\nminutes = int(minutes_float)\nseconds = (minutes_float - minutes) * 60\n\nprint(f\"Resultant speed: {R:.4f} knots\")\nprint(f\"Direction: {theta_deg:.4f}° north of east\")\nprint(f\"Direction (DMS): {deg}° {minutes}' {seconds:.0f}\\\" north of east\")",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statics</span>"
     ]
   }
 ]

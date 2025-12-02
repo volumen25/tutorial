@@ -1,4 +1,4 @@
-# Python Tutorial {#sec-tutorial-basic}
+# Python Tutorial {.unnumbered}
 
 This tutorial introduces Python programming, covering basic concepts with examples to illustrate key points. We will start by using Python as a calculator, then explore variables, functions, and control flow.
 
@@ -270,6 +270,10 @@ print(math.log(100, 10))  # Logarithm of 100 with base 10: 2.0
 
 The `math` module provides `math.radians()` to convert degrees to radians and `math.degrees()` to convert radians to degrees, which is useful for trigonometric calculations.
 
+::: {.callout-warning}
+In Python, the math module’s trigonometric functions (sin, cos, tan, etc.) expect angles in radians, not degrees. Always convert degrees to radians before using sin, cos, or tan in Python’s math module.
+:::
+
 ``` python
 import math
 degrees = 180
@@ -313,17 +317,4 @@ Logarithm of 100 with base 10 is: 2.0
 
 ## Summary
 
-This tutorial covered Python basics, including syntax, variables, data types, operations, control flow, and functions. Python’s rich ecosystem includes libraries like:
-
--   **NumPy**: For numerical computations and array manipulations.
--   **Matplotlib**: For data visualization and plotting.
--   **Pandas**: For data manipulation and analysis with tabular data structures.
--   **Pint**: For handling physical quantities and performing unit conversions.
-
-You can explore these libraries to enhance your Python programming skills further. For example installing them can be done using `pip`:
-
-``` bash
-pip install numpy matplotlib pandas pint
-```
-
-`pip` is Python’s package manager for installing and managing additional libraries.
+This tutorial covered Python basics, including syntax, variables, data types, operations, control flow, and functions. [python-fiddle.com](https://python-fiddle.com/), is an easy-to-use online editor that lets you experiment with Python instantly and solve your problem sets effortlessly. Simply copy the code examples provided to check your work. 

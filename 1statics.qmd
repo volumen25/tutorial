@@ -214,7 +214,6 @@ Equilibrium of an object occurs when all the forces acting on it are balanced, s
 
 ![Equilibrant](images/vectordia-equilibrant.png){#fig-equilibrant width="50%"}
 
-
 Conditions of equilibrium:
 
 1.  Net force must be zero:
@@ -236,7 +235,7 @@ A sling is a device or assembly of ropes, cables, or straps used to support and 
 ::: {#exm-sling}
 A 200 kg mass is suspended as shown in @fig-sling. Rope A is attached to a beam in two places and is passed through a ring that rest naturally at the centre of rope A. Rope B is attached to the bottom of the ring, and to the 200 kg mass.
 
-![A 200 kg suspended mass.](images/sling.png){#fig-sling width="50%}
+![A 200 kg suspended mass.](images/sling.png){#fig-sling width="\"50%"}
 
 a.  What is the tension in rope B?
 b.  Draw a free body diagram of the forces exerted on the ring.
@@ -309,24 +308,22 @@ When a load is hung directly from the crane head, solving for forces involves a 
 ::: {#exm-jib_page12}
 The angle between the jib and the vertical post of a jib crane is 42°, and the angle between the tie and the jib is 36°. Determine the forces in the jib and the tie when a mass of 3.822 × 10³ kg is suspended from the crane head.
 
-![Jib Crane](images/jib_page12.pdf){#fig-jib_page12 width="75%}
+![Jib Crane](images/jib_page12.pdf){#fig-jib_page12 width="\"75%"}
 
+The angle between the **jib** and the **vertical post** is $42^\circ$, and the angle between the **tie** and the **jib** is $36^\circ$.
 
-The angle between the **jib** and the **vertical post** is $42^\circ$, and the angle between the **tie** and the **jib** is $36^\circ$.  
-
-A load of $3.822\times10^3\ \mathrm{kg}$ (that is, $W = 37.4938\ \mathrm{kN}$) is suspended from the crane head at point $A$.  
-
+A load of $3.822\times10^3\ \mathrm{kg}$ (that is, $W = 37.4938\ \mathrm{kN}$) is suspended from the crane head at point $A$.
 
 Find the **pull in the tie (AC)** and the **thrust in the jib (BC)**.
 
 Let the geometry of the crane form a triangle $ABC$, where:
 
-- $AB$ is the **load** $W = 37.4938\ \mathrm{kN}$,
-- $\angle B = 42^\circ$,
-- $\angle C = 36^\circ$,
-- hence $\angle A = 180^\circ - (42^\circ + 36^\circ) = 102^\circ.$
+-   $AB$ is the **load** $W = 37.4938\ \mathrm{kN}$,
+-   $\angle B = 42^\circ$,
+-   $\angle C = 36^\circ$,
+-   hence $\angle A = 180^\circ - (42^\circ + 36^\circ) = 102^\circ.$
 
-![Jib Crane Vector Diagram](images/jib_page12_vectors.pdf){#fig-jib_page12_vectors width="75%}
+![Jib Crane Vector Diagram](images/jib_page12_vectors.pdf){#fig-jib_page12_vectors width="\"75%"}
 
 Using the **law of sines**:
 
@@ -334,7 +331,7 @@ $$
 \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C},
 $$
 
-where  
+where\
 $a = BC$ (jib), $b = CA$ (tie), and $c = AB = W$.
 
 Then:
@@ -365,8 +362,7 @@ $$
 \boxed{\text{Thrust in jib (BC)} = 62.39\ \mathrm{kN}}
 $$
 
-
-**Notes**  
+**Notes**\
 The tie (AC) is in **tension**, while the jib (BC) is in **compression**.
 :::
 

@@ -1,0 +1,266 @@
+# Statics {#statics}
+
+Statics is the branch of mechanics that analyzes bodies in equilibrium under the action of forces. This chapter examines cases where forces are in balance and presents methods for calculating resultant forces and their associated moments.
+
+## Space Diagrams
+
+A space diagram illustrates the geometry of the system and the applied forces.
+
+![Space Diagram](images/spacedia.png){#fig-spacedia width="75%"}
+
+## Vector Diagrams
+
+A vector diagram (or force polygon) is a **scaled** graphical construction in which force vectors are placed head-to-tail in succession. It is used to determine the resultant of a system of forces through vector addition, as well as to resolve equilibrium problems when the polygon closes.
+
+![Vector Diagram](images/vectordia.png){#fig-vectordia}
+
+### Resultant
+
+The resultant is a single force that has exactly the same effect on an object as all the original forces acting together. It is found by adding the forces vectorially taking into account both their magnitude and direction. The resultant gives the overall direction and magnitude of the combined forces as shown in @fig-vectordia.
+
+### Equilibrium
+
+Equilibrium of an object occurs when all the forces acting on it are balanced, so the object remains at rest or moves at a constant speed in a straight line. In equilibrium, as shown in @fig-equilibrant, there is no net force or acceleration, meaning the object is in a stable state without any change in its motion.
+
+![Equilibrant](images/vectordia-equilibrant.png){#fig-equilibrant}
+
+## Conditions of Equilibrium
+
+1.  Net force must be zero:
+
+$$
+\sum_{k} \vec{F}_{k} = \vec{0}
+$$ {#eq-force}
+
+2.  Net torque must be zero:
+
+$$
+\sum_{k} \vec{\tau}_{k} = \vec{0}
+$$ {#eq-torque}
+
+## Cosine Rule
+
+![Rules of Cosine and Sine](images/sinecosrule.png){#fig-law_cos_sine}
+
+The Cosine Rule\index{Cosine rule} is used to relate the lengths of the sides of a triangle as shown in @fig-law_cos_sine to the cosine of one of its angles:
+
+$$
+c^2 = a^2 + b^2 - 2ab\cos \gamma
+$$ {#eq-cos}
+
+Where:
+
+-   a, b, c are the sides of the triangle.
+
+-   $\gamma$ is the angle opposite side c.
+
+## Sine Rule
+
+The Sine Rule\index{Sine rule} relates the sides and angles of a triangle in @fig-law_cos_sine:
+
+$$
+\frac{a}{\sin \alpha} = \frac{b}{\sin \beta} = \frac{c}{\sin \gamma}
+$$ {#eq-sine}
+
+Where:
+
+-   $\alpha$, $\beta$, $\gamma$ are the angles of the triangle.
+
+-   a, b, c are the sides of the triangle opposite to angles $\alpha$, $\beta$, $\gamma$ respectively.
+
+## Problem Set
+
+:::: {#exm-1_6}
+Two slings of equal length are slung from a horizontal beam and connected to a ring at their lower ends, the slings and beam forming an equilateral triangle. Find the force in each sling when a load of 30 kN hangs from the ring.
+
+::: callout-note
+In Python, the math module’s trigonometric functions (sin, cos, tan, etc.) expect angles in radians, not degrees. Always convert degrees to radians before using sin, cos, or tan in Python’s math module.
+:::
+
+``` python
+import math
+
+# Given
+load = 30  # kN
+angle_deg = 60  # each sling makes 60° loadith the horizontal
+
+# Convert angle to radians
+angle_rad = math.radians(angle_deg)
+
+# Vertical equilibrium: 2 * T * sin(angle) = load
+T = load / (2 * math.sin(angle_rad))
+
+print(f"Tension in each sling: {T:.4f} kN")
+```
+::::
+
+::: {#exm-isosceles}
+Two identical slings of equal length are attached to a horizontal beam and meet at a ring from which a 45 kN load is suspended. The slings and the beam form an isosceles triangle in which each sling makes an angle of 50° with the horizontal. Find the force (tension) in each sling.
+
+``` python
+import math
+
+# Given
+load = 45      # kN
+angle_deg = 50 # degrees
+
+# Convert angle to radians
+angle_rad = math.radians(angle_deg)
+
+# Compute tension
+T = load / (2 * math.sin(angle_rad))
+
+print(f"Tension in each sling: {T:.4f} kN")
+```
+:::
+
+::: {#exm-1_7}
+Two lifting ropes are connected at their lower ends to a common shackle from which a load of 25 kN hangs. If the ropes make angles of 32° and 42° respectively to the vertical, find the tension in each rope.
+
+``` python
+import math
+
+# Given
+load = 25        # kN
+theta1 = 32      # angle opposite T2
+theta2 = 42      # angle opposite T1
+theta3 = 180 - (theta1 + theta2)  # angle opposite load
+
+# Convert to radians
+
+t1 = math.radians(theta1)
+t2 = math.radians(theta2)
+t3 = math.radians(theta3)
+
+# Law of sines
+
+T1 = load * math.sin(t2) / math.sin(t3)  # tension in rope 1
+T2 = load * math.sin(t1) / math.sin(t3)  # tension in rope 2
+
+print(f"Tension in rope 1: {T1:.4f} kN")
+print(f"Tension in rope 2: {T2:.4f} kN")
+```
+:::
+
+::: {#exm-1_10}
+The angle between the jib and vertical post of a jib crane is 40°, and the angle between the jib and tie is 45°. Find the force in the jib and tie when a load of 15 kN hangs from the crane head.
+
+``` python
+import math
+
+# Given
+load = 15  # kN
+angle_jib_vertical = 40  # degrees
+angle_jib_tie = 45       # degrees
+
+# Third angle in the force triangle
+
+angle_tie_load = 180 - angle_jib_vertical - angle_jib_tie  # degrees
+
+# Convert angles to radians for math.sin
+
+angle_jib_vertical_rad = math.radians(angle_jib_vertical)
+angle_jib_tie_rad = math.radians(angle_jib_tie)
+angle_tie_load_rad = math.radians(angle_tie_load)
+
+# Law of sines
+
+F_jib = load * math.sin(angle_tie_load_rad) / math.sin(angle_jib_tie_rad)
+F_tie = load * math.sin(angle_jib_vertical_rad) / math.sin(angle_jib_tie_rad)
+
+# Print results
+print(f"Force in jib: {F_jib:.4f} kN")
+print(f"Force in tie: {F_tie:.4f} kN")
+```
+:::
+
+::: {#exm-1_11}
+The lengths of the vertical post, jib, and tie of a jib crane are 8, 13, and 9 m, respectively. Find the forces in the jib and tie when a load of 20 kN hangs from the crane head.
+
+``` python
+import math
+
+# Given
+P = 8   # post m
+J = 13  # jib  m
+T = 9   # tie m
+W = 20  # load in kN
+
+# Law of Cosines
+
+# Angle opposite P (theta_p)
+theta_p = math.acos((J**2 + T**2 - P**2) / (2 * J * T))
+
+# Angle opposite T (theta_t)
+theta_t = math.acos((J**2 + P**2 - T**2) / (2 * J * P))
+
+# Angle opposite J (theta_j)
+theta_j = math.pi - theta_p - theta_t
+
+# Law of Sines
+
+F_J = W * math.sin(theta_j) / math.sin(theta_p)  # force in jib
+F_T = W * math.sin(theta_t) / math.sin(theta_p)  # force in tie
+
+# Convert angles to degrees
+
+theta_p_deg = math.degrees(theta_p)
+theta_t_deg = math.degrees(theta_t)
+theta_j_deg = math.degrees(theta_j)
+
+print(f"theta_p = {theta_p_deg:.4f} degrees")
+print(f"theta_t = {theta_t_deg:.4f} degrees")
+print(f"theta_j = {theta_j_deg:.4f} degrees")
+
+print()
+print(f"Force in jib (F_J): {F_J:.4f} kN")
+print(f"Force in tie (F_T): {F_T:.4f} kN")
+```
+:::
+
+:::: {#exm-1_15}
+A ship sailing due east at 18 knots runs into a 3-knot current moving 40° east of north. Find the resultant speed and direction of the ship.
+
+::: callout-note
+Degrees, Minutes, and Seconds (DMS) notation is widely used in navigation and surveying because decimal degrees alone often lack sufficient precision for small-scale positioning. On Earth’s surface:
+
+-   1° of latitude ≈ 111 km\
+-   1′ (minute of arc) ≈ 1.85 km\
+-   1″ (second of arc) ≈ 30 m
+
+Thus, a position given as 40° 26′ 46″ N instantly conveys location to within tens of metres, whereas the equivalent decimal form, 40.44611°, is less intuitive at a glance despite being mathematically identical.
+:::
+
+``` python
+import math
+
+# Given
+ship = 18          # knots (due east)
+current = 3        # knots
+angle_deg = 50     # angle between ship's course and current (in degrees)
+
+# Convert to radians
+
+angle_rad = math.radians(angle_deg)
+
+# Law of Cosines
+
+R = math.sqrt(ship**2 + current**2 + 2*ship*current*math.cos(angle_rad))
+
+# Law of sines
+
+theta_rad = math.asin((current * math.sin(angle_rad)) / R)
+theta_deg = math.degrees(theta_rad)
+
+# Convert direction to degrees, minutes, seconds
+
+deg = int(theta_deg)
+minutes_float = (theta_deg - deg) * 60
+minutes = int(minutes_float)
+seconds = (minutes_float - minutes) * 60
+
+print(f"Resultant speed: {R:.4f} knots")
+print(f"Direction: {theta_deg:.4f}° north of east")
+print(f"Direction (DMS): {deg}° {minutes}' {seconds:.0f}\" north of east")
+```
+::::

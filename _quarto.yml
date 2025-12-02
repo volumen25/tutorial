@@ -26,7 +26,8 @@ book:
   chapters:    
     - index.qmd            
     - tutorial_basic.qmd
-    - si_units.qmd
+    - 01statics.qmd
+    # - si_units.qmd
     # - heat_work.qmd
     # - thermal_expansion.qmd
     # - heat_transfer.qmd
@@ -34,7 +35,7 @@ book:
     # - ic_engines.qmd
     # - ideal_cycles.qmd
   appendices:
-    - SI_common_mistakes.qmd
+    # - SI_common_mistakes.qmd
     - greek_letters.qmd
 
 
