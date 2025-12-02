@@ -10,8 +10,8 @@ website:
 book:
   title: "Tutorial"
   subtitle: "A Concise Introduction to Computational Tools"
-  author: "Serhat Beyenir"
-  date: today #today or last-modified
+  #author: "Serhat Beyenir"
+  #date: today #today or last-modified
   date-format: "D MMMM YYYY"
   cover-image: cover_qr.png
   sidebar:
