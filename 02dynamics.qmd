@@ -1,3 +1,128 @@
 # Dynamics {#dynamics}
 
 Dynamics is the branch of mechanics that studies the motion of bodies under the action of forces. This chapter examines situations where forces produce acceleration, and it presents methods for analyzing the resulting motion, including the application of Newton’s laws, energy principles, and momentum conservation.
+
+::: {#exm-river}
+A boat is rowed at **6 km/h** perpendicular to a river flowing at **4 km/h**. The river is **50 meters** wide. How far downstream will the boat reach the opposite bank? What is the boat’s actual velocity (magnitude and direction)?
+
+We treat this as vector addition: the boat's rowing velocity across the river and the river's current velocity downstream.
+
+Given
+
+-   Boat speed across: $v_b = 6\ \text{km/h}$
+
+-   River current speed: $v_c = 4\ \text{km/h}$
+
+-   River width: $w = 50\ \text{m}$
+
+Convert speeds to m/s:
+
+$$
+1\ \text{km/h} = \frac{1000}{3600} = 0.277777\ \text{m/s}
+$$
+
+$$
+v_b = 6 \times 0.277777 = 1.6666667\ \text{m/s}
+$$
+
+$$
+v_c = 4 \times 0.277777 = 1.1111111\ \text{m/s}
+$$
+
+Time to cross the river
+
+$$
+t = \frac{w}{v_b} = \frac{50}{1.6666667} = 30\ \text{s}
+$$
+
+Downstream drift
+
+$$
+\text{drift} = v_c \times t = 1.1111111 \times 30 = 33.3333\ \text{m}
+$$
+
+Actual velocity magnitude $$
+v = \sqrt{v_b^2 + v_c^2} = 2.00308\ \text{m/s}
+$$
+
+Direction (downstream from perpendicular)
+
+$$
+\theta = \tan^{-1}\!\left( \frac{v_c}{v_b} \right) = 33.69
+$$
+
+``` python
+import math
+
+# Given
+boat_speed_kmh = 6      # km/h (perpendicular to river)
+current_speed_kmh = 4   # km/h (downstream)
+width = 50              # meters (river width)
+
+# Convert speeds to m/s
+
+boat_speed = boat_speed_kmh * 1000 / 3600
+current_speed = current_speed_kmh * 1000 / 3600
+
+# Time to cross
+
+t = width / boat_speed
+
+# Downstream drift
+
+drift = current_speed * t
+
+# Actual velocity (magnitude)
+
+v_actual = math.sqrt(boat_speed**2 + current_speed**2)
+
+# Convert to km/h
+
+v_actual_kmh = v_actual * 3.6
+
+# Direction (downstream from perpendicular)
+
+theta_deg = math.degrees(math.atan(current_speed / boat_speed))
+
+print(f"Time to cross: {t:.2f} s")
+print(f"Downstream drift: {drift:.2f} m")
+print(f"Actual speed: {v_actual:.2f} m/s ({v_actual_kmh:.2f} km/h)")
+print(f"Direction: {theta_deg:.2f} degrees downstream")
+```
+:::
+
+::: {#exm-ships}
+Two ships are moving toward each other in still water. Ship 1 is **310 meters long** and travelling at **22 knots**, while Ship 2 is **350 meters long** and travelling at **19 knots**. Calculate the time it takes for the ships to completely pass each other..
+
+``` python
+import math
+
+# Given
+
+length1 = 310   # meters (Ship 1)
+length2 = 350   # meters (Ship 2)
+speed1 = 22     # knots
+speed2 = 19     # knots
+
+# Total distance to be closed (sum of lengths)
+
+distance_m = length1 + length2  # meters
+
+# Convert meters to nautical miles
+
+distance_nm = distance_m / 1852
+
+# Relative (closing) speed in knots
+
+speed_rel = speed1 + speed2
+
+# Time in hours
+
+time_hours = distance_nm / speed_rel
+
+# Convert to seconds
+time_seconds = time_hours * 3600
+
+print(f"Time for the ships to pass each other: {time_seconds:.2f} seconds")
+```
+:::
