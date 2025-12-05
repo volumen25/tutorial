@@ -190,6 +190,76 @@
     ]
   },
   {
+    "objectID": "kinematics.html",
+    "href": "kinematics.html",
+    "title": "2  Kinematics",
+    "section": "",
+    "text": "2.1 Linear Motion Definitions",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Kinematics</span>"
+    ]
+  },
+  {
+    "objectID": "kinematics.html#linear-motion-definitions",
+    "href": "kinematics.html#linear-motion-definitions",
+    "title": "2  Kinematics",
+    "section": "",
+    "text": "\\(\\textbf{Speed} (v)\\): The scalar measure of the rate of change of distance. Mathematically, \\[\n  v = \\frac{d}{t}\n  \\] where (d) is distance and (t) is time.\n\\(\\textbf{Velocity} (\\vec{v})\\): The vector measure of the rate of change of displacement. It is given by: \\[\n  \\vec{v} = \\frac{\\Delta \\vec{x}}{\\Delta t}\n  \\] where \\(\\Delta \\vec{x}\\) is the displacement vector and \\(\\Delta t\\) is the time interval.\n\\(\\textbf{Acceleration} (\\vec{a})\\): The rate of change of velocity with respect to time. It is defined as: \\[\n  \\vec{a} = \\frac{\\Delta \\vec{v}}{\\Delta t}\n  \\]\n\n\nExample 2.1 A ship’s engines are stopped when travelling at a speed of 18 knots, and the ship comes to rest after 20 min. Assuming uniform deceleration, find the deceleration (m/s²) and the distance travelled in nautical miles in that time.\nimport math\n\n# Given\n\nv_knots = 18           # initial speed in knots\nt_minutes = 20         # time to stop in minutes\nkn_to_ms = 0.5144      # conversion factor (m/s per knot)\nnmi_in_m = 1852        # meters in a nautical mile\n\n# Convert units\n\nvi = v_knots * kn_to_ms      # initial speed in m/s\nvf = 0                       # final speed\nt = t_minutes * 60           # seconds\n\n# Deceleration (positive magnitude)\n\ndeceleration = (vi - vf) / t     # m/s^2\n\n# Average velocity for uniform deceleration\n\nv_avg = (vi + vf) / 2            # m/s\n\n# Distance travelled\n\ns = v_avg * t                    # meters\ns_nmi = s / nmi_in_m             # nautical miles\n\nprint(f\"Deceleration: {deceleration:.6f} m/s^2\")\nprint(f\"Distance travelled: {s_nmi:.3f} nautical miles\")",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Kinematics</span>"
+    ]
+  },
+  {
+    "objectID": "kinematics.html#equations-of-motion-constant-acceleration",
+    "href": "kinematics.html#equations-of-motion-constant-acceleration",
+    "title": "2  Kinematics",
+    "section": "2.2 Equations of Motion (Constant Acceleration)",
+    "text": "2.2 Equations of Motion (Constant Acceleration)\n\\[\n\\vec{v} = \\vec{u} + \\vec{a}t\n\\]\n\\[\n\\vec{s} = \\frac{\\vec{u}+\\vec{v}}{2}t\n\\]\n\\[\n\\vec{s} = \\vec{u}t + \\frac{1}{2}\\vec{a}t^2\n\\]\n\\[\n\\vec{v}^2 = \\vec{u}^2 + 2\\vec{a} \\cdot \\vec{s}\n\\]\nwhere:\n\n\\(\\vec{u}\\): Initial velocity\n\\(\\vec{v}\\): Final velocity\n\\(\\vec{s}\\): Displacement\n\\(\\vec{a}\\): Acceleration\n\\(t\\): Time\n\n\nExample 2.2 A ship’s propellers are stopped when travelling at 25 knots. From that point, it travels 4 kilometres before coming to a complete stop. Calculate the time it takes to stop in minutes and the average deceleration in m/s².\n# Given\n\nu_knots = 25          # initial speed in knots\nv_knots = 0           # final speed in knots\ns_m = 4000            # stopping distance in meters\nkn_to_ms = 0.5144     # conversion factor knots to m/s\n\n# Convert to m/s\n\nu = u_knots * kn_to_ms\nv = v_knots * kn_to_ms\n\n# Average deceleration (from s = 1/2*(u+v)*t)\n\nt = (2 * s_m) / (u + v)\n\n# Deceleration using v = u - a*t\n\na = (u - v) / t        \n\n# Convert time to minutes\n\nt_minutes = t / 60\n\nprint(f\"Average deceleration: {a:.5f} m/s²\")\nprint(f\"Time to stop: {t_minutes:.2f} minutes\")",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Kinematics</span>"
+    ]
+  },
+  {
+    "objectID": "kinematics.html#angular-motion-definitions",
+    "href": "kinematics.html#angular-motion-definitions",
+    "title": "2  Kinematics",
+    "section": "2.3 Angular Motion Definitions",
+    "text": "2.3 Angular Motion Definitions\n\n\\(\\textbf{Angular Displacement} (\\theta)\\): The angle through which an object rotates, measured in radians.\n\n\\(\\textbf{Angular Velocity} (\\omega)\\): The rate of change of angular displacement. Mathematically: \\[\n    \\omega = \\frac{\\Delta \\theta}{\\Delta t}\n    \\] \\[\n\\omega (rad/s) =2\\pi n \\:where\\:n=speed\\:in\\:rev/s\n\\]\n\\(\\textbf{Angular Acceleration} (\\alpha)\\): The rate of change of angular velocity with respect to time: \\[\n     \\alpha = \\frac{\\Delta \\omega}{\\Delta t}\n     \\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Kinematics</span>"
+    ]
+  },
+  {
+    "objectID": "kinematics.html#equations-of-angular-motion-constant-angular-acceleration",
+    "href": "kinematics.html#equations-of-angular-motion-constant-angular-acceleration",
+    "title": "2  Kinematics",
+    "section": "2.4 Equations of Angular Motion (Constant Angular Acceleration)",
+    "text": "2.4 Equations of Angular Motion (Constant Angular Acceleration)\n\\[\n\\omega_2 = \\omega_1 \\mp \\alpha t\n\\]\n\\[\n\\theta = \\frac{\\omega_1+\\omega_2}{2}t\n\\]\n\\[\n\\theta = \\omega_1 t \\mp \\frac{1}{2}\\alpha t^2\n\\]\n\\[\n\\omega_2^2 = \\omega_1^2 \\mp 2\\alpha \\theta\n\\]\nwhere:\n\n\\(\\omega_1\\): Initial angular velocity (rad/s)\n\\(\\omega_2\\): Final angular velocity (rad/s)\n\\(\\theta\\) Angular displacement (rad)\n\\(\\alpha\\): Angular acceleration (rad/s2)\n\\(t\\): Time (s)\n\n\nExample 2.3 A shaft is rotating at 40 revolutions per minute (rev/min). It is uniformly decelerated at a rate of 0.017 rad/s² for 15 seconds. Calculate: 1. The angular velocity of the shaft at the end of 15 seconds (in rad/s and rev/min). 2. The total number of revolutions completed by the shaft during these 15 seconds.\nimport math\n\n# Given\n\nomega1_rpm = 40 # initial angular speed in rev/min\nalpha = -0.017  # angular acceleration (rad/s^2), (-) for deceleration\nt = 15          # time in seconds\n\n# Convert initial speed to rad/s\n\nomega1 = omega1_rpm * 2 * math.pi / 60  \n\n# Angular velocity after time t\n\nomega2 = omega1 + alpha * t              \n\n# Angular displacement during time t\n\ntheta = omega1 * t + 0.5 * alpha * t**2  \n\n# Convert angular displacement to revolutions\n\nrevolutions = theta / (2 * math.pi)\n\n# Convert omega2 to rpm\n\nomega2_rpm = omega2 * 60 / (2 * math.pi)\n\nprint(f\"Final angular velocity: {omega2:.4f} rad/s\")\nprint(f\"Final angular velocity: {omega2_rpm:.4f} rpm\")\nprint(f\"Angular displacement: {revolutions:.4f} revolutions\")",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Kinematics</span>"
+    ]
+  },
+  {
+    "objectID": "kinematics.html#relation-between-linear-and-angular-motion",
+    "href": "kinematics.html#relation-between-linear-and-angular-motion",
+    "title": "2  Kinematics",
+    "section": "2.5 Relation Between Linear and Angular Motion",
+    "text": "2.5 Relation Between Linear and Angular Motion\nThe relationship between linear and angular motion is described by the following equations:\n\\(s = r \\theta\\) (linear displacement \\(s\\) and angular displacement \\(\\theta\\)).\n\\(v = r \\omega\\) (linear velocity \\(v\\) and angular velocity \\(\\omega\\)).\n\\(a = r \\alpha\\) (linear acceleration \\(a\\) and angular acceleration \\(\\alpha\\)).\n\n2.5.1 Variables\n\n\\(v\\): Linear velocity, the rate of change of linear displacement \\((v = \\frac{ds}{dt})\\).\n\\(a\\): Linear acceleration, the rate of change of linear velocity \\((a = \\frac{dv}{dt})\\).\n\\(s\\): Linear displacement, the distance moved along the circular path.\n\\(r\\): Radius of the circular path.\n\\(\\omega\\): Angular velocity, the rate of change of angular displacement \\((\\omega = \\frac{d\\theta}{dt})\\).\n\\(\\alpha\\): Angular acceleration, the rate of change of angular velocity \\((\\alpha = \\frac{d\\omega}{dt})\\).\n\\(\\theta\\): Angular displacement, the angle swept by the radius in radians.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Kinematics</span>"
+    ]
+  },
+  {
+    "objectID": "kinematics.html#summary",
+    "href": "kinematics.html#summary",
+    "title": "2  Kinematics",
+    "section": "2.6 Summary",
+    "text": "2.6 Summary\n\nLinear motion is directly proportional to angular motion, with the radius (\\(r\\)) acting as the proportionality constant.\nUnits for the variables:\n\n\\(v\\): meters per second \\((m/s)\\),\n\\(a\\): meters per second squared \\((m/s^2)\\),\n\\(s\\): meters \\((m)\\),\n\\(r\\): meters \\((m)\\),\n\\(\\omega\\): radians per second \\((rad/s)\\),\n\\(\\alpha\\): radians per second squared \\((rad/s^2)\\),\n\\(\\theta\\): radians (\\(rad\\)).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Kinematics</span>"
+    ]
+  },
+  {
     "objectID": "greek_letters.html",
     "href": "greek_letters.html",
     "title": "Appendix A — Greek Letters",

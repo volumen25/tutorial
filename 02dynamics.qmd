@@ -2,6 +2,143 @@
 
 Dynamics is the branch of mechanics that studies the motion of bodies under the action of forces. This chapter examines situations where forces produce acceleration, and it presents methods for analyzing the resulting motion, including the application of Newton’s laws, energy principles, and momentum conservation.
 
+## Linear Motion
+
+$$
+\vec{v} = \vec{u} + \vec{a}t
+$$
+
+$$
+\vec{s} = \frac{\vec{u}+\vec{v}}{2}t
+$$
+
+$$
+\vec{s} = \vec{u}t + \frac{1}{2}\vec{a}t^2
+$$
+
+$$
+\vec{v}^2 = \vec{u}^2 + 2\vec{a} \cdot \vec{s}
+$$
+
+where:
+
+-   $\vec{u}$: Initial velocity
+-   $\vec{v}$: Final velocity
+-   $\vec{s}$: Displacement
+-   $\vec{a}$: Acceleration
+-   $t$: Time
+
+## Angular Motion
+
+$$
+\omega_2 = \omega_1 \mp \alpha t
+$$
+
+$$
+\theta = \frac{\omega_1+\omega_2}{2}t
+$$
+
+$$
+\theta = \omega_1 t \mp \frac{1}{2}\alpha t^2 
+$$
+
+$$
+\omega_2^2 = \omega_1^2 \mp 2\alpha \theta
+$$
+
+where:
+
+-   $\omega_1$: Initial angular velocity (rad/s)
+
+-   $\omega_2$: Final angular velocity (rad/s)
+
+-   $\theta$ Angular displacement (rad)
+
+-   $\alpha$: Angular acceleration (rad/s^2^)
+
+-   $t$: Time (s)
+
+## Relation Between Linear and Angular Motion
+
+The relationship between linear and angular motion is described by the following equations:
+
+$s = r \theta$ (linear displacement $s$ and angular displacement $\theta$).
+
+$v = r \omega$ (linear velocity $v$ and angular velocity $\omega$),
+
+$a = r \alpha$ (linear acceleration $a$ and angular acceleration $\alpha$).
+
+## Linear momentum
+
+$$
+Linear\ momentum = m \vec{v}
+$$
+
+Where:
+
+-   Linear momentum is in kg·m/s.
+
+-   $m$ is the mass of the object in kilograms.
+
+-   $\vec{v}$ is the velocity of the object in meters per second.
+
+## Angular momentum
+
+$$ \text{Angular momentum} = I \omega $$
+
+Where:
+
+-   $I$ is the moment of inertia in $m^4$.
+-   $\omega$ is the angular velocity in $rad/s$.
+
+## Moment of inertia
+
+$$ 
+I = m k^2 
+$$
+
+Where:
+
+-   $I$ is the moment of inertia in $m^4$.
+-   $m$ is the mass in $kg$.
+-   $k$ is the radius of gyration in $m$.
+
+## Turning moment
+
+$$ 
+\tau = I \alpha 
+$$
+
+Where:
+
+-   $\tau$ is the torque in $Nm$.
+-   $I$ is the moment of inertia in $m^4$.
+-   $\alpha$: Angular acceleration in $rad/s^2$.
+
+## Power by Torque
+
+$$
+P = \tau \cdot \omega
+$$
+
+Where:
+
+$P$ is the power in watts (W),
+
+$\tau$ is the torque in newton-meters (Nm), and
+
+$\omega$ is the angular velocity in radians per second (rad/s).
+
+## Kinetic Energy of Rotation
+
+$$
+\text{Rotational K.E.} = \frac{1}{2} I \omega^2
+$$ Where:
+
+-   $I$ is the moment of inertia in $m^4$.
+
+-   $\omega$ is the angular velocity in radians per second (rad/s).
+
 ::: {#exm-river}
 A boat is rowed at **6 km/h** perpendicular to a river flowing at **4 km/h**. The river is **50 meters** wide. How far downstream will the boat reach the opposite bank? What is the boat’s actual velocity (magnitude and direction)?
 

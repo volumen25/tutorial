@@ -20,13 +20,14 @@ book:
     collapse-level: 2
     pinned: false
   page-footer:
-    left: © 2025 <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+    #left: © 2025 <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
     right: |
       Built with <a href="https://quarto.org"> Quarto {{< version >}}</a>
   chapters:    
     - index.qmd            
     - tutorial_basic.qmd
     - 01statics.qmd
+    - kinematics.qmd
     # - si_units.qmd
     # - heat_work.qmd
     # - thermal_expansion.qmd

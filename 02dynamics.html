@@ -115,6 +115,123 @@ window.Quarto = {
 <section id="dynamics" class="level1">
 <h1>Dynamics</h1>
 <p>Dynamics is the branch of mechanics that studies the motion of bodies under the action of forces. This chapter examines situations where forces produce acceleration, and it presents methods for analyzing the resulting motion, including the application of Newton’s laws, energy principles, and momentum conservation.</p>
+<section id="linear-motion" class="level2">
+<h2 class="anchored" data-anchor-id="linear-motion">Linear Motion</h2>
+<p><span class="math display">\[
+\vec{v} = \vec{u} + \vec{a}t
+\]</span></p>
+<p><span class="math display">\[
+\vec{s} = \frac{\vec{u}+\vec{v}}{2}t
+\]</span></p>
+<p><span class="math display">\[
+\vec{s} = \vec{u}t + \frac{1}{2}\vec{a}t^2
+\]</span></p>
+<p><span class="math display">\[
+\vec{v}^2 = \vec{u}^2 + 2\vec{a} \cdot \vec{s}
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(\vec{u}\)</span>: Initial velocity</li>
+<li><span class="math inline">\(\vec{v}\)</span>: Final velocity</li>
+<li><span class="math inline">\(\vec{s}\)</span>: Displacement</li>
+<li><span class="math inline">\(\vec{a}\)</span>: Acceleration</li>
+<li><span class="math inline">\(t\)</span>: Time</li>
+</ul>
+</section>
+<section id="angular-motion" class="level2">
+<h2 class="anchored" data-anchor-id="angular-motion">Angular Motion</h2>
+<p><span class="math display">\[
+\omega_2 = \omega_1 \mp \alpha t
+\]</span></p>
+<p><span class="math display">\[
+\theta = \frac{\omega_1+\omega_2}{2}t
+\]</span></p>
+<p><span class="math display">\[
+\theta = \omega_1 t \mp \frac{1}{2}\alpha t^2
+\]</span></p>
+<p><span class="math display">\[
+\omega_2^2 = \omega_1^2 \mp 2\alpha \theta
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><p><span class="math inline">\(\omega_1\)</span>: Initial angular velocity (rad/s)</p></li>
+<li><p><span class="math inline">\(\omega_2\)</span>: Final angular velocity (rad/s)</p></li>
+<li><p><span class="math inline">\(\theta\)</span> Angular displacement (rad)</p></li>
+<li><p><span class="math inline">\(\alpha\)</span>: Angular acceleration (rad/s<sup>2</sup>)</p></li>
+<li><p><span class="math inline">\(t\)</span>: Time (s)</p></li>
+</ul>
+</section>
+<section id="relation-between-linear-and-angular-motion" class="level2">
+<h2 class="anchored" data-anchor-id="relation-between-linear-and-angular-motion">Relation Between Linear and Angular Motion</h2>
+<p>The relationship between linear and angular motion is described by the following equations:</p>
+<p><span class="math inline">\(s = r \theta\)</span> (linear displacement <span class="math inline">\(s\)</span> and angular displacement <span class="math inline">\(\theta\)</span>).</p>
+<p><span class="math inline">\(v = r \omega\)</span> (linear velocity <span class="math inline">\(v\)</span> and angular velocity <span class="math inline">\(\omega\)</span>),</p>
+<p><span class="math inline">\(a = r \alpha\)</span> (linear acceleration <span class="math inline">\(a\)</span> and angular acceleration <span class="math inline">\(\alpha\)</span>).</p>
+</section>
+<section id="linear-momentum" class="level2">
+<h2 class="anchored" data-anchor-id="linear-momentum">Linear momentum</h2>
+<p><span class="math display">\[
+Linear\ momentum = m \vec{v}
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p>Linear momentum is in kg·m/s.</p></li>
+<li><p><span class="math inline">\(m\)</span> is the mass of the object in kilograms.</p></li>
+<li><p><span class="math inline">\(\vec{v}\)</span> is the velocity of the object in meters per second.</p></li>
+</ul>
+</section>
+<section id="angular-momentum" class="level2">
+<h2 class="anchored" data-anchor-id="angular-momentum">Angular momentum</h2>
+<p><span class="math display">\[ \text{Angular momentum} = I \omega \]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(I\)</span> is the moment of inertia in <span class="math inline">\(m^4\)</span>.</li>
+<li><span class="math inline">\(\omega\)</span> is the angular velocity in <span class="math inline">\(rad/s\)</span>.</li>
+</ul>
+</section>
+<section id="moment-of-inertia" class="level2">
+<h2 class="anchored" data-anchor-id="moment-of-inertia">Moment of inertia</h2>
+<p><span class="math display">\[
+I = m k^2
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(I\)</span> is the moment of inertia in <span class="math inline">\(m^4\)</span>.</li>
+<li><span class="math inline">\(m\)</span> is the mass in <span class="math inline">\(kg\)</span>.</li>
+<li><span class="math inline">\(k\)</span> is the radius of gyration in <span class="math inline">\(m\)</span>.</li>
+</ul>
+</section>
+<section id="turning-moment" class="level2">
+<h2 class="anchored" data-anchor-id="turning-moment">Turning moment</h2>
+<p><span class="math display">\[
+\tau = I \alpha
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(\tau\)</span> is the torque in <span class="math inline">\(Nm\)</span>.</li>
+<li><span class="math inline">\(I\)</span> is the moment of inertia in <span class="math inline">\(m^4\)</span>.</li>
+<li><span class="math inline">\(\alpha\)</span>: Angular acceleration in <span class="math inline">\(rad/s^2\)</span>.</li>
+</ul>
+</section>
+<section id="power-by-torque" class="level2">
+<h2 class="anchored" data-anchor-id="power-by-torque">Power by Torque</h2>
+<p><span class="math display">\[
+P = \tau \cdot \omega
+\]</span></p>
+<p>Where:</p>
+<p><span class="math inline">\(P\)</span> is the power in watts (W),</p>
+<p><span class="math inline">\(\tau\)</span> is the torque in newton-meters (Nm), and</p>
+<p><span class="math inline">\(\omega\)</span> is the angular velocity in radians per second (rad/s).</p>
+</section>
+<section id="kinetic-energy-of-rotation" class="level2">
+<h2 class="anchored" data-anchor-id="kinetic-energy-of-rotation">Kinetic Energy of Rotation</h2>
+<p><span class="math display">\[
+\text{Rotational K.E.} = \frac{1}{2} I \omega^2
+\]</span> Where:</p>
+<ul>
+<li><p><span class="math inline">\(I\)</span> is the moment of inertia in <span class="math inline">\(m^4\)</span>.</p></li>
+<li><p><span class="math inline">\(\omega\)</span> is the angular velocity in radians per second (rad/s).</p></li>
+</ul>
 <div id="exm-river" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1</strong></span> A boat is rowed at <strong>6 km/h</strong> perpendicular to a river flowing at <strong>4 km/h</strong>. The river is <strong>50 meters</strong> wide. How far downstream will the boat reach the opposite bank? What is the boat’s actual velocity (magnitude and direction)?</p>
 <p>We treat this as vector addition: the boat’s rowing velocity across the river and the river’s current velocity downstream.</p>
@@ -218,6 +335,7 @@ v = \sqrt{v_b^2 + v_c^2} = 2.00308\ \text{m/s}
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Time for the ships to pass each other: </span><span class="sc">{</span>time_seconds<span class="sc">:.2f}</span><span class="ss"> seconds"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section>
 </section>
 
 </main>
