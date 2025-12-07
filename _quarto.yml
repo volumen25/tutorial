@@ -39,8 +39,8 @@ book:
     # - ideal_cycles.qmd
     - colophon.qmd
   appendices:
-    # - SI_common_mistakes.qmd
     - greek_letters.qmd
+    - SI_common_mistakes.qmd
 
 
 bibliography: references.bib

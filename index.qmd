@@ -1,3 +1,7 @@
 # Preface {.unnumbered}
 
-A Concise Introduction to Computational Tools presents a collection of tutorials based on lecture notes from classes, designed to give learners clear and essential insights into key topics. No previous programming experience is required. Each tutorial guides you step by step through the concepts with hands-on examples.
+A Concise Introduction to Computational Tools provides a series of tutorials derived from lecture notes, offering clear and focused guidance on essential topics. No prior programming experience is required.
+
+Students are expected to be comfortable with college-level mathematics and science and are strongly encouraged to consult reliable reference texts. The tutorials also assume working familiarity with either macOS or Microsoft Windows.
+
+For best results, these materials should be used on a laptop or desktop computer rather than a tablet or smartphone.

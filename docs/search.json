@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Tutorial",
     "section": "",
-    "text": "Preface\nA Concise Introduction to Computational Tools presents a collection of tutorials based on lecture notes from classes, designed to give learners clear and essential insights into key topics. No previous programming experience is required. Each tutorial guides you step by step through the concepts with hands-on examples.",
+    "text": "Preface\nA Concise Introduction to Computational Tools provides a series of tutorials derived from lecture notes, offering clear and focused guidance on essential topics. No prior programming experience is required.\nStudents are expected to be comfortable with college-level mathematics and science and are strongly encouraged to consult reliable reference texts. The tutorials also assume working familiarity with either macOS or Microsoft Windows.\nFor best results, these materials should be used on a laptop or desktop computer rather than a tablet or smartphone.",
     "crumbs": [
       "Preface"
     ]
@@ -24,7 +24,7 @@
     "href": "tutorial_basic.html",
     "title": "Python Tutorial",
     "section": "",
-    "text": "Requirements\nThis tutorial introduces Python programming, covering basic concepts with examples to illustrate key points. We will start by using Python as a calculator, then explore variables, functions, and control flow.\nTo follow this tutorial, the easiest way to get started is by using a web-based Python environment. This lets you write and run Python code right in your browser; no downloads or setup needed. I recommend python-fiddle.com, an easy-to-use online editor that lets you experiment with Python instantly and solve your problem sets effortlessly.\nIf you prefer working on your own computer, make sure you have Python(version 3.10 or later) installed. Python works on Windows, macOS, and Linux. You’ll also need a text editor or an Integrated Development Environment (IDE) to write your code. I recommend Positron, a beginner-friendly IDE with a built-in terminal, though other editors like VS Code or PyCharm are also great options.",
+    "text": "Requirements\nThis tutorial introduces Python programming, covering basic concepts with examples to illustrate key points. We will start by using Python as a calculator, then explore variables, functions, and control flow.\nTo follow this tutorial, the easiest way to get started is by using a web-based Python environment. This lets you write and run Python code right in your browser; no downloads or setup needed. I recommend python-fiddle.com, an easy-to-use online editor that lets you experiment with Python instantly and solve your problem sets effortlessly.\nIf you prefer working on your own computer, make sure you have Python (version 3.10 or later) installed. Python works on Windows, macOS, and Linux. You’ll also need a text editor or an Integrated Development Environment (IDE) to write your code. I recommend Positron, a beginner-friendly IDE with a built-in terminal, though other editors like VS Code or PyCharm are also good options.",
     "crumbs": [
       "Python Tutorial"
     ]
@@ -288,6 +288,17 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Greek Letters</span>"
+    ]
+  },
+  {
+    "objectID": "SI_common_mistakes.html",
+    "href": "SI_common_mistakes.html",
+    "title": "Appendix B — SI System Common Mistakes",
+    "section": "",
+    "text": "Using the SI system correctly is crucial for clear communication in science and engineering. Below are common mistakes in using the SI system, examples of incorrect usage, and how to correct them.\n\nSI system rules and common mistakes\n\n\n\n\n\n\n\n\nConcept\nMistake\nCorrect Usage\nNotes\n\n\n\n\nUse of SI Unit Symbols\nm./s\nm/s\nUse the correct format without additional punctuation.\n\n\nSpacing Between Value & Unit\n10kg\n10 kg\nAlways leave a space between the number and the unit symbol.\n\n\nIncorrect Unit Symbols\nsec, hrs, °K\ns, h, K\nUse the proper SI symbols; symbols are case-sensitive.\n\n\nAbbreviations for Units\n5 kilograms (kgs)\n5 kilograms (kg)\nAvoid informal abbreviations like “kgs”; adhere to standard symbols.\n\n\nMultiple Units in Expressions\n5 m/s/s, 5 kg/meter²\n5 m/s², 5 kg/m²\nUse compact, standardized formats for derived units.\n\n\nIncorrect Use of Prefixes\n0.0001 km\n100 mm\nChoose prefixes to keep numbers in the range (0.1 x &lt; 1000).\n\n\nMisplaced Unit Symbols\n5/s, kg10\n5 s⁻¹, 10 kg\nSymbols must follow numerical values, not precede them.\n\n\nDegrees Celsius vs. Kelvin\n300°K\n300 K\nKelvin is written without “degree”\n\n\nSingular vs. Plural Units\n5 kgs, 1 meters\n5 kg, 1 meter\nSymbols do not pluralize; full unit names follow grammar rules.\n\n\nCapitalization of Symbols\nKg, S, Km, MA\nkg, s, km, mA\nSymbols are case-sensitive; use uppercase only where specified (e.g., N, Pa).\n\n\nCapitalization of Unit Names\nNewton, Pascal, Watt\nnewton, pascal, watt\nUnit names are lowercase, even if derived from a person’s name, unless starting a sentence.\n\n\nPrefix Capitalization\nMilliMeter, MegaWatt\nmillimeter, megawatt\nPrefixes are lowercase for (10^{-1}) to (10^{-9}), uppercase for (10^6) and larger (except k for kilo).\n\n\nFormatting in Reports\n5, Temperature: 300\n5 kg, Temperature: 300 K\nAlways specify units explicitly.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>SI System Common Mistakes</span>"
     ]
   }
 ]
