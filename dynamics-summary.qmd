@@ -1,0 +1,128 @@
+# Dynamics Summary {#dynamics}
+
+## Inertia
+
+Inertia is the property of a body that resists any change in its state of motion and is directly proportional to its mass.\
+A net external force is required either to initiate motion from rest or to alter the velocity (magnitude or direction) of an existing velocity. The concept also appears in structural mechanics, where the resistance of a cross-section to bending is quantified by the second moment of area.
+
+## Momentum
+
+Linear momentum quantifies the amount of motion possessed by a body and is defined as the product of mass and velocity. Because of its dependence on mass, objects of large mass (e.g., ships) possess considerable momentum even at moderate speeds, requiring substantial force applied over significant time to stop or redirect them.
+
+## Newton’s Laws of Motion
+
+1.  **First Law (Law of Inertia)**\
+    A body remains at rest or continues in uniform rectilinear motion unless acted upon by a net external force.\
+    $$
+    \sum \vec{F} = 0 \quad \implies \quad \vec{v} = \text{constant}
+    $$
+
+2.  **Second Law (Law of Acceleration)**\
+    The net force acting on a body equals the rate of change of its linear momentum:\
+    $$
+    \vec{F} = m\vec{a}
+    $$
+
+3.  **Third Law (Action–Reaction)**\
+    For every action force there exists an equal and opposite reaction force:\
+    $$
+    \vec{F}_{\text{action}} = -\vec{F}_{\text{reaction}}
+    $$
+
+## Linear Momentum and Conservation
+
+Linear momentum is the vector quantity\
+$$
+\vec{p} = m\vec{v}
+$$ 
+
+In a closed system with zero net external force, the total linear momentum of the system is conserved. This principle is a direct consequence of Newton’s third law in collisions and also applies to continuous flows (e.g., water jets impinging on surfaces), where the force exerted on a target equals the rate of change of momentum of the fluid.
+
+## Angular Momentum
+
+Angular momentum is the moment of linear momentum about a chosen point or axis. For a rigid body rotating about a fixed axis it takes the form\
+$$
+\vec{L} = I \omega \quad \text{or} \quad L = m k^{2} \omega
+$$ 
+
+where $I = m k^{2}$ is the moment of inertia and $k$ is the radius of gyration.
+
+## Radius of Gyration
+
+The radius of gyration $k$ is the distance from the axis at which the entire mass of the body could be concentrated to produce the same moment of inertia.\
+- Small $k$: mass close to the axis → low rotational inertia (desirable for rapid speed changes).\
+- Large $k$: mass far from the axis → high rotational inertia (beneficial for energy storage in flywheels).
+
+## Turning Moment (Torque)
+
+By analogy with linear motion, torque $\tau$ is related to angular acceleration $\alpha$ through\
+$$
+\tau = I \alpha = m k^{2} \alpha
+$$ 
+
+This relation is derived from $\vec{F} = m\vec{a}$ and the kinematic link $a = r\alpha$.
+
+## Power Transmitted by Torque
+
+Power is the rate at which work is performed in rotation. For a constant torque,\
+$$
+P = \tau \omega = \tau \cdot 2\pi n
+$$ 
+
+where $\omega$ is angular velocity in rad/s and $n$ is rotational speed in revolutions per second. This is the fundamental relation used for shafts, propellers, and geared systems.
+
+## Kinetic Energy of Rotation
+
+Rotational kinetic energy is obtained by substituting $v = \omega k$ into the linear expression, yielding\
+$$
+KE_{\text{rot}} = \frac{1}{2} I \omega^{2} = \frac{1}{2} m k^{2} \omega^{2}
+$$ 
+
+This form is widely applied to flywheels, punching machines, and any system where rotational speed varies and energy is stored or released.
+
+## Practical Marine Engineering Examples
+
+### Inertia
+Large oil tankers (300 000 t deadweight) possess enormous mass inertia. Even after the main engine is stopped and reversed, the vessel continues ahead for 2–3 nautical miles (stopping distance) because an immense net force (from propeller thrust in reverse and hull resistance) is required to overcome the inertia.
+
+### Momentum – Ship Berthing
+When a 50 000 t bulk carrier approaches a quay at 0.15 m/s (typical maximum allowed berthing velocity), its linear momentum is approximately 7500 t·m/s. The fenders and bollards must absorb this momentum over the short stopping time (typically 10–15 s), resulting in very large reaction forces that dictate berth design.
+
+### Newton’s Laws in Marine Applications
+- First Law: A ship maintains constant speed and course on calm water with no net force (engine thrust = total resistance).
+- Second Law: During full astern crash-stop manoeuvres, the propeller delivers reverse thrust F, producing deceleration a = F/m that determines the tactical diameter and stopping distance.
+- Third Law: When a tug pushes a ship with force F, the ship exerts an equal and opposite force on the tug; this explains why powerful bow thrusters are needed on large vessels.
+
+### Conservation of Linear Momentum – Jet Propulsion and Waterjet Systems
+In waterjet propulsion, water is ejected rearward at high velocity. The forward force on the vessel equals the rate of change of momentum of the water:
+$$
+F = \dot{m} (v_{\text{jet}} - v_{\text{ship}})
+$$
+This principle governs thrust calculation for jet-driven ferries and high-speed catamarans.
+
+### Angular Momentum – Ship Steering and Gyroscopic Stabilisers
+- When a ship turns, the rudder produces a torque that changes the angular momentum of the entire vessel about a vertical axis.
+- Large cruise ships and warships use active gyroscopic stabilisers (Seakeeper, Mitsubishi Anti-Rolling Gyro). Conservation of angular momentum is exploited: the rapidly spinning flywheel precesses when the ship rolls, producing a counteracting torque that reduces roll by up to 95 %.
+
+### Radius of Gyration – Main Propulsion Shafting and Flywheels
+Marine diesel engines (especially low-speed two-stroke engines) have very long crankshafts with large radius of gyration. Torsional vibration calculations rely on accurate k values for the crankshaft, entrained water, and propeller to place barred speed ranges safely away from operating RPM.
+
+### Torque and Power Transmission – Shafting
+A typical 25 MW container ship shaft delivers torque:
+$$
+\tau = \frac{P}{\omega} = \frac{25 \times 10^6}{2\pi \times 95/60} \approx 2.5 \times 10^6 \, \text{N·m}
+$$
+This huge torque is transmitted through an intermediate shaft and propeller shaft of 600–800 mm diameter.
+
+### Rotational Kinetic Energy – Flywheel Effect of Propeller
+A large fixed-pitch propeller (25 t, k ≈ 0.4 × diameter) rotating at 100 rpm stores several megajoules of rotational kinetic energy. During crash-stop manoeuvres this energy must be dissipated, producing very high transient shaft torques that require robust thrust blocks and shaft brakes.
+
+### Turning Moment During Acceleration/Deceleration
+When a ship accelerates from 12 to 24 knots, the main engine must supply torque well above steady-state value:
+$$
+\tau = I \alpha + \tau_{\text{resistance}}
+$$
+where I includes the mass moment of inertia of the propeller + entrained water (often 2–3 times the physical propeller inertia).
+
+
+

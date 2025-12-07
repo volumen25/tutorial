@@ -215,3 +215,354 @@ Where:
 -   $I$ is the moment of inertia in $m^4$.
 -   $m$ is the mass in $kg$.
 -   $k$ is the radius of gyration in $m$.
+
+## The Radius of Gyration
+
+The radius of gyration is a geometric property of a rigid body or mass distribution that describes how the mass is distributed relative to an axis of rotation. It represents the effective distance from the axis at which the entire mass could be concentrated while producing the same moment of inertia as the actual distributed mass.
+
+In simpler terms, a smaller radius of gyration means the mass is closer to the axis, which is good for reducing inertia in rotating machinery. This is desirable in applications like engine crankshafts or turbine rotors where rapid changes in speed are required. A larger radius of gyration means the mass is farther from the axis, like a hollow cylinder has a larger k than a solid cylinder of the same mass and outer radius. This is beneficial when energy storage is needed (e.g., flywheels).
+
+::: {#exm-3-9}
+A flywheel of mass 500 kg and radius of gyration 1.2 m is running at 300 rev/min. By means of a clutch, this flywheel is suddenly connected to another flywheel, mass 2000 kg and radius of gyration 0.6 m, initially at rest. Calculate their common speed of rotation after engagement.
+
+``` python
+import math
+
+# Given data
+
+m1, k1 = 500, 1.2
+m2, k2 = 2000, 0.6
+rpm1 = 300
+
+# Moments of inertia
+
+I1 = m1 * k1**2
+I2 = m2 * k2**2
+
+# Convert rpm to rad/s
+
+omega1 = (rpm1 / 60) * 2 * math.pi
+
+# Conservation of angular momentum
+
+omega_f = (I1 * omega1) / (I1 + I2)
+
+# Convert rad/s to rpm
+
+rpm_f = (omega_f / (2 * math.pi)) * 60
+
+print(f"Final angular velocity (rad/s): {omega_f:.4f}")
+print(f"Final angular velocity (rpm): {rpm_f:.4f}")
+```
+:::
+
+## Turning Moment
+
+![Turning moment](images/turningmoment.png){width="4cm" height="3.3cm"}
+
+We know the relation between linear acceleration $a$ and angular acceleration $\alpha$:
+
+$$
+a = r \alpha
+$$
+
+And
+
+$$
+F = ma
+$$
+
+Therefore,
+
+$$
+F = m \alpha r
+$$
+
+If the force is not applied directly on the rim but at a greater or lesser leverage, say $L$ from the centre, the effective force on the rim causing it to accelerate will be greater or lesser accordingly, in the ratio of $L$ to $r$. Thus:
+
+$$
+F \frac{L}{r} = m \alpha r
+$$
+
+Multiplying both sides by $r$,
+
+$$
+FL = m \alpha r^2
+$$
+
+Now, $FL$ is the torque applied. Therefore, the accelerating torque is:
+
+$$
+\tau = m r^2 \alpha
+$$
+
+Or,
+
+$$
+\tau = m k^2 \alpha
+$$
+
+$\tau$ is also given by:
+
+$$
+\tau = I \alpha
+$$
+
+Where:
+
+-   $\tau$ is the torque in $Nm$.
+-   $I$ is the moment of inertia in $m^4$.
+-   $\alpha$: Angular acceleration in $rad/s^2$.
+
+::: {#exm-3-10}
+The mass of a flywheel is 175 kg and its radius of gyration is 380 mm. Find the torque required to attain a speed of 500 rev/min from rest in 30 s.
+
+``` python
+import math
+
+# Given
+m = 175                 # mass in kg
+k = 0.38                # radius of gyration in m
+rpm_final = 500         # final speed
+t = 30                  # time in seconds
+
+# Moment of inertia
+I = m * k**2
+
+# Convert rpm → rad/s
+omega_final = (rpm_final * 2 * math.pi) / 60
+
+# Angular acceleration
+alpha = omega_final / t
+
+# Torque
+tau = I * alpha
+
+print(f"Moment of inertia I (kg·m^2): {I:.4f}")
+print(f"Final angular velocity ω (rad/s): {omega_final:.4f}")
+print(f"Angular acceleration α (rad/s^2): {alpha:.4f}")
+print(f"Required torque τ (N·m): {tau:.4f}")
+```
+:::
+
+::: {#exm-3-11}
+The torque to overcome frictional and other resistances of a turbine is 317 N m and may be considered constant for all speeds. The mass of the rotating parts is 1.59 t and the radius of gyration is 0.686 m. If the gas is cut off when the turbine is running free of load at 1920 rev/min, find the time it will take to come to rest and the number of revolutions turned during that time.
+
+``` python
+import math
+
+# Given
+
+tau = 317.0           # N·m
+m = 1.59 * 1000       # kg
+k = 0.686             # m
+rpm0 = 1920.0         # rev/min
+
+
+I = m * k**2
+omega0 = (rpm0 / 60.0) * 2.0 * math.pi   # rad/s
+alpha = tau / I                          # rad/s^2
+t = omega0 / alpha                       # s
+theta = 0.5 * omega0 * t                 # rad
+revs = theta / (2.0 * math.pi)
+
+
+print(f"I (kg·m^2):           {I:.4f}")
+print(f"omega0 (rad/s):       {omega0:.4f}")
+print(f"alpha (rad/s^2):      {alpha:.6f}")
+print(f"time to stop (s):     {t:.4f}")
+print(f"time to stop (min):   {t/60:.4f}")
+print(f"revolutions:          {revs:.4f}")
+```
+:::
+
+## Power by Torque
+
+![A rotating mechanism.](images/powerbytorque.png){width="4cm"}
+
+Consider a force $F$ applied at a radius $r$ on a rotating mechanism, as shown above.
+
+The work done in one revolution is the product of the force and the circumference. Therefore:
+
+$$
+W = F \cdot 2 \pi r
+$$
+
+If the mechanism is running at $n$ revolutions per second:
+
+$$
+\text{Power} = F \cdot 2 \pi r n
+$$
+
+Since torque $\tau = F r$, we can rewrite the equation as:
+
+$$
+P = \tau \cdot 2 \pi n
+$$
+
+Given that $\omega = 2 \pi n$:
+
+$$
+P = \tau \cdot \omega
+$$
+
+Where:
+
+-   $P$ is the power in watts (W),
+-   $\tau$ is the torque in newton-meters (Nm), and
+-   $\omega$ is the angular velocity in radians per second (rad/s).
+
+::: {#exm-4-4}
+The mean torque in a propeller shaft is 2.26 x 10^5^ Nm when running at 140 rpm. Find the power transmitted.
+
+``` python
+import math
+
+# Given
+
+T = 2.26e5      # Nm
+rpm = 140
+
+omega = rpm * 2 * math.pi / 60
+P = T * omega
+
+print(f"Angular speed (rad/s): {omega:.4f}")
+print(f"Power (W): {P:.4f}")
+print(f"Power (MW): {P/1e6:.4f}")
+```
+:::
+
+::: {#exm-4-6}
+One gear wheel with 100 teeth of 6 mm pitch running at 250 revlmin drives another which has 50 teeth. If the power transmitted is 0.5 kW, find the driving force on the teeth and the speed of the driven wheel.
+
+```python
+import math
+
+# Given
+
+N1 = 100          # teeth on driving wheel
+N2 = 50           # teeth on driven wheel
+pitch = 0.006     # circular pitch (m)
+n1 = 250          # driving rpm
+P = 0.5e3         # power in watts
+
+# Pitch diameter of driving wheel
+
+D1 = (N1 * pitch) / math.pi
+r1 = D1 / 2
+
+# Angular speed of driving wheel
+
+omega1 = n1 * 2 * math.pi / 60
+
+# Torque on driving wheel
+
+T = P / omega1
+
+# Tangential driving force
+
+F = T / r1
+
+# Driven wheel speed
+
+n2 = n1 * (N1 / N2)
+
+print(f"Pitch diameter D1 (m): {D1:.4f}")
+print(f"Torque T (N·m): {T:.4f}")
+print(f"Tangential force F (N): {F:.4f}")
+print(f"Driven wheel speed n2 (rpm): {n2:.4f}")
+```
+:::
+
+## Kinetic Energy of Rotation
+
+We know that $K.E. = \frac{1}{2}mv^2$, where $v$ is the linear velocity of the body. For a rotating body, the effective linear velocity is at the radius of gyration, as this is the radius at which the entire mass of the rotating body can be considered to act.
+
+Let $k$ = radius of gyration (in meters),\
+Let $\omega$ = angular velocity (in radians per second).
+
+The relationship between linear and angular velocity is:
+
+$$
+v = \omega k
+$$
+
+Substituting $v^2 = \omega^2 k^2$ into $K.E. = \frac{1}{2}mv^2$ gives:
+
+$$
+\text{Rotational K.E.} = \frac{1}{2} m k^2 \omega^2
+$$
+
+Since $I = m k^2$, where $I$ is the moment of inertia:
+
+$$
+\text{Rotational K.E.} = \frac{1}{2} I \omega^2
+$$
+
+::: {#exm-4-10}
+The radius of gyration of the flywheel of a shearing machine is 0.46 m and its mass is 750 kg. Find the kinetic energy stored in it when running at 120 rev/min. If the speed falls to 100 rev/min during the cutting stroke, find the kinetic energy given out by the wheel.
+
+```python
+import math
+
+m = 750
+k = 0.46
+I = m * k**2
+
+omega1 = 120 * 2 * math.pi / 60
+omega2 = 100 * 2 * math.pi / 60
+
+K1 = 0.5 * I * omega1**2
+K2 = 0.5 * I * omega2**2
+dK = K1 - K2
+
+print(f"I (kg·m^2):           {I:.4f}")
+print(f"KE at 120 rpm:        {K1/1e3:.4f} kJ")
+print(f"KE at 100 rpm:        {K2/1e3:.4f} kJ")
+print(f"Energy given out:     {dK/1e3:.4f} kJ")
+
+```
+:::
+
+::: {#exm-4-11}
+The torque required to turn a flywheel and shaft against friction at the bearings is 34 N m. The mass of the wheel and shaft is 907 kg and the radius of gyration is 381 mm. Assuming frictional resistance to be constant at all speeds, find the number of revolutions the system will turn whilst coming to rest from a speed of 450 rev/min when the driving power is cut out, and also the time taken in coming to rest.
+
+```python
+import math
+
+# Given
+
+T = 34         # N·m (frictional torque)
+m = 907        # kg
+k = 0.381      # m
+rpm0 = 450     # rev/min
+
+# Moment of inertia
+
+I = m * k**2
+
+# Initial angular speed in rad/s
+
+omega0 = rpm0 * 2 * math.pi / 60
+
+# Angular deceleration
+
+alpha = T / I
+
+# Time to stop
+
+t = omega0 / alpha
+
+# Angular displacement
+
+theta = omega0**2 / (2 * alpha)
+
+# Revolutions
+
+revs = theta / (2 * math.pi)
+
+print(f"Time to stop: {t:.4f} s ({t/60:.4f} min)")
+print(f"Number of revolutions: {revs:.4f} rev")
+
+```
+:::
