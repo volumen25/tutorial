@@ -8,7 +8,6 @@ To follow this tutorial, the easiest way to get started is by using a web-based 
 
 If you prefer working on your own computer, make sure you have [Python](https://www.python.org/downloads/)(version 3.10 or later) installed. Python works on Windows, macOS, and Linux. You’ll also need a text editor or an Integrated Development Environment (IDE) to write your code. I recommend [Positron](https://positron.posit.co/), a beginner-friendly IDE with a built-in terminal, though other editors like VS Code or PyCharm are also great options.
 
-
 ## Basic Syntax
 
 Python uses indentation\index{indentation} (typically four spaces) to define code blocks. A colon\index{colon} (`:`) introduces a block, and statements within the block must be indented consistently. Python is case-sensitive, so `Variable` and `variable` are distinct identifiers. *Statements typically end with a newline, but you can use a backslash (`\`) to continue a statement across multiple lines.*
@@ -46,9 +45,9 @@ The following table illustrates common f-string formatting options for the `prin
 | **Round to whole number** | `f"{x:.0f}"` | `print(f"{3.9:.0f}")` | `4` |
 | **Thousands separator** | `f"{x:,.2f}"` | `print(f"{1234567.89:,.2f}")` | `1,234,567.89` |
 | **Percentage** | `f"{x:.1%}"` | `print(f"{0.756:.1%}")` | `75.6%` |
-| **Currency style** | `f"${x:,.2f}"` | `print(f"${1234.5:,.2f}")` | `$1,234.50` |
-
-Note: The currency symbol (e.g., `$`) can be modified for other currencies (e.g., `€`, `£`) based on the desired locale.
+| **Currency (CDN)** | `f"${x:,.2f}"` | `print(f"${1234.5:,.2f}")` | `$1,234.50` |
+| **Currency (EUR)** | `f"€{x:,.2f}"` | `print(f"€{1234.5:,.2f}")` | `€1,234.50` |
+| **Currency (JPY)** | `f"¥{x:,.0f}"` | `print(f"¥{1234567:,.0f}")` | `¥1,234,567` |
 
 ## Variables and Data Types
 
@@ -270,7 +269,7 @@ print(math.log(100, 10))  # Logarithm of 100 with base 10: 2.0
 
 The `math` module provides `math.radians()` to convert degrees to radians and `math.degrees()` to convert radians to degrees, which is useful for trigonometric calculations.
 
-::: {.callout-warning}
+::: callout-warning
 In Python, the math module’s trigonometric functions (sin, cos, tan, etc.) expect angles in radians, not degrees. Always convert degrees to radians before using sin, cos, or tan in Python’s math module.
 :::
 
@@ -317,4 +316,4 @@ Logarithm of 100 with base 10 is: 2.0
 
 ## Summary
 
-This tutorial covered Python basics, including syntax, variables, data types, operations, control flow, and functions. [python-fiddle.com](https://python-fiddle.com/), is an easy-to-use online editor that lets you experiment with Python instantly and solve your problem sets effortlessly. Simply copy the code examples provided to check your work. 
+You’ve now learned Python basics: syntax, variables, control flow, functions, and the math module. Practice all examples instantly at [python-fiddle.com](https://python-fiddle.com/).

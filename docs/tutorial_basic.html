@@ -497,14 +497,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><code>75.6%</code></td>
 </tr>
 <tr class="odd">
-<td><strong>Currency style</strong></td>
+<td><strong>Currency (CDN)</strong></td>
 <td><code>f"${x:,.2f}"</code></td>
 <td><code>print(f"${1234.5:,.2f}")</code></td>
 <td><code>$1,234.50</code></td>
 </tr>
+<tr class="even">
+<td><strong>Currency (EUR)</strong></td>
+<td><code>f"€{x:,.2f}"</code></td>
+<td><code>print(f"€{1234.5:,.2f}")</code></td>
+<td><code>€1,234.50</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Currency (JPY)</strong></td>
+<td><code>f"¥{x:,.0f}"</code></td>
+<td><code>print(f"¥{1234567:,.0f}")</code></td>
+<td><code>¥1,234,567</code></td>
+</tr>
 </tbody>
 </table>
-<p>Note: The currency symbol (e.g., <code>$</code>) can be modified for other currencies (e.g., <code>€</code>, <code>£</code>) based on the desired locale.</p>
 </section>
 <section id="variables-and-data-types" class="level2">
 <h2 class="anchored" data-anchor-id="variables-and-data-types">Variables and Data Types</h2>
@@ -708,7 +719,7 @@ Logarithm of 100 with base 10 is: 2.0</code></pre>
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>This tutorial covered Python basics, including syntax, variables, data types, operations, control flow, and functions. <a href="https://python-fiddle.com/">python-fiddle.com</a>, is an easy-to-use online editor that lets you experiment with Python instantly and solve your problem sets effortlessly. Simply copy the code examples provided to check your work.</p>
+<p>You’ve now learned Python basics: syntax, variables, control flow, functions, and the math module. Practice all examples instantly at <a href="https://python-fiddle.com/">python-fiddle.com</a>.</p>
 
 
 </section>

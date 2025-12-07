@@ -54,7 +54,7 @@
     "href": "tutorial_basic.html#formatting-in-print",
     "title": "Python Tutorial",
     "section": "Formatting in print()",
-    "text": "Formatting in print()\nThe following table illustrates common f-string formatting options for the print() function:\n\n\n\n\n\n\n\n\n\nFormat\nCode\nExample\nOutput\n\n\n\n\nRound to 2 decimals\nf\"{x:.2f}\"\nprint(f\"{3.14159:.2f}\")\n3.14\n\n\nRound to whole number\nf\"{x:.0f}\"\nprint(f\"{3.9:.0f}\")\n4\n\n\nThousands separator\nf\"{x:,.2f}\"\nprint(f\"{1234567.89:,.2f}\")\n1,234,567.89\n\n\nPercentage\nf\"{x:.1%}\"\nprint(f\"{0.756:.1%}\")\n75.6%\n\n\nCurrency style\nf\"${x:,.2f}\"\nprint(f\"${1234.5:,.2f}\")\n$1,234.50\n\n\n\nNote: The currency symbol (e.g., $) can be modified for other currencies (e.g., €, £) based on the desired locale.",
+    "text": "Formatting in print()\nThe following table illustrates common f-string formatting options for the print() function:\n\n\n\n\n\n\n\n\n\nFormat\nCode\nExample\nOutput\n\n\n\n\nRound to 2 decimals\nf\"{x:.2f}\"\nprint(f\"{3.14159:.2f}\")\n3.14\n\n\nRound to whole number\nf\"{x:.0f}\"\nprint(f\"{3.9:.0f}\")\n4\n\n\nThousands separator\nf\"{x:,.2f}\"\nprint(f\"{1234567.89:,.2f}\")\n1,234,567.89\n\n\nPercentage\nf\"{x:.1%}\"\nprint(f\"{0.756:.1%}\")\n75.6%\n\n\nCurrency (CDN)\nf\"${x:,.2f}\"\nprint(f\"${1234.5:,.2f}\")\n$1,234.50\n\n\nCurrency (EUR)\nf\"€{x:,.2f}\"\nprint(f\"€{1234.5:,.2f}\")\n€1,234.50\n\n\nCurrency (JPY)\nf\"¥{x:,.0f}\"\nprint(f\"¥{1234567:,.0f}\")\n¥1,234,567",
     "crumbs": [
       "Python Tutorial"
     ]
@@ -124,7 +124,7 @@
     "href": "tutorial_basic.html#summary",
     "title": "Python Tutorial",
     "section": "Summary",
-    "text": "Summary\nThis tutorial covered Python basics, including syntax, variables, data types, operations, control flow, and functions. python-fiddle.com, is an easy-to-use online editor that lets you experiment with Python instantly and solve your problem sets effortlessly. Simply copy the code examples provided to check your work.",
+    "text": "Summary\nYou’ve now learned Python basics: syntax, variables, control flow, functions, and the math module. Practice all examples instantly at python-fiddle.com.",
     "crumbs": [
       "Python Tutorial"
     ]
