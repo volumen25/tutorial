@@ -24,10 +24,12 @@ book:
     right: |
       Built with <a href="https://quarto.org"> Quarto {{< version >}}</a>
   chapters:    
-    - index.qmd            
+    - index.qmd    
+    - study_guide.qmd        
     - tutorial_basic.qmd
     - 01statics.qmd
     - kinematics.qmd
+    # - 02dynamics.qmd
     # - si_units.qmd
     # - heat_work.qmd
     # - thermal_expansion.qmd

@@ -349,6 +349,12 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./study_guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Study Guide</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./tutorial_basic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python Tutorial</span></a>
   </div>
@@ -525,6 +531,109 @@ window.Quarto = {
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Average deceleration: </span><span class="sc">{</span>a<span class="sc">:.5f}</span><span class="ss"> m/s²"</span>)</span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Time to stop: </span><span class="sc">{</span>t_minutes<span class="sc">:.2f}</span><span class="ss"> minutes"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<div id="exm-river" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.3</strong></span> A boat is rowed at 6 km/h perpendicular to a river flowing at 4 km/h. The river is 50 meters wide. How far downstream will the boat reach the opposite bank? What is the boat’s actual velocity (magnitude and direction)?</p>
+<p>We treat this as vector addition: the boat’s rowing velocity across the river and the river’s current velocity downstream.</p>
+<p>Given</p>
+<ul>
+<li><p>Boat speed across: <span class="math inline">\(v_b = 6\ \text{km/h}\)</span></p></li>
+<li><p>River current speed: <span class="math inline">\(v_c = 4\ \text{km/h}\)</span></p></li>
+<li><p>River width: <span class="math inline">\(w = 50\ \text{m}\)</span></p></li>
+</ul>
+<p>Convert speeds to m/s:</p>
+<p><span class="math display">\[
+1\ \text{km/h} = \frac{1000}{3600} = 0.277777\ \text{m/s}
+\]</span></p>
+<p><span class="math display">\[
+v_b = 6 \times 0.277777 = 1.6666667\ \text{m/s}
+\]</span></p>
+<p><span class="math display">\[
+v_c = 4 \times 0.277777 = 1.1111111\ \text{m/s}
+\]</span></p>
+<p>Time to cross the river</p>
+<p><span class="math display">\[
+t = \frac{w}{v_b} = \frac{50}{1.6666667} = 30\ \text{s}
+\]</span></p>
+<p>Downstream drift</p>
+<p><span class="math display">\[
+\text{drift} = v_c \times t = 1.1111111 \times 30 = 33.3333\ \text{m}
+\]</span></p>
+<p>Actual velocity magnitude <span class="math display">\[
+v = \sqrt{v_b^2 + v_c^2} = 2.00308\ \text{m/s}
+\]</span></p>
+<p>Direction (downstream from perpendicular)</p>
+<p><span class="math display">\[
+\theta = \tan^{-1}\!\left( \frac{v_c}{v_b} \right) = 33.69
+\]</span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>boat_speed_kmh <span class="op">=</span> <span class="dv">6</span>      <span class="co"># km/h (perpendicular to river)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>current_speed_kmh <span class="op">=</span> <span class="dv">4</span>   <span class="co"># km/h (downstream)</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>width <span class="op">=</span> <span class="dv">50</span>              <span class="co"># meters (river width)</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert speeds to m/s</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>boat_speed <span class="op">=</span> boat_speed_kmh <span class="op">*</span> <span class="dv">1000</span> <span class="op">/</span> <span class="dv">3600</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>current_speed <span class="op">=</span> current_speed_kmh <span class="op">*</span> <span class="dv">1000</span> <span class="op">/</span> <span class="dv">3600</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Time to cross</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> width <span class="op">/</span> boat_speed</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Downstream drift</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>drift <span class="op">=</span> current_speed <span class="op">*</span> t</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Actual velocity (magnitude)</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>v_actual <span class="op">=</span> math.sqrt(boat_speed<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> current_speed<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to km/h</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>v_actual_kmh <span class="op">=</span> v_actual <span class="op">*</span> <span class="fl">3.6</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Direction (downstream from perpendicular)</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>theta_deg <span class="op">=</span> math.degrees(math.atan(current_speed <span class="op">/</span> boat_speed))</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Time to cross: </span><span class="sc">{</span>t<span class="sc">:.2f}</span><span class="ss"> s"</span>)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Downstream drift: </span><span class="sc">{</span>drift<span class="sc">:.2f}</span><span class="ss"> m"</span>)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Actual speed: </span><span class="sc">{</span>v_actual<span class="sc">:.2f}</span><span class="ss"> m/s (</span><span class="sc">{</span>v_actual_kmh<span class="sc">:.2f}</span><span class="ss"> km/h)"</span>)</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Direction: </span><span class="sc">{</span>theta_deg<span class="sc">:.2f}</span><span class="ss"> degrees downstream"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="exm-ships" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.4</strong></span> Two ships are moving toward each other in still water. Ship 1 is 310 meters long and travelling at 22 knots, while Ship 2 is 350 meters long and travelling at 19 knots. Calculate the time it takes for the ships to completely pass each other..</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>length1 <span class="op">=</span> <span class="dv">310</span>   <span class="co"># meters (Ship 1)</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>length2 <span class="op">=</span> <span class="dv">350</span>   <span class="co"># meters (Ship 2)</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>speed1 <span class="op">=</span> <span class="dv">22</span>     <span class="co"># knots</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>speed2 <span class="op">=</span> <span class="dv">19</span>     <span class="co"># knots</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Total distance to be closed (sum of lengths)</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>distance_m <span class="op">=</span> length1 <span class="op">+</span> length2  <span class="co"># meters</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert meters to nautical miles</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>distance_nm <span class="op">=</span> distance_m <span class="op">/</span> <span class="dv">1852</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Relative (closing) speed in knots</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>speed_rel <span class="op">=</span> speed1 <span class="op">+</span> speed2</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Time in hours</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>time_hours <span class="op">=</span> distance_nm <span class="op">/</span> speed_rel</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to seconds</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>time_seconds <span class="op">=</span> time_hours <span class="op">*</span> <span class="dv">3600</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Time for the ships to pass each other: </span><span class="sc">{</span>time_seconds<span class="sc">:.2f}</span><span class="ss"> seconds"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
 <section id="angular-motion-definitions" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="angular-motion-definitions"><span class="header-section-number">2.3</span> Angular Motion Definitions</h2>
@@ -564,38 +673,38 @@ window.Quarto = {
 <li><p><span class="math inline">\(t\)</span>: Time (s)</p></li>
 </ul>
 <div id="exm-ex2-10" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2.3</strong></span> A shaft is rotating at 40 revolutions per minute (rev/min). It is uniformly decelerated at a rate of 0.017 rad/s² for 15 seconds. Calculate: 1. The angular velocity of the shaft at the end of 15 seconds (in rad/s and rev/min). 2. The total number of revolutions completed by the shaft during these 15 seconds.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>omega1_rpm <span class="op">=</span> <span class="dv">40</span> <span class="co"># initial angular speed in rev/min</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="op">-</span><span class="fl">0.017</span>  <span class="co"># angular acceleration (rad/s^2), (-) for deceleration</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> <span class="dv">15</span>          <span class="co"># time in seconds</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert initial speed to rad/s</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>omega1 <span class="op">=</span> omega1_rpm <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> math.pi <span class="op">/</span> <span class="dv">60</span>  </span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Angular velocity after time t</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>omega2 <span class="op">=</span> omega1 <span class="op">+</span> alpha <span class="op">*</span> t              </span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Angular displacement during time t</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> omega1 <span class="op">*</span> t <span class="op">+</span> <span class="fl">0.5</span> <span class="op">*</span> alpha <span class="op">*</span> t<span class="op">**</span><span class="dv">2</span>  </span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert angular displacement to revolutions</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>revolutions <span class="op">=</span> theta <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> math.pi)</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert omega2 to rpm</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>omega2_rpm <span class="op">=</span> omega2 <span class="op">*</span> <span class="dv">60</span> <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> math.pi)</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Final angular velocity: </span><span class="sc">{</span>omega2<span class="sc">:.4f}</span><span class="ss"> rad/s"</span>)</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Final angular velocity: </span><span class="sc">{</span>omega2_rpm<span class="sc">:.4f}</span><span class="ss"> rpm"</span>)</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Angular displacement: </span><span class="sc">{</span>revolutions<span class="sc">:.4f}</span><span class="ss"> revolutions"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span class="theorem-title"><strong>Example 2.5</strong></span> A shaft is rotating at 40 revolutions per minute (rev/min). It is uniformly decelerated at a rate of 0.017 rad/s² for 15 seconds. Calculate: 1. The angular velocity of the shaft at the end of 15 seconds (in rad/s and rev/min). 2. The total number of revolutions completed by the shaft during these 15 seconds.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>omega1_rpm <span class="op">=</span> <span class="dv">40</span> <span class="co"># initial angular speed in rev/min</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="op">-</span><span class="fl">0.017</span>  <span class="co"># angular acceleration (rad/s^2), (-) for deceleration</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> <span class="dv">15</span>          <span class="co"># time in seconds</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert initial speed to rad/s</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>omega1 <span class="op">=</span> omega1_rpm <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> math.pi <span class="op">/</span> <span class="dv">60</span>  </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Angular velocity after time t</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>omega2 <span class="op">=</span> omega1 <span class="op">+</span> alpha <span class="op">*</span> t              </span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Angular displacement during time t</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> omega1 <span class="op">*</span> t <span class="op">+</span> <span class="fl">0.5</span> <span class="op">*</span> alpha <span class="op">*</span> t<span class="op">**</span><span class="dv">2</span>  </span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert angular displacement to revolutions</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>revolutions <span class="op">=</span> theta <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> math.pi)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert omega2 to rpm</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>omega2_rpm <span class="op">=</span> omega2 <span class="op">*</span> <span class="dv">60</span> <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> math.pi)</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Final angular velocity: </span><span class="sc">{</span>omega2<span class="sc">:.4f}</span><span class="ss"> rad/s"</span>)</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Final angular velocity: </span><span class="sc">{</span>omega2_rpm<span class="sc">:.4f}</span><span class="ss"> rpm"</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Angular displacement: </span><span class="sc">{</span>revolutions<span class="sc">:.4f}</span><span class="ss"> revolutions"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="relation-between-linear-and-angular-motion" class="level2" data-number="2.5">

@@ -2,73 +2,90 @@
 
 Dynamics is the branch of mechanics that studies the motion of bodies under the action of forces. This chapter examines situations where forces produce acceleration, and it presents methods for analyzing the resulting motion, including the application of Newton’s laws, energy principles, and momentum conservation.
 
-## Linear Motion
+## Inertia
 
-$$
-\vec{v} = \vec{u} + \vec{a}t
-$$
+Inertia is the property of a body that resists any change in its state of motion and is directly proportional to its mass. It can be understood as a form of “sluggishness” inherent to matter. For an object at rest, a net force is required to set it in motion; the greater the mass, the greater the force needed. Similarly, if an object is already moving, a net force is required to change its speed or direction, and the magnitude of this force is again proportional to the mass.
 
-$$
-\vec{s} = \frac{\vec{u}+\vec{v}}{2}t
-$$
+The term “inertia” is also used in structural mechanics to describe the resistance of a beam’s cross-section to bending, quantified by the second moment of area (see lecture notes on Second Moments).
 
-$$
-\vec{s} = \vec{u}t + \frac{1}{2}\vec{a}t^2
-$$
+## Momentum
 
-$$
-\vec{v}^2 = \vec{u}^2 + 2\vec{a} \cdot \vec{s}
-$$
+Momentum is the product of an object’s mass and its velocity and quantifies the amount of motion a moving body possesses. This concept is particularly important when considering a large vessel approaching a dock. Once the vessel is underway, its considerable momentum means that a substantial force, applied over sufficient time, is required to bring it to a stop or significantly alter its course. Without such intervention, the vessel will not stop quickly on its own and may collide with the dock.
 
-where:
+## Newton's Laws of Motion
 
--   $\vec{u}$: Initial velocity
--   $\vec{v}$: Final velocity
--   $\vec{s}$: Displacement
--   $\vec{a}$: Acceleration
--   $t$: Time
+1.  **First Law (Law of Inertia)**:\
+    An object remains at rest, or in uniform motion in a straight line, unless acted upon by a net external force.\
+    $$
+    \Sigma F = 0 \implies v = \text{constant}
+    $$
 
-## Angular Motion
+2.  **Second Law (Law of Acceleration)**:\
+    The acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass.\
+    $$
+    \vec{F} = m \vec{a}
+    $$
 
-$$
-\omega_2 = \omega_1 \mp \alpha t
-$$
+3.  **Third Law (Action-Reaction Law)**:\
+    For every action, there is an equal and opposite reaction.\
+    $$
+    \vec{F}_{\text{action}} = -\vec{F}_{\text{reaction}}
+    $$
 
-$$
-\theta = \frac{\omega_1+\omega_2}{2}t
-$$
+::: {#exm-3-1}
+Find the accelerating force required to increase the velocity of a body which has a mass of 20 kg from 30 m/s to 70 m/s in 4 s.
 
-$$
-\theta = \omega_1 t \mp \frac{1}{2}\alpha t^2 
-$$
+``` python
+# Given
 
-$$
-\omega_2^2 = \omega_1^2 \mp 2\alpha \theta
-$$
+m = 20           # mass in kg
+u = 30           # initial velocity in m/s
+v = 70           # final velocity in m/s
+t = 4            # time in seconds
 
-where:
+# Calculate acceleration
 
--   $\omega_1$: Initial angular velocity (rad/s)
+a = (v - u) / t
 
--   $\omega_2$: Final angular velocity (rad/s)
+# Calculate force
 
--   $\theta$ Angular displacement (rad)
+F = m * a
 
--   $\alpha$: Angular acceleration (rad/s^2^)
+print(f"Acceleration: {a:.2f} m/s²")
+print(f"Accelerating force: {F:.2f} N")
+```
+:::
 
--   $t$: Time (s)
+::: {#exm-3-2}
+A lift is supported by a steel wire rope, the total mass of the lift and contents is 750 kg. Find the tension in the wire rope, in newtons, when the lift is (i) moving at constant velocity, (ii) moving upwards and accelerating at 1.2 m/s^2^, (iii) moving upwards and retarding at 1.2 m/s^2^
 
-## Relation Between Linear and Angular Motion
+``` python
+# Given
 
-The relationship between linear and angular motion is described by the following equations:
+m = 750          # mass in kg
+g = 9.81         # gravitational acceleration in m/s^2
 
-$s = r \theta$ (linear displacement $s$ and angular displacement $\theta$).
+# Accelerations for each case
 
-$v = r \omega$ (linear velocity $v$ and angular velocity $\omega$),
+a_constant = 0
+a_up_accel = 1.2
+a_up_decel = -1.2
 
-$a = r \alpha$ (linear acceleration $a$ and angular acceleration $\alpha$).
+# Tension calculations
+
+T_constant = m * (g + a_constant)
+T_up_accel = m * (g + a_up_accel)
+T_up_decel = m * (g + a_up_decel)
+
+print(f"Tension at constant velocity: {T_constant:.4f} N")
+print(f"Tension during upward acceleration: {T_up_accel:.4f} N")
+print(f"Tension during upward deceleration: {T_up_decel:.4f} N")
+```
+:::
 
 ## Linear momentum
+
+Linear momentum is a fundamental concept in physics that quantifies the motion of an object. It is defined as the product of the object’s mass and its velocity. Because momentum is a vector quantity, it possesses both magnitude and direction.
 
 $$
 Linear\ momentum = m \vec{v}
@@ -82,19 +99,115 @@ Where:
 
 -   $\vec{v}$ is the velocity of the object in meters per second.
 
-## Angular momentum
+### Conservation of Linear Momentum
 
-$$ \text{Angular momentum} = I \omega $$
+The law of conservation of linear momentum states that, in a closed system with no external forces (or when the net external force is zero), the total linear momentum remains constant over time. This principle is particularly evident in collisions between two bodies. During a collision, the force exerted by the first body on the second is equal in magnitude and opposite in direction to the force exerted by the second on the first (Newton’s third law). These equal and opposite forces act for the same duration, producing changes in momentum that are equal in magnitude but opposite in direction. Consequently, the momentum gained by one body exactly equals the momentum lost by the other. Therefore, the total momentum of the system before the collision is equal to the total momentum after the collision.
+
+In the absence of external forces, linear momentum is neither created nor destroyed; it is conserved. This is known as the law of conservation of linear momentum.
+
+::: {#exm-3-5}
+A hand hammer with a head mass of 0.8 kg strikes a chisel at 9 m/s and comes to rest in 1/250 seconds. Calculate the average force exerted during the blow.
+
+``` python
+# Given
+
+m = 0.8               # kg
+u = 9                 # m/s (initial velocity)
+v = 0                 # m/s (final velocity)
+t = 1/250             # s (time to come to rest)
+
+# Change in momentum
+
+delta_p = m * (v - u)
+
+# Average force
+
+F_avg = delta_p / t
+
+print(f"Average force during the blow: {F_avg:.4f} N")
+```
+:::
+
+::: {#exm-3-6}
+A jet of fresh water, 20 mm in diameter, emerges horizontally from a nozzle at a speed of 21 m/s and strikes a stationary vertical plate normally. Assuming no splashback (i.e., the water comes to rest upon impact with no velocity component normal to the plate after striking), calculate: (a) the mass flow rate of water leaving the nozzle (in kg/s), and (b) the force exerted by the jet on the plate. The density of fresh water is 1000 kg/m³.
+
+``` python
+import math
+
+# Given
+
+d = 0.02          # diameter in meters
+v = 21            # jet speed in m/s
+rho = 1000        # density of water in kg/m^3
+
+# Mass flow rate
+
+A = math.pi * (d**2) / 4        # cross-sectional area
+v_dot = A * v                   # volumetric flow rate
+m_dot = rho * v_dot             # mass flow rate
+
+# Force on the plate
+
+F = m_dot * v                   # momentum change
+
+print(f"Mass flow rate (kg/s): {m_dot:.4f}")
+print(f"Force on plate (N): {F:.4f}")
+```
+:::
+
+## Angular Momentum
+
+Angular momentum is the moment of linear momentum about a chosen point or axis. For a single particle, it is given by the cross product of its position vector (measured from that point) and its linear momentum.
+
+More broadly, angular momentum measures the rotational motion of a system. For extended bodies, its evaluation depends on both the distance of mass elements from the axis (the first moment of position) and how the mass is distributed throughout the object—the moment of inertia, or second moment of mass.
+
+![Angular momentum](images/angularmomentum.png){width="4cm"}
+
+Given **linear velocity** $\vec{v}$ and **angular velocity** $\omega$:
+
+$$
+\vec{v} = r \omega
+$$
+
+The **linear momentum** is determined by:
+
+$$
+\text{Linear momentum} = m \vec{v}
+$$
+
+Substituting for $\vec{v}$:
+
+$$
+\text{Linear momentum} = m r \omega
+$$
+
+The **moment of linear momentum** can then be written as:
+
+$$
+\text{Moment of linear momentum} = m r \omega r
+$$
+
+The moment of linear momentum is referred to as the **angular momentum**. Simplifying the above equation:
+
+$$
+\text{Angular momentum} = m r^2 \omega
+$$
+
+Here, $m r^2$ is the **moment of inertia** (second moment of mass) of the object about its axis of rotation, denoted as $I$. Thus, the angular momentum can be expressed as:
+
+$$
+\text{Angular momentum} = I \omega
+$$
 
 Where:
 
 -   $I$ is the moment of inertia in $m^4$.
 -   $\omega$ is the angular velocity in $rad/s$.
 
-## Moment of inertia
+Additionally, the moment of inertia $I$ is given by:
 
-$$ 
-I = m k^2 
+$$
+I = m k^2
 $$
 
 Where:
@@ -102,164 +215,3 @@ Where:
 -   $I$ is the moment of inertia in $m^4$.
 -   $m$ is the mass in $kg$.
 -   $k$ is the radius of gyration in $m$.
-
-## Turning moment
-
-$$ 
-\tau = I \alpha 
-$$
-
-Where:
-
--   $\tau$ is the torque in $Nm$.
--   $I$ is the moment of inertia in $m^4$.
--   $\alpha$: Angular acceleration in $rad/s^2$.
-
-## Power by Torque
-
-$$
-P = \tau \cdot \omega
-$$
-
-Where:
-
-$P$ is the power in watts (W),
-
-$\tau$ is the torque in newton-meters (Nm), and
-
-$\omega$ is the angular velocity in radians per second (rad/s).
-
-## Kinetic Energy of Rotation
-
-$$
-\text{Rotational K.E.} = \frac{1}{2} I \omega^2
-$$ Where:
-
--   $I$ is the moment of inertia in $m^4$.
-
--   $\omega$ is the angular velocity in radians per second (rad/s).
-
-::: {#exm-river}
-A boat is rowed at **6 km/h** perpendicular to a river flowing at **4 km/h**. The river is **50 meters** wide. How far downstream will the boat reach the opposite bank? What is the boat’s actual velocity (magnitude and direction)?
-
-We treat this as vector addition: the boat's rowing velocity across the river and the river's current velocity downstream.
-
-Given
-
--   Boat speed across: $v_b = 6\ \text{km/h}$
-
--   River current speed: $v_c = 4\ \text{km/h}$
-
--   River width: $w = 50\ \text{m}$
-
-Convert speeds to m/s:
-
-$$
-1\ \text{km/h} = \frac{1000}{3600} = 0.277777\ \text{m/s}
-$$
-
-$$
-v_b = 6 \times 0.277777 = 1.6666667\ \text{m/s}
-$$
-
-$$
-v_c = 4 \times 0.277777 = 1.1111111\ \text{m/s}
-$$
-
-Time to cross the river
-
-$$
-t = \frac{w}{v_b} = \frac{50}{1.6666667} = 30\ \text{s}
-$$
-
-Downstream drift
-
-$$
-\text{drift} = v_c \times t = 1.1111111 \times 30 = 33.3333\ \text{m}
-$$
-
-Actual velocity magnitude $$
-v = \sqrt{v_b^2 + v_c^2} = 2.00308\ \text{m/s}
-$$
-
-Direction (downstream from perpendicular)
-
-$$
-\theta = \tan^{-1}\!\left( \frac{v_c}{v_b} \right) = 33.69
-$$
-
-``` python
-import math
-
-# Given
-boat_speed_kmh = 6      # km/h (perpendicular to river)
-current_speed_kmh = 4   # km/h (downstream)
-width = 50              # meters (river width)
-
-# Convert speeds to m/s
-
-boat_speed = boat_speed_kmh * 1000 / 3600
-current_speed = current_speed_kmh * 1000 / 3600
-
-# Time to cross
-
-t = width / boat_speed
-
-# Downstream drift
-
-drift = current_speed * t
-
-# Actual velocity (magnitude)
-
-v_actual = math.sqrt(boat_speed**2 + current_speed**2)
-
-# Convert to km/h
-
-v_actual_kmh = v_actual * 3.6
-
-# Direction (downstream from perpendicular)
-
-theta_deg = math.degrees(math.atan(current_speed / boat_speed))
-
-print(f"Time to cross: {t:.2f} s")
-print(f"Downstream drift: {drift:.2f} m")
-print(f"Actual speed: {v_actual:.2f} m/s ({v_actual_kmh:.2f} km/h)")
-print(f"Direction: {theta_deg:.2f} degrees downstream")
-```
-:::
-
-::: {#exm-ships}
-Two ships are moving toward each other in still water. Ship 1 is **310 meters long** and travelling at **22 knots**, while Ship 2 is **350 meters long** and travelling at **19 knots**. Calculate the time it takes for the ships to completely pass each other..
-
-``` python
-import math
-
-# Given
-
-length1 = 310   # meters (Ship 1)
-length2 = 350   # meters (Ship 2)
-speed1 = 22     # knots
-speed2 = 19     # knots
-
-# Total distance to be closed (sum of lengths)
-
-distance_m = length1 + length2  # meters
-
-# Convert meters to nautical miles
-
-distance_nm = distance_m / 1852
-
-# Relative (closing) speed in knots
-
-speed_rel = speed1 + speed2
-
-# Time in hours
-
-time_hours = distance_nm / speed_rel
-
-# Convert to seconds
-time_seconds = time_hours * 3600
-
-print(f"Time for the ships to pass each other: {time_seconds:.2f} seconds")
-```
-:::
