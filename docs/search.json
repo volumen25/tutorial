@@ -270,6 +270,16 @@
     ]
   },
   {
+    "objectID": "colophon.html",
+    "href": "colophon.html",
+    "title": "Colophon",
+    "section": "",
+    "text": "This book was created using Positron and typeset with Quarto v.1.8.26, using Pandoc for document conversion.",
+    "crumbs": [
+      "Colophon"
+    ]
+  },
+  {
     "objectID": "greek_letters.html",
     "href": "greek_letters.html",
     "title": "Appendix A — Greek Letters",

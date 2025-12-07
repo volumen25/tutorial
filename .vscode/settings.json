@@ -30,6 +30,7 @@
         "nabla",
         "numpy",
         "pagebreak",
+        "Pandoc",
         "polytropic",
         "powerbytorque",
         "printindex",

@@ -1,0 +1,3 @@
+# Colophon {.unnumbered}
+
+This book was created using [Positron](https://positron.posit.co) and typeset with [Quarto](https://quarto.org) v.{{< version >}}, using [Pandoc](https://pandoc.org/) for document conversion.

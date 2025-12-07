@@ -22,7 +22,7 @@ book:
   page-footer:
     #left: © 2025 <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
     right: |
-      Built with <a href="https://quarto.org"> Quarto {{< version >}}</a>
+      Built with <a href="https://positron.posit.co"> Positron</a> + <a href="https://quarto.org"> Quarto {{< version >}}</a>
   chapters:    
     - index.qmd    
     - study_guide.qmd        
@@ -37,6 +37,7 @@ book:
     # - perfect_gases.qmd
     # - ic_engines.qmd
     # - ideal_cycles.qmd
+    - colophon.qmd
   appendices:
     # - SI_common_mistakes.qmd
     - greek_letters.qmd
