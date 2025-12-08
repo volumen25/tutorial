@@ -1,0 +1,86 @@
+---
+title: "Dynamics"
+format: pdf
+---
+
+# Summary of Key Terms
+
+## Inertia
+
+The tendency of an object to resist any change in its motion. An object with greater mass has greater inertia (it is “harder to start or stop”).
+
+-   In **Naval Architecture**, the *moment of inertia* (units: $m⁴$) is a measure of resistance to bending (related to stiffness/deflection of beams and hull girders).
+-   In **angular motion and physics**, the *moment of inertia* (units: kg·m²) is a measure of resistance to angular acceleration (rotational inertia).
+
+## Linear Momentum (p)
+
+Momentum is the “quantity of motion” an object has. It is calculated as:
+
+$$p = m v$$
+
+where
+
+-   $p$ = linear momentum (kg·m/s)
+
+-   $m$ = mass (kg)
+
+-   $v$ = velocity (m/s)
+
+Momentum is a **vector quantity** (it has both magnitude and direction).
+
+## Newton’s Laws of Motion
+
+### First Law (Law of Inertia)
+
+An object will stay at rest or keep moving in a straight line at constant speed unless an unbalanced (net) external force acts on it.
+
+### Second Law (Law of Acceleration)
+
+The acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass.
+
+$$F_{\text{net}} = m a \quad \text{or} \quad a = \frac{F_{\text{net}}}{m}$$
+
+### Third Law (Action-Reaction)
+
+Whenever two objects interact, they exert equal and opposite forces on each other.\
+“For every action force, there is an equal and opposite reaction force.”
+
+## Conservation of Linear Momentum
+
+If no external forces act on a system (or if the external forces cancel out), the total momentum of the system stays constant.
+
+In collisions or explosions:
+
+**Total momentum before = Total momentum after**
+
+Example: When two objects collide and stick together or bounce apart, the momentum lost by one is exactly gained by the other, so the total remains the same.
+
+## Angular Momentum
+
+The rotational equivalent of linear momentum. It describes how much “rotational motion” a spinning or orbiting object has.
+
+Angular momentum depends on mass, speed, and distance from the axis of rotation.
+
+## Radius of Gyration (k)
+
+A geometric property of a rigid body that indicates how the mass is distributed relative to a specified axis of rotation. It is defined such that:
+
+$$I = m k^2$$
+
+where
+
+-   $I$ = moment of inertia (kg·m²)
+
+-   $m$ = total mass (kg)
+
+-   $k$ = radius of gyration (m)
+
+### Practical Examples for Radius of Gyration
+
+-   **Smaller** $k$ → mass is concentrated closer to the axis → **lower** rotational inertia\
+    → easier/faster to speed up or slow down rotation\
+    (e.g., engine crankshafts, turbine rotors).
+
+-   **Larger** $k$ → mass is distributed farther from the axis → **higher** rotational inertia\
+    → better for storing rotational energy\
+    (e.g., flywheels; a hollow cylinder has a larger $k$ than a solid cylinder of the same mass and outer radius).

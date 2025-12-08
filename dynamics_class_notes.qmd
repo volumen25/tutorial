@@ -1,3 +1,34 @@
+---
+title: "Dynamics"
+author: Serhat Beyenir
+#date: today
+format:
+  pdf:
+    documentclass: article
+    number-sections: true
+    # number-depth: 2
+    lot: false
+    lof: false
+    include-in-header: 
+      text: |
+        \usepackage{makeidx}
+        \makeindex
+    include-before-body:
+      text: |
+       \clearpage
+       \vspace*{\fill}  % pushes text to bottom of page
+       \begin{center}
+       {\small
+       This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).\\[0.5em]
+       Full text available at \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}.
+       }
+       \end{center}
+       \clearpage
+    include-after-body: 
+      text: |
+        \printindex
+---
+
 # Dynamics {#dynamics}
 
 Dynamics is the branch of mechanics that studies the motion of bodies under the action of forces. This chapter examines situations where forces produce acceleration, and it presents methods for analyzing the resulting motion, including the application of Newton’s laws, energy principles, and momentum conservation.
@@ -201,7 +232,7 @@ $$
 
 Where:
 
--   $I$ is the moment of inertia in $kg·m²$.
+-   $I$ is the moment of inertia in $m^4$.
 -   $\omega$ is the angular velocity in $rad/s$.
 
 Additionally, the moment of inertia $I$ is given by:
@@ -212,15 +243,9 @@ $$
 
 Where:
 
--   $I$ is the moment of inertia in $kg·m²$.
+-   $I$ is the moment of inertia in $m^4$.
 -   $m$ is the mass in $kg$.
 -   $k$ is the radius of gyration in $m$.
-
-::: callout-note
-In structural engineering, the moment of inertia (m⁴) is a measure of resistance to bending (deflection or stiffness).
-
-In angular motion and physics, the moment of inertia (kg·m²) is a measure of resistance to angular acceleration (rotational inertia).
-:::
 
 ## The Radius of Gyration
 
@@ -317,7 +342,7 @@ $$
 Where:
 
 -   $\tau$ is the torque in $Nm$.
--   $I$ is the moment of inertia in $kg·m²$.
+-   $I$ is the moment of inertia in $m^4$.
 -   $\alpha$: Angular acceleration in $rad/s^2$.
 
 ::: {#exm-3-10}
@@ -439,7 +464,7 @@ print(f"Power (MW): {P/1e6:.4f}")
 :::
 
 ::: {#exm-4-6}
-One gear wheel with 100 teeth of 6 mm pitch running at 250 rev/min drives another which has 50 teeth. If the power transmitted is 0.5 kW, find the driving force on the teeth and the speed of the driven wheel.
+One gear wheel with 100 teeth of 6 mm pitch running at 250 revlmin drives another which has 50 teeth. If the power transmitted is 0.5 kW, find the driving force on the teeth and the speed of the driven wheel.
 
 ``` python
 import math
@@ -558,87 +583,15 @@ alpha = T / I
 
 t = omega0 / alpha
 
-# Number of revolutions
+# Angular displacement
 
-revs = (rpm0 / 2 ) * t
+theta = omega0**2 / (2 * alpha)
+
+# Revolutions
+
+revs = theta / (2 * math.pi)
 
 print(f"Time to stop: {t:.4f} s ({t/60:.4f} min)")
 print(f"Number of revolutions: {revs:.4f} rev")
 ```
 :::
-
-# Summary of Key Terms
-
-### Inertia
-
-The tendency of an object to resist any change in its motion. An object with greater mass has greater inertia (it is “harder to start or stop”).
-
--   In **Naval Architecture**, the *moment of inertia* (units: m⁴) is a measure of resistance to bending (related to stiffness/deflection of beams and hull girders).
--   In **angular motion and physics**, the *moment of inertia* (units: kg·m²) is a measure of resistance to angular acceleration (rotational inertia).
-
-### Linear Momentum (p)
-
-Momentum is the “quantity of motion” an object has. It is calculated as:
-
-$$p = m v$$
-
-where\
-- $p$ = linear momentum (kg·m/s)\
-- $m$ = mass (kg)\
-- $v$ = velocity (m/s)
-
-Momentum is a **vector quantity** (it has both magnitude and direction).
-
-### Newton’s Laws of Motion
-
-#### First Law (Law of Inertia)
-
-An object will stay at rest or keep moving in a straight line at constant speed unless an unbalanced (net) external force acts on it.
-
-#### Second Law (Law of Acceleration)
-
-The acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass.
-
-$$F_{\text{net}} = m a \quad \text{or} \quad a = \frac{F_{\text{net}}}{m}$$
-
-#### Third Law (Action-Reaction)
-
-Whenever two objects interact, they exert equal and opposite forces on each other.\
-“For every action force, there is an equal and opposite reaction force.”
-
-### Conservation of Linear Momentum
-
-If no external forces act on a system (or if the external forces cancel out), the total momentum of the system stays constant.
-
-In collisions or explosions:
-
-**Total momentum before = Total momentum after**
-
-Example: When two objects collide and stick together or bounce apart, the momentum lost by one is exactly gained by the other, so the total remains the same.
-
-### Angular Momentum
-
-The rotational equivalent of linear momentum. It describes how much “rotational motion” a spinning or orbiting object has.
-
-Angular momentum depends on mass, speed, and distance from the axis of rotation.
-
-### Radius of Gyration (k)
-
-A geometric property of a rigid body that indicates how the mass is distributed relative to a specified axis of rotation. It is defined such that:
-
-$$I = m k^2$$
-
-where\
-- $I$ = moment of inertia (kg·m²)\
-- $m$ = total mass (kg)\
-- $k$ = radius of gyration (m)
-
-#### Practical Examples for Radius of Gyration
-
--   **Smaller** $k$ → mass is concentrated closer to the axis → **lower** rotational inertia\
-    → easier/faster to speed up or slow down rotation\
-    (e.g., engine crankshafts, turbine rotors, figure skater pulling arms in).
-
--   **Larger** $k$ → mass is distributed farther from the axis → **higher** rotational inertia\
-    → better for storing rotational energy\
-    (e.g., flywheels; a hollow cylinder has a larger $k$ than a solid cylinder of the same mass and outer radius).
