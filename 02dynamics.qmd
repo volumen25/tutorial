@@ -567,6 +567,82 @@ print(f"Number of revolutions: {revs:.4f} rev")
 ```
 :::
 
+::: {#exm-fe1-3}
+A vessel has a displacement of 1000 tonnes. It is being pulled up the horizontal dry dock by a steel cable, which is being wound onto a power-driven capstan. The capstan drum has a mass of 4.5 tonnes, an effective diameter of 3.1 m, and a radius of gyration of 1 m. The coefficient of friction between the vessel and the dock can be assumed constant at 0.6. The ship velocity increases uniformly from 0.1 m/s to 0.3 m/s in 30 seconds during the operation. Calculate:
+
+A. The angular acceleration of the capstan drum.\
+B. The torque required at the capstan drum.
+
+```python
+
+# Given
+
+m_ship = 1000 * 1000           # tonnes to kg
+m_drum = 4.5 * 1000            # tonnes to kg
+diameter = 3.1                 # m
+r = diameter / 2               # effective radius
+k = 1.0                        # radius of gyration in m
+mu = 0.6                       # friction coefficient
+g = 9.81                       # m/s^2
+
+v_initial = 0.1                # m/s
+v_final = 0.3                  # m/s
+t = 30                         # s
+
+# Linear acceleration of the ship
+a = (v_final - v_initial) / t
+
+# Angular acceleration of the drum
+alpha = a / r
+
+# Drum moment of inertia
+I = m_drum * k**2
+
+# Forces and torques
+F_friction = mu * m_ship * g
+F_accel_ship = m_ship * a
+T_friction = F_friction * r
+T_accel_ship = F_accel_ship * r
+T_accel_drum = I * alpha
+
+T_total = T_friction + T_accel_ship + T_accel_drum
+
+print("Angular acceleration of drum (rad/s^2): {:.4f}".format(alpha))
+print("Torque required at the drum (MN·m): {:.4f}".format(T_total/1e6))
+```
+:::
+
+:::{#exm-ex67-6-bird}
+A ship's anchor has a mass of 5 tonnes. Determine the work done in raising the anchor from a depth of 100 m. If the hauling gear is driven by a motor whose output is 80 kW and the efficiency of the haulage is 75%, determine how long the lifting operation takes.
+
+```python
+# Given
+
+m_anchor = 5 * 1000        # tonnes to kg
+depth = 100                # m
+g = 9.81                   # m/s^2
+
+motor_power = 80_000       # W
+efficiency = 0.75          # 75%
+
+# Work done lifting the anchor
+
+work_done = m_anchor * g * depth
+
+# Effective power available for lifting
+
+useful_power = motor_power * efficiency
+
+# Time required
+
+time_seconds = work_done / useful_power
+
+print("Work done in lifting the anchor (MJ): {:.4f}".format(work_done/1e6))
+print("Time required (s): {:.4f}".format(time_seconds))
+
+```
+:::
+
 # Summary of Key Terms
 
 ### Inertia

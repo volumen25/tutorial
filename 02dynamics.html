@@ -69,7 +69,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="02dynamics_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="02dynamics_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="02dynamics_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="02dynamics_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="02dynamics_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -603,6 +603,72 @@ v = \omega k
 <span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Time to stop: </span><span class="sc">{</span>t<span class="sc">:.4f}</span><span class="ss"> s (</span><span class="sc">{</span>t<span class="op">/</span><span class="dv">60</span><span class="sc">:.4f}</span><span class="ss"> min)"</span>)</span>
 <span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Number of revolutions: </span><span class="sc">{</span>revs<span class="sc">:.4f}</span><span class="ss"> rev"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="exm-fe1-3" class="theorem example">
+<p><span class="theorem-title"><strong>Example 12</strong></span> A vessel has a displacement of 1000 tonnes. It is being pulled up the horizontal dry dock by a steel cable, which is being wound onto a power-driven capstan. The capstan drum has a mass of 4.5 tonnes, an effective diameter of 3.1 m, and a radius of gyration of 1 m. The coefficient of friction between the vessel and the dock can be assumed constant at 0.6. The ship velocity increases uniformly from 0.1 m/s to 0.3 m/s in 30 seconds during the operation. Calculate:</p>
+<p>A. The angular acceleration of the capstan drum.<br>
+B. The torque required at the capstan drum.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>m_ship <span class="op">=</span> <span class="dv">1000</span> <span class="op">*</span> <span class="dv">1000</span>           <span class="co"># tonnes to kg</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>m_drum <span class="op">=</span> <span class="fl">4.5</span> <span class="op">*</span> <span class="dv">1000</span>            <span class="co"># tonnes to kg</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>diameter <span class="op">=</span> <span class="fl">3.1</span>                 <span class="co"># m</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> diameter <span class="op">/</span> <span class="dv">2</span>               <span class="co"># effective radius</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="fl">1.0</span>                        <span class="co"># radius of gyration in m</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> <span class="fl">0.6</span>                       <span class="co"># friction coefficient</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span>                       <span class="co"># m/s^2</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>v_initial <span class="op">=</span> <span class="fl">0.1</span>                <span class="co"># m/s</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>v_final <span class="op">=</span> <span class="fl">0.3</span>                  <span class="co"># m/s</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> <span class="dv">30</span>                         <span class="co"># s</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Linear acceleration of the ship</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> (v_final <span class="op">-</span> v_initial) <span class="op">/</span> t</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Angular acceleration of the drum</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> a <span class="op">/</span> r</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Drum moment of inertia</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>I <span class="op">=</span> m_drum <span class="op">*</span> k<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Forces and torques</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>F_friction <span class="op">=</span> mu <span class="op">*</span> m_ship <span class="op">*</span> g</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>F_accel_ship <span class="op">=</span> m_ship <span class="op">*</span> a</span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>T_friction <span class="op">=</span> F_friction <span class="op">*</span> r</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>T_accel_ship <span class="op">=</span> F_accel_ship <span class="op">*</span> r</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>T_accel_drum <span class="op">=</span> I <span class="op">*</span> alpha</span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>T_total <span class="op">=</span> T_friction <span class="op">+</span> T_accel_ship <span class="op">+</span> T_accel_drum</span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Angular acceleration of drum (rad/s^2): </span><span class="sc">{:.4f}</span><span class="st">"</span>.<span class="bu">format</span>(alpha))</span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Torque required at the drum (MN·m): </span><span class="sc">{:.4f}</span><span class="st">"</span>.<span class="bu">format</span>(T_total<span class="op">/</span><span class="fl">1e6</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="exm-ex67-6-bird" class="theorem example">
+<p><span class="theorem-title"><strong>Example 13</strong></span> A ship’s anchor has a mass of 5 tonnes. Determine the work done in raising the anchor from a depth of 100 m. If the hauling gear is driven by a motor whose output is 80 kW and the efficiency of the haulage is 75%, determine how long the lifting operation takes.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>m_anchor <span class="op">=</span> <span class="dv">5</span> <span class="op">*</span> <span class="dv">1000</span>        <span class="co"># tonnes to kg</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>depth <span class="op">=</span> <span class="dv">100</span>                <span class="co"># m</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span>                   <span class="co"># m/s^2</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>motor_power <span class="op">=</span> <span class="dv">80_000</span>       <span class="co"># W</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>efficiency <span class="op">=</span> <span class="fl">0.75</span>          <span class="co"># 75%</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Work done lifting the anchor</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>work_done <span class="op">=</span> m_anchor <span class="op">*</span> g <span class="op">*</span> depth</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Effective power available for lifting</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>useful_power <span class="op">=</span> motor_power <span class="op">*</span> efficiency</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Time required</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>time_seconds <span class="op">=</span> work_done <span class="op">/</span> useful_power</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Work done in lifting the anchor (MJ): </span><span class="sc">{:.4f}</span><span class="st">"</span>.<span class="bu">format</span>(work_done<span class="op">/</span><span class="fl">1e6</span>))</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Time required (s): </span><span class="sc">{:.4f}</span><span class="st">"</span>.<span class="bu">format</span>(time_seconds))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
