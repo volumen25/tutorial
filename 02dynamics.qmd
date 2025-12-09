@@ -573,7 +573,7 @@ A vessel has a displacement of 1000 tonnes. It is being pulled up the horizontal
 A. The angular acceleration of the capstan drum.\
 B. The torque required at the capstan drum.
 
-```python
+``` python
 
 # Given
 
@@ -612,10 +612,10 @@ print("Torque required at the drum (MN·m): {:.4f}".format(T_total/1e6))
 ```
 :::
 
-:::{#exm-ex67-6-bird}
+::: {#exm-ex67-6-bird}
 A ship's anchor has a mass of 5 tonnes. Determine the work done in raising the anchor from a depth of 100 m. If the hauling gear is driven by a motor whose output is 80 kW and the efficiency of the haulage is 75%, determine how long the lifting operation takes.
 
-```python
+``` python
 # Given
 
 m_anchor = 5 * 1000        # tonnes to kg
@@ -639,7 +639,6 @@ time_seconds = work_done / useful_power
 
 print("Work done in lifting the anchor (MJ): {:.4f}".format(work_done/1e6))
 print("Time required (s): {:.4f}".format(time_seconds))
-
 ```
 :::
 
