@@ -29,7 +29,7 @@ book:
     - tutorial_basic.qmd
     - 01statics.qmd
     - kinematics.qmd
-    # - 02dynamics.qmd
+    - 02dynamics.qmd
     # - si_units.qmd
     # - heat_work.qmd
     # - thermal_expansion.qmd

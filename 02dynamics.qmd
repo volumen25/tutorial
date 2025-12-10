@@ -529,7 +529,7 @@ print(f"Energy given out:     {dK/1e3:.4f} kJ")
 ```
 :::
 
-::: {#exm-4-11}
+<!-- ::: {#exm-4-11}
 The torque required to turn a flywheel and shaft against friction at the bearings is 34 N m. The mass of the wheel and shaft is 907 kg and the radius of gyration is 381 mm. Assuming frictional resistance to be constant at all speeds, find the number of revolutions the system will turn whilst coming to rest from a speed of 450 rev/min when the driving power is cut out, and also the time taken in coming to rest.
 
 ``` python
@@ -610,7 +610,7 @@ T_total = T_friction + T_accel_ship + T_accel_drum
 print("Angular acceleration of drum (rad/s^2): {:.4f}".format(alpha))
 print("Torque required at the drum (MN·m): {:.4f}".format(T_total/1e6))
 ```
-:::
+::: -->
 
 ::: {#exm-ex67-6-bird}
 A ship's anchor has a mass of 5 tonnes. Determine the work done in raising the anchor from a depth of 100 m. If the hauling gear is driven by a motor whose output is 80 kW and the efficiency of the haulage is 75%, determine how long the lifting operation takes.
