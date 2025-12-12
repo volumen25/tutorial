@@ -1,0 +1,14 @@
+---
+title: "Introduction to Hydrostatics"
+format: pdf
+---
+
+Hydrostatics is the branch of fluid mechanics that studies fluids at rest and the forces and pressures they exert on immersed or containing surfaces. Key principles include Pascal’s law (pressure applied to an enclosed fluid is transmitted undiminished in all directions), Archimedes’ principle (buoyant force on a submerged body equals the weight of displaced fluid), and the hydrostatic pressure distribution in a fluid column, expressed as $p = \rho g h$, where $p$ is gauge pressure, $\rho$ is fluid density, $g$ is gravitational acceleration, and $h$ is depth below the free surface.
+
+## Classwork
+
+1.  A vertical rectangular bulkhead is 7 m wide and extends over the full height of the water column. Fresh water stands 6 m deep on one side and is assumed to be at zero level on the other side. Calculate the total hydrostatic load (thrust) on the bulkhead. Density of fresh water = 1000 kg/m³.
+2.  A 10-meter-long, 4-meter-wide, and 6-meter-high tank is filled with oil (specific gravity = 0.9). The oil rises 5 meters up a vent pipe above the tank’s top. Calculate the load on one end plate and the bottom of the tank.
+3.  A rectangular dock gate measures 4 meters wide. If the water level is 5.5 meters high on one side and 3.5 meters high on the other, what horizontal thrust will act on the gate? Assume the water density is 1000 kg/m³.
+4.  A rectangular dock gate measures 12 meters wide. When the sea is 9 meters deep on one side and 4.5 meters deep on the other, what horizontal thrust will act on the gate? Assume the density of seawater is 1025 kg/m³.
+5.  A vertical rectangular bulkhead, 2 meters wide, divides two liquids in a tank. On one side, oil with a density of 850 kg/m³ stands 4 meters deep. On the other side, fresh water with a density of 1000 kg/m³ is 6 meters deep. The bottom of the bulkhead rests on the tank bottom, and both liquids are open to the atmosphere at the top, resulting in zero gauge pressure at the free surfaces. Calculate the magnitude and direction of the net hydrostatic thrust on the bulkhead.
