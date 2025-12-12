@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Statics – Tutorial</title>
+<title>4&nbsp; Hydrostatics – Tutorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./kinematics.html" rel="next">
-<link href="./tutorial_basic.html" rel="prev">
+<link href="./colophon.html" rel="next">
+<link href="./02dynamics.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -313,7 +313,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01statics.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statics</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03hydrostatics.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hydrostatics</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -361,7 +361,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01statics.html" class="sidebar-item-text sidebar-link active">
+  <a href="./01statics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statics</span></span></a>
   </div>
 </li>
@@ -379,7 +379,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03hydrostatics.html" class="sidebar-item-text sidebar-link">
+  <a href="./03hydrostatics.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hydrostatics</span></span></a>
   </div>
 </li>
@@ -417,23 +417,8 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#space-diagrams" id="toc-space-diagrams" class="nav-link active" data-scroll-target="#space-diagrams"><span class="header-section-number">1.1</span> Space Diagrams</a></li>
-  <li><a href="#vector-diagrams" id="toc-vector-diagrams" class="nav-link" data-scroll-target="#vector-diagrams"><span class="header-section-number">1.2</span> Vector Diagrams</a>
-  <ul class="collapse">
-  <li><a href="#resultant" id="toc-resultant" class="nav-link" data-scroll-target="#resultant"><span class="header-section-number">1.2.1</span> Resultant</a></li>
-  <li><a href="#equilibrium" id="toc-equilibrium" class="nav-link" data-scroll-target="#equilibrium"><span class="header-section-number">1.2.2</span> Equilibrium</a></li>
-  </ul></li>
-  <li><a href="#conditions-of-equilibrium" id="toc-conditions-of-equilibrium" class="nav-link" data-scroll-target="#conditions-of-equilibrium"><span class="header-section-number">1.3</span> Conditions of Equilibrium</a></li>
-  <li><a href="#cosine-rule" id="toc-cosine-rule" class="nav-link" data-scroll-target="#cosine-rule"><span class="header-section-number">1.4</span> Cosine Rule</a></li>
-  <li><a href="#sine-rule" id="toc-sine-rule" class="nav-link" data-scroll-target="#sine-rule"><span class="header-section-number">1.5</span> Sine Rule</a></li>
-  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">1.6</span> Problem Set</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -441,7 +426,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="statics" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statics</span></span></h1>
+<h1 class="title"><span id="hydrostatics" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hydrostatics</span></span></h1>
 </div>
 
 
@@ -458,298 +443,173 @@ window.Quarto = {
 </header>
 
 
-<p>Statics is the branch of mechanics that analyzes bodies in equilibrium under the action of forces. This chapter examines cases where forces are in balance and presents methods for calculating resultant forces and their associated moments.</p>
-<section id="space-diagrams" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="space-diagrams"><span class="header-section-number">1.1</span> Space Diagrams</h2>
-<p>A space diagram illustrates the geometry of the system and the applied forces.</p>
-<div id="fig-spacedia" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-spacedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/spacedia.png" class="img-fluid figure-img" style="width:75.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spacedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.1: Space Diagram
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="vector-diagrams" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="vector-diagrams"><span class="header-section-number">1.2</span> Vector Diagrams</h2>
-<p>A vector diagram (or force polygon) is a <strong>scaled</strong> graphical construction in which force vectors are placed head-to-tail in succession. It is used to determine the resultant of a system of forces through vector addition, as well as to resolve equilibrium problems when the polygon closes.</p>
-<div id="fig-vectordia" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-vectordia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/vectordia.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vectordia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.2: Vector Diagram
-</figcaption>
-</figure>
-</div>
-<section id="resultant" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="resultant"><span class="header-section-number">1.2.1</span> Resultant</h3>
-<p>The resultant is a single force that has exactly the same effect on an object as all the original forces acting together. It is found by adding the forces vectorially taking into account both their magnitude and direction. The resultant gives the overall direction and magnitude of the combined forces as shown in <a href="#fig-vectordia" class="quarto-xref">Figure&nbsp;<span>1.2</span></a>.</p>
-</section>
-<section id="equilibrium" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="equilibrium"><span class="header-section-number">1.2.2</span> Equilibrium</h3>
-<p>Equilibrium of an object occurs when all the forces acting on it are balanced, so the object remains at rest or moves at a constant speed in a straight line. In equilibrium, as shown in <a href="#fig-equilibrant" class="quarto-xref">Figure&nbsp;<span>1.3</span></a>, there is no net force or acceleration, meaning the object is in a stable state without any change in its motion.</p>
-<div id="fig-equilibrant" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-equilibrant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/vectordia-equilibrant.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-equilibrant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.3: Equilibrant
-</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="conditions-of-equilibrium" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="conditions-of-equilibrium"><span class="header-section-number">1.3</span> Conditions of Equilibrium</h2>
-<ol type="1">
-<li>Net force must be zero:</li>
-</ol>
-<p><span id="eq-force"><span class="math display">\[
-\sum_{k} \vec{F}_{k} = \vec{0}
-\tag{1.1}\]</span></span></p>
-<ol start="2" type="1">
-<li>Net torque must be zero:</li>
-</ol>
-<p><span id="eq-torque"><span class="math display">\[
-\sum_{k} \vec{\tau}_{k} = \vec{0}
-\tag{1.2}\]</span></span></p>
-</section>
-<section id="cosine-rule" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="cosine-rule"><span class="header-section-number">1.4</span> Cosine Rule</h2>
-<div id="fig-law_cos_sine" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-law_cos_sine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/sinecosrule.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-law_cos_sine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.4: Rules of Cosine and Sine
-</figcaption>
-</figure>
-</div>
-<p>The Cosine Rule is used to relate the lengths of the sides of a triangle as shown in <a href="#fig-law_cos_sine" class="quarto-xref">Figure&nbsp;<span>1.4</span></a> to the cosine of one of its angles:</p>
-<p><span id="eq-cos"><span class="math display">\[
-c^2 = a^2 + b^2 - 2ab\cos \gamma
-\tag{1.3}\]</span></span></p>
-<p>Where:</p>
-<ul>
-<li><p>a, b, c are the sides of the triangle.</p></li>
-<li><p><span class="math inline">\(\gamma\)</span> is the angle opposite side c.</p></li>
-</ul>
-</section>
-<section id="sine-rule" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="sine-rule"><span class="header-section-number">1.5</span> Sine Rule</h2>
-<p>The Sine Rule relates the sides and angles of a triangle in <a href="#fig-law_cos_sine" class="quarto-xref">Figure&nbsp;<span>1.4</span></a>:</p>
-<p><span id="eq-sine"><span class="math display">\[
-\frac{a}{\sin \alpha} = \frac{b}{\sin \beta} = \frac{c}{\sin \gamma}
-\tag{1.4}\]</span></span></p>
-<p>Where:</p>
-<ul>
-<li><p><span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span> are the angles of the triangle.</p></li>
-<li><p>a, b, c are the sides of the triangle opposite to angles <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span> respectively.</p></li>
-</ul>
-</section>
-<section id="problem-set" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">1.6</span> Problem Set</h2>
-<div id="exm-1_6" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.1</strong></span> Two slings of equal length are slung from a horizontal beam and connected to a ring at their lower ends, the slings and beam forming an equilateral triangle. Find the force in each sling when a load of 30 kN hangs from the ring.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In Python, the math module’s trigonometric functions (sin, cos, tan, etc.) expect angles in radians, not degrees. Always convert degrees to radians before using sin, cos, or tan in Python’s math module.</p>
-</div>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>load <span class="op">=</span> <span class="dv">30</span>  <span class="co"># kN</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>angle_deg <span class="op">=</span> <span class="dv">60</span>  <span class="co"># each sling makes 60° with the horizontal</span></span>
+<p>Hydrostatics is the branch of fluid mechanics that studies fluids at rest and the forces and pressures they exert on immersed or containing surfaces. Key principles include Pascal’s law (pressure applied to an enclosed fluid is transmitted undiminished in all directions), Archimedes’ principle (buoyant force on a submerged body equals the weight of displaced fluid), and the hydrostatic pressure distribution in a fluid column, expressed as <span class="math inline">\(p = \rho g h\)</span>, where <span class="math inline">\(p\)</span> is gauge pressure, <span class="math inline">\(\rho\)</span> is fluid density, <span class="math inline">\(g\)</span> is gravitational acceleration, and <span class="math inline">\(h\)</span> is depth below the free surface.</p>
+<div id="exm-reeds-p319" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4.1</strong></span> A vertical rectangular bulkhead is 7 m wide and extends over the full height of the water column. Fresh water stands 6 m deep on one side and is assumed to be at zero level on the other side. Calculate the total hydrostatic load (thrust) on the bulkhead. Density of fresh water = 1000 kg/m³.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>width          <span class="op">=</span> <span class="fl">7.0</span>    <span class="co"># m (horizontal width of bulkhead)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>height_water   <span class="op">=</span> <span class="fl">6.0</span>    <span class="co"># m (water depth on one side)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>rho_water      <span class="op">=</span> <span class="fl">1000.0</span> <span class="co"># kg/m³ (fresh water)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>g              <span class="op">=</span> <span class="fl">9.81</span>   <span class="co"># m/s²</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert angle to radians</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>angle_rad <span class="op">=</span> math.radians(angle_deg)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Vertical equilibrium: 2 * T * sin(angle) = load</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> load <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> math.sin(angle_rad))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculations</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>area           <span class="op">=</span> width <span class="op">*</span> height_water                    <span class="co"># m²</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>h_centroid     <span class="op">=</span> height_water <span class="op">/</span> <span class="dv">2</span>                        <span class="co"># m (from free surface)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>force_N        <span class="op">=</span> rho_water <span class="op">*</span> g <span class="op">*</span> h_centroid <span class="op">*</span> area       <span class="co"># Newtons</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>force_kN       <span class="op">=</span> force_N <span class="op">/</span> <span class="dv">1000</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tension in each sling: </span><span class="sc">{</span>T<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"=== Hydrostatic Load on Bulkhead ==="</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Bulkhead width         : </span><span class="sc">{</span>width<span class="sc">}</span><span class="ss"> m"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Water depth            : </span><span class="sc">{</span>height_water<span class="sc">}</span><span class="ss"> m"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Submerged area         : </span><span class="sc">{</span>area<span class="sc">:.1f}</span><span class="ss"> m²"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Depth of centroid      : </span><span class="sc">{</span>h_centroid<span class="sc">}</span><span class="ss"> m"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Total water load       : </span><span class="sc">{</span>force_kN<span class="sc">:,.0f}</span><span class="ss"> kN  (</span><span class="sc">{</span>force_kN<span class="op">/</span><span class="dv">1000</span><span class="sc">:.3f}</span><span class="ss"> MN)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="exm-isosceles" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.2</strong></span> Two identical slings of equal length are attached to a horizontal beam and meet at a ring from which a 45 kN load is suspended. The slings and the beam form an isosceles triangle in which each sling makes an angle of 50° with the horizontal. Find the force (tension) in each sling.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>load <span class="op">=</span> <span class="dv">45</span>      <span class="co"># kN</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>angle_deg <span class="op">=</span> <span class="dv">50</span> <span class="co"># degrees</span></span>
+<div id="exm-reeds-p320" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4.2</strong></span> A 10-meter-long, 4-meter-wide, and 6-meter-high tank is filled with oil (specific gravity = 0.9). The oil rises 5 meters up a vent pipe above the tank’s top. Calculate the load on one end plate and the bottom of the tank.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tank_length      <span class="op">=</span> <span class="fl">10.0</span>   <span class="co"># m </span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>tank_width       <span class="op">=</span> <span class="fl">4.0</span>    <span class="co"># m </span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>tank_height      <span class="op">=</span> <span class="fl">6.0</span>    <span class="co"># m</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>sounding_pipe    <span class="op">=</span> <span class="fl">5.0</span>    <span class="co"># m (oil rises 5 m above the tank top in the vent/sounding pipe)</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert angle to radians</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>angle_rad <span class="op">=</span> math.radians(angle_deg)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute tension</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> load <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> math.sin(angle_rad))</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tension in each sling: </span><span class="sc">{</span>T<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>specific_gravity <span class="op">=</span> <span class="fl">0.9</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>rho_oil          <span class="op">=</span> specific_gravity <span class="op">*</span> <span class="dv">1000</span>   <span class="co"># kg/m³ </span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>g                <span class="op">=</span> <span class="fl">9.81</span>                      <span class="co"># m/s²</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculated values</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>total_head       <span class="op">=</span> tank_height <span class="op">+</span> sounding_pipe   <span class="co"># (from bottom to oil surface)</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># End plate dimensions and force</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>end_height       <span class="op">=</span> tank_height                  <span class="co"># m</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>end_width        <span class="op">=</span> tank_width                   <span class="co"># m</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>area_end         <span class="op">=</span> end_height <span class="op">*</span> end_width       <span class="co"># m²</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Depth of centroid of end plate below oil surface = sounding_pipe + (tank_height / 2)</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>h_centroid_end   <span class="op">=</span> sounding_pipe <span class="op">+</span> (tank_height <span class="op">/</span> <span class="dv">2</span>)   <span class="co"># m</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>force_end_plate  <span class="op">=</span> rho_oil <span class="op">*</span> g <span class="op">*</span> h_centroid_end <span class="op">*</span> area_end</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Bottom plate force</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>area_bottom      <span class="op">=</span> tank_length <span class="op">*</span> tank_width     <span class="co"># m²</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>force_bottom     <span class="op">=</span> rho_oil <span class="op">*</span> g <span class="op">*</span> total_head <span class="op">*</span> area_bottom</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"=== Hydrostatic Loads on Oil Tank ==="</span>)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tank dimensions       : </span><span class="sc">{</span>tank_length<span class="sc">}</span><span class="ss"> m × </span><span class="sc">{</span>tank_width<span class="sc">}</span><span class="ss"> m × </span><span class="sc">{</span>tank_height<span class="sc">}</span><span class="ss"> m (L×W×H)"</span>)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Oil rise in sounding pipe : </span><span class="sc">{</span>sounding_pipe<span class="sc">}</span><span class="ss"> m"</span>)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Oil density           : </span><span class="sc">{</span>rho_oil<span class="sc">}</span><span class="ss"> kg/m³"</span>)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"End plate (one wall)  : </span><span class="sc">{</span>end_height<span class="sc">}</span><span class="ss"> m high × </span><span class="sc">{</span>end_width<span class="sc">}</span><span class="ss"> m wide = </span><span class="sc">{</span>area_end<span class="sc">}</span><span class="ss"> m²"</span>)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Horizontal load on one end plate : </span><span class="sc">{</span>force_end_plate<span class="sc">:,.0f}</span><span class="ss"> N  =  </span><span class="sc">{</span>force_end_plate<span class="op">/</span><span class="dv">1000</span><span class="sc">:.0f}</span><span class="ss"> kN"</span>)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Bottom plate          : </span><span class="sc">{</span>tank_length<span class="sc">}</span><span class="ss"> m × </span><span class="sc">{</span>tank_width<span class="sc">}</span><span class="ss"> m = </span><span class="sc">{</span>area_bottom<span class="sc">}</span><span class="ss"> m²"</span>)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Vertical load on bottom          : </span><span class="sc">{</span>force_bottom<span class="sc">:,.0f}</span><span class="ss"> N  =  </span><span class="sc">{</span>force_bottom<span class="op">/</span><span class="dv">1000</span><span class="sc">:.0f}</span><span class="ss"> kN"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="exm-1_7" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.3</strong></span> Two lifting ropes are connected at their lower ends to a common shackle from which a load of 25 kN hangs. If the ropes make angles of 32° and 42° respectively to the vertical, find the tension in each rope.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>load <span class="op">=</span> <span class="dv">25</span>        <span class="co"># kN</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>theta1 <span class="op">=</span> <span class="dv">32</span>      <span class="co"># angle opposite T2</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>theta2 <span class="op">=</span> <span class="dv">42</span>      <span class="co"># angle opposite T1</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>theta3 <span class="op">=</span> <span class="dv">180</span> <span class="op">-</span> (theta1 <span class="op">+</span> theta2)  <span class="co"># angle opposite load</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to radians</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>t1 <span class="op">=</span> math.radians(theta1)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>t2 <span class="op">=</span> math.radians(theta2)</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>t3 <span class="op">=</span> math.radians(theta3)</span>
+<div id="exm-bolton-10" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4.3</strong></span> A rectangular dock gate measures 4 meters wide. If the water level is 5.5 meters high on one side and 3.5 meters high on the other, what horizontal thrust will act on the gate? Assume the water density is 1000 kg/m³.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>width <span class="op">=</span> <span class="fl">4.0</span>          <span class="co"># gate width in meters</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>h1 <span class="op">=</span> <span class="fl">5.5</span>             <span class="co"># water depth on higher side (m</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>h2 <span class="op">=</span> <span class="fl">3.5</span>             <span class="co"># water depth on lower side (m)</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="fl">1000.0</span>         <span class="co"># density of water (kg/m³)</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span>             <span class="co"># acceleration due to gravity (m/s²)</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Hydrostatic force on higher side</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>A1 <span class="op">=</span> h1 <span class="op">*</span> width</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>h_c1 <span class="op">=</span> h1 <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>F1 <span class="op">=</span> rho <span class="op">*</span> g <span class="op">*</span> h_c1 <span class="op">*</span> A1</span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Law of sines</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>T1 <span class="op">=</span> load <span class="op">*</span> math.sin(t2) <span class="op">/</span> math.sin(t3)  <span class="co"># tension in rope 1</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>T2 <span class="op">=</span> load <span class="op">*</span> math.sin(t1) <span class="op">/</span> math.sin(t3)  <span class="co"># tension in rope 2</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Hydrostatic force on lower side</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>A2 <span class="op">=</span> h2 <span class="op">*</span> width</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>h_c2 <span class="op">=</span> h2 <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>F2 <span class="op">=</span> rho <span class="op">*</span> g <span class="op">*</span> h_c2 <span class="op">*</span> A2</span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tension in rope 1: </span><span class="sc">{</span>T1<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tension in rope 2: </span><span class="sc">{</span>T2<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Net horizontal thrust (from higher to lower side)</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>F_net <span class="op">=</span> F1 <span class="op">-</span> F2</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"=== Hydrostatic Thrust Calculation ==="</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force from higher side (5.5 m): </span><span class="sc">{</span>F1<span class="sc">:.0f}</span><span class="ss"> N"</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force from lower side  (3.5 m): </span><span class="sc">{</span>F2<span class="sc">:.0f}</span><span class="ss"> N"</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Net horizontal thrust on gate: </span><span class="sc">{</span>F_net<span class="sc">:.0f}</span><span class="ss"> N"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="exm-1_10" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.4</strong></span> The angle between the jib and vertical post of a jib crane is 40°, and the angle between the jib and tie is 45°. Find the force in the jib and tie when a load of 15 kN hangs from the crane head.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>load <span class="op">=</span> <span class="dv">15</span>  <span class="co"># kN</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>angle_jib_vertical <span class="op">=</span> <span class="dv">40</span>  <span class="co"># degrees</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>angle_jib_tie <span class="op">=</span> <span class="dv">45</span>       <span class="co"># degrees</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Third angle in the force triangle</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>angle_tie_load <span class="op">=</span> <span class="dv">180</span> <span class="op">-</span> angle_jib_vertical <span class="op">-</span> angle_jib_tie  <span class="co"># degrees</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert angles to radians for math.sin</span></span>
+<div id="exm-bolton-11" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4.4</strong></span> A rectangular dock gate measures 12 meters wide. When the sea is 9 meters deep on one side and 4.5 meters deep on the other, what horizontal thrust will act on the gate? Assume the density of seawater is 1025 kg/m³.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>width <span class="op">=</span> <span class="fl">12.0</span>          <span class="co"># width of gate (m)</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>h1 <span class="op">=</span> <span class="fl">9.0</span>              <span class="co"># deeper side water depth (m)</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>h2 <span class="op">=</span> <span class="fl">4.5</span>              <span class="co"># shallower side water depth (m)</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="fl">1025.0</span>          <span class="co"># density of seawater (kg/m³)</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span>              <span class="co"># acceleration due to gravity (m/s²)</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Force from deeper side (9 m)</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>A1 <span class="op">=</span> h1 <span class="op">*</span> width</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>h_c1 <span class="op">=</span> h1 <span class="op">/</span> <span class="dv">2</span>   <span class="co"># Depth of centroid</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>F1 <span class="op">=</span> rho <span class="op">*</span> g <span class="op">*</span> h_c1 <span class="op">*</span> A1</span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>angle_jib_vertical_rad <span class="op">=</span> math.radians(angle_jib_vertical)</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>angle_jib_tie_rad <span class="op">=</span> math.radians(angle_jib_tie)</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>angle_tie_load_rad <span class="op">=</span> math.radians(angle_tie_load)</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Law of sines</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>F_jib <span class="op">=</span> load <span class="op">*</span> math.sin(angle_tie_load_rad) <span class="op">/</span> math.sin(angle_jib_tie_rad)</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>F_tie <span class="op">=</span> load <span class="op">*</span> math.sin(angle_jib_vertical_rad) <span class="op">/</span> math.sin(angle_jib_tie_rad)</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force in jib: </span><span class="sc">{</span>F_jib<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force in tie: </span><span class="sc">{</span>F_tie<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Force from shallower side (4.5 m)</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>A2 <span class="op">=</span> h2 <span class="op">*</span> width</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>h_c2 <span class="op">=</span> h2 <span class="op">/</span> <span class="dv">2</span> <span class="co"># Depth of centroid</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>F2 <span class="op">=</span> rho <span class="op">*</span> g <span class="op">*</span> h_c2 <span class="op">*</span> A2</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Net horizontal thrust</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>F_net <span class="op">=</span> F1 <span class="op">-</span> F2</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"=== Dock Gate Hydrostatic Thrust Calculation ==="</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force from 9.0 m side : </span><span class="sc">{</span>F1<span class="sc">:,.0f}</span><span class="ss"> N  (</span><span class="sc">{</span>F1<span class="op">/</span><span class="fl">1e6</span><span class="sc">:.3f}</span><span class="ss"> MN)"</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force from 4.5 m side : </span><span class="sc">{</span>F2<span class="sc">:,.0f}</span><span class="ss"> N  (</span><span class="sc">{</span>F2<span class="op">/</span><span class="fl">1e6</span><span class="sc">:.3f}</span><span class="ss"> MN)"</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Resultant horizontal thrust: </span><span class="sc">{</span>F_net<span class="sc">:,.0f}</span><span class="ss"> N  (</span><span class="sc">{</span>F_net<span class="op">/</span><span class="dv">1000</span><span class="sc">:.1f}</span><span class="ss"> kN or </span><span class="sc">{</span>F_net<span class="op">/</span><span class="fl">1e6</span><span class="sc">:.3f}</span><span class="ss"> MN)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="exm-1_11" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.5</strong></span> The lengths of the vertical post, jib, and tie of a jib crane are 8, 13, and 9 m, respectively. Find the forces in the jib and tie when a load of 20 kN hangs from the crane head.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> <span class="dv">8</span>   <span class="co"># post m</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>J <span class="op">=</span> <span class="dv">13</span>  <span class="co"># jib  m</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="dv">9</span>   <span class="co"># tie m</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>W <span class="op">=</span> <span class="dv">20</span>  <span class="co"># load in kN</span></span>
+<div id="exm-fe2" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4.5</strong></span> A vertical rectangular bulkhead, 2 meters wide, divides two liquids in a tank. On one side, oil with a density of 850 kg/m³ stands 4 meters deep. On the other side, fresh water with a density of 1000 kg/m³ is 6 meters deep. The bottom of the bulkhead rests on the tank bottom, and both liquids are open to the atmosphere at the top, resulting in zero gauge pressure at the free surfaces. Calculate the magnitude and direction of the net hydrostatic thrust on the bulkhead.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>width      <span class="op">=</span> <span class="fl">2.0</span>       <span class="co"># m (width of bulkhead)</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>h_oil      <span class="op">=</span> <span class="fl">4.0</span>       <span class="co"># m (oil depth)</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>h_water    <span class="op">=</span> <span class="fl">6.0</span>       <span class="co"># m (water depth)</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>rho_oil    <span class="op">=</span> <span class="fl">850.0</span>     <span class="co"># kg/m³</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>rho_water  <span class="op">=</span> <span class="fl">1000.0</span>    <span class="co"># kg/m³</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>g          <span class="op">=</span> <span class="fl">9.81</span>      <span class="co"># m/s²</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Law of cosines</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Angle opposite P (theta_p)</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>theta_p <span class="op">=</span> math.acos((J<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> T<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> P<span class="op">**</span><span class="dv">2</span>) <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> J <span class="op">*</span> T))</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Angle opposite T (theta_t)</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>theta_t <span class="op">=</span> math.acos((J<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> P<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> T<span class="op">**</span><span class="dv">2</span>) <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> J <span class="op">*</span> P))</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Angle opposite J (theta_j)</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>theta_j <span class="op">=</span> math.pi <span class="op">-</span> theta_p <span class="op">-</span> theta_t</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Law of sines</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"=== Bulkhead Separating Oil and Water ==="</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Bulkhead width          : </span><span class="sc">{</span>width<span class="sc">}</span><span class="ss"> m"</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Oil side    : </span><span class="sc">{</span>h_oil<span class="sc">}</span><span class="ss"> m deep,  ρ = </span><span class="sc">{</span>rho_oil<span class="sc">}</span><span class="ss"> kg/m³"</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Water side  : </span><span class="sc">{</span>h_water<span class="sc">}</span><span class="ss"> m deep,ρ = </span><span class="sc">{</span>rho_water<span class="sc">}</span><span class="ss"> kg/m³"</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># ————————————————</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Force from oil side (left side assumed)</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># ————————————————</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>A_oil      <span class="op">=</span> width <span class="op">*</span> h_oil</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>h_c_oil    <span class="op">=</span> h_oil <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>F_oil      <span class="op">=</span> rho_oil <span class="op">*</span> g <span class="op">*</span> h_c_oil <span class="op">*</span> A_oil</span>
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>F_J <span class="op">=</span> W <span class="op">*</span> math.sin(theta_j) <span class="op">/</span> math.sin(theta_p)  <span class="co"># force in jib</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>F_T <span class="op">=</span> W <span class="op">*</span> math.sin(theta_t) <span class="op">/</span> math.sin(theta_p)  <span class="co"># force in tie</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert angles to degrees</span></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>theta_p_deg <span class="op">=</span> math.degrees(theta_p)</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>theta_t_deg <span class="op">=</span> math.degrees(theta_t)</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>theta_j_deg <span class="op">=</span> math.degrees(theta_j)</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"theta_p = </span><span class="sc">{</span>theta_p_deg<span class="sc">:.4f}</span><span class="ss"> degrees"</span>)</span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"theta_t = </span><span class="sc">{</span>theta_t_deg<span class="sc">:.4f}</span><span class="ss"> degrees"</span>)</span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"theta_j = </span><span class="sc">{</span>theta_j_deg<span class="sc">:.4f}</span><span class="ss"> degrees"</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># ————————————————</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Force from water side (right side)</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># ————————————————</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>A_water    <span class="op">=</span> width <span class="op">*</span> h_water</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>h_c_water  <span class="op">=</span> h_water <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>F_water    <span class="op">=</span> rho_water <span class="op">*</span> g <span class="op">*</span> h_c_water <span class="op">*</span> A_water</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co"># ————————————————</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Net thrust</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="co"># ————————————————</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>F_net_N    <span class="op">=</span> F_water <span class="op">-</span> F_oil                <span class="co"># positive, towards oil side</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>F_net_kN   <span class="op">=</span> F_net_N <span class="op">/</span> <span class="dv">1000</span></span>
 <span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force in jib (F_J): </span><span class="sc">{</span>F_J<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force in tie (F_T): </span><span class="sc">{</span>F_T<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div id="exm-1_15" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.6</strong></span> A ship sailing due east at 18 knots runs into a 3-knot current moving 40° east of north. Find the resultant speed and direction of the ship.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Degrees, Minutes, and Seconds (DMS) notation is widely used in navigation and surveying because decimal degrees alone often lack sufficient precision for small-scale positioning. On Earth’s surface:</p>
-<ul>
-<li>1° of latitude ≈ 111 km<br>
-</li>
-<li>1′ (minute of arc) ≈ 1.85 km<br>
-</li>
-<li>1″ (second of arc) ≈ 30 m</li>
-</ul>
-<p>Thus, a position given as 40° 26′ 46″ N instantly conveys location to within tens of metres, whereas the equivalent decimal form, 40.44611°, is less intuitive at a glance despite being mathematically identical.</p>
-</div>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>ship <span class="op">=</span> <span class="dv">18</span>          <span class="co"># knots (due east)</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>current <span class="op">=</span> <span class="dv">3</span>        <span class="co"># knots</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>angle_deg <span class="op">=</span> <span class="dv">50</span>     <span class="co"># angle between ship and current in degrees</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to radians</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>angle_rad <span class="op">=</span> math.radians(angle_deg)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Law of cosines</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> math.sqrt(ship<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> current<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>ship<span class="op">*</span>current<span class="op">*</span>math.cos(angle_rad))</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Law of sines</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>theta_rad <span class="op">=</span> math.asin((current <span class="op">*</span> math.sin(angle_rad)) <span class="op">/</span> R)</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>theta_deg <span class="op">=</span> math.degrees(theta_rad)</span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert direction to degrees, minutes, seconds</span></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>deg <span class="op">=</span> <span class="bu">int</span>(theta_deg)</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>minutes_float <span class="op">=</span> (theta_deg <span class="op">-</span> deg) <span class="op">*</span> <span class="dv">60</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>minutes <span class="op">=</span> <span class="bu">int</span>(minutes_float)</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>seconds <span class="op">=</span> (minutes_float <span class="op">-</span> minutes) <span class="op">*</span> <span class="dv">60</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Resultant speed: </span><span class="sc">{</span>R<span class="sc">:.4f}</span><span class="ss"> knots"</span>)</span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Direction: </span><span class="sc">{</span>theta_deg<span class="sc">:.4f}</span><span class="ss">° north of east"</span>)</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Direction (DMS): </span><span class="sc">{</span>deg<span class="sc">}</span><span class="ss">° </span><span class="sc">{</span>minutes<span class="sc">}</span><span class="ss">' </span><span class="sc">{</span>seconds<span class="sc">:.0f}</span><span class="ch">\"</span><span class="ss"> north of east"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force from oil side     : </span><span class="sc">{</span>F_oil<span class="sc">:8.0f}</span><span class="ss"> N  =  </span><span class="sc">{</span>F_oil<span class="op">/</span><span class="dv">1000</span><span class="sc">:6.1f}</span><span class="ss"> kN"</span>)</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force from water side   : </span><span class="sc">{</span>F_water<span class="sc">:8.0f}</span><span class="ss"> N  =  </span><span class="sc">{</span>F_water<span class="op">/</span><span class="dv">1000</span><span class="sc">:6.1f}</span><span class="ss"> kN"</span>)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"───────────────────────────────────────"</span>)</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"NET THRUST              : </span><span class="sc">{</span>F_net_N<span class="sc">:8.0f}</span><span class="ss"> N  =  </span><span class="sc">{</span>F_net_kN<span class="sc">:6.1f}</span><span class="ss"> kN"</span>)</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Direction               : Towards the oil side"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1167,13 +1027,13 @@ Note
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./tutorial_basic.html" class="pagination-link" aria-label="Python Tutorial">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Python Tutorial</span>
+      <a href="./02dynamics.html" class="pagination-link" aria-label="Dynamics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dynamics</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./kinematics.html" class="pagination-link" aria-label="Kinematics">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Kinematics</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./colophon.html" class="pagination-link" aria-label="Colophon">
+        <span class="nav-page-text">Colophon</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

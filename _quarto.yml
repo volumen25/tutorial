@@ -30,6 +30,7 @@ book:
     - 01statics.qmd
     - kinematics.qmd
     - 02dynamics.qmd
+    - 03hydrostatics.qmd
     # - si_units.qmd
     # - heat_work.qmd
     # - thermal_expansion.qmd
