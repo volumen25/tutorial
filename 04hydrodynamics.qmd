@@ -127,7 +127,8 @@ $$
 
 ::: {#exm-13-2}
 Calculate the volume flow rate of water in cubic metres per minute through a 150-millimetre diameter valve when the velocity of the water is 2.5 m/s and the valve lift is (i) 30 millimetres and (ii) 45 millimetres.
-```python
+
+``` python
 import math
 
 # Given
@@ -161,7 +162,6 @@ print(f"Maximum effective lift: {critical_lift_mm:.4f} mm")
 print(f"Full bore flow rate: {Q_full:.4f} m³/min")
 print(f"At 30 mm lift: {Q1:.4f} m³/min")
 print(f"At 45 mm lift: {Q2:.4f} m³/min")
-
 ```
 :::
 
@@ -205,7 +205,8 @@ $$
 
 ::: {#exm-13-3}
 Water escapes through a hole 20 mm in diameter in the side of a tank, with a water head of 3 m above the hole. Given a coefficient of velocity of 0.97 and a coefficient of reduction of area of 0.64, calculate (i) the velocity of the water jet as it exits the hole and (ii) the quantity of water escaping tonne per hour.
-```python
+
+``` python
 import math
 
 # Given
@@ -239,7 +240,6 @@ print(f"    Volume flow rate: {volume_flow_actual:.6f} m³/s")
 print(f"    Mass flow rate: {mass_flow:.4f} kg/s")
 print(f"    Mass per hour: {mass_per_hour_kg:.4f} kg/hour")
 print(f"    Mass per hour: {mass_per_hour_tonne:.4f} tonnes/hour")
-
 ```
 :::
 
@@ -584,26 +584,26 @@ print(f"Actual discharge: {Q_actual:.4f} m³/s")
 
 ## Power Required for Pumping Water
 
-The power needed to pump water is the rate at which work is done to increase the fluid’s potential energy by lifting it against gravity, often with friction or other losses. 
+The power needed to pump water is the rate at which work is done to increase the fluid’s potential energy by lifting it against gravity, often with friction or other losses.
 
-In ideal conditions, the theoretical power $P$ is calculated as 
+In ideal conditions, the theoretical power $P$ is calculated as
 
 $$
 P = \rho g h \dot{v}
 $$
 
-where $\rho$ is the fluid density, $g$ is gravitational acceleration, $h$ is the total head, and $\dot{v}$ is the volumetric flow rate. This is derived from the mass flow rate $\dot{m} = \rho \dot{v}$. 
+where $\rho$ is the fluid density, $g$ is gravitational acceleration, $h$ is the total head, and $\dot{v}$ is the volumetric flow rate. This is derived from the mass flow rate $\dot{m} = \rho \dot{v}$.
 
-Actual input power accounts for pump efficiency $\eta$, given by 
+Actual input power accounts for pump efficiency $\eta$, given by
 
 $$
 \eta = \frac{P_{\mathrm{output}}}{P_{\mathrm{input}}}
 $$
 
 ::: {#exm-fe2-3}
-Water is pumped to a height of 20 m at a rate of 12 litres per second. Determine the power required. If the pump efficiency is 75%, calculate the input power.
+Water is pumped to a height of 20 m at a rate of 12 litres per second. If the pump efficiency is 75%, calculate the input power.
 
-```python
+``` python
 # Given
 flow_rate_lps = 12.0    # litres per second
 height = 20.0           # metres
@@ -614,11 +614,10 @@ g = 9.81                # acceleration due to gravity in m/s²
 # Calculations
 v_dot = flow_rate_lps / 1000.0                   # volumetric flow rate in m³/s
 m_dot = rho * v_dot                              #  mass flow rate in kg/s
-theoretical_power = m_dot * g * height           # watts
-input_power = theoretical_power / efficiency     # watts
+output_power = m_dot * g * height           # watts
+input_power = output_power / efficiency     # watts
 
-# Results
-print(f"Theoretical (hydraulic) power required: {theoretical_power:.4f} W ({theoretical_power / 1000:.4f} kW)")
+# Result
 print(f"Actual input power (with 75% efficiency): {input_power:.4f} W ({input_power / 1000:.4f} kW)")
 ```
 :::
@@ -626,7 +625,7 @@ print(f"Actual input power (with 75% efficiency): {input_power:.4f} W ({input_po
 ::: {#exm-similar-fe2-3}
 A water pump operates with an actual input power of 3 kW and an overall efficiency of 70%. The pump delivers water at a rate of 12 litres per second. Assuming the power is used solely to increase the gravitational potential energy (negligible velocity and pressure heads), calculate the height (head) to which the water is pumped.
 
-```python
+``` python
 # Given
 input_power = 3000.0    # Actual input power in W
 efficiency = 0.70       # Pump efficiency
@@ -640,17 +639,13 @@ v_dot = flow_rate_lps / 1000.0
 # Mass flow rate m_dot (kg/s)
 m_dot = rho * v_dot
 
-# Theoretical (hydraulic) power delivered to the water (W)
-theoretical_power = input_power * efficiency
+# Output power delivered to the water (W)
+output_power = input_power * efficiency
 
 # Head h (m) using P = m_dot * g * h
-h = theoretical_power / (m_dot * g)
+h = output_power / (m_dot * g)
 
-# Results
-print(f"Volumetric flow rate (v_dot): {v_dot:.4f} m³/s")
-print(f"Mass flow rate (m_dot): {m_dot:.1f} kg/s")
-print(f"Theoretical power: {theoretical_power:.0f} W")
+# Result
 print(f"Head (height pumped): {h:.2f} m")
-
 ```
 :::
