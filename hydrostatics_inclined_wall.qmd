@@ -1,0 +1,43 @@
+---
+title: "Surface Intersecting the Free Surface"
+format: pdf
+---
+
+::: {#exm-hajer-tech-fluid-mech-p16}
+A fuel oil tank is filled with HFO (specific gravity = 0.96) to a depth of 4.2 m. One wall, inclined at 60 degrees to the horizontal, is 8 m long. Calculate the force on the wall and determine its location.
+
+```python
+import math
+
+# Given data
+SG = 0.96                 # specific gravity
+rho = SG * 1000           # density (kg/m^3)
+g = 9.81                  # gravity (m/s^2)
+
+h = 4.2                   # vertical depth of oil (m)
+theta = math.radians(60)  # wall inclination to horizontal (rad)
+b = 8.0                   # wall width (m)
+
+# Submerged length of the wall
+L = h / math.sin(theta)
+
+# Area of submerged wall
+A = b * L
+
+# Depth of centroid
+h_bar = h / 2
+
+# Resultant force
+F = rho * g * A * h_bar
+
+# Second moment of area about centroid
+I_G = b * L**3 / 12
+
+# Centre of pressure (vertical depth)
+h_cp = h_bar + (I_G * math.sin(theta)**2) / (A * h_bar)
+
+# Output
+print(f"Resultant force = {F:.3e} N")
+print(f"Centre of pressure = {h_cp:.2f} m below free surface")
+```
+:::

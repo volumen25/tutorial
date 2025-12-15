@@ -1,5 +1,13 @@
 # Notes
 
+## Fluid Mech Notes
+
+https://kdusling.github.io/teaching/Applied-Fluids/
+
+https://control.com/textbook/continuous-fluid-flow-measurement/pressure-based-flowmeters/
+
+
+
 ## QR Code generator
 
 https://gratisqr.com/

@@ -404,12 +404,6 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Greek Letters</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./SI_common_mistakes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">SI System Common Mistakes</span></span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -417,8 +411,16 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#pressure-head" id="toc-pressure-head" class="nav-link active" data-scroll-target="#pressure-head"><span class="header-section-number">4.1</span> Pressure Head</a></li>
+  <li><a href="#load-on-immersed-surfaces" id="toc-load-on-immersed-surfaces" class="nav-link" data-scroll-target="#load-on-immersed-surfaces"><span class="header-section-number">4.2</span> Load On Immersed Surfaces</a></li>
+  <li><a href="#hydraulic-jacks" id="toc-hydraulic-jacks" class="nav-link" data-scroll-target="#hydraulic-jacks"><span class="header-section-number">4.3</span> Hydraulic Jacks</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -444,6 +446,14 @@ window.Quarto = {
 
 
 <p>Hydrostatics is the branch of fluid mechanics that studies fluids at rest and the forces and pressures they exert on immersed or containing surfaces. Key principles include Pascal’s law (pressure applied to an enclosed fluid is transmitted undiminished in all directions), Archimedes’ principle (buoyant force on a submerged body equals the weight of displaced fluid), and the hydrostatic pressure distribution in a fluid column, expressed as <span class="math inline">\(p = \rho g h\)</span>, where <span class="math inline">\(p\)</span> is gauge pressure, <span class="math inline">\(\rho\)</span> is fluid density, <span class="math inline">\(g\)</span> is gravitational acceleration, and <span class="math inline">\(h\)</span> is depth below the free surface.</p>
+<section id="pressure-head" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="pressure-head"><span class="header-section-number">4.1</span> Pressure Head</h2>
+<p>In fluid mechanics, pressure head is the height of a fluid column that corresponds to a specific pressure at a given point, assuming the fluid is static. It’s expressed as <span class="math inline">\(h_p = \frac{p}{\rho g}\)</span>, where <span class="math inline">\(p\)</span> is the pressure above atmospheric, <span class="math inline">\(\rho\)</span> is the fluid density, and <span class="math inline">\(g\)</span> is the acceleration due to gravity. The unit is typically meters (or feet) of the fluid column. Pressure head represents the potential energy per unit weight due to pressure and is a component of the total hydraulic head, which is the sum of pressure head and elevation head.</p>
+</section>
+<section id="load-on-immersed-surfaces" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="load-on-immersed-surfaces"><span class="header-section-number">4.2</span> Load On Immersed Surfaces</h2>
+<p>The load on an immersed surface is the total hydrostatic force exerted by a fluid on a surface submerged in a static fluid. This force arises from the pressure variation with depth, governed by the hydrostatic pressure equation <span class="math inline">\(p = \rho g h\)</span>, where <span class="math inline">\(\rho\)</span> is fluid density, <span class="math inline">\(g\)</span> is gravitational acceleration, and <span class="math inline">\(h\)</span> is the depth below the free surface.</p>
+<p>The pressure acts perpendicular to the surface, resulting in a distributed load. The total force <span class="math inline">\(F\)</span> is calculated as <span class="math inline">\(F = \rho g A \bar{h}\)</span>, where <span class="math inline">\(A\)</span> is the surface area and <span class="math inline">\(\bar{h}\)</span> is the depth of the centroid of the area.</p>
 <div id="exm-reeds-p319" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4.1</strong></span> A vertical rectangular bulkhead is 7 m wide and extends over the full height of the water column. Fresh water stands 6 m deep on one side and is assumed to be at zero level on the other side. Calculate the total hydrostatic load (thrust) on the bulkhead. Density of fresh water = 1000 kg/m³.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
@@ -574,42 +584,124 @@ window.Quarto = {
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>rho_water  <span class="op">=</span> <span class="fl">1000.0</span>    <span class="co"># kg/m³</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>g          <span class="op">=</span> <span class="fl">9.81</span>      <span class="co"># m/s²</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"=== Bulkhead Separating Oil and Water ==="</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Bulkhead Separating Oil and Water"</span>)</span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Bulkhead width          : </span><span class="sc">{</span>width<span class="sc">}</span><span class="ss"> m"</span>)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Oil side    : </span><span class="sc">{</span>h_oil<span class="sc">}</span><span class="ss"> m deep,  ρ = </span><span class="sc">{</span>rho_oil<span class="sc">}</span><span class="ss"> kg/m³"</span>)</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Water side  : </span><span class="sc">{</span>h_water<span class="sc">}</span><span class="ss"> m deep,ρ = </span><span class="sc">{</span>rho_water<span class="sc">}</span><span class="ss"> kg/m³"</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Oil side    : </span><span class="sc">{</span>h_oil<span class="sc">}</span><span class="ss"> m deep,   ρ = </span><span class="sc">{</span>rho_oil<span class="sc">}</span><span class="ss"> kg/m³"</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Water side  : </span><span class="sc">{</span>h_water<span class="sc">}</span><span class="ss"> m deep,   ρ = </span><span class="sc">{</span>rho_water<span class="sc">}</span><span class="ss"> kg/m³"</span>)</span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># ————————————————</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Force from oil side (left side assumed)</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># ————————————————</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>A_oil      <span class="op">=</span> width <span class="op">*</span> h_oil</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>h_c_oil    <span class="op">=</span> h_oil <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>F_oil      <span class="op">=</span> rho_oil <span class="op">*</span> g <span class="op">*</span> h_c_oil <span class="op">*</span> A_oil</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># ————————————————</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Force from water side (right side)</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># ————————————————</span></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>A_water    <span class="op">=</span> width <span class="op">*</span> h_water</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>h_c_water  <span class="op">=</span> h_water <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>F_water    <span class="op">=</span> rho_water <span class="op">*</span> g <span class="op">*</span> h_c_water <span class="op">*</span> A_water</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Force from oil side (left side assumed)</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>A_oil      <span class="op">=</span> width <span class="op">*</span> h_oil</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>h_c_oil    <span class="op">=</span> h_oil <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>F_oil      <span class="op">=</span> rho_oil <span class="op">*</span> g <span class="op">*</span> h_c_oil <span class="op">*</span> A_oil</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Force from water side (right side)</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>A_water    <span class="op">=</span> width <span class="op">*</span> h_water</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>h_c_water  <span class="op">=</span> h_water <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>F_water    <span class="op">=</span> rho_water <span class="op">*</span> g <span class="op">*</span> h_c_water <span class="op">*</span> A_water</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Net thrust</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>F_net_N    <span class="op">=</span> F_water <span class="op">-</span> F_oil                <span class="co"># positive, towards oil side</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>F_net_kN   <span class="op">=</span> F_net_N <span class="op">/</span> <span class="dv">1000</span></span>
 <span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co"># ————————————————</span></span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Net thrust</span></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="co"># ————————————————</span></span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>F_net_N    <span class="op">=</span> F_water <span class="op">-</span> F_oil                <span class="co"># positive, towards oil side</span></span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>F_net_kN   <span class="op">=</span> F_net_N <span class="op">/</span> <span class="dv">1000</span></span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force from oil side     : </span><span class="sc">{</span>F_oil<span class="sc">:8.0f}</span><span class="ss"> N  =  </span><span class="sc">{</span>F_oil<span class="op">/</span><span class="dv">1000</span><span class="sc">:6.1f}</span><span class="ss"> kN"</span>)</span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force from water side   : </span><span class="sc">{</span>F_water<span class="sc">:8.0f}</span><span class="ss"> N  =  </span><span class="sc">{</span>F_water<span class="op">/</span><span class="dv">1000</span><span class="sc">:6.1f}</span><span class="ss"> kN"</span>)</span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"───────────────────────────────────────"</span>)</span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"NET THRUST              : </span><span class="sc">{</span>F_net_N<span class="sc">:8.0f}</span><span class="ss"> N  =  </span><span class="sc">{</span>F_net_kN<span class="sc">:6.1f}</span><span class="ss"> kN"</span>)</span>
-<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Direction               : Towards the oil side"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force from oil side     : </span><span class="sc">{</span>F_oil<span class="sc">:8.0f}</span><span class="ss"> N  =  </span><span class="sc">{</span>F_oil<span class="op">/</span><span class="dv">1000</span><span class="sc">:6.1f}</span><span class="ss"> kN"</span>)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force from water side   : </span><span class="sc">{</span>F_water<span class="sc">:8.0f}</span><span class="ss"> N  =  </span><span class="sc">{</span>F_water<span class="op">/</span><span class="dv">1000</span><span class="sc">:6.1f}</span><span class="ss"> kN"</span>)</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"NET THRUST              : </span><span class="sc">{</span>F_net_N<span class="sc">:8.0f}</span><span class="ss"> N  =  </span><span class="sc">{</span>F_net_kN<span class="sc">:6.1f}</span><span class="ss"> kN"</span>)</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Direction               :   Towards the oil side"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="exm-assignment29" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4.6</strong></span> Seawater has flooded an oil tanker’s oil tank to a depth of 4 meters, and a 10-meter layer of oil sits atop the seawater. Calculate the pressure at the bottom of the tank. Note: The density of oil is 0.85 g/cm³, the density of seawater is 1.02 t/m³, and the atmospheric pressure is 101.3 kPa.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>oil_density_g_per_cm3 <span class="op">=</span> <span class="fl">0.85</span>      <span class="co"># Density of oil in g/cm³</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>oil_height_m <span class="op">=</span> <span class="fl">10.0</span>               <span class="co"># Height of oil layer in meters</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>seawater_density_t_per_m3 <span class="op">=</span> <span class="fl">1.02</span>  <span class="co"># Density of seawater in t/m³</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>seawater_height_m <span class="op">=</span> <span class="fl">4.0</span>           <span class="co"># Height of seawater layer in meters</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>atmospheric_pressure_kPa <span class="op">=</span> <span class="fl">101.3</span>  <span class="co"># Atmospheric pressure in kPa</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert densities to kg/m³</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>oil_density <span class="op">=</span> oil_density_g_per_cm3 <span class="op">*</span> <span class="dv">1000</span>  <span class="co"># g/cm³ to kg/m³</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>seawater_density <span class="op">=</span> seawater_density_t_per_m3 <span class="op">*</span> <span class="dv">1000</span>  <span class="co"># t/m³ to kg/m³</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate hydrostatic pressure for each layer in Pa, then convert to kPa</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>pressure_oil_kPa <span class="op">=</span> (oil_density <span class="op">*</span> g <span class="op">*</span> oil_height_m) <span class="op">/</span> <span class="dv">1000</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>pressure_seawater_kPa <span class="op">=</span> (seawater_density <span class="op">*</span> g <span class="op">*</span> seawater_height_m) <span class="op">/</span> <span class="dv">1000</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Total gauge pressure in kPa</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>gauge_pressure_kPa <span class="op">=</span> pressure_oil_kPa <span class="op">+</span> pressure_seawater_kPa</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Absolute pressure in kPa</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>absolute_pressure_kPa <span class="op">=</span> atmospheric_pressure_kPa <span class="op">+</span> gauge_pressure_kPa</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Output the result</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Pressure due to oil layer: </span><span class="sc">{</span>pressure_oil_kPa<span class="sc">:.4f}</span><span class="ss"> kPa"</span>)</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Pressure due to seawater layer: </span><span class="sc">{</span>pressure_seawater_kPa<span class="sc">:.4f}</span><span class="ss"> kPa"</span>)</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Total gauge pressure: </span><span class="sc">{</span>gauge_pressure_kPa<span class="sc">:.4f}</span><span class="ss"> kPa"</span>)</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Absolute pressure at the bottom: </span><span class="sc">{</span>absolute_pressure_kPa<span class="sc">:.4f}</span><span class="ss"> kPa"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="hydraulic-jacks" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="hydraulic-jacks"><span class="header-section-number">4.3</span> Hydraulic Jacks</h2>
+<p>Hydraulic jacks use Pascal’s law to lift heavy loads with minimal input force. Pascal’s law states that pressure applied to an enclosed fluid is transmitted equally in all directions. In a hydraulic jack, two pistons of different sizes are connected by a confined fluid. Applying an effort force to the smaller piston generates a pressure that is transmitted to the larger piston, producing an output force. Calculations involving hydraulic jacks, such as determining system pressure, required input force, or lifted load, rely on this principle under ideal conditions, neglecting friction and fluid compressibility.</p>
+<div id="exm-hydraulic-jack-hajer-p2" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4.7</strong></span> A force of 150 N is transmitted from a piston of 25 mm² to one of 100 mm². Determine the system pressure and the load carried by the larger piston.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given parameters</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>area_small_mm2 <span class="op">=</span> <span class="fl">25.0</span>      <span class="co"># mm² (small piston)</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>area_large_mm2 <span class="op">=</span> <span class="fl">100.0</span>     <span class="co"># mm² (large piston)</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>force_small <span class="op">=</span> <span class="fl">150.0</span>        <span class="co"># N (force applied to small piston)</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert areas to base SI units (m²)</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>area_small <span class="op">=</span> area_small_mm2 <span class="op">*</span> <span class="fl">1e-6</span>  <span class="co"># 1 mm² = 10^{-6} m²</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>area_large <span class="op">=</span> area_large_mm2 <span class="op">*</span> <span class="fl">1e-6</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co"># System pressure (Pa)</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>pressure <span class="op">=</span> force_small <span class="op">/</span> area_small</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Load on larger piston (N)</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>load_large <span class="op">=</span> pressure <span class="op">*</span> area_large</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Output results</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"System pressure: </span><span class="sc">{</span>pressure<span class="sc">:.2f}</span><span class="ss"> Pa (or </span><span class="sc">{</span>pressure <span class="op">/</span> <span class="fl">1e6</span><span class="sc">:.1f}</span><span class="ss"> MPa)"</span>)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Load carried by larger piston: </span><span class="sc">{</span>load_large<span class="sc">:.1f}</span><span class="ss"> N"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="exm-hydraulic-jack-ex8-5" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4.8</strong></span> A simple hydraulic jack consists of a small effort plunger with a diameter of 25 mm and a large load piston with a diameter of 70 mm. The jack lifts a load of 5.88 kN. Calculate:</p>
+<ol type="1">
+<li><p>The pressure in the hydraulic fluid (system pressure).</p></li>
+<li><p>The force exerted on the small plunger (load on the small plunger) required to support the given load, assuming ideal conditions (no losses).</p></li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>diameter_small <span class="op">=</span> <span class="fl">0.025</span>  <span class="co"># m (effort plunger)</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>diameter_large <span class="op">=</span> <span class="fl">0.070</span>  <span class="co"># m (load piston)</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>load <span class="op">=</span> <span class="fl">5880.0</span>           <span class="co"># N (equivalent to 5.88 kN)</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate radii</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>radius_small <span class="op">=</span> diameter_small <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>radius_large <span class="op">=</span> diameter_large <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Cross-sectional areas (m²)</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>area_small <span class="op">=</span> math.pi <span class="op">*</span> (radius_small <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>area_large <span class="op">=</span> math.pi <span class="op">*</span> (radius_large <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co"># System pressure (Pa)</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>pressure <span class="op">=</span> load <span class="op">/</span> area_large</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Ideal force on small plunger (N)</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>force_small <span class="op">=</span> pressure <span class="op">*</span> area_small</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Output results</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"System pressure: </span><span class="sc">{</span>pressure<span class="sc">:.2f}</span><span class="ss"> Pa (or </span><span class="sc">{</span>pressure <span class="op">/</span> <span class="fl">1e6</span><span class="sc">:.3f}</span><span class="ss"> MPa)"</span>)</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Ideal force on small plunger: </span><span class="sc">{</span>force_small<span class="sc">:.1f}</span><span class="ss"> N"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1047,7 +1139,7 @@ window.Quarto = {
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Built with <a href="https://positron.posit.co"> Positron</a> + <a href="https://quarto.org"> Quarto 1.8.26</a></p>
+<p>Built with <a href="https://quarto.org"> Quarto 1.8.26</a></p>
 </div>
   </div>
 </footer>

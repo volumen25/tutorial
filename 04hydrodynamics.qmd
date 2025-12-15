@@ -1,0 +1,656 @@
+# Hydrodynamics {#sec-hydrodynamics}
+
+Hydrodynamics, a branch of fluid mechanics, studies the motion of liquids and the forces acting on them. Unlike aerodynamics, which concerns compressible gases such as air, hydrodynamics primarily deals with incompressible fluids like water. It is based on classical physics principles, including Newton’s laws of motion, the conservation of mass and momentum. These principles are used to describe the velocity, pressure and viscosity of a fluid in motion.
+
+## Volume Flow Rate
+
+Volume rate of flow refers to the rate at which a fluid volume passes a given section in a flow stream. Volume rate of flow may also be referred to as capacity of flow, flow rate or discharge. It is generally given in units of volume per unit of time, cubic meters per second (m^3^/s) or liters per second (L/s).
+
+![Volume flow](images/volumeflow.png){width="10.4cm"}
+
+Consider an ideal fluid flow in a pipe of cross-section 'A' (m^2^). For an ideal fluid all the particles move to the right with a velocity of 'C' (m/s). As the fluid flow to the right with a velocity of C m/s, 'C' m of fluid pass section 1 every second. i.e. the volume of fluid passing section-1 every second is A x C.
+
+$$
+\dot{v} = A \cdot C
+$$
+
+Where:
+
+-   $\dot{v}$: Volume flow rate, $\mathrm{m^3/s}$
+
+-   $A$: Cross-sectional area of the flow, $\mathrm{m^2}$
+
+-   $C$: Mean (average) velocity of the fluid, $\mathrm{m/s}$
+
+Consider a real fluid flowing in the same pipe. Here particle velocity will be a variable across the flow stream.
+
+![Mean velocity](images/volumeflow1.png){width="11.2cm"}
+
+If the mean velocity cm of all the fluid particles could be found, then similar to the ideal fluid.
+
+$$
+Volume\ flow = area\ x\ mean\ velocity
+$$
+
+Unless otherwise indicated, the velocity of flow is understood to refer to the average or mean velocity of all the particles in a flowing fluid.
+
+## Mass Flow Rate
+
+Mass flow rate refers to the rate at which a fluid mass passes a given section in a flow stream. It is given in units of mass per unit of time, kilogram per second (kg/s). Mass flow rate is easily calculated from volume flow rate as follows.
+
+$$
+\dot{m} = \rho \cdot \dot v
+$$
+
+Where:
+
+-   $\dot{m}$: mass flow rate, $\mathrm{kg/s}$
+
+-   $\rho$: density, $\mathrm{kg/m^3}$
+
+-   $\dot{v}$: volume flow, $\mathrm{m^3/s}$
+
+Or
+
+$$
+\dot{m} = \rho \cdot A \cdot C
+$$
+
+Where:
+
+-   $\dot{m}$: mass flow rate, $\mathrm{kg/s}$
+
+-   $\rho$: density, $\mathrm{kg/m^3}$
+
+-   $A$: Cross-sectional area of the flow, $\mathrm{m^2}$
+
+-   $C$: Mean (average) velocity of the fluid, $\mathrm{m/s}$
+
+::: {#exm-13-1}
+Oil of relative density 0.9 flows at full bore through a pipe with an internal diameter of 75 mm at a velocity of 1.2 m/s. Calculate the volume flow rate in cubic metres per second and the mass flow rate in tonnes per hour.
+
+``` python
+import math
+
+# Given
+internal_diameter_mm = 75  # mm
+velocity_m_per_s = 1.2     # m/s
+relative_density = 0.9
+density_water_kg_per_m3 = 1000  # standard value
+
+# Convert diameter to metres
+internal_diameter_m = internal_diameter_mm / 1000
+radius_m = internal_diameter_m / 2
+
+# Calculate cross-sectional area
+area_m2 = math.pi * radius_m ** 2
+
+# Volume flow rate (m³/s)
+volume_flow_rate_m3_per_s = area_m2 * velocity_m_per_s
+
+# Density of oil (kg/m³)
+density_oil_kg_per_m3 = relative_density * density_water_kg_per_m3
+
+# Mass flow rate (kg/s)
+mass_flow_rate_kg_per_s = density_oil_kg_per_m3 * volume_flow_rate_m3_per_s
+
+# Mass flow rate in tonnes per hour (1 tonne = 1000 kg, 1 hour = 3600 s)
+mass_flow_rate_tonnes_per_hour = (mass_flow_rate_kg_per_s * 3600) / 1000
+
+# Display results
+print(f"Volume flow rate, m³/s: {volume_flow_rate_m3_per_s:.4f}")
+print(f"Mass flow rate, tonnes/hour: {mass_flow_rate_tonnes_per_hour:.4f}")
+```
+:::
+
+## Flow Through Valves
+
+Referring to the figure, the area of escape is the annular area of the circumferential opening between the valve and seat, which is the circumference multiplied by the lift.
+
+![Flow through valves](images/flow_through_valves.png)
+
+The lift beyond which it would cause no restriction is when the circumferential area of the lift opening is equal to the cross-sectional area of the bore, thus,
+
+$$
+\text{Circumference} \times \text{Lift} = \text{Cross-sectional area}.
+$$ $$
+\pi d \times L = \frac{\pi d^{2}}{4},
+$$
+
+where $L$ is the lift and $d$ is the diameter of the valve.
+
+Hence, a lift equal to one-quarter of the diameter of the valve allows full bore flow:
+
+$$
+L = \frac{d}{4}.
+$$
+
+::: {#exm-13-2}
+Calculate the volume flow rate of water in cubic metres per minute through a 150-millimetre diameter valve when the velocity of the water is 2.5 m/s and the valve lift is (i) 30 millimetres and (ii) 45 millimetres.
+```python
+import math
+
+# Given
+d = 0.15                  # diameter in metres
+V = 2.5                   # velocity in m/s
+
+# Maximum effective lift
+critical_lift_mm = (d / 4) * 1000
+
+# Full bore area and flow rate
+A_bore = math.pi * d**2 / 4
+Q_full_m3_per_s = V * A_bore
+Q_full = Q_full_m3_per_s * 60      # convert to m³/min
+
+
+# (i) Lift = 30 mm
+L1 = 0.030                # lift in metres
+A_annular1 = math.pi * d * L1
+A_effective1 = min(A_annular1, A_bore)
+Q1 = V * A_effective1 * 60
+
+
+# (ii) Lift = 45 mm
+L2 = 0.045                # lift in metres
+A_annular2 = math.pi * d * L2
+A_effective2 = min(A_annular2, A_bore)
+Q2 = V * A_effective2 * 60
+
+
+print(f"Maximum effective lift: {critical_lift_mm:.4f} mm")
+print(f"Full bore flow rate: {Q_full:.4f} m³/min")
+print(f"At 30 mm lift: {Q1:.4f} m³/min")
+print(f"At 45 mm lift: {Q2:.4f} m³/min")
+
+```
+:::
+
+## Discharge Through an Orifice
+
+When water discharges through an orifice in the side of a tank, the potential energy associated with the height of the water surface above the orifice is converted into kinetic energy of the efflux.
+
+![Orifice](images/OrificePlate.png){width="8.2cm"}
+
+This yields the theoretical velocity of the jet: $$
+C = \sqrt{2gh}
+$$ where $g$ is the acceleration due to gravity and $h$ is the height of the water surface above the orifice.
+
+The theoretical volume flow rate is then: $$
+\dot{v}_{\text{theoretical}} = A C = A \sqrt{2gh}
+$$ where $A$ is the area of the orifice.
+
+Due to viscous effects, the actual velocity is less than the theoretical value. The coefficient of velocity, $C_v$, is defined as the ratio of actual velocity to theoretical velocity. Thus, the velocity-corrected flow rate is: $$
+\dot{v}_{\text{velocity-corrected}} = C_v A \sqrt{2gh}
+$$
+
+Downstream of a sharp-edged orifice, the jet contracts due to streamline curvature, forming a vena contracta. The vena contracta refers to the narrowest cross-section of a fluid jet shortly downstream of an orifice or nozzle, where the streamlines converge, resulting in the smallest area, maximum velocity, and minimum pressure.
+
+![Vena contracta](images/vena_contracta.png)
+
+The coefficient of contraction, $C_A$, is the ratio of the jet area at the vena contracta to the orifice area: $$
+A_{\text{jet}} = C_A A
+$$
+
+The actual volume flow rate therefore becomes: $$
+\dot{v}_{\text{actual}} = C_A A \cdot C_v \sqrt{2gh}
+$$
+
+The coefficient of discharge, $C_d$, is the ratio of the actual volume flow rate to the theoretical volume flow rate: $$
+C_d = C_A \cdot C_v
+$$
+
+Consequently, $$
+\dot{v}_{\text{actual}} = C_d A \sqrt{2gh}
+$$
+
+::: {#exm-13-3}
+Water escapes through a hole 20 mm in diameter in the side of a tank, with a water head of 3 m above the hole. Given a coefficient of velocity of 0.97 and a coefficient of reduction of area of 0.64, calculate (i) the velocity of the water jet as it exits the hole and (ii) the quantity of water escaping tonne per hour.
+```python
+import math
+
+# Given
+diameter_mm = 20
+diameter_m = diameter_mm / 1000
+radius_m = diameter_m / 2
+h = 3  # m
+Cv = 0.97
+Ca = 0.64
+g = 9.81  # m/s²
+density_water = 1000  # kg/m³
+
+# Calculations
+area = math.pi * radius_m ** 2
+
+v_theoretical = math.sqrt(2 * g * h)
+v_actual = Cv * v_theoretical
+
+volume_flow_actual = Ca * area * v_actual  # m³/s
+
+mass_flow = density_water * volume_flow_actual  # kg/s
+
+mass_per_hour_kg = mass_flow * 3600
+mass_per_hour_tonne = mass_per_hour_kg / 1000
+
+# Output results
+print(f"(i) Actual velocity of the water jet: {v_actual:.3f} m/s")
+
+print(f"\n(ii) Quantity of water escaping per hour:")
+print(f"    Volume flow rate: {volume_flow_actual:.6f} m³/s")
+print(f"    Mass flow rate: {mass_flow:.4f} kg/s")
+print(f"    Mass per hour: {mass_per_hour_kg:.4f} kg/hour")
+print(f"    Mass per hour: {mass_per_hour_tonne:.4f} tonnes/hour")
+
+```
+:::
+
+## Continuity Equation
+
+Continuous flow exists in a flow system when the mass flow rate is constant throughout the system. If in the diagram below, the mass flow rate at 1 is equal to that at 2, then continuity exists.
+
+![Continuity equation](images/continuity_equation.png){width="10.2cm"}
+
+Since $\dot{m_1} = \dot{m_2}$, therefore
+
+$$
+\rho_1 \cdot A_1 \cdot C_1= \rho_2 \cdot A_2 \cdot C_2
+$$
+
+If the fluid is incompressible (most liquids), then density will remain constant ($\rho_1=\rho_2$) and the above equations may be written as:
+
+$$
+A_1 \cdot C_1= A_2 \cdot C_2
+$$ Or
+
+$$
+\dot{v_1}= \dot{v_2}
+$$
+
+That is, the volume flow rate is constant for an incompressible fluid.
+
+::: {#exm-conteq}
+A pipe decreases in diameter from 300 mm to 200 mm. Water flows from the larger to the smaller pipe at a constant rate of 18.4 kL/min. Calculate the mass flow rate and the velocities in the larger and smaller pipe.
+
+``` python
+import math
+
+# Given
+flow_rate_kL_per_min = 18.4   # Volumetric flow rate in kL/min
+diameter_large_mm = 300       # Diameter of larger pipe in mm
+diameter_small_mm = 200       # Diameter of smaller pipe in mm
+density_water = 1000          # Density of water in kg/m³
+
+# Convert volumetric flow rate to m³/s
+flow_rate_m3_per_s = (flow_rate_kL_per_min / 60)
+
+# Convert diameters to meters and calculate radii
+d1 = diameter_large_mm / 1000  # m
+d2 = diameter_small_mm / 1000  # m
+r1 = d1 / 2
+r2 = d2 / 2
+
+# Cross-sectional areas
+A1 = math.pi * r1**2  # m²
+A2 = math.pi * r2**2  # m²
+
+# Velocities
+v1 = flow_rate_m3_per_s / A1  # m/s (larger pipe)
+v2 = flow_rate_m3_per_s / A2  # m/s (smaller pipe)
+
+# Mass flow rate
+mass_flow_rate = density_water * flow_rate_m3_per_s  # kg/s
+
+# Output results
+print(f"Mass flow rate: {mass_flow_rate:.4f} kg/s")
+print(f"Velocity in larger pipe (300 mm): {v1:.4f} m/s")
+print(f"Velocity in smaller pipe (200 mm): {v2:.4f} m/s")
+```
+:::
+
+## The Energy Equation for an Ideal Fluid
+
+The steady flow equation is developed from the Law of Conservation of Energy. If there are no energy losses or energy additions in a flow system, then the total energy of a flowing fluid will remain constant.
+
+A flowing fluid may lose energy as a result of fluid friction, heat energy transfer and fluid motors. For an ideal fluid, frictional losses are equal to zero. Energy may be added to a fluid via a pump or heat energy addition.
+
+The total energy possessed by a flowing fluid consists of:
+
+-   internal energy
+-   potential energy
+-   kinetic energy and
+-   pressure energy (flow energy).
+
+Generally in fluid mechanics the change in internal energy is considered to be negligible. Heat energy transfers are usually not considered in fluid mechanics and the frictional heat developed by a flowing fluid is relatively small. Therefore, the internal energy term is omitted from the energy balance.
+
+Consider the flow system shown below. For this system, assume:
+
+-   an ideal fluid
+-   that there are no energy losses or additions and
+-   steady flow conditions exist.
+
+![Energy equation](images/energy_equation.png){width="9.3cm"}
+
+From the Law of Conservation of Energy:
+
+The Total Energy at section 1 = The Total Energy at section 2
+
+$$
+mZ_1g+\frac{m C_1^2}{2}+mP_1v_1=mZ_2g+\frac{m C_2^2}{2}+mP_2v_2
+$$
+
+Dividing through by $mg$:
+
+$$
+\frac{mZ_1g}{mg}+\frac{m C_1^2}{2mg}+\frac{mP_1v_1}{mg}=\frac{mZ_2g}{mg}+\frac{m C_2^2}{2mg}+\frac{mP_2v_2}{mg}
+$$
+
+Therefore
+
+$$
+Z_1+\frac{C_1^2}{2g}+\frac{P_1v_1}{g}=Z_2+\frac{C_2^2}{2g}+\frac{P_2v_2}{g}
+$$
+
+In fluid mechanics density ($\rho$) is generally used in preference to specific volume, i.e. $v=\frac{1}{\rho}$ Therefore:
+
+$$
+Z_1+\frac{C_1^2}{2g}+\frac{P_1}{g\rho_1}=Z_2+\frac{C_2^2}{2g}+\frac{P_2}{g\rho_2}
+$$
+
+In fluid mechanics, specific weight represents the force exerted by gravity on a unit volume of a fluid. For this reason, units are expressed as force per unit volume (e.g., $N/m^3$)
+
+Specific weight is given $\gamma = g\rho$
+
+Where:
+
+$\gamma$: specific weight, $\mathrm{N/m^3}$
+
+$g$: gravitational acceleration, $\mathrm{m/s^2}$
+
+$\rho$: density, $\mathrm{kg/m^3}$
+
+$$
+Z_1+\frac{C_1^2}{2g}+\frac{P_1}{\gamma_1}=Z_2+\frac{C_2^2}{2g}+\frac{P_2}{\gamma_2}
+$$
+
+Each term has units of m, therefore:
+
+-   Potential energy $Z$ is known as the elevation head.
+
+-   Kinetic energy $\frac{c^2}{2g}$ is known as the velocity head.
+
+-   Pressure energy $\frac{P}{\gamma}$ is known as the pressure head.
+
+Similarly, the total energy of a flowing fluid is known as the total head (H).
+
+$$
+Total\ Head= Elevation\ Head + Velocity\ Head + Pressure\ Head
+$$ $$
+H=Z+\frac{C^2}{2g}+\frac{P}{\gamma}
+$$
+
+The total head (H) will be a constant throughout a flow system if:
+
+1.  frictional losses (head loss) are equal to zero
+
+2.  work energy is not added by a pump (pump head) or removed by a motor.
+
+::: {#exm-energyeq}
+Consider a simple flow system consisting of a varying cross-section pipe. Water flows through this system at a rate of 2000 L/min. As the pipe increases in elevation from 30 m to 36 m it decreases in diameter from 10 cm to 3.0 cm. If the pressure is 6.5 MPa at the 30 m elevation, what is the pressure at 36 m?
+
+![Example](images/energy_equation_exm.png){width="9.4cm"}
+
+``` python
+import math
+
+# Given
+v_dot_lpm = 2000.0                # Flow rate, L/min
+v_dot = v_dot_lpm / 60000.0       # Convert to m³/s
+d1 = 0.10                         # Diameter at lower section, m
+d2 = 0.03                         # Diameter at higher section, m
+z1 = 30.0                         # Elevation at lower section, m
+z2 = 36.0                         # Elevation at higher section, m
+P1 = 6.5e6                        # Pressure at lower section, Pa
+rho = 1000.0                      # Density of water, kg/m³
+
+# Cross-sectional areas
+A1 = math.pi * (d1 / 2.0)**2
+A2 = math.pi * (d2 / 2.0)**2
+
+# Velocities
+c1 = v_dot / A1
+c2 = v_dot / A2
+
+# Bernoulli's equation to find P2
+P2 = P1 + 0.5 * rho * (c1**2 - c2**2) + rho * g * (z1 - z2)
+
+# Convert P2 to MPa
+P2_MPa = P2 / 1e6
+
+# Output results
+print(f"Flow rate: {v_dot:.5f} m³/s")
+print(f"Area 1: {A1:.6f} m²")
+print(f"Area 2: {A2:.6f} m²")
+print(f"Velocity 1: {c1:.4f} m/s")
+print(f"Velocity 2: {c2:.4f} m/s")
+print(f"Pressure at 36 m elevation: {P2_MPa:.4f} MPa")
+```
+:::
+
+## Bernoulli's Equation
+
+The Bernoulli's equation between two points in a fluid flow is given by:
+
+$$
+P_1 + \frac{1}{2} \rho C_1^2 + \rho g h_1 = P_2 + \frac{1}{2} \rho C_2^2 + \rho g h_2
+$$
+
+Where:
+
+-   $P_1$ and $P_2$ are the pressures at points 1 and 2, respectively.
+
+-   $\rho$ is the density of the fluid.
+
+-   $C_1$ and $C_2$ are the velocities of the fluid at points 1 and 2, respectively.
+
+-   $g$ is the acceleration due to gravity.
+
+-   $h_1$ and $h_2$ are the heights of the fluid at points 1 and 2, respectively.
+
+## Venturi Meter
+
+A venturi meter measures liquid flow rates in pipelines. The device features a pipe section that narrows in the middle (called the throat) and widens at both ends, as shown below:
+
+![Venturi meter](images/venturi.png){width="9.6cm"}
+
+When the entrance and throat areas are known, and the pressure readings (or pressure difference) at these points are measured, Bernoulli's equation can be used to calculate the liquid velocity and flow rate. Typically, a venturi meter is installed horizontally in the pipeline, which simplifies calculations since there is no elevation difference between points (Z~1~ = Z~2~), thus eliminating the height terms.
+
+::: {#exm-fe1}
+Calculate the mass flow rate in kilograms per second through a smooth, horizontal venturi meter with an entrance diameter of 375 mm and a throat diameter of 125 mm, given a pressure difference of 457 mm of water
+
+``` python
+import math
+
+# Given
+D1 = 0.375  # Entrance diameter in meters
+D2 = 0.125  # Throat diameter in meters
+h = 0.457   # Pressure head difference in meters of water
+g = 9.81    # Gravitational acceleration in m/s²
+rho = 1000  # Density of water in kg/m³
+
+# Calculate cross-sectional areas
+A1 = math.pi * (D1 / 2)**2
+A2 = math.pi * (D2 / 2)**2
+
+# Compute the squared area ratio (A2/A1)^2
+ratio_squared = (A2 / A1)**2
+
+# Calculate throat velocity c2
+c2 = math.sqrt((2 * g * h) / (1 - ratio_squared))
+
+# Calculate volumetric flow rate v_dot using throat section
+v_dot = A2 * c2
+
+# Calculate mass flow rate
+mass_flow_rate = rho * v_dot
+
+# Output results
+print(f"Entrance area: {A1:.6f} m²")
+print(f"Throat area: {A2:.6f} m²")
+print(f"Throat velocity: {c2:.4f} m/s")
+print(f"Volumetric flow rate: {v_dot:.4f} m³/s")
+print(f"Mass flow rate: {mass_flow_rate:.4f} kg/s")
+```
+:::
+
+::: {#exm-13_7}
+A horizontal venturi meter has an inlet diameter of 450 mm and a throat diameter of 225 mm. The pressure difference between these two points is equivalent to 381 mm of water. Given the density of fresh water is 1000 kg/m³, calculate the mass flow rate through the meter.
+
+``` python
+import math
+
+# Given
+D1 = 0.450  # Inlet diameter in meters
+D2 = 0.225  # Throat diameter in meters
+h = 0.381   # Pressure head difference in meters of water
+g = 9.81    # Gravitational acceleration in m/s²
+rho = 1000  # Density of water in kg/m³
+
+# Calculate cross-sectional areas
+A1 = math.pi * (D1 / 2)**2
+A2 = math.pi * (D2 / 2)**2
+
+# Compute the squared area ratio (A2/A1)^2
+ratio_squared = (A2 / A1)**2
+
+# Calculate throat velocity c2
+c2 = math.sqrt((2 * g * h) / (1 - ratio_squared))
+
+# Calculate volumetric flow rate v_dot using throat section
+v_dot = A2 * c2
+
+# Calculate mass flow rate
+mass_flow_rate = rho * v_dot
+
+# Output results
+print(f"Entrance area: {A1:.6f} m²")
+print(f"Throat area: {A2:.6f} m²")
+print(f"Throat velocity: {c2:.4f} m/s")
+print(f"Volumetric flow rate: {v_dot:.4f} m³/s")
+print(f"Mass flow rate: {mass_flow_rate:.4f} kg/s")
+```
+:::
+
+::: {#exm-13_8}
+A 300 mm diameter pipe has a venturi meter with a throat diameter of 100 mm. A U-tube gauge filled with water and mercury measures a pressure head difference of 250 mm between the inlet and throat. The meter coefficient is 0.95. Using the density of water (1000 kg/m³), calculate the discharge rate through the pipe in m³/s.
+
+``` python
+import math
+
+# Given
+D1 = 0.3  # Inlet diameter in meters
+D2 = 0.1  # Throat diameter in meters
+Cd = 0.95  # Coefficient of discharge
+h_mercury = 0.250  # Manometer reading in meters of mercury
+SG = 13.6  # Specific gravity of mercury relative to water
+g = 9.81  # Acceleration due to gravity in m/s²
+
+# Cross-sectional areas
+A1 = math.pi * (D1 ** 2) / 4
+A2 = math.pi * (D2 ** 2) / 4
+
+# The difference in water levels, or equivalent head, 
+# creates a hydrostatic pressure in the connecting legs 
+# that counteracts the mercury column. 
+# Subtracting 1 from the mercury column height 
+# compensates for this pressure difference.
+h_eq = h_mercury * (SG - 1)
+
+# Diameter ratio
+beta = D2 / D1
+
+# Theoretical discharge
+Q_theoretical = A2 * math.sqrt((2 * g * h_eq) / (1 - beta**4))
+
+# Actual discharge
+Q_actual = Cd * Q_theoretical
+
+# Output results
+print(f"Cross-sectional area at inlet (A1): {A1:.4f} m²")
+print(f"Cross-sectional area at throat (A2): {A2:.4f} m²")
+print(f"Equivalent water head (h_eq): {h_eq:.4f} m")
+print(f"Theoretical discharge: {Q_theoretical:.4f} m³/s")
+print(f"Actual discharge: {Q_actual:.4f} m³/s")
+```
+:::
+
+## Power Required for Pumping Water
+
+The power needed to pump water is the rate at which work is done to increase the fluid’s potential energy by lifting it against gravity, often with friction or other losses. 
+
+In ideal conditions, the theoretical power $P$ is calculated as 
+
+$$
+P = \rho g h \dot{v}
+$$
+
+where $\rho$ is the fluid density, $g$ is gravitational acceleration, $h$ is the total head, and $\dot{v}$ is the volumetric flow rate. This is derived from the mass flow rate $\dot{m} = \rho \dot{v}$. 
+
+Actual input power accounts for pump efficiency $\eta$, given by 
+
+$$
+\eta = \frac{P_{\mathrm{output}}}{P_{\mathrm{input}}}
+$$
+
+::: {#exm-fe2-3}
+Water is pumped to a height of 20 m at a rate of 12 litres per second. Determine the power required. If the pump efficiency is 75%, calculate the input power.
+
+```python
+# Given
+flow_rate_lps = 12.0    # litres per second
+height = 20.0           # metres
+efficiency = 0.75       
+rho = 1000.0            # density of water in kg/m³
+g = 9.81                # acceleration due to gravity in m/s²
+
+# Calculations
+v_dot = flow_rate_lps / 1000.0                   # volumetric flow rate in m³/s
+m_dot = rho * v_dot                              #  mass flow rate in kg/s
+theoretical_power = m_dot * g * height           # watts
+input_power = theoretical_power / efficiency     # watts
+
+# Results
+print(f"Theoretical (hydraulic) power required: {theoretical_power:.4f} W ({theoretical_power / 1000:.4f} kW)")
+print(f"Actual input power (with 75% efficiency): {input_power:.4f} W ({input_power / 1000:.4f} kW)")
+```
+:::
+
+::: {#exm-similar-fe2-3}
+A water pump operates with an actual input power of 3 kW and an overall efficiency of 70%. The pump delivers water at a rate of 12 litres per second. Assuming the power is used solely to increase the gravitational potential energy (negligible velocity and pressure heads), calculate the height (head) to which the water is pumped.
+
+```python
+# Given
+input_power = 3000.0    # Actual input power in W
+efficiency = 0.70       # Pump efficiency
+flow_rate_lps = 12.0    # Flow rate in litres per second
+rho = 1000.0            # Density of water in kg/m³
+g = 9.81                # Gravitational acceleration in m/s²
+
+# Volumetric flow rate v_dot (m³/s)
+v_dot = flow_rate_lps / 1000.0
+
+# Mass flow rate m_dot (kg/s)
+m_dot = rho * v_dot
+
+# Theoretical (hydraulic) power delivered to the water (W)
+theoretical_power = input_power * efficiency
+
+# Head h (m) using P = m_dot * g * h
+h = theoretical_power / (m_dot * g)
+
+# Results
+print(f"Volumetric flow rate (v_dot): {v_dot:.4f} m³/s")
+print(f"Mass flow rate (m_dot): {m_dot:.1f} kg/s")
+print(f"Theoretical power: {theoretical_power:.0f} W")
+print(f"Head (height pumped): {h:.2f} m")
+
+```
+:::
