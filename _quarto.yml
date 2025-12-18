@@ -27,16 +27,16 @@ book:
     - index.qmd    
     - study_guide.qmd        
     - tutorial_basic.qmd
-    - 01statics.qmd
-    - kinematics.qmd
-    - 02dynamics.qmd
-    - 03hydrostatics.qmd
+    # - 01statics.qmd
+    # - kinematics.qmd
+    # - 02dynamics.qmd
+    # - 03hydrostatics.qmd
     # - 04hydrodynamics.qmd
-    # - si_units.qmd
-    # - heat_work.qmd
-    # - thermal_expansion.qmd
-    # - heat_transfer.qmd
-    # - perfect_gases.qmd
+    - si_units.qmd
+    - heat_work.qmd
+    - thermal_expansion.qmd
+    - heat_transfer.qmd
+    - perfect_gases.qmd
     # - ic_engines.qmd
     # - ideal_cycles.qmd
     - colophon.qmd

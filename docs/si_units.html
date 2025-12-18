@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1&nbsp; SI Units – Tutorial</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./heat_work.html" rel="next">
+<link href="./tutorial_basic.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-14cbc709409b9607cfe384ca3dce8273.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./si_units.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">SI Units</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Tutorial</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./study_guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Study Guide</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorial_basic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Python Tutorial</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./si_units.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">SI Units</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./heat_work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Heat and Work</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./thermal_expansion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Thermal Expansion</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./heat_transfer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Heat Transfer</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./perfect_gases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Perfect Gases</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./colophon.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Colophon</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./greek_letters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Greek Letters</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#metric-multipliers-for-length-area-and-volume" id="toc-metric-multipliers-for-length-area-and-volume" class="nav-link active" data-scroll-target="#metric-multipliers-for-length-area-and-volume"><span class="header-section-number">1.1</span> Metric Multipliers for Length, Area, and Volume</a>
+  <ul class="collapse">
+  <li><a href="#quick-reference" id="toc-quick-reference" class="nav-link" data-scroll-target="#quick-reference"><span class="header-section-number">1.1.1</span> <strong>Quick Reference</strong></a></li>
+  </ul></li>
+  <li><a href="#unity-fraction" id="toc-unity-fraction" class="nav-link" data-scroll-target="#unity-fraction"><span class="header-section-number">1.2</span> Unity Fraction</a>
+  <ul class="collapse">
+  <li><a href="#classwork" id="toc-classwork" class="nav-link" data-scroll-target="#classwork"><span class="header-section-number">1.2.1</span> Classwork</a></li>
+  <li><a href="#self-test" id="toc-self-test" class="nav-link" data-scroll-target="#self-test"><span class="header-section-number">1.2.2</span> Self-Test</a></li>
+  <li><a href="#answer-key" id="toc-answer-key" class="nav-link" data-scroll-target="#answer-key"><span class="header-section-number">1.2.3</span> Answer Key</a></li>
+  </ul></li>
+  <li><a href="#condenser-vacuum" id="toc-condenser-vacuum" class="nav-link" data-scroll-target="#condenser-vacuum"><span class="header-section-number">1.3</span> Condenser Vacuum</a>
+  <ul class="collapse">
+  <li><a href="#given-data" id="toc-given-data" class="nav-link" data-scroll-target="#given-data"><span class="header-section-number">1.3.1</span> Given Data</a></li>
+  <li><a href="#absolute-pressure-in-mmhg" id="toc-absolute-pressure-in-mmhg" class="nav-link" data-scroll-target="#absolute-pressure-in-mmhg"><span class="header-section-number">1.3.2</span> Absolute Pressure in mmHg</a></li>
+  <li><a href="#convert-mmhg-knm²" id="toc-convert-mmhg-knm²" class="nav-link" data-scroll-target="#convert-mmhg-knm²"><span class="header-section-number">1.3.3</span> Convert mmHg → kN/m²</a></li>
+  <li><a href="#convert-knm²-bar" id="toc-convert-knm²-bar" class="nav-link" data-scroll-target="#convert-knm²-bar"><span class="header-section-number">1.3.4</span> Convert kN/m² → bar</a></li>
+  <li><a href="#final-answers" id="toc-final-answers" class="nav-link" data-scroll-target="#final-answers"><span class="header-section-number">1.3.5</span> Final Answers</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="header-section-number">1.3.6</span> Code</a></li>
+  </ul></li>
+  <li><a href="#oil-flow-in-tubes" id="toc-oil-flow-in-tubes" class="nav-link" data-scroll-target="#oil-flow-in-tubes"><span class="header-section-number">1.4</span> Oil Flow in Tubes</a>
+  <ul class="collapse">
+  <li><a href="#cross-sectional-area-of-one-tube" id="toc-cross-sectional-area-of-one-tube" class="nav-link" data-scroll-target="#cross-sectional-area-of-one-tube"><span class="header-section-number">1.4.1</span> Cross-sectional area of one tube</a></li>
+  <li><a href="#total-area-and-volume-flow-rate" id="toc-total-area-and-volume-flow-rate" class="nav-link" data-scroll-target="#total-area-and-volume-flow-rate"><span class="header-section-number">1.4.2</span> Total area and volume flow rate</a></li>
+  <li><a href="#mass-flow-rate" id="toc-mass-flow-rate" class="nav-link" data-scroll-target="#mass-flow-rate"><span class="header-section-number">1.4.3</span> Mass flow rate</a></li>
+  <li><a href="#final-answers-1" id="toc-final-answers-1" class="nav-link" data-scroll-target="#final-answers-1"><span class="header-section-number">1.4.4</span> Final Answers</a></li>
+  <li><a href="#code-1" id="toc-code-1" class="nav-link" data-scroll-target="#code-1"><span class="header-section-number">1.4.5</span> Code</a></li>
+  </ul></li>
+  <li><a href="#gauge-pressure" id="toc-gauge-pressure" class="nav-link" data-scroll-target="#gauge-pressure"><span class="header-section-number">1.5</span> Gauge Pressure</a>
+  <ul class="collapse">
+  <li><a href="#gauge-pressure-1" id="toc-gauge-pressure-1" class="nav-link" data-scroll-target="#gauge-pressure-1"><span class="header-section-number">1.5.1</span> Gauge Pressure</a></li>
+  <li><a href="#compute-the-density-of-oil-using-specific-gravity" id="toc-compute-the-density-of-oil-using-specific-gravity" class="nav-link" data-scroll-target="#compute-the-density-of-oil-using-specific-gravity"><span class="header-section-number">1.5.2</span> Compute the density of oil using specific gravity</a></li>
+  <li><a href="#compute-the-gauge-pressure" id="toc-compute-the-gauge-pressure" class="nav-link" data-scroll-target="#compute-the-gauge-pressure"><span class="header-section-number">1.5.3</span> Compute the gauge pressure</a></li>
+  <li><a href="#answer" id="toc-answer" class="nav-link" data-scroll-target="#answer"><span class="header-section-number">1.5.4</span> Answer</a></li>
+  <li><a href="#code-2" id="toc-code-2" class="nav-link" data-scroll-target="#code-2"><span class="header-section-number">1.5.5</span> Code</a></li>
+  </ul></li>
+  <li><a href="#absolute-pressure-from-manometer-reading" id="toc-absolute-pressure-from-manometer-reading" class="nav-link" data-scroll-target="#absolute-pressure-from-manometer-reading"><span class="header-section-number">1.6</span> Absolute Pressure from Manometer Reading</a>
+  <ul class="collapse">
+  <li><a href="#relationship-between-absolute-and-gauge-pressure" id="toc-relationship-between-absolute-and-gauge-pressure" class="nav-link" data-scroll-target="#relationship-between-absolute-and-gauge-pressure"><span class="header-section-number">1.6.1</span> Relationship between absolute and gauge pressure</a></li>
+  <li><a href="#convert-atmospheric-pressure-to-pa-using" id="toc-convert-atmospheric-pressure-to-pa-using" class="nav-link" data-scroll-target="#convert-atmospheric-pressure-to-pa-using"><span class="header-section-number">1.6.2</span> Convert atmospheric pressure to Pa using</a></li>
+  <li><a href="#compute-gauge-pressure" id="toc-compute-gauge-pressure" class="nav-link" data-scroll-target="#compute-gauge-pressure"><span class="header-section-number">1.6.3</span> Compute gauge pressure</a></li>
+  <li><a href="#compute-absolute-pressure" id="toc-compute-absolute-pressure" class="nav-link" data-scroll-target="#compute-absolute-pressure"><span class="header-section-number">1.6.4</span> Compute absolute pressure</a></li>
+  <li><a href="#answer-1" id="toc-answer-1" class="nav-link" data-scroll-target="#answer-1"><span class="header-section-number">1.6.5</span> Answer</a></li>
+  <li><a href="#code-3" id="toc-code-3" class="nav-link" data-scroll-target="#code-3"><span class="header-section-number">1.6.6</span> Code</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="si_units" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">SI Units</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The International System of Units (SI) is the globally accepted standard for measurement. Established to provide a consistent framework for scientific and technical measurements, SI units facilitate clear communication and data comparison across various fields and countries. The system is based on seven fundamental units: the meter for length, the kilogram for mass, the second for time, the ampere for electric current, the kelvin for temperature, the mole for substance, and the candela for luminous intensity.</p>
+<div style="page-break-after: always;"></div>
+<table class="caption-top table">
+<caption>Base SI units.</caption>
+<thead>
+<tr class="header">
+<th>Physical Quantity</th>
+<th>SI Base Unit</th>
+<th>Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Length</td>
+<td>Meter</td>
+<td>m</td>
+</tr>
+<tr class="even">
+<td>Mass</td>
+<td>Kilogram</td>
+<td>kg</td>
+</tr>
+<tr class="odd">
+<td>Time</td>
+<td>Second</td>
+<td>s</td>
+</tr>
+<tr class="even">
+<td>Electric Current</td>
+<td>Ampere</td>
+<td>A</td>
+</tr>
+<tr class="odd">
+<td>Temperature</td>
+<td>Kelvin</td>
+<td>K</td>
+</tr>
+<tr class="even">
+<td>Amount of Substance</td>
+<td>Mole</td>
+<td>mol</td>
+</tr>
+<tr class="odd">
+<td>Luminous Intensity</td>
+<td>Candela</td>
+<td>cd</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<caption>Derived SI units.</caption>
+<thead>
+<tr class="header">
+<th>Physical Quantity</th>
+<th>Derived SI Unit</th>
+<th>Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Area</td>
+<td>Square meter</td>
+<td>m²</td>
+</tr>
+<tr class="even">
+<td>Volume</td>
+<td>Cubic meter</td>
+<td>m³</td>
+</tr>
+<tr class="odd">
+<td>Speed</td>
+<td>Meter per second</td>
+<td>m/s</td>
+</tr>
+<tr class="even">
+<td>Acceleration</td>
+<td>Meter per second squared</td>
+<td>m/s<sup>2</sup></td>
+</tr>
+<tr class="odd">
+<td>Force</td>
+<td>Newton</td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>Pressure</td>
+<td>Pascal</td>
+<td>Pa</td>
+</tr>
+<tr class="odd">
+<td>Energy</td>
+<td>Joule</td>
+<td>J</td>
+</tr>
+<tr class="even">
+<td>Power</td>
+<td>Watt</td>
+<td>W</td>
+</tr>
+<tr class="odd">
+<td>Electric Charge</td>
+<td>Coulomb</td>
+<td>C</td>
+</tr>
+<tr class="even">
+<td>Electric Potential</td>
+<td>Volt</td>
+<td>V</td>
+</tr>
+<tr class="odd">
+<td>Resistance</td>
+<td>Ohm</td>
+<td>Ω</td>
+</tr>
+<tr class="even">
+<td>Capacitance</td>
+<td>Farad</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>Frequency</td>
+<td>Hertz</td>
+<td>Hz</td>
+</tr>
+<tr class="even">
+<td>Luminous Flux</td>
+<td>Lumen</td>
+<td>lm</td>
+</tr>
+<tr class="odd">
+<td>Illuminance</td>
+<td>Lux</td>
+<td>lx</td>
+</tr>
+<tr class="even">
+<td>Specific Energy</td>
+<td>Joule per kilogram</td>
+<td>J/kg</td>
+</tr>
+<tr class="odd">
+<td>Specific Heat Capacity</td>
+<td>Joule per kilogram Kelvin</td>
+<td>J/(kg·K)</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<table class="caption-top table">
+<caption>Common multiples and submultiples for SI units.</caption>
+<thead>
+<tr class="header">
+<th>Factor</th>
+<th>Prefix</th>
+<th>Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10<sup>9</sup></td>
+<td>giga</td>
+<td>G</td>
+</tr>
+<tr class="even">
+<td>10<sup>6</sup></td>
+<td>mega</td>
+<td>M</td>
+</tr>
+<tr class="odd">
+<td>10<sup>3</sup></td>
+<td>kilo</td>
+<td>k</td>
+</tr>
+<tr class="even">
+<td>10<sup>2</sup></td>
+<td>hecto</td>
+<td>h</td>
+</tr>
+<tr class="odd">
+<td>10<sup>1</sup></td>
+<td>deca</td>
+<td>da</td>
+</tr>
+<tr class="even">
+<td>10<sup>-1</sup></td>
+<td>deci</td>
+<td>d</td>
+</tr>
+<tr class="odd">
+<td>10<sup>-2</sup></td>
+<td>centi</td>
+<td>c</td>
+</tr>
+<tr class="even">
+<td>10<sup>-3</sup></td>
+<td>milli</td>
+<td>m</td>
+</tr>
+<tr class="odd">
+<td>10<sup>-6</sup></td>
+<td>micro</td>
+<td>µ</td>
+</tr>
+</tbody>
+</table>
+<section id="metric-multipliers-for-length-area-and-volume" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="metric-multipliers-for-length-area-and-volume"><span class="header-section-number">1.1</span> Metric Multipliers for Length, Area, and Volume</h2>
+<p>The metric system uses powers of ten to scale measurements. When converting <strong>area</strong> or <strong>volume</strong>, remember that the conversion factor must be <strong>squared</strong> or <strong>cubed</strong>, respectively.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Unit</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Multiplier (to metres)</th>
+<th style="text-align: center;">1 m = ?</th>
+<th style="text-align: center;">Area (1 m² = ?)</th>
+<th style="text-align: center;">Volume (1 m³ = ?)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Millimetre</strong></td>
+<td style="text-align: center;">mm</td>
+<td style="text-align: center;">( <span class="math inline">\(10^{-3}\)</span> )</td>
+<td style="text-align: center;">1000 <span class="math inline">\(\text{mm}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((1000)^2 = 10^6  \text{mm}^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((1000)^3 = 10^9  \text{mm}^3\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Centimetre</strong></td>
+<td style="text-align: center;">cm</td>
+<td style="text-align: center;">( <span class="math inline">\(10^{-2}\)</span> )</td>
+<td style="text-align: center;">100 <span class="math inline">\(\text{cm}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((100)^2 = 10^4  \text{cm}^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((100)^3 = 10^6  \text{cm}^3\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Decimetre</strong></td>
+<td style="text-align: center;">dm</td>
+<td style="text-align: center;">( <span class="math inline">\(10^{-1}\)</span> )</td>
+<td style="text-align: center;">10 <span class="math inline">\(\text{dm}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((10)^2 = 10^2  \text{dm}^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((10)^3 = 10^3  \text{dm}^3\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Metre</strong></td>
+<td style="text-align: center;">m</td>
+<td style="text-align: center;">( <span class="math inline">\(10^0\)</span> )</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Decametre</strong></td>
+<td style="text-align: center;">dam</td>
+<td style="text-align: center;">( <span class="math inline">\(10^{1}\)</span> )</td>
+<td style="text-align: center;">0.1 <span class="math inline">\(\text{dam}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0.1)^2 = 10^{-2}  \text{dam}^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0.1)^3 = 10^{-3}  \text{dam}^3\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Hectometre</strong></td>
+<td style="text-align: center;">hm</td>
+<td style="text-align: center;">( <span class="math inline">\(10^{2}\)</span> )</td>
+<td style="text-align: center;">0.01 <span class="math inline">\(\text{hm}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0.01)^2 = 10^{-4}  \text{hm}^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0.01)^3 = 10^{-6}  \text{hm}^3\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Kilometre</strong></td>
+<td style="text-align: center;">km</td>
+<td style="text-align: center;">( <span class="math inline">\(10^{3}\)</span> )</td>
+<td style="text-align: center;">0.001 <span class="math inline">\(\text{km}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0.001)^2 = 10^{-6}  \text{km}^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((0.001)^3 = 10^{-9}  \text{km}^3\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<section id="quick-reference" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="quick-reference"><span class="header-section-number">1.1.1</span> <strong>Quick Reference</strong></h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Conversion Type</th>
+<th style="text-align: left;">Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Length</td>
+<td style="text-align: left;">1 <span class="math inline">\(\text{m} = 10^3\)</span> <span class="math inline">\(\text{mm} = 10^2\)</span> <span class="math inline">\(\text{cm}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Area</td>
+<td style="text-align: left;">1 <span class="math inline">\(\text{m}^2 = 10^6\)</span> <span class="math inline">\(\text{mm}^2 = 10^4\)</span> <span class="math inline">\(\text{cm}^2\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Volume</td>
+<td style="text-align: left;">1 <span class="math inline">\(\text{m}^3 = 10^9\)</span> <span class="math inline">\(\text{mm}^3 = 10^6\)</span> <span class="math inline">\(\text{cm}^3\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>Note:</strong> When converting between metric units:</p>
+<ul>
+<li><p>Multiply by <span class="math inline">\(10^n\)</span> when going to a smaller unit.</p></li>
+<li><p>Divide by <span class="math inline">\(10^n\)</span> when going to a larger unit.</p></li>
+<li><p>For <strong>area</strong>, square the length factor; for <strong>volume</strong>, cube it.</p></li>
+</ul>
+</section>
+</section>
+<section id="unity-fraction" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="unity-fraction"><span class="header-section-number">1.2</span> Unity Fraction</h2>
+<p>The <strong>unity fraction</strong> method, or <strong>unit conversion using unity fractions</strong>, is a systematic way to convert one unit of measurement into another. This method relies on multiplying by fractions that are equal to one, where the numerator and the denominator represent the same quantity in different units. Since any number multiplied by one remains the same, unity fractions allow for seamless conversion without changing the value.</p>
+<p>The principle of unity fractions is based on:</p>
+<ol type="1">
+<li><p><strong>Setting up equal values</strong>: Write a fraction where the numerator and denominator are equivalent values in different units, so the fraction equals one. For example, <span class="math inline">\(\frac{1km}{1000m}\)</span> is a unity fraction because 1 km equals 1000 m.</p></li>
+<li><p><strong>Multiplying by unity fractions</strong>: Multiply the initial quantity by the unity fraction(s) so that the undesired units cancel out, leaving only the desired units.</p></li>
+</ol>
+<section id="classwork" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="classwork"><span class="header-section-number">1.2.1</span> Classwork</h3>
+<div id="exm-0" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.1</strong></span> Suppose we want to convert <span class="math inline">\(5\)</span> kilometers to meters.</p>
+<ol type="1">
+<li>Start with <span class="math inline">\(5\)</span> kilometers: <span class="math display">\[
+5 \, \text{km}
+\]</span></li>
+<li>Multiply by a unity fraction that cancels kilometers and introduces meters. We use <span class="math inline">\((\frac{1000 \, \text{m}}{1 \, \text{km}}), since\:1 \, \text{km} = 1000 \, \text{m}\)</span>:</li>
+</ol>
+<p><span class="math display">\[5 \, \text{km} \times \frac{1000 \, \text{m}}{1 \, \text{km}} = 5000 \, \text{m}\]</span></p>
+<ol start="3" type="1">
+<li>The kilometers <span class="math inline">\(\text{km}\)</span> cancel out, leaving us with meters <span class="math inline">\(\text{m}\)</span>:</li>
+</ol>
+<p><span class="math display">\[
+5 \, \text{km} = 5000 \, \text{m}
+\]</span></p>
+<p>This step-by-step approach illustrates how the unity fraction cancels the undesired units and achieves the correct result in meters.</p>
+<p>Unity fractions can be extended by using multiple conversion steps. For example, converting hours to seconds would require two unity fractions: one to convert hours to minutes and another to convert minutes to seconds. This approach ensures accuracy and is widely used in science, engineering, and other fields that require precise unit conversions.</p>
+</div>
+<div id="exm-1" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.2</strong></span> Convert <span class="math inline">\(15 \, \text{m/s}\)</span> to <span class="math inline">\(\text{km/h}\)</span>.</p>
+<ol type="1">
+<li>Start with <span class="math inline">\(15 \, \text{m/s}\)</span>.</li>
+<li>To convert meters to kilometers, multiply by <span class="math inline">\(\frac{1 \, \text{km}}{1000 \, \text{m}}\)</span>.</li>
+<li>To convert seconds to hours, multiply by <span class="math inline">\(\frac{3600 \, \text{s}}{1 \, \text{h}}\)</span>.</li>
+</ol>
+<p><span class="math display">\[
+15 \, \text{m/s} \times \frac{1 \, \text{km}}{1000 \, \text{m}} \times \frac{3600 \, \text{s}}{1 \, \text{h}} = 54 \, \text{km/h}
+\]</span></p>
+<p>The meters and seconds cancel out, leaving kilometers per hour: <span class="math inline">\(54 \, \text{km/h}\)</span>.</p>
+</div>
+</section>
+<section id="self-test" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="self-test"><span class="header-section-number">1.2.2</span> Self-Test</h3>
+<p><strong>Instructions:</strong></p>
+<ol type="1">
+<li><p>Use unity fraction to convert between derived SI units.</p></li>
+<li><p>Show each step of your work to ensure accuracy.</p></li>
+<li><p>Simplify your answers and include correct units.</p></li>
+</ol>
+<hr>
+<ol type="1">
+<li><p><strong>Speed</strong><br>
+Convert <span class="math inline">\(72 \, \text{km/h}\)</span> to <span class="math inline">\(\text{m/s}\)</span>.</p></li>
+<li><p><strong>Force</strong><br>
+Convert <span class="math inline">\(980 \, \text{N}\)</span> (newtons) to <span class="math inline">\(\text{kg} \cdot \text{m/s}^2\)</span>.</p></li>
+<li><p><strong>Energy</strong><br>
+Convert <span class="math inline">\(2500 \, \text{J}\)</span> (joules) to <span class="math inline">\(\text{kJ}\)</span>.</p></li>
+<li><p><strong>Power</strong><br>
+Convert <span class="math inline">\(1500 \, \text{W}\)</span> (watts) to <span class="math inline">\(\text{kW}\)</span>.</p></li>
+<li><p><strong>Pressure</strong><br>
+Convert <span class="math inline">\(101325 \, \text{Pa}\)</span> (pascals) to <span class="math inline">\(\text{kPa}\)</span>.</p></li>
+<li><p><strong>Volume Flow Rate</strong><br>
+Convert <span class="math inline">\(3 \, \text{m}^3/\text{min}\)</span> to <span class="math inline">\(\text{L/s}\)</span>.</p></li>
+<li><p><strong>Density</strong><br>
+Convert <span class="math inline">\(1000 \, \text{kg/m}^3\)</span> to <span class="math inline">\(\text{g/cm}^3\)</span>.</p></li>
+<li><p><strong>Acceleration</strong><br>
+Convert <span class="math inline">\(9.8 \, \text{m/s}^2\)</span> to <span class="math inline">\(\text{cm/s}^2\)</span>.</p></li>
+<li><p><strong>Torque</strong><br>
+Convert <span class="math inline">\(50 \, \text{N} \cdot \text{m}\)</span> to <span class="math inline">\(\text{kN} \cdot \text{cm}\)</span>.</p></li>
+<li><p><strong>Frequency</strong><br>
+Convert <span class="math inline">\(500 \, \text{Hz}\)</span> (hertz) to <span class="math inline">\(\text{kHz}\)</span>.</p></li>
+<li><p><strong>Work to Energy Conversion</strong><br>
+A force of <span class="math inline">\(20 \, \text{N}\)</span> moves an object <span class="math inline">\(500 \, \text{cm}\)</span>. Convert the work done to joules.</p></li>
+<li><p><strong>Kinetic Energy Conversion</strong><br>
+Calculate the kinetic energy in kilojoules of a <span class="math inline">\(1500 \, \text{kg}\)</span> car moving at <span class="math inline">\(72 \, \text{km/h}\)</span>.</p></li>
+<li><p><strong>Power to Energy Conversion</strong><br>
+A machine operates at <span class="math inline">\(2 \, \text{kW}\)</span> for <span class="math inline">\(3\)</span> hours. Convert the energy used to megajoules.</p></li>
+<li><p><strong>Pressure to Force Conversion</strong><br>
+Convert a pressure of <span class="math inline">\(200 \, \text{kPa}\)</span> applied to an area of <span class="math inline">\(0.5 \, \text{m}^2\)</span> to force in newtons.</p></li>
+<li><p><strong>Density to Mass Conversion</strong><br>
+Convert <span class="math inline">\(0.8 \, \text{g/cm}^3\)</span> for an object with a volume of <span class="math inline">\(250 \, \text{cm}^3\)</span> to mass in grams.</p></li>
+</ol>
+<hr>
+</section>
+<section id="answer-key" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="answer-key"><span class="header-section-number">1.2.3</span> Answer Key</h3>
+<ol type="1">
+<li><span class="math inline">\(72 \, \text{km/h} = 20 \, \text{m/s}\)</span></li>
+<li><span class="math inline">\(980 \, \text{N} = 980 \, \text{kg} \cdot \text{m/s}^2\)</span></li>
+<li><span class="math inline">\(2500 \, \text{J} = 2.5 \, \text{kJ}\)</span></li>
+<li><span class="math inline">\(1500 \, \text{W} = 1.5 \, \text{kW}\)</span></li>
+<li><span class="math inline">\(101325 \, \text{Pa} = 101.325 \, \text{kPa}\)</span></li>
+<li><span class="math inline">\(3 \, \text{m}^3/\text{min} = 50 \, \text{L/s}\)</span></li>
+<li><span class="math inline">\(1000 \, \text{kg/m}^3 = 1 \, \text{g/cm}^3\)</span></li>
+<li><span class="math inline">\(9.8 \, \text{m/s}^2 = 980 \, \text{cm/s}^2\)</span></li>
+<li><span class="math inline">\(50 \, \text{N} \cdot \text{m} = 5 \, \text{kN} \cdot \text{cm}\)</span></li>
+<li><span class="math inline">\(500 \, \text{Hz} = 0.5 \, \text{kHz}\)</span></li>
+<li><span class="math inline">\(20 \, \text{N} \times 5 \, \text{m} = 100 \, \text{J}\)</span></li>
+<li><span class="math inline">\(\text{Kinetic energy} = 1500 \, \text{kg} \times \left(20 \, \text{m/s}\right)^2 / 2 = 300 \, \text{kJ}\)</span></li>
+<li><span class="math inline">\(2 \, \text{kW} \times 3 \, \text{hours} = 21.6 \, \text{MJ}\)</span></li>
+<li><span class="math inline">\(200 \, \text{kPa} \times 0.5 \, \text{m}^2 = 100,000 \, \text{N}\)</span></li>
+<li><span class="math inline">\(0.8 \, \text{g/cm}^3 \times 250 \, \text{cm}^3 = 200 \, \text{g}\)</span></li>
+</ol>
+</section>
+</section>
+<section id="condenser-vacuum" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="condenser-vacuum"><span class="header-section-number">1.3</span> Condenser Vacuum</h2>
+<p>Condenser vacuum gauge reads 715 mmHg when barometer stands at 757 mmHg. State the absolute pressure in kN/m² and bar.</p>
+<section id="given-data" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="given-data"><span class="header-section-number">1.3.1</span> Given Data</h3>
+<p><span class="math display">\[
+P_{atm} = 757~\text{mmHg}, \quad P_{vac} = 715~\text{mmHg}
+\]</span></p>
+</section>
+<section id="absolute-pressure-in-mmhg" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="absolute-pressure-in-mmhg"><span class="header-section-number">1.3.2</span> Absolute Pressure in mmHg</h3>
+<p><span class="math display">\[
+P_{abs} = P_{atm} - P_{vac} = 757 - 715 = 42~\text{mmHg}
+\]</span></p>
+</section>
+<section id="convert-mmhg-knm²" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="convert-mmhg-knm²"><span class="header-section-number">1.3.3</span> Convert mmHg → kN/m²</h3>
+<p><span class="math display">\[
+P = \rho g h = 13{,}600 \cdot 9.81 \cdot 0.001 = 133.416~\text{Pa} = 0.133416~\text{kN/m}^2
+\]</span></p>
+<p><span class="math display">\[
+P_{abs} = 42 \cdot 0.133416 = 5.6034~\text{kN/m²}
+\]</span></p>
+</section>
+<section id="convert-knm²-bar" class="level3" data-number="1.3.4">
+<h3 data-number="1.3.4" class="anchored" data-anchor-id="convert-knm²-bar"><span class="header-section-number">1.3.4</span> Convert kN/m² → bar</h3>
+<p><span class="math display">\[
+P_{abs} = \frac{5.6034}{100} = 0.056~\text{bar}
+\]</span></p>
+</section>
+<section id="final-answers" class="level3" data-number="1.3.5">
+<h3 data-number="1.3.5" class="anchored" data-anchor-id="final-answers"><span class="header-section-number">1.3.5</span> Final Answers</h3>
+<p><span class="math display">\[
+\boxed{P_{abs} = 42~\text{mmHg} = 5.6034~\text{kN/m²} = 0.056~\text{bar}}
+\]</span></p>
+</section>
+<section id="code" class="level3" data-number="1.3.6">
+<h3 data-number="1.3.6" class="anchored" data-anchor-id="code"><span class="header-section-number">1.3.6</span> Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>P_atm_mmHg <span class="op">=</span> <span class="dv">757</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>P_vac_mmHg <span class="op">=</span> <span class="dv">715</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>MMHG_TO_KN_M2 <span class="op">=</span> <span class="fl">0.133416</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>KNM2_TO_BAR <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> <span class="dv">100</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>P_abs_mmHg <span class="op">=</span> P_atm_mmHg <span class="op">-</span> P_vac_mmHg</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>P_abs_kNm2 <span class="op">=</span> P_abs_mmHg <span class="op">*</span> MMHG_TO_KN_M2</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>P_abs_bar <span class="op">=</span> P_abs_kNm2 <span class="op">*</span> KNM2_TO_BAR</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Absolute Pressure = </span><span class="sc">{</span>P_abs_mmHg<span class="sc">:.2f}</span><span class="ss"> mmHg"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Absolute Pressure = </span><span class="sc">{</span>P_abs_kNm2<span class="sc">:.3f}</span><span class="ss"> kN/m²"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Absolute Pressure = </span><span class="sc">{</span>P_abs_bar<span class="sc">:.4f}</span><span class="ss"> bar"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="oil-flow-in-tubes" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="oil-flow-in-tubes"><span class="header-section-number">1.4</span> Oil Flow in Tubes</h2>
+<p>Oil flows full bore at a velocity of <span class="math inline">\(V = 2~\text{m/s}\)</span> through 16 tubes of diameter <span class="math inline">\(d = 30~\text{mm}\)</span>. Density of oil: <span class="math inline">\(\rho = 0.85~\text{g/mL}\)</span>. Find <strong>volume flow rate</strong> (L/s) and <strong>mass flow rate</strong> (kg/min).</p>
+<section id="cross-sectional-area-of-one-tube" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="cross-sectional-area-of-one-tube"><span class="header-section-number">1.4.1</span> Cross-sectional area of one tube</h3>
+<p><span class="math display">\[
+A = \pi \frac{d^2}{4} = \pi \frac{0.03^2}{4} \approx 7.0686 \times 10^{-4}~\text{m}^2
+\]</span></p>
+</section>
+<section id="total-area-and-volume-flow-rate" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="total-area-and-volume-flow-rate"><span class="header-section-number">1.4.2</span> Total area and volume flow rate</h3>
+<p><span class="math display">\[
+A_\text{total} = 16 \cdot 7.0686 \times 10^{-4} \approx 0.01131~\text{m}^2
+\]</span></p>
+<p><span class="math display">\[
+\dot{v} = A_\text{total} \cdot V \approx 0.02262~\text{m}^3/\text{s} \approx 22.62~\text{L/s}
+\]</span></p>
+</section>
+<section id="mass-flow-rate" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="mass-flow-rate"><span class="header-section-number">1.4.3</span> Mass flow rate</h3>
+<p><span class="math display">\[
+\dot{m} = \rho \cdot \dot{v} = 850 \cdot 0.02262 \approx 19.227~\text{kg/s} \approx 1153.6~\text{kg/min}
+\]</span></p>
+</section>
+<section id="final-answers-1" class="level3" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="final-answers-1"><span class="header-section-number">1.4.4</span> Final Answers</h3>
+<p><span class="math display">\[
+\text{Volume flow rate: } \dot{v} \approx 22.6~\text{L/s}
+\]</span> <span class="math display">\[
+\text{Mass flow rate: } \dot{m} \approx 1154~\text{kg/min}
+\]</span></p>
+</section>
+<section id="code-1" class="level3" data-number="1.4.5">
+<h3 data-number="1.4.5" class="anchored" data-anchor-id="code-1"><span class="header-section-number">1.4.5</span> Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="fl">2.0</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">16</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="fl">0.03</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="fl">0.85</span> <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> math.pi <span class="op">*</span> d<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">4</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>A_total <span class="op">=</span> N <span class="op">*</span> A</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>v_dot_m3_s <span class="op">=</span> A_total <span class="op">*</span> v</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>v_dot_L_s <span class="op">=</span> v_dot_m3_s <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>m_dot_kg_s <span class="op">=</span> rho <span class="op">*</span> v_dot_m3_s</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>m_dot_kg_min <span class="op">=</span> m_dot_kg_s <span class="op">*</span> <span class="dv">60</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Volume flow rate: </span><span class="sc">{</span>v_dot_L_s<span class="sc">:.2f}</span><span class="ss"> L/s"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Mass flow rate: </span><span class="sc">{</span>m_dot_kg_min<span class="sc">:.2f}</span><span class="ss"> kg/min"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="gauge-pressure" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="gauge-pressure"><span class="header-section-number">1.5</span> Gauge Pressure</h2>
+<p>An oil of specific gravity (relative density) <span class="math inline">\(\text{SG} = 0.8\)</span> is contained in a vessel to a depth of <span class="math inline">\(h = 2 \text{ m}\)</span>. Find the <strong>gauge pressure</strong> at this depth in kPa.</p>
+<section id="gauge-pressure-1" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="gauge-pressure-1"><span class="header-section-number">1.5.1</span> Gauge Pressure</h3>
+<p><span class="math display">\[
+P_g = \rho g h
+\]</span></p>
+<p>where</p>
+<p><span class="math inline">\(\rho = \text{density of fluid (kg/m³)}\)</span></p>
+<p>g= acceleration due to gravity (9.81 m/s²)</p>
+<p>h = depth (m)</p>
+</section>
+<section id="compute-the-density-of-oil-using-specific-gravity" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="compute-the-density-of-oil-using-specific-gravity"><span class="header-section-number">1.5.2</span> Compute the density of oil using specific gravity</h3>
+<p>Specific gravity is defined as</p>
+<p><span class="math display">\[
+\text{SG} = \frac{\rho_{\text{oil}}}{\rho_{\text{water}}}
+\]</span></p>
+<p>where <span class="math inline">\(\rho_{\text{water}} = 1000&nbsp;\text{ kg/m³}\)</span>. Thus,</p>
+<p><span class="math display">\[
+\rho_{\text{oil}} = \text{SG} \times \rho_{\text{water}} = 0.8 \times 1000 = 800\ \text{kg/m³}
+\]</span></p>
+</section>
+<section id="compute-the-gauge-pressure" class="level3" data-number="1.5.3">
+<h3 data-number="1.5.3" class="anchored" data-anchor-id="compute-the-gauge-pressure"><span class="header-section-number">1.5.3</span> Compute the gauge pressure</h3>
+<p><span class="math display">\[
+P_g = \rho g h = 800 \times 9.81 \times 2
+\]</span></p>
+<p><span class="math display">\[
+P_g = 15696\ \text{Pa} \approx 15.7\ \text{kPa}
+\]</span></p>
+</section>
+<section id="answer" class="level3" data-number="1.5.4">
+<h3 data-number="1.5.4" class="anchored" data-anchor-id="answer"><span class="header-section-number">1.5.4</span> Answer</h3>
+<p>The <strong>gauge pressure</strong> at a depth of 2 m in the oil is:</p>
+<p><span class="math display">\[
+\boxed{15.7\ \text{kPa}}
+\]</span></p>
+</section>
+<section id="code-2" class="level3" data-number="1.5.5">
+<h3 data-number="1.5.5" class="anchored" data-anchor-id="code-2"><span class="header-section-number">1.5.5</span> Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gauge Pressure Calculation for Oil</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>specific_gravity <span class="op">=</span> <span class="fl">0.8</span>  <span class="co"># SG of oil</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>depth_m <span class="op">=</span> <span class="fl">2.0</span>           <span class="co"># depth in meters</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span>                <span class="co"># acceleration due to gravity in m/s²</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>rho_water <span class="op">=</span> <span class="dv">1000</span>        <span class="co"># density of water in kg/m³</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute density of oil</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>rho_oil <span class="op">=</span> specific_gravity <span class="op">*</span> rho_water</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute gauge pressure (Pa)</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>P_g_Pa <span class="op">=</span> rho_oil <span class="op">*</span> g <span class="op">*</span> depth_m</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to kPa</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>P_g_kPa <span class="op">=</span> P_g_Pa <span class="op">/</span> <span class="dv">1000</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Density of oil: </span><span class="sc">{</span>rho_oil<span class="sc">:.1f}</span><span class="ss"> kg/m³"</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Gauge pressure at </span><span class="sc">{</span>depth_m<span class="sc">}</span><span class="ss"> m depth: </span><span class="sc">{</span>P_g_Pa<span class="sc">:.1f}</span><span class="ss"> Pa (</span><span class="sc">{</span>P_g_kPa<span class="sc">:.2f}</span><span class="ss"> kPa)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="absolute-pressure-from-manometer-reading" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="absolute-pressure-from-manometer-reading"><span class="header-section-number">1.6</span> Absolute Pressure from Manometer Reading</h2>
+<p>A water manometer shows a pressure in a vessel of <span class="math inline">\(400\ \text{mm}\)</span> <strong>below atmospheric pressure</strong>. The atmospheric pressure is measured as <span class="math inline">\(763\ \text{mmHg}\)</span>. Determine the <strong>absolute pressure</strong> in the vessel in kPa.</p>
+<section id="relationship-between-absolute-and-gauge-pressure" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="relationship-between-absolute-and-gauge-pressure"><span class="header-section-number">1.6.1</span> Relationship between absolute and gauge pressure</h3>
+<p><span class="math display">\[
+P_\text{abs} = P_\text{atm} + P_\text{gauge}
+\]</span></p>
+<p>Since the manometer shows a pressure <strong>below atmospheric</strong>, the gauge pressure is negative:</p>
+<p><span class="math display">\[
+P_\text{gauge} = - \rho_\text{water} g h
+\]</span></p>
+</section>
+<section id="convert-atmospheric-pressure-to-pa-using" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="convert-atmospheric-pressure-to-pa-using"><span class="header-section-number">1.6.2</span> Convert atmospheric pressure to Pa using</h3>
+<p><span class="math display">\[
+P = \rho g h = 13{,}600 \cdot 9.81 \cdot 0.001 = 133.416~\text{Pa}
+\]</span></p>
+<p>So</p>
+<p><span class="math display">\[
+P_\text{atm} = 763 \times 133.416 \approx 101,801\ \text{Pa} \approx 101.8\ \text{kPa}
+\]</span></p>
+</section>
+<section id="compute-gauge-pressure" class="level3" data-number="1.6.3">
+<h3 data-number="1.6.3" class="anchored" data-anchor-id="compute-gauge-pressure"><span class="header-section-number">1.6.3</span> Compute gauge pressure</h3>
+<p>Water column height:</p>
+<p><span class="math display">\[
+h = 400\ \text{mm} = 0.4\ \text{m}
+\]</span></p>
+<p>Density of water: <span class="math inline">\(rho_\text{water} = 1000\ \text{kg/m³}\)</span>, <span class="math inline">\(g = 9.81\ \text{m/s²}\)</span></p>
+<p><span class="math display">\[
+P_\text{gauge} = - \rho g h = - 1000 \times 9.81 \times 0.4
+\]</span></p>
+<p><span class="math display">\[
+P_\text{gauge} = -3924\ \text{Pa} \approx -3.92\ \text{kPa}
+\]</span></p>
+</section>
+<section id="compute-absolute-pressure" class="level3" data-number="1.6.4">
+<h3 data-number="1.6.4" class="anchored" data-anchor-id="compute-absolute-pressure"><span class="header-section-number">1.6.4</span> Compute absolute pressure</h3>
+<p><span class="math display">\[
+P_\text{abs} = P_\text{atm} + P_\text{gauge} \approx 101.8 - 3.92 \approx 97.9\ \text{kPa}
+\]</span></p>
+</section>
+<section id="answer-1" class="level3" data-number="1.6.5">
+<h3 data-number="1.6.5" class="anchored" data-anchor-id="answer-1"><span class="header-section-number">1.6.5</span> Answer</h3>
+<p>The <strong>absolute pressure</strong> in the vessel is:</p>
+<p><span class="math display">\[
+\boxed{97.9\ \text{kPa}}
+\]</span></p>
+</section>
+<section id="code-3" class="level3" data-number="1.6.6">
+<h3 data-number="1.6.6" class="anchored" data-anchor-id="code-3"><span class="header-section-number">1.6.6</span> Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Absolute Pressure Calculation from Water Manometer</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>h_mm <span class="op">=</span> <span class="dv">400</span>               <span class="co"># manometer reading in mm (below atmospheric)</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>atm_mmHg <span class="op">=</span> <span class="dv">763</span>           <span class="co"># atmospheric pressure in mmHg</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>rho_water <span class="op">=</span> <span class="dv">1000</span>         <span class="co"># density of water in kg/m³</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span>                 <span class="co"># gravity in m/s²</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>mmHg_to_Pa <span class="op">=</span> <span class="fl">133.416</span>     <span class="co"># conversion factor</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert manometer height to meters</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>h_m <span class="op">=</span> h_mm <span class="op">/</span> <span class="dv">1000</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert atmospheric pressure to Pa</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>P_atm_Pa <span class="op">=</span> atm_mmHg <span class="op">*</span> mmHg_to_Pa</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Gauge pressure (negative because below atmospheric)</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>P_gauge_Pa <span class="op">=</span> <span class="op">-</span> rho_water <span class="op">*</span> g <span class="op">*</span> h_m</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Absolute pressure</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>P_abs_Pa <span class="op">=</span> P_atm_Pa <span class="op">+</span> P_gauge_Pa</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to kPa</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>P_abs_kPa <span class="op">=</span> P_abs_Pa <span class="op">/</span> <span class="dv">1000</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Atmospheric pressure: </span><span class="sc">{</span>P_atm_Pa<span class="sc">:.1f}</span><span class="ss"> Pa (</span><span class="sc">{</span>P_atm_Pa<span class="op">/</span><span class="dv">1000</span><span class="sc">:.1f}</span><span class="ss"> kPa)"</span>)</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Gauge pressure: </span><span class="sc">{</span>P_gauge_Pa<span class="sc">:.1f}</span><span class="ss"> Pa (</span><span class="sc">{</span>P_gauge_Pa<span class="op">/</span><span class="dv">1000</span><span class="sc">:.2f}</span><span class="ss"> kPa)"</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Absolute pressure in the vessel: </span><span class="sc">{</span>P_abs_Pa<span class="sc">:.1f}</span><span class="ss"> Pa (</span><span class="sc">{</span>P_abs_kPa<span class="sc">:.2f}</span><span class="ss"> kPa)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./tutorial_basic.html" class="pagination-link" aria-label="Python Tutorial">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Python Tutorial</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./heat_work.html" class="pagination-link" aria-label="Heat and Work">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Heat and Work</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org"> Quarto 1.8.26</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
