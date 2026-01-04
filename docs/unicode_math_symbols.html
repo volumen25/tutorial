@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Colophon – Tutorial</title>
+<title>Appendix B — Unicode Math Symbols – Tutorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./greek_letters.html" rel="next">
-<link href="./perfect_gases.html" rel="prev">
+<link href="./script_template.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-14cbc709409b9607cfe384ca3dce8273.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c213800f9ad2c394781badd4e3c4d3bb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,35 +75,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -278,7 +249,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./colophon.html">Colophon</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./script_template.html">Appendices</a></li><li class="breadcrumb-item"><a href="./unicode_math_symbols.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Unicode Math Symbols</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -356,8 +327,8 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./colophon.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Colophon</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -371,8 +342,20 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./script_template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Script Template</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unicode_math_symbols.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Unicode Math Symbols</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./greek_letters.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Greek Letters</span></span></a>
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Greek Letters</span></span></a>
   </div>
 </li>
       </ul>
@@ -382,16 +365,26 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#python-script-comment-snippets" id="toc-python-script-comment-snippets" class="nav-link active" data-scroll-target="#python-script-comment-snippets"><span class="header-section-number">B.1</span> Python Script Comment Snippets</a></li>
+  <li><a href="#math-symbols" id="toc-math-symbols" class="nav-link" data-scroll-target="#math-symbols"><span class="header-section-number">B.2</span> Math Symbols</a></li>
+  <li><a href="#kinematics-dynamics" id="toc-kinematics-dynamics" class="nav-link" data-scroll-target="#kinematics-dynamics"><span class="header-section-number">B.3</span> Kinematics &amp; Dynamics</a></li>
+  <li><a href="#fluids" id="toc-fluids" class="nav-link" data-scroll-target="#fluids"><span class="header-section-number">B.4</span> Fluids</a></li>
+  <li><a href="#stress-material-properties" id="toc-stress-material-properties" class="nav-link" data-scroll-target="#stress-material-properties"><span class="header-section-number">B.5</span> Stress &amp; Material Properties</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./script_template.html">Appendices</a></li><li class="breadcrumb-item"><a href="./unicode_math_symbols.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Unicode Math Symbols</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Colophon</h1>
+<h1 class="title"><span id="sec-unicode" class="quarto-section-identifier">Appendix B — Unicode Math Symbols</span></h1>
 </div>
 
 
@@ -408,9 +401,215 @@ window.Quarto = {
 </header>
 
 
-<p>This booklet was typeset with <a href="https://quarto.org">Quarto</a> v.1.8.26, using <span class="math inline">\(\LaTeX\)</span> and Pandoc.</p>
+<section id="python-script-comment-snippets" class="level2" data-number="B.1">
+<h2 data-number="B.1" class="anchored" data-anchor-id="python-script-comment-snippets"><span class="header-section-number">B.1</span> Python Script Comment Snippets</h2>
+<pre class="text"><code>Area = 25 m²  
+Volume = 3.2 m³  
+Density of water = 1000 kg/m³  
+Angle = 45°  
+Angular speed = 12 s⁻¹  
+
+Law of sines:
+T₁ / sin(θ₁) = T₂ / sin(θ₂) = W / sin(θ₃)
+
+Law of cosines:
+cos(θₚ) = (J² + T² − P²) / (2·J·T)
+
+Energy equation:
+P₁ + ½ρv₁² + ρgz₁ = P₂ + ½ρv₂² + ρgz₂</code></pre>
+</section>
+<section id="math-symbols" class="level2" data-number="B.2">
+<h2 data-number="B.2" class="anchored" data-anchor-id="math-symbols"><span class="header-section-number">B.2</span> Math Symbols</h2>
+<table class="caption-top table">
+<caption>Math Symbols</caption>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Name</th>
+<th>SI Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>√</td>
+<td>Square root</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>∑</td>
+<td>Summation</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>∫</td>
+<td>Integral</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>∞</td>
+<td>Infinity</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>≤</td>
+<td>Less than or equal</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>≥</td>
+<td>Greater than or equal</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>≠</td>
+<td>Not equal</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>⟂</td>
+<td>Perpendicular</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>⌀</td>
+<td>Diameter</td>
+<td>m</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="kinematics-dynamics" class="level2" data-number="B.3">
+<h2 data-number="B.3" class="anchored" data-anchor-id="kinematics-dynamics"><span class="header-section-number">B.3</span> Kinematics &amp; Dynamics</h2>
+<table class="caption-top table">
+<caption>Kinematics &amp; Dynamics</caption>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+<th>SI Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ω</td>
+<td>Angular velocity</td>
+<td>rad·s⁻¹</td>
+</tr>
+<tr class="even">
+<td>α</td>
+<td>Angular acceleration</td>
+<td>rad·s⁻²</td>
+</tr>
+<tr class="odd">
+<td>θ</td>
+<td>Angular position</td>
+<td>rad</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fluids" class="level2" data-number="B.4">
+<h2 data-number="B.4" class="anchored" data-anchor-id="fluids"><span class="header-section-number">B.4</span> Fluids</h2>
+<table class="caption-top table">
+<caption>Fluids</caption>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+<th>SI Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ρ</td>
+<td>Density</td>
+<td>kg·m⁻³</td>
+</tr>
+<tr class="even">
+<td>μ</td>
+<td>Dynamic viscosity</td>
+<td>Pa·s</td>
+</tr>
+<tr class="odd">
+<td>ν</td>
+<td>Kinematic viscosity</td>
+<td>m²·s⁻¹</td>
+</tr>
+<tr class="even">
+<td>p</td>
+<td>Pressure</td>
+<td>Pa</td>
+</tr>
+<tr class="odd">
+<td>h</td>
+<td>Head</td>
+<td>m</td>
+</tr>
+<tr class="even">
+<td>ṁ</td>
+<td>Mass flow rate</td>
+<td>kg·s⁻¹</td>
+</tr>
+<tr class="odd">
+<td>v̇</td>
+<td>Volumetric flow rate</td>
+<td>m³·s⁻¹</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="stress-material-properties" class="level2" data-number="B.5">
+<h2 data-number="B.5" class="anchored" data-anchor-id="stress-material-properties"><span class="header-section-number">B.5</span> Stress &amp; Material Properties</h2>
+<table class="caption-top table">
+<caption>Stress &amp; Material Properties</caption>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+<th>SI Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>σ</td>
+<td>Normal stress</td>
+<td>Pa</td>
+</tr>
+<tr class="even">
+<td>τ</td>
+<td>Shear stress</td>
+<td>Pa</td>
+</tr>
+<tr class="odd">
+<td>ε</td>
+<td>Normal strain</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>γ</td>
+<td>Shear strain</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>Young’s modulus</td>
+<td>Pa</td>
+</tr>
+<tr class="even">
+<td>G</td>
+<td>Shear modulus</td>
+<td>Pa</td>
+</tr>
+<tr class="odd">
+<td>ν</td>
+<td>Poisson’s ratio</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -828,13 +1027,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./perfect_gases.html" class="pagination-link" aria-label="Perfect Gases">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Perfect Gases</span></span>
+      <a href="./script_template.html" class="pagination-link" aria-label="Script Template">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Script Template</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./greek_letters.html" class="pagination-link" aria-label="Greek Letters">
-        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Greek Letters</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Greek Letters</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

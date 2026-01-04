@@ -1,0 +1,64 @@
+"""
+Please replace this text with a concise description of the script’s purpose.
+For example, you can type in:
+Determines the volumetric and mass flow rates in a pipe carrying oil,
+given the internal diameter, fluid velocity, and relative density.
+"""
+
+import math
+
+# Organize code with consistent sectioning and
+# clear headers or separators to enhance readability
+
+# ==============================
+# INPUT PARAMETERS
+# ==============================
+
+pipe_internal_diameter_mm = 75.0  # Use descriptive variable names with units
+oil_velocity_m_per_s = 1.2  # Include meaningful inline comments
+oil_relative_density = 0.9  # Include meaningful inline comments
+water_density_kg_per_m3 = 1000.0  # Density of water in kg/m³
+
+# ==============================
+# UNIT CONVERSIONS AND GEOMETRY
+# ==============================
+
+# Convert pipe diameter from millimeters to meters
+pipe_internal_diameter_m = pipe_internal_diameter_mm / 1000.0
+
+# Calculate pipe radius
+pipe_radius_m = pipe_internal_diameter_m / 2.0
+
+# Calculate cross-sectional area of the pipe (circular)
+pipe_cross_sectional_area_m2 = math.pi * pipe_radius_m**2
+
+# ==============================
+# FLOW RATE CALCULATIONS
+# ==============================
+
+# Calculate volumetric flow rate
+# Restrict line length to a maximum of 79 characters 
+# to ensure compatibility with print media and prevent horizontal overflow.
+volumetric_flow_rate_m3_per_s = (
+    pipe_cross_sectional_area_m2 * oil_velocity_m_per_s
+)
+
+# Calculate oil density from relative density
+oil_density_kg_per_m3 = oil_relative_density * water_density_kg_per_m3
+
+# Calculate mass flow rate
+mass_flow_rate_kg_per_s = oil_density_kg_per_m3 * volumetric_flow_rate_m3_per_s
+
+# Convert mass flow rate to tonnes per hour
+mass_flow_rate_tonnes_per_hour = mass_flow_rate_kg_per_s * 3600 / 1000
+
+# ==============================
+# OUTPUT RESULTS
+# ==============================
+
+print("---Pipe Flow Calculation Results---")
+print(f"Volumetric flow rate : {volumetric_flow_rate_m3_per_s:.4f} m³/s")
+print(
+    f"Mass flow rate       : {mass_flow_rate_tonnes_per_hour:.4f} "
+    f"tonnes/hour"
+)

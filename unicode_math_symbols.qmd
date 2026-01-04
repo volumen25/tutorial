@@ -1,0 +1,74 @@
+# Unicode Math Symbols {#sec-unicode}
+
+## Python Script Comment Snippets
+
+``` text
+Area = 25 m²  
+Volume = 3.2 m³  
+Density of water = 1000 kg/m³  
+Angle = 45°  
+Angular speed = 12 s⁻¹  
+
+Law of sines:
+T₁ / sin(θ₁) = T₂ / sin(θ₂) = W / sin(θ₃)
+
+Law of cosines:
+cos(θₚ) = (J² + T² − P²) / (2·J·T)
+
+Energy equation:
+P₁ + ½ρv₁² + ρgz₁ = P₂ + ½ρv₂² + ρgz₂
+```
+
+## Math Symbols
+
+| Symbol | Name                  | SI Units |
+|--------|-----------------------|----------|
+| √      | Square root           | —        |
+| ∑      | Summation             | —        |
+| ∫      | Integral              | —        |
+| ∞      | Infinity              | —        |
+| ≤      | Less than or equal    | —        |
+| ≥      | Greater than or equal | —        |
+| ≠      | Not equal             | —        |
+| ⟂      | Perpendicular         | —        |
+| ⌀      | Diameter              | m        |
+
+: Math Symbols
+
+## Kinematics & Dynamics
+
+| Symbol | Meaning              | SI Units |
+|--------|----------------------|----------|
+| ω      | Angular velocity     | rad·s⁻¹  |
+| α      | Angular acceleration | rad·s⁻²  |
+| θ      | Angular position     | rad      |
+
+: Kinematics & Dynamics
+
+## Fluids
+
+| Symbol | Meaning              | SI Units |
+|--------|----------------------|----------|
+| ρ      | Density              | kg·m⁻³   |
+| μ      | Dynamic viscosity    | Pa·s     |
+| ν      | Kinematic viscosity  | m²·s⁻¹   |
+| p      | Pressure             | Pa       |
+| h      | Head                 | m        |
+| ṁ      | Mass flow rate       | kg·s⁻¹   |
+| v̇      | Volumetric flow rate | m³·s⁻¹   |
+
+: Fluids
+
+## Stress & Material Properties
+
+| Symbol | Meaning         | SI Units |
+|--------|-----------------|----------|
+| σ      | Normal stress   | Pa       |
+| τ      | Shear stress    | Pa       |
+| ε      | Normal strain   | —        |
+| γ      | Shear strain    | —        |
+| E      | Young’s modulus | Pa       |
+| G      | Shear modulus   | Pa       |
+| ν      | Poisson’s ratio | —        |
+
+: Stress & Material Properties
