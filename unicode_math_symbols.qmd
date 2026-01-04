@@ -2,17 +2,20 @@
 
 ## Python Script Comment Snippets
 
-``` text
+``` txt
 Area = 25 m²  
 Volume = 3.2 m³  
 Density of water = 1000 kg/m³  
 Angle = 45°  
 Angular speed = 12 s⁻¹  
 
+Area = π·r²  
+
 Law of sines:
 T₁ / sin(θ₁) = T₂ / sin(θ₂) = W / sin(θ₃)
 
 Law of cosines:
+cos(θ) = (a² + b² − c²) / (2ab)
 cos(θₚ) = (J² + T² − P²) / (2·J·T)
 
 Energy equation:
@@ -72,3 +75,68 @@ P₁ + ½ρv₁² + ρgz₁ = P₂ + ½ρv₂² + ρgz₂
 | ν      | Poisson’s ratio | —        |
 
 : Stress & Material Properties
+
+## Greek Letters
+
+| Lower Case | Upper Case | Name    |
+|------------|------------|---------|
+| α          | Α          | Alpha   |
+| β          | Β          | Beta    |
+| γ          | Γ          | Gamma   |
+| δ          | Δ          | Delta   |
+| ε          | Ε          | Epsilon |
+| ζ          | Ζ          | Zeta    |
+| η          | Η          | Eta     |
+| θ          | Θ          | Theta   |
+| ι          | Ι          | Iota    |
+| κ          | Κ          | Kappa   |
+| λ          | Λ          | Lambda  |
+| μ          | Μ          | Mu      |
+| ν          | Ν          | Nu      |
+| ξ          | Ξ          | Xi      |
+| ο          | Ο          | Omicron |
+| π          | Π          | Pi      |
+| ρ          | Ρ          | Rho     |
+| σ          | Σ          | Sigma   |
+| τ          | Τ          | Tau     |
+| υ          | Υ          | Upsilon |
+| φ          | Φ          | Phi     |
+| χ          | Χ          | Chi     |
+| ψ          | Ψ          | Psi     |
+| ω          | Ω          | Omega   |
+
+: Unicode Greek Letters
+
+````{=html}
+<!-- ## Thermodynamics
+
+``` txt
+Temperature = 300 K
+Pressure = 101325 Pa
+Volume = 0.50 m³
+Mass = 2.0 kg
+Specific gas constant = 287 J·kg⁻¹·K⁻¹
+
+Ideal gas law:
+P·V = m·R·T
+
+First law of thermodynamics:
+ΔU = Q − W
+
+Internal energy (ideal gas):
+u = cᵥ·T
+U = m·cᵥ·T
+
+Enthalpy:
+h = u + P·v
+H = U + P·V
+
+Specific heat relation:
+cₚ − cᵥ = R
+
+Isentropic relations:
+T₂/T₁ = (V₁/V₂)^(γ−1)
+P₂/P₁ = (T₂/T₁)^(γ/(γ−1))
+γ = cₚ / cᵥ
+``` -->
+````

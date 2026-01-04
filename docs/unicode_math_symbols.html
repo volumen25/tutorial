@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -375,6 +410,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#kinematics-dynamics" id="toc-kinematics-dynamics" class="nav-link" data-scroll-target="#kinematics-dynamics"><span class="header-section-number">B.3</span> Kinematics &amp; Dynamics</a></li>
   <li><a href="#fluids" id="toc-fluids" class="nav-link" data-scroll-target="#fluids"><span class="header-section-number">B.4</span> Fluids</a></li>
   <li><a href="#stress-material-properties" id="toc-stress-material-properties" class="nav-link" data-scroll-target="#stress-material-properties"><span class="header-section-number">B.5</span> Stress &amp; Material Properties</a></li>
+  <li><a href="#greek-letters" id="toc-greek-letters" class="nav-link" data-scroll-target="#greek-letters"><span class="header-section-number">B.6</span> Greek Letters</a></li>
   </ul>
 </nav>
     </div>
@@ -403,20 +439,23 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="python-script-comment-snippets" class="level2" data-number="B.1">
 <h2 data-number="B.1" class="anchored" data-anchor-id="python-script-comment-snippets"><span class="header-section-number">B.1</span> Python Script Comment Snippets</h2>
-<pre class="text"><code>Area = 25 m²  
-Volume = 3.2 m³  
-Density of water = 1000 kg/m³  
-Angle = 45°  
-Angular speed = 12 s⁻¹  
-
-Law of sines:
-T₁ / sin(θ₁) = T₂ / sin(θ₂) = W / sin(θ₃)
-
-Law of cosines:
-cos(θₚ) = (J² + T² − P²) / (2·J·T)
-
-Energy equation:
-P₁ + ½ρv₁² + ρgz₁ = P₂ + ½ρv₂² + ρgz₂</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Area = 25 m²  </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Volume = 3.2 m³  </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Density of water = 1000 kg/m³  </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Angle = 45°  </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Angular speed = 12 s⁻¹  </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Area = π·r²  </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Law of sines:</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>T₁ / sin(θ₁) = T₂ / sin(θ₂) = W / sin(θ₃)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Law of cosines:</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>cos(θ) = (a² + b² − c²) / (2ab)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>cos(θₚ) = (J² + T² − P²) / (2·J·T)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Energy equation:</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>P₁ + ½ρv₁² + ρgz₁ = P₂ + ½ρv₂² + ρgz₂</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="math-symbols" class="level2" data-number="B.2">
 <h2 data-number="B.2" class="anchored" data-anchor-id="math-symbols"><span class="header-section-number">B.2</span> Math Symbols</h2>
@@ -607,6 +646,173 @@ P₁ + ½ρv₁² + ρgz₁ = P₂ + ½ρv₂² + ρgz₂</code></pre>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="greek-letters" class="level2" data-number="B.6">
+<h2 data-number="B.6" class="anchored" data-anchor-id="greek-letters"><span class="header-section-number">B.6</span> Greek Letters</h2>
+<table class="caption-top table">
+<caption>Unicode Greek Letters</caption>
+<thead>
+<tr class="header">
+<th>Lower Case</th>
+<th>Upper Case</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>α</td>
+<td>Α</td>
+<td>Alpha</td>
+</tr>
+<tr class="even">
+<td>β</td>
+<td>Β</td>
+<td>Beta</td>
+</tr>
+<tr class="odd">
+<td>γ</td>
+<td>Γ</td>
+<td>Gamma</td>
+</tr>
+<tr class="even">
+<td>δ</td>
+<td>Δ</td>
+<td>Delta</td>
+</tr>
+<tr class="odd">
+<td>ε</td>
+<td>Ε</td>
+<td>Epsilon</td>
+</tr>
+<tr class="even">
+<td>ζ</td>
+<td>Ζ</td>
+<td>Zeta</td>
+</tr>
+<tr class="odd">
+<td>η</td>
+<td>Η</td>
+<td>Eta</td>
+</tr>
+<tr class="even">
+<td>θ</td>
+<td>Θ</td>
+<td>Theta</td>
+</tr>
+<tr class="odd">
+<td>ι</td>
+<td>Ι</td>
+<td>Iota</td>
+</tr>
+<tr class="even">
+<td>κ</td>
+<td>Κ</td>
+<td>Kappa</td>
+</tr>
+<tr class="odd">
+<td>λ</td>
+<td>Λ</td>
+<td>Lambda</td>
+</tr>
+<tr class="even">
+<td>μ</td>
+<td>Μ</td>
+<td>Mu</td>
+</tr>
+<tr class="odd">
+<td>ν</td>
+<td>Ν</td>
+<td>Nu</td>
+</tr>
+<tr class="even">
+<td>ξ</td>
+<td>Ξ</td>
+<td>Xi</td>
+</tr>
+<tr class="odd">
+<td>ο</td>
+<td>Ο</td>
+<td>Omicron</td>
+</tr>
+<tr class="even">
+<td>π</td>
+<td>Π</td>
+<td>Pi</td>
+</tr>
+<tr class="odd">
+<td>ρ</td>
+<td>Ρ</td>
+<td>Rho</td>
+</tr>
+<tr class="even">
+<td>σ</td>
+<td>Σ</td>
+<td>Sigma</td>
+</tr>
+<tr class="odd">
+<td>τ</td>
+<td>Τ</td>
+<td>Tau</td>
+</tr>
+<tr class="even">
+<td>υ</td>
+<td>Υ</td>
+<td>Upsilon</td>
+</tr>
+<tr class="odd">
+<td>φ</td>
+<td>Φ</td>
+<td>Phi</td>
+</tr>
+<tr class="even">
+<td>χ</td>
+<td>Χ</td>
+<td>Chi</td>
+</tr>
+<tr class="odd">
+<td>ψ</td>
+<td>Ψ</td>
+<td>Psi</td>
+</tr>
+<tr class="even">
+<td>ω</td>
+<td>Ω</td>
+<td>Omega</td>
+</tr>
+</tbody>
+</table>
+<!-- ## Thermodynamics
+
+``` txt
+Temperature = 300 K
+Pressure = 101325 Pa
+Volume = 0.50 m³
+Mass = 2.0 kg
+Specific gas constant = 287 J·kg⁻¹·K⁻¹
+
+Ideal gas law:
+P·V = m·R·T
+P·v = R·T
+
+First law of thermodynamics:
+ΔU = Q − W
+
+Internal energy (ideal gas):
+u = cᵥ·T
+U = m·cᵥ·T
+
+Enthalpy:
+h = u + P·v
+H = U + P·V
+
+Specific heat relation:
+cₚ − cᵥ = R
+
+Isentropic relations:
+T₂/T₁ = (V₁/V₂)^(γ−1)
+P₂/P₁ = (T₂/T₁)^(γ/(γ−1))
+γ = cₚ / cᵥ
+``` -->
 
 
 </section>

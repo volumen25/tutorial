@@ -446,7 +446,7 @@
     "href": "unicode_math_symbols.html#python-script-comment-snippets",
     "title": "Appendix B — Unicode Math Symbols",
     "section": "",
-    "text": "Area = 25 m²  \nVolume = 3.2 m³  \nDensity of water = 1000 kg/m³  \nAngle = 45°  \nAngular speed = 12 s⁻¹  \n\nLaw of sines:\nT₁ / sin(θ₁) = T₂ / sin(θ₂) = W / sin(θ₃)\n\nLaw of cosines:\ncos(θₚ) = (J² + T² − P²) / (2·J·T)\n\nEnergy equation:\nP₁ + ½ρv₁² + ρgz₁ = P₂ + ½ρv₂² + ρgz₂",
+    "text": "Area = 25 m²  \nVolume = 3.2 m³  \nDensity of water = 1000 kg/m³  \nAngle = 45°  \nAngular speed = 12 s⁻¹  \n\nArea = π·r²  \n\nLaw of sines:\nT₁ / sin(θ₁) = T₂ / sin(θ₂) = W / sin(θ₃)\n\nLaw of cosines:\ncos(θ) = (a² + b² − c²) / (2ab)\ncos(θₚ) = (J² + T² − P²) / (2·J·T)\n\nEnergy equation:\nP₁ + ½ρv₁² + ρgz₁ = P₂ + ½ρv₂² + ρgz₂",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Unicode Math Symbols</span>"
@@ -491,6 +491,17 @@
     "title": "Appendix B — Unicode Math Symbols",
     "section": "B.5 Stress & Material Properties",
     "text": "B.5 Stress & Material Properties\n\nStress & Material Properties\n\n\nSymbol\nMeaning\nSI Units\n\n\n\n\nσ\nNormal stress\nPa\n\n\nτ\nShear stress\nPa\n\n\nε\nNormal strain\n—\n\n\nγ\nShear strain\n—\n\n\nE\nYoung’s modulus\nPa\n\n\nG\nShear modulus\nPa\n\n\nν\nPoisson’s ratio\n—",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Unicode Math Symbols</span>"
+    ]
+  },
+  {
+    "objectID": "unicode_math_symbols.html#greek-letters",
+    "href": "unicode_math_symbols.html#greek-letters",
+    "title": "Appendix B — Unicode Math Symbols",
+    "section": "B.6 Greek Letters",
+    "text": "B.6 Greek Letters\n\nUnicode Greek Letters\n\n\nLower Case\nUpper Case\nName\n\n\n\n\nα\nΑ\nAlpha\n\n\nβ\nΒ\nBeta\n\n\nγ\nΓ\nGamma\n\n\nδ\nΔ\nDelta\n\n\nε\nΕ\nEpsilon\n\n\nζ\nΖ\nZeta\n\n\nη\nΗ\nEta\n\n\nθ\nΘ\nTheta\n\n\nι\nΙ\nIota\n\n\nκ\nΚ\nKappa\n\n\nλ\nΛ\nLambda\n\n\nμ\nΜ\nMu\n\n\nν\nΝ\nNu\n\n\nξ\nΞ\nXi\n\n\nο\nΟ\nOmicron\n\n\nπ\nΠ\nPi\n\n\nρ\nΡ\nRho\n\n\nσ\nΣ\nSigma\n\n\nτ\nΤ\nTau\n\n\nυ\nΥ\nUpsilon\n\n\nφ\nΦ\nPhi\n\n\nχ\nΧ\nChi\n\n\nψ\nΨ\nPsi\n\n\nω\nΩ\nOmega",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Unicode Math Symbols</span>"
