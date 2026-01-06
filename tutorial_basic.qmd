@@ -35,19 +35,15 @@ print(f"{name} was born in {year}.")
 
 Output: `Rudolf Diesel was born in 1858.`
 
-## Formatting in `print()`
-
 The following table illustrates common f-string formatting options for the `print()` function:
 
 | Format | Code | Example | Output |
 |------------------|------------------|-------------------|------------------|
-| **Round to 2 decimals** | `f"{x:.2f}"` | `print(f"{3.14159:.2f}")` | `3.14` |
+| **Round to 2 decimals** | `f"{x:.2f}"` | `print(f"{3.1415:.2f}")` | `3.14` |
 | **Round to whole number** | `f"{x:.0f}"` | `print(f"{3.9:.0f}")` | `4` |
-| **Thousands separator** | `f"{x:,.2f}"` | `print(f"{1234567.89:,.2f}")` | `1,234,567.89` |
+| **Thousands separator** | `f"{x:,.2f}"` | `print(f"{1234.567:,.2f}")` | `1,234.57` |
 | **Percentage** | `f"{x:.1%}"` | `print(f"{0.756:.1%}")` | `75.6%` |
-| **Currency (CDN)** | `f"${x:,.2f}"` | `print(f"${1234.5:,.2f}")` | `$1,234.50` |
-| **Currency (EUR)** | `f"€{x:,.2f}"` | `print(f"€{1234.5:,.2f}")` | `€1,234.50` |
-| **Currency (JPY)** | `f"¥{x:,.0f}"` | `print(f"¥{1234567:,.0f}")` | `¥1,234,567` |
+| **Currency (JPY)** | `f"¥{x:,.0f}"` | `print(f"¥{1234:,.0f}")` | `¥1,234` |
 
 ## Variables and Data Types
 
@@ -252,8 +248,8 @@ print(math.pi)        # Output: 3.141592653589793
 ``` python
 import math
 angle = math.pi / 4  # 45 degrees in radians
-print(math.sin(angle))  # Output: 0.7071067811865475 (approximately √2/2)
-print(math.cos(angle))  # Output: 0.7071067811865476 (approximately √2/2)
+print(math.sin(angle))  # Output: 0.7071067811865475
+print(math.cos(angle))  # Output: 0.7071067811865476
 print(math.tan(angle))  # Output: 1.0
 ```
 
@@ -261,7 +257,7 @@ Note: Floating-point arithmetic may result in small precision differences, as se
 
 ``` python
 import math
-print(math.log(10))       # Natural logarithm of 10: 2.302585092994046
+print(math.log(10))       # Natural logarithm of 10: 2.302585092
 print(math.log(100, 10))  # Logarithm of 100 with base 10: 2.0
 ```
 
@@ -270,18 +266,17 @@ print(math.log(100, 10))  # Logarithm of 100 with base 10: 2.0
 The `math` module provides `math.radians()` to convert degrees to radians and `math.degrees()` to convert radians to degrees, which is useful for trigonometric calculations.
 
 ::: callout-warning
-In Python, the math module’s trigonometric functions (sin, cos, tan, etc.) expect angles in radians, not degrees. Always convert degrees to radians before using sin, cos, or tan in Python’s math module.
+In Python, the trigonometric functions in the `math` module (`sin`, `cos`, `tan`, etc.) expect angles in radians, not degrees. Always convert degrees to radians before using these functions.
 :::
 
 ``` python
 import math
 degrees = 180
 radians = math.radians(degrees)
-print(f"{degrees} degrees is {radians:.3f} radians")  # Output: 180 degrees is 3.142 radians
-
-radians = math.pi / 2
+print(f"{degrees} degrees is {radians:.3f} radians")
+radians = math.pi
 degrees = math.degrees(radians)
-print(f"{radians:.3f} radians is {degrees:.1f} degrees")  # Output: 1.571 radians is 90.0 degrees
+print(f"{radians:.3f} radians is {degrees:.1f} degrees")
 ```
 
 ## Writing Python Scripts
@@ -314,6 +309,73 @@ Natural logarithm of 10 is: 2.302585092994046
 Logarithm of 100 with base 10 is: 2.0
 ```
 
+## Python Style Guide
+
+> Code is read far more often than it is written. — Guido van Rossum, creator of the Python programming language.
+
+Adhere to [PEP 8](https://peps.python.org/pep-0008/) as the primary style guide. This document outlines the coding conventions for Python code in the core standard library of the main Python distribution.
+
+-   Employ descriptive names for variables and functions. Avoid abbreviations or single-letter names unless they are widely conventional (e.g., i as a loop index).
+
+-   Organize code with consistent sectioning and clear headers or separators to enhance readability.
+
+-   Restrict line length to a maximum of 79 characters to ensure compatibility with print media and prevent horizontal overflow.
+
+-   Include meaningful inline comments where necessary to explain the purpose and intent of the code, particularly for complex logic.
+
+Many modern Python projects enhance PEP 8 compliance by employing [Black](https://black.readthedocs.io/en/stable/), the uncompromising code formatter. Black applies a deterministic style that is a strict subset of PEP 8, with a default line length of 88 characters for improved readability on contemporary displays. It can be configured to use 79 characters if required.
+
+The following scripts illustrate the earlier examples in accordance with PEP 8 guidelines:
+
+``` python
+"""
+Degrees-Radians Conversion
+"""
+
+import math
+
+# Conversion from degrees to radians
+input_degrees = 180.0
+converted_radians = math.radians(input_degrees)
+
+# Conversion from radians to degrees
+input_radians = math.pi
+converted_degrees = math.degrees(input_radians)
+
+# Display results
+print("Degrees to Radians Conversion:")
+print(f"{input_degrees:.0f} degrees = {converted_radians:.3f} radians")
+print()
+print("Radians to Degrees Conversion:")
+print(f"{input_radians:.3f} radians = {converted_degrees:.1f} degrees")
+```
+
+``` python
+"""
+Math Module Examples
+
+Demonstrates common functions from the Python math module:
+square root, pi constant, sine, natural logarithm, 
+and base-10 logarithm.
+"""
+
+import math
+
+# Compute and display mathematical operations
+sqrt_result = math.sqrt(16)
+pi_value = math.pi
+sine_90_degrees = math.sin(math.pi / 2)  # 90 degrees = π/2 radians
+natural_log_10 = math.log(10)
+log_base10_100 = math.log(100, 10)
+
+# Display results with clear descriptions
+print("Square root of 16 is:", sqrt_result)
+print("Value of pi is:", pi_value)
+print("Sine of 90 degrees is:", sine_90_degrees)
+print("Natural logarithm of 10 is:", natural_log_10)
+print("Logarithm of 100 with base 10 is:", log_base10_100)
+```
+
 ## Summary
 
-You’ve now learned Python basics: syntax, variables, control flow, functions, and the math module. Practice all examples instantly at [python-fiddle.com](https://python-fiddle.com/).
+You have now learned Python basics: syntax, variables, control flow, functions, and the math module. Practice all examples instantly at [python-fiddle.com](https://python-fiddle.com/).

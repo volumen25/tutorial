@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorial</title>
+<title>Appendix B — Unicode Math Symbols – Tutorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,42 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -50,7 +65,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./study_guide.html" rel="next">
+<link href="./greek_letters.html" rel="next">
+<link href="./script_template.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -268,7 +284,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./script_template.html">Appendices</a></li><li class="breadcrumb-item"><a href="./unicode_math_symbols.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Unicode Math Symbols</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -298,7 +314,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -316,32 +332,32 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01statics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statics</span></span></a>
+  <a href="./si_units.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">SI Units</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./kinematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Kinematics</span></span></a>
+  <a href="./heat_work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Heat and Work</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02dynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dynamics</span></span></a>
+  <a href="./thermal_expansion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Thermal Expansion</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03hydrostatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hydrostatics</span></span></a>
+  <a href="./heat_transfer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Heat Transfer</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04hydrodynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Hydrodynamics</span></span></a>
+  <a href="./perfect_gases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Perfect Gases</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -367,7 +383,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./unicode_math_symbols.html" class="sidebar-item-text sidebar-link">
+  <a href="./unicode_math_symbols.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Unicode Math Symbols</span></span></a>
   </div>
 </li>
@@ -389,7 +405,12 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#python-script-comment-snippets" id="toc-python-script-comment-snippets" class="nav-link active" data-scroll-target="#python-script-comment-snippets"><span class="header-section-number">B.1</span> Python Script Comment Snippets</a></li>
+  <li><a href="#math-symbols" id="toc-math-symbols" class="nav-link" data-scroll-target="#math-symbols"><span class="header-section-number">B.2</span> Math Symbols</a></li>
+  <li><a href="#kinematics-dynamics" id="toc-kinematics-dynamics" class="nav-link" data-scroll-target="#kinematics-dynamics"><span class="header-section-number">B.3</span> Kinematics &amp; Dynamics</a></li>
+  <li><a href="#fluids" id="toc-fluids" class="nav-link" data-scroll-target="#fluids"><span class="header-section-number">B.4</span> Fluids</a></li>
+  <li><a href="#stress-material-properties" id="toc-stress-material-properties" class="nav-link" data-scroll-target="#stress-material-properties"><span class="header-section-number">B.5</span> Stress &amp; Material Properties</a></li>
+  <li><a href="#greek-letters" id="toc-greek-letters" class="nav-link" data-scroll-target="#greek-letters"><span class="header-section-number">B.6</span> Greek Letters</a></li>
   </ul>
 </nav>
     </div>
@@ -397,10 +418,9 @@ div.csl-indent {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./script_template.html">Appendices</a></li><li class="breadcrumb-item"><a href="./unicode_math_symbols.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Unicode Math Symbols</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Tutorial</h1>
-<p class="subtitle lead">A Concise Introduction to Computational Tools</p>
+<h1 class="title"><span id="sec-unicode" class="quarto-section-identifier">Appendix B — Unicode Math Symbols</span></h1>
 </div>
 
 
@@ -417,40 +437,383 @@ div.csl-indent {
 </header>
 
 
+<section id="python-script-comment-snippets" class="level2" data-number="B.1">
+<h2 data-number="B.1" class="anchored" data-anchor-id="python-script-comment-snippets"><span class="header-section-number">B.1</span> Python Script Comment Snippets</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Area = 25 m²  </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Volume = 3.2 m³  </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Density of water = 1000 kg/m³  </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Angle = 45°  </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Angular speed = 12 s⁻¹  </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Area = π·r²  </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Law of sines:</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>T₁ / sin(θ₁) = T₂ / sin(θ₂) = W / sin(θ₃)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Law of cosines:</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>cos(θ) = (a² + b² − c²) / (2ab)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>cos(θₚ) = (J² + T² − P²) / (2·J·T)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Energy equation:</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>P₁ + ½ρv₁² + ρgz₁ = P₂ + ½ρv₂² + ρgz₂</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="math-symbols" class="level2" data-number="B.2">
+<h2 data-number="B.2" class="anchored" data-anchor-id="math-symbols"><span class="header-section-number">B.2</span> Math Symbols</h2>
+<table class="caption-top table">
+<caption>Math Symbols</caption>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Name</th>
+<th>SI Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>√</td>
+<td>Square root</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>∑</td>
+<td>Summation</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>∫</td>
+<td>Integral</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>∞</td>
+<td>Infinity</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>≤</td>
+<td>Less than or equal</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>≥</td>
+<td>Greater than or equal</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>≠</td>
+<td>Not equal</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>⟂</td>
+<td>Perpendicular</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>⌀</td>
+<td>Diameter</td>
+<td>m</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="kinematics-dynamics" class="level2" data-number="B.3">
+<h2 data-number="B.3" class="anchored" data-anchor-id="kinematics-dynamics"><span class="header-section-number">B.3</span> Kinematics &amp; Dynamics</h2>
+<table class="caption-top table">
+<caption>Kinematics &amp; Dynamics</caption>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+<th>SI Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ω</td>
+<td>Angular velocity</td>
+<td>rad·s⁻¹</td>
+</tr>
+<tr class="even">
+<td>α</td>
+<td>Angular acceleration</td>
+<td>rad·s⁻²</td>
+</tr>
+<tr class="odd">
+<td>θ</td>
+<td>Angular position</td>
+<td>rad</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fluids" class="level2" data-number="B.4">
+<h2 data-number="B.4" class="anchored" data-anchor-id="fluids"><span class="header-section-number">B.4</span> Fluids</h2>
+<table class="caption-top table">
+<caption>Fluids</caption>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+<th>SI Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ρ</td>
+<td>Density</td>
+<td>kg·m⁻³</td>
+</tr>
+<tr class="even">
+<td>μ</td>
+<td>Dynamic viscosity</td>
+<td>Pa·s</td>
+</tr>
+<tr class="odd">
+<td>ν</td>
+<td>Kinematic viscosity</td>
+<td>m²·s⁻¹</td>
+</tr>
+<tr class="even">
+<td>p</td>
+<td>Pressure</td>
+<td>Pa</td>
+</tr>
+<tr class="odd">
+<td>h</td>
+<td>Head</td>
+<td>m</td>
+</tr>
+<tr class="even">
+<td>ṁ</td>
+<td>Mass flow rate</td>
+<td>kg·s⁻¹</td>
+</tr>
+<tr class="odd">
+<td>v̇</td>
+<td>Volumetric flow rate</td>
+<td>m³·s⁻¹</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="stress-material-properties" class="level2" data-number="B.5">
+<h2 data-number="B.5" class="anchored" data-anchor-id="stress-material-properties"><span class="header-section-number">B.5</span> Stress &amp; Material Properties</h2>
+<table class="caption-top table">
+<caption>Stress &amp; Material Properties</caption>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+<th>SI Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>σ</td>
+<td>Normal stress</td>
+<td>Pa</td>
+</tr>
+<tr class="even">
+<td>τ</td>
+<td>Shear stress</td>
+<td>Pa</td>
+</tr>
+<tr class="odd">
+<td>ε</td>
+<td>Normal strain</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>γ</td>
+<td>Shear strain</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>Young’s modulus</td>
+<td>Pa</td>
+</tr>
+<tr class="even">
+<td>G</td>
+<td>Shear modulus</td>
+<td>Pa</td>
+</tr>
+<tr class="odd">
+<td>ν</td>
+<td>Poisson’s ratio</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="greek-letters" class="level2" data-number="B.6">
+<h2 data-number="B.6" class="anchored" data-anchor-id="greek-letters"><span class="header-section-number">B.6</span> Greek Letters</h2>
+<table class="caption-top table">
+<caption>Unicode Greek Letters</caption>
+<thead>
+<tr class="header">
+<th>Lower Case</th>
+<th>Upper Case</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>α</td>
+<td>Α</td>
+<td>Alpha</td>
+</tr>
+<tr class="even">
+<td>β</td>
+<td>Β</td>
+<td>Beta</td>
+</tr>
+<tr class="odd">
+<td>γ</td>
+<td>Γ</td>
+<td>Gamma</td>
+</tr>
+<tr class="even">
+<td>δ</td>
+<td>Δ</td>
+<td>Delta</td>
+</tr>
+<tr class="odd">
+<td>ε</td>
+<td>Ε</td>
+<td>Epsilon</td>
+</tr>
+<tr class="even">
+<td>ζ</td>
+<td>Ζ</td>
+<td>Zeta</td>
+</tr>
+<tr class="odd">
+<td>η</td>
+<td>Η</td>
+<td>Eta</td>
+</tr>
+<tr class="even">
+<td>θ</td>
+<td>Θ</td>
+<td>Theta</td>
+</tr>
+<tr class="odd">
+<td>ι</td>
+<td>Ι</td>
+<td>Iota</td>
+</tr>
+<tr class="even">
+<td>κ</td>
+<td>Κ</td>
+<td>Kappa</td>
+</tr>
+<tr class="odd">
+<td>λ</td>
+<td>Λ</td>
+<td>Lambda</td>
+</tr>
+<tr class="even">
+<td>μ</td>
+<td>Μ</td>
+<td>Mu</td>
+</tr>
+<tr class="odd">
+<td>ν</td>
+<td>Ν</td>
+<td>Nu</td>
+</tr>
+<tr class="even">
+<td>ξ</td>
+<td>Ξ</td>
+<td>Xi</td>
+</tr>
+<tr class="odd">
+<td>ο</td>
+<td>Ο</td>
+<td>Omicron</td>
+</tr>
+<tr class="even">
+<td>π</td>
+<td>Π</td>
+<td>Pi</td>
+</tr>
+<tr class="odd">
+<td>ρ</td>
+<td>Ρ</td>
+<td>Rho</td>
+</tr>
+<tr class="even">
+<td>σ</td>
+<td>Σ</td>
+<td>Sigma</td>
+</tr>
+<tr class="odd">
+<td>τ</td>
+<td>Τ</td>
+<td>Tau</td>
+</tr>
+<tr class="even">
+<td>υ</td>
+<td>Υ</td>
+<td>Upsilon</td>
+</tr>
+<tr class="odd">
+<td>φ</td>
+<td>Φ</td>
+<td>Phi</td>
+</tr>
+<tr class="even">
+<td>χ</td>
+<td>Χ</td>
+<td>Chi</td>
+</tr>
+<tr class="odd">
+<td>ψ</td>
+<td>Ψ</td>
+<td>Psi</td>
+</tr>
+<tr class="even">
+<td>ω</td>
+<td>Ω</td>
+<td>Omega</td>
+</tr>
+</tbody>
+</table>
+<!-- ## Thermodynamics
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1><p><img src="cover_qr.png" title="Tutorial" class="quarto-cover-image nolightbox img-fluid"></p>
-<p>A Concise Introduction to Computational Tools provides a series of tutorials derived from lecture notes, offering clear and focused guidance on essential topics. No prior programming experience is required.</p>
-<p>Students are expected to be comfortable with college-level mathematics and science and are strongly encouraged to consult reliable reference texts. For example, foundational and practical texts in mathematics, applied mechanics and computational tools, including <span class="citation" data-cites="bird2021">Bird (<a href="references.html#ref-bird2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="hannah1995">Hannah &amp; Hillier (<a href="references.html#ref-hannah1995" role="doc-biblioref">1995</a>)</span>, <span class="citation" data-cites="russell2021">Russell et al. (<a href="references.html#ref-russell2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="russell2022">(<a href="references.html#ref-russell2022" role="doc-biblioref">Russell et al., 2022</a>)</span>, <span class="citation" data-cites="bolton2021">Bolton (<a href="references.html#ref-bolton2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="shaw2017">Shaw (<a href="references.html#ref-shaw2017" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="sweigart2021">Sweigart (<a href="references.html#ref-sweigart2021" role="doc-biblioref">2021</a>)</span>, and <span class="citation" data-cites="sweigart2020">Sweigart (<a href="references.html#ref-sweigart2020" role="doc-biblioref">2020</a>)</span>.</p>
-<p>The tutorials also assume working familiarity with either macOS or Microsoft Windows. For best results, these materials should be used on a laptop or desktop computer rather than a tablet or smartphone.</p>
+``` txt
+Temperature = 300 K
+Pressure = 101325 Pa
+Volume = 0.50 m³
+Mass = 2.0 kg
+Specific gas constant = 287 J·kg⁻¹·K⁻¹
+
+Ideal gas law:
+P·V = m·R·T
+
+First law of thermodynamics:
+ΔU = Q − W
+
+Internal energy (ideal gas):
+u = cᵥ·T
+U = m·cᵥ·T
+
+Enthalpy:
+h = u + P·v
+H = U + P·V
+
+Specific heat relation:
+cₚ − cᵥ = R
+
+Isentropic relations:
+T₂/T₁ = (V₁/V₂)^(γ−1)
+P₂/P₁ = (T₂/T₁)^(γ/(γ−1))
+γ = cₚ / cᵥ
+``` -->
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
-<div id="ref-bird2021" class="csl-entry" role="listitem">
-Bird, J. O. (2021). <em>Bird’s engineering mathematics</em> (Ninth edition). Routledge.
-</div>
-<div id="ref-bolton2021" class="csl-entry" role="listitem">
-Bolton, W. (2021). <em>Engineering science</em> (Seventh edition). Routledge.
-</div>
-<div id="ref-hannah1995" class="csl-entry" role="listitem">
-Hannah, J., &amp; Hillier, M. J. (1995). <em>Applied mechanics</em> (3rd edition). Longman Pub Group.
-</div>
-<div id="ref-russell2022" class="csl-entry" role="listitem">
-Russell, P. A., Embleton, W., &amp; Jackson, L. (2022). <em>Applied thermodynamics for marine engineers</em> (6th edition). Reeds.
-</div>
-<div id="ref-russell2021" class="csl-entry" role="listitem">
-Russell, P. A., Jackson, L., &amp; Embleton, W. (2021). <em>Applied mechanics for marine engineers</em> (7th edition). Reeds.
-</div>
-<div id="ref-shaw2017" class="csl-entry" role="listitem">
-Shaw, Z. (2017). <em>Learn python 3 the hard way: A very simple introduction to the terrifyingly beautiful world of computers and code</em> (4th edition). Addison-Wesley Professional.
-</div>
-<div id="ref-sweigart2020" class="csl-entry" role="listitem">
-Sweigart, A. (2020). <em>Automate the boring stuff with python, 2nd edition: Practical programming for total beginners</em>. No Starch Press.
-</div>
-<div id="ref-sweigart2021" class="csl-entry" role="listitem">
-Sweigart, A. (2021). <em>Beyond the basic stuff with python: Best practices for writing clean code</em>. No Starch Press.
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
@@ -869,10 +1232,13 @@ Sweigart, A. (2021). <em>Beyond the basic stuff with python: Best practices for 
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./script_template.html" class="pagination-link" aria-label="Script Template">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Script Template</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./study_guide.html" class="pagination-link" aria-label="Study Guide">
-        <span class="nav-page-text">Study Guide</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./greek_letters.html" class="pagination-link" aria-label="Greek Letters">
+        <span class="nav-page-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Greek Letters</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

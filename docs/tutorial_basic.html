@@ -79,9 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-14cbc709409b9607cfe384ca3dce8273.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c213800f9ad2c394781badd4e3c4d3bb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -362,8 +362,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./colophon.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Colophon</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -377,8 +377,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./script_template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Script Template</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unicode_math_symbols.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Unicode Math Symbols</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./greek_letters.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Greek Letters</span></span></a>
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Greek Letters</span></span></a>
   </div>
 </li>
       </ul>
@@ -396,7 +408,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements">Requirements</a></li>
   <li><a href="#basic-syntax" id="toc-basic-syntax" class="nav-link" data-scroll-target="#basic-syntax">Basic Syntax</a></li>
   <li><a href="#the-print-function" id="toc-the-print-function" class="nav-link" data-scroll-target="#the-print-function">The <code>print()</code> Function</a></li>
-  <li><a href="#formatting-in-print" id="toc-formatting-in-print" class="nav-link" data-scroll-target="#formatting-in-print">Formatting in <code>print()</code></a></li>
   <li><a href="#variables-and-data-types" id="toc-variables-and-data-types" class="nav-link" data-scroll-target="#variables-and-data-types">Variables and Data Types</a>
   <ul class="collapse">
   <li><a href="#arithmetic-operations" id="toc-arithmetic-operations" class="nav-link" data-scroll-target="#arithmetic-operations">Arithmetic Operations</a></li>
@@ -424,6 +435,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#converting-between-radians-and-degrees" id="toc-converting-between-radians-and-degrees" class="nav-link" data-scroll-target="#converting-between-radians-and-degrees">Converting Between Radians and Degrees</a></li>
   </ul></li>
   <li><a href="#writing-python-scripts" id="toc-writing-python-scripts" class="nav-link" data-scroll-target="#writing-python-scripts">Writing Python Scripts</a></li>
+  <li><a href="#python-style-guide" id="toc-python-style-guide" class="nav-link" data-scroll-target="#python-style-guide">Python Style Guide</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul>
 </nav>
@@ -476,9 +488,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>year <span class="op">=</span> <span class="dv">1858</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> was born in </span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Output: <code>Rudolf Diesel was born in 1858.</code></p>
-</section>
-<section id="formatting-in-print" class="level2">
-<h2 class="anchored" data-anchor-id="formatting-in-print">Formatting in <code>print()</code></h2>
 <p>The following table illustrates common f-string formatting options for the <code>print()</code> function:</p>
 <table class="caption-top table">
 <colgroup>
@@ -499,7 +508,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><strong>Round to 2 decimals</strong></td>
 <td><code>f"{x:.2f}"</code></td>
-<td><code>print(f"{3.14159:.2f}")</code></td>
+<td><code>print(f"{3.1415:.2f}")</code></td>
 <td><code>3.14</code></td>
 </tr>
 <tr class="even">
@@ -511,8 +520,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><strong>Thousands separator</strong></td>
 <td><code>f"{x:,.2f}"</code></td>
-<td><code>print(f"{1234567.89:,.2f}")</code></td>
-<td><code>1,234,567.89</code></td>
+<td><code>print(f"{1234.567:,.2f}")</code></td>
+<td><code>1,234.57</code></td>
 </tr>
 <tr class="even">
 <td><strong>Percentage</strong></td>
@@ -521,22 +530,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><code>75.6%</code></td>
 </tr>
 <tr class="odd">
-<td><strong>Currency (CDN)</strong></td>
-<td><code>f"${x:,.2f}"</code></td>
-<td><code>print(f"${1234.5:,.2f}")</code></td>
-<td><code>$1,234.50</code></td>
-</tr>
-<tr class="even">
-<td><strong>Currency (EUR)</strong></td>
-<td><code>f"€{x:,.2f}"</code></td>
-<td><code>print(f"€{1234.5:,.2f}")</code></td>
-<td><code>€1,234.50</code></td>
-</tr>
-<tr class="odd">
 <td><strong>Currency (JPY)</strong></td>
 <td><code>f"¥{x:,.0f}"</code></td>
-<td><code>print(f"¥{1234567:,.0f}")</code></td>
-<td><code>¥1,234,567</code></td>
+<td><code>print(f"¥{1234:,.0f}")</code></td>
+<td><code>¥1,234</code></td>
 </tr>
 </tbody>
 </table>
@@ -689,12 +686,12 @@ connecting rod</code></pre>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.pi)        <span class="co"># Output: 3.141592653589793</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>angle <span class="op">=</span> math.pi <span class="op">/</span> <span class="dv">4</span>  <span class="co"># 45 degrees in radians</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.sin(angle))  <span class="co"># Output: 0.7071067811865475 (approximately √2/2)</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.cos(angle))  <span class="co"># Output: 0.7071067811865476 (approximately √2/2)</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.sin(angle))  <span class="co"># Output: 0.7071067811865475</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.cos(angle))  <span class="co"># Output: 0.7071067811865476</span></span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.tan(angle))  <span class="co"># Output: 1.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Note: Floating-point arithmetic may result in small precision differences, as seen in the <code>sin</code> and <code>cos</code> outputs.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.log(<span class="dv">10</span>))       <span class="co"># Natural logarithm of 10: 2.302585092994046</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.log(<span class="dv">10</span>))       <span class="co"># Natural logarithm of 10: 2.302585092</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.log(<span class="dv">100</span>, <span class="dv">10</span>))  <span class="co"># Logarithm of 100 with base 10: 2.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="converting-between-radians-and-degrees" class="level3">
 <h3 class="anchored" data-anchor-id="converting-between-radians-and-degrees">Converting Between Radians and Degrees</h3>
@@ -709,17 +706,16 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In Python, the math module’s trigonometric functions (sin, cos, tan, etc.) expect angles in radians, not degrees. Always convert degrees to radians before using sin, cos, or tan in Python’s math module.</p>
+<p>In Python, the trigonometric functions in the <code>math</code> module (<code>sin</code>, <code>cos</code>, <code>tan</code>, etc.) expect angles in radians, not degrees. Always convert degrees to radians before using these functions.</p>
 </div>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>degrees <span class="op">=</span> <span class="dv">180</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>radians <span class="op">=</span> math.radians(degrees)</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>degrees<span class="sc">}</span><span class="ss"> degrees is </span><span class="sc">{</span>radians<span class="sc">:.3f}</span><span class="ss"> radians"</span>)  <span class="co"># Output: 180 degrees is 3.142 radians</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>radians <span class="op">=</span> math.pi <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>degrees <span class="op">=</span> math.degrees(radians)</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>radians<span class="sc">:.3f}</span><span class="ss"> radians is </span><span class="sc">{</span>degrees<span class="sc">:.1f}</span><span class="ss"> degrees"</span>)  <span class="co"># Output: 1.571 radians is 90.0 degrees</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>degrees<span class="sc">}</span><span class="ss"> degrees is </span><span class="sc">{</span>radians<span class="sc">:.3f}</span><span class="ss"> radians"</span>)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>radians <span class="op">=</span> math.pi</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>degrees <span class="op">=</span> math.degrees(radians)</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>radians<span class="sc">:.3f}</span><span class="ss"> radians is </span><span class="sc">{</span>degrees<span class="sc">:.1f}</span><span class="ss"> degrees"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="writing-python-scripts" class="level2">
@@ -741,9 +737,67 @@ Sine of 90 degrees is: 1.0
 Natural logarithm of 10 is: 2.302585092994046
 Logarithm of 100 with base 10 is: 2.0</code></pre>
 </section>
+<section id="python-style-guide" class="level2">
+<h2 class="anchored" data-anchor-id="python-style-guide">Python Style Guide</h2>
+<blockquote class="blockquote">
+<p>Code is read far more often than it is written. — Guido van Rossum, creator of the Python programming language.</p>
+</blockquote>
+<p>Adhere to <a href="https://peps.python.org/pep-0008/">PEP 8</a> as the primary style guide. This document outlines the coding conventions for Python code in the core standard library of the main Python distribution.</p>
+<ul>
+<li><p>Employ descriptive names for variables and functions. Avoid abbreviations or single-letter names unless they are widely conventional (e.g., i as a loop index).</p></li>
+<li><p>Organize code with consistent sectioning and clear headers or separators to enhance readability.</p></li>
+<li><p>Restrict line length to a maximum of 79 characters to ensure compatibility with print media and prevent horizontal overflow.</p></li>
+<li><p>Include meaningful inline comments where necessary to explain the purpose and intent of the code, particularly for complex logic.</p></li>
+</ul>
+<p>Many modern Python projects enhance PEP 8 compliance by employing <a href="https://black.readthedocs.io/en/stable/">Black</a>, the uncompromising code formatter. Black applies a deterministic style that is a strict subset of PEP 8, with a default line length of 88 characters for improved readability on contemporary displays. It can be configured to use 79 characters if required.</p>
+<p>The following scripts illustrate the earlier examples in accordance with PEP 8 guidelines:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co">Degrees-Radians Conversion</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Conversion from degrees to radians</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>input_degrees <span class="op">=</span> <span class="fl">180.0</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>converted_radians <span class="op">=</span> math.radians(input_degrees)</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Conversion from radians to degrees</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>input_radians <span class="op">=</span> math.pi</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>converted_degrees <span class="op">=</span> math.degrees(input_radians)</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Degrees to Radians Conversion:"</span>)</span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>input_degrees<span class="sc">:.0f}</span><span class="ss"> degrees = </span><span class="sc">{</span>converted_radians<span class="sc">:.3f}</span><span class="ss"> radians"</span>)</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Radians to Degrees Conversion:"</span>)</span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>input_radians<span class="sc">:.3f}</span><span class="ss"> radians = </span><span class="sc">{</span>converted_degrees<span class="sc">:.1f}</span><span class="ss"> degrees"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="co">Math Module Examples</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co">Demonstrates common functions from the Python math module:</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="co">square root, pi constant, sine, natural logarithm, </span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="co">and base-10 logarithm.</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute and display mathematical operations</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>sqrt_result <span class="op">=</span> math.sqrt(<span class="dv">16</span>)</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>pi_value <span class="op">=</span> math.pi</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>sine_90_degrees <span class="op">=</span> math.sin(math.pi <span class="op">/</span> <span class="dv">2</span>)  <span class="co"># 90 degrees = π/2 radians</span></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>natural_log_10 <span class="op">=</span> math.log(<span class="dv">10</span>)</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>log_base10_100 <span class="op">=</span> math.log(<span class="dv">100</span>, <span class="dv">10</span>)</span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results with clear descriptions</span></span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Square root of 16 is:"</span>, sqrt_result)</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Value of pi is:"</span>, pi_value)</span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sine of 90 degrees is:"</span>, sine_90_degrees)</span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Natural logarithm of 10 is:"</span>, natural_log_10)</span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Logarithm of 100 with base 10 is:"</span>, log_base10_100)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>You’ve now learned Python basics: syntax, variables, control flow, functions, and the math module. Practice all examples instantly at <a href="https://python-fiddle.com/">python-fiddle.com</a>.</p>
+<p>You have now learned Python basics: syntax, variables, control flow, functions, and the math module. Practice all examples instantly at <a href="https://python-fiddle.com/">python-fiddle.com</a>.</p>
 
 
 </section>

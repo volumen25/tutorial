@@ -1,0 +1,6 @@
+# Attributions {.unnumbered}
+
+This book incorporates figures from the following sources:
+
+-   Figures in the @sec-hydrostatics and @sec-hydrodynamics chapters are sourced from the [Applied Fluid Mechanics Online Textbook](https://kdusling.github.io/teaching/Applied-Fluids/).
+-   Figures in the @sec-formulae section, including centroids and second moments of area, are adapted from the Wikipedia pages on [Centroids](https://en.wikipedia.org/wiki/List_of_centroids) and [Second moments of area](https://en.wikipedia.org/wiki/List_of_second_moments_of_area).

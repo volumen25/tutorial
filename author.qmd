@@ -1,0 +1,9 @@
+# Author {.unnumbered}
+
+Serhat Beyenir is an instructor at BCIT’s Marine Campus, where he teaches Thermodynamics, Applied Mechanics, Propulsion Engines, and Propulsion Plant Simulator courses.
+
+His interest in computing dates back to high school, when he taught himself BASIC to plot trigonometric functions on an Amstrad 64K microcomputer. He completed programming coursework at the university level but is largely self-taught in the use of Unix and Linux systems, later adopting macOS for personal projects in 2007. While teaching Power Engineering, he employed MATLAB for engineering computations and compiled his instructional materials into an open textbook, *A Brief Introduction to Engineering Computation with MATLAB*, published in 2011.
+
+In February 2025, he attended a Python course at the West Vancouver Memorial Library and subsequently began using Python in Thermodynamics and Applied Mechanics lecture materials, gradually incorporating computational examples into his teaching.
+
+Serhat holds a Class 1 Marine Engineer certification, a Master of Education in Distance Education, and a Bachelor of Science in Marine Engineering.

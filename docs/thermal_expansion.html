@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorial</title>
+<title>3&nbsp; Thermal Expansion – Tutorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,42 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -50,7 +65,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./study_guide.html" rel="next">
+<link href="./heat_transfer.html" rel="next">
+<link href="./heat_work.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -94,6 +110,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -268,7 +313,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./thermal_expansion.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Thermal Expansion</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -298,7 +343,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -316,32 +361,32 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01statics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statics</span></span></a>
+  <a href="./si_units.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">SI Units</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./kinematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Kinematics</span></span></a>
+  <a href="./heat_work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Heat and Work</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02dynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dynamics</span></span></a>
+  <a href="./thermal_expansion.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Thermal Expansion</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03hydrostatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hydrostatics</span></span></a>
+  <a href="./heat_transfer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Heat Transfer</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04hydrodynamics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Hydrodynamics</span></span></a>
+  <a href="./perfect_gases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Perfect Gases</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -389,7 +434,17 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#linear-expansion" id="toc-linear-expansion" class="nav-link active" data-scroll-target="#linear-expansion"><span class="header-section-number">3.1</span> Linear Expansion</a></li>
+  <li><a href="#superficial-expansion" id="toc-superficial-expansion" class="nav-link" data-scroll-target="#superficial-expansion"><span class="header-section-number">3.2</span> Superficial Expansion</a></li>
+  <li><a href="#volumetric-expansion" id="toc-volumetric-expansion" class="nav-link" data-scroll-target="#volumetric-expansion"><span class="header-section-number">3.3</span> Volumetric Expansion</a></li>
+  <li><a href="#thermal-expansion-of-a-steel-pipeline" id="toc-thermal-expansion-of-a-steel-pipeline" class="nav-link" data-scroll-target="#thermal-expansion-of-a-steel-pipeline"><span class="header-section-number">3.4</span> Thermal Expansion of a Steel Pipeline</a>
+  <ul class="collapse">
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="header-section-number">3.4.1</span> Code</a></li>
+  </ul></li>
+  <li><a href="#thermal-expansion-of-a-brass-cube" id="toc-thermal-expansion-of-a-brass-cube" class="nav-link" data-scroll-target="#thermal-expansion-of-a-brass-cube"><span class="header-section-number">3.5</span> Thermal Expansion of a Brass Cube</a>
+  <ul class="collapse">
+  <li><a href="#code-1" id="toc-code-1" class="nav-link" data-scroll-target="#code-1"><span class="header-section-number">3.5.1</span> Code</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -399,8 +454,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorial</h1>
-<p class="subtitle lead">A Concise Introduction to Computational Tools</p>
+<h1 class="title"><span id="thermal_expansion" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Thermal Expansion</span></span></h1>
 </div>
 
 
@@ -417,40 +471,194 @@ div.csl-indent {
 </header>
 
 
+<p>Thermal expansion is the tendency of materials to change their shape, area, and volume in response to a change in temperature. When most substances are heated, their particles move more vigorously and tend to occupy more space, leading to an increase in dimensions. Conversely, when substances are cooled, they generally contract. This phenomenon occurs in solids, liquids, and gases, although the degree and nature of expansion vary depending on the material’s state and properties.</p>
+<section id="linear-expansion" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="linear-expansion"><span class="header-section-number">3.1</span> Linear Expansion</h2>
+<p>This occurs along a specific dimension or direction, primarily in long, narrow objects (like rods or beams). When the temperature of a solid object increases, its length expands by an amount proportional to its original length and the temperature change. The equation for linear expansion is:</p>
+<p><span id="eq-linearexp"><span class="math display">\[
+\Delta L = \alpha L_0 \Delta T
+\tag{3.1}\]</span></span> where:</p>
+<ul>
+<li><p><span class="math inline">\(\Delta L\)</span> is the change in length,</p></li>
+<li><p><span class="math inline">\(\alpha\)</span> is the coefficient of linear expansion (unique to each material),</p></li>
+<li><p><span class="math inline">\(L_0\)</span> is the original length, and</p></li>
+<li><p><span class="math inline">\(\Delta T\)</span> is the temperature change.</p></li>
+</ul>
+</section>
+<section id="superficial-expansion" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="superficial-expansion"><span class="header-section-number">3.2</span> Superficial Expansion</h2>
+<p>Applicable to two-dimensional surfaces, such as sheets or plates. Here, both length and width expand, leading to an increase in surface area. The formula for area expansion is: <span id="eq-superficial-exp"><span class="math display">\[
+\Delta A = 2 \alpha A_0 \Delta T
+\tag{3.2}\]</span></span> where:</p>
+<ul>
+<li><span class="math inline">\(\Delta A\)</span> is the change in area,</li>
+<li><span class="math inline">\(A_0\)</span> is the initial area, and</li>
+<li><span class="math inline">\(\Delta T\)</span> is the temperature change.</li>
+</ul>
+</section>
+<section id="volumetric-expansion" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="volumetric-expansion"><span class="header-section-number">3.3</span> Volumetric Expansion</h2>
+<p>Relevant for three-dimensional objects (like solids, liquids, and gases). The volume of an object expands with temperature, especially in fluids where this effect is more pronounced. The formula is: <span id="eq-volumetric-exp"><span class="math display">\[
+\Delta V = \beta V_0 \Delta T
+\tag{3.3}\]</span></span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(\Delta V\)</span> is the change in volume,</li>
+<li><span class="math inline">\(\beta\)</span> is the coefficient of volumetric expansion, which is approximately three times the linear expansion coefficient for isotropic solids,</li>
+<li><span class="math inline">\(V_0\)</span> is the initial volume, and</li>
+<li><span class="math inline">\(\Delta T\)</span> is the temperature change.</li>
+</ul>
+</section>
+<section id="thermal-expansion-of-a-steel-pipeline" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="thermal-expansion-of-a-steel-pipeline"><span class="header-section-number">3.4</span> Thermal Expansion of a Steel Pipeline</h2>
+<p>A steel section of pipeline is <span class="math inline">\(75\ \mathrm{m}\)</span> long when out of service at an ambient temperature of <span class="math inline">\(20^\circ\mathrm{C}\)</span>. In service, it transports steam at <span class="math inline">\(203^\circ\mathrm{C}\)</span>. Assuming the pipe is free to expand, find its length at the operating temperature.<br>
+(The coefficient of linear expansion for steel is <span class="math inline">\(\alpha = 12\times10^{-6}\ /\!^\circ\mathrm{C}\)</span>.)</p>
+<p>Given:</p>
+<p><span class="math display">\[
+\begin{aligned}
+L_0 &amp;= 75\ \mathrm{m}, \\
+T_1 &amp;= 20^\circ\mathrm{C}, \\
+T_2 &amp;= 203^\circ\mathrm{C}, \\
+\alpha &amp;= 12\times10^{-6}\ /\!^\circ\mathrm{C}.
+\end{aligned}
+\]</span></p>
+<p>The temperature rise is:</p>
+<p><span class="math display">\[
+\Delta T = T_2 - T_1 = 203 - 20 = 183^\circ\mathrm{C}.
+\]</span></p>
+<p>For linear expansion:</p>
+<p><span class="math display">\[
+L = L_0 (1 + \alpha \Delta T).
+\]</span></p>
+<p>Substitute the values:</p>
+<p><span class="math display">\[
+\begin{aligned}
+L &amp;= 75 \left(1 + 12\times10^{-6} \times 183\right) \\
+  &amp;= 75 \left(1 + 0.002196\right) \\
+  &amp;= 75.1647\ \mathrm{m}.
+\end{aligned}
+\]</span></p>
+<p><strong>Final Answer</strong></p>
+<p><span class="math display">\[
+\boxed{L = 75.165\ \mathrm{m}}
+\]</span></p>
+<p><strong>Note:</strong> The pipe expands by:</p>
+<p><span class="math display">\[
+\Delta L = L - L_0 = 0.165\ \mathrm{m} = 165\ \mathrm{mm}.
+\]</span></p>
+<section id="code" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="code"><span class="header-section-number">3.4.1</span> Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Linear Expansion of a Steel Pipeline</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ------------------------------------</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   L0 = 75 m   (initial length)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   T1 = 20 °C  (ambient temperature)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   T2 = 203 °C (operating temperature)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   α  = 12 × 10⁻⁶ /°C (coefficient of linear expansion for steel)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Find:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#   Final length L at 203 °C.</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Given values</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>L0 <span class="op">=</span> <span class="fl">75.0</span>                 <span class="co"># m</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>T1 <span class="op">=</span> <span class="fl">20.0</span>                 <span class="co"># °C</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>T2 <span class="op">=</span> <span class="fl">203.0</span>                <span class="co"># °C</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="fl">12e-6</span>             <span class="co"># /°C</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperature change</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>delta_T <span class="op">=</span> T2 <span class="op">-</span> T1</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Final length using linear expansion formula</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> L0 <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> alpha <span class="op">*</span> delta_T)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Expansion amount</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>expansion <span class="op">=</span> L <span class="op">-</span> L0</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Initial Length (m): </span><span class="sc">{</span>L0<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Final Length (m):   </span><span class="sc">{</span>L<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Expansion (m):      </span><span class="sc">{</span>expansion<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="thermal-expansion-of-a-brass-cube" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="thermal-expansion-of-a-brass-cube"><span class="header-section-number">3.5</span> Thermal Expansion of a Brass Cube</h2>
+<p>If a solid brass cube measures <strong>50 mm × 50 mm × 50 mm</strong> at <strong>10°C</strong>, what volume will it occupy when heated to <strong>78°C</strong>?</p>
+<p>Coefficient of linear expansion for brass, <span class="math inline">\(\alpha = 18.4 \times 10^{-6}\,/^\circ \mathrm{C}\)</span>.</p>
+<p><strong>Step 1: Given Data</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+L_0 &amp;= 50\ \mathrm{mm} = 0.05\ \mathrm{m}, \\
+T_1 &amp;= 10^\circ \mathrm{C}, \\
+T_2 &amp;= 78^\circ \mathrm{C}, \\
+\Delta T &amp;= T_2 - T_1 = 68^\circ \mathrm{C}, \\
+\alpha &amp;= 18.4 \times 10^{-6}\,/^\circ \mathrm{C}.
+\end{aligned}
+\]</span></p>
+<p><strong>Step 2: Coefficient of Volumetric Expansion</strong></p>
+<p><span class="math display">\[
+\beta = 3\alpha = 3(18.4 \times 10^{-6}) = 55.2 \times 10^{-6}\,/^\circ \mathrm{C}.
+\]</span></p>
+<p><strong>Step 3: Initial and Final Volumes</strong></p>
+<p>Initial volume:</p>
+<p><span class="math display">\[
+V_0 = L_0^3 = (0.05)^3 = 0.000125\ \mathrm{m^3}.
+\]</span></p>
+<p>Expanded volume:</p>
+<p><span class="math display">\[
+V = V_0(1 + \beta \Delta T)
+\]</span></p>
+<p><span class="math display">\[
+V = 0.000125[1 + (55.2 \times 10^{-6})(68)].
+\]</span></p>
+<p><span class="math display">\[
+V = 0.000125(1 + 0.0037536) = 0.00012547\ \mathrm{m^3}.
+\]</span></p>
+<p><strong>Step 4: Final Answer</strong></p>
+<p><span class="math display">\[
+\boxed{V = 0.00012547\ \mathrm{m^3}}
+\]</span></p>
+<p><strong>Note:</strong> The multiplier from m³ to mm³ is 1 × 10⁹. The brass cube expands from <strong>125000 mm³</strong> to <strong>125469.20 mm³</strong> when heated from <strong>10°C</strong> to <strong>78°C</strong>.</p>
+<section id="code-1" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="code-1"><span class="header-section-number">3.5.1</span> Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Thermal Expansion of a Brass Cube</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># --------------------------------</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   L0 = 50 mm  (initial side length)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   T1 = 10 °C  (initial temperature)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   T2 = 78 °C  (final temperature)</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   α  = 18.4 × 10⁻⁶ /°C  (linear expansion coefficient for brass)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Find:</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">#   Final volume V at 78 °C (in mm³).</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Given values</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>L0 <span class="op">=</span> <span class="fl">50e-3</span>                <span class="co"># convert mm to m</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>T1 <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>T2 <span class="op">=</span> <span class="dv">78</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="fl">18.4e-6</span>           <span class="co"># /°C</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperature change</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>delta_T <span class="op">=</span> T2 <span class="op">-</span> T1</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Volumetric expansion coefficient</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>beta <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> alpha</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Initial and final volumes (in m³)</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>V0 <span class="op">=</span> L0 <span class="op">**</span> <span class="dv">3</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>V <span class="op">=</span> V0 <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> beta <span class="op">*</span> delta_T)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to mm³ for output (1 m³ = 1e9 mm³)</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>V0_mm3 <span class="op">=</span> V0 <span class="op">*</span> <span class="fl">1e9</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>V_mm3 <span class="op">=</span> V <span class="op">*</span> <span class="fl">1e9</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>delta_V <span class="op">=</span> V_mm3 <span class="op">-</span> V0_mm3</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Initial Volume (mm³): </span><span class="sc">{</span>V0_mm3<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Final Volume (mm³):   </span><span class="sc">{</span>V_mm3<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Increase in Volume (mm³): </span><span class="sc">{</span>delta_V<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1><p><img src="cover_qr.png" title="Tutorial" class="quarto-cover-image nolightbox img-fluid"></p>
-<p>A Concise Introduction to Computational Tools provides a series of tutorials derived from lecture notes, offering clear and focused guidance on essential topics. No prior programming experience is required.</p>
-<p>Students are expected to be comfortable with college-level mathematics and science and are strongly encouraged to consult reliable reference texts. For example, foundational and practical texts in mathematics, applied mechanics and computational tools, including <span class="citation" data-cites="bird2021">Bird (<a href="references.html#ref-bird2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="hannah1995">Hannah &amp; Hillier (<a href="references.html#ref-hannah1995" role="doc-biblioref">1995</a>)</span>, <span class="citation" data-cites="russell2021">Russell et al. (<a href="references.html#ref-russell2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="russell2022">(<a href="references.html#ref-russell2022" role="doc-biblioref">Russell et al., 2022</a>)</span>, <span class="citation" data-cites="bolton2021">Bolton (<a href="references.html#ref-bolton2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="shaw2017">Shaw (<a href="references.html#ref-shaw2017" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="sweigart2021">Sweigart (<a href="references.html#ref-sweigart2021" role="doc-biblioref">2021</a>)</span>, and <span class="citation" data-cites="sweigart2020">Sweigart (<a href="references.html#ref-sweigart2020" role="doc-biblioref">2020</a>)</span>.</p>
-<p>The tutorials also assume working familiarity with either macOS or Microsoft Windows. For best results, these materials should be used on a laptop or desktop computer rather than a tablet or smartphone.</p>
 
-
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
-<div id="ref-bird2021" class="csl-entry" role="listitem">
-Bird, J. O. (2021). <em>Bird’s engineering mathematics</em> (Ninth edition). Routledge.
-</div>
-<div id="ref-bolton2021" class="csl-entry" role="listitem">
-Bolton, W. (2021). <em>Engineering science</em> (Seventh edition). Routledge.
-</div>
-<div id="ref-hannah1995" class="csl-entry" role="listitem">
-Hannah, J., &amp; Hillier, M. J. (1995). <em>Applied mechanics</em> (3rd edition). Longman Pub Group.
-</div>
-<div id="ref-russell2022" class="csl-entry" role="listitem">
-Russell, P. A., Embleton, W., &amp; Jackson, L. (2022). <em>Applied thermodynamics for marine engineers</em> (6th edition). Reeds.
-</div>
-<div id="ref-russell2021" class="csl-entry" role="listitem">
-Russell, P. A., Jackson, L., &amp; Embleton, W. (2021). <em>Applied mechanics for marine engineers</em> (7th edition). Reeds.
-</div>
-<div id="ref-shaw2017" class="csl-entry" role="listitem">
-Shaw, Z. (2017). <em>Learn python 3 the hard way: A very simple introduction to the terrifyingly beautiful world of computers and code</em> (4th edition). Addison-Wesley Professional.
-</div>
-<div id="ref-sweigart2020" class="csl-entry" role="listitem">
-Sweigart, A. (2020). <em>Automate the boring stuff with python, 2nd edition: Practical programming for total beginners</em>. No Starch Press.
-</div>
-<div id="ref-sweigart2021" class="csl-entry" role="listitem">
-Sweigart, A. (2021). <em>Beyond the basic stuff with python: Best practices for writing clean code</em>. No Starch Press.
-</div>
-</div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -869,10 +1077,13 @@ Sweigart, A. (2021). <em>Beyond the basic stuff with python: Best practices for 
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./heat_work.html" class="pagination-link" aria-label="Heat and Work">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Heat and Work</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./study_guide.html" class="pagination-link" aria-label="Study Guide">
-        <span class="nav-page-text">Study Guide</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./heat_transfer.html" class="pagination-link" aria-label="Heat Transfer">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Heat Transfer</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

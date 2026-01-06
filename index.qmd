@@ -2,6 +2,6 @@
 
 A Concise Introduction to Computational Tools provides a series of tutorials derived from lecture notes, offering clear and focused guidance on essential topics. No prior programming experience is required.
 
-Students are expected to be comfortable with college-level mathematics and science and are strongly encouraged to consult reliable reference texts. The tutorials also assume working familiarity with either macOS or Microsoft Windows.
+Students are expected to be comfortable with college-level mathematics and science and are strongly encouraged to consult reliable reference texts. For example, foundational and practical texts in mathematics, applied mechanics and computational tools, including @bird2021, @hannah1995, @russell2021, [@russell2022], @bolton2021, @shaw2017, @sweigart2021, and @sweigart2020.
 
-For best results, these materials should be used on a laptop or desktop computer rather than a tablet or smartphone.
+The tutorials also assume working familiarity with either macOS or Microsoft Windows. For best results, these materials should be used on a laptop or desktop computer rather than a tablet or smartphone.
