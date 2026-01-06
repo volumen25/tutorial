@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7&nbsp; Ideal Cycles – Tutorial</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./script_template.html" rel="next">
+<link href="./ic_engines.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-14cbc709409b9607cfe384ca3dce8273.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ideal_cycles.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Ideal Cycles</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Tutorial</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./study_guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Study Guide</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorial_basic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Python Tutorial</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./si_units.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">SI Units</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./heat_work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Heat and Work</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./thermal_expansion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Thermal Expansion</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./heat_transfer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Heat Transfer</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./perfect_gases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Perfect Gases</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ic_engines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">IC Engines</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ideal_cycles.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Ideal Cycles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./script_template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Script Template</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unicode_math_symbols.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Unicode Math Symbols</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./greek_letters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Greek Letters</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#ideal-constant-volume-otto-cycle" id="toc-ideal-constant-volume-otto-cycle" class="nav-link active" data-scroll-target="#ideal-constant-volume-otto-cycle"><span class="header-section-number">7.1</span> Ideal Constant-Volume (Otto) Cycle</a>
+  <ul class="collapse">
+  <li><a href="#p-v-diagram-representation" id="toc-p-v-diagram-representation" class="nav-link" data-scroll-target="#p-v-diagram-representation"><span class="header-section-number">7.1.1</span> P-V Diagram Representation</a></li>
+  </ul></li>
+  <li><a href="#otto-cycle-example" id="toc-otto-cycle-example" class="nav-link" data-scroll-target="#otto-cycle-example"><span class="header-section-number">7.2</span> Otto Cycle Example</a>
+  <ul class="collapse">
+  <li><a href="#theory-and-formulas" id="toc-theory-and-formulas" class="nav-link" data-scroll-target="#theory-and-formulas"><span class="header-section-number">7.2.1</span> Theory and formulas</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="header-section-number">7.2.2</span> Code</a></li>
+  <li><a href="#using-actual-volume-ratios-instead-of-direct-r" id="toc-using-actual-volume-ratios-instead-of-direct-r" class="nav-link" data-scroll-target="#using-actual-volume-ratios-instead-of-direct-r"><span class="header-section-number">7.2.3</span> Using Actual Volume Ratios Instead of Direct r</a></li>
+  <li><a href="#given" id="toc-given" class="nav-link" data-scroll-target="#given"><span class="header-section-number">7.2.4</span> Given</a></li>
+  <li><a href="#volume-explicit-relations" id="toc-volume-explicit-relations" class="nav-link" data-scroll-target="#volume-explicit-relations"><span class="header-section-number">7.2.5</span> Volume-explicit relations</a></li>
+  <li><a href="#code-1" id="toc-code-1" class="nav-link" data-scroll-target="#code-1"><span class="header-section-number">7.2.6</span> Code</a></li>
+  </ul></li>
+  <li><a href="#ideal-constant-pressure-diesel-cycle" id="toc-ideal-constant-pressure-diesel-cycle" class="nav-link" data-scroll-target="#ideal-constant-pressure-diesel-cycle"><span class="header-section-number">7.3</span> Ideal Constant-Pressure (Diesel) Cycle</a>
+  <ul class="collapse">
+  <li><a href="#p-v-diagram-representation-1" id="toc-p-v-diagram-representation-1" class="nav-link" data-scroll-target="#p-v-diagram-representation-1"><span class="header-section-number">7.3.1</span> P-V Diagram Representation</a></li>
+  </ul></li>
+  <li><a href="#diesel-cycle-example" id="toc-diesel-cycle-example" class="nav-link" data-scroll-target="#diesel-cycle-example"><span class="header-section-number">7.4</span> Diesel Cycle Example</a>
+  <ul class="collapse">
+  <li><a href="#code-2" id="toc-code-2" class="nav-link" data-scroll-target="#code-2"><span class="header-section-number">7.4.1</span> Code</a></li>
+  </ul></li>
+  <li><a href="#dual-combustion-cycle" id="toc-dual-combustion-cycle" class="nav-link" data-scroll-target="#dual-combustion-cycle"><span class="header-section-number">7.5</span> Dual Combustion Cycle</a>
+  <ul class="collapse">
+  <li><a href="#efficiency-of-the-dual-combustion-cycle" id="toc-efficiency-of-the-dual-combustion-cycle" class="nav-link" data-scroll-target="#efficiency-of-the-dual-combustion-cycle"><span class="header-section-number">7.5.1</span> Efficiency of the Dual Combustion Cycle</a></li>
+  <li><a href="#p-v-diagram-representation-2" id="toc-p-v-diagram-representation-2" class="nav-link" data-scroll-target="#p-v-diagram-representation-2"><span class="header-section-number">7.5.2</span> P-V Diagram Representation</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="ideal_cycles" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Ideal Cycles</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="ideal-constant-volume-otto-cycle" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="ideal-constant-volume-otto-cycle"><span class="header-section-number">7.1</span> Ideal Constant-Volume (Otto) Cycle</h2>
+<p>The Ideal Constant-Volume (Otto) Cycle, commonly referred to as the Otto cycle, is a thermodynamic cycle that models the operation of a spark-ignition internal combustion engine, such as those used in gasoline-powered automobiles. It is an idealized model that assumes the working fluid is an ideal gas and describes the sequence of processes that convert thermal energy into mechanical work.</p>
+<section id="p-v-diagram-representation" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="p-v-diagram-representation"><span class="header-section-number">7.1.1</span> P-V Diagram Representation</h3>
+<p>The Otto cycle on a P-V diagram forms a closed loop:</p>
+<ul>
+<li><p>1-2: Steep upward curve (pressure increases, volume decreases, adiabatic compression).</p></li>
+<li><p>2-3: Vertical line upward (pressure and temperature increase, volume constant, heat addition).</p></li>
+<li><p>3-4: Downward curve (pressure decreases, volume increases, adiabatic expansion).</p></li>
+<li><p>4-1: Vertical line downward (pressure and temperature decrease, volume constant, heat rejection).</p></li>
+</ul>
+</section>
+</section>
+<section id="otto-cycle-example" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="otto-cycle-example"><span class="header-section-number">7.2</span> Otto Cycle Example</h2>
+<p>In an ideal constant-volume (Otto) cycle the temperature at the beginning of compression is <span class="math inline">\(50^\circ\text{C}\)</span>. The volumetric compression ratio is <span class="math inline">\(r=5:1\)</span>. The heat supplied during the cycle is <span class="math inline">\(q_{in}=930&nbsp;\text{ kJ/kg}\)</span> of working fluid. Take <span class="math inline">\(\gamma = 1.4\)</span> and <span class="math inline">\(c_v = 0.717\ \text{kJ/kg·K}\)</span>.</p>
+<p>Calculate:</p>
+<p>A. The maximum temperature attained in the cycle.<br>
+B. The work done during the cycle per kg of working fluid.<br>
+C. The ideal thermal efficiency of the cycle.</p>
+<section id="theory-and-formulas" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="theory-and-formulas"><span class="header-section-number">7.2.1</span> Theory and formulas</h3>
+<p>For an ideal Otto cycle (constant-volume heat addition) the relevant steps and formulas are:</p>
+<ol type="1">
+<li><p>Isentropic compression <span class="math inline">\(1 \to 2\)</span>: <span class="math display">\[
+T_2 = T_1\, r^{\gamma-1}
+\]</span></p></li>
+<li><p>Constant-volume heat addition <span class="math inline">\(2 \to 3\)</span>: <span class="math display">\[
+q_{in} = c_v (T_3 - T_2) \quad\Rightarrow\quad T_3 = T_2 + \frac{q_{in}}{c_v}
+\]</span></p></li>
+<li><p>Isentropic expansion <span class="math inline">\(3 \to 4\)</span>: <span class="math display">\[
+T_4 = T_3\, r^{1-\gamma}
+\]</span></p></li>
+<li><p>Heat rejected: <span class="math display">\[
+q_{out} = c_v (T_4 - T_1)
+\]</span></p></li>
+<li><p>Net work per unit mass: <span class="math display">\[
+w = q_{in} - q_{out}
+\]</span></p></li>
+<li><p>Thermal efficiency: <span class="math display">\[
+\eta = \frac{w}{q_{in}} = 1 - \frac{q_{out}}{q_{in}}
+\]</span></p></li>
+</ol>
+<p>(For the ideal Otto cycle the formula reduces to the well-known expression <span class="math inline">\(\eta = 1 - r^{1-\gamma}\)</span>, which provides a check.)</p>
+</section>
+<section id="code" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="code"><span class="header-section-number">7.2.2</span> Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Otto-cycle calculation (per kg)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="fl">5.0</span>             <span class="co"># compression ratio</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>gamma <span class="op">=</span> <span class="fl">1.4</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>cv <span class="op">=</span> <span class="fl">0.717</span>          <span class="co"># kJ/kg·K</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>T1_C <span class="op">=</span> <span class="fl">50.0</span>         <span class="co"># °C</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>q_in <span class="op">=</span> <span class="fl">930.0</span>        <span class="co"># kJ/kg</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Conversions</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>T1 <span class="op">=</span> T1_C <span class="op">+</span> <span class="dv">273</span>  <span class="co"># K</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: T2 (after isentropic compression)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>T2 <span class="op">=</span> T1 <span class="op">*</span> r<span class="op">**</span>(gamma <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: T3 (after constant-volume heat addition) -&gt; Tmax</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>T3 <span class="op">=</span> T2 <span class="op">+</span> q_in <span class="op">/</span> cv</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: T4 (after isentropic expansion)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>T4 <span class="op">=</span> T3 <span class="op">*</span> r<span class="op">**</span>(<span class="dv">1</span> <span class="op">-</span> gamma)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Heat rejected</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>q_out <span class="op">=</span> cv <span class="op">*</span> (T4 <span class="op">-</span> T1)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Net work per kg</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>w_net <span class="op">=</span> q_in <span class="op">-</span> q_out</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Efficiency</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>eta <span class="op">=</span> w_net <span class="op">/</span> q_in</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T1 = </span><span class="sc">{</span>T1<span class="sc">:.2f}</span><span class="ss"> K (</span><span class="sc">{</span>T1 <span class="op">-</span> <span class="dv">273</span><span class="sc">:.2f}</span><span class="ss"> °C)"</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T2 = </span><span class="sc">{</span>T2<span class="sc">:.2f}</span><span class="ss"> K (</span><span class="sc">{</span>T2 <span class="op">-</span> <span class="dv">273</span><span class="sc">:.2f}</span><span class="ss"> °C)"</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T3 = </span><span class="sc">{</span>T3<span class="sc">:.2f}</span><span class="ss"> K (</span><span class="sc">{</span>T3 <span class="op">-</span> <span class="dv">273</span><span class="sc">:.2f}</span><span class="ss"> °C)  &lt;-- Tmax"</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T4 = </span><span class="sc">{</span>T4<span class="sc">:.2f}</span><span class="ss"> K (</span><span class="sc">{</span>T4 <span class="op">-</span> <span class="dv">273</span><span class="sc">:.2f}</span><span class="ss"> °C)"</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"q_in = </span><span class="sc">{</span>q_in<span class="sc">:.2f}</span><span class="ss"> kJ/kg"</span>)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"q_out = </span><span class="sc">{</span>q_out<span class="sc">:.2f}</span><span class="ss"> kJ/kg"</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"w_net = </span><span class="sc">{</span>w_net<span class="sc">:.2f}</span><span class="ss"> kJ/kg"</span>)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"efficiency = </span><span class="sc">{</span>eta<span class="op">*</span><span class="dv">100</span><span class="sc">:.2f}</span><span class="ss"> %"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="using-actual-volume-ratios-instead-of-direct-r" class="level3" data-number="7.2.3">
+<h3 data-number="7.2.3" class="anchored" data-anchor-id="using-actual-volume-ratios-instead-of-direct-r"><span class="header-section-number">7.2.3</span> Using Actual Volume Ratios Instead of Direct r</h3>
+<p>In the ideal Otto cycle we have written: <span class="math display">\[
+T_2 = T_1\, r^{\gamma-1},
+\]</span></p>
+<p>with <span class="math inline">\(r=V_1/V_2\)</span>. Here we make the volume-dependence explicit using <span class="math inline">\(V_1\)</span> and <span class="math inline">\(V_2\)</span>.</p>
+</section>
+<section id="given" class="level3" data-number="7.2.4">
+<h3 data-number="7.2.4" class="anchored" data-anchor-id="given"><span class="header-section-number">7.2.4</span> Given</h3>
+<ul>
+<li><p><span class="math inline">\(T_1 = 50^\circ\text{C} = 323\ \text{K}\)</span></p></li>
+<li><p>Volumetric compression ratio <span class="math inline">\(r = \dfrac{V_1}{V_2} = 5\)</span> (we’ll set <span class="math inline">\(V_1=5,\ V_2=1\)</span> so <span class="math inline">\(V_1/V_2=5\)</span></p></li>
+<li><p>Heat supplied <span class="math inline">\(q_{in} = 930\ \text{kJ/kg}\)</span></p></li>
+<li><p><span class="math inline">\(\gamma = 1.4,\ c_v = 0.717\ \text{kJ/kg·K}\)</span></p></li>
+</ul>
+</section>
+<section id="volume-explicit-relations" class="level3" data-number="7.2.5">
+<h3 data-number="7.2.5" class="anchored" data-anchor-id="volume-explicit-relations"><span class="header-section-number">7.2.5</span> Volume-explicit relations</h3>
+<p>Isentropic compression (1) (using volumes): <span class="math display">\[
+\frac{T_2}{T_1} = \left(\frac{V_1}{V_2}\right)^{\gamma-1}
+\quad\Rightarrow\quad
+T_2 = T_1\left(\frac{V_1}{V_2}\right)^{\gamma-1}.
+\]</span></p>
+<p>Constant-volume heat addition (2): <span class="math display">\[
+T_3 = T_2 + \frac{q_{in}}{c_v}.
+\]</span></p>
+<p>Isentropic expansion (3) (volume ratio inverted): <span class="math display">\[
+\frac{T_4}{T_3} = \left(\frac{V_2}{V_1}\right)^{\gamma-1}
+\quad\Rightarrow\quad
+T_4 = T_3\left(\frac{V_2}{V_1}\right)^{\gamma-1}.
+\]</span></p>
+<p>Heat rejected: <span class="math display">\[
+q_{out} = c_v (T_4 - T_1),
+\]</span></p>
+<p>Net work and efficiency: <span class="math display">\[
+w = q_{in} - q_{out},\qquad \eta = \frac{w}{q_{in}}.
+\]</span></p>
+</section>
+<section id="code-1" class="level3" data-number="7.2.6">
+<h3 data-number="7.2.6" class="anchored" data-anchor-id="code-1"><span class="header-section-number">7.2.6</span> Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Otto-cycle calculation using explicit volumes (per kg)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>V1 <span class="op">=</span> <span class="fl">5.0</span>        <span class="co"># arbitrary volume units (e.g. litres) at start of compression (BDC)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>V2 <span class="op">=</span> <span class="fl">1.0</span>        <span class="co"># arbitrary volume units at end of compression (TDC)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>gamma <span class="op">=</span> <span class="fl">1.4</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>cv <span class="op">=</span> <span class="fl">0.717</span>      <span class="co"># kJ/kg·K</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>T1_C <span class="op">=</span> <span class="fl">50.0</span>     <span class="co"># °C</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>q_in <span class="op">=</span> <span class="fl">930.0</span>    <span class="co"># kJ/kg</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Conversions</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>T1 <span class="op">=</span> T1_C <span class="op">+</span> <span class="dv">273</span>  <span class="co"># K</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Isentropic compression using volume ratio V1/V2</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>T2 <span class="op">=</span> T1 <span class="op">*</span> (V1 <span class="op">/</span> V2)<span class="op">**</span>(gamma <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Constant-volume heat addition</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>T3 <span class="op">=</span> T2 <span class="op">+</span> q_in <span class="op">/</span> cv</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Isentropic expansion using inverted volume ratio V2/V1</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>T4 <span class="op">=</span> T3 <span class="op">*</span> (V2 <span class="op">/</span> V1)<span class="op">**</span>(gamma <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Heat rejected, net work and efficiency</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>q_out <span class="op">=</span> cv <span class="op">*</span> (T4 <span class="op">-</span> T1)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>w_net <span class="op">=</span> q_in <span class="op">-</span> q_out</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>eta <span class="op">=</span> w_net <span class="op">/</span> q_in</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--- Inputs ---"</span>)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"V1 = </span><span class="sc">{</span>V1<span class="sc">:.3f}</span><span class="ss"> (units), V2 = </span><span class="sc">{</span>V2<span class="sc">:.3f}</span><span class="ss"> (units)  --&gt; V1/V2 = </span><span class="sc">{</span>V1<span class="op">/</span>V2<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T1 = </span><span class="sc">{</span>T1<span class="sc">:.2f}</span><span class="ss"> K (</span><span class="sc">{</span>T1<span class="op">-</span><span class="dv">273</span><span class="sc">:.2f}</span><span class="ss"> °C)"</span>)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--- Results ---"</span>)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T2 = </span><span class="sc">{</span>T2<span class="sc">:.2f}</span><span class="ss"> K (</span><span class="sc">{</span>T2<span class="op">-</span><span class="dv">273</span><span class="sc">:.2f}</span><span class="ss"> °C)"</span>)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T3 = </span><span class="sc">{</span>T3<span class="sc">:.2f}</span><span class="ss"> K (</span><span class="sc">{</span>T3<span class="op">-</span><span class="dv">273</span><span class="sc">:.2f}</span><span class="ss"> °C)  &lt;-- Tmax"</span>)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T4 = </span><span class="sc">{</span>T4<span class="sc">:.2f}</span><span class="ss"> K (</span><span class="sc">{</span>T4<span class="op">-</span><span class="dv">273</span><span class="sc">:.2f}</span><span class="ss"> °C)"</span>)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"q_in = </span><span class="sc">{</span>q_in<span class="sc">:.2f}</span><span class="ss"> kJ/kg"</span>)</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"q_out = </span><span class="sc">{</span>q_out<span class="sc">:.2f}</span><span class="ss"> kJ/kg"</span>)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"w_net = </span><span class="sc">{</span>w_net<span class="sc">:.2f}</span><span class="ss"> kJ/kg"</span>)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"efficiency = </span><span class="sc">{</span>eta<span class="op">*</span><span class="dv">100</span><span class="sc">:.2f}</span><span class="ss"> %"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="ideal-constant-pressure-diesel-cycle" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="ideal-constant-pressure-diesel-cycle"><span class="header-section-number">7.3</span> Ideal Constant-Pressure (Diesel) Cycle</h2>
+<p>The Diesel cycle is a thermodynamic model of a compression-ignition engine, like those in marine diesel engines. Unlike the Otto cycle (constant-volume heat addition), the Diesel cycle assumes heat is added at constant pressure, reflecting the actual combustion in diesel engines.</p>
+<p>The Diesel cycle consists of four thermodynamic processes—two isentropic (adiabatic and reversible), one constant-pressure, and constant-volume that describe the idealized behavior of a gas undergoing compression, combustion, expansion, and exhaust in a compression-ignition engine.</p>
+<section id="p-v-diagram-representation-1" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="p-v-diagram-representation-1"><span class="header-section-number">7.3.1</span> P-V Diagram Representation</h3>
+<p>The Diesel cycle on a P-V diagram forms a closed loop:</p>
+<ul>
+<li><p>1-2: Steep upward curve (pressure increases, volume decreases, adiabatic compression).</p></li>
+<li><p>2-3: Horizontal line (pressure constant, volume increases, constant-pressure heat addition).</p></li>
+<li><p>3-4: Downward curve (pressure decreases, volume increases, adiabatic expansion).</p></li>
+<li><p>4-1: Vertical line downward (pressure and temperature decrease, volume constant, heat rejection).</p></li>
+</ul>
+</section>
+</section>
+<section id="diesel-cycle-example" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="diesel-cycle-example"><span class="header-section-number">7.4</span> Diesel Cycle Example</h2>
+<p><strong>Given</strong></p>
+<ul>
+<li><p><span class="math inline">\(T_1 = 50^\circ\text{C} = 323\ \text{K}\)</span></p></li>
+<li><p>Compression ratio <span class="math inline">\(r = \dfrac{V_1}{V_2} = 5\)</span></p></li>
+<li><p>Heat supplied <span class="math inline">\(q_{in} = 930\ \text{kJ/kg}\)</span> (added at constant pressure)</p></li>
+<li><p><span class="math inline">\(\gamma = 1.4,\quad c_v = 0.717\ \text{kJ/kg·K}\)</span></p></li>
+</ul>
+<p><strong>Notes</strong>: For constant-pressure heat addition (2→3), <span class="math display">\[
+q_{in} = c_p\,(T_3 - T_2),\qquad c_p = c_v \gamma.
+\]</span></p>
+<p>The cut-off (volume) ratio is <span class="math inline">\(\rho = \dfrac{V_3}{V_2} = \dfrac{T_3}{T_2}\)</span> because <span class="math inline">\(p_2 = p_3\)</span></p>
+<section id="code-2" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="code-2"><span class="header-section-number">7.4.1</span> Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Diesel-cycle calculation (per kg)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="fl">5.0</span>                <span class="co"># V1 / V2</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>gamma <span class="op">=</span> <span class="fl">1.4</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>cv <span class="op">=</span> <span class="fl">0.717</span>             <span class="co"># kJ/kg·K</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>cp <span class="op">=</span> cv <span class="op">*</span> gamma        <span class="co"># kJ/kg·K</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>T1 <span class="op">=</span> <span class="fl">323.0</span>             <span class="co"># K (simplified 273 + 50)</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>q_in <span class="op">=</span> <span class="fl">930.0</span>           <span class="co"># kJ/kg</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># State 2: isentropic compression 1-&gt;2</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>T2 <span class="op">=</span> T1 <span class="op">*</span> r<span class="op">**</span>(gamma <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># State 3: constant-pressure heat addition 2-&gt;3</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># q_in = cp * (T3 - T2)  -&gt;  T3 = T2 + q_in / cp</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>T3 <span class="op">=</span> T2 <span class="op">+</span> q_in <span class="op">/</span> cp</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Cut-off ratio (V3/V2) since p2 = p3</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> T3 <span class="op">/</span> T2</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co"># State 4: isentropic expansion 3-&gt;4 (V4 = V1)</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co"># T4 = T3 * (V3/V4)^(gamma-1) = T3 * (rho / r)^(gamma-1)</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>T4 <span class="op">=</span> T3 <span class="op">*</span> (rho <span class="op">/</span> r)<span class="op">**</span>(gamma <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Heat rejected, net work and efficiency</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>q_out <span class="op">=</span> cv <span class="op">*</span> (T4 <span class="op">-</span> T1)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>w_net <span class="op">=</span> q_in <span class="op">-</span> q_out</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>eta <span class="op">=</span> w_net <span class="op">/</span> q_in</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Pressures (normalized) using ideal-gas relation P ∝ T/V</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>P1 <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>P2 <span class="op">=</span> P1 <span class="op">*</span> (T2<span class="op">/</span>T1) <span class="op">*</span> (V1 <span class="op">:=</span> r) <span class="op">/</span> (V2 <span class="op">:=</span> <span class="fl">1.0</span>)   <span class="co"># V1=r, V2=1 chosen for explicitness</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>P3 <span class="op">=</span> P2</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>V3 <span class="op">=</span> rho <span class="op">*</span> V2</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>P4 <span class="op">=</span> (T4 <span class="op">/</span> T1) <span class="op">*</span> (V1 <span class="op">/</span> (V1)) <span class="op">*</span> P1  <span class="co"># alternatively compute via ideal gas: P4 = P3 * (T4/T3) * (V3/V4)</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="co"># More consistent P4 via ideal gas:</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>P4 <span class="op">=</span> P3 <span class="op">*</span> (T4 <span class="op">/</span> T3) <span class="op">*</span> (V3 <span class="op">/</span> V1)</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Curves for PV diagram</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>V_compression <span class="op">=</span> np.linspace(V1, V2, <span class="dv">200</span>)  <span class="co"># 1 -&gt; 2 (compression)</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>P_compression <span class="op">=</span> P1 <span class="op">*</span> (V1 <span class="op">/</span> V_compression)<span class="op">**</span>gamma</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>V_expansion <span class="op">=</span> np.linspace(V3, V1, <span class="dv">200</span>)    <span class="co"># 3 -&gt; 4 (expansion)</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>P_expansion <span class="op">=</span> P3 <span class="op">*</span> (V3 <span class="op">/</span> V_expansion)<span class="op">**</span>gamma</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">5</span>))</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>plt.plot(V_compression, P_compression, label<span class="op">=</span><span class="st">"Isentropic compression (1→2)"</span>)</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>plt.plot([V2, V3], [P2, P3], <span class="st">'r-'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">"Constant-pressure heat addition (2→3)"</span>)</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>plt.plot(V_expansion, P_expansion, label<span class="op">=</span><span class="st">"Isentropic expansion (3→4)"</span>)</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>plt.plot([V1, V1], [P4, P1], <span class="st">'r-'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">"Constant-volume heat rejection (4→1)"</span>)</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="co"># mark state points</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>plt.plot([V1, V2, V3, V1], [P1, P2, P3, P4], <span class="st">'ko'</span>)</span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (V,P,label) <span class="kw">in</span> [(V1,P1,<span class="st">"1"</span>), (V2,P2,<span class="st">"2"</span>), (V3,P3,<span class="st">"3"</span>), (V1,P4,<span class="st">"4"</span>)]:</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    plt.text(V, P<span class="op">*</span><span class="fl">1.02</span>, label, ha<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Volume (arbitrary units)"</span>)</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Pressure (arbitrary units)"</span>)</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Ideal Diesel Cycle — P–V Diagram (normalized)"</span>)</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Print numeric results</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"---- Diesel Cycle Results (per kg) ----"</span>)</span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T1 = </span><span class="sc">{</span>T1<span class="sc">:.2f}</span><span class="ss"> K"</span>)</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T2 = </span><span class="sc">{</span>T2<span class="sc">:.2f}</span><span class="ss"> K"</span>)</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T3 = </span><span class="sc">{</span>T3<span class="sc">:.2f}</span><span class="ss"> K  (Tmax after constant-pressure heat addition)"</span>)</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T4 = </span><span class="sc">{</span>T4<span class="sc">:.2f}</span><span class="ss"> K"</span>)</span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Cut-off ratio (rho = V3/V2) = </span><span class="sc">{</span>rho<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"q_in = </span><span class="sc">{</span>q_in<span class="sc">:.2f}</span><span class="ss"> kJ/kg"</span>)</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"q_out = </span><span class="sc">{</span>q_out<span class="sc">:.2f}</span><span class="ss"> kJ/kg"</span>)</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Net work w = </span><span class="sc">{</span>w_net<span class="sc">:.2f}</span><span class="ss"> kJ/kg"</span>)</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Ideal thermal efficiency = </span><span class="sc">{</span>eta<span class="op">*</span><span class="dv">100</span><span class="sc">:.2f}</span><span class="ss"> %"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="dual-combustion-cycle" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="dual-combustion-cycle"><span class="header-section-number">7.5</span> Dual Combustion Cycle</h2>
+<p>The Dual Combustion cycle, or mixed cycle, models engines that combine constant-volume (Otto cycle) and constant-pressure (Diesel cycle) combustion. Fuel burns in two phases: a fast initial phase at constant volume, then a slower phase at constant pressure, providing a realistic approximation of modern diesel engine combustion.</p>
+<section id="efficiency-of-the-dual-combustion-cycle" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="efficiency-of-the-dual-combustion-cycle"><span class="header-section-number">7.5.1</span> Efficiency of the Dual Combustion Cycle</h3>
+<p>The thermal efficiency (<span class="math inline">\(\eta\)</span>) of the ideal Dual Combustion Cycle is defined as the ratio of net work output to total heat input:</p>
+<p><span class="math inline">\(\eta = \frac{W_{\text{net}}}{Q_{\text{in}}} = \frac{Q_{\text{in,1}} + Q_{\text{in,2}} - Q_{\text{out}}}{Q_{\text{in,1}} + Q_{\text{in,2}}}\)</span></p>
+<p>Substituting the heat terms:</p>
+<p><span class="math inline">\(Q_{\text{in,1}} = m C_v (T_3 - T_2)\)</span></p>
+<p><span class="math inline">\(Q_{\text{in,2}} = m C_p (T_4 - T_3)\)</span></p>
+<p><span class="math inline">\(Q_{\text{out}} = m C_v (T_5 - T_1)\)</span></p>
+<p><span class="math inline">\(\eta = 1 - \frac{Q_{\text{out}}}{Q_{\text{in,1}} + Q_{\text{in,2}}} = 1 - \frac{C_v (T_5 - T_1)}{C_v (T_3 - T_2) + C_p (T_4 - T_3)}\)</span></p>
+<p><span id="eq-dualcombefficieny"><span class="math display">\[
+\eta = 1 - \frac{(T_5 - T_1)}{(T_3 - T_2) + \gamma (T_4 - T_3)}
+\tag{7.1}\]</span></span></p>
+</section>
+<section id="p-v-diagram-representation-2" class="level3" data-number="7.5.2">
+<h3 data-number="7.5.2" class="anchored" data-anchor-id="p-v-diagram-representation-2"><span class="header-section-number">7.5.2</span> P-V Diagram Representation</h3>
+<p>The Dual Combustion Cycle on a P-V diagram forms a closed loop:</p>
+<ul>
+<li><p>1-2: Steep upward curve (pressure increases, volume decreases, adiabatic compression).</p></li>
+<li><p>2-3: Vertical line upward (pressure and temperature increase, volume constant, heat addition).</p></li>
+<li><p>3-4: Horizontal line (pressure constant, volume increases, heat addition).</p></li>
+<li><p>4-5: Downward curve (pressure decreases, volume increases, adiabatic expansion).</p></li>
+<li><p>5-1: Vertical line downward (pressure and temperature decrease, volume constant, heat rejection).</p></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./ic_engines.html" class="pagination-link" aria-label="IC Engines">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">IC Engines</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./script_template.html" class="pagination-link" aria-label="Script Template">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Script Template</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org"> Quarto 1.8.26</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
