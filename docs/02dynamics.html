@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Dynamics – Tutorial</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./03hydrostatics.html" rel="next">
+<link href="./kinematics.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-14cbc709409b9607cfe384ca3dce8273.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02dynamics.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dynamics</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Tutorial</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./study_guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Study Guide</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorial_basic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Python Tutorial</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01statics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kinematics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Kinematics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02dynamics.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03hydrostatics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hydrostatics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04hydrodynamics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Hydrodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./colophon.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Colophon</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./greek_letters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Greek Letters</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#inertia" id="toc-inertia" class="nav-link active" data-scroll-target="#inertia"><span class="header-section-number">3.1</span> Inertia</a></li>
+  <li><a href="#momentum" id="toc-momentum" class="nav-link" data-scroll-target="#momentum"><span class="header-section-number">3.2</span> Momentum</a></li>
+  <li><a href="#newtons-laws-of-motion" id="toc-newtons-laws-of-motion" class="nav-link" data-scroll-target="#newtons-laws-of-motion"><span class="header-section-number">3.3</span> Newton’s Laws of Motion</a></li>
+  <li><a href="#linear-momentum" id="toc-linear-momentum" class="nav-link" data-scroll-target="#linear-momentum"><span class="header-section-number">3.4</span> Linear momentum</a>
+  <ul class="collapse">
+  <li><a href="#conservation-of-linear-momentum" id="toc-conservation-of-linear-momentum" class="nav-link" data-scroll-target="#conservation-of-linear-momentum"><span class="header-section-number">3.4.1</span> Conservation of Linear Momentum</a></li>
+  </ul></li>
+  <li><a href="#angular-momentum" id="toc-angular-momentum" class="nav-link" data-scroll-target="#angular-momentum"><span class="header-section-number">3.5</span> Angular Momentum</a></li>
+  <li><a href="#the-radius-of-gyration" id="toc-the-radius-of-gyration" class="nav-link" data-scroll-target="#the-radius-of-gyration"><span class="header-section-number">3.6</span> The Radius of Gyration</a></li>
+  <li><a href="#turning-moment" id="toc-turning-moment" class="nav-link" data-scroll-target="#turning-moment"><span class="header-section-number">3.7</span> Turning Moment</a></li>
+  <li><a href="#power-by-torque" id="toc-power-by-torque" class="nav-link" data-scroll-target="#power-by-torque"><span class="header-section-number">3.8</span> Power by Torque</a></li>
+  <li><a href="#kinetic-energy-of-rotation" id="toc-kinetic-energy-of-rotation" class="nav-link" data-scroll-target="#kinetic-energy-of-rotation"><span class="header-section-number">3.9</span> Kinetic Energy of Rotation</a></li>
+  <li><a href="#summary-of-key-terms" id="toc-summary-of-key-terms" class="nav-link" data-scroll-target="#summary-of-key-terms"><span class="header-section-number">4</span> Summary of Key Terms</a>
+  <ul class="collapse">
+  <li><a href="#inertia-1" id="toc-inertia-1" class="nav-link" data-scroll-target="#inertia-1"><span class="header-section-number">4.0.1</span> Inertia</a></li>
+  <li><a href="#linear-momentum-p" id="toc-linear-momentum-p" class="nav-link" data-scroll-target="#linear-momentum-p"><span class="header-section-number">4.0.2</span> Linear Momentum (p)</a></li>
+  <li><a href="#newtons-laws-of-motion-1" id="toc-newtons-laws-of-motion-1" class="nav-link" data-scroll-target="#newtons-laws-of-motion-1"><span class="header-section-number">4.0.3</span> Newton’s Laws of Motion</a></li>
+  <li><a href="#conservation-of-linear-momentum-1" id="toc-conservation-of-linear-momentum-1" class="nav-link" data-scroll-target="#conservation-of-linear-momentum-1"><span class="header-section-number">4.0.4</span> Conservation of Linear Momentum</a></li>
+  <li><a href="#angular-momentum-1" id="toc-angular-momentum-1" class="nav-link" data-scroll-target="#angular-momentum-1"><span class="header-section-number">4.0.5</span> Angular Momentum</a></li>
+  <li><a href="#radius-of-gyration-k" id="toc-radius-of-gyration-k" class="nav-link" data-scroll-target="#radius-of-gyration-k"><span class="header-section-number">4.0.6</span> Radius of Gyration (k)</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="dynamics" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dynamics</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Dynamics is the branch of mechanics that studies the motion of bodies under the action of forces. This chapter examines situations where forces produce acceleration, and it presents methods for analyzing the resulting motion, including the application of Newton’s laws, energy principles, and momentum conservation.</p>
+<section id="inertia" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="inertia"><span class="header-section-number">3.1</span> Inertia</h2>
+<p>Inertia is the property of a body that resists any change in its state of motion and is directly proportional to its mass. It can be understood as a form of “sluggishness” inherent to matter. For an object at rest, a net force is required to set it in motion; the greater the mass, the greater the force needed. Similarly, if an object is already moving, a net force is required to change its speed or direction, and the magnitude of this force is again proportional to the mass.</p>
+<p>The term “inertia” is also used in structural mechanics to describe the resistance of a beam’s cross-section to bending, quantified by the second moment of area (see lecture notes on Second Moments).</p>
+</section>
+<section id="momentum" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="momentum"><span class="header-section-number">3.2</span> Momentum</h2>
+<p>Momentum is the product of an object’s mass and its velocity and quantifies the amount of motion a moving body possesses. This concept is particularly important when considering a large vessel approaching a dock. Once the vessel is underway, its considerable momentum means that a substantial force, applied over sufficient time, is required to bring it to a stop or significantly alter its course. Without such intervention, the vessel will not stop quickly on its own and may collide with the dock.</p>
+</section>
+<section id="newtons-laws-of-motion" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="newtons-laws-of-motion"><span class="header-section-number">3.3</span> Newton’s Laws of Motion</h2>
+<ol type="1">
+<li><p><strong>First Law (Law of Inertia)</strong>:<br>
+An object remains at rest, or in uniform motion in a straight line, unless acted upon by a net external force.<br>
+<span class="math display">\[
+\Sigma F = 0 \implies v = \text{constant}
+\]</span></p></li>
+<li><p><strong>Second Law (Law of Acceleration)</strong>:<br>
+The acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass.<br>
+<span class="math display">\[
+\vec{F} = m \vec{a}
+\]</span></p></li>
+<li><p><strong>Third Law (Action-Reaction Law)</strong>:<br>
+For every action, there is an equal and opposite reaction.<br>
+<span class="math display">\[
+\vec{F}_{\text{action}} = -\vec{F}_{\text{reaction}}
+\]</span></p></li>
+</ol>
+<div id="exm-3-1" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3.1</strong></span> Find the accelerating force required to increase the velocity of a body which has a mass of 20 kg from 30 m/s to 70 m/s in 4 s.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">20</span>           <span class="co"># mass in kg</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> <span class="dv">30</span>           <span class="co"># initial velocity in m/s</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="dv">70</span>           <span class="co"># final velocity in m/s</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> <span class="dv">4</span>            <span class="co"># time in seconds</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate acceleration</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> (v <span class="op">-</span> u) <span class="op">/</span> t</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate force</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>F <span class="op">=</span> m <span class="op">*</span> a</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Acceleration: </span><span class="sc">{</span>a<span class="sc">:.2f}</span><span class="ss"> m/s²"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Accelerating force: </span><span class="sc">{</span>F<span class="sc">:.2f}</span><span class="ss"> N"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="exm-3-2" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3.2</strong></span> A lift is supported by a steel wire rope, the total mass of the lift and contents is 750 kg. Find the tension in the wire rope, in newtons, when the lift is (i) moving at constant velocity, (ii) moving upwards and accelerating at 1.2 m/s<sup>2</sup>, (iii) moving upwards and retarding at 1.2 m/s<sup>2</sup></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">750</span>          <span class="co"># mass in kg</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span>         <span class="co"># gravitational acceleration in m/s^2</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Accelerations for each case</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>a_constant <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>a_up_accel <span class="op">=</span> <span class="fl">1.2</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>a_up_decel <span class="op">=</span> <span class="op">-</span><span class="fl">1.2</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Tension calculations</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>T_constant <span class="op">=</span> m <span class="op">*</span> (g <span class="op">+</span> a_constant)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>T_up_accel <span class="op">=</span> m <span class="op">*</span> (g <span class="op">+</span> a_up_accel)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>T_up_decel <span class="op">=</span> m <span class="op">*</span> (g <span class="op">+</span> a_up_decel)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tension at constant velocity: </span><span class="sc">{</span>T_constant<span class="sc">:.4f}</span><span class="ss"> N"</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tension during upward acceleration: </span><span class="sc">{</span>T_up_accel<span class="sc">:.4f}</span><span class="ss"> N"</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tension during upward deceleration: </span><span class="sc">{</span>T_up_decel<span class="sc">:.4f}</span><span class="ss"> N"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="linear-momentum" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="linear-momentum"><span class="header-section-number">3.4</span> Linear momentum</h2>
+<p>Linear momentum is a fundamental concept in physics that quantifies the motion of an object. It is defined as the product of the object’s mass and its velocity. Because momentum is a vector quantity, it possesses both magnitude and direction.</p>
+<p><span class="math display">\[
+Linear\ momentum = m \vec{v}
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p>Linear momentum is in kg·m/s.</p></li>
+<li><p><span class="math inline">\(m\)</span> is the mass of the object in kilograms.</p></li>
+<li><p><span class="math inline">\(\vec{v}\)</span> is the velocity of the object in meters per second.</p></li>
+</ul>
+<section id="conservation-of-linear-momentum" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="conservation-of-linear-momentum"><span class="header-section-number">3.4.1</span> Conservation of Linear Momentum</h3>
+<p>The law of conservation of linear momentum states that, in a closed system with no external forces (or when the net external force is zero), the total linear momentum remains constant over time. This principle is particularly evident in collisions between two bodies. During a collision, the force exerted by the first body on the second is equal in magnitude and opposite in direction to the force exerted by the second on the first (Newton’s third law). These equal and opposite forces act for the same duration, producing changes in momentum that are equal in magnitude but opposite in direction. Consequently, the momentum gained by one body exactly equals the momentum lost by the other. Therefore, the total momentum of the system before the collision is equal to the total momentum after the collision.</p>
+<p>In the absence of external forces, linear momentum is neither created nor destroyed; it is conserved. This is known as the law of conservation of linear momentum.</p>
+<div id="exm-3-5" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3.3</strong></span> A hand hammer with a head mass of 0.8 kg strikes a chisel at 9 m/s and comes to rest in 1/250 seconds. Calculate the average force exerted during the blow.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="fl">0.8</span>               <span class="co"># kg</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> <span class="dv">9</span>                 <span class="co"># m/s (initial velocity)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="dv">0</span>                 <span class="co"># m/s (final velocity)</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="dv">250</span>             <span class="co"># s (time to come to rest)</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Change in momentum</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>delta_p <span class="op">=</span> m <span class="op">*</span> (v <span class="op">-</span> u)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Average force</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>F_avg <span class="op">=</span> delta_p <span class="op">/</span> t</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Average force during the blow: </span><span class="sc">{</span>F_avg<span class="sc">:.4f}</span><span class="ss"> N"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="exm-3-6" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3.4</strong></span> A jet of fresh water, 20 mm in diameter, emerges horizontally from a nozzle at a speed of 21 m/s and strikes a stationary vertical plate normally. Assuming no splashback (i.e., the water comes to rest upon impact with no velocity component normal to the plate after striking), calculate: (a) the mass flow rate of water leaving the nozzle (in kg/s), and (b) the force exerted by the jet on the plate. The density of fresh water is 1000 kg/m³.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="fl">0.02</span>          <span class="co"># diameter in meters</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="dv">21</span>            <span class="co"># jet speed in m/s</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="dv">1000</span>        <span class="co"># density of water in kg/m^3</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Mass flow rate</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> math.pi <span class="op">*</span> (d<span class="op">**</span><span class="dv">2</span>) <span class="op">/</span> <span class="dv">4</span>        <span class="co"># cross-sectional area</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>v_dot <span class="op">=</span> A <span class="op">*</span> v                   <span class="co"># volumetric flow rate</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>m_dot <span class="op">=</span> rho <span class="op">*</span> v_dot             <span class="co"># mass flow rate</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Force on the plate</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>F <span class="op">=</span> m_dot <span class="op">*</span> v                   <span class="co"># momentum change</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Mass flow rate (kg/s): </span><span class="sc">{</span>m_dot<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force on plate (N): </span><span class="sc">{</span>F<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="angular-momentum" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="angular-momentum"><span class="header-section-number">3.5</span> Angular Momentum</h2>
+<p>Angular momentum is the moment of linear momentum about a chosen point or axis. For a single particle, it is given by the cross product of its position vector (measured from that point) and its linear momentum.</p>
+<p>More broadly, angular momentum measures the rotational motion of a system. For extended bodies, its evaluation depends on both the distance of mass elements from the axis (the first moment of position) and how the mass is distributed throughout the object—the moment of inertia, or second moment of mass.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/angularmomentum.png" class="img-fluid figure-img" style="width:4cm"></p>
+<figcaption>Angular momentum</figcaption>
+</figure>
+</div>
+<p>Given <strong>linear velocity</strong> <span class="math inline">\(\vec{v}\)</span> and <strong>angular velocity</strong> <span class="math inline">\(\omega\)</span>:</p>
+<p><span class="math display">\[
+\vec{v} = r \omega
+\]</span></p>
+<p>The <strong>linear momentum</strong> is determined by:</p>
+<p><span class="math display">\[
+\text{Linear momentum} = m \vec{v}
+\]</span></p>
+<p>Substituting for <span class="math inline">\(\vec{v}\)</span>:</p>
+<p><span class="math display">\[
+\text{Linear momentum} = m r \omega
+\]</span></p>
+<p>The <strong>moment of linear momentum</strong> can then be written as:</p>
+<p><span class="math display">\[
+\text{Moment of linear momentum} = m r \omega r
+\]</span></p>
+<p>The moment of linear momentum is referred to as the <strong>angular momentum</strong>. Simplifying the above equation:</p>
+<p><span class="math display">\[
+\text{Angular momentum} = m r^2 \omega
+\]</span></p>
+<p>Here, <span class="math inline">\(m r^2\)</span> is the <strong>moment of inertia</strong> (second moment of mass) of the object about its axis of rotation, denoted as <span class="math inline">\(I\)</span>. Thus, the angular momentum can be expressed as:</p>
+<p><span class="math display">\[
+\text{Angular momentum} = I \omega
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(I\)</span> is the moment of inertia in <span class="math inline">\(kg·m²\)</span>.</li>
+<li><span class="math inline">\(\omega\)</span> is the angular velocity in <span class="math inline">\(rad/s\)</span>.</li>
+</ul>
+<p>Additionally, the moment of inertia <span class="math inline">\(I\)</span> is given by:</p>
+<p><span class="math display">\[
+I = m k^2
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(I\)</span> is the moment of inertia in <span class="math inline">\(kg·m²\)</span>.</li>
+<li><span class="math inline">\(m\)</span> is the mass in <span class="math inline">\(kg\)</span>.</li>
+<li><span class="math inline">\(k\)</span> is the radius of gyration in <span class="math inline">\(m\)</span>.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In structural engineering, the moment of inertia (m⁴) is a measure of resistance to bending (deflection or stiffness).</p>
+<p>In angular motion and physics, the moment of inertia (kg·m²) is a measure of resistance to angular acceleration (rotational inertia).</p>
+</div>
+</div>
+</section>
+<section id="the-radius-of-gyration" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="the-radius-of-gyration"><span class="header-section-number">3.6</span> The Radius of Gyration</h2>
+<p>The radius of gyration is a geometric property of a rigid body or mass distribution that describes how the mass is distributed relative to an axis of rotation. It represents the effective distance from the axis at which the entire mass could be concentrated while producing the same moment of inertia as the actual distributed mass.</p>
+<p>In simpler terms, a smaller radius of gyration means the mass is closer to the axis, which is good for reducing inertia in rotating machinery. This is desirable in applications like engine crankshafts or turbine rotors where rapid changes in speed are required. A larger radius of gyration means the mass is farther from the axis, like a hollow cylinder has a larger k than a solid cylinder of the same mass and outer radius. This is beneficial when energy storage is needed (e.g., flywheels).</p>
+<div id="exm-3-9" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3.5</strong></span> A flywheel of mass 500 kg and radius of gyration 1.2 m is running at 300 rev/min. By means of a clutch, this flywheel is suddenly connected to another flywheel, mass 2000 kg and radius of gyration 0.6 m, initially at rest. Calculate their common speed of rotation after engagement.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>m1, k1 <span class="op">=</span> <span class="dv">500</span>, <span class="fl">1.2</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>m2, k2 <span class="op">=</span> <span class="dv">2000</span>, <span class="fl">0.6</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>rpm1 <span class="op">=</span> <span class="dv">300</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Moments of inertia</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>I1 <span class="op">=</span> m1 <span class="op">*</span> k1<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>I2 <span class="op">=</span> m2 <span class="op">*</span> k2<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert rpm to rad/s</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>omega1 <span class="op">=</span> (rpm1 <span class="op">/</span> <span class="dv">60</span>) <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> math.pi</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Conservation of angular momentum</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>omega_f <span class="op">=</span> (I1 <span class="op">*</span> omega1) <span class="op">/</span> (I1 <span class="op">+</span> I2)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert rad/s to rpm</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>rpm_f <span class="op">=</span> (omega_f <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> math.pi)) <span class="op">*</span> <span class="dv">60</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Final angular velocity (rad/s): </span><span class="sc">{</span>omega_f<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Final angular velocity (rpm): </span><span class="sc">{</span>rpm_f<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="turning-moment" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="turning-moment"><span class="header-section-number">3.7</span> Turning Moment</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/turningmoment.png" style="width:4cm;height:3.3cm" class="figure-img"></p>
+<figcaption>Turning moment</figcaption>
+</figure>
+</div>
+<p>We know the relation between linear acceleration <span class="math inline">\(a\)</span> and angular acceleration <span class="math inline">\(\alpha\)</span>:</p>
+<p><span class="math display">\[
+a = r \alpha
+\]</span></p>
+<p>And</p>
+<p><span class="math display">\[
+F = ma
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+F = m \alpha r
+\]</span></p>
+<p>If the force is not applied directly on the rim but at a greater or lesser leverage, say <span class="math inline">\(L\)</span> from the centre, the effective force on the rim causing it to accelerate will be greater or lesser accordingly, in the ratio of <span class="math inline">\(L\)</span> to <span class="math inline">\(r\)</span>. Thus:</p>
+<p><span class="math display">\[
+F \frac{L}{r} = m \alpha r
+\]</span></p>
+<p>Multiplying both sides by <span class="math inline">\(r\)</span>,</p>
+<p><span class="math display">\[
+FL = m \alpha r^2
+\]</span></p>
+<p>Now, <span class="math inline">\(FL\)</span> is the torque applied. Therefore, the accelerating torque is:</p>
+<p><span class="math display">\[
+\tau = m r^2 \alpha
+\]</span></p>
+<p>Or,</p>
+<p><span class="math display">\[
+\tau = m k^2 \alpha
+\]</span></p>
+<p><span class="math inline">\(\tau\)</span> is also given by:</p>
+<p><span class="math display">\[
+\tau = I \alpha
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(\tau\)</span> is the torque in <span class="math inline">\(Nm\)</span>.</li>
+<li><span class="math inline">\(I\)</span> is the moment of inertia in <span class="math inline">\(kg·m²\)</span>.</li>
+<li><span class="math inline">\(\alpha\)</span>: Angular acceleration in <span class="math inline">\(rad/s^2\)</span>.</li>
+</ul>
+<div id="exm-3-10" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3.6</strong></span> The mass of a flywheel is 175 kg and its radius of gyration is 380 mm. Find the torque required to attain a speed of 500 rev/min from rest in 30 s.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">175</span>                 <span class="co"># mass in kg</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="fl">0.38</span>                <span class="co"># radius of gyration in m</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>rpm_final <span class="op">=</span> <span class="dv">500</span>         <span class="co"># final speed</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> <span class="dv">30</span>                  <span class="co"># time in seconds</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Moment of inertia</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>I <span class="op">=</span> m <span class="op">*</span> k<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert rpm → rad/s</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>omega_final <span class="op">=</span> (rpm_final <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> math.pi) <span class="op">/</span> <span class="dv">60</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Angular acceleration</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> omega_final <span class="op">/</span> t</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Torque</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>tau <span class="op">=</span> I <span class="op">*</span> alpha</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Moment of inertia I (kg·m^2): </span><span class="sc">{</span>I<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Final angular velocity ω (rad/s): </span><span class="sc">{</span>omega_final<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Angular acceleration α (rad/s^2): </span><span class="sc">{</span>alpha<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Required torque τ (N·m): </span><span class="sc">{</span>tau<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="exm-3-11" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3.7</strong></span> The torque to overcome frictional and other resistances of a turbine is 317 N m and may be considered constant for all speeds. The mass of the rotating parts is 1.59 t and the radius of gyration is 0.686 m. If the gas is cut off when the turbine is running free of load at 1920 rev/min, find the time it will take to come to rest and the number of revolutions turned during that time.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>tau <span class="op">=</span> <span class="fl">317.0</span>           <span class="co"># N·m</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="fl">1.59</span> <span class="op">*</span> <span class="dv">1000</span>       <span class="co"># kg</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="fl">0.686</span>             <span class="co"># m</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>rpm0 <span class="op">=</span> <span class="fl">1920.0</span>         <span class="co"># rev/min</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>I <span class="op">=</span> m <span class="op">*</span> k<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>omega0 <span class="op">=</span> (rpm0 <span class="op">/</span> <span class="fl">60.0</span>) <span class="op">*</span> <span class="fl">2.0</span> <span class="op">*</span> math.pi   <span class="co"># rad/s</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> tau <span class="op">/</span> I                          <span class="co"># rad/s^2</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> omega0 <span class="op">/</span> alpha                       <span class="co"># s</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> omega0 <span class="op">*</span> t                 <span class="co"># rad</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>revs <span class="op">=</span> theta <span class="op">/</span> (<span class="fl">2.0</span> <span class="op">*</span> math.pi)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"I (kg·m^2):           </span><span class="sc">{</span>I<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"omega0 (rad/s):       </span><span class="sc">{</span>omega0<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"alpha (rad/s^2):      </span><span class="sc">{</span>alpha<span class="sc">:.6f}</span><span class="ss">"</span>)</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"time to stop (s):     </span><span class="sc">{</span>t<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"time to stop (min):   </span><span class="sc">{</span>t<span class="op">/</span><span class="dv">60</span><span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"revolutions:          </span><span class="sc">{</span>revs<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="power-by-torque" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="power-by-torque"><span class="header-section-number">3.8</span> Power by Torque</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/powerbytorque.png" class="img-fluid figure-img" style="width:4cm"></p>
+<figcaption>A rotating mechanism.</figcaption>
+</figure>
+</div>
+<p>Consider a force <span class="math inline">\(F\)</span> applied at a radius <span class="math inline">\(r\)</span> on a rotating mechanism, as shown above.</p>
+<p>The work done in one revolution is the product of the force and the circumference. Therefore:</p>
+<p><span class="math display">\[
+W = F \cdot 2 \pi r
+\]</span></p>
+<p>If the mechanism is running at <span class="math inline">\(n\)</span> revolutions per second:</p>
+<p><span class="math display">\[
+\text{Power} = F \cdot 2 \pi r n
+\]</span></p>
+<p>Since torque <span class="math inline">\(\tau = F r\)</span>, we can rewrite the equation as:</p>
+<p><span class="math display">\[
+P = \tau \cdot 2 \pi n
+\]</span></p>
+<p>Given that <span class="math inline">\(\omega = 2 \pi n\)</span>:</p>
+<p><span class="math display">\[
+P = \tau \cdot \omega
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(P\)</span> is the power in watts (W),</li>
+<li><span class="math inline">\(\tau\)</span> is the torque in newton-meters (Nm), and</li>
+<li><span class="math inline">\(\omega\)</span> is the angular velocity in radians per second (rad/s).</li>
+</ul>
+<div id="exm-4-4" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3.8</strong></span> The mean torque in a propeller shaft is 2.26 x 10<sup>5</sup> Nm when running at 140 rpm. Find the power transmitted.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="fl">2.26e5</span>      <span class="co"># Nm</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>rpm <span class="op">=</span> <span class="dv">140</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>omega <span class="op">=</span> rpm <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> math.pi <span class="op">/</span> <span class="dv">60</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> T <span class="op">*</span> omega</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Angular speed (rad/s): </span><span class="sc">{</span>omega<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Power (W): </span><span class="sc">{</span>P<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Power (MW): </span><span class="sc">{</span>P<span class="op">/</span><span class="fl">1e6</span><span class="sc">:.4f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="exm-4-6" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3.9</strong></span> One gear wheel with 100 teeth of 6 mm pitch running at 250 rev/min drives another which has 50 teeth. If the power transmitted is 0.5 kW, find the driving force on the teeth and the speed of the driven wheel.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>N1 <span class="op">=</span> <span class="dv">100</span>          <span class="co"># teeth on driving wheel</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>N2 <span class="op">=</span> <span class="dv">50</span>           <span class="co"># teeth on driven wheel</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>pitch <span class="op">=</span> <span class="fl">0.006</span>     <span class="co"># circular pitch (m)</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>n1 <span class="op">=</span> <span class="dv">250</span>          <span class="co"># driving rpm</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> <span class="fl">0.5e3</span>         <span class="co"># power in watts</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Pitch diameter of driving wheel</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>D1 <span class="op">=</span> (N1 <span class="op">*</span> pitch) <span class="op">/</span> math.pi</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>r1 <span class="op">=</span> D1 <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Angular speed of driving wheel</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>omega1 <span class="op">=</span> n1 <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> math.pi <span class="op">/</span> <span class="dv">60</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Torque on driving wheel</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> P <span class="op">/</span> omega1</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Tangential driving force</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>F <span class="op">=</span> T <span class="op">/</span> r1</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Driven wheel speed</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>n2 <span class="op">=</span> n1 <span class="op">*</span> (N1 <span class="op">/</span> N2)</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Pitch diameter D1 (m): </span><span class="sc">{</span>D1<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Torque T (N·m): </span><span class="sc">{</span>T<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tangential force F (N): </span><span class="sc">{</span>F<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Driven wheel speed n2 (rpm): </span><span class="sc">{</span>n2<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="kinetic-energy-of-rotation" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="kinetic-energy-of-rotation"><span class="header-section-number">3.9</span> Kinetic Energy of Rotation</h2>
+<p>We know that <span class="math inline">\(K.E. = \frac{1}{2}mv^2\)</span>, where <span class="math inline">\(v\)</span> is the linear velocity of the body. For a rotating body, the effective linear velocity is at the radius of gyration, as this is the radius at which the entire mass of the rotating body can be considered to act.</p>
+<p>Let <span class="math inline">\(k\)</span> = radius of gyration (in meters),<br>
+Let <span class="math inline">\(\omega\)</span> = angular velocity (in radians per second).</p>
+<p>The relationship between linear and angular velocity is:</p>
+<p><span class="math display">\[
+v = \omega k
+\]</span></p>
+<p>Substituting <span class="math inline">\(v^2 = \omega^2 k^2\)</span> into <span class="math inline">\(K.E. = \frac{1}{2}mv^2\)</span> gives:</p>
+<p><span class="math display">\[
+\text{Rotational K.E.} = \frac{1}{2} m k^2 \omega^2
+\]</span></p>
+<p>Since <span class="math inline">\(I = m k^2\)</span>, where <span class="math inline">\(I\)</span> is the moment of inertia:</p>
+<p><span class="math display">\[
+\text{Rotational K.E.} = \frac{1}{2} I \omega^2
+\]</span></p>
+<div id="exm-4-10" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3.10</strong></span> The radius of gyration of the flywheel of a shearing machine is 0.46 m and its mass is 750 kg. Find the kinetic energy stored in it when running at 120 rev/min. If the speed falls to 100 rev/min during the cutting stroke, find the kinetic energy given out by the wheel.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">750</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="fl">0.46</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>I <span class="op">=</span> m <span class="op">*</span> k<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>omega1 <span class="op">=</span> <span class="dv">120</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> math.pi <span class="op">/</span> <span class="dv">60</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>omega2 <span class="op">=</span> <span class="dv">100</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> math.pi <span class="op">/</span> <span class="dv">60</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>K1 <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> I <span class="op">*</span> omega1<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>K2 <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> I <span class="op">*</span> omega2<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>dK <span class="op">=</span> K1 <span class="op">-</span> K2</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"I (kg·m^2):           </span><span class="sc">{</span>I<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"KE at 120 rpm:        </span><span class="sc">{</span>K1<span class="op">/</span><span class="fl">1e3</span><span class="sc">:.4f}</span><span class="ss"> kJ"</span>)</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"KE at 100 rpm:        </span><span class="sc">{</span>K2<span class="op">/</span><span class="fl">1e3</span><span class="sc">:.4f}</span><span class="ss"> kJ"</span>)</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Energy given out:     </span><span class="sc">{</span>dK<span class="op">/</span><span class="fl">1e3</span><span class="sc">:.4f}</span><span class="ss"> kJ"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<!-- ::: {#exm-4-11}
+The torque required to turn a flywheel and shaft against friction at the bearings is 34 N m. The mass of the wheel and shaft is 907 kg and the radius of gyration is 381 mm. Assuming frictional resistance to be constant at all speeds, find the number of revolutions the system will turn whilst coming to rest from a speed of 450 rev/min when the driving power is cut out, and also the time taken in coming to rest.
+
+``` python
+import math
+
+# Given
+
+T = 34         # N·m (frictional torque)
+m = 907        # kg
+k = 0.381      # m
+rpm0 = 450     # rev/min
+
+# Moment of inertia
+
+I = m * k**2
+
+# Initial angular speed in rad/s
+
+omega0 = rpm0 * 2 * math.pi / 60
+
+# Angular deceleration
+
+alpha = T / I
+
+# Time to stop
+
+t = omega0 / alpha
+
+# Number of revolutions
+
+revs = (rpm0 / 2 ) * t
+
+print(f"Time to stop: {t:.4f} s ({t/60:.4f} min)")
+print(f"Number of revolutions: {revs:.4f} rev")
+```
+:::
+
+::: {#exm-fe1-3}
+A vessel has a displacement of 1000 tonnes. It is being pulled up the horizontal dry dock by a steel cable, which is being wound onto a power-driven capstan. The capstan drum has a mass of 4.5 tonnes, an effective diameter of 3.1 m, and a radius of gyration of 1 m. The coefficient of friction between the vessel and the dock can be assumed constant at 0.6. The ship velocity increases uniformly from 0.1 m/s to 0.3 m/s in 30 seconds during the operation. Calculate:
+
+A. The angular acceleration of the capstan drum.\
+B. The torque required at the capstan drum.
+
+``` python
+
+# Given
+
+m_ship = 1000 * 1000           # tonnes to kg
+m_drum = 4.5 * 1000            # tonnes to kg
+diameter = 3.1                 # m
+r = diameter / 2               # effective radius
+k = 1.0                        # radius of gyration in m
+mu = 0.6                       # friction coefficient
+g = 9.81                       # m/s^2
+
+v_initial = 0.1                # m/s
+v_final = 0.3                  # m/s
+t = 30                         # s
+
+# Linear acceleration of the ship
+a = (v_final - v_initial) / t
+
+# Angular acceleration of the drum
+alpha = a / r
+
+# Drum moment of inertia
+I = m_drum * k**2
+
+# Forces and torques
+F_friction = mu * m_ship * g
+F_accel_ship = m_ship * a
+T_friction = F_friction * r
+T_accel_ship = F_accel_ship * r
+T_accel_drum = I * alpha
+
+T_total = T_friction + T_accel_ship + T_accel_drum
+
+print("Angular acceleration of drum (rad/s^2): {:.4f}".format(alpha))
+print("Torque required at the drum (MN·m): {:.4f}".format(T_total/1e6))
+```
+::: -->
+<div id="exm-ex67-6-bird" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3.11</strong></span> A ship’s anchor has a mass of 5 tonnes. Determine the work done in raising the anchor from a depth of 100 m. If the hauling gear is driven by a motor whose output is 80 kW and the efficiency of the haulage is 75%, determine how long the lifting operation takes.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>m_anchor <span class="op">=</span> <span class="dv">5</span> <span class="op">*</span> <span class="dv">1000</span>        <span class="co"># tonnes to kg</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>depth <span class="op">=</span> <span class="dv">100</span>                <span class="co"># m</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span>                   <span class="co"># m/s^2</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>motor_power <span class="op">=</span> <span class="dv">80_000</span>       <span class="co"># W</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>efficiency <span class="op">=</span> <span class="fl">0.75</span>          <span class="co"># 75%</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Work done lifting the anchor</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>work_done <span class="op">=</span> m_anchor <span class="op">*</span> g <span class="op">*</span> depth</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Effective power available for lifting</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>useful_power <span class="op">=</span> motor_power <span class="op">*</span> efficiency</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Time required</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>time_seconds <span class="op">=</span> work_done <span class="op">/</span> useful_power</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Work done in lifting the anchor (MJ): </span><span class="sc">{:.4f}</span><span class="st">"</span>.<span class="bu">format</span>(work_done<span class="op">/</span><span class="fl">1e6</span>))</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Time required (s): </span><span class="sc">{:.4f}</span><span class="st">"</span>.<span class="bu">format</span>(time_seconds))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="summary-of-key-terms" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Summary of Key Terms</h1>
+<section id="inertia-1" class="level3" data-number="4.0.1">
+<h3 data-number="4.0.1" class="anchored" data-anchor-id="inertia-1"><span class="header-section-number">4.0.1</span> Inertia</h3>
+<p>The tendency of an object to resist any change in its motion. An object with greater mass has greater inertia (it is “harder to start or stop”).</p>
+<ul>
+<li>In <strong>Naval Architecture</strong>, the <em>moment of inertia</em> (units: m⁴) is a measure of resistance to bending (related to stiffness/deflection of beams and hull girders).</li>
+<li>In <strong>angular motion and physics</strong>, the <em>moment of inertia</em> (units: kg·m²) is a measure of resistance to angular acceleration (rotational inertia).</li>
+</ul>
+</section>
+<section id="linear-momentum-p" class="level3" data-number="4.0.2">
+<h3 data-number="4.0.2" class="anchored" data-anchor-id="linear-momentum-p"><span class="header-section-number">4.0.2</span> Linear Momentum (p)</h3>
+<p>Momentum is the “quantity of motion” an object has. It is calculated as:</p>
+<p><span class="math display">\[p = m v\]</span></p>
+<p>where<br>
+- <span class="math inline">\(p\)</span> = linear momentum (kg·m/s)<br>
+- <span class="math inline">\(m\)</span> = mass (kg)<br>
+- <span class="math inline">\(v\)</span> = velocity (m/s)</p>
+<p>Momentum is a <strong>vector quantity</strong> (it has both magnitude and direction).</p>
+</section>
+<section id="newtons-laws-of-motion-1" class="level3" data-number="4.0.3">
+<h3 data-number="4.0.3" class="anchored" data-anchor-id="newtons-laws-of-motion-1"><span class="header-section-number">4.0.3</span> Newton’s Laws of Motion</h3>
+<section id="first-law-law-of-inertia" class="level4" data-number="4.0.3.1">
+<h4 data-number="4.0.3.1" class="anchored" data-anchor-id="first-law-law-of-inertia"><span class="header-section-number">4.0.3.1</span> First Law (Law of Inertia)</h4>
+<p>An object will stay at rest or keep moving in a straight line at constant speed unless an unbalanced (net) external force acts on it.</p>
+</section>
+<section id="second-law-law-of-acceleration" class="level4" data-number="4.0.3.2">
+<h4 data-number="4.0.3.2" class="anchored" data-anchor-id="second-law-law-of-acceleration"><span class="header-section-number">4.0.3.2</span> Second Law (Law of Acceleration)</h4>
+<p>The acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass.</p>
+<p><span class="math display">\[F_{\text{net}} = m a \quad \text{or} \quad a = \frac{F_{\text{net}}}{m}\]</span></p>
+</section>
+<section id="third-law-action-reaction" class="level4" data-number="4.0.3.3">
+<h4 data-number="4.0.3.3" class="anchored" data-anchor-id="third-law-action-reaction"><span class="header-section-number">4.0.3.3</span> Third Law (Action-Reaction)</h4>
+<p>Whenever two objects interact, they exert equal and opposite forces on each other.<br>
+“For every action force, there is an equal and opposite reaction force.”</p>
+</section>
+</section>
+<section id="conservation-of-linear-momentum-1" class="level3" data-number="4.0.4">
+<h3 data-number="4.0.4" class="anchored" data-anchor-id="conservation-of-linear-momentum-1"><span class="header-section-number">4.0.4</span> Conservation of Linear Momentum</h3>
+<p>If no external forces act on a system (or if the external forces cancel out), the total momentum of the system stays constant.</p>
+<p>In collisions or explosions:</p>
+<p><strong>Total momentum before = Total momentum after</strong></p>
+<p>Example: When two objects collide and stick together or bounce apart, the momentum lost by one is exactly gained by the other, so the total remains the same.</p>
+</section>
+<section id="angular-momentum-1" class="level3" data-number="4.0.5">
+<h3 data-number="4.0.5" class="anchored" data-anchor-id="angular-momentum-1"><span class="header-section-number">4.0.5</span> Angular Momentum</h3>
+<p>The rotational equivalent of linear momentum. It describes how much “rotational motion” a spinning or orbiting object has.</p>
+<p>Angular momentum depends on mass, speed, and distance from the axis of rotation.</p>
+</section>
+<section id="radius-of-gyration-k" class="level3" data-number="4.0.6">
+<h3 data-number="4.0.6" class="anchored" data-anchor-id="radius-of-gyration-k"><span class="header-section-number">4.0.6</span> Radius of Gyration (k)</h3>
+<p>A geometric property of a rigid body that indicates how the mass is distributed relative to a specified axis of rotation. It is defined such that:</p>
+<p><span class="math display">\[I = m k^2\]</span></p>
+<p>where<br>
+- <span class="math inline">\(I\)</span> = moment of inertia (kg·m²)<br>
+- <span class="math inline">\(m\)</span> = total mass (kg)<br>
+- <span class="math inline">\(k\)</span> = radius of gyration (m)</p>
+<section id="practical-examples-for-radius-of-gyration" class="level4" data-number="4.0.6.1">
+<h4 data-number="4.0.6.1" class="anchored" data-anchor-id="practical-examples-for-radius-of-gyration"><span class="header-section-number">4.0.6.1</span> Practical Examples for Radius of Gyration</h4>
+<ul>
+<li><p><strong>Smaller</strong> <span class="math inline">\(k\)</span> → mass is concentrated closer to the axis → <strong>lower</strong> rotational inertia<br>
+→ easier/faster to speed up or slow down rotation<br>
+(e.g., engine crankshafts, turbine rotors, figure skater pulling arms in).</p></li>
+<li><p><strong>Larger</strong> <span class="math inline">\(k\)</span> → mass is distributed farther from the axis → <strong>higher</strong> rotational inertia<br>
+→ better for storing rotational energy<br>
+(e.g., flywheels; a hollow cylinder has a larger <span class="math inline">\(k\)</span> than a solid cylinder of the same mass and outer radius).</p></li>
+</ul>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./kinematics.html" class="pagination-link" aria-label="Kinematics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Kinematics</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./03hydrostatics.html" class="pagination-link" aria-label="Hydrostatics">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hydrostatics</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org"> Quarto 1.8.26</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

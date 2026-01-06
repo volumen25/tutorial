@@ -72,20 +72,28 @@ Oil of relative density 0.9 flows at full bore through a pipe with an internal d
 ``` python
 import math
 
-# Given
-internal_diameter_mm = 75  # mm
-velocity_m_per_s = 1.2     # m/s
-relative_density = 0.9
-density_water_kg_per_m3 = 1000  # standard value
+# -----------------------------
+# Given data
+# -----------------------------
+internal_diameter_mm = 75        # mm (pipe internal diameter)
+velocity_m_per_s = 1.2           # m/s (fluid velocity)
+relative_density = 0.9           # relative to water
+density_water_kg_per_m3 = 1000   # standard density of water (kg/m³)
 
-# Convert diameter to metres
-internal_diameter_m = internal_diameter_mm / 1000
-radius_m = internal_diameter_m / 2
+# -----------------------------
+# Convert units and calculate radius
+# -----------------------------
+internal_diameter_m = internal_diameter_mm / 1000  # mm → m
+radius_m = internal_diameter_m / 2                 # pipe radius (m)
 
-# Calculate cross-sectional area
-area_m2 = math.pi * radius_m ** 2
+# -----------------------------
+# Cross-sectional area
+# -----------------------------
+area_m2 = math.pi * radius_m ** 2                 # m²
 
-# Volume flow rate (m³/s)
+# -----------------------------
+# Volume and mass flow rates
+# -----------------------------
 volume_flow_rate_m3_per_s = area_m2 * velocity_m_per_s
 
 # Density of oil (kg/m³)
@@ -94,12 +102,15 @@ density_oil_kg_per_m3 = relative_density * density_water_kg_per_m3
 # Mass flow rate (kg/s)
 mass_flow_rate_kg_per_s = density_oil_kg_per_m3 * volume_flow_rate_m3_per_s
 
-# Mass flow rate in tonnes per hour (1 tonne = 1000 kg, 1 hour = 3600 s)
+# Mass flow rate in tonnes per hour
 mass_flow_rate_tonnes_per_hour = (mass_flow_rate_kg_per_s * 3600) / 1000
 
-# Display results
-print(f"Volume flow rate, m³/s: {volume_flow_rate_m3_per_s:.4f}")
-print(f"Mass flow rate, tonnes/hour: {mass_flow_rate_tonnes_per_hour:.4f}")
+# -----------------------------
+# Output results
+# -----------------------------
+print(f"Volume flow rate, m³/s         : {volume_flow_rate_m3_per_s:.4f}")
+print(f"Mass flow rate, tonnes/hour    : {mass_flow_rate_tonnes_per_hour:.4f}")
+
 ```
 :::
 
@@ -545,7 +556,9 @@ A 300 mm diameter pipe has a venturi meter with a throat diameter of 100 mm. A U
 ``` python
 import math
 
-# Given
+# -----------------------------
+# Given data
+# -----------------------------
 D1 = 0.3  # Inlet diameter in meters
 D2 = 0.1  # Throat diameter in meters
 Cd = 0.95  # Coefficient of discharge
@@ -553,27 +566,38 @@ h_mercury = 0.250  # Manometer reading in meters of mercury
 SG = 13.6  # Specific gravity of mercury relative to water
 g = 9.81  # Acceleration due to gravity in m/s²
 
+# -----------------------------
 # Cross-sectional areas
-A1 = math.pi * (D1 ** 2) / 4
-A2 = math.pi * (D2 ** 2) / 4
+# -----------------------------
+A1 = math.pi * (D1**2) / 4  # Area at the inlet
+A2 = math.pi * (D2**2) / 4  # Area at the throat
 
-# The difference in water levels, or equivalent head, 
-# creates a hydrostatic pressure in the connecting legs 
-# that counteracts the mercury column. 
-# Subtracting 1 from the mercury column height 
-# compensates for this pressure difference.
+# -----------------------------
+# Equivalent water head
+# -----------------------------
+# The difference in water levels (equivalent head) generates
+# a hydrostatic pressure in the connecting legs that counteracts
+# the mercury column. Multiplying by (SG - 1) accounts for the
+# specific gravity of mercury relative to water.
 h_eq = h_mercury * (SG - 1)
 
+# -----------------------------
 # Diameter ratio
+# -----------------------------
 beta = D2 / D1
 
-# Theoretical discharge
+# -----------------------------
+# Discharge calculations
+# -----------------------------
+# Theoretical discharge based on the ideal flow equation
 Q_theoretical = A2 * math.sqrt((2 * g * h_eq) / (1 - beta**4))
 
-# Actual discharge
+# Actual discharge accounting for the coefficient of discharge
 Q_actual = Cd * Q_theoretical
 
+# -----------------------------
 # Output results
+# -----------------------------
 print(f"Cross-sectional area at inlet (A1): {A1:.4f} m²")
 print(f"Cross-sectional area at throat (A2): {A2:.4f} m²")
 print(f"Equivalent water head (h_eq): {h_eq:.4f} m")

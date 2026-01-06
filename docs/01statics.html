@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Heat and Work – Tutorial</title>
+<title>1&nbsp; Statics – Tutorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./thermal_expansion.html" rel="next">
-<link href="./si_units.html" rel="prev">
+<link href="./kinematics.html" rel="next">
+<link href="./tutorial_basic.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -313,7 +313,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./heat_work.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Heat and Work</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01statics.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statics</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -361,32 +361,32 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./si_units.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">SI Units</span></span></a>
+  <a href="./01statics.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statics</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./heat_work.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Heat and Work</span></span></a>
+  <a href="./kinematics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Kinematics</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./thermal_expansion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Thermal Expansion</span></span></a>
+  <a href="./02dynamics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dynamics</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./heat_transfer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Heat Transfer</span></span></a>
+  <a href="./03hydrostatics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hydrostatics</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./perfect_gases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Perfect Gases</span></span></a>
+  <a href="./04hydrodynamics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Hydrodynamics</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -422,32 +422,16 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#heat-required-to-heat-steel" id="toc-heat-required-to-heat-steel" class="nav-link active" data-scroll-target="#heat-required-to-heat-steel"><span class="header-section-number">2.1</span> Heat Required to Heat Steel</a>
+  <li><a href="#space-diagrams" id="toc-space-diagrams" class="nav-link active" data-scroll-target="#space-diagrams"><span class="header-section-number">1.1</span> Space Diagrams</a></li>
+  <li><a href="#vector-diagrams" id="toc-vector-diagrams" class="nav-link" data-scroll-target="#vector-diagrams"><span class="header-section-number">1.2</span> Vector Diagrams</a>
   <ul class="collapse">
-  <li><a href="#the-formula-for-heat" id="toc-the-formula-for-heat" class="nav-link" data-scroll-target="#the-formula-for-heat"><span class="header-section-number">2.1.1</span> The formula for heat</a></li>
-  <li><a href="#compute-the-temperature-change" id="toc-compute-the-temperature-change" class="nav-link" data-scroll-target="#compute-the-temperature-change"><span class="header-section-number">2.1.2</span> Compute the temperature change</a></li>
-  <li><a href="#compute-the-heat-required" id="toc-compute-the-heat-required" class="nav-link" data-scroll-target="#compute-the-heat-required"><span class="header-section-number">2.1.3</span> Compute the heat required</a></li>
-  <li><a href="#answer" id="toc-answer" class="nav-link" data-scroll-target="#answer"><span class="header-section-number">2.1.4</span> Answer</a></li>
-  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="header-section-number">2.1.5</span> Code</a></li>
+  <li><a href="#resultant" id="toc-resultant" class="nav-link" data-scroll-target="#resultant"><span class="header-section-number">1.2.1</span> Resultant</a></li>
+  <li><a href="#equilibrium" id="toc-equilibrium" class="nav-link" data-scroll-target="#equilibrium"><span class="header-section-number">1.2.2</span> Equilibrium</a></li>
   </ul></li>
-  <li><a href="#finding-specific-heat-capacity" id="toc-finding-specific-heat-capacity" class="nav-link" data-scroll-target="#finding-specific-heat-capacity"><span class="header-section-number">2.2</span> Finding Specific Heat Capacity</a>
-  <ul class="collapse">
-  <li><a href="#recall-the-formula-for-heat" id="toc-recall-the-formula-for-heat" class="nav-link" data-scroll-target="#recall-the-formula-for-heat"><span class="header-section-number">2.2.1</span> Recall the formula for heat</a></li>
-  <li><a href="#convert-heat-to-joules" id="toc-convert-heat-to-joules" class="nav-link" data-scroll-target="#convert-heat-to-joules"><span class="header-section-number">2.2.2</span> Convert heat to joules</a></li>
-  <li><a href="#compute-temperature-change" id="toc-compute-temperature-change" class="nav-link" data-scroll-target="#compute-temperature-change"><span class="header-section-number">2.2.3</span> Compute temperature change</a></li>
-  <li><a href="#solve-for-specific-heat-capacity" id="toc-solve-for-specific-heat-capacity" class="nav-link" data-scroll-target="#solve-for-specific-heat-capacity"><span class="header-section-number">2.2.4</span> Solve for specific heat capacity</a></li>
-  <li><a href="#answer-1" id="toc-answer-1" class="nav-link" data-scroll-target="#answer-1"><span class="header-section-number">2.2.5</span> Answer</a></li>
-  <li><a href="#code-1" id="toc-code-1" class="nav-link" data-scroll-target="#code-1"><span class="header-section-number">2.2.6</span> Code</a></li>
-  </ul></li>
-  <li><a href="#work-done-by-fluid-in-cylinder" id="toc-work-done-by-fluid-in-cylinder" class="nav-link" data-scroll-target="#work-done-by-fluid-in-cylinder"><span class="header-section-number">2.3</span> Work Done by Fluid in Cylinder</a>
-  <ul class="collapse">
-  <li><a href="#the-formula-for-work-done-at-constant-pressure" id="toc-the-formula-for-work-done-at-constant-pressure" class="nav-link" data-scroll-target="#the-formula-for-work-done-at-constant-pressure"><span class="header-section-number">2.3.1</span> The formula for work done at constant pressure</a></li>
-  <li><a href="#compute-the-change-in-volume" id="toc-compute-the-change-in-volume" class="nav-link" data-scroll-target="#compute-the-change-in-volume"><span class="header-section-number">2.3.2</span> Compute the change in volume</a></li>
-  <li><a href="#convert-pressure-to-pa" id="toc-convert-pressure-to-pa" class="nav-link" data-scroll-target="#convert-pressure-to-pa"><span class="header-section-number">2.3.3</span> Convert pressure to Pa</a></li>
-  <li><a href="#compute-the-work-done" id="toc-compute-the-work-done" class="nav-link" data-scroll-target="#compute-the-work-done"><span class="header-section-number">2.3.4</span> Compute the work done</a></li>
-  <li><a href="#answer-2" id="toc-answer-2" class="nav-link" data-scroll-target="#answer-2"><span class="header-section-number">2.3.5</span> Answer</a></li>
-  <li><a href="#code-2" id="toc-code-2" class="nav-link" data-scroll-target="#code-2"><span class="header-section-number">2.3.6</span> Code</a></li>
-  </ul></li>
+  <li><a href="#conditions-of-equilibrium" id="toc-conditions-of-equilibrium" class="nav-link" data-scroll-target="#conditions-of-equilibrium"><span class="header-section-number">1.3</span> Conditions of Equilibrium</a></li>
+  <li><a href="#cosine-rule" id="toc-cosine-rule" class="nav-link" data-scroll-target="#cosine-rule"><span class="header-section-number">1.4</span> Cosine Rule</a></li>
+  <li><a href="#sine-rule" id="toc-sine-rule" class="nav-link" data-scroll-target="#sine-rule"><span class="header-section-number">1.5</span> Sine Rule</a></li>
+  <li><a href="#problem-set" id="toc-problem-set" class="nav-link" data-scroll-target="#problem-set"><span class="header-section-number">1.6</span> Problem Set</a></li>
   </ul>
 </nav>
     </div>
@@ -457,7 +441,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="heat_work" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Heat and Work</span></span></h1>
+<h1 class="title"><span id="statics" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statics</span></span></h1>
 </div>
 
 
@@ -474,259 +458,297 @@ window.Quarto = {
 </header>
 
 
-<section id="heat-required-to-heat-steel" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="heat-required-to-heat-steel"><span class="header-section-number">2.1</span> Heat Required to Heat Steel</h2>
-<p>A steel block of mass <span class="math inline">\(m = 5\ \text{kg}\)</span> and specific heat capacity <span class="math inline">\(c = 480\ \text{J/kg·K}\)</span> is heated from <span class="math inline">\(T_1 = 15^\circ \text{C}\)</span> to <span class="math inline">\(T_2 = 100^\circ \text{C}\)</span>. Determine the <strong>heat required</strong>.</p>
-<section id="the-formula-for-heat" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="the-formula-for-heat"><span class="header-section-number">2.1.1</span> The formula for heat</h3>
-<p><span id="eq-heat"><span class="math display">\[
-Q = m c \Delta T
-\tag{2.1}\]</span></span></p>
-<p>where</p>
-<p><br>
-<span class="math inline">\(\Delta T = T_2 - T_1\)</span> is the temperature change.</p>
+<p>Statics is the branch of mechanics that analyzes bodies in equilibrium under the action of forces. This chapter examines cases where forces are in balance and presents methods for calculating resultant forces and their associated moments.</p>
+<section id="space-diagrams" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="space-diagrams"><span class="header-section-number">1.1</span> Space Diagrams</h2>
+<p>A space diagram illustrates the geometry of the system and the applied forces.</p>
+<div id="fig-spacedia" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spacedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/spacedia.png" class="img-fluid figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spacedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1: Space Diagram
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="compute-the-temperature-change" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="compute-the-temperature-change"><span class="header-section-number">2.1.2</span> Compute the temperature change</h3>
-<p><span class="math display">\[
-\Delta T = T_2 - T_1 = 100 - 15 = 85\ \text{K}
-\]</span></p>
+<section id="vector-diagrams" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="vector-diagrams"><span class="header-section-number">1.2</span> Vector Diagrams</h2>
+<p>A vector diagram (or force polygon) is a <strong>scaled</strong> graphical construction in which force vectors are placed head-to-tail in succession. It is used to determine the resultant of a system of forces through vector addition, as well as to resolve equilibrium problems when the polygon closes.</p>
+<div id="fig-vectordia" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vectordia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/vectordia.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vectordia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2: Vector Diagram
+</figcaption>
+</figure>
+</div>
+<section id="resultant" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="resultant"><span class="header-section-number">1.2.1</span> Resultant</h3>
+<p>The resultant is a single force that has exactly the same effect on an object as all the original forces acting together. It is found by adding the forces vectorially taking into account both their magnitude and direction. The resultant gives the overall direction and magnitude of the combined forces as shown in <a href="#fig-vectordia" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-vectordia</span></a>.</p>
 </section>
-<section id="compute-the-heat-required" class="level3" data-number="2.1.3">
-<h3 data-number="2.1.3" class="anchored" data-anchor-id="compute-the-heat-required"><span class="header-section-number">2.1.3</span> Compute the heat required</h3>
-<p><span class="math display">\[
-Q = m c \Delta T = 5 \times 480 \times 85
-\]</span></p>
-<p><span class="math display">\[
-Q = 204,000\ \text{J}
-\]</span></p>
+<section id="equilibrium" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="equilibrium"><span class="header-section-number">1.2.2</span> Equilibrium</h3>
+<p>Equilibrium of an object occurs when all the forces acting on it are balanced, so the object remains at rest or moves at a constant speed in a straight line. In equilibrium, as shown in <a href="#fig-equilibrant" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-equilibrant</span></a>, there is no net force or acceleration, meaning the object is in a stable state without any change in its motion.</p>
+<div id="fig-equilibrant" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-equilibrant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/vectordia-equilibrant.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-equilibrant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.3: Equilibrant
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="answer" class="level3" data-number="2.1.4">
-<h3 data-number="2.1.4" class="anchored" data-anchor-id="answer"><span class="header-section-number">2.1.4</span> Answer</h3>
-<p>The <strong>heat required</strong> to raise the temperature of the steel is:</p>
-<p><span class="math display">\[
-\boxed{204\ \text{kJ}}
-\]</span></p>
 </section>
-<section id="code" class="level3" data-number="2.1.5">
-<h3 data-number="2.1.5" class="anchored" data-anchor-id="code"><span class="header-section-number">2.1.5</span> Code</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Heat Required to Heat Steel</span></span>
+<section id="conditions-of-equilibrium" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="conditions-of-equilibrium"><span class="header-section-number">1.3</span> Conditions of Equilibrium</h2>
+<ol type="1">
+<li>Net force must be zero:</li>
+</ol>
+<p><span id="eq-force"><span class="math display">\[
+\sum_{k} \vec{F}_{k} = \vec{0}
+\tag{1.1}\]</span></span></p>
+<ol start="2" type="1">
+<li>Net torque must be zero:</li>
+</ol>
+<p><span id="eq-torque"><span class="math display">\[
+\sum_{k} \vec{\tau}_{k} = \vec{0}
+\tag{1.2}\]</span></span></p>
+</section>
+<section id="cosine-rule" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="cosine-rule"><span class="header-section-number">1.4</span> Cosine Rule</h2>
+<div id="fig-law_cos_sine" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-law_cos_sine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/sinecosrule.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-law_cos_sine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.4: Rules of Cosine and Sine
+</figcaption>
+</figure>
+</div>
+<p>The Cosine Rule is used to relate the lengths of the sides of a triangle as shown in <a href="#fig-law_cos_sine" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-law_cos_sine</span></a> to the cosine of one of its angles:</p>
+<p><span id="eq-cos"><span class="math display">\[
+c^2 = a^2 + b^2 - 2ab\cos \gamma
+\tag{1.3}\]</span></span></p>
+<p>Where:</p>
+<ul>
+<li><p>a, b, c are the sides of the triangle.</p></li>
+<li><p><span class="math inline">\(\gamma\)</span> is the angle opposite side c.</p></li>
+</ul>
+</section>
+<section id="sine-rule" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="sine-rule"><span class="header-section-number">1.5</span> Sine Rule</h2>
+<p>The Sine Rule relates the sides and angles of a triangle in <a href="#fig-law_cos_sine" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-law_cos_sine</span></a>:</p>
+<p><span id="eq-sine"><span class="math display">\[
+\frac{a}{\sin \alpha} = \frac{b}{\sin \beta} = \frac{c}{\sin \gamma}
+\tag{1.4}\]</span></span></p>
+<p>Where:</p>
+<ul>
+<li><p><span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span> are the angles of the triangle.</p></li>
+<li><p>a, b, c are the sides of the triangle opposite to angles <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span> respectively.</p></li>
+</ul>
+</section>
+<section id="problem-set" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="problem-set"><span class="header-section-number">1.6</span> Problem Set</h2>
+<div id="exm-1_6" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.1</strong></span> Two slings of equal length are slung from a horizontal beam and connected to a ring at their lower ends, the slings and beam forming an equilateral triangle. Find the force in each sling when a load of 30 kN hangs from the ring.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In Python, the math module’s trigonometric functions (sin, cos, tan, etc.) expect angles in radians, not degrees. Always convert degrees to radians before using sin, cos, or tan in Python’s math module.</p>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>mass <span class="op">=</span> <span class="dv">5</span>            <span class="co"># kg</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>specific_heat <span class="op">=</span> <span class="dv">480</span> <span class="co"># J/kg·K</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>T_initial <span class="op">=</span> <span class="dv">15</span>      <span class="co"># °C</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>T_final <span class="op">=</span> <span class="dv">100</span>       <span class="co"># °C</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperature change</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>delta_T <span class="op">=</span> T_final <span class="op">-</span> T_initial</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Heat required (in J)</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Q_J <span class="op">=</span> mass <span class="op">*</span> specific_heat <span class="op">*</span> delta_T</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to kJ</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Q_kJ <span class="op">=</span> Q_J <span class="op">/</span> <span class="dv">1000</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Temperature change: </span><span class="sc">{</span>delta_T<span class="sc">}</span><span class="ss"> K"</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Heat required: </span><span class="sc">{</span>Q_J<span class="sc">:.0f}</span><span class="ss"> J (</span><span class="sc">{</span>Q_kJ<span class="sc">:.0f}</span><span class="ss"> kJ)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Interactive Heat Calculation</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>load <span class="op">=</span> <span class="dv">30</span>  <span class="co"># kN</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>angle_deg <span class="op">=</span> <span class="dv">60</span>  <span class="co"># each sling makes 60° with the horizontal</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert angle to radians</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>angle_rad <span class="op">=</span> math.radians(angle_deg)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Vertical equilibrium: 2 * T * sin(angle) = load</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> load <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> math.sin(angle_rad))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tension in each sling: </span><span class="sc">{</span>T<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="exm-isosceles" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.2</strong></span> Two identical slings of equal length are attached to a horizontal beam and meet at a ring from which a 45 kN load is suspended. The slings and the beam form an isosceles triangle in which each sling makes an angle of 50° with the horizontal. Find the force (tension) in each sling.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Get user input</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>mass <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the mass of the object (kg): "</span>))</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>specific_heat <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the specific heat capacity (J/kg·K): "</span>))</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>T_initial <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the initial temperature (°C): "</span>))</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>T_final <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the final temperature (°C): "</span>))</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate temperature change</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>delta_T <span class="op">=</span> T_final <span class="op">-</span> T_initial</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate heat required</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>Q_J <span class="op">=</span> mass <span class="op">*</span> specific_heat <span class="op">*</span> delta_T</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>Q_kJ <span class="op">=</span> Q_J <span class="op">/</span> <span class="dv">1000</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Calculation Results:"</span>)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Temperature change: </span><span class="sc">{</span>delta_T<span class="sc">:.2f}</span><span class="ss"> K"</span>)</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Heat required: </span><span class="sc">{</span>Q_J<span class="sc">:.2f}</span><span class="ss"> J (</span><span class="sc">{</span>Q_kJ<span class="sc">:.2f}</span><span class="ss"> kJ)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</section>
-<section id="finding-specific-heat-capacity" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="finding-specific-heat-capacity"><span class="header-section-number">2.2</span> Finding Specific Heat Capacity</h2>
-<p>A liquid of mass <span class="math inline">\(m = 4\ \text{kg}\)</span> is heated from <span class="math inline">\(T_1 = 15^\circ \text{C}\)</span> to <span class="math inline">\(T_2 = 100^\circ \text{C}\)</span>. The heat supplied is <span class="math inline">\(Q = 714\ \text{kJ}\)</span>. Determine the <strong>specific heat capacity</strong> <span class="math inline">\(c\)</span> of the liquid.</p>
-<section id="recall-the-formula-for-heat" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="recall-the-formula-for-heat"><span class="header-section-number">2.2.1</span> Recall the formula for heat</h3>
-<p><span class="math display">\[
-Q = m c \Delta T
-\]</span></p>
-<p>where <span class="math inline">\(\Delta T = T_2 - T_1\)</span>.</p>
-</section>
-<section id="convert-heat-to-joules" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="convert-heat-to-joules"><span class="header-section-number">2.2.2</span> Convert heat to joules</h3>
-<p><span class="math display">\[
-Q = 714\ \text{kJ} = 714 \times 1000 = 714,000\ \text{J}
-\]</span></p>
-</section>
-<section id="compute-temperature-change" class="level3" data-number="2.2.3">
-<h3 data-number="2.2.3" class="anchored" data-anchor-id="compute-temperature-change"><span class="header-section-number">2.2.3</span> Compute temperature change</h3>
-<p><span class="math display">\[
-\Delta T = T_2 - T_1 = 100 - 15 = 85\ \text{K}
-\]</span></p>
-</section>
-<section id="solve-for-specific-heat-capacity" class="level3" data-number="2.2.4">
-<h3 data-number="2.2.4" class="anchored" data-anchor-id="solve-for-specific-heat-capacity"><span class="header-section-number">2.2.4</span> Solve for specific heat capacity</h3>
-<p><span class="math display">\[
-c = \frac{Q}{m \Delta T} = \frac{714,000}{4 \times 85}
-\]</span></p>
-<p><span class="math display">\[
-c = \frac{714,000}{340} \approx 2100\ \text{J/kg·K}
-\]</span></p>
-</section>
-<section id="answer-1" class="level3" data-number="2.2.5">
-<h3 data-number="2.2.5" class="anchored" data-anchor-id="answer-1"><span class="header-section-number">2.2.5</span> Answer</h3>
-<p>The <strong>specific heat capacity</strong> of the liquid is:</p>
-<p><span class="math display">\[
-\boxed{c \approx 2100\ \text{J/kg·K}}
-\]</span></p>
-</section>
-<section id="code-1" class="level3" data-number="2.2.6">
-<h3 data-number="2.2.6" class="anchored" data-anchor-id="code-1"><span class="header-section-number">2.2.6</span> Code</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Specific Heat Capacity Calculation</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>load <span class="op">=</span> <span class="dv">45</span>      <span class="co"># kN</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>angle_deg <span class="op">=</span> <span class="dv">50</span> <span class="co"># degrees</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert angle to radians</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>angle_rad <span class="op">=</span> math.radians(angle_deg)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute tension</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> load <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> math.sin(angle_rad))</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tension in each sling: </span><span class="sc">{</span>T<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="exm-1_7" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.3</strong></span> Two lifting ropes are connected at their lower ends to a common shackle from which a load of 25 kN hangs. If the ropes make angles of 32° and 42° respectively to the vertical, find the tension in each rope.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>mass <span class="op">=</span> <span class="dv">4</span>          <span class="co"># kg</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>T_initial <span class="op">=</span> <span class="dv">15</span>    <span class="co"># °C</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>T_final <span class="op">=</span> <span class="dv">100</span>     <span class="co"># °C</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>Q_kJ <span class="op">=</span> <span class="dv">714</span>        <span class="co"># heat supplied in kJ</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>load <span class="op">=</span> <span class="dv">25</span>        <span class="co"># kN</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>theta1 <span class="op">=</span> <span class="dv">32</span>      <span class="co"># angle opposite T2</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>theta2 <span class="op">=</span> <span class="dv">42</span>      <span class="co"># angle opposite T1</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>theta3 <span class="op">=</span> <span class="dv">180</span> <span class="op">-</span> (theta1 <span class="op">+</span> theta2)  <span class="co"># angle opposite load</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert heat to joules</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>Q_J <span class="op">=</span> Q_kJ <span class="op">*</span> <span class="dv">1000</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperature change</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>delta_T <span class="op">=</span> T_final <span class="op">-</span> T_initial</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to radians</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>t1 <span class="op">=</span> math.radians(theta1)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>t2 <span class="op">=</span> math.radians(theta2)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>t3 <span class="op">=</span> math.radians(theta3)</span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate specific heat capacity</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> Q_J <span class="op">/</span> (mass <span class="op">*</span> delta_T)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Temperature change: </span><span class="sc">{</span>delta_T<span class="sc">}</span><span class="ss"> K"</span>)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Specific heat capacity: </span><span class="sc">{</span>c<span class="sc">:.0f}</span><span class="ss"> J/kg·K"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Interactive Specific Heat Capacity Calculator</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Law of sines</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>T1 <span class="op">=</span> load <span class="op">*</span> math.sin(t2) <span class="op">/</span> math.sin(t3)  <span class="co"># tension in rope 1</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>T2 <span class="op">=</span> load <span class="op">*</span> math.sin(t1) <span class="op">/</span> math.sin(t3)  <span class="co"># tension in rope 2</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tension in rope 1: </span><span class="sc">{</span>T1<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tension in rope 2: </span><span class="sc">{</span>T2<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="exm-1_10" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.4</strong></span> The angle between the jib and vertical post of a jib crane is 40°, and the angle between the jib and tie is 45°. Find the force in the jib and tie when a load of 15 kN hangs from the crane head.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Get user input</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>mass <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the mass of the liquid (kg): "</span>))</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>T_initial <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the initial temperature (°C): "</span>))</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>T_final <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the final temperature (°C): "</span>))</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>Q_kJ <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the heat supplied (kJ): "</span>))</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert heat to joules</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>Q_J <span class="op">=</span> Q_kJ <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>load <span class="op">=</span> <span class="dv">15</span>  <span class="co"># kN</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>angle_jib_vertical <span class="op">=</span> <span class="dv">40</span>  <span class="co"># degrees</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>angle_jib_tie <span class="op">=</span> <span class="dv">45</span>       <span class="co"># degrees</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Third angle in the force triangle</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>angle_tie_load <span class="op">=</span> <span class="dv">180</span> <span class="op">-</span> angle_jib_vertical <span class="op">-</span> angle_jib_tie  <span class="co"># degrees</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperature change</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>delta_T <span class="op">=</span> T_final <span class="op">-</span> T_initial</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate specific heat capacity</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> Q_J <span class="op">/</span> (mass <span class="op">*</span> delta_T)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert angles to radians for math.sin</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>angle_jib_vertical_rad <span class="op">=</span> math.radians(angle_jib_vertical)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>angle_jib_tie_rad <span class="op">=</span> math.radians(angle_jib_tie)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>angle_tie_load_rad <span class="op">=</span> math.radians(angle_tie_load)</span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Calculation Results:"</span>)</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Temperature change: </span><span class="sc">{</span>delta_T<span class="sc">:.2f}</span><span class="ss"> K"</span>)</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Specific heat capacity: </span><span class="sc">{</span>c<span class="sc">:.2f}</span><span class="ss"> J/kg·K"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</section>
-<section id="work-done-by-fluid-in-cylinder" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="work-done-by-fluid-in-cylinder"><span class="header-section-number">2.3</span> Work Done by Fluid in Cylinder</h2>
-<p>A fluid in a cylinder is at pressure <span class="math inline">\(P = 700\ \text{kPa}\)</span>. It is <strong>expanded at constant pressure</strong> from a volume of <span class="math inline">\(V_1 = 0.28\ \text{m³}\)</span> to <span class="math inline">\(V_2 = 1.68\ \text{m³}\)</span>. Determine the <strong>work done</strong>.</p>
-<section id="the-formula-for-work-done-at-constant-pressure" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="the-formula-for-work-done-at-constant-pressure"><span class="header-section-number">2.3.1</span> The formula for work done at constant pressure</h3>
-<p><span id="eq-workcp"><span class="math display">\[
-W = P \Delta V
-\tag{2.2}\]</span></span></p>
-<p>where</p>
-<p><span class="math display">\[
-\Delta V = V_2 - V_1
-\]</span></p>
-</section>
-<section id="compute-the-change-in-volume" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="compute-the-change-in-volume"><span class="header-section-number">2.3.2</span> Compute the change in volume</h3>
-<p><span class="math display">\[
-\Delta V = 1.68 - 0.28 = 1.40\ \text{m³}
-\]</span></p>
-</section>
-<section id="convert-pressure-to-pa" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3" class="anchored" data-anchor-id="convert-pressure-to-pa"><span class="header-section-number">2.3.3</span> Convert pressure to Pa</h3>
-<p><span class="math display">\[
-P = 700\ \text{kPa} = 700 \times 10^3\ \text{Pa} = 700,000\ \text{Pa}
-\]</span></p>
-</section>
-<section id="compute-the-work-done" class="level3" data-number="2.3.4">
-<h3 data-number="2.3.4" class="anchored" data-anchor-id="compute-the-work-done"><span class="header-section-number">2.3.4</span> Compute the work done</h3>
-<p><span class="math display">\[
-W = P \Delta V = 700,000 \times 1.40
-\]</span></p>
-<p><span class="math display">\[
-W = 980,000\ \text{J} \approx 980\ \text{kJ}
-\]</span></p>
-</section>
-<section id="answer-2" class="level3" data-number="2.3.5">
-<h3 data-number="2.3.5" class="anchored" data-anchor-id="answer-2"><span class="header-section-number">2.3.5</span> Answer</h3>
-<p>The <strong>work done</strong> by the fluid during expansion is:</p>
-<p><span class="math display">\[
-\boxed{980\ \text{kJ}}
-\]</span></p>
-</section>
-<section id="code-2" class="level3" data-number="2.3.6">
-<h3 data-number="2.3.6" class="anchored" data-anchor-id="code-2"><span class="header-section-number">2.3.6</span> Code</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Work Done by Fluid at Constant Pressure</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Law of sines</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>F_jib <span class="op">=</span> load <span class="op">*</span> math.sin(angle_tie_load_rad) <span class="op">/</span> math.sin(angle_jib_tie_rad)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>F_tie <span class="op">=</span> load <span class="op">*</span> math.sin(angle_jib_vertical_rad) <span class="op">/</span> math.sin(angle_jib_tie_rad)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force in jib: </span><span class="sc">{</span>F_jib<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force in tie: </span><span class="sc">{</span>F_tie<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="exm-1_11" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.5</strong></span> The lengths of the vertical post, jib, and tie of a jib crane are 8, 13, and 9 m, respectively. Find the forces in the jib and tie when a load of 20 kN hangs from the crane head.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>P_kPa <span class="op">=</span> <span class="dv">700</span>          <span class="co"># pressure in kPa</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>V1 <span class="op">=</span> <span class="fl">0.28</span>            <span class="co"># initial volume in m³</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>V2 <span class="op">=</span> <span class="fl">1.68</span>            <span class="co"># final volume in m³</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert pressure to Pa</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>P_Pa <span class="op">=</span> P_kPa <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> <span class="dv">8</span>   <span class="co"># post m</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>J <span class="op">=</span> <span class="dv">13</span>  <span class="co"># jib  m</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="dv">9</span>   <span class="co"># tie m</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>W <span class="op">=</span> <span class="dv">20</span>  <span class="co"># load in kN</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Law of cosines</span></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute change in volume</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>delta_V <span class="op">=</span> V2 <span class="op">-</span> V1</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Angle opposite P (theta_p)</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>theta_p <span class="op">=</span> math.acos((J<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> T<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> P<span class="op">**</span><span class="dv">2</span>) <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> J <span class="op">*</span> T))</span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute work done (J)</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>W_J <span class="op">=</span> P_Pa <span class="op">*</span> delta_V</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Angle opposite T (theta_t)</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>theta_t <span class="op">=</span> math.acos((J<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> P<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> T<span class="op">**</span><span class="dv">2</span>) <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> J <span class="op">*</span> P))</span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to kJ</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>W_kJ <span class="op">=</span> W_J <span class="op">/</span> <span class="dv">1000</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Angle opposite J (theta_j)</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>theta_j <span class="op">=</span> math.pi <span class="op">-</span> theta_p <span class="op">-</span> theta_t</span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Pressure: </span><span class="sc">{</span>P_Pa<span class="sc">}</span><span class="ss"> Pa"</span>)</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Change in volume: </span><span class="sc">{</span>delta_V<span class="sc">:.2f}</span><span class="ss"> m³"</span>)</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Work done: </span><span class="sc">{</span>W_J<span class="sc">:.0f}</span><span class="ss"> J (</span><span class="sc">{</span>W_kJ<span class="sc">:.0f}</span><span class="ss"> kJ)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Interactive Work Done Calculator</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Law of sines</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>F_J <span class="op">=</span> W <span class="op">*</span> math.sin(theta_j) <span class="op">/</span> math.sin(theta_p)  <span class="co"># force in jib</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>F_T <span class="op">=</span> W <span class="op">*</span> math.sin(theta_t) <span class="op">/</span> math.sin(theta_p)  <span class="co"># force in tie</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert angles to degrees</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>theta_p_deg <span class="op">=</span> math.degrees(theta_p)</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>theta_t_deg <span class="op">=</span> math.degrees(theta_t)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>theta_j_deg <span class="op">=</span> math.degrees(theta_j)</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"theta_p = </span><span class="sc">{</span>theta_p_deg<span class="sc">:.4f}</span><span class="ss"> degrees"</span>)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"theta_t = </span><span class="sc">{</span>theta_t_deg<span class="sc">:.4f}</span><span class="ss"> degrees"</span>)</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"theta_j = </span><span class="sc">{</span>theta_j_deg<span class="sc">:.4f}</span><span class="ss"> degrees"</span>)</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force in jib (F_J): </span><span class="sc">{</span>F_J<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Force in tie (F_T): </span><span class="sc">{</span>F_T<span class="sc">:.4f}</span><span class="ss"> kN"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="exm-1_15" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1.6</strong></span> A ship sailing due east at 18 knots runs into a 3-knot current moving 40° east of north. Find the resultant speed and direction of the ship.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Degrees, Minutes, and Seconds (DMS) notation is widely used in navigation and surveying because decimal degrees alone often lack sufficient precision for small-scale positioning. On Earth’s surface:</p>
+<ul>
+<li>1° of latitude ≈ 111 km<br>
+</li>
+<li>1′ (minute of arc) ≈ 1.85 km<br>
+</li>
+<li>1″ (second of arc) ≈ 30 m</li>
+</ul>
+<p>Thus, a position given as 40° 26′ 46″ N instantly conveys location to within tens of metres, whereas the equivalent decimal form, 40.44611°, is less intuitive at a glance despite being mathematically identical.</p>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># User input</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>P_kPa <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the constant pressure (kPa): "</span>))</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>V1 <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the initial volume (m³): "</span>))</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>V2 <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Enter the final volume (m³): "</span>))</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>ship <span class="op">=</span> <span class="dv">18</span>          <span class="co"># knots (due east)</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>current <span class="op">=</span> <span class="dv">3</span>        <span class="co"># knots</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>angle_deg <span class="op">=</span> <span class="dv">50</span>     <span class="co"># angle between ship and current in degrees</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert pressure to Pa</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>P_Pa <span class="op">=</span> P_kPa <span class="op">*</span> <span class="dv">1000</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute change in volume</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>delta_V <span class="op">=</span> V2 <span class="op">-</span> V1</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to radians</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>angle_rad <span class="op">=</span> math.radians(angle_deg)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Law of cosines</span></span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute work done (J)</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>W_J <span class="op">=</span> P_Pa <span class="op">*</span> delta_V</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to kJ</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>W_kJ <span class="op">=</span> W_J <span class="op">/</span> <span class="dv">1000</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Calculation Results:"</span>)</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Pressure: </span><span class="sc">{</span>P_Pa<span class="sc">:.0f}</span><span class="ss"> Pa (</span><span class="sc">{</span>P_kPa<span class="sc">:.0f}</span><span class="ss"> kPa)"</span>)</span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Change in volume: </span><span class="sc">{</span>delta_V<span class="sc">:.2f}</span><span class="ss"> m³"</span>)</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Work done: </span><span class="sc">{</span>W_J<span class="sc">:.0f}</span><span class="ss"> J (</span><span class="sc">{</span>W_kJ<span class="sc">:.2f}</span><span class="ss"> kJ)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> math.sqrt(ship<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> current<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>ship<span class="op">*</span>current<span class="op">*</span>math.cos(angle_rad))</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Law of sines</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>theta_rad <span class="op">=</span> math.asin((current <span class="op">*</span> math.sin(angle_rad)) <span class="op">/</span> R)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>theta_deg <span class="op">=</span> math.degrees(theta_rad)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert direction to degrees, minutes, seconds</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>deg <span class="op">=</span> <span class="bu">int</span>(theta_deg)</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>minutes_float <span class="op">=</span> (theta_deg <span class="op">-</span> deg) <span class="op">*</span> <span class="dv">60</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>minutes <span class="op">=</span> <span class="bu">int</span>(minutes_float)</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>seconds <span class="op">=</span> (minutes_float <span class="op">-</span> minutes) <span class="op">*</span> <span class="dv">60</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Resultant speed: </span><span class="sc">{</span>R<span class="sc">:.4f}</span><span class="ss"> knots"</span>)</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Direction: </span><span class="sc">{</span>theta_deg<span class="sc">:.4f}</span><span class="ss">° north of east"</span>)</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Direction (DMS): </span><span class="sc">{</span>deg<span class="sc">}</span><span class="ss">° </span><span class="sc">{</span>minutes<span class="sc">}</span><span class="ss">' </span><span class="sc">{</span>seconds<span class="sc">:.0f}</span><span class="ch">\"</span><span class="ss"> north of east"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1145,13 +1167,13 @@ W = 980,000\ \text{J} \approx 980\ \text{kJ}
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./si_units.html" class="pagination-link" aria-label="SI Units">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">SI Units</span></span>
+      <a href="./tutorial_basic.html" class="pagination-link" aria-label="Python Tutorial">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Python Tutorial</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./thermal_expansion.html" class="pagination-link" aria-label="Thermal Expansion">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Thermal Expansion</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./kinematics.html" class="pagination-link" aria-label="Kinematics">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Kinematics</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

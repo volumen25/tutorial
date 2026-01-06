@@ -1,5 +1,17 @@
 # Notes
 
+79-character line width
+
+Descriptive variable names
+
+Insert useful comments
+
+Consistent sectioning and headers
+
+Black-formatted code
+
+
+
 ## Fluid Mech Notes
 
 https://kdusling.github.io/teaching/Applied-Fluids/

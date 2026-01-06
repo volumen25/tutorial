@@ -1,0 +1,486 @@
+# SI Units {#si_units}
+
+The International System of Units (SI)\index{SI} is the globally accepted standard for measurement. Established to provide a consistent framework for scientific and technical measurements, SI units facilitate clear communication and data comparison across various fields and countries. The system is based on seven fundamental units: the meter for length, the kilogram for mass, the second for time, the ampere for electric current, the kelvin for temperature, the mole for substance, and the candela for luminous intensity.
+
+{{< pagebreak >}}
+
+| Physical Quantity   | SI Base Unit | Symbol |
+|---------------------|--------------|--------|
+| Length              | Meter        | m      |
+| Mass                | Kilogram     | kg     |
+| Time                | Second       | s      |
+| Electric Current    | Ampere       | A      |
+| Temperature         | Kelvin       | K      |
+| Amount of Substance | Mole         | mol    |
+| Luminous Intensity  | Candela      | cd     |
+
+: Base SI units.
+
+| Physical Quantity      | Derived SI Unit           | Symbol   |
+|------------------------|---------------------------|----------|
+| Area                   | Square meter              | m²       |
+| Volume                 | Cubic meter               | m³       |
+| Speed                  | Meter per second          | m/s      |
+| Acceleration           | Meter per second squared  | m/s^2^   |
+| Force                  | Newton                    | N        |
+| Pressure               | Pascal                    | Pa       |
+| Energy                 | Joule                     | J        |
+| Power                  | Watt                      | W        |
+| Electric Charge        | Coulomb                   | C        |
+| Electric Potential     | Volt                      | V        |
+| Resistance             | Ohm                       | Ω        |
+| Capacitance            | Farad                     | F        |
+| Frequency              | Hertz                     | Hz       |
+| Luminous Flux          | Lumen                     | lm       |
+| Illuminance            | Lux                       | lx       |
+| Specific Energy        | Joule per kilogram        | J/kg     |
+| Specific Heat Capacity | Joule per kilogram Kelvin | J/(kg·K) |
+
+: Derived SI units.
+
+{{< pagebreak >}}
+
+| Factor | Prefix | Symbol |
+|--------|--------|--------|
+| 10^9^  | giga   | G      |
+| 10^6^  | mega   | M      |
+| 10^3^  | kilo   | k      |
+| 10^2^  | hecto  | h      |
+| 10^1^  | deca   | da     |
+| 10^-1^ | deci   | d      |
+| 10^-2^ | centi  | c      |
+| 10^-3^ | milli  | m      |
+| 10^-6^ | micro  | µ      |
+
+: Common multiples and submultiples for SI units.
+
+## Metric Multipliers for Length, Area, and Volume
+
+The metric system uses powers of ten to scale measurements. When converting **area** or **volume**, remember that the conversion factor must be **squared** or **cubed**, respectively.
+
+| Unit | Symbol | Multiplier (to metres) | 1 m = ? | Area (1 m² = ?) | Volume (1 m³ = ?) |
+|:-----------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| **Millimetre** | mm | ( $10^{-3}$ ) | 1000 $\text{mm}$ | $(1000)^2 = 10^6  \text{mm}^2$ | $(1000)^3 = 10^9  \text{mm}^3$ |
+| **Centimetre** | cm | ( $10^{-2}$ ) | 100 $\text{cm}$ | $(100)^2 = 10^4  \text{cm}^2$ | $(100)^3 = 10^6  \text{cm}^3$ |
+| **Decimetre** | dm | ( $10^{-1}$ ) | 10 $\text{dm}$ | $(10)^2 = 10^2  \text{dm}^2$ | $(10)^3 = 10^3  \text{dm}^3$ |
+| **Metre** | m | ( $10^0$ ) | — | — | — |
+| **Decametre** | dam | ( $10^{1}$ ) | 0.1 $\text{dam}$ | $(0.1)^2 = 10^{-2}  \text{dam}^2$ | $(0.1)^3 = 10^{-3}  \text{dam}^3$ |
+| **Hectometre** | hm | ( $10^{2}$ ) | 0.01 $\text{hm}$ | $(0.01)^2 = 10^{-4}  \text{hm}^2$ | $(0.01)^3 = 10^{-6}  \text{hm}^3$ |
+| **Kilometre** | km | ( $10^{3}$ ) | 0.001 $\text{km}$ | $(0.001)^2 = 10^{-6}  \text{km}^2$ | $(0.001)^3 = 10^{-9}  \text{km}^3$ |
+
+------------------------------------------------------------------------
+
+### **Quick Reference**
+
+| Conversion Type | Relationship |
+|:-----------------------------------|:-----------------------------------|
+| Length | 1 $\text{m} = 10^3$ $\text{mm} = 10^2$ $\text{cm}$|
+| Area | 1 $\text{m}^2 = 10^6$ $\text{mm}^2 = 10^4$ $\text{cm}^2$|
+| Volume | 1 $\text{m}^3 = 10^9$ $\text{mm}^3 = 10^6$ $\text{cm}^3$ |
+
+------------------------------------------------------------------------
+
+**Note:** When converting between metric units:
+
+-   Multiply by $10^n$ when going to a smaller unit.
+
+-   Divide by $10^n$ when going to a larger unit.
+
+-   For **area**, square the length factor; for **volume**, cube it.
+
+## Unity Fraction
+
+The **unity fraction** method, or **unit conversion using unity fractions**, is a systematic way to convert one unit of measurement into another. This method relies on multiplying by fractions that are equal to one, where the numerator and the denominator represent the same quantity in different units. Since any number multiplied by one remains the same, unity fractions allow for seamless conversion without changing the value.
+
+The principle of unity fractions is based on:
+
+1.  **Setting up equal values**: Write a fraction where the numerator and denominator are equivalent values in different units, so the fraction equals one. For example, $\frac{1km}{1000m}$ is a unity fraction because 1 km equals 1000 m.
+
+2.  **Multiplying by unity fractions**: Multiply the initial quantity by the unity fraction(s) so that the undesired units cancel out, leaving only the desired units.
+
+### Classwork
+
+::: {#exm-0}
+Suppose we want to convert $5$ kilometers to meters.
+
+1.  Start with $5$ kilometers: $$
+    5 \, \text{km}
+    $$
+2.  Multiply by a unity fraction that cancels kilometers and introduces meters. We use $(\frac{1000 \, \text{m}}{1 \, \text{km}}), since\:1 \, \text{km} = 1000 \, \text{m}$:
+
+$$5 \, \text{km} \times \frac{1000 \, \text{m}}{1 \, \text{km}} = 5000 \, \text{m}$$
+
+3.  The kilometers $\text{km}$ cancel out, leaving us with meters $\text{m}$:
+
+$$
+5 \, \text{km} = 5000 \, \text{m}
+$$
+
+This step-by-step approach illustrates how the unity fraction cancels the undesired units and achieves the correct result in meters.
+
+Unity fractions can be extended by using multiple conversion steps. For example, converting hours to seconds would require two unity fractions: one to convert hours to minutes and another to convert minutes to seconds. This approach ensures accuracy and is widely used in science, engineering, and other fields that require precise unit conversions.
+:::
+
+::: {#exm-1}
+Convert $15 \, \text{m/s}$ to $\text{km/h}$.
+
+1.  Start with $15 \, \text{m/s}$.
+2.  To convert meters to kilometers, multiply by $\frac{1 \, \text{km}}{1000 \, \text{m}}$.
+3.  To convert seconds to hours, multiply by $\frac{3600 \, \text{s}}{1 \, \text{h}}$.
+
+$$
+15 \, \text{m/s} \times \frac{1 \, \text{km}}{1000 \, \text{m}} \times \frac{3600 \, \text{s}}{1 \, \text{h}} = 54 \, \text{km/h}
+$$
+
+The meters and seconds cancel out, leaving kilometers per hour: $54 \, \text{km/h}$.
+:::
+
+### Self-Test
+
+**Instructions:**
+
+1.  Use unity fraction to convert between derived SI units.
+
+2.  Show each step of your work to ensure accuracy.
+
+3.  Simplify your answers and include correct units.
+
+------------------------------------------------------------------------
+
+1.  **Speed**\
+    Convert $72 \, \text{km/h}$ to $\text{m/s}$.
+
+2.  **Force**\
+    Convert $980 \, \text{N}$ (newtons) to $\text{kg} \cdot \text{m/s}^2$.
+
+3.  **Energy**\
+    Convert $2500 \, \text{J}$ (joules) to $\text{kJ}$.
+
+4.  **Power**\
+    Convert $1500 \, \text{W}$ (watts) to $\text{kW}$.
+
+5.  **Pressure**\
+    Convert $101325 \, \text{Pa}$ (pascals) to $\text{kPa}$.
+
+6.  **Volume Flow Rate**\
+    Convert $3 \, \text{m}^3/\text{min}$ to $\text{L/s}$.
+
+7.  **Density**\
+    Convert $1000 \, \text{kg/m}^3$ to $\text{g/cm}^3$.
+
+8.  **Acceleration**\
+    Convert $9.8 \, \text{m/s}^2$ to $\text{cm/s}^2$.
+
+9.  **Torque**\
+    Convert $50 \, \text{N} \cdot \text{m}$ to $\text{kN} \cdot \text{cm}$.
+
+10. **Frequency**\
+    Convert $500 \, \text{Hz}$ (hertz) to $\text{kHz}$.
+
+11. **Work to Energy Conversion**\
+    A force of $20 \, \text{N}$ moves an object $500 \, \text{cm}$. Convert the work done to joules.
+
+12. **Kinetic Energy Conversion**\
+    Calculate the kinetic energy in kilojoules of a $1500 \, \text{kg}$ car moving at $72 \, \text{km/h}$.
+
+13. **Power to Energy Conversion**\
+    A machine operates at $2 \, \text{kW}$ for $3$ hours. Convert the energy used to megajoules.
+
+14. **Pressure to Force Conversion**\
+    Convert a pressure of $200 \, \text{kPa}$ applied to an area of $0.5 \, \text{m}^2$ to force in newtons.
+
+15. **Density to Mass Conversion**\
+    Convert $0.8 \, \text{g/cm}^3$ for an object with a volume of $250 \, \text{cm}^3$ to mass in grams.
+
+------------------------------------------------------------------------
+
+### Answer Key
+
+1.  $72 \, \text{km/h} = 20 \, \text{m/s}$
+2.  $980 \, \text{N} = 980 \, \text{kg} \cdot \text{m/s}^2$
+3.  $2500 \, \text{J} = 2.5 \, \text{kJ}$
+4.  $1500 \, \text{W} = 1.5 \, \text{kW}$
+5.  $101325 \, \text{Pa} = 101.325 \, \text{kPa}$
+6.  $3 \, \text{m}^3/\text{min} = 50 \, \text{L/s}$
+7.  $1000 \, \text{kg/m}^3 = 1 \, \text{g/cm}^3$
+8.  $9.8 \, \text{m/s}^2 = 980 \, \text{cm/s}^2$
+9.  $50 \, \text{N} \cdot \text{m} = 5 \, \text{kN} \cdot \text{cm}$
+10. $500 \, \text{Hz} = 0.5 \, \text{kHz}$
+11. $20 \, \text{N} \times 5 \, \text{m} = 100 \, \text{J}$
+12. $\text{Kinetic energy} = 1500 \, \text{kg} \times \left(20 \, \text{m/s}\right)^2 / 2 = 300 \, \text{kJ}$
+13. $2 \, \text{kW} \times 3 \, \text{hours} = 21.6 \, \text{MJ}$
+14. $200 \, \text{kPa} \times 0.5 \, \text{m}^2 = 100,000 \, \text{N}$
+15. $0.8 \, \text{g/cm}^3 \times 250 \, \text{cm}^3 = 200 \, \text{g}$
+
+## Condenser Vacuum
+
+Condenser vacuum gauge reads 715 mmHg when barometer stands at 757 mmHg. State the absolute pressure in kN/m² and bar.
+
+### Given Data
+
+$$
+P_{atm} = 757~\text{mmHg}, \quad P_{vac} = 715~\text{mmHg}
+$$
+
+### Absolute Pressure in mmHg
+
+$$
+P_{abs} = P_{atm} - P_{vac} = 757 - 715 = 42~\text{mmHg}
+$$
+
+### Convert mmHg → kN/m²
+
+$$
+P = \rho g h = 13{,}600 \cdot 9.81 \cdot 0.001 = 133.416~\text{Pa} = 0.133416~\text{kN/m}^2
+$$
+
+$$
+P_{abs} = 42 \cdot 0.133416 = 5.6034~\text{kN/m²}
+$$
+
+### Convert kN/m² → bar
+
+$$
+P_{abs} = \frac{5.6034}{100} = 0.056~\text{bar}
+$$
+
+### Final Answers
+
+$$
+\boxed{P_{abs} = 42~\text{mmHg} = 5.6034~\text{kN/m²} = 0.056~\text{bar}}
+$$
+
+### Code
+
+``` python
+P_atm_mmHg = 757
+P_vac_mmHg = 715
+MMHG_TO_KN_M2 = 0.133416
+KNM2_TO_BAR = 1 / 100
+P_abs_mmHg = P_atm_mmHg - P_vac_mmHg
+P_abs_kNm2 = P_abs_mmHg * MMHG_TO_KN_M2
+P_abs_bar = P_abs_kNm2 * KNM2_TO_BAR
+print(f"Absolute Pressure = {P_abs_mmHg:.2f} mmHg")
+print(f"Absolute Pressure = {P_abs_kNm2:.3f} kN/m²")
+print(f"Absolute Pressure = {P_abs_bar:.4f} bar")
+```
+
+## Oil Flow in Tubes
+
+Oil flows full bore at a velocity of $V = 2~\text{m/s}$ through 16 tubes of diameter $d = 30~\text{mm}$. Density of oil: $\rho = 0.85~\text{g/mL}$. Find **volume flow rate** (L/s) and **mass flow rate** (kg/min).
+
+### Cross-sectional area of one tube
+
+$$
+A = \pi \frac{d^2}{4} = \pi \frac{0.03^2}{4} \approx 7.0686 \times 10^{-4}~\text{m}^2
+$$
+
+### Total area and volume flow rate
+
+$$
+A_\text{total} = 16 \cdot 7.0686 \times 10^{-4} \approx 0.01131~\text{m}^2
+$$
+
+$$
+\dot{v} = A_\text{total} \cdot V \approx 0.02262~\text{m}^3/\text{s} \approx 22.62~\text{L/s}
+$$
+
+### Mass flow rate
+
+$$
+\dot{m} = \rho \cdot \dot{v} = 850 \cdot 0.02262 \approx 19.227~\text{kg/s} \approx 1153.6~\text{kg/min}
+$$
+
+### Final Answers
+
+$$
+\text{Volume flow rate: } \dot{v} \approx 22.6~\text{L/s}
+$$ $$
+\text{Mass flow rate: } \dot{m} \approx 1154~\text{kg/min}
+$$
+
+### Code
+
+``` python
+import math
+v = 2.0
+N = 16
+d = 0.03
+rho = 0.85 * 1000
+A = math.pi * d**2 / 4
+A_total = N * A
+v_dot_m3_s = A_total * v
+v_dot_L_s = v_dot_m3_s * 1000
+m_dot_kg_s = rho * v_dot_m3_s
+m_dot_kg_min = m_dot_kg_s * 60
+print(f"Volume flow rate: {v_dot_L_s:.2f} L/s")
+print(f"Mass flow rate: {m_dot_kg_min:.2f} kg/min")
+```
+
+## Gauge Pressure
+
+An oil of specific gravity (relative density) $\text{SG} = 0.8$ is contained in a vessel to a depth of $h = 2 \text{ m}$. Find the **gauge pressure** at this depth in kPa.
+
+### Gauge Pressure
+
+$$
+P_g = \rho g h
+$$
+
+where
+
+$\rho = \text{density of fluid (kg/m³)}$
+
+g= acceleration due to gravity (9.81 m/s²)
+
+h = depth (m)
+
+### Compute the density of oil using specific gravity
+
+Specific gravity is defined as
+
+$$
+\text{SG} = \frac{\rho_{\text{oil}}}{\rho_{\text{water}}}
+$$
+
+where $\rho_{\text{water}} = 1000 \text{ kg/m³}$. Thus,
+
+$$
+\rho_{\text{oil}} = \text{SG} \times \rho_{\text{water}} = 0.8 \times 1000 = 800\ \text{kg/m³}
+$$
+
+### Compute the gauge pressure
+
+$$
+P_g = \rho g h = 800 \times 9.81 \times 2
+$$
+
+$$
+P_g = 15696\ \text{Pa} \approx 15.7\ \text{kPa}
+$$
+
+### Answer
+
+The **gauge pressure** at a depth of 2 m in the oil is:
+
+$$
+\boxed{15.7\ \text{kPa}}
+$$
+
+### Code
+
+``` python
+# Gauge Pressure Calculation for Oil
+
+# Given data
+specific_gravity = 0.8  # SG of oil
+depth_m = 2.0           # depth in meters
+g = 9.81                # acceleration due to gravity in m/s²
+rho_water = 1000        # density of water in kg/m³
+
+# Compute density of oil
+rho_oil = specific_gravity * rho_water
+
+# Compute gauge pressure (Pa)
+P_g_Pa = rho_oil * g * depth_m
+
+# Convert to kPa
+P_g_kPa = P_g_Pa / 1000
+
+# Print results
+print(f"Density of oil: {rho_oil:.1f} kg/m³")
+print(f"Gauge pressure at {depth_m} m depth: {P_g_Pa:.1f} Pa ({P_g_kPa:.2f} kPa)")
+```
+
+## Absolute Pressure from Manometer Reading
+
+A water manometer shows a pressure in a vessel of $400\ \text{mm}$ **below atmospheric pressure**. The atmospheric pressure is measured as $763\ \text{mmHg}$. Determine the **absolute pressure** in the vessel in kPa.
+
+### Relationship between absolute and gauge pressure
+
+$$
+P_\text{abs} = P_\text{atm} + P_\text{gauge}
+$$
+
+Since the manometer shows a pressure **below atmospheric**, the gauge pressure is negative:
+
+$$
+P_\text{gauge} = - \rho_\text{water} g h
+$$
+
+### Convert atmospheric pressure to Pa using
+
+$$
+P = \rho g h = 13{,}600 \cdot 9.81 \cdot 0.001 = 133.416~\text{Pa}
+$$
+
+So
+
+$$
+P_\text{atm} = 763 \times 133.416 \approx 101,801\ \text{Pa} \approx 101.8\ \text{kPa}
+$$
+
+### Compute gauge pressure
+
+Water column height:
+
+$$
+h = 400\ \text{mm} = 0.4\ \text{m}
+$$
+
+Density of water: $rho_\text{water} = 1000\ \text{kg/m³}$, $g = 9.81\ \text{m/s²}$
+
+$$
+P_\text{gauge} = - \rho g h = - 1000 \times 9.81 \times 0.4
+$$
+
+$$
+P_\text{gauge} = -3924\ \text{Pa} \approx -3.92\ \text{kPa}
+$$
+
+### Compute absolute pressure
+
+$$
+P_\text{abs} = P_\text{atm} + P_\text{gauge} \approx 101.8 - 3.92 \approx 97.9\ \text{kPa}
+$$
+
+### Answer
+
+The **absolute pressure** in the vessel is:
+
+$$
+\boxed{97.9\ \text{kPa}}
+$$
+
+### Code
+
+``` python
+# Absolute Pressure Calculation from Water Manometer
+
+# Given data
+h_mm = 400               # manometer reading in mm (below atmospheric)
+atm_mmHg = 763           # atmospheric pressure in mmHg
+rho_water = 1000         # density of water in kg/m³
+g = 9.81                 # gravity in m/s²
+mmHg_to_Pa = 133.416     # conversion factor
+
+# Convert manometer height to meters
+h_m = h_mm / 1000
+
+# Convert atmospheric pressure to Pa
+P_atm_Pa = atm_mmHg * mmHg_to_Pa
+
+# Gauge pressure (negative because below atmospheric)
+P_gauge_Pa = - rho_water * g * h_m
+
+# Absolute pressure
+P_abs_Pa = P_atm_Pa + P_gauge_Pa
+
+# Convert to kPa
+P_abs_kPa = P_abs_Pa / 1000
+
+# Print results
+print(f"Atmospheric pressure: {P_atm_Pa:.1f} Pa ({P_atm_Pa/1000:.1f} kPa)")
+print(f"Gauge pressure: {P_gauge_Pa:.1f} Pa ({P_gauge_Pa/1000:.2f} kPa)")
+print(f"Absolute pressure in the vessel: {P_abs_Pa:.1f} Pa ({P_abs_kPa:.2f} kPa)")
+```
