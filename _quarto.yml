@@ -33,17 +33,18 @@ book:
     # - 03hydrostatics.qmd
     # - 04hydrodynamics.qmd
     - si_units.qmd
-    - heat_work.qmd
-    - thermal_expansion.qmd
+    # - heat_work.qmd
+    # - thermal_expansion.qmd
     - heat_transfer.qmd
-    - perfect_gases.qmd
-    - ic_engines.qmd
-    - ideal_cycles.qmd
+    # - perfect_gases.qmd
+    # - ic_engines.qmd
+    # - ideal_cycles.qmd
+    - references.qmd
     # - colophon.qmd
   appendices:
-    - script_template.qmd
-    - unicode_math_symbols.qmd
+    # - script_template.qmd
     - greek_letters.qmd
+    - unicode_math_symbols.qmd
     # - SI_common_mistakes.qmd
 
 
@@ -57,33 +58,33 @@ format:
     theme:
       light: cosmo
       dark: solar
-  pdf:
-    pdf-engine: xelatex
-    documentclass: book
-    code-overflow: wrap
-    toc: true
-    toc-title: Contents
-    number-sections: true
-    top-level-division: chapter
-    lot: true
-    lof: true
-    include-in-header:
-      text: |
-        \usepackage{makeidx}
-        \makeindex
-    include-before-body:
-      text: |
-        \clearpage
-        \vfill
-        \begin{center}
-        {\small
-        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).\\[0.5em]
-        Full text available at \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}.
-        }
-        \end{center}
-        \vfill
-        \clearpage
-    include-after-body:
-      text: |
-        \clearpage
-        \printindex
+  # pdf:
+  #   pdf-engine: xelatex
+  #   documentclass: book
+  #   code-overflow: wrap
+  #   toc: true
+  #   toc-title: Contents
+  #   number-sections: true
+  #   top-level-division: chapter
+  #   lot: true
+  #   lof: true
+  #   include-in-header:
+  #     text: |
+  #       \usepackage{makeidx}
+  #       \makeindex
+  #   include-before-body:
+  #     text: |
+  #       \clearpage
+  #       \vfill
+  #       \begin{center}
+  #       {\small
+  #       This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).\\[0.5em]
+  #       Full text available at \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}.
+  #       }
+  #       \end{center}
+  #       \vfill
+  #       \clearpage
+  #   include-after-body:
+  #     text: |
+  #       \clearpage
+  #       \printindex

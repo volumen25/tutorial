@@ -1,6 +1,6 @@
 # Unicode Math Symbols {#sec-unicode}
 
-## Python Script Comment Snippets
+## Snippets for Scripts 
 
 ``` txt
 Area = 25 m²  

@@ -54,7 +54,7 @@ The International System of Units (SI)\index{SI} is the globally accepted standa
 
 : Common multiples and submultiples for SI units.
 
-## Metric Multipliers for Length, Area, and Volume
+<!-- ## Metric Multipliers for Length, Area, and Volume
 
 The metric system uses powers of ten to scale measurements. When converting **area** or **volume**, remember that the conversion factor must be **squared** or **cubed**, respectively.
 
@@ -68,9 +68,9 @@ The metric system uses powers of ten to scale measurements. When converting **ar
 | **Hectometre** | hm | ( $10^{2}$ ) | 0.01 $\text{hm}$ | $(0.01)^2 = 10^{-4}  \text{hm}^2$ | $(0.01)^3 = 10^{-6}  \text{hm}^3$ |
 | **Kilometre** | km | ( $10^{3}$ ) | 0.001 $\text{km}$ | $(0.001)^2 = 10^{-6}  \text{km}^2$ | $(0.001)^3 = 10^{-9}  \text{km}^3$ |
 
-------------------------------------------------------------------------
+------------------------------------------------------------------------ -->
 
-### **Quick Reference**
+## **Quick Reference**
 
 | Conversion Type | Relationship |
 |:-----------------------------------|:-----------------------------------|
@@ -78,15 +78,15 @@ The metric system uses powers of ten to scale measurements. When converting **ar
 | Area | 1 $\text{m}^2 = 10^6$ $\text{mm}^2 = 10^4$ $\text{cm}^2$|
 | Volume | 1 $\text{m}^3 = 10^9$ $\text{mm}^3 = 10^6$ $\text{cm}^3$ |
 
-------------------------------------------------------------------------
+: Conversion Reference
 
-**Note:** When converting between metric units:
+<!-- **Note:** When converting between metric units:
 
 -   Multiply by $10^n$ when going to a smaller unit.
 
 -   Divide by $10^n$ when going to a larger unit.
 
--   For **area**, square the length factor; for **volume**, cube it.
+-   For **area**, square the length factor; for **volume**, cube it. -->
 
 ## Unity Fraction
 

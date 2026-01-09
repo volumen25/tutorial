@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; IC Engines – Tutorial</title>
+<title>References – Tutorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +49,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ideal_cycles.html" rel="next">
-<link href="./perfect_gases.html" rel="prev">
+<link href="./greek_letters.html" rel="next">
+<link href="./heat_transfer.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -75,35 +94,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -278,7 +268,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ic_engines.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">IC Engines</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -332,38 +322,14 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./heat_work.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Heat and Work</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./thermal_expansion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Thermal Expansion</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./heat_transfer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Heat Transfer</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Heat Transfer</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./perfect_gases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Perfect Gases</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ic_engines.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">IC Engines</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ideal_cycles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Ideal Cycles</span></span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -377,20 +343,14 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./script_template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Script Template</span></span></a>
+  <a href="./greek_letters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Greek Letters</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./unicode_math_symbols.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Unicode Math Symbols</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./greek_letters.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Greek Letters</span></span></a>
   </div>
 </li>
       </ul>
@@ -400,15 +360,8 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#engine-performance-calculation" id="toc-engine-performance-calculation" class="nav-link active" data-scroll-target="#engine-performance-calculation"><span class="header-section-number">6.0.1</span> Engine Performance Calculation</a></li>
-  <li><a href="#final-answers" id="toc-final-answers" class="nav-link" data-scroll-target="#final-answers"><span class="header-section-number">6.0.2</span> Final Answers</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -416,7 +369,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="ic_engines" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">IC Engines</span></span></h1>
+<h1 class="title">References</h1>
 </div>
 
 
@@ -433,93 +386,44 @@ window.Quarto = {
 </header>
 
 
-<p>Internal combustion (IC) engines derive their name from fuel burning inside the engine cylinder. The combustion heats the air in the cylinder, increasing its pressure and moving the piston, whose reciprocating motion is converted to rotary motion by the crankshaft.</p>
-<p>IC engines are classified by their ignition method:</p>
-<ul>
-<li><p>Compression Ignition: Air is highly compressed, raising its temperature so injected fuel ignites spontaneously.</p></li>
-<li><p>Spark Ignition: A fuel–air mixture is compressed and then ignited by a spark plug.</p></li>
-</ul>
-<section id="engine-performance-calculation" class="level3" data-number="6.0.1">
-<h3 data-number="6.0.1" class="anchored" data-anchor-id="engine-performance-calculation"><span class="header-section-number">6.0.1</span> Engine Performance Calculation</h3>
-<p>An engine working on the constant volume cycle is 150 mm bore by 165 mm stroke, and its clearance volume is 0.5 litre. The fuel used has a calorific value of 45250 kJ/kg, and the consumption is 0.334 kg/kWh. The mechanical efficiency of the engine is 81%. Take γ = 1.4</p>
-<p>Calculate:</p>
-<ol type="1">
-<li><p>The compression ratio</p></li>
-<li><p>The ideal efficiency</p></li>
-<li><p>The indicated thermal efficiency</p></li>
-<li><p>The efficiency ratio.</p></li>
-</ol>
-<p><strong>Given</strong></p>
-<p>Bore <span class="math inline">\(=150\ \mathrm{mm}=0.150\ \mathrm{m}\)</span></p>
-<p>Stroke <span class="math inline">\(=165\ \mathrm{mm}=0.165\ \mathrm{m}\)</span></p>
-<p>Clearance volume <span class="math inline">\(V_c = 0.5\ \mathrm{L} = 0.0005\ \mathrm{m^3}\)</span></p>
-<p>Calorific value <span class="math inline">\(CV = 45\,250\ \mathrm{kJ/kg}\)</span></p>
-<p>Fuel consumption <span class="math inline">\(=0.334\ \mathrm{kg/kWh}\)</span> (assume <strong>brake</strong> specific fuel consumption)<br>
-</p>
-<p>Mechanical efficiency <span class="math inline">\(\eta_m = 0.81\)</span></p>
-<p>Ratio of specific heats <span class="math inline">\(\gamma = 1.4\)</span></p>
-<p>Find:</p>
-<ol type="1">
-<li><p>Compression ratio <span class="math inline">\(r\)</span></p></li>
-<li><p>Ideal (Otto) thermal efficiency <span class="math inline">\(\eta_{\text{ideal}}\)</span></p></li>
-<li><p>Indicated thermal efficiency <span class="math inline">\(\eta_{\text{ind}}\)</span></p></li>
-<li><p>Efficiency ratio <span class="math inline">\(=\dfrac{\eta_{\text{ind}}}{\eta_{\text{ideal}}}\)</span></p></li>
-</ol>
-<p><strong>1. Compression ratio</strong></p>
-<p>Swept volume (displacement) of one cylinder: <span class="math display">\[
-V_d = \frac{\pi}{4}D^2 \times \text{stroke}
-= \frac{\pi}{4}(0.150)^2(0.165)=0.00291579\ \mathrm{m^3}.
-\]</span></p>
-<p>Compression ratio <span class="math display">\[
-r=\frac{V_d+V_c}{V_c}=\frac{0.00291579+0.0005}{0.0005}=6.8316.
-\]</span></p>
-<p><strong>2. Ideal (Otto) thermal efficiency</strong></p>
-<p>For a constant-volume (Otto) cycle: <span class="math display">\[
-\eta_{\text{ideal}}=1-\frac{1}{r^{\gamma-1}}.
-\]</span> With <span class="math inline">\(r=6.8316,\ \gamma=1.4\)</span>, <span class="math display">\[
-\eta_{\text{ideal}} = 1 - r^{1-\gamma}
-=1 - r^{-0.4} \approx 0.53635 = 53.635\%.
-\]</span></p>
-<p><strong>3. Indicated thermal efficiency</strong></p>
-<p>First calculate the brake (output) energy per kWh of output: 1 kWh=3600 kJ</p>
-<p>Fuel energy input per kWh of brake output:</p>
-<p><span class="math display">\[
-E_{\text{fuel}} = \text{SFOC}\times CV = 0.334\ \mathrm{kg/kWh}\times 45\,250\ \mathrm{kJ/kg}
-=15\,113.5\ \mathrm{kJ/kWh}.
-\]</span></p>
-<p>For 1 kW break power, <span class="math inline">\(E_{\text{fuel}} =15\,113.5\ \mathrm{kJ/h}\)</span>.<br>
-<span class="math display">\[
-E_{\text{fuel}} =\frac{15\,113.5}{3600}=4.1982\ \mathrm{kJ/s} =4.1982\ \mathrm{kW}
-\]</span></p>
-<p><span class="math display">\[
-\eta_{m}=\frac{BP}{IP}=\frac{1}{IP}= 0.81\%.
-\]</span></p>
-<p><span class="math display">\[
-IP=\frac{1}{0.81}= 1.2346\ \mathrm{kW}
-\]</span></p>
-<p><span class="math display">\[
-\eta_{\text{ind}}=\frac{IP}{E_{\text{fuel}}}=\frac{1.2346\ kW}{4.1982\ kW}=29.4\%
-\]</span></p>
-<p><strong>4. Efficiency ratio</strong></p>
-<p><span class="math display">\[
-\text{Efficiency ratio}=\frac{\eta_{\text{ind}}}{\eta_{\text{ideal}}}
-=\frac{0.294}{0.5363}\approx 0.5482 \quad(54.82\%).
-\]</span></p>
-</section>
-<section id="final-answers" class="level3" data-number="6.0.2">
-<h3 data-number="6.0.2" class="anchored" data-anchor-id="final-answers"><span class="header-section-number">6.0.2</span> Final Answers</h3>
-<ul>
-<li><strong>A. Compression ratio:</strong> <span class="math inline">\(\boxed{r \approx 6.832}\)</span><br>
-</li>
-<li><strong>B. Ideal (Otto) efficiency:</strong> <span class="math inline">\(\boxed{\eta_{\text{ideal}}\approx 0.5363 = 53.63\%}\)</span><br>
-</li>
-<li><strong>C. Indicated thermal efficiency:</strong> <span class="math inline">\(\boxed{\eta_{\text{ind}}\approx 0.2941 = 29.4\%}\)</span><br>
-</li>
-<li><strong>D. Efficiency ratio:</strong> <span class="math inline">\(\boxed{\dfrac{\eta_{\text{ind}}}{\eta_{\text{ideal}}}\approx 0.5482 = 54.82\%}\)</span></li>
-</ul>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-bird2021" class="csl-entry" role="listitem">
+Bird, J. O. (2021). <em>Bird’s engineering mathematics</em> (Ninth
+edition). Routledge.
+</div>
+<div id="ref-bolton2021" class="csl-entry" role="listitem">
+Bolton, W. (2021). <em>Engineering science</em> (Seventh edition).
+Routledge.
+</div>
+<div id="ref-hannah1995" class="csl-entry" role="listitem">
+Hannah, J., &amp; Hillier, M. J. (1995). <em>Applied mechanics</em> (3rd
+edition). Longman Pub Group.
+</div>
+<div id="ref-russell2022" class="csl-entry" role="listitem">
+Russell, P. A., Embleton, W., &amp; Jackson, L. (2022). <em>Applied
+thermodynamics for marine engineers</em> (6th edition). Reeds.
+</div>
+<div id="ref-russell2021" class="csl-entry" role="listitem">
+Russell, P. A., Jackson, L., &amp; Embleton, W. (2021). <em>Applied
+mechanics for marine engineers</em> (7th edition). Reeds.
+</div>
+<div id="ref-shaw2017" class="csl-entry" role="listitem">
+Shaw, Z. (2017). <em>Learn python 3 the hard way: A very simple
+introduction to the terrifyingly beautiful world of computers and
+code</em> (4th edition). Addison-Wesley Professional.
+</div>
+<div id="ref-sweigart2020" class="csl-entry" role="listitem">
+Sweigart, A. (2020). <em>Automate the boring stuff with python, 2nd
+edition: Practical programming for total beginners</em>. No Starch
+Press.
+</div>
+<div id="ref-sweigart2021" class="csl-entry" role="listitem">
+Sweigart, A. (2021). <em>Beyond the basic stuff with python: Best
+practices for writing clean code</em>. No Starch Press.
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -937,13 +841,13 @@ IP=\frac{1}{0.81}= 1.2346\ \mathrm{kW}
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./perfect_gases.html" class="pagination-link" aria-label="Perfect Gases">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Perfect Gases</span></span>
+      <a href="./heat_transfer.html" class="pagination-link" aria-label="Heat Transfer">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Heat Transfer</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ideal_cycles.html" class="pagination-link" aria-label="Ideal Cycles">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Ideal Cycles</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./greek_letters.html" class="pagination-link" aria-label="Greek Letters">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Greek Letters</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
