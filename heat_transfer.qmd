@@ -169,6 +169,8 @@ A = math.pi * (D / 2)**2
 delta_T = Q_dot * s / (k * A)
 
 # Display results
+print(f"Heat transfer rate: {Q_dot:.4f} J/s")
+print(f"Area of pan bottom: {A:.4f} m²")
 print(f"Temperature difference: {delta_T:.4f} °C")
 ```
 
