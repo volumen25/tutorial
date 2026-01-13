@@ -1,6 +1,8 @@
 # Study Guide {.unnumbered}
 
-First and foremost, solve the problem sets using only pen, paper, and a calculator. After completing a problem by hand, slightly modify the conditions or variables and solve it again. Then, input the new values into the Python script and compare the results with your hand-calculated solution.
+First and foremost, solve the problem sets using only pen, paper, and a calculator. After completing a problem by hand, slightly modify the conditions or variables (@fig-screenshot) and solve it again. Then, input the new values into the Python script and compare the results with your hand-calculated solution.
+
+![Input parameters](images/screenshot.png){#fig-screenshot}
 
 -   Buddy system: Study with a classmate. Teaching and helping one another significantly deepens understanding of the material. Students are strongly encouraged to work through problem sets collaboratively. For example, one student solves the odd-numbered problems while the other solves the even-numbered ones; then each explains their solutions to the other.
 

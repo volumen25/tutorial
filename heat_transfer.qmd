@@ -30,7 +30,7 @@ This equation shows that heat conduction increases with greater thermal conducti
 
 ## Temperature Difference Across a Heat Exchanger Endplate
 
-The shell diameter of a large heat exchanger is 1.8 m. The flat endplate (cover) at one end is made of carbon steel, 45 mm thick, and is uninsulated. If the maximum allowable heat loss through the cover, to avoid insulation is 150 MJ/h, determine the temperature difference permitted across the endplate. (For steel, k = 55 W/m°C)
+A large heat exchanger has a shell diameter of 1.8 meters. One endplate, a flat cover, is made of 45 mm thick carbon steel and is uninsulated. The maximum allowable heat loss through this cover, without insulation, is 150 MJ/h. Given that the thermal conductivity of steel is 55 W/mK, calculate the permissible temperature difference across the endplate.
 
 **Given**
 
@@ -95,7 +95,7 @@ $$
 ``` python
 # Given data
 D = 1.8              # diameter of endplate, m
-L = 0.045            # thickness, m
+s = 0.045            # thickness, m
 k = 55               # thermal conductivity, W/m.K
 Q_MJ_per_h = 150     # maximum heat loss, MJ/h
 
@@ -107,12 +107,69 @@ import math
 A = math.pi * (D/2)**2
 
 # Temperature difference
-delta_T = Q_W * L / (k * A)
+delta_T = Q_W * s / (k * A)
 
 # Display results
 print(f"Endplate area: {A:.4f} m²")
 print(f"Heat loss: {Q_W:.2f} W")
 print(f"Temperature difference across the endplate: {delta_T:.2f} °C")
+```
+
+## Latent Heat of Vaporization
+
+Water is boiling in an aluminum pan on a stovetop. The pan’s bottom is $s = 0.7\ \text{cm}$ thick and has a diameter of $D = 12\ \text{cm}$. Water evaporates at a rate of $\dot m = 1.00\ \text{g/s}$.
+
+Given:
+
+-   Thermal conductivity of aluminum: $k = 220\ \text{W/m·K}$
+
+-   Latent heat of vaporization: $LHV = 2.256\times10^{6}\ \text{J/kg}$
+
+Calculate the temperature difference across the pan’s bottom.
+
+The heat required to evaporate the water is
+
+$$
+\dot Q = \dot m LHV
+$$
+
+Heat conduction through the pan bottom:
+
+$$
+\dot Q = \frac{kA}{s}\,\Delta T
+$$
+
+Solving for the temperature difference:
+
+$$
+\Delta T = \frac{\dot Q\, s}{kA}
+$$
+
+------------------------------------------------------------------------
+
+### Code
+
+```python
+import math
+
+# Given values
+m_dot = 1.0e-3      # kg/s
+LHV = 2.256e6       # J/kg
+k = 220             # W/m·K
+s = 0.007           # m
+D = 0.12            # m
+
+# Heat transfer rate
+Q_dot = m_dot * LHV
+
+# Area of pan bottom
+A = math.pi * (D / 2)**2
+
+# Temperature difference
+delta_T = Q_dot * s / (k * A)
+
+# Display results
+print(f"Temperature difference: {delta_T:.4f} °C")
 ```
 
 ## Convection Heat Transfer
@@ -247,7 +304,7 @@ In a steam boiler, radiation occurs in the furnace. Any heating surfaces that ar
 
 ## Radiant Heat from a Flat Circular Plate
 
-A flat circular plate is **400 mm** in diameter. Calculate the theoretical quantity of heat radiated per hour when its temperature is **227 °C** and the temperature of its surrounds is **27 °C**.
+A flat circular plate is **500 mm** in diameter. Calculate the theoretical quantity of heat radiated per hour when its temperature is **227 °C** and the temperature of its surrounds is **27 °C**.
 
 **Given**:
 
@@ -265,7 +322,7 @@ $$
 2.  **Calculate the area of the circular plate**
 
 $$
-A = \pi \left( \frac{D}{2} \right)^2 = \pi \left( \frac{0.4}{2} \right)^2 \approx 0.125664\ \mathrm{m^2}
+A = \pi \left( \frac{D}{2} \right)^2 = \pi \left( \frac{0.5}{2} \right)^2 \approx 0.196349\ \mathrm{m^2}
 $$
 
 3.  **Apply the formula**
@@ -277,19 +334,19 @@ $$
 Substituting the values:
 
 $$
-Q = 5.6703 \times 10^{-11} \times 1 \times 0.125664 \times 3600 \times \left(500^4 - 300^4\right)
+Q = 5.6703 \times 10^{-11} \times 1 \times 0.196349 \times 3600 \times \left(500^4 - 300^4\right)
 $$ $$
-Q = 1395.46\ \mathrm{kWh}
+Q = 2180.3997\ \mathrm{kWh}
 $$
 
 **Result**
 
 $$
-\text{Plate area: } 0.125664\ \mathrm{m^2}
+\text{Plate area: } 0.196349\ \mathrm{m^2}
 $$ $$
 \text{Emissivity: } \varepsilon = 1
 $$ $$
-\boxed{\text{Heat radiated (per hour): } 1395.46\ \mathrm{kWh}}
+\boxed{\text{Heat radiated (per hour): } 2180.3997\ \mathrm{kWh}}
 $$
 
 **Note:** This represents the **theoretical maximum radiation** for a perfect black body. Real materials would radiate less depending on their emissivity $\varepsilon < 1$.
@@ -304,7 +361,7 @@ sigma = 5.6703e-11   # kW/m^2/K^4
 epsilon = 1.0       # emissivity (black body)
 T1 = 227 + 273  # K (plate temperature)
 T2 = 27 + 273   # K (surroundings)
-d = 400 / 1000     # m (diameter)
+d = 500 / 1000     # m (diameter)
 A = math.pi * (d / 2)**2  # area in m²
 
 # Heat radiated per second (kW)
