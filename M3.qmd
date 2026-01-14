@@ -1,0 +1,120 @@
+---
+title: "Dual-Combustion Cycle Analysis"
+format: pdf
+hyperrefoptions:
+  - pdfpagemode=UseNone
+  - pdfstartview=FitH
+editor: visual
+---
+
+## Problem Statement
+
+**M_3:** The compression ratio of an engine operating on the dual-combustion cycle is 11. The pressure and temperature of the air at the beginning of compression are 1 bar and 30°C, respectively. The maximum pressure and temperature during the cycle are 40 bar and 1617°C, respectively. Assuming adiabatic compression and expansion, calculate the ideal thermal efficiency. Take the values: $c_v = 0.718 \, \text{kJ/kgK}$ and $c_p = 1.005 \, \text{kJ/kgK}$.
+
+### Given Data
+
+-   Compression ratio: $r=\frac{V_2}{V_1} = 11$
+-   Initial pressure: $P_1 = 1 \, \text{bar}$
+-   Initial temperature: $T_1 = 30^\circ \text{C} = 303 \, \text{K}$
+-   Maximum pressure: $P_3 = P_4 = 40 \, \text{bar}$
+-   Maximum temperature: $T_4 = 1617^\circ \text{C} = 1890 \, \text{K}$
+-   Dual-combustion cycle $V_5=V_1$
+-   Specific heat at constant volume: $c_v = 0.718 \, \text{kJ/kgK}$
+-   Specific heat at constant pressure: $c_p = 1.005 \, \text{kJ/kgK}$
+-   Ratio of specific heats: $\gamma = \frac{c_p}{c_v} = 1.4$
+
+### Adiabatic Compression (State 1 to State 2)
+
+Using the relation for adiabatic processes: (**1 mark**)
+
+$$
+\frac{T_1}{T_2}=\left(\frac{V_2}{V_1}\right)^{\gamma-1}
+$$
+$$
+T_2=303(11)^{0.4}= 790.678\ \text{K}
+$$
+$$
+P_1V_1^{\gamma}= P_2V_2^{\gamma}
+$$
+
+$$
+P_2= P_1\left(\frac{V_1}{V_2}\right)^{\gamma}
+$$
+$$
+P_2= 1(11)^{1.4}=28.705\ \text{bar}
+$$
+
+### Heat Addition at Constant Volume (State 2 to State 3)
+
+(**1 mark**)
+
+$$
+\frac{T_3}{T_2}=\frac{P_3}{P_2}
+$$
+
+$$
+T_3=790.678\frac{40}{28.705}=1101.798\ \text{K}
+$$
+
+### Heat Addition at Constant Pressure (State 3 to State 4)
+
+Using the relation for constant pressure processes: (**1 mark**)
+
+$$
+\frac{T_4}{T_3} = \frac{V_4}{V_3}
+$$
+
+$$
+V_4 = V_3 \cdot \frac{T_4}{T_3}
+$$
+$$
+V_4 = 1 \cdot \frac{1890}{1101.798}=1.7154
+$$
+
+### Adiabatic Expansion (State 4 to State 5)
+
+Using the relation for adiabatic processes: (**1 mark**)
+
+$$
+P_4V_4^{\gamma}= P_5V_5^{\gamma}
+$$
+
+$$
+P_5= P_4\left(\frac{V_4}{V_5}\right)^{1.4}
+$$
+
+$$
+P_5= 40\left(\frac{1.7154}{11}\right)^{1.4}
+$$
+
+$$
+P_5= 40 \cdot (0.1559)^{1.4}= 2.965\ \text{bar}
+$$
+Since $V_5=V_1$, 
+
+$$
+\frac{P_5}{T_5}=\frac{P_1}{T_1}
+$$
+$$
+T_5=T_1\frac{P_5}{P_1}=303\frac{2.965}{1}=898.395\ \text{K}
+$$
+
+
+### Ideal Thermal Efficiency
+
+The ideal thermal efficiency for the dual-combustion cycle is given by: (**1 mark**)
+
+$$
+\eta = 1 - \frac{c_v(T_5-T_1)}{c_v(T_3-T_2)+c_p(T_4-T_3)}
+$$
+$$
+\eta = 1 - \frac{0.718(898.395-303)}{0.718(1101.798-790.678)+1.005(1890-1101.798)}
+$$
+
+$$
+\eta = 1 - \frac{427.49361}{223.3842+792.143}
+$$
+
+$$
+\eta = 1 - \frac{427.49361}{1015.5272}=1-0.421=0.579=57.9\%
+$$

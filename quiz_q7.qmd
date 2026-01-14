@@ -1,0 +1,109 @@
+---
+title: "Heat Loss Calculation for Mild Steel Tank"
+format: pdf
+---
+
+## Problem Statement
+
+A mild steel tank of wall thickness 10 mm contains water at 90 °C. Calculate the rate of heat loss per m² of tank surface area when the temperature is 15 °C. Given parameters:
+
+-   Thermal conductivity of steel, $k = 50 \, \text{W/mK}$
+-   Heat transfer coefficient for water, $h_{\text{water}} = 2800 \, \text{W/m² K}$
+-   Heat transfer coefficient for air, $h_{\text{air}} = 11 \, \text{W/m² K}$
+-   Wall thickness of tank, $t = 10 \, \text{mm} = 0.01 \, \text{m}$
+-   Temperature of water, $T_{\text{water}} = 90^\circ C$
+-   Temperature of air, $T_{\text{air}} = 15^\circ C$
+
+We need to calculate the rate of heat loss per unit surface area.
+
+## Solution
+
+The rate of heat loss can be calculated using the concept of thermal resistance. For a cylindrical tank, the heat transfer resistance consists of two parts: the resistance due to the tank's steel walls and the resistance due to convection from the water and air.
+
+The total heat transfer rate per unit area is given by:
+
+$$
+Q = \frac{T_{\text{water}} - T_{\text{air}}}{R_{\text{total}}}
+$$
+
+Where $R_{\text{total}}$ is the total thermal resistance, which is the sum of the resistance due to conduction through the steel and the convective resistances at both the water and air interfaces.
+
+### Step 1: Thermal Resistance due to Conduction through Steel
+
+The resistance due to conduction through the steel tank is given by:
+
+$$
+R_{\text{conduction}} = \frac{t}{k}
+$$
+
+Where: - $t$ is the wall thickness of the tank, - $k$ is the thermal conductivity of steel.
+
+Substituting the known values:
+
+$$
+R_{\text{conduction}} = \frac{0.01 \, \text{m}}{50 \, \text{W/mK}} = 0.0002 \, \text{m² K/W}
+$$
+
+### Step 2: Convective Resistance due to Water
+
+The resistance due to convection from the water to the tank wall is given by:
+
+$$
+R_{\text{conv, water}} = \frac{1}{h_{\text{water}}}
+$$
+
+Where $h_{\text{water}}$ is the heat transfer coefficient for water.
+
+Substituting the known values:
+
+$$
+R_{\text{conv, water}} = \frac{1}{2800 \, \text{W/m² K}} = 0.000357 \, \text{m² K/W}
+$$
+
+### Step 3: Convective Resistance due to Air
+
+The resistance due to convection from the tank wall to the air is given by:
+
+$$
+R_{\text{conv, air}} = \frac{1}{h_{\text{air}}}
+$$
+
+Where $h_{\text{air}}$ is the heat transfer coefficient for air.
+
+Substituting the known values:
+
+$$
+R_{\text{conv, air}} = \frac{1}{11 \, \text{W/m² K}} = 0.09091 \, \text{m² K/W}
+$$
+
+### Step 4: Total Thermal Resistance
+
+The total thermal resistance is the sum of the conduction and convection resistances:
+
+$$
+R_{\text{total}} = R_{\text{conduction}} + R_{\text{conv, water}} + R_{\text{conv, air}}
+$$
+
+Substituting the values:
+
+$$
+R_{\text{total}} = 0.0002 + 0.000357 + 0.09091 = 0.091467 \, \text{m² K/W}
+$$
+
+### Step 5: Rate of Heat Loss
+
+Finally, the rate of heat loss per unit surface area is:
+
+$$
+Q = \frac{T_{\text{water}} - T_{\text{air}}}{R_{\text{total}}} = \frac{90 - 15}{0.091467}
+$$
+
+Calculating the result:
+
+$$
+Q = \frac{75}{0.091467} \approx 819.5 \, \text{W/m²}
+$$
+
+## Conclusion
+
+The rate of heat loss per square meter of the tank's surface area is approximately **819.5 W/m²**.

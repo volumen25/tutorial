@@ -1,0 +1,83 @@
+---
+title: "Heat Transfer in a Boiling Pan"
+format: pdf
+---
+
+## Problem Statement
+
+Water is boiling in an aluminum pan placed on an electrical element on a stovetop. The pan has a bottom that is 0.800 cm thick and 14.0 cm in diameter. The boiling water is evaporating at the rate of 1.00 g/s. What is the temperature difference across (through) the bottom of the pan? Given:
+
+-   Thermal conductivity of aluminum: $k = 220$ W/m·K
+-   Latent heat of vaporization (LHV) of water: $L = 2256 \times 10^3 \text{ J/kg}$
+-   Thickness of the pan bottom: $s = 0.800 \text{ cm} = 0.00800 \text{ m}$
+-   Diameter of the pan bottom: $D = 14.0 \text{ cm} = 0.140 \text{ m}$
+-   Mass flow rate of evaporating water: $\dot{m} = 1.00 \text{ g/s} = 0.00100 \text{ kg/s}$
+
+## Solution
+
+### Step 1: Compute the Heat Transfer Rate
+
+The heat energy required to evaporate water is given by: $Q = \dot{m} L$
+
+Substituting values:
+
+$$
+Q = (0.00100 \text{ kg/s}) \times (2256 \times 10\^3 \text{ J/kg})
+$$ 
+
+$$
+Q = 2256 \text{ W}
+$$
+
+### Step 2: Compute the Temperature Difference
+
+Heat conduction through the bottom of the pan is given by Fourier’s Law:
+
+$$
+Q = k A \frac{\Delta T}{s}
+$$
+
+Solving for $\Delta T$:
+
+$$
+\Delta T = \frac{Q s}{k A}
+$$
+
+The area of the pan bottom is: 
+$$
+A = \pi \left(\frac{D}{2}\right)^2
+$$
+
+$$
+A = \pi \left(\frac{0.140}{2}\right)^2
+$$
+
+$$
+A = \pi (0.0700)^2
+$$
+
+$$
+A \approx 0.0154 \text{ m}^2
+$$
+
+Now, substituting values:
+
+$$
+\Delta T = \frac{(2256)(0.00800)}{(220)(0.0154)}
+$$
+
+$$
+\Delta T \approx \frac{18.048}{3.388}
+$$
+
+$$
+\Delta T \approx 5.33 \ K
+$$
+
+## Final Answer
+
+The temperature difference across the bottom of the pan is approximately:
+
+$$
+\mathbf{5.33 \ K}
+$$

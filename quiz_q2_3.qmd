@@ -1,0 +1,187 @@
+---
+title: "Engine Trial Results"
+format: pdf
+---
+
+## Given Data
+
+The following results were obtained during the trial of a single cylinder, four-stroke, diesel engine with the following specifications:
+
+-   **Cylinder bore**: 200 mm
+-   **Stroke**: 400 mm
+-   **Effective brake wheel diameter**: 1.6 m
+-   **Speed**: 258 rev/min
+-   **Effective brake load**: 47 kg
+-   **Area of indicator diagram**: 320 mm²
+-   **Spring constant**: 110 kPa per mm
+-   **Length of diagram**: 65 mm
+-   **Fuel consumption**: 3.2 kg/h
+-   **Calorific value of fuel**: 45 MJ/kg
+-   **Cooling water supplied**: 2.3 kg/min
+-   **Temperature rise of cooling water**: 38°C
+
+Calculate:
+
+(i) Mechanical efficiency
+
+(ii) Indicated thermal efficiency
+
+(iii) Draw up an energy balance account on a basis of 1 minute.
+
+## Calculations
+
+### (i) Mechanical Efficiency
+
+The mechanical efficiency $\eta_m$ is given by:
+
+$$
+\eta_m = \frac{\text{Brake Power}}{\text{Indicated Power}}
+$$
+
+### Brake Power (BP)
+
+The brake power can be calculated from the effective brake load and the speed. The formula for brake power is:
+
+$$
+BP = \tau \cdot \omega
+$$
+
+Where:
+
+-   $\tau$ = torque = $W \cdot r$
+-   $W$ = effective brake load = $47 \ kg \cdot 9.81 = 461.07 \ N$
+-   $r$ = radius of brake wheel = $\frac{1.6}{2}$ m = 0.8 m
+-   $\omega$ = angular velocity = $2 \cdot \pi \cdot n$
+-   $n$ = speed in rev/min = 258 rev/min
+
+Substituting values:
+
+$$
+BP = 461.07 \cdot 0.8 \cdot 2 \pi \cdot \frac{258}{60} \cdot 10^{-3} = 9.9656 \, \text{kW}
+$$
+
+### Indicated Power (IP)
+
+The indicated power can be calculated from the area of the indicator diagram, spring constant, and length of the diagram. The formula for indicated power is:
+
+$$
+IP = P_m \cdot A \cdot L \cdot n
+$$
+
+Where:
+
+-   $P_m$ = mean pressure = $P_m=\frac{Area \ of \ diagram}{Length \ of \ diagram} \cdot c_{\text{spring}}$
+-   Area of the diagram = 320 mm²
+-   Length of the diagram = 65 mm
+-   $c_{\text{spring}}$ = spring constant = 110 kPa/mm
+-   $A$ = Area of piston = $\frac{\pi}{4} \cdot 0.2^2= 0.0314 \ m^2$
+-   $L$ = Length of stroke = 0.4 m
+-   $n$ = speed = 258 rev/min = $\frac{258}{2 \cdot 60}=2.15 \ rev/s$
+
+Substituting values:
+
+$$
+P_m=\frac{320}{65} \cdot 110 =541.5385 \ kPa
+$$
+
+$$
+IP = 541.5385 \cdot 0.0314 \cdot 0.4 \cdot 2.15  \approx 14.6237 \, \text{kW}
+$$
+
+Now, mechanical efficiency can be calculated:
+
+$$
+\eta_m = \frac{9.9656}{14.6237} \cdot 100
+$$
+
+$$
+\boxed{\eta_m = 68.15\%}
+$$
+
+### (ii) Indicated Thermal Efficiency
+
+The indicated thermal efficiency $\eta_{th_i}$ is the ratio of indicated power to the heat input, which can be calculated using fuel consumption and calorific value of the fuel. The formula is:
+
+$$
+\eta_{th_i} = \frac{3.6}{SFOC_i \cdot CV}
+$$
+
+Where:
+
+-   $SFOC_i$ = specific fuel oil consumption = $\frac{3.2}{14.6237}=0.2188 \ \text{kg/kWh}$
+-   $CV$ = calorific value = 45 MJ/kg
+
+Substituting values:
+
+$$
+\eta_{th_i} = \frac{3.6}{0.2188 \cdot 45}
+$$
+
+$$
+\eta_{th_i} = 0.36
+$$
+
+$$
+\boxed{\eta_{th_i} = 36\%}
+$$
+
+### (iii) Energy Balance Account (Basis: 1 Minute)
+
+The energy balance account involves comparing the total energy input and output.
+
+### Energy Input
+
+The total energy input is given by the fuel's calorific value:
+
+$$
+\text{Energy Input} = \dot{m}_{\text{fuel}} \cdot CV
+$$
+
+Substituting values:
+
+$$
+\text{Energy Input} = \frac{3.2}{60} \cdot 45000 \, \text{kJ/min} = 2400 \, \text{kJ/min}
+$$
+
+### Energy Output
+
+1.  **Brake Power Output**: $$ 
+    \text{Brake Power Output} = BP = 9.9656 \, \text{kW} \cdot 60 \ s = 597.936 \, \text{kJ/min} 
+    $$
+
+2.  **Heat Loss through Cooling Water**: $$ 
+    \text{Heat Loss} = \dot{m}_{\text{water}} \cdot c_p \cdot \Delta T 
+    $$
+
+    Where:
+
+    -   $\dot{m}_{\text{water}}$ = mass flow of water = 2.3 kg/min
+    -   $c_p$ = specific heat of water = 4.18 kJ/kg°C
+    -   $\Delta T$ = temperature rise = 38°C
+
+    Substituting values:
+
+$$ 
+\text{Heat Loss} = 2.3 \cdot 4.18 \cdot 38 = 365.332 \, \text{kJ/min} 
+$$
+
+### Energy Balance:
+
+The total energy input and output can now be summarized:
+
+-   **Energy Input**: 2400 kJ/min
+-   **Brake Power Output**: 597.936 kJ/min
+-   **Heat Loss to Cooling Water**: 365.332 kJ/min
+-   **Other Losses**: $2400 - (597.936 + 365.332) = 1436.732$ kJ/min
+
+|                          | kJ/min    | \%     |
+|--------------------------|-----------|--------|
+| Energy from Fuel         | 2400      | 100    |
+| ------------------------ | --------- | ------ |
+| BP                       | 597.936   | 24.914 |
+| Cooling Water            | 365.332   | 15.222 |
+| Other Losses             | 1436.732  | 59.864 |
+| ------------------------ | --------- | ------ |
+| Total                    | 2400      | 100%   |
+
+: Energy Balance

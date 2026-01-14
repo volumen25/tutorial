@@ -1,0 +1,143 @@
+---
+title: "Engine Performance Analysis"
+format: pdf
+hyperrefoptions:
+  - pdfpagemode=UseNone
+  - pdfstartview=FitH
+editor: visual
+---
+
+## Problem Statement
+
+**M_2:** During a test on a four-stroke cycle engine, the following data and results were obtained:
+
+-   Mean height of indicator diagram: 21 mm
+-   Indicator calibration: 27 kN/m² per mm
+-   Swept volume of cylinder: 14 litres
+-   Speed of engine: 6.6 rev/s
+-   Effective brake load: 77 kg
+-   Effective brake radius: 0.7 m
+-   Fuel consumption: 0.002 kg/s
+-   Calorific value of fuel: 44,000 kJ/kg
+-   Cooling water circulation: 0.15 kg/s
+-   Cooling water inlet temperature: 38 °C
+-   Cooling water outlet temperature: 71 °C
+-   Specific heat capacity of water: 4.18 kJ/kg·K
+-   Energy to exhaust gases: 33.6 kJ/s
+
+1.  Determine the indicated and brake outputs and the mechanical efficiency.
+2.  Draw up an overall energy balance in kJ/s and as a percentage.
+
+### Indicated Power (IP)
+
+The indicated power is calculated using the formula:
+
+$$
+IP = P_m \cdot A \cdot L \cdot n
+$$
+
+Where:
+
+-   $P_m$ = Mean effective pressure = $21 \, \text{mm} \cdot 27 \, \text{kN/m}^2/\text{mm} = 567 \, \text{kN/m}^2 = 567 \, \text{kPa}$
+
+-   $V_s= A \cdot L$ = Swept volume per cycle = $14 \, \text{litres} = 0.014 \, \text{m}^3$
+
+-   $n$ = Number of power strokes per second = $\frac{\text{Speed of engine}}{2} = \frac{6.6}{2} = 3.3 \, \text{rev/s}$
+
+Substituting the values:
+
+$$
+IP = 567 \cdot 0.014 \cdot 3.3 = \boxed{26.1954 \, \text{kW}}\ 1 \ mark
+$$
+
+### Brake Power (BP)
+
+The brake power is calculated using the formula:
+
+$$
+BP = 2 \pi N T
+$$
+
+Where:
+
+-   $T$ = Torque = $F \cdot r = (77 \, \text{kg} \cdot 9.81 \, \text{m/s}^2) \cdot 0.7 \, \text{m} = 528.759 \, \text{Nm}$
+
+Substituting the values:
+
+$$
+BP = 2 \pi \cdot 6.6 \cdot 528.759 = \boxed{21.9271 \, \text{kW}}\ 1 \ mark
+$$
+
+### Mechanical Efficiency ($\eta_m$)
+
+The mechanical efficiency is given by:
+
+$$
+\eta_m = \frac{BP}{IP} \cdot 100
+$$
+
+Substituting the values:
+
+$$
+\eta_m = \frac{21.9271}{26.1954} \cdot 100 = 83.71 \, \%
+$$
+
+### Energy Balance
+
+#### Energy Input
+
+The energy input from the fuel is:
+
+$$
+E_{\text{input}} = \dot{m}_f \cdot CV
+$$
+
+Where:
+
+-   $\dot{m}_f$ = Fuel consumption = $0.002 \, \text{kg/s}$
+-   $CV$ = Calorific value = $44,000 \, \text{kJ/kg}$
+
+Substituting the values:
+
+$$
+E_{\text{input}} = 0.002 \cdot 44,000 = \boxed{88 \, \text{kJ/s}}\ 1 \ mark
+$$
+
+#### Energy Output
+
+1.  Brake power (BP): $21.9271 \, \text{kW}$
+2.  Cooling water energy:
+
+$$
+E_{\text{cooling}} = \dot{m}_w \cdot c_p \cdot \Delta T
+$$
+
+Where:
+
+-   $\dot{m}_w$ = Cooling water circulation = $0.15 \, \text{kg/s}$
+
+-   $c_p$ = Specific heat capacity = $4.18 \ kJ/kg·K$
+
+-   $\Delta T$ = Temperature rise = $71 - 38 = 33 \, \text{°C}$
+
+Substituting the values:
+
+$$
+E_{\text{cooling}} = 0.15 \cdot 4.18 \cdot 33 = \boxed{20.69 \, \text{kJ/s}}\ 1 \ mark
+$$
+
+3.  Energy to exhaust gases: $33.6 \, \text{kJ/s}$
+
+#### Energy Balance Table
+
+| Component     | Energy (kJ/s) | Percentage (%) |
+|---------------|---------------|----------------|
+| Brake Power   | 21.91         | 24.90          |
+| Cooling Water | 20.69         | 23.52          |
+| Exhaust Gases | 33.60         | 38.18          |
+| Surroundings  | 11.80         | 13.41          |
+| **Total**     | **88.00**     | **100.00**     |
+
+## Conclusion
+
+The energy balance was drawn up, showing the distribution of energy in the system. (**1 mark**)

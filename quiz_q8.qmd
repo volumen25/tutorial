@@ -1,0 +1,61 @@
+---
+title: "Heat Exchanger Cover Heat Loss Analysis"
+format: pdf
+---
+
+## Problem Statement
+
+The shell diameter of a large heat exchanger is 1.6 m. The flat endplate (cover) at one end is made of steel, 52 mm thick, and is uninsulated. If the maximum heat loss permitted through the cover, to avoid insulating the cover, is 120 MJ/h, what is the temperature difference allowed across the head? Given:
+
+-   Thermal conductivity of steel: $k = 60$ W/m°C
+-   Heat loss: $Q = 120$ MJ/h
+-   Thickness of the plate: $s = 52$ mm $= 0.052$ m
+-   Diameter of the shell: $D = 1.6$ m
+
+## Solution
+
+### Step 1: Compute the Heat Transfer Area
+
+The cover is circular with a diameter of 1.6 m, so its area is:
+
+$$ A = \pi \left( \frac{D}{2} \right)^2 $$
+
+Substituting the values:
+
+$$ A = \pi \left( \frac{1.6}{2} \right)^2 $$
+
+$$ A = \pi (0.8)^2 $$
+
+$$ A = 2.0106 \text{ m}^2 $$
+
+### Step 2: Convert Heat Loss to Watts
+
+The given heat loss is in MJ/h, so we convert it to watts:
+
+$$ Q = 120 \times 10^6 \text{ J/h} \times \frac{1}{3600} \text{ h/s} $$
+
+$$ Q = 33,333.33 \text{ W} $$
+
+### Step 3: Apply Fourier's Law for Conduction
+
+Fourier’s law for steady-state heat conduction is:
+
+$$ Q = \frac{k A \Delta T}{s} $$
+
+Solving for the temperature difference $\Delta T$:
+
+$$ \Delta T = \frac{Q s}{k A} $$
+
+Substituting the known values:
+
+$$ \Delta T = \frac{(33,333.33) (0.052)}{(60) (2.0106)} $$
+
+$$ \Delta T = \frac{1,733.33}{120.636} $$
+
+$$ \Delta T = 14.37 ^\circ C $$
+
+### Final Answer
+
+The maximum allowable temperature difference across the steel cover is:
+
+$$ \Delta T = 14.37 ^\circ C $$

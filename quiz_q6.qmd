@@ -1,0 +1,65 @@
+---
+title: "Heat Transfer Through Glass Window"
+format: pdf
+---
+
+### Problem Statement
+
+A glass window in a refrigerated room has a surface area of 5 m². Heat transfer is designed at 20 MJ/hr when a temperature difference of 25°C exists across the window. Assuming for this glass that $k = 1.0 , \text{W/m°C}$, how thick must the glass be?
+
+### Given Data
+
+-   Surface area $A = 5 \, \text{m}^2$
+-   Heat transfer rate $Q = 20 , \text{MJ/hr} = \frac{20 \times 10^6}{3600} , \text{W}$
+-   Temperature difference $\Delta T = 25 , \text{°C}$
+-   Thermal conductivity $k = 1.0 , \text{W/m°C}$
+
+### Solution
+
+We can use Fourier's Law for heat conduction, which is given by the formula:
+
+$$
+Q = \frac{k A \Delta T}{s}
+$$
+
+Where:
+
+-   $Q$ is the heat transfer rate (W)
+
+-   $k$ is the thermal conductivity (W/m°C)
+
+-   $A$ is the surface area (m²)
+
+-   $\Delta T$ is the temperature difference (°C)
+
+-   $s$ is the thickness of the material (m)
+
+Rearranging the equation to solve for thickness ( d ):
+
+$$
+s = \frac{k A \Delta T}{Q}
+$$
+
+Substitute the known values into the equation:
+
+$$
+s = \frac{(1.0 \, \text{W/m°C}) (5 \, \text{m}^2) (25 \, \text{°C})}{\frac{20 \times 10^6}{3600} \, \text{W}}
+$$
+
+Simplifying:
+
+$$
+s = \frac{125}{\frac{20 \times 10^6}{3600}} = \frac{125 \times 3600}{20 \times 10^6}
+$$
+
+Finally:
+
+$$
+s = \frac{450000}{20000000} = 0.0225 \, \text{m}
+$$
+
+Thus, the thickness of the glass must be **0.0225 meters** or **22.5 mm**.
+
+### Final Answer
+
+The thickness of the glass must be **22.5 mm**.

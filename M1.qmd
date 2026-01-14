@@ -1,0 +1,116 @@
+---
+title: "Heat Exchanger Surface Area Calculation"
+format: pdf
+hyperrefoptions:
+  - pdfpagemode=UseNone
+  - pdfstartview=FitH
+editor: visual
+---
+
+## Problem
+
+**M_1:** In an inert gas system, the boiler exhaust is cooled from 400°C to 120°C in a parallel flow heat exchanger. The gas flow rate is 0.5 kg/s, the cooling water flow rate is 0.6 kg/s, and the cooling water inlet temperature is 10°C. The overall heat transfer coefficient from the gas to the water is 140 W/m²K. Determine the cooling surface area required. Take $c_p$ for exhaust gas to be 1130 J/kgK and $c_p$ for water to be 4190 J/kgK.
+
+## Solution
+
+### Heat Transfer Rate
+
+The heat transfer rate ($Q$) can be calculated using the formula:
+
+$$
+Q = \dot{m}_{\text{gas}} \cdot c_{p,\text{gas}} \cdot (T_{\text{gas,in}} - T_{\text{gas,out}})
+$$
+
+Substituting the given values:
+
+$$
+Q = 0.5 \cdot 1130 \cdot (400 - 120)
+$$
+
+$$
+Q = \boxed{158200 \, \text{W}} \ 1 \ mark
+$$
+
+### Log Mean Temperature Difference (LMTD)
+
+The temperature differences at the two ends of the heat exchanger are:
+
+$$
+\Delta T_1 = T_{\text{gas,in}} - T_{\text{water,in}} = 400 - 10 = 390 \, \text{°C}
+$$
+
+$$
+\Delta T_2 = T_{\text{gas,out}} - T_{\text{water,out}}
+$$
+
+To find $T_{\text{water,out}}$, use the heat balance equation:
+
+$$
+Q = \dot{m}_{\text{water}} \cdot c_{p,\text{water}} \cdot (T_{\text{water,out}} - T_{\text{water,in}})
+$$
+
+Rearranging for $T_{\text{water,out}}$:
+
+$$
+T_{\text{water,out}} = \frac{Q}{\dot{m}_{\text{water}} \cdot c_{p,\text{water}}} + T_{\text{water,in}}
+$$
+
+Substitute the known values:
+
+$$
+T_{\text{water,out}} = \frac{158200}{0.6 \cdot 4190} + 10
+$$
+
+$$
+T_{\text{water,out}} \approx 72.93 \, \text{°C}
+$$
+
+Now calculate $\Delta T_2$:
+
+$$
+\Delta T_2 = T_{\text{gas,out}} - T_{\text{water,out}} = 120 - 72.93 = 47.07 \, \text{°C}
+$$
+
+The LMTD is given by:
+
+$$
+\text{LMTD} = \frac{\Delta T_1 - \Delta T_2}{\ln\left(\frac{\Delta T_1}{\Delta T_2}\right)}
+$$
+
+Substitute the values:
+
+$$
+\text{LMTD} = \frac{390 - 47.07}{\ln\left(\frac{390}{47.07}\right)}=\frac{342.93}{\ln(8.29)}
+$$
+
+$$
+\text{LMTD} \approx \boxed{162.14 \, \text{°C}} \ 12 \ marks
+$$
+
+### Cooling Surface Area
+
+The cooling surface area ($A$) is calculated using the formula:
+
+$$
+Q = U \cdot A \cdot \text{LMTD}
+$$
+
+Rearranging for $A$:
+
+$$
+A = \frac{Q}{U \cdot \text{LMTD}}
+$$
+
+Substitute the known values:
+
+$$
+A = \frac{158200}{140 \cdot 162.14}
+$$
+
+$$
+A \approx \boxed{6.97 \, \text{m}^2}  \ 2 \ marks
+$$
+
+### Final Answer
+
+The required cooling surface area is approximately **6.97 m²**.

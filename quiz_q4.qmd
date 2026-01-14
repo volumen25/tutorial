@@ -1,0 +1,79 @@
+---
+title: "Heat Conduction through a Duralumin Disc"
+format: pdf
+header-includes:
+  - \usepackage{amsmath}
+---
+
+## Problem Statement
+
+Calculate the quantity of heat conducted per hour through a duralumin circular disc with the following properties:
+
+-   Diameter: 100 mm
+-   Thickness: 20 mm
+-   Temperature drop: 10°C
+-   Thermal conductivity of duralumin: 150 W/mK
+
+## Solution
+
+The heat conduction rate is given by Fourier’s law:
+
+$$
+Q = \frac{k A \Delta T}{s}
+$$
+
+where:
+
+-   $Q$ is the heat conducted per second (W),
+-   $k$ = 150 W/mK (thermal conductivity),
+-   $A$ is the cross-sectional area of the disc,
+-   $∆ T$ = 10 °C (temperature difference),
+-   $s$ = 20 mm = 0.02 m (thickness of the disc).
+
+### Step 1: Compute the Cross-Sectional Area
+
+The cross-sectional area of the disc is:
+
+$$
+A = \pi r^2
+$$
+
+Given the diameter d = 100 mm, the radius is:
+
+$$
+ r = \frac{d}{2} = \frac{100}{2} = 50 \text{ mm} = 0.05 \text{ m}
+$$
+
+Thus,
+
+$$
+A = \pi (0.05)^2 = \pi \times 0.0025 = 0.00785 \text{ m}^2
+$$
+
+### Step 2: Compute the Heat Transfer Rate
+
+Substituting the values into Fourier’s law:
+
+$$
+Q = \frac{150 \times 0.00785 \times 10}{0.02}
+$$
+
+$$
+Q = \frac{11.775}{0.02} = 588.75 \text{ W}
+$$
+
+### Step 3: Compute the Heat Conducted per Hour
+
+Since ( 1 ) hour = ( 3600 ) seconds:
+
+$$
+Q_{\text{hour}} = 588.75 \times 3600
+$$
+
+$$
+Q_{\text{hour}} = 2.1195 \times 10^6 \text{ J}
+$$
+
+## Final Answer
+
+The quantity of heat conducted per hour through the duralumin disc is **2.12 MJ**.

@@ -1,0 +1,67 @@
+---
+title: "Heat Transfer for Frozen Fish Storage Room"
+format: pdf
+---
+
+## Problem Statement
+
+The product storage room for a fresh frozen fish plant is 30 m long, 23 m wide, and 3 m high. The walls and ceiling are insulated with 25 cm of granulated cork ($k = 0.049 \text{ W/mK}$) and the floor with 15 cm of cork-board ($k = 0.043 \text{ W/mK}$). Calculate the heat transfer per hour due to conduction if the temperature inside the chamber is kept at -30°C and the ambient air temperature outside is 21°C. Take ground temperature as 10°C.
+
+## Solution
+
+The **heat transfer** is given by:
+
+$$
+Q = \frac{k A t \Delta T}{s}
+$$
+
+where:
+
+-   $Q$ = heat transfer (J)
+-   $k$ = thermal conductivity (W/mK)
+-   $t$ = time (s)
+-   $A$ = surface area (m²)
+-   $\Delta T$ = temperature difference (K)
+-   $s$ = thickness of insulation (m)
+
+### Surface Areas
+
+-   **Side Walls:** $$ 
+    A_{sides} = (4 \times (3 \times 30))  = 360 \ m^2
+    $$
+
+-   **Ceiling or Floor:** $$ 
+    A_{ceiling, floor} = 30 \times 23 = 690 \ m^2
+    $$
+
+### Heat Loss through Walls and Ceiling
+
+For the walls and ceiling, total area:
+
+$$
+A_{external} = 360 + 690 = 1050 \  m^2
+$$
+
+$$
+Q_{external} = \frac{0.049 \times 1050 \times 3600 \times (21 - (-30)) \times 10^{-3}}{0.25} = 37784.88 \ kJ 
+$$
+
+### Heat Loss through Floor
+
+For the floor, total area = $690 \ m^2$
+
+$$
+Q_{floor} = \frac{0.043 \times 690 \times 3600 \times (10 - (-30)) \times 10^{-3}}{0.15} = 28483.2 \ kJ
+$$
+
+### Total Heat Transfer
+
+$$
+Q_{total} = Q_{external} + Q_{floor}
+$$
+
+The heat transfer per hour is:
+
+$$
+Q_{total} = 37784.88  + 28483.2 = \boxed{66268.08 \ kJ}
+$$

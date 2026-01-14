@@ -1,0 +1,82 @@
+---
+title: "Heat Radiation Calculation"
+format: pdf
+---
+
+## Problem Statement
+
+A flat circular plate is 400 mm in diameter. Calculate the theoretical quantity of heat radiated per hour when its temperature is 227 °C and the temperature of its surroundings is 27 °C.
+
+Given:
+
+-   Stefan–Boltzmann constant: $\sigma = 5.67 \times 10^{-11} \text{ kW} \cdot \text{m}^{-2} \cdot \text{K}^{-4}$
+-   Plate diameter: $d = 400$ mm $= 0.4$ m
+-   Plate temperature: $T_1 = 227 + 273 = 500$ K
+-   Surrounding temperature: $T_2 = 27 + 273 = 300$ K
+
+## Solution
+
+The heat radiated per second is given by the Stefan–Boltzmann law:
+
+$$
+Q = \sigma A (T_1^4 - T_2^4)
+$$
+
+where:
+
+-   $Q$ = heat radiated per second (kW)
+-   $A$ = surface area of the plate (m²)
+-   $T_1$ and $T_2$ are the absolute temperatures in Kelvin
+-   $\sigma$ is the Stefan–Boltzmann constant
+
+### Step 1: Calculate the Surface Area
+
+Since the plate is a flat circular surface, its area is:
+
+$$
+A = \pi \left(\frac{d}{2}\right)^2
+$$
+
+Substituting values:
+
+$$
+A = \pi \left(\frac{0.4}{2}\right)^2 = \pi (0.2)^2 = 0.1257 \text{ m}^2
+$$
+
+### Step 2: Compute the Heat Radiated
+
+First, calculate the temperature difference in fourth powers:
+
+$$
+T_1^4 = 500^4 = 6.25 \times 10^{10}
+$$
+
+$$
+T_2^4 = 300^4 = 8.1 \times 10^9
+$$
+
+$$
+T_1^4 - T_2^4 = 6.25 \times 10^{10} - 8.1 \times 10^9 = 5.44 \times 10^{10}
+$$
+
+Now, using the formula:
+
+$$
+Q = (5.67 \times 10^{-11}) \times (0.1257) \times (5.44 \times 10^{10})
+$$
+
+$$
+Q = 0.3877 \text{ kW} 
+$$
+
+### Step 3: Convert to Energy per Hour
+
+Since 1 hour = 3600 seconds, the total energy radiated per hour is:
+
+$$
+Q_{\text{hour}} = 0.3877 \times 3600 = 1395.79 \text{ kJ}
+$$
+
+## Final Answer
+
+The theoretical quantity of heat radiated per hour is **1395.79 kJ**.
