@@ -970,11 +970,11 @@ A = \frac{180,235}{25,252.5} \approx \boxed{7.14 \, \text{m}^2}
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>T_water_out <span class="op">=</span> (Q <span class="op">/</span> (m_dot_water <span class="op">*</span> cp_water)) <span class="op">+</span> T_water_in</span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperature differences</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>Delta_T1 <span class="op">=</span> T_gas_in <span class="op">-</span> T_water_in</span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>Delta_T2 <span class="op">=</span> T_gas_out <span class="op">-</span> T_water_out</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>Theta_1 <span class="op">=</span> T_gas_in <span class="op">-</span> T_water_in</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>Theta_2 <span class="op">=</span> T_gas_out <span class="op">-</span> T_water_out</span>
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="co"># LMTD</span></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>LMTD <span class="op">=</span> (Delta_T1 <span class="op">-</span> Delta_T2) <span class="op">/</span> math.log(Delta_T1 <span class="op">/</span> Delta_T2)</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="co"># LMTD Theta_m</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>LMTD <span class="op">=</span> (Theta_1 <span class="op">-</span> Theta_2) <span class="op">/</span> math.log(Theta_1 <span class="op">/</span> Theta_2)</span>
 <span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Surface area</span></span>
 <span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> Q <span class="op">/</span> (U <span class="op">*</span> LMTD)</span>
@@ -983,7 +983,7 @@ A = \frac{180,235}{25,252.5} \approx \boxed{7.14 \, \text{m}^2}
 <span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Heat Transfer Rate: </span><span class="sc">{</span>Q<span class="sc">:,.2f}</span><span class="ss"> W"</span>)</span>
 <span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Water Outlet Temp: </span><span class="sc">{</span>T_water_out<span class="sc">:.2f}</span><span class="ss">°C"</span>)</span>
 <span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"LMTD: </span><span class="sc">{</span>LMTD<span class="sc">:.2f}</span><span class="ss">°C"</span>)</span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Surface Area: </span><span class="sc">{</span>A<span class="sc">:.4f}</span><span class="ss"> m²"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Surface Area: </span><span class="sc">{</span>A<span class="sc">:.2f}</span><span class="ss"> m²"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>

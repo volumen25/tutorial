@@ -24,11 +24,11 @@ Q = m_dot_gas * cp_gas * (T_gas_in - T_gas_out)
 T_water_out = (Q / (m_dot_water * cp_water)) + T_water_in
 
 # Temperature differences
-Delta_T1 = T_gas_in - T_water_in
-Delta_T2 = T_gas_out - T_water_out
+Theta_1 = T_gas_in - T_water_in
+Theta_2 = T_gas_out - T_water_out
 
-# LMTD
-LMTD = (Delta_T1 - Delta_T2) / math.log(Delta_T1 / Delta_T2)
+# LMTD Theta_m
+LMTD = (Theta_1 - Theta_2) / math.log(Theta_1 / Theta_2)
 
 # Surface area
 A = Q / (U * LMTD)
@@ -37,4 +37,4 @@ A = Q / (U * LMTD)
 print(f"Heat Transfer Rate: {Q:,.2f} W")
 print(f"Water Outlet Temp: {T_water_out:.2f}°C")
 print(f"LMTD: {LMTD:.2f}°C")
-print(f"Surface Area: {A:.4f} m²")
+print(f"Surface Area: {A:.2f} m²")
