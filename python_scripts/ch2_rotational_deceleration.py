@@ -50,7 +50,9 @@ angular_deceleration_rad_per_s2 = braking_torque_n_m / moment_of_inertia_kg_m2
 
 # Calculate time to stop using ω_f = ω_0 - αt
 # With ω_f = 0 (comes to rest): t = ω_0 / α
-time_to_stop_s = initial_angular_velocity_rad_per_s / angular_deceleration_rad_per_s2
+time_to_stop_s = (
+    initial_angular_velocity_rad_per_s / angular_deceleration_rad_per_s2
+)
 
 # Convert time to minutes
 time_to_stop_min = time_to_stop_s / 60.0
@@ -61,7 +63,9 @@ time_to_stop_min = time_to_stop_s / 60.0
 
 # Calculate total angular displacement using θ = ω_0t - ½αt²
 # Or equivalently: θ = ½ω_0t (when final velocity is zero)
-angular_displacement_rad = 0.5 * initial_angular_velocity_rad_per_s * time_to_stop_s
+angular_displacement_rad = (
+    0.5 * initial_angular_velocity_rad_per_s * time_to_stop_s
+)
 
 # Convert angular displacement from radians to revolutions
 number_of_revolutions = angular_displacement_rad / (2.0 * math.pi)

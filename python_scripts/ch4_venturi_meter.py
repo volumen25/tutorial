@@ -51,7 +51,9 @@ throat_velocity_m_per_s = math.sqrt(
 volumetric_flow_rate_m3_per_s = throat_area_m2 * throat_velocity_m_per_s
 
 # Calculate mass flow rate using ṁ = ρ · Q
-mass_flow_rate_kg_per_s = water_density_kg_per_m3 * volumetric_flow_rate_m3_per_s
+mass_flow_rate_kg_per_s = (
+    water_density_kg_per_m3 * volumetric_flow_rate_m3_per_s
+)
 
 # ===============================================
 # OUTPUT RESULTS

@@ -34,7 +34,9 @@ pipe_cross_sectional_area_m2 = math.pi * pipe_radius_m**2
 # ==============================
 
 # Calculate volumetric flow rate using Q = A · v
-volumetric_flow_rate_m3_per_s = pipe_cross_sectional_area_m2 * oil_velocity_m_per_s
+volumetric_flow_rate_m3_per_s = (
+    pipe_cross_sectional_area_m2 * oil_velocity_m_per_s
+)
 
 # Calculate oil density from relative density
 oil_density_kg_per_m3 = oil_relative_density * water_density_kg_per_m3
@@ -51,4 +53,7 @@ mass_flow_rate_tonnes_per_hour = mass_flow_rate_kg_per_s * 3600 / 1000
 
 print("Pipe Flow Analysis Results:")
 print(f"  Volumetric flow rate : {volumetric_flow_rate_m3_per_s:.4f} m³/s")
-print(f"  Mass flow rate       : {mass_flow_rate_tonnes_per_hour:.4f} " f"tonnes/hour")
+print(
+    f"  Mass flow rate       : {mass_flow_rate_tonnes_per_hour:.4f} "
+    f"tonnes/hour"
+)

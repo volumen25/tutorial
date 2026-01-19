@@ -47,13 +47,21 @@ def calculate_forces(post, jib, tie, load):
 
     # Calculate angles using law of cosines
     try:
-        angle_at_post_rad = math.acos((jib**2 + tie**2 - post**2) / (2 * jib * tie))
-        angle_at_tie_rad = math.acos((jib**2 + post**2 - tie**2) / (2 * jib * post))
+        angle_at_post_rad = math.acos(
+            (jib**2 + tie**2 - post**2) / (2 * jib * tie)
+        )
+        angle_at_tie_rad = math.acos(
+            (jib**2 + post**2 - tie**2) / (2 * jib * post)
+        )
         angle_at_jib_rad = math.pi - angle_at_post_rad - angle_at_tie_rad
 
         # Calculate forces using law of sines
-        force_in_jib = load * math.sin(angle_at_jib_rad) / math.sin(angle_at_post_rad)
-        force_in_tie = load * math.sin(angle_at_tie_rad) / math.sin(angle_at_post_rad)
+        force_in_jib = (
+            load * math.sin(angle_at_jib_rad) / math.sin(angle_at_post_rad)
+        )
+        force_in_tie = (
+            load * math.sin(angle_at_tie_rad) / math.sin(angle_at_post_rad)
+        )
 
         # Convert angles to degrees
         angle_at_post_deg = math.degrees(angle_at_post_rad)
@@ -87,7 +95,9 @@ valid_tie_lengths = []
 print("Analyzing effect of varying tie length (jib angle)...\n")
 
 for tie_len in tie_lengths:
-    result = calculate_forces(post_length_m, jib_length_m, tie_len, load_force_kn)
+    result = calculate_forces(
+        post_length_m, jib_length_m, tie_len, load_force_kn
+    )
     if result:
         f_jib, f_tie, _, _, angle_jib = result
         jib_forces.append(f_jib)
@@ -121,7 +131,9 @@ print("Minimum total force configuration:")
 print(f"  Tie length: {valid_tie_lengths[min_total_idx]:.2f} m")
 print(f"  Jib force:  {jib_forces[min_total_idx]:.2f} kN")
 print(f"  Tie force:  {tie_forces[min_total_idx]:.2f} kN")
-print(f"  Total:      {jib_forces[min_total_idx] + tie_forces[min_total_idx]:.2f} kN")
+print(
+    f"  Total:      {jib_forces[min_total_idx] + tie_forces[min_total_idx]:.2f} kN"
+)
 print(f"  Jib angle:  {jib_angles[min_total_idx]:.2f}°\n")
 
 print(f"Current configuration (tie = {tie_length_m} m):")
@@ -183,7 +195,9 @@ ax1.grid(True, alpha=0.3)
 
 # Plot 2: Jib Angle vs Tie Length
 ax2.plot(valid_tie_lengths, jib_angles, "m-", linewidth=2, label="Jib Angle")
-ax2.axhline(y=45, color="gray", linestyle="--", alpha=0.5, label="45° Reference")
+ax2.axhline(
+    y=45, color="gray", linestyle="--", alpha=0.5, label="45° Reference"
+)
 ax2.plot(
     valid_tie_lengths[min_total_idx],
     jib_angles[min_total_idx],
@@ -207,7 +221,9 @@ ax2.legend(fontsize=10)
 ax2.grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.savefig("/home/claude/crane_optimization.png", dpi=150, bbox_inches="tight")
+plt.savefig(
+    "/home/claude/crane_optimization.png", dpi=150, bbox_inches="tight"
+)
 print("\n" + "=" * 79)
 print("Graph saved as: crane_optimization.png")
 print("=" * 79)
@@ -219,8 +235,7 @@ print("=" * 79)
 print("\n" + "=" * 79)
 print("KEY INSIGHTS FOR OPTIMAL CRANE DESIGN")
 print("=" * 79)
-print(
-    """
+print("""
 1. TOTAL FORCE MINIMIZATION:
    - The minimum total force occurs when the geometry creates a balanced
      load distribution between the jib and tie.
@@ -241,5 +256,4 @@ print(
    - Increasing jib length provides more reach but may increase forces.
    - Adjusting tie length is often the easiest way to optimize.
    - Consider variable-length ties (winches) for different load positions.
-"""
-)
+""")

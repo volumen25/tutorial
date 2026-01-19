@@ -79,9 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-14cbc709409b9607cfe384ca3dce8273.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c213800f9ad2c394781badd4e3c4d3bb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -415,19 +415,30 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="header-section-number">2.2.1</span> Code</a></li>
   </ul></li>
-  <li><a href="#latent-heat-of-vaporization" id="toc-latent-heat-of-vaporization" class="nav-link" data-scroll-target="#latent-heat-of-vaporization"><span class="header-section-number">2.3</span> Latent Heat of Vaporization</a>
+  <li><a href="#heat-transfer-calculation-for-cold-storage-room" id="toc-heat-transfer-calculation-for-cold-storage-room" class="nav-link" data-scroll-target="#heat-transfer-calculation-for-cold-storage-room"><span class="header-section-number">2.3</span> Heat Transfer Calculation for Cold Storage Room</a>
   <ul class="collapse">
   <li><a href="#code-1" id="toc-code-1" class="nav-link" data-scroll-target="#code-1"><span class="header-section-number">2.3.1</span> Code</a></li>
   </ul></li>
-  <li><a href="#convection-heat-transfer" id="toc-convection-heat-transfer" class="nav-link" data-scroll-target="#convection-heat-transfer"><span class="header-section-number">2.4</span> Convection Heat Transfer</a></li>
-  <li><a href="#hot-metal-convection-heat-transfer" id="toc-hot-metal-convection-heat-transfer" class="nav-link" data-scroll-target="#hot-metal-convection-heat-transfer"><span class="header-section-number">2.5</span> Hot Metal Convection Heat Transfer</a>
+  <li><a href="#latent-heat-of-vaporization" id="toc-latent-heat-of-vaporization" class="nav-link" data-scroll-target="#latent-heat-of-vaporization"><span class="header-section-number">2.4</span> Latent Heat of Vaporization</a>
   <ul class="collapse">
-  <li><a href="#code-2" id="toc-code-2" class="nav-link" data-scroll-target="#code-2"><span class="header-section-number">2.5.1</span> Code</a></li>
+  <li><a href="#code-2" id="toc-code-2" class="nav-link" data-scroll-target="#code-2"><span class="header-section-number">2.4.1</span> Code</a></li>
   </ul></li>
-  <li><a href="#radiation" id="toc-radiation" class="nav-link" data-scroll-target="#radiation"><span class="header-section-number">2.6</span> Radiation</a></li>
-  <li><a href="#radiant-heat-from-a-flat-circular-plate" id="toc-radiant-heat-from-a-flat-circular-plate" class="nav-link" data-scroll-target="#radiant-heat-from-a-flat-circular-plate"><span class="header-section-number">2.7</span> Radiant Heat from a Flat Circular Plate</a>
+  <li><a href="#convection-heat-transfer" id="toc-convection-heat-transfer" class="nav-link" data-scroll-target="#convection-heat-transfer"><span class="header-section-number">2.5</span> Convection Heat Transfer</a></li>
+  <li><a href="#hot-metal-convection-heat-transfer" id="toc-hot-metal-convection-heat-transfer" class="nav-link" data-scroll-target="#hot-metal-convection-heat-transfer"><span class="header-section-number">2.6</span> Hot Metal Convection Heat Transfer</a>
   <ul class="collapse">
-  <li><a href="#code-3" id="toc-code-3" class="nav-link" data-scroll-target="#code-3"><span class="header-section-number">2.7.1</span> Code</a></li>
+  <li><a href="#code-3" id="toc-code-3" class="nav-link" data-scroll-target="#code-3"><span class="header-section-number">2.6.1</span> Code</a></li>
+  </ul></li>
+  <li><a href="#radiation" id="toc-radiation" class="nav-link" data-scroll-target="#radiation"><span class="header-section-number">2.7</span> Radiation</a></li>
+  <li><a href="#radiant-heat-from-a-flat-circular-plate" id="toc-radiant-heat-from-a-flat-circular-plate" class="nav-link" data-scroll-target="#radiant-heat-from-a-flat-circular-plate"><span class="header-section-number">2.8</span> Radiant Heat from a Flat Circular Plate</a>
+  <ul class="collapse">
+  <li><a href="#code-4" id="toc-code-4" class="nav-link" data-scroll-target="#code-4"><span class="header-section-number">2.8.1</span> Code</a></li>
+  </ul></li>
+  <li><a href="#heat-exchangers" id="toc-heat-exchangers" class="nav-link" data-scroll-target="#heat-exchangers"><span class="header-section-number">2.9</span> Heat Exchangers</a>
+  <ul class="collapse">
+  <li><a href="#heat-transfer-rate" id="toc-heat-transfer-rate" class="nav-link" data-scroll-target="#heat-transfer-rate"><span class="header-section-number">2.9.1</span> Heat Transfer Rate</a></li>
+  <li><a href="#log-mean-temperature-difference-lmtd" id="toc-log-mean-temperature-difference-lmtd" class="nav-link" data-scroll-target="#log-mean-temperature-difference-lmtd"><span class="header-section-number">2.9.2</span> Log Mean Temperature Difference (LMTD)</a></li>
+  <li><a href="#cooling-surface-area" id="toc-cooling-surface-area" class="nav-link" data-scroll-target="#cooling-surface-area"><span class="header-section-number">2.9.3</span> Cooling Surface Area</a></li>
+  <li><a href="#final-answer" id="toc-final-answer" class="nav-link" data-scroll-target="#final-answer"><span class="header-section-number">2.9.4</span> Final Answer</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -554,8 +565,91 @@ Q = \frac{k A \Delta T}{s} \quad \Rightarrow \quad \Delta T = \frac{Q s}{k A}
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Temperature difference across the endplate: </span><span class="sc">{</span>delta_T<span class="sc">:.2f}</span><span class="ss"> °C"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="latent-heat-of-vaporization" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="latent-heat-of-vaporization"><span class="header-section-number">2.3</span> Latent Heat of Vaporization</h2>
+<section id="heat-transfer-calculation-for-cold-storage-room" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="heat-transfer-calculation-for-cold-storage-room"><span class="header-section-number">2.3</span> Heat Transfer Calculation for Cold Storage Room</h2>
+<p>The product storage room for a fresh frozen fish plant is 30 m long, 23 m wide, and 3 m high. The walls and ceiling are insulated with 25 cm of granulated cork (<span class="math inline">\(k = 0.049 \text{ W/mK}\)</span>), and the floor with 15 cm of corkboard (<span class="math inline">\(k = 0.043 \text{ W/mK}\)</span>). Calculate the heat transfer per hour due to conduction if the temperature inside the chamber is kept at -30°C and the ambient air temperature outside is 21°C. Take the ground temperature as 10°C.</p>
+<section id="code-1" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="code-1"><span class="header-section-number">2.3.1</span> Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">Heat Transfer Calculation for Cold Storage Room</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">Calculate heat transfer per hour through walls, ceiling, and floor</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">due to conduction in a frozen fish storage room.</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Room dimensions</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>length <span class="op">=</span> <span class="dv">30</span>  <span class="co"># m</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>width <span class="op">=</span> <span class="dv">23</span>  <span class="co"># m</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>height <span class="op">=</span> <span class="dv">3</span>  <span class="co"># m</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Insulation properties</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>cork_thickness_walls <span class="op">=</span> <span class="fl">0.25</span>  <span class="co"># m (25 cm)</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>cork_k_walls <span class="op">=</span> <span class="fl">0.049</span>  <span class="co"># W/mK</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>corkboard_thickness_floor <span class="op">=</span> <span class="fl">0.15</span>  <span class="co"># m (15 cm)</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>corkboard_k_floor <span class="op">=</span> <span class="fl">0.043</span>  <span class="co"># W/mK</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperatures</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>T_inside <span class="op">=</span> <span class="op">-</span><span class="dv">30</span>  <span class="co"># °C</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>T_ambient <span class="op">=</span> <span class="dv">21</span>  <span class="co"># °C</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>T_ground <span class="op">=</span> <span class="dv">10</span>  <span class="co"># °C</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate surface areas</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>area_floor <span class="op">=</span> length <span class="op">*</span> width</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>area_ceiling <span class="op">=</span> length <span class="op">*</span> width</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>area_wall_long <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> (length <span class="op">*</span> height)  <span class="co"># Two long walls</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>area_wall_short <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> (width <span class="op">*</span> height)  <span class="co"># Two short walls</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>area_walls_total <span class="op">=</span> area_wall_long <span class="op">+</span> area_wall_short</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Heat transfer equation: Q = k × A × ΔT / s</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co"># where:</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co">#   Q = heat transfer rate (W)</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co">#   k = thermal conductivity (W/mK)</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co">#   A = area (m²)</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="co">#   ΔT = temperature difference (K or °C)</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="co">#   s = thickness (m)</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Heat transfer through walls (exposed to ambient air)</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>delta_T_walls <span class="op">=</span> T_ambient <span class="op">-</span> T_inside</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>Q_walls <span class="op">=</span> (</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    cork_k_walls <span class="op">*</span> area_walls_total <span class="op">*</span> delta_T_walls</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>) <span class="op">/</span> cork_thickness_walls</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Heat transfer through ceiling (exposed to ambient air)</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>delta_T_ceiling <span class="op">=</span> T_ambient <span class="op">-</span> T_inside</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>Q_ceiling <span class="op">=</span> (</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    cork_k_walls <span class="op">*</span> area_ceiling <span class="op">*</span> delta_T_ceiling</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>) <span class="op">/</span> cork_thickness_walls</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Heat transfer through floor (exposed to ground)</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>delta_T_floor <span class="op">=</span> T_ground <span class="op">-</span> T_inside</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>Q_floor <span class="op">=</span> (</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    corkboard_k_floor <span class="op">*</span> area_floor <span class="op">*</span> delta_T_floor</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>) <span class="op">/</span> corkboard_thickness_floor</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Total heat transfer</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>Q_total_watts <span class="op">=</span> Q_walls <span class="op">+</span> Q_ceiling <span class="op">+</span> Q_floor</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>Q_total_kW <span class="op">=</span> Q_total_watts <span class="op">/</span> <span class="dv">1000</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>Q_total_per_hour_kWh <span class="op">=</span> Q_total_kW  <span class="co"># kW × 1 hour = kWh</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>Q_total_per_hour_MJ <span class="op">=</span> Q_total_kW <span class="op">*</span> <span class="fl">3.6</span>  <span class="co"># kW × 3600 s = kJ/s × 3600 = MJ</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Display Results</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">"="</span> <span class="op">*</span> <span class="dv">30</span>)</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"HEAT TRANSFER PER HOUR"</span>)</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">30</span>)</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Q per hour: </span><span class="sc">{</span>Q_total_watts <span class="op">*</span> <span class="dv">3600</span> <span class="op">/</span> <span class="dv">1000</span><span class="sc">:.2f}</span><span class="ss"> kJ"</span>)</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>pct_walls <span class="op">=</span> (Q_walls <span class="op">/</span> Q_total_watts) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>pct_ceiling <span class="op">=</span> (Q_ceiling <span class="op">/</span> Q_total_watts) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>pct_floor <span class="op">=</span> (Q_floor <span class="op">/</span> Q_total_watts) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Walls:   </span><span class="sc">{</span>pct_walls<span class="sc">:&gt;6.2f}</span><span class="ss">%"</span>)</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Ceiling: </span><span class="sc">{</span>pct_ceiling<span class="sc">:&gt;6.2f}</span><span class="ss">%"</span>)</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Floor:   </span><span class="sc">{</span>pct_floor<span class="sc">:&gt;6.2f}</span><span class="ss">%"</span>)</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">30</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="latent-heat-of-vaporization" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="latent-heat-of-vaporization"><span class="header-section-number">2.4</span> Latent Heat of Vaporization</h2>
 <p>Water is boiling in an aluminum pan on a stovetop. The pan’s bottom is <span class="math inline">\(s = 0.7\ \text{cm}\)</span> thick and has a diameter of <span class="math inline">\(D = 12\ \text{cm}\)</span>. Water evaporates at a rate of <span class="math inline">\(\dot m = 1.00\ \text{g/s}\)</span>.</p>
 <p>Given:</p>
 <ul>
@@ -576,34 +670,34 @@ Q = \frac{k A \Delta T}{s} \quad \Rightarrow \quad \Delta T = \frac{Q s}{k A}
 \Delta T = \frac{\dot Q\, s}{kA}
 \]</span></p>
 <hr>
-<section id="code-1" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="code-1"><span class="header-section-number">2.3.1</span> Code</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given values</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>m_dot <span class="op">=</span> <span class="fl">1.0e-3</span>      <span class="co"># kg/s</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>LHV <span class="op">=</span> <span class="fl">2.256e6</span>       <span class="co"># J/kg</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">220</span>             <span class="co"># W/m·K</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="fl">0.007</span>           <span class="co"># m</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> <span class="fl">0.12</span>            <span class="co"># m</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Heat transfer rate</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>Q_dot <span class="op">=</span> m_dot <span class="op">*</span> LHV</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Area of pan bottom</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> math.pi <span class="op">*</span> (D <span class="op">/</span> <span class="dv">2</span>)<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperature difference</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>delta_T <span class="op">=</span> Q_dot <span class="op">*</span> s <span class="op">/</span> (k <span class="op">*</span> A)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Heat transfer rate: </span><span class="sc">{</span>Q_dot<span class="sc">:.4f}</span><span class="ss"> J/s"</span>)</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Area of pan bottom: </span><span class="sc">{</span>A<span class="sc">:.4f}</span><span class="ss"> m²"</span>)</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Temperature difference: </span><span class="sc">{</span>delta_T<span class="sc">:.4f}</span><span class="ss"> °C"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="code-2" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="code-2"><span class="header-section-number">2.4.1</span> Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given values</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>m_dot <span class="op">=</span> <span class="fl">1.0e-3</span>      <span class="co"># kg/s</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>LHV <span class="op">=</span> <span class="fl">2.256e6</span>       <span class="co"># J/kg</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">220</span>             <span class="co"># W/m·K</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="fl">0.007</span>           <span class="co"># m</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> <span class="fl">0.12</span>            <span class="co"># m</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Heat transfer rate</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>Q_dot <span class="op">=</span> m_dot <span class="op">*</span> LHV</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Area of pan bottom</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> math.pi <span class="op">*</span> (D <span class="op">/</span> <span class="dv">2</span>)<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperature difference</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>delta_T <span class="op">=</span> Q_dot <span class="op">*</span> s <span class="op">/</span> (k <span class="op">*</span> A)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Heat transfer rate: </span><span class="sc">{</span>Q_dot<span class="sc">:.4f}</span><span class="ss"> J/s"</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Area of pan bottom: </span><span class="sc">{</span>A<span class="sc">:.4f}</span><span class="ss"> m²"</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Temperature difference: </span><span class="sc">{</span>delta_T<span class="sc">:.4f}</span><span class="ss"> °C"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="convection-heat-transfer" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="convection-heat-transfer"><span class="header-section-number">2.4</span> Convection Heat Transfer</h2>
+<section id="convection-heat-transfer" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="convection-heat-transfer"><span class="header-section-number">2.5</span> Convection Heat Transfer</h2>
 <p>Convection transfers heat through the movement of fluids (liquids or gases). When a fluid is heated, it expands, becomes less dense, and rises, while cooler, denser fluid moves in to replace it, creating a convection current that distributes heat.</p>
 <p>Natural convection occurs without mechanical aid, whereas forced convection involves devices such as pumps or fans. When fluid movement is driven by a pump or fan, heat is transferred by <strong>forced convection</strong>. Examples include:</p>
 <ul>
@@ -626,8 +720,8 @@ Q = h_A \, A \, t \, (T_s - T_f)
 </ul>
 <p>This equation describes how heat energy is transferred between a surface and a fluid over a unit time of 1 second, depending on the <strong>temperature difference</strong>, the <strong>surface area</strong>, the <strong>time</strong>, and the fluid’s heat-carrying effectiveness, represented by the <strong>convective heat transfer coefficient</strong> (<span class="math inline">\(h_A\)</span>)</p>
 </section>
-<section id="hot-metal-convection-heat-transfer" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="hot-metal-convection-heat-transfer"><span class="header-section-number">2.5</span> Hot Metal Convection Heat Transfer</h2>
+<section id="hot-metal-convection-heat-transfer" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="hot-metal-convection-heat-transfer"><span class="header-section-number">2.6</span> Hot Metal Convection Heat Transfer</h2>
 <p>A hot metal plate measuring <strong>1.2 m × 0.8 m</strong> is exposed to air at <strong>25°C</strong>. The surface temperature of the plate is maintained at <strong>85°C</strong>. If the <strong>convective heat transfer coefficient</strong> (surface heat transfer coefficient) between the plate and air is <span class="math inline">\(h_A = 18 \, \text{W/m}^2\text{·°C}\)</span>, calculate the <strong>rate of heat loss by convection</strong> from the entire plate surface.</p>
 <p><strong>Given:</strong></p>
 <ul>
@@ -656,29 +750,29 @@ Q = 1036.8 \, \text{W}
 <p><span class="math display">\[
 \boxed{Q = 1036.8 \, \text{W}}
 \]</span></p>
-<section id="code-2" class="level3" data-number="2.5.1">
-<h3 data-number="2.5.1" class="anchored" data-anchor-id="code-2"><span class="header-section-number">2.5.1</span> Code</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="fl">1.2</span>        <span class="co"># length of the plate (m)</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>W <span class="op">=</span> <span class="fl">0.8</span>        <span class="co"># width of the plate (m)</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>T_surface <span class="op">=</span> <span class="dv">85</span> <span class="co"># surface temperature (°C)</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>T_air <span class="op">=</span> <span class="dv">25</span>     <span class="co"># air temperature (°C)</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>hA <span class="op">=</span> <span class="dv">18</span>        <span class="co"># convective heat transfer coefficient (W/m²·°C)</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate area of the plate</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> L <span class="op">*</span> W</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate heat loss rate</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>Q <span class="op">=</span> hA <span class="op">*</span> A <span class="op">*</span> (T_surface <span class="op">-</span> T_air)</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Plate area: </span><span class="sc">{</span>A<span class="sc">:.2f}</span><span class="ss"> m²"</span>)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Temperature difference: </span><span class="sc">{</span>T_surface <span class="op">-</span> T_air<span class="sc">:.1f}</span><span class="ss"> °C"</span>)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Convective heat loss: </span><span class="sc">{</span>Q<span class="sc">:.2f}</span><span class="ss"> W"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="code-3" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="code-3"><span class="header-section-number">2.6.1</span> Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="fl">1.2</span>        <span class="co"># length of the plate (m)</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>W <span class="op">=</span> <span class="fl">0.8</span>        <span class="co"># width of the plate (m)</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>T_surface <span class="op">=</span> <span class="dv">85</span> <span class="co"># surface temperature (°C)</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>T_air <span class="op">=</span> <span class="dv">25</span>     <span class="co"># air temperature (°C)</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>hA <span class="op">=</span> <span class="dv">18</span>        <span class="co"># convective heat transfer coefficient (W/m²·°C)</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate area of the plate</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> L <span class="op">*</span> W</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate heat loss rate</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>Q <span class="op">=</span> hA <span class="op">*</span> A <span class="op">*</span> (T_surface <span class="op">-</span> T_air)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Plate area: </span><span class="sc">{</span>A<span class="sc">:.2f}</span><span class="ss"> m²"</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Temperature difference: </span><span class="sc">{</span>T_surface <span class="op">-</span> T_air<span class="sc">:.1f}</span><span class="ss"> °C"</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Convective heat loss: </span><span class="sc">{</span>Q<span class="sc">:.2f}</span><span class="ss"> W"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="radiation" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="radiation"><span class="header-section-number">2.6</span> Radiation</h2>
+<section id="radiation" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="radiation"><span class="header-section-number">2.7</span> Radiation</h2>
 <p>Radiation transfers heat through electromagnetic waves that travel in straight lines and can pass through a vacuum. When these waves strike a surface, they may be absorbed (increasing temperature), reflected, or transmitted. Dark, rough surfaces absorb more radiation, while shiny, smooth ones reflect it.</p>
 <p>The heat transfer by radiation is given by:</p>
 <p><span id="eq-radiation"><span class="math display">\[
@@ -698,8 +792,8 @@ Q = \sigma \, \varepsilon \, A \, t \, (T_1^4 - T_2^4)
 <p>Examples include heat from the sun reaching Earth and radiant heat in a boiler furnace.</p>
 <p>In a steam boiler, radiation occurs in the furnace. Any heating surfaces that are directly exposed to the furnace will receive heat directly by radiation from the flame. These include the waterwalls and some generating tubes of a watertube boiler, radiant superheater tubes (located at the outlet of the furnace), and the furnace walls of a firetube boiler.</p>
 </section>
-<section id="radiant-heat-from-a-flat-circular-plate" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="radiant-heat-from-a-flat-circular-plate"><span class="header-section-number">2.7</span> Radiant Heat from a Flat Circular Plate</h2>
+<section id="radiant-heat-from-a-flat-circular-plate" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="radiant-heat-from-a-flat-circular-plate"><span class="header-section-number">2.8</span> Radiant Heat from a Flat Circular Plate</h2>
 <p>A flat circular plate is <strong>500 mm</strong> in diameter. Calculate the theoretical quantity of heat radiated per hour when its temperature is <strong>227 °C</strong> and the temperature of its surrounds is <strong>27 °C</strong>.</p>
 <p><strong>Given</strong>:</p>
 <ul>
@@ -740,29 +834,112 @@ Q = 2180.3997\ \mathrm{kWh}
 \boxed{\text{Heat radiated (per hour): } 2180.3997\ \mathrm{kWh}}
 \]</span></p>
 <p><strong>Note:</strong> This represents the <strong>theoretical maximum radiation</strong> for a perfect black body. Real materials would radiate less depending on their emissivity <span class="math inline">\(\varepsilon &lt; 1\)</span>.</p>
-<section id="code-3" class="level3" data-number="2.7.1">
-<h3 data-number="2.7.1" class="anchored" data-anchor-id="code-3"><span class="header-section-number">2.7.1</span> Code</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> <span class="fl">5.6703e-11</span>   <span class="co"># kW/m^2/K^4</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>epsilon <span class="op">=</span> <span class="fl">1.0</span>       <span class="co"># emissivity (black body)</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>T1 <span class="op">=</span> <span class="dv">227</span> <span class="op">+</span> <span class="dv">273</span>  <span class="co"># K (plate temperature)</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>T2 <span class="op">=</span> <span class="dv">27</span> <span class="op">+</span> <span class="dv">273</span>   <span class="co"># K (surroundings)</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="dv">500</span> <span class="op">/</span> <span class="dv">1000</span>     <span class="co"># m (diameter)</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> math.pi <span class="op">*</span> (d <span class="op">/</span> <span class="dv">2</span>)<span class="op">**</span><span class="dv">2</span>  <span class="co"># area in m²</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Heat radiated per second (kW)</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>Q_dot <span class="op">=</span> sigma <span class="op">*</span> epsilon <span class="op">*</span> A <span class="op">*</span> (T1<span class="op">**</span><span class="dv">4</span> <span class="op">-</span> T2<span class="op">**</span><span class="dv">4</span>)</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Heat radiated per hour (kWh)</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>Q_hour <span class="op">=</span> Q_dot <span class="op">*</span> <span class="dv">3600</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Plate area: </span><span class="sc">{</span>A<span class="sc">:.6f}</span><span class="ss"> m²"</span>)</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Emissivity (theoretical): </span><span class="sc">{</span>epsilon<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Heat radiated per second: </span><span class="sc">{</span>Q_dot<span class="sc">:.4f}</span><span class="ss"> kW"</span>)</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Heat radiated per hour: </span><span class="sc">{</span>Q_hour<span class="sc">:.2f}</span><span class="ss"> kWh"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="code-4" class="level3" data-number="2.8.1">
+<h3 data-number="2.8.1" class="anchored" data-anchor-id="code-4"><span class="header-section-number">2.8.1</span> Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> <span class="fl">5.6703e-11</span>   <span class="co"># kW/m^2/K^4</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>epsilon <span class="op">=</span> <span class="fl">1.0</span>       <span class="co"># emissivity (black body)</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>T1 <span class="op">=</span> <span class="dv">227</span> <span class="op">+</span> <span class="dv">273</span>  <span class="co"># K (plate temperature)</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>T2 <span class="op">=</span> <span class="dv">27</span> <span class="op">+</span> <span class="dv">273</span>   <span class="co"># K (surroundings)</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="dv">500</span> <span class="op">/</span> <span class="dv">1000</span>     <span class="co"># m (diameter)</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> math.pi <span class="op">*</span> (d <span class="op">/</span> <span class="dv">2</span>)<span class="op">**</span><span class="dv">2</span>  <span class="co"># area in m²</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Heat radiated per second (kW)</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>Q_dot <span class="op">=</span> sigma <span class="op">*</span> epsilon <span class="op">*</span> A <span class="op">*</span> (T1<span class="op">**</span><span class="dv">4</span> <span class="op">-</span> T2<span class="op">**</span><span class="dv">4</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Heat radiated per hour (kWh)</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>Q_hour <span class="op">=</span> Q_dot <span class="op">*</span> <span class="dv">3600</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Plate area: </span><span class="sc">{</span>A<span class="sc">:.6f}</span><span class="ss"> m²"</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Emissivity (theoretical): </span><span class="sc">{</span>epsilon<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Heat radiated per second: </span><span class="sc">{</span>Q_dot<span class="sc">:.4f}</span><span class="ss"> kW"</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Heat radiated per hour: </span><span class="sc">{</span>Q_hour<span class="sc">:.2f}</span><span class="ss"> kWh"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="heat-exchangers" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="heat-exchangers"><span class="header-section-number">2.9</span> Heat Exchangers</h2>
+<p>In an inert gas system, the boiler exhaust is cooled from 420°C to 130°C in a parallel flow heat exchanger. The gas flow rate is 0.55 kg/s, the cooling water flow rate is 0.65 kg/s, and the cooling water inlet temperature is 15°C. The overall heat transfer coefficient from the gas to the water is 150 W/m²K. Determine the cooling surface area required. Take <span class="math inline">\(c_p\)</span> for exhaust gas to be 1130 J/kgK and <span class="math inline">\(c_p\)</span> for water to be 4190 J/kgK.</p>
+<section id="heat-transfer-rate" class="level3" data-number="2.9.1">
+<h3 data-number="2.9.1" class="anchored" data-anchor-id="heat-transfer-rate"><span class="header-section-number">2.9.1</span> Heat Transfer Rate</h3>
+<p>The heat transfer rate (<span class="math inline">\(Q\)</span>) can be calculated using the formula:</p>
+<p><span class="math display">\[
+Q = \dot{m}_{\text{gas}} \cdot c_{p,\text{gas}} \cdot (T_{\text{gas,in}} - T_{\text{gas,out}})
+\]</span></p>
+<p>Substituting the given values:</p>
+<p><span class="math display">\[
+Q = 0.55 \cdot 1130 \cdot (420 - 130)
+\]</span></p>
+<p><span class="math display">\[
+Q = 0.55 \cdot 1130 \cdot 290
+\]</span></p>
+<p><span class="math display">\[
+Q = \boxed{180,235 \, \text{W}}
+\]</span></p>
+</section>
+<section id="log-mean-temperature-difference-lmtd" class="level3" data-number="2.9.2">
+<h3 data-number="2.9.2" class="anchored" data-anchor-id="log-mean-temperature-difference-lmtd"><span class="header-section-number">2.9.2</span> Log Mean Temperature Difference (LMTD)</h3>
+<p>The temperature differences at the two ends of the heat exchanger are:</p>
+<p><span class="math display">\[
+\Delta T_1 = T_{\text{gas,in}} - T_{\text{water,in}} = 420 - 15 = 405 \, \text{°C}
+\]</span></p>
+<p><span class="math display">\[
+\Delta T_2 = T_{\text{gas,out}} - T_{\text{water,out}}
+\]</span></p>
+<p>To find <span class="math inline">\(T_{\text{water,out}}\)</span>, use the heat balance equation:</p>
+<p><span class="math display">\[
+Q = \dot{m}_{\text{water}} \cdot c_{p,\text{water}} \cdot (T_{\text{water,out}} - T_{\text{water,in}})
+\]</span></p>
+<p>Rearranging for <span class="math inline">\(T_{\text{water,out}}\)</span>:</p>
+<p><span class="math display">\[
+T_{\text{water,out}} = \frac{Q}{\dot{m}_{\text{water}} \cdot c_{p,\text{water}}} + T_{\text{water,in}}
+\]</span></p>
+<p>Substitute the known values:</p>
+<p><span class="math display">\[
+T_{\text{water,out}} = \frac{180,235}{0.65 \cdot 4190} + 15
+\]</span></p>
+<p><span class="math display">\[
+T_{\text{water,out}} = 66.18 + 15 = 81.18 \, \text{°C}
+\]</span></p>
+<p>Now calculate <span class="math inline">\(\Delta T_2\)</span>:</p>
+<p><span class="math display">\[
+\Delta T_2 = T_{\text{gas,out}} - T_{\text{water,out}} = 130 - 81.18 = 48.82 \, \text{°C}
+\]</span></p>
+<p>The LMTD is given by:</p>
+<p><span class="math display">\[
+\text{LMTD} = \frac{\Delta T_1 - \Delta T_2}{\ln\left(\frac{\Delta T_1}{\Delta T_2}\right)}
+\]</span></p>
+<p>Substitute the values:</p>
+<p><span class="math display">\[
+\text{LMTD} = \frac{405 - 48.82}{\ln\left(\frac{405}{48.82}\right)} = \frac{356.18}{\ln(8.30)}
+\]</span></p>
+<p><span class="math display">\[
+\text{LMTD} = \frac{356.18}{2.1157} \approx \boxed{168.35 \, \text{°C}}
+\]</span></p>
+</section>
+<section id="cooling-surface-area" class="level3" data-number="2.9.3">
+<h3 data-number="2.9.3" class="anchored" data-anchor-id="cooling-surface-area"><span class="header-section-number">2.9.3</span> Cooling Surface Area</h3>
+<p>The cooling surface area (<span class="math inline">\(A\)</span>) is calculated using the formula:</p>
+<p><span class="math display">\[
+Q = U \cdot A \cdot \text{LMTD}
+\]</span></p>
+<p>Rearranging for <span class="math inline">\(A\)</span>:</p>
+<p><span class="math display">\[
+A = \frac{Q}{U \cdot \text{LMTD}}
+\]</span></p>
+<p>Substitute the known values:</p>
+<p><span class="math display">\[
+A = \frac{180,235}{150 \cdot 168.35}
+\]</span></p>
+<p><span class="math display">\[
+A = \frac{180,235}{25,252.5} \approx \boxed{7.14 \, \text{m}^2}
+\]</span></p>
+</section>
+<section id="final-answer" class="level3" data-number="2.9.4">
+<h3 data-number="2.9.4" class="anchored" data-anchor-id="final-answer"><span class="header-section-number">2.9.4</span> Final Answer</h3>
+<p>The required cooling surface area is approximately <strong>7.14 m²</strong>.</p>
 
 
 </section>

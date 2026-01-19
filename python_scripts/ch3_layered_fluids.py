@@ -33,7 +33,9 @@ seawater_density_kg_per_m3 = seawater_density_t_per_m3 * 1000
 
 # Pressure contribution from oil layer using P = ρ · g · h
 pressure_from_oil_kpa = (
-    oil_density_kg_per_m3 * gravitational_acceleration_m_per_s2 * oil_layer_height_m
+    oil_density_kg_per_m3
+    * gravitational_acceleration_m_per_s2
+    * oil_layer_height_m
 ) / 1000  # Convert Pa to kPa
 
 # Pressure contribution from seawater layer using P = ρ · g · h
@@ -54,6 +56,9 @@ absolute_pressure_kpa = atmospheric_pressure_kpa + total_gauge_pressure_kpa
 # ===============================
 
 print(f"Pressure due to oil layer       : {pressure_from_oil_kpa:.4f} kPa")
-print(f"Pressure due to seawater layer  : " f"{pressure_from_seawater_kpa:.4f} kPa")
+print(
+    f"Pressure due to seawater layer  : "
+    f"{pressure_from_seawater_kpa:.4f} kPa"
+)
 print(f"Total gauge pressure            : {total_gauge_pressure_kpa:.4f} kPa")
 print(f"Absolute pressure at the bottom : {absolute_pressure_kpa:.4f} kPa")

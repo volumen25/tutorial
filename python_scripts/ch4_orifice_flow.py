@@ -42,7 +42,9 @@ theoretical_velocity_m_per_s = math.sqrt(
 )
 
 # Calculate actual velocity accounting for friction losses
-actual_velocity_m_per_s = coefficient_of_velocity * theoretical_velocity_m_per_s
+actual_velocity_m_per_s = (
+    coefficient_of_velocity * theoretical_velocity_m_per_s
+)
 
 # ================================
 # FLOW RATE CALCULATIONS
@@ -55,7 +57,9 @@ volumetric_flow_rate_m3_per_s = (
 )
 
 # Calculate mass flow rate: ṁ = ρ · Q
-mass_flow_rate_kg_per_s = water_density_kg_per_m3 * volumetric_flow_rate_m3_per_s
+mass_flow_rate_kg_per_s = (
+    water_density_kg_per_m3 * volumetric_flow_rate_m3_per_s
+)
 
 # Convert mass flow rate to per-hour basis
 mass_flow_rate_kg_per_hour = mass_flow_rate_kg_per_s * 3600
@@ -67,7 +71,10 @@ mass_flow_rate_tonnes_per_hour = mass_flow_rate_kg_per_hour / 1000
 # OUTPUT RESULTS
 # ================================
 
-print(f"(i) Actual velocity of the water jet: " f"{actual_velocity_m_per_s:.3f} m/s")
+print(
+    f"(i) Actual velocity of the water jet: "
+    f"{actual_velocity_m_per_s:.3f} m/s"
+)
 print("\n(ii) Quantity of water escaping per hour:")
 print(f"    Volume flow rate: {volumetric_flow_rate_m3_per_s:.6f} m³/s")
 print(f"    Mass flow rate: {mass_flow_rate_kg_per_s:.4f} kg/s")
