@@ -577,7 +577,6 @@ The required cooling surface area is approximately **7.14 m²**.
 ### Code
 
 ```python
-#!/usr/bin/env python3
 """
 Heat Exchanger
 
