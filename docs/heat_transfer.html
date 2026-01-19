@@ -439,6 +439,7 @@ window.Quarto = {
   <li><a href="#log-mean-temperature-difference-lmtd" id="toc-log-mean-temperature-difference-lmtd" class="nav-link" data-scroll-target="#log-mean-temperature-difference-lmtd"><span class="header-section-number">2.9.2</span> Log Mean Temperature Difference (LMTD)</a></li>
   <li><a href="#cooling-surface-area" id="toc-cooling-surface-area" class="nav-link" data-scroll-target="#cooling-surface-area"><span class="header-section-number">2.9.3</span> Cooling Surface Area</a></li>
   <li><a href="#final-answer" id="toc-final-answer" class="nav-link" data-scroll-target="#final-answer"><span class="header-section-number">2.9.4</span> Final Answer</a></li>
+  <li><a href="#code-5" id="toc-code-5" class="nav-link" data-scroll-target="#code-5"><span class="header-section-number">2.9.5</span> Code</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -940,6 +941,49 @@ A = \frac{180,235}{25,252.5} \approx \boxed{7.14 \, \text{m}^2}
 <section id="final-answer" class="level3" data-number="2.9.4">
 <h3 data-number="2.9.4" class="anchored" data-anchor-id="final-answer"><span class="header-section-number">2.9.4</span> Final Answer</h3>
 <p>The required cooling surface area is approximately <strong>7.14 m²</strong>.</p>
+</section>
+<section id="code-5" class="level3" data-number="2.9.5">
+<h3 data-number="2.9.5" class="anchored" data-anchor-id="code-5"><span class="header-section-number">2.9.5</span> Code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">Heat Exchanger</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">Parallel flow heat exchanger with exhaust gas and cooling water</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Given data</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>m_dot_gas <span class="op">=</span> <span class="fl">0.55</span>  <span class="co"># kg/s</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>m_dot_water <span class="op">=</span> <span class="fl">0.65</span>  <span class="co"># kg/s</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>T_gas_in <span class="op">=</span> <span class="dv">420</span>  <span class="co"># °C</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>T_gas_out <span class="op">=</span> <span class="dv">130</span>  <span class="co"># °C</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>T_water_in <span class="op">=</span> <span class="dv">15</span>  <span class="co"># °C</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>cp_gas <span class="op">=</span> <span class="dv">1130</span>  <span class="co"># J/kgK</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>cp_water <span class="op">=</span> <span class="dv">4190</span>  <span class="co"># J/kgK</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>U <span class="op">=</span> <span class="dv">150</span>  <span class="co"># W/m²K</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Heat transfer rate</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>Q <span class="op">=</span> m_dot_gas <span class="op">*</span> cp_gas <span class="op">*</span> (T_gas_in <span class="op">-</span> T_gas_out)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Water outlet temperature</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>T_water_out <span class="op">=</span> (Q <span class="op">/</span> (m_dot_water <span class="op">*</span> cp_water)) <span class="op">+</span> T_water_in</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperature differences</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>Delta_T1 <span class="op">=</span> T_gas_in <span class="op">-</span> T_water_in</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>Delta_T2 <span class="op">=</span> T_gas_out <span class="op">-</span> T_water_out</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="co"># LMTD</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>LMTD <span class="op">=</span> (Delta_T1 <span class="op">-</span> Delta_T2) <span class="op">/</span> math.log(Delta_T1 <span class="op">/</span> Delta_T2)</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Surface area</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> Q <span class="op">/</span> (U <span class="op">*</span> LMTD)</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Results</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Heat Transfer Rate: </span><span class="sc">{</span>Q<span class="sc">:,.2f}</span><span class="ss"> W"</span>)</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Water Outlet Temp: </span><span class="sc">{</span>T_water_out<span class="sc">:.2f}</span><span class="ss">°C"</span>)</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"LMTD: </span><span class="sc">{</span>LMTD<span class="sc">:.2f}</span><span class="ss">°C"</span>)</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Surface Area: </span><span class="sc">{</span>A<span class="sc">:.4f}</span><span class="ss"> m²"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
