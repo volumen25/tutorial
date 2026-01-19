@@ -72,7 +72,9 @@ ship_acceleration_force_n = ship_mass_kg * ship_linear_acceleration_m_per_s2
 torque_friction_n_m = friction_force_n * drum_effective_radius_m
 
 # Torque required to accelerate the ship linearly: T_s = F_s × r
-torque_ship_acceleration_n_m = ship_acceleration_force_n * drum_effective_radius_m
+torque_ship_acceleration_n_m = (
+    ship_acceleration_force_n * drum_effective_radius_m
+)
 
 # Torque required to accelerate the drum rotationally: T_d = I × α
 torque_drum_acceleration_n_m = (
@@ -81,7 +83,9 @@ torque_drum_acceleration_n_m = (
 
 # Total torque required at the drum
 total_torque_n_m = (
-    torque_friction_n_m + torque_ship_acceleration_n_m + torque_drum_acceleration_n_m
+    torque_friction_n_m
+    + torque_ship_acceleration_n_m
+    + torque_drum_acceleration_n_m
 )
 
 # Convert total torque to meganewton-meters for output

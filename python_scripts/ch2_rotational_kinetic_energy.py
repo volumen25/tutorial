@@ -30,10 +30,14 @@ moment_of_inertia_kg_m2 = rotating_mass_kg * radius_of_gyration_m**2
 
 # Convert initial angular velocity from rpm to rad/s
 # ω (rad/s) = (rpm / 60) × 2π
-initial_angular_velocity_rad_per_s = initial_angular_velocity_rpm * 2 * math.pi / 60
+initial_angular_velocity_rad_per_s = (
+    initial_angular_velocity_rpm * 2 * math.pi / 60
+)
 
 # Convert final angular velocity from rpm to rad/s
-final_angular_velocity_rad_per_s = final_angular_velocity_rpm * 2 * math.pi / 60
+final_angular_velocity_rad_per_s = (
+    final_angular_velocity_rpm * 2 * math.pi / 60
+)
 
 # ===============================
 # KINETIC ENERGY CALCULATIONS

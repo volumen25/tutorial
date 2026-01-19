@@ -8,108 +8,59 @@ IC engines are classified by their ignition method:
 
 -   Spark Ignition: A fuel–air mixture is compressed and then ignited by a spark plug.
 
-### Engine Performance Calculation
+## Engine Performance Calculations
 
-An engine working on the constant volume cycle is 150 mm bore by 165 mm stroke, and its clearance volume is 0.5 litre. The fuel used has a calorific value of 45250 kJ/kg, and the consumption is 0.334 kg/kWh. The mechanical efficiency of the engine is 81%. Take γ = 1.4
+A single cylinder, four-stroke diesel engine has the following specifications:
 
-Calculate:
+-   **Cylinder bore**: 220 mm
+-   **Stroke**: 400 mm
+-   **Effective brake wheel diameter**: 1.5 m
+-   **Speed**: 270 rev/min
+-   **Effective brake load**: 52 kg
+-   **Area of indicator diagram**: 340 mm²
+-   **Spring constant**: 120 kPa per mm
+-   **Length of diagram**: 68 mm
+-   **Fuel consumption**: 3.5 kg/h
+-   **Calorific value of fuel**: 44 MJ/kg
+-   **Cooling water supplied**: 2.5 kg/min
+-   **Temperature rise of cooling water**: 40°C
 
-1.  The compression ratio
+Calculate: (i) Mechanical efficiency (ii) Indicated thermal efficiency (iii) Draw up an energy balance account on a basis of 1 minute.
 
-2.  The ideal efficiency
+### Mechanical Efficiency
 
-3.  The indicated thermal efficiency
+**Brake Power (BP):**
 
-4.  The efficiency ratio.
+Torque: τ = W × r = 52 × 9.81 × 0.75 = 382.59 Nm\
+Angular velocity: ω = 2π × 270/60 = 28.2743 rad/s\
+BP = τ × ω = 382.59 × 28.2743 = 10.8175 kW\
 
-**Given**
+**Indicated Power (IP):**
 
-Bore $=150\ \mathrm{mm}=0.150\ \mathrm{m}$
+Mean effective pressure: Pm = (340/68) × 120 = 600.0000 kPa\
+Piston area: A = (π/4) × (0.22)² = 0.038013 m²\
+Speed (4-stroke): n = 270/(2×60) = 2.2500 rev/s\
+IP = Pm × A × L × n = 600.0 × 0.038013 × 0.4 × 2.2500 = 20.5272 kW\
 
-Stroke $=165\ \mathrm{mm}=0.165\ \mathrm{m}$
+**Mechanical Efficiency:** ηₘ = (BP/IP) × 100% = (10.8175/20.5272) × 100% = **52.70%**
 
-Clearance volume $V_c = 0.5\ \mathrm{L} = 0.0005\ \mathrm{m^3}$
+### Indicated Thermal Efficiency
 
-Calorific value $CV = 45\,250\ \mathrm{kJ/kg}$
+SFOCᵢ = 3.5/20.5272 = 0.1705 kg/kWh\
+ηₜₕ = 3.6/(SFOCᵢ × CV) = 3.6/(0.1705 × 44) = **47.99%**\
 
-Fuel consumption $=0.334\ \mathrm{kg/kWh}$ (assume **brake** specific fuel consumption)\
+### Energy Balance (1 Minute Basis)
 
-Mechanical efficiency $\eta_m = 0.81$
+**Energy Input:** 2566.67 kJ/min (100%)
 
-Ratio of specific heats $\gamma = 1.4$
+**Energy Outputs:**  - Brake Power: 649.05 kJ/min (25.29%)\
+- Cooling Water: 418.00 kJ/min (16.29%)\
+- Other Losses: 1499.62 kJ/min (58.43%)\
 
-Find:
-
-1.  Compression ratio $r$
-
-2.  Ideal (Otto) thermal efficiency $\eta_{\text{ideal}}$
-
-3.  Indicated thermal efficiency $\eta_{\text{ind}}$
-
-4.  Efficiency ratio $=\dfrac{\eta_{\text{ind}}}{\eta_{\text{ideal}}}$
-
-
-**1. Compression ratio**
-
-Swept volume (displacement) of one cylinder: $$
-V_d = \frac{\pi}{4}D^2 \times \text{stroke}
-= \frac{\pi}{4}(0.150)^2(0.165)=0.00291579\ \mathrm{m^3}.
-$$
-
-Compression ratio $$
-r=\frac{V_d+V_c}{V_c}=\frac{0.00291579+0.0005}{0.0005}=6.8316.
-$$
-
-
-**2. Ideal (Otto) thermal efficiency**
-
-For a constant-volume (Otto) cycle: $$
-\eta_{\text{ideal}}=1-\frac{1}{r^{\gamma-1}}.
-$$ With $r=6.8316,\ \gamma=1.4$, $$
-\eta_{\text{ideal}} = 1 - r^{1-\gamma}
-=1 - r^{-0.4} \approx 0.53635 = 53.635\%.
-$$
-
-**3. Indicated thermal efficiency**
-
-First calculate the brake (output) energy per kWh of output: 1 kWh=3600 kJ
-
-Fuel energy input per kWh of brake output:
-
-$$
-E_{\text{fuel}} = \text{SFOC}\times CV = 0.334\ \mathrm{kg/kWh}\times 45\,250\ \mathrm{kJ/kg}
-=15\,113.5\ \mathrm{kJ/kWh}.
-$$
-
-For 1 kW break power, $E_{\text{fuel}} =15\,113.5\ \mathrm{kJ/h}$.\
-$$
-E_{\text{fuel}} =\frac{15\,113.5}{3600}=4.1982\ \mathrm{kJ/s} =4.1982\ \mathrm{kW}
-$$
-
-$$
-\eta_{m}=\frac{BP}{IP}=\frac{1}{IP}= 0.81\%.
-$$
-
-$$
-IP=\frac{1}{0.81}= 1.2346\ \mathrm{kW}
-$$
-
-$$
-\eta_{\text{ind}}=\frac{IP}{E_{\text{fuel}}}=\frac{1.2346\ kW}{4.1982\ kW}=29.4\%
-$$
-
-
-**4. Efficiency ratio**
-
-$$
-\text{Efficiency ratio}=\frac{\eta_{\text{ind}}}{\eta_{\text{ideal}}}
-=\frac{0.294}{0.5363}\approx 0.5482 \quad(54.82\%).
-$$
-
-### Final Answers
-
--   **A. Compression ratio:** $\boxed{r \approx 6.832}$\
--   **B. Ideal (Otto) efficiency:** $\boxed{\eta_{\text{ideal}}\approx 0.5363 = 53.63\%}$\
--   **C. Indicated thermal efficiency:** $\boxed{\eta_{\text{ind}}\approx 0.2941 = 29.4\%}$\
--   **D. Efficiency ratio:** $\boxed{\dfrac{\eta_{\text{ind}}}{\eta_{\text{ideal}}}\approx 0.5482 = 54.82\%}$
-
+|                  | Energy (kJ/min) | Percentage (%) |
+|------------------|-----------------|----------------|
+| Energy from Fuel | 2566.67         | 100.00         |
+| Brake Power      | 649.05          | 25.29          |
+| Cooling Water    | 418.00          | 16.29          |
+| Other Losses     | 1499.62         | 58.43          |
+| **Total**        | **2566.67**     | **100.00**     |

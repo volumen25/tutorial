@@ -62,11 +62,16 @@ final_angular_velocity_rad_per_s = (
 
 # Convert final angular velocity from rad/s to rpm
 # rpm = (ω / 2π) × 60
-final_angular_velocity_rpm = (final_angular_velocity_rad_per_s / (2 * math.pi)) * 60
+final_angular_velocity_rpm = (
+    final_angular_velocity_rad_per_s / (2 * math.pi)
+) * 60
 
 # =================================
 # OUTPUT RESULTS
 # =================================
 
-print(f"Final angular velocity (rad/s): " f"{final_angular_velocity_rad_per_s:.4f}")
+print(
+    f"Final angular velocity (rad/s): "
+    f"{final_angular_velocity_rad_per_s:.4f}"
+)
 print(f"Final angular velocity (rpm): {final_angular_velocity_rpm:.4f}")

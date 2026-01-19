@@ -37,7 +37,9 @@ throat_area_m2 = math.pi * (throat_diameter_m**2) / 4
 # The pressure difference measured by mercury must be converted to
 # water equivalent by accounting for the density difference:
 # h_water = h_mercury × (SG_mercury - 1)
-equivalent_water_head_m = mercury_column_height_m * (mercury_specific_gravity - 1)
+equivalent_water_head_m = mercury_column_height_m * (
+    mercury_specific_gravity - 1
+)
 
 # ==================================
 # DIAMETER RATIO CALCULATION
@@ -60,7 +62,9 @@ theoretical_discharge_m3_per_s = throat_area_m2 * math.sqrt(
 
 # Calculate actual discharge accounting for losses:
 # Q_actual = Cd × Q_theoretical
-actual_discharge_m3_per_s = coefficient_of_discharge * theoretical_discharge_m3_per_s
+actual_discharge_m3_per_s = (
+    coefficient_of_discharge * theoretical_discharge_m3_per_s
+)
 
 # ==================================
 # OUTPUT RESULTS

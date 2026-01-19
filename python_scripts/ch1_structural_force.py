@@ -36,7 +36,9 @@ angle_opposite_tie_rad = math.acos(
 )
 
 # Calculate angle opposite to jib (angles in triangle sum to π radians)
-angle_opposite_jib_rad = math.pi - angle_opposite_post_rad - angle_opposite_tie_rad
+angle_opposite_jib_rad = (
+    math.pi - angle_opposite_post_rad - angle_opposite_tie_rad
+)
 
 # =============================================================================
 # FORCE CALCULATIONS (LAW OF SINES)

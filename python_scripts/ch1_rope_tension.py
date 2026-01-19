@@ -16,7 +16,9 @@ angle_opposite_rope2_deg = 32  # Angle opposite to tension T2 (degrees)
 angle_opposite_rope1_deg = 42  # Angle opposite to tension T1 (degrees)
 
 # Calculate the third angle of the triangle (angles sum to 180°)
-angle_opposite_load_deg = 180 - (angle_opposite_rope2_deg + angle_opposite_rope1_deg)
+angle_opposite_load_deg = 180 - (
+    angle_opposite_rope2_deg + angle_opposite_rope1_deg
+)
 
 # =============================================================================
 # CALCULATIONS

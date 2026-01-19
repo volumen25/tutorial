@@ -115,6 +115,91 @@ print(f"Heat loss: {Q_W:.2f} W")
 print(f"Temperature difference across the endplate: {delta_T:.2f} °C")
 ```
 
+## Heat Transfer Calculation for Cold Storage Room
+
+The product storage room for a fresh frozen fish plant is 30 m long, 23 m wide, and 3 m high. The walls and ceiling are insulated with 25 cm of granulated cork ($k = 0.049 \text{ W/mK}$), and the floor with 15 cm of corkboard ($k = 0.043 \text{ W/mK}$). Calculate the heat transfer per hour due to conduction if the temperature inside the chamber is kept at -30°C and the ambient air temperature outside is 21°C. Take the ground temperature as 10°C.
+
+### Code
+
+``` python
+"""
+Heat Transfer Calculation for Cold Storage Room
+
+Calculate heat transfer per hour through walls, ceiling, and floor
+due to conduction in a frozen fish storage room.
+"""
+
+# Room dimensions
+length = 30  # m
+width = 23  # m
+height = 3  # m
+
+# Insulation properties
+cork_thickness_walls = 0.25  # m (25 cm)
+cork_k_walls = 0.049  # W/mK
+corkboard_thickness_floor = 0.15  # m (15 cm)
+corkboard_k_floor = 0.043  # W/mK
+
+# Temperatures
+T_inside = -30  # °C
+T_ambient = 21  # °C
+T_ground = 10  # °C
+
+# Calculate surface areas
+area_floor = length * width
+area_ceiling = length * width
+area_wall_long = 2 * (length * height)  # Two long walls
+area_wall_short = 2 * (width * height)  # Two short walls
+area_walls_total = area_wall_long + area_wall_short
+
+# Heat transfer equation: Q = k × A × ΔT / s
+# where:
+#   Q = heat transfer rate (W)
+#   k = thermal conductivity (W/mK)
+#   A = area (m²)
+#   ΔT = temperature difference (K or °C)
+#   s = thickness (m)
+
+# 1. Heat transfer through walls (exposed to ambient air)
+delta_T_walls = T_ambient - T_inside
+Q_walls = (
+    cork_k_walls * area_walls_total * delta_T_walls
+) / cork_thickness_walls
+
+# 2. Heat transfer through ceiling (exposed to ambient air)
+delta_T_ceiling = T_ambient - T_inside
+Q_ceiling = (
+    cork_k_walls * area_ceiling * delta_T_ceiling
+) / cork_thickness_walls
+
+# 3. Heat transfer through floor (exposed to ground)
+delta_T_floor = T_ground - T_inside
+Q_floor = (
+    corkboard_k_floor * area_floor * delta_T_floor
+) / corkboard_thickness_floor
+
+# Total heat transfer
+Q_total_watts = Q_walls + Q_ceiling + Q_floor
+Q_total_kW = Q_total_watts / 1000
+Q_total_per_hour_kWh = Q_total_kW  # kW × 1 hour = kWh
+Q_total_per_hour_MJ = Q_total_kW * 3.6  # kW × 3600 s = kJ/s × 3600 = MJ
+
+# Display Results
+print("\n" + "=" * 30)
+print("HEAT TRANSFER PER HOUR")
+print("=" * 30)
+print(f"Q per hour: {Q_total_watts * 3600 / 1000:.2f} kJ")
+
+pct_walls = (Q_walls / Q_total_watts) * 100
+pct_ceiling = (Q_ceiling / Q_total_watts) * 100
+pct_floor = (Q_floor / Q_total_watts) * 100
+
+print(f"Walls:   {pct_walls:>6.2f}%")
+print(f"Ceiling: {pct_ceiling:>6.2f}%")
+print(f"Floor:   {pct_floor:>6.2f}%")
+print("=" * 30)
+```
+
 ## Latent Heat of Vaporization
 
 Water is boiling in an aluminum pan on a stovetop. The pan’s bottom is $s = 0.7\ \text{cm}$ thick and has a diameter of $D = 12\ \text{cm}$. Water evaporates at a rate of $\dot m = 1.00\ \text{g/s}$.
@@ -149,7 +234,7 @@ $$
 
 ### Code
 
-```python
+``` python
 import math
 
 # Given values
@@ -377,4 +462,160 @@ print(f"Plate area: {A:.6f} m²")
 print(f"Emissivity (theoretical): {epsilon}")
 print(f"Heat radiated per second: {Q_dot:.4f} kW")
 print(f"Heat radiated per hour: {Q_hour:.2f} kWh")
+```
+
+## Heat Exchangers
+
+In an inert gas system, the boiler exhaust is cooled from 420°C to 130°C in a parallel flow heat exchanger. The gas flow rate is 0.55 kg/s, the cooling water flow rate is 0.65 kg/s, and the cooling water inlet temperature is 15°C. The overall heat transfer coefficient from the gas to the water is 150 W/m²K. Determine the cooling surface area required. Take $c_p$ for exhaust gas to be 1130 J/kgK and $c_p$ for water to be 4190 J/kgK.
+
+### Heat Transfer Rate
+
+The heat transfer rate ($Q$) can be calculated using the formula:
+
+$$
+Q = \dot{m}_{\text{gas}} \cdot c_{p,\text{gas}} \cdot (T_{\text{gas,in}} - T_{\text{gas,out}})
+$$
+
+Substituting the given values:
+
+$$
+Q = 0.55 \cdot 1130 \cdot (420 - 130)
+$$
+
+$$
+Q = 0.55 \cdot 1130 \cdot 290
+$$
+
+$$
+Q = \boxed{180,235 \, \text{W}}
+$$
+
+### Log Mean Temperature Difference (LMTD)
+
+The temperature differences at the two ends of the heat exchanger are:
+
+$$
+\Delta T_1 = T_{\text{gas,in}} - T_{\text{water,in}} = 420 - 15 = 405 \, \text{°C}
+$$
+
+$$
+\Delta T_2 = T_{\text{gas,out}} - T_{\text{water,out}}
+$$
+
+To find $T_{\text{water,out}}$, use the heat balance equation:
+
+$$
+Q = \dot{m}_{\text{water}} \cdot c_{p,\text{water}} \cdot (T_{\text{water,out}} - T_{\text{water,in}})
+$$
+
+Rearranging for $T_{\text{water,out}}$:
+
+$$
+T_{\text{water,out}} = \frac{Q}{\dot{m}_{\text{water}} \cdot c_{p,\text{water}}} + T_{\text{water,in}}
+$$
+
+Substitute the known values:
+
+$$
+T_{\text{water,out}} = \frac{180,235}{0.65 \cdot 4190} + 15
+$$
+
+$$
+T_{\text{water,out}} = 66.18 + 15 = 81.18 \, \text{°C}
+$$
+
+Now calculate $\Delta T_2$:
+
+$$
+\Delta T_2 = T_{\text{gas,out}} - T_{\text{water,out}} = 130 - 81.18 = 48.82 \, \text{°C}
+$$
+
+The LMTD is given by:
+
+$$
+\text{LMTD} = \frac{\Delta T_1 - \Delta T_2}{\ln\left(\frac{\Delta T_1}{\Delta T_2}\right)}
+$$
+
+Substitute the values:
+
+$$
+\text{LMTD} = \frac{405 - 48.82}{\ln\left(\frac{405}{48.82}\right)} = \frac{356.18}{\ln(8.30)}
+$$
+
+$$
+\text{LMTD} = \frac{356.18}{2.1157} \approx \boxed{168.35 \, \text{°C}}
+$$
+
+### Cooling Surface Area
+
+The cooling surface area ($A$) is calculated using the formula:
+
+$$
+Q = U \cdot A \cdot \text{LMTD}
+$$
+
+Rearranging for $A$:
+
+$$
+A = \frac{Q}{U \cdot \text{LMTD}}
+$$
+
+Substitute the known values:
+
+$$
+A = \frac{180,235}{150 \cdot 168.35}
+$$
+
+$$
+A = \frac{180,235}{25,252.5} \approx \boxed{7.14 \, \text{m}^2}
+$$
+
+### Final Answer
+
+The required cooling surface area is approximately **7.14 m²**.
+
+### Code
+
+```python
+#!/usr/bin/env python3
+"""
+Heat Exchanger
+
+Parallel flow heat exchanger with exhaust gas and cooling water
+"""
+
+import math
+
+# Given data
+m_dot_gas = 0.55  # kg/s
+m_dot_water = 0.65  # kg/s
+T_gas_in = 420  # °C
+T_gas_out = 130  # °C
+T_water_in = 15  # °C
+cp_gas = 1130  # J/kgK
+cp_water = 4190  # J/kgK
+U = 150  # W/m²K
+
+# Heat transfer rate
+Q = m_dot_gas * cp_gas * (T_gas_in - T_gas_out)
+
+# Water outlet temperature
+T_water_out = (Q / (m_dot_water * cp_water)) + T_water_in
+
+# Temperature differences
+Theta_1 = T_gas_in - T_water_in
+Theta_2 = T_gas_out - T_water_out
+
+# LMTD Theta_m
+LMTD = (Theta_1 - Theta_2) / math.log(Theta_1 / Theta_2)
+
+# Surface area
+A = Q / (U * LMTD)
+
+# Results
+print(f"Heat Transfer Rate: {Q:,.2f} W")
+print(f"Water Outlet Temp: {T_water_out:.2f}°C")
+print(f"LMTD: {LMTD:.2f}°C")
+print(f"Surface Area: {A:.2f} m²")
+
 ```

@@ -37,7 +37,7 @@ pipe_cross_sectional_area_m2 = math.pi * pipe_radius_m**2
 # ==============================
 
 # Calculate volumetric flow rate
-# Restrict line length to a maximum of 79 characters 
+# Restrict line length to a maximum of 79 characters
 # to ensure compatibility with print media and prevent horizontal overflow.
 volumetric_flow_rate_m3_per_s = (
     pipe_cross_sectional_area_m2 * oil_velocity_m_per_s

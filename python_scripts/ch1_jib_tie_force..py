@@ -34,7 +34,9 @@ angle_tie_to_load_rad = math.radians(angle_tie_to_load_deg)
 
 # Force in jib (compression or tension depending on configuration)
 force_jib_kn = (
-    vertical_load_kn * math.sin(angle_tie_to_load_rad) / math.sin(angle_jib_to_tie_rad)
+    vertical_load_kn
+    * math.sin(angle_tie_to_load_rad)
+    / math.sin(angle_jib_to_tie_rad)
 )
 
 # Force in tie (tension)
